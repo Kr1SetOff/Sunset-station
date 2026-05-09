@@ -1,34 +1,6 @@
 Entries:
 - author: Caws
   changes:
-  - message: (Saltern) Re-hauled where the generators in Engineering were placed, they're more obvious now.
-    type: Add
-  id: 404453
-  time: '2026-04-21T11:18:06.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4220
-- author: Caws
-  changes:
-  - message: (Saltern) Way more detailing for Engineering to make it feel less barren.
-    type: Add
-  id: 404454
-  time: '2026-04-21T11:18:06.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4220
-- author: Caws
-  changes:
-  - message: (Saltern) Replaced the all-in-one Captain Locker with a regular Captain Locker, antique laser case, and Captain's suit storage locker.
-    type: Add
-  id: 404455
-  time: '2026-04-21T11:18:06.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4220
-- author: Caws
-  changes:
-  - message: (Saltern) Pride-o-Mat added by Dorms.
-    type: Add
-  id: 404456
-  time: '2026-04-21T11:18:06.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4220
-- author: Caws
-  changes:
   - message: (Saltern) Mail Tech lockers.
     type: Add
   id: 404457
@@ -2799,4 +2771,32 @@ Entries:
   id: 404852
   time: '2026-05-09T10:23:03.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/4347
+- author: bynddark8
+  changes:
+  - message: Adds new sprites for the Captain's command tablet.
+    type: Add
+  id: 404853
+  time: '2026-05-09T10:23:05.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4296
+- author: bynddark8
+  changes:
+  - message: Adds an admeme only command tablet for Centcomm operators.
+    type: Add
+  id: 404854
+  time: '2026-05-09T10:23:05.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4296
+- author: bynddark8
+  changes:
+  - message: Adds the Captain's command tablet as a steal objective for both thieves and traitors.
+    type: Tweak
+  id: 404855
+  time: '2026-05-09T10:23:05.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4296
+- author: bynddark8
+  changes:
+  - message: Fixed a bug where the battery on the command tablet would drain absurdly quickly.
+    type: Fix
+  id: 404856
+  time: '2026-05-09T10:23:05.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4296
 Order: -1
