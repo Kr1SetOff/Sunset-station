@@ -1,27 +1,6 @@
 Entries:
 - author: Caws
   changes:
-  - message: (Saltern) Some more decals in Medical Reception.
-    type: Add
-  id: 404450
-  time: '2026-04-21T11:18:06.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4220
-- author: Caws
-  changes:
-  - message: (Saltern) Some (regular) non-hostile slimes to Xenobio's test chambers.
-    type: Add
-  id: 404451
-  time: '2026-04-21T11:18:06.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4220
-- author: Caws
-  changes:
-  - message: (Saltern) Re-hauled Engineering's AME room to reflect how players actually build the AME.
-    type: Add
-  id: 404452
-  time: '2026-04-21T11:18:06.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4220
-- author: Caws
-  changes:
   - message: (Saltern) Re-hauled where the generators in Engineering were placed, they're more obvious now.
     type: Add
   id: 404453
@@ -2799,4 +2778,25 @@ Entries:
   id: 404849
   time: '2026-05-09T09:11:20.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/4396
+- author: EWanderer
+  changes:
+  - message: You can now compost biomass for ammonia.
+    type: Add
+  id: 404850
+  time: '2026-05-09T10:23:03.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4347
+- author: EWanderer
+  changes:
+  - message: Ammonia can now be electrolysed into nitrogen and hydrogen.
+    type: Add
+  id: 404851
+  time: '2026-05-09T10:23:03.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4347
+- author: EWanderer
+  changes:
+  - message: You now need to heat nitrogen and hydrogen to get ammonia.
+    type: Tweak
+  id: 404852
+  time: '2026-05-09T10:23:03.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4347
 Order: -1
