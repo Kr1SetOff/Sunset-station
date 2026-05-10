@@ -1,13 +1,6 @@
 Entries:
 - author: redmushie, Roro
   changes:
-  - message: The security helmet uses a battery now.
-    type: Tweak
-  id: 404477
-  time: '2026-04-21T16:41:53.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/3786
-- author: redmushie, Roro
-  changes:
   - message: The Cybersun juggernaut suit has a light now.
     type: Add
   id: 404478
@@ -2799,4 +2792,11 @@ Entries:
   id: 404876
   time: '2026-05-10T10:03:36.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/4364
+- author: Conflee
+  changes:
+  - message: Rebuilt the Automated Trade Station from the ground up. It is now larger, more industrial looking, has 3 docks instead of 2, and the entire back area is reworked into a Salvage Base with bunks, docks of their own, equipment to process ores and scrap, and a tiny basic kitchen-bar and triage room for medical emergencies. Station Anchor and Gravity Generator are still reinforced and guarded by a turret.
+    type: Tweak
+  id: 404877
+  time: '2026-05-10T10:03:37.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4387
 Order: -1
