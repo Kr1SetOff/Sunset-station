@@ -1,11 +1,4 @@
 Entries:
-- author: Wizden
-  changes:
-  - message: Partial upstream.
-    type: Tweak
-  id: 404503
-  time: '2026-04-22T07:48:25.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4229
 - author: Sparlight
   changes:
   - message: Removed hunger drawback from bruizine to avoid critters chugging the jug.
@@ -2799,4 +2792,11 @@ Entries:
   id: 404902
   time: '2026-05-12T07:19:20.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/4426
+- author: Sparlight
+  changes:
+  - message: Fixes an occasional issue where players would be put into antag roles that do not align with their selected preferences.
+    type: Fix
+  id: 404903
+  time: '2026-05-12T07:56:03.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4420
 Order: -1
