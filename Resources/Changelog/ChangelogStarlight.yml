@@ -1,20 +1,6 @@
 Entries:
 - author: wonderfulnewworld
   changes:
-  - message: Internal Affairs/Lawyer "Attorney" Airlocks and Windoors.
-    type: Add
-  id: 404542
-  time: '2026-04-23T12:02:35.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4237
-- author: wonderfulnewworld
-  changes:
-  - message: Security normal Windoors (there were only secure ones before).
-    type: Add
-  id: 404543
-  time: '2026-04-23T12:02:35.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4237
-- author: wonderfulnewworld
-  changes:
   - message: Security/Internal Affairs Windoors.
     type: Add
   id: 404544
@@ -2799,4 +2785,18 @@ Entries:
   id: 404941
   time: '2026-05-12T08:50:57.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/4410
+- author: Bigfoot Bravo
+  changes:
+  - message: Vox can now use Amoxla IN ADDITION TO Saline and Dex to treat airloss and blood level.
+    type: Tweak
+  id: 404942
+  time: '2026-05-13T07:24:02.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4403
+- author: Bigfoot Bravo
+  changes:
+  - message: Ammonia no longer causes Caustic burns to Vox. Vox exhale Ammonia already!
+    type: Tweak
+  id: 404943
+  time: '2026-05-13T07:24:02.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4403
 Order: -1
