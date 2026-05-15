@@ -1,13 +1,6 @@
 Entries:
 - author: Cujo
   changes:
-  - message: (Lagan) Atmos front desk is equipped to be an (supercool-ready) air refill, scrubber/space heater, and light-EVA handout station. Oh, and blast doors toward atmos main in case of plasmafire.
-    type: Add
-  id: 404608
-  time: '2026-04-26T07:03:47.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4235
-- author: Cujo
-  changes:
   - message: (Lagan) Directional signs for solars placed in maints.
     type: Add
   id: 404609
@@ -2799,4 +2792,11 @@ Entries:
   id: 405007
   time: '2026-05-15T11:20:49.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/4446
+- author: Sparlight
+  changes:
+  - message: Most antagonist gamerules now allow non-humanoids to be selected.
+    type: Tweak
+  id: 405008
+  time: '2026-05-15T12:03:56.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4419
 Order: -1
