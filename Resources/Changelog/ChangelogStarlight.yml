@@ -1,13 +1,6 @@
 Entries:
 - author: Cujo
   changes:
-  - message: (Lagan) Conference room spawns have been swapped around.
-    type: Tweak
-  id: 404615
-  time: '2026-04-26T07:03:47.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4235
-- author: Cujo
-  changes:
   - message: (Lagan) Chemistry now has a proper medical fridge.
     type: Tweak
   id: 404616
@@ -2799,4 +2792,11 @@ Entries:
   id: 405014
   time: '2026-05-15T12:37:10.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/4433
+- author: kirb
+  changes:
+  - message: restores some previously removed animal themed trinkets.
+    type: Add
+  id: 405015
+  time: '2026-05-15T12:55:03.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4415
 Order: -1
