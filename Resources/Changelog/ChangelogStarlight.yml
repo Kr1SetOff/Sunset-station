@@ -1,13 +1,6 @@
 Entries:
 - author: Cujo
   changes:
-  - message: (Lagan) Made a cosmetic pass of each head-of-staff office; all consoles, document printers, paper trays accounted for where practical or necessary.
-    type: Tweak
-  id: 404612
-  time: '2026-04-26T07:03:47.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4235
-- author: Cujo
-  changes:
   - message: (Lagan) 2 t-ray devices have been added to the utility belts in artifact to aid any confusing pipe situations.
     type: Tweak
   id: 404613
@@ -2799,4 +2792,11 @@ Entries:
   id: 405011
   time: '2026-05-15T12:04:00.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/4436
+- author: Caws
+  changes:
+  - message: The Central Administrative Division has rolled out a new program to ensure all stations are spelling "NanoTrasen" correctly. Please report any further misspelling (e.g. "Nanotrasen") to your local CAD officer at your earliest convenience.
+    type: Fix
+  id: 405012
+  time: '2026-05-15T12:04:03.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4431
 Order: -1
