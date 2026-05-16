@@ -1,18 +1,4 @@
 Entries:
-- author: Cujo
-  changes:
-  - message: (Lagan) Any distro/waste pipes underlying a booze/soda dispenser have been fixed.
-    type: Fix
-  id: 404632
-  time: '2026-04-26T07:03:47.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4235
-- author: Cujo
-  changes:
-  - message: (Lagan) Many, many pipes and vents and scrubbers re-wired and fixed up for readability.
-    type: Fix
-  id: 404633
-  time: '2026-04-26T07:03:47.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4235
 - author: bynddark8
   changes:
   - message: (Box, Boxcars, Cluster, Cork, Elkridge, Fland, Hotel, Kiloton, Leth, Ming, Orwell, Packed, Plasma, Prism, Sepultum, Silica, SpaceMall, Serpentcrest) Removes the Chemmaster, Chem dispenser, and all chemistry related paraphernalia.
@@ -2799,4 +2785,18 @@ Entries:
   id: 405031
   time: '2026-05-16T15:44:32.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/4456
+- author: CrazyPhantom
+  changes:
+  - message: VGroid will now spawn with ore again.
+    type: Fix
+  id: 405032
+  time: '2026-05-16T21:12:28.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4449
+- author: CrazyPhantom
+  changes:
+  - message: Grids should no longer be embedded inside VGroid.
+    type: Fix
+  id: 405033
+  time: '2026-05-16T21:12:28.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4449
 Order: -1
