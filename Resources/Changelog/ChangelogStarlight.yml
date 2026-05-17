@@ -1,11 +1,4 @@
 Entries:
-- author: Scarlet Lightweaver
-  changes:
-  - message: Added Rumizine for PIRATES.
-    type: Add
-  id: 404665
-  time: '2026-04-27T14:43:21.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4258
 - author: BornStellar
   changes:
   - message: Drinking from dead now possible again, but is less efficient than drinking from the living. Rot reduces the efficiency further.
@@ -2799,4 +2792,11 @@ Entries:
   id: 405064
   time: '2026-05-17T16:08:47.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/4466
+- author: wonderfulnewworld
+  changes:
+  - message: You can now railroad based on objectives. Should give more customization to people who want to use it for antags.
+    type: Add
+  id: 405065
+  time: '2026-05-17T17:01:35.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4318
 Order: -1
