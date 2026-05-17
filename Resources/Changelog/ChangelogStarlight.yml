@@ -1,20 +1,6 @@
 Entries:
 - author: BornStellar
   changes:
-  - message: Drinking from dead now possible again, but is less efficient than drinking from the living. Rot reduces the efficiency further.
-    type: Tweak
-  id: 404666
-  time: '2026-04-27T18:32:32.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4210
-- author: BornStellar
-  changes:
-  - message: Vampires don't gain full blood from bites that would drain a target below 0 blood, it now scales as would be expected.
-    type: Fix
-  id: 404667
-  time: '2026-04-27T18:32:32.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4210
-- author: BornStellar
-  changes:
   - message: flash protection from glare now scales with vampire level. Baby vamps are fully countered by flash protection while fully powered ones will stun for even longer.
     type: Tweak
   id: 404668
@@ -2799,4 +2785,18 @@ Entries:
   id: 405065
   time: '2026-05-17T17:01:35.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/4318
+- author: CrazyPhantom
+  changes:
+  - message: The Gamemode Vote Cooldown has been extended outside of just votes.
+    type: Tweak
+  id: 405066
+  time: '2026-05-17T17:01:37.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4468
+- author: CrazyPhantom
+  changes:
+  - message: Gamemode Cooldown has decreased from 2 to 1.
+    type: Tweak
+  id: 405067
+  time: '2026-05-17T17:01:37.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4468
 Order: -1
