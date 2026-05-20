@@ -1,11 +1,4 @@
 Entries:
-- author: wonderfulnewworld
-  changes:
-  - message: Fixes a loc error on tranexamic acid's bottle.
-    type: Fix
-  id: 404720
-  time: '2026-04-29T05:33:09.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4286
 - author: neurovermi
   changes:
   - message: Mauler repair now works as expected.
@@ -2799,4 +2792,11 @@ Entries:
   id: 405119
   time: '2026-05-19T09:42:24.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/4479
+- author: CrazyPhantom
+  changes:
+  - message: Pipe and Cabledocks are now even more performant. Hopefully less/no more delays in pipes and cables anchoring.
+    type: Tweak
+  id: 405120
+  time: '2026-05-20T05:58:20.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4390
 Order: -1
