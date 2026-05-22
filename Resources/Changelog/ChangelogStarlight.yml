@@ -1,13 +1,6 @@
 Entries:
 - author: Citrea
   changes:
-  - message: IPCs can now accept brain and hand implants.
-    type: Add
-  id: 404830
-  time: '2026-05-07T07:05:28.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4298
-- author: Citrea
-  changes:
   - message: Cyberarm tools can now be used for surgery on IPCs.
     type: Fix
   id: 404831
@@ -2799,4 +2792,11 @@ Entries:
   id: 405229
   time: '2026-05-22T11:00:30.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/4500
+- author: Rinary
+  changes:
+  - message: Fixed "Panic Bunker" field in discord statuses always says that "Panic Bunker" off.
+    type: Fix
+  id: 405230
+  time: '2026-05-22T11:58:41.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4502
 Order: -1
