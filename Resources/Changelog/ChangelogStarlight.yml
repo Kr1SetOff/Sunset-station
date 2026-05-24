@@ -1,20 +1,6 @@
 Entries:
 - author: Cvlancer
   changes:
-  - message: (Ming) Added inflatable wall box to science artifact room.
-    type: Add
-  id: 404961
-  time: '2026-05-13T08:14:53.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4421
-- author: Cvlancer
-  changes:
-  - message: (Ming) Added "Ipc repair bay" to robotics.
-    type: Add
-  id: 404962
-  time: '2026-05-13T08:14:53.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4421
-- author: Cvlancer
-  changes:
   - message: (Ming) Added air canisters and other stored items into xeniobio as if it was being used as storage. This can be easily reverted once xeniobio is finished.
     type: Add
   id: 404963
@@ -2799,4 +2785,18 @@ Entries:
   id: 405360
   time: '2026-05-24T13:18:32.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/4536
+- author: Rinary
+  changes:
+  - message: Fixed bug when terror spiders win without active rule.
+    type: Fix
+  id: 405361
+  time: '2026-05-24T13:42:03.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4542
+- author: Rinary
+  changes:
+  - message: Fixed bug when terror spiders can be spawned after 50% died players, so they instantly win. Now they spawn only if there's 60% alive crew.
+    type: Fix
+  id: 405362
+  time: '2026-05-24T13:42:03.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4542
 Order: -1
