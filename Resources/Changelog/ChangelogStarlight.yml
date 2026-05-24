@@ -1,20 +1,6 @@
 Entries:
 - author: wonderfulnewworld
   changes:
-  - message: Bone Shards now deal less damage, but deal a lot more stamina damage, making them ideal for fleeing.
-    type: Tweak
-  id: 404888
-  time: '2026-05-10T10:36:28.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4313
-- author: wonderfulnewworld
-  changes:
-  - message: Cryogenic Sting now costs 30 chemicals instead of 35. Also costs 1 less Evo point.
-    type: Tweak
-  id: 404889
-  time: '2026-05-10T10:36:28.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4313
-- author: wonderfulnewworld
-  changes:
   - message: Lethargic Sting now costs 25 chemicals instead of 35. Also costs 1 less Evo point.
     type: Tweak
   id: 404890
@@ -2799,4 +2785,18 @@ Entries:
   id: 405287
   time: '2026-05-24T08:44:48.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/4523
+- author: Conflee
+  changes:
+  - message: Added the Robotic Medkit, a medkit stocked with 2 Oil Pack stacks (20 total), 1 HV Cable Coil stack (30 total), 1 Welding Mask, and 1 Welder. Used to repair IPCs.
+    type: Add
+  id: 405288
+  time: '2026-05-24T09:52:32.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4507
+- author: Conflee
+  changes:
+  - message: Updated many shuttles such as ERT, CBURN, NTSF, Decimus, as well as the Nukie Outposts to include 1-2 Robotic Medkits and a source of Welding Fuel (usually a wall mounted fuel dispenser). Can be found either in medical or engineering areas, depending on the shuttle. ERT who roll IPC are no longer totally boned.
+    type: Tweak
+  id: 405289
+  time: '2026-05-24T09:52:32.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4507
 Order: -1
