@@ -1,18 +1,4 @@
 Entries:
-- author: Way
-  changes:
-  - message: (Bagel) Fixed various entities, revamped decals & tiles in some spots, slightly more trash in genpop. NTR/BSO Combined room. Evac shuttle now has defibs.
-    type: Fix
-  id: 404982
-  time: '2026-05-15T05:59:55.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4444
-- author: Cvlancer & Ohelig
-  changes:
-  - message: (Kiloton) Added a fully functional nuclear reactor to engineering.
-    type: Add
-  id: 404983
-  time: '2026-05-15T06:58:06.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4440
 - author: Cvlancer & Ohelig
   changes:
   - message: (Kiloton) Added a bluespace harvester to engineering.
@@ -2799,4 +2785,18 @@ Entries:
   id: 405381
   time: '2026-05-24T14:24:33.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/4518
+- author: Coolsurf6
+  changes:
+  - message: Cyclorites now shove 50% of the time rather than 25% due to their slow shoves.
+    type: Tweak
+  id: 405382
+  time: '2026-05-24T14:47:37.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4541
+- author: Coolsurf6
+  changes:
+  - message: Cyclorite shoves now do 50 stamina.
+    type: Tweak
+  id: 405383
+  time: '2026-05-24T14:47:37.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4541
 Order: -1
