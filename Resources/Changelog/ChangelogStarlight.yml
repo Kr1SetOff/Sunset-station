@@ -1,39 +1,4 @@
 Entries:
-- author: Caws
-  changes:
-  - message: (Other Maps) Salvage teams have been standardized to 3 mining specialists.
-    type: Tweak
-  id: 405005
-  time: '2026-05-15T06:58:11.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4437
-- author: CrazyPhantom
-  changes:
-  - message: Defibs will no longer randomly stop healing Asphyx Damage.
-    type: Fix
-  id: 405006
-  time: '2026-05-15T09:38:27.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4450
-- author: Caws
-  changes:
-  - message: 'New station beacons have been added for mapping: NTR, BSO, Nuclear Reactor, and Xenobiology.'
-    type: Add
-  id: 405007
-  time: '2026-05-15T11:20:49.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4446
-- author: Sparlight
-  changes:
-  - message: Most antagonist gamerules now allow non-humanoids to be selected.
-    type: Tweak
-  id: 405008
-  time: '2026-05-15T12:03:56.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4419
-- author: CrazyPhantom
-  changes:
-  - message: Escape pods will no longer be stranded in space.
-    type: Fix
-  id: 405009
-  time: '2026-05-15T12:03:58.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4411
 - author: Unknown
   changes:
   - message: Added 49 new clothing items between cloaks, jumpsuits and coats.
@@ -2799,4 +2764,39 @@ Entries:
   id: 405404
   time: '2026-05-25T14:04:44.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/4540
+- author: wonderfulneworld
+  changes:
+  - message: Restores Wizden's original judge robes.
+    type: Add
+  id: 405405
+  time: '2026-05-25T14:04:47.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4537
+- author: wonderfulneworld
+  changes:
+  - message: Magistrate Jacket and NT Rep Jacket now properly have cold resist, and now actually share the exact same stats with each other.
+    type: Tweak
+  id: 405406
+  time: '2026-05-25T14:04:47.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4537
+- author: wonderfulneworld
+  changes:
+  - message: Moves our current judge robes to magistrate robes, available to the Magistrate only. They have the same stats as the prior two items, and are NanoTrasen contraband.
+    type: Tweak
+  id: 405407
+  time: '2026-05-25T14:04:47.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4537
+- author: wonderfulneworld
+  changes:
+  - message: Fixes some grammar with BSO's overcoat.
+    type: Fix
+  id: 405408
+  time: '2026-05-25T14:04:47.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4537
+- author: wonderfulneworld
+  changes:
+  - message: Fixes some capitalization inconsistency.
+    type: Fix
+  id: 405409
+  time: '2026-05-25T14:04:47.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4537
 Order: -1
