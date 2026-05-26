@@ -1,25 +1,4 @@
 Entries:
-- author: Way
-  changes:
-  - message: '"Magistrates longcoat" is now an actual jacket instead of an entire jumpsuit, additionally it now has the benefits of a winter coat.'
-    type: Tweak
-  id: 405034
-  time: '2026-05-17T08:57:31.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4470
-- author: CrazyPhantom
-  changes:
-  - message: You can now actually use tools to Lock/Unlock Chameleon bags.
-    type: Fix
-  id: 405035
-  time: '2026-05-17T09:20:39.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4467
-- author: Caws
-  changes:
-  - message: SSD players will no longer be bluespaced into cryogenic sleep units that are off-station.
-    type: Fix
-  id: 405036
-  time: '2026-05-17T09:37:48.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4465
 - author: CrazyPhantom
   changes:
   - message: Fixed an issue where bullets would not hit the Mothership Core.
@@ -2799,4 +2778,25 @@ Entries:
   id: 405433
   time: '2026-05-26T21:16:51.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/4505
+- author: wonderfulnewworld
+  changes:
+  - message: The Heavy Xenoborg's weapon modules now have a small knife in each of them. (Dealing 5/10/15 Damage.). This is to try to keep people away while they recharge. They can already switch to a crowbar, but this lessens the hotkey skill requirement of the player.
+    type: Add
+  id: 405434
+  time: '2026-05-26T22:01:54.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4548
+- author: wonderfulnewworld
+  changes:
+  - message: Advanced Hypo Module is slightly cheaper, and comes with Mute Toxin again.
+    type: Add
+  id: 405435
+  time: '2026-05-26T22:01:54.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4548
+- author: wonderfulnewworld
+  changes:
+  - message: Bitterfrost Cannon Module now costs 125 charge per shot instead of 150. (8 shots.).
+    type: Tweak
+  id: 405436
+  time: '2026-05-26T22:01:54.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4548
 Order: -1
