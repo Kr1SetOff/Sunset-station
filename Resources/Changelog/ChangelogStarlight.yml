@@ -1,13 +1,6 @@
 Entries:
 - author: wonderfulnewworld
   changes:
-  - message: Changelings now show up as subantags roughly 10% more of the time, depending on gamemode.
-    type: Tweak
-  id: 405073
-  time: '2026-05-17T17:01:39.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4391
-- author: wonderfulnewworld
-  changes:
   - message: The Midround Antags now scale. They've all got varying levels of scaling, but generally fall between 70 and 95, depending on the antag's impact. (These numbers are also technically hardcoded... but if we ever reach a point where we need to increase them [250+pop frequently], then I think we'll have a different problem on our hands...).
     type: Tweak
   id: 405074
@@ -2799,4 +2792,11 @@ Entries:
   id: 405472
   time: '2026-05-29T21:07:29.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/4583
+- author: Caws
+  changes:
+  - message: NanoTrasen Career trainers can now select scarves, LGBT pins, and PDA pens in the loadout menu.
+    type: Fix
+  id: 405473
+  time: '2026-05-29T21:07:32.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4582
 Order: -1
