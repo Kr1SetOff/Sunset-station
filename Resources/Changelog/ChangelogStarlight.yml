@@ -1,13 +1,6 @@
 Entries:
 - author: wonderfulnewworld
   changes:
-  - message: Removed the Changeling gamemode from rotation, due to being generally uninteresting, and diluting the pool.
-    type: Remove
-  id: 405070
-  time: '2026-05-17T17:01:39.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4391
-- author: wonderfulnewworld
-  changes:
   - message: (Alpha Secret) Traitor +2% (23%), Changeling -5% (0), Vampire +2% (7%), Traitorling +1% (7%).
     type: Tweak
   id: 405071
@@ -2799,4 +2792,11 @@ Entries:
   id: 405469
   time: '2026-05-29T20:23:10.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/4572
+- author: DONKCO. Scarlet.
+  changes:
+  - message: Added the funniest thing for clowns!.
+    type: Add
+  id: 405470
+  time: '2026-05-29T20:23:12.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4570
 Order: -1
