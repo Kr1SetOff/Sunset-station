@@ -1,20 +1,6 @@
 Entries:
 - author: STARLIGHT TEAM
   changes:
-  - message: WE WANT TO ANNOUNCE TERROR ON OUR SECTOR!(Terror spiders).
-    type: Add
-  id: 405102
-  time: '2026-05-18T18:59:31.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4025
-- author: STARLIGHT TEAM
-  changes:
-  - message: Fixed bug when spiderling grow up into spider even if it died.
-    type: Fix
-  id: 405103
-  time: '2026-05-18T18:59:31.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4025
-- author: STARLIGHT TEAM
-  changes:
   - message: Added wrap action for spiders, now they can wrap humanoids(this prevents rot process).
     type: Add
   id: 405104
@@ -2799,4 +2785,18 @@ Entries:
   id: 405501
   time: '2026-06-01T11:39:18.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/4565
+- author: DevCS-CP
+  changes:
+  - message: Command tracking implant that rattles on both Security and Command.
+    type: Add
+  id: 405502
+  time: '2026-06-01T11:39:21.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4579
+- author: DevCS-CP
+  changes:
+  - message: BSO now gets Command tracking implants instead of security ones.
+    type: Tweak
+  id: 405503
+  time: '2026-06-01T11:39:21.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4579
 Order: -1
