@@ -1,11 +1,4 @@
 Entries:
-- author: StrangerOfParadiseOG
-  changes:
-  - message: Added a new toxin and a new cellular medicine related to the new devilish apple fruit.
-    type: Add
-  id: 405157
-  time: '2026-05-21T16:02:35.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4497
 - author: wonderfulnewworld, Rinary
   changes:
   - message: Added Tier 3 Terror Spiders to the Guidebook.
@@ -2799,4 +2792,11 @@ Entries:
   id: 405556
   time: '2026-06-01T13:10:20.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/4589
+- author: wonderfulnewworld
+  changes:
+  - message: Paramedic Lockers now use Paramedic Access.
+    type: Fix
+  id: 405557
+  time: '2026-06-01T13:36:20.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4620
 Order: -1
