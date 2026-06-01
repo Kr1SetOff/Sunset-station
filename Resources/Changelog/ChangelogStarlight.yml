@@ -1,13 +1,6 @@
 Entries:
 - author: Cringe_Cursed
   changes:
-  - message: 'Added lightgrid system for gameplay-side light exposure checks (pros: perfomance, cons: brain death).'
-    type: Add
-  id: 405095
-  time: '2026-05-18T04:52:04.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/3968
-- author: Cringe_Cursed
-  changes:
   - message: Added light debug overlay.
     type: Add
   id: 405096
@@ -2799,4 +2792,11 @@ Entries:
   id: 405494
   time: '2026-06-01T09:05:17.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/4618
+- author: Scarlet Lightweaver
+  changes:
+  - message: Removed the magical crayon for now due to the ongoning lag issues.
+    type: Remove
+  id: 405495
+  time: '2026-06-01T09:56:39.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4609
 Order: -1
