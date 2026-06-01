@@ -1,25 +1,4 @@
 Entries:
-- author: STARLIGHT TEAM
-  changes:
-  - message: Human observation console looks as it should.
-    type: Fix
-  id: 405098
-  time: '2026-05-18T05:29:32.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4474
-- author: FeralCreature
-  changes:
-  - message: 29 achievements. Happy hunting!
-    type: Add
-  id: 405099
-  time: '2026-05-18T12:00:42.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4393
-- author: FeralCreature
-  changes:
-  - message: 6 hidden achievements. These ones hunt you.
-    type: Add
-  id: 405100
-  time: '2026-05-18T12:00:42.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4393
 - author: CringeCursed
   changes:
   - message: Added 6 new Bluespace Harvester reward pools.
@@ -2799,4 +2778,25 @@ Entries:
   id: 405497
   time: '2026-06-01T09:56:44.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/4611
+- author: Hanz
+  changes:
+  - message: Added various vulpkanin Skunk, Possum, and Raccoon markings.
+    type: Add
+  id: 405498
+  time: '2026-06-01T11:39:16.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4581
+- author: Hanz
+  changes:
+  - message: Added various scar markings for humans.
+    type: Add
+  id: 405499
+  time: '2026-06-01T11:39:16.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4581
+- author: Hanz
+  changes:
+  - message: Added vulpkanin sprites for BSO gasmask and hardsuit.
+    type: Add
+  id: 405500
+  time: '2026-06-01T11:39:16.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4581
 Order: -1
