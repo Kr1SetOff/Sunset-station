@@ -1,27 +1,6 @@
 Entries:
 - author: Caws
   changes:
-  - message: (Leth) Lawyers.
-    type: Add
-  id: 405170
-  time: '2026-05-22T09:11:03.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4506
-- author: Caws
-  changes:
-  - message: (Leth) Lawyer Office next to NCT Office.
-    type: Add
-  id: 405171
-  time: '2026-05-22T09:11:03.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4506
-- author: Caws
-  changes:
-  - message: (Leth) Added signs for Lawyer, IAA, NTR, and Magistrate.
-    type: Add
-  id: 405172
-  time: '2026-05-22T09:11:03.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4506
-- author: Caws
-  changes:
   - message: (Leth) Departmental communications consoles added to Head of Staff's respective offices.
     type: Add
   id: 405173
@@ -2799,4 +2778,25 @@ Entries:
   id: 405569
   time: '2026-06-02T20:15:05.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/4637
+- author: Rhetorica
+  changes:
+  - message: TriggerOnPointedAt. Automation enters the gestural interface era.
+    type: Add
+  id: 405570
+  time: '2026-06-02T21:05:02.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4636
+- author: Rhetorica
+  changes:
+  - message: Dwarfs now shout "Mushroom!" when pointing at fungus (excluding those growing in hydroponics trays and soil).
+    type: Add
+  id: 405571
+  time: '2026-06-02T21:05:02.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4636
+- author: Rhetorica
+  changes:
+  - message: Dwarfs now shout "We're rich!" when pointing at a stack of gold ore.
+    type: Add
+  id: 405572
+  time: '2026-06-02T21:05:02.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4636
 Order: -1
