@@ -1,20 +1,6 @@
 Entries:
 - author: Caws
   changes:
-  - message: (Leth) Grill added to Kitchen.
-    type: Add
-  id: 405180
-  time: '2026-05-22T09:11:03.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4506
-- author: Caws
-  changes:
-  - message: (Leth) Happy Honk vending machine added to Mess Hall.
-    type: Add
-  id: 405181
-  time: '2026-05-22T09:11:03.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4506
-- author: Caws
-  changes:
   - message: (Leth) Pride-O-Mat added to Barracks south of HOP.
     type: Add
   id: 405182
@@ -2799,4 +2785,18 @@ Entries:
   id: 405579
   time: '2026-06-04T05:55:19.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/4646
+- author: wonderfulnewworld, princess_gurchi, Minemoder, ScarKy0
+  changes:
+  - message: Added robotic versions of nearly every emote in game for Protogens to use.
+    type: Add
+  id: 405580
+  time: '2026-06-04T06:25:34.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4650
+- author: wonderfulnewworld, princess_gurchi, Minemoder, ScarKy0
+  changes:
+  - message: Diona, Vox and Vulpkanins now have unique sneeze sounds.
+    type: Add
+  id: 405581
+  time: '2026-06-04T06:25:34.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4650
 Order: -1
