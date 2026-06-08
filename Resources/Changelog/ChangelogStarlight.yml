@@ -1,41 +1,6 @@
 Entries:
 - author: Cvlancer.
   changes:
-  - message: (CORK) Added "ipc repair bay" (pray for me).
-    type: Add
-  id: 405324
-  time: '2026-05-24T09:52:36.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4503
-- author: Cvlancer.
-  changes:
-  - message: (CORK) Added lawyer.
-    type: Add
-  id: 405325
-  time: '2026-05-24T09:52:36.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4503
-- author: Cvlancer.
-  changes:
-  - message: (FLAND) Added ipc repair bay.
-    type: Add
-  id: 405326
-  time: '2026-05-24T09:52:36.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4503
-- author: Cvlancer.
-  changes:
-  - message: (FLAND) Added lawyer.
-    type: Add
-  id: 405327
-  time: '2026-05-24T09:52:36.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4503
-- author: Cvlancer.
-  changes:
-  - message: (FLAND) Added card packs at game tables.
-    type: Add
-  id: 405328
-  time: '2026-05-24T09:52:36.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4503
-- author: Cvlancer.
-  changes:
   - message: (FLAND) Added contraband crate to armory.
     type: Add
   id: 405329
@@ -2799,4 +2764,39 @@ Entries:
   id: 405723
   time: '2026-06-08T21:42:02.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/4670
+- author: Johnny
+  changes:
+  - message: A few prototypes of jugs and bags for QoL in loadouts.
+    type: Add
+  id: 405724
+  time: '2026-06-08T22:30:24.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4676
+- author: Johnny
+  changes:
+  - message: ERT Medical and engineering hard suits now have specialized actions and modifiers given to them to better help their tasks.
+    type: Add
+  id: 405725
+  time: '2026-06-08T22:30:24.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4676
+- author: Johnny
+  changes:
+  - message: All ERT class loadouts have been redesigned and reworked to be more specialized in what field they are actually assigned to.
+    type: Tweak
+  id: 405726
+  time: '2026-06-08T22:30:24.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4676
+- author: Johnny
+  changes:
+  - message: I... fixed shoes? I dont know, I had to for the PR to go through.
+    type: Tweak
+  id: 405727
+  time: '2026-06-08T22:30:24.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4676
+- author: Johnny
+  changes:
+  - message: Made the split between normal ERT prototypes and armed ERT prototypes more apparent in their loadout styles.
+    type: Tweak
+  id: 405728
+  time: '2026-06-08T22:30:24.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4676
 Order: -1
