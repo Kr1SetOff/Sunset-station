@@ -1,90 +1,6 @@
 Entries:
 - author: Cvlancer.
   changes:
-  - message: (OASIS) Fixed zoo animals dying to weather.
-    type: Fix
-  id: 405300
-  time: '2026-05-24T09:52:36.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4503
-- author: Cvlancer.
-  changes:
-  - message: (OASIS) Fixed maints bar not having drinks.
-    type: Fix
-  id: 405301
-  time: '2026-05-24T09:52:36.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4503
-- author: Cvlancer.
-  changes:
-  - message: (BAGEL) Added ipc repair bay.
-    type: Add
-  id: 405302
-  time: '2026-05-24T09:52:36.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4503
-- author: Cvlancer.
-  changes:
-  - message: (BAGEL) Added a surgery bag to robotics.
-    type: Add
-  id: 405303
-  time: '2026-05-24T09:52:36.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4503
-- author: Cvlancer.
-  changes:
-  - message: (BAGEL) Added lawyer and lawyer office.
-    type: Add
-  id: 405304
-  time: '2026-05-24T09:52:36.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4503
-- author: Cvlancer.
-  changes:
-  - message: (BAGEL) Removed ai cams in dorms and one in maints.
-    type: Remove
-  id: 405305
-  time: '2026-05-24T09:52:36.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4503
-- author: Cvlancer.
-  changes:
-  - message: (BAGEL) Removed a telecommunications server in sci server room.
-    type: Remove
-  id: 405306
-  time: '2026-05-24T09:52:36.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4503
-- author: Cvlancer.
-  changes:
-  - message: (BOX) Added ipc repair bay.
-    type: Add
-  id: 405307
-  time: '2026-05-24T09:52:36.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4503
-- author: Cvlancer.
-  changes:
-  - message: (BOX) Added surgery tools to robotics.
-    type: Add
-  id: 405308
-  time: '2026-05-24T09:52:36.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4503
-- author: Cvlancer.
-  changes:
-  - message: (BOX) Added Lawyer and fixed courtroom access.
-    type: Add
-  id: 405309
-  time: '2026-05-24T09:52:36.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4503
-- author: Cvlancer.
-  changes:
-  - message: (BOX) Added nuno to science breakroom.
-    type: Add
-  id: 405310
-  time: '2026-05-24T09:52:36.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4503
-- author: Cvlancer.
-  changes:
-  - message: (BOX) Removed Ai cams in dorms and space facing cameras.
-    type: Remove
-  id: 405311
-  time: '2026-05-24T09:52:36.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4503
-- author: Cvlancer.
-  changes:
   - message: (BOX) Removed telecommunications server from sci server room.
     type: Remove
   id: 405312
@@ -2799,4 +2715,88 @@ Entries:
   id: 405699
   time: '2026-06-08T18:51:16.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/4679
+- author: Caws
+  changes:
+  - message: (Starboard) Electrolyzer added to Atmos.
+    type: Add
+  id: 405700
+  time: '2026-06-08T18:51:18.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4680
+- author: Caws
+  changes:
+  - message: (Starboard) AtmosDrobe added to Atmos.
+    type: Add
+  id: 405701
+  time: '2026-06-08T18:51:18.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4680
+- author: Caws
+  changes:
+  - message: (Starboard) Spare Captain ID added to Captain's Room.
+    type: Add
+  id: 405702
+  time: '2026-06-08T18:51:18.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4680
+- author: Caws
+  changes:
+  - message: (Starboard) WinterDrobe to Cryosleep and Arrivals.
+    type: Add
+  id: 405703
+  time: '2026-06-08T18:51:18.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4680
+- author: Caws
+  changes:
+  - message: (Starboard) Pride-O-Mat to Cryoslepe and Arrivals.
+    type: Add
+  id: 405704
+  time: '2026-06-08T18:51:18.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4680
+- author: Caws
+  changes:
+  - message: (Starboard) Added Clown's locker which had been unrightfully missing from their room.
+    type: Add
+  id: 405705
+  time: '2026-06-08T18:51:18.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4680
+- author: Caws
+  changes:
+  - message: (Starboard) Surgery is no longer -40C, it should be +5C now instead. You can still tweak the freezer in the room to chill the room further if desired.
+    type: Tweak
+  id: 405706
+  time: '2026-06-08T18:51:18.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4680
+- author: Caws
+  changes:
+  - message: (Starboard) RD's suit is now in its own suit storage rather than in the RD's locker.
+    type: Tweak
+  id: 405707
+  time: '2026-06-08T18:51:18.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4680
+- author: Caws
+  changes:
+  - message: (Starboard) CMO's suit is now in its own suit storage rather than in the CMO's locker.
+    type: Tweak
+  id: 405708
+  time: '2026-06-08T18:51:18.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4680
+- author: Caws
+  changes:
+  - message: (Starboard) Moved a light in Cargo that was blocking the indicator light on the Mail Teleporter.
+    type: Fix
+  id: 405709
+  time: '2026-06-08T18:51:18.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4680
+- author: Caws
+  changes:
+  - message: (Starboard) BSO's room is now NT access.
+    type: Fix
+  id: 405710
+  time: '2026-06-08T18:51:18.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4680
+- author: Caws
+  changes:
+  - message: (Starboard) Handcuffs removed from Bridge.
+    type: Remove
+  id: 405711
+  time: '2026-06-08T18:51:18.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4680
 Order: -1
