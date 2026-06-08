@@ -1,13 +1,6 @@
 Entries:
 - author: Cvlancer.
   changes:
-  - message: (CLUSTER) Added several clown and mime required entities that were missing near theatre room.
-    type: Add
-  id: 405318
-  time: '2026-05-24T09:52:36.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4503
-- author: Cvlancer.
-  changes:
   - message: (CLUSTER) Added golden toilet to bathrooms near theatre.
     type: Add
   id: 405319
@@ -2799,4 +2792,11 @@ Entries:
   id: 405717
   time: '2026-06-08T21:41:58.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/4643
+- author: SiTW
+  changes:
+  - message: Technical Assistants now get AstroNav.
+    type: Tweak
+  id: 405718
+  time: '2026-06-08T21:42:00.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4648
 Order: -1
