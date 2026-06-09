@@ -1,13 +1,6 @@
 Entries:
 - author: Shades
   changes:
-  - message: Nexus can now be jammed by radio jammers.
-    type: Add
-  id: 405428
-  time: '2026-05-26T20:33:06.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4511
-- author: Shades
-  changes:
   - message: Diona, Cluwn and Spider Hivemind are removed.
     type: Remove
   id: 405429
@@ -2799,4 +2792,11 @@ Entries:
   id: 405827
   time: '2026-06-09T06:41:20.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/4678
+- author: Mack
+  changes:
+  - message: Allow ghosts to use the character editor.
+    type: Add
+  id: 405828
+  time: '2026-06-09T07:33:44.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4656
 Order: -1
