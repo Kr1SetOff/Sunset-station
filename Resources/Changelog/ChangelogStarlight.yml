@@ -1,11 +1,4 @@
 Entries:
-- author: CrazyPhantom
-  changes:
-  - message: Optimized Decals.
-    type: Fix
-  id: 405560
-  time: '2026-06-02T09:23:15.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4623
 - author: wonderfulnewworld, Shades, Killer Tamashi, Princess Gurchi, Fasuh, Huaqas
   changes:
   - message: Adds Protogens, Proto-Arachnids, Proto-Avali, Proto-Cyclorites, Proto-Diona, Proto-Dwarves, Proto-Aielithii, Proto-Felionoids, Proto-Humans, Proto-Lagomorphs, Proto-Moths, Proto-Reptilians, Proto-Resomi, Proto-Laspi, Proto-Thaven, Proto-Voxes, and Proto-Vulps.
@@ -2799,4 +2792,11 @@ Entries:
   id: 405959
   time: '2026-06-13T13:51:29.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/1929
+- author: CrazyPhantom
+  changes:
+  - message: Fixed all VGroid rocks failing to generate if an exterior fails to generate.
+    type: Fix
+  id: 405960
+  time: '2026-06-13T14:20:40.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4762
 Order: -1
