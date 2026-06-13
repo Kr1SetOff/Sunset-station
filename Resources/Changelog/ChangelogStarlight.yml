@@ -1,13 +1,6 @@
 Entries:
 - author: wonderfulnewworld, Shades, Killer Tamashi, Princess Gurchi, Fasuh, Huaqas
   changes:
-  - message: Adds Protogens, Proto-Arachnids, Proto-Avali, Proto-Cyclorites, Proto-Diona, Proto-Dwarves, Proto-Aielithii, Proto-Felionoids, Proto-Humans, Proto-Lagomorphs, Proto-Moths, Proto-Reptilians, Proto-Resomi, Proto-Laspi, Proto-Thaven, Proto-Voxes, and Proto-Vulps.
-    type: Add
-  id: 405561
-  time: '2026-06-02T10:25:03.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4600
-- author: wonderfulnewworld, Shades, Killer Tamashi, Princess Gurchi, Fasuh, Huaqas
-  changes:
   - message: Added 6 protogen frames.
     type: Add
   id: 405562
@@ -2799,4 +2792,11 @@ Entries:
   id: 405960
   time: '2026-06-13T14:20:40.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/4762
+- author: Anathelarctek
+  changes:
+  - message: wurbles of shadekin volume.
+    type: Tweak
+  id: 405961
+  time: '2026-06-13T14:47:24.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4725
 Order: -1
