@@ -1,11 +1,4 @@
 Entries:
-- author: DevCS-CP
-  changes:
-  - message: Implant Extractor can remove command tracking implant.
-    type: Add
-  id: 405578
-  time: '2026-06-04T05:55:16.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4653
 - author: wonderfulnewworld
   changes:
   - message: Protokin are now strippable.
@@ -2799,4 +2792,11 @@ Entries:
   id: 405977
   time: '2026-06-13T20:46:25.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/4693
+- author: Toxyams
+  changes:
+  - message: Hardsuit helmets work from lost property bags.
+    type: Fix
+  id: 405978
+  time: '2026-06-13T20:46:27.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4765
 Order: -1
