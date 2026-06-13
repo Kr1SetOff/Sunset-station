@@ -1,11 +1,4 @@
 Entries:
-- author: redmushie
-  changes:
-  - message: Fax machines now print metadata like which machine sent the fax and when it was received. Not to worry, antagonists can still tamper with it. See PR for details.
-    type: Add
-  id: 405567
-  time: '2026-06-02T11:42:00.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4626
 - author: Johnny
   changes:
   - message: Some unnecessary Aghost things.
@@ -2799,4 +2792,11 @@ Entries:
   id: 405966
   time: '2026-06-13T14:47:26.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/4747
+- author: gabbl0
+  changes:
+  - message: Added a recipe for lollipops.
+    type: Add
+  id: 405967
+  time: '2026-06-13T15:17:38.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4652
 Order: -1
