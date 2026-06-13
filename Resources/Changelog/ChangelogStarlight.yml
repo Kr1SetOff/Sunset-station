@@ -1,11 +1,4 @@
 Entries:
-- author: Way
-  changes:
-  - message: Forgot to make the engineering holoprojector obtainable.
-    type: Fix
-  id: 405559
-  time: '2026-06-02T08:35:14.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4631
 - author: CrazyPhantom
   changes:
   - message: Optimized Decals.
@@ -2799,4 +2792,11 @@ Entries:
   id: 405958
   time: '2026-06-12T12:52:42.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/4509
+- author: mikeysaurus, Zeyria, ork, redmushie, Huaqas, DocMoth, portfiend, paige404
+  changes:
+  - message: Added the Rodentia species.
+    type: Add
+  id: 405959
+  time: '2026-06-13T13:51:29.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/1929
 Order: -1
