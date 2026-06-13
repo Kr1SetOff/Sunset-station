@@ -1,13 +1,6 @@
 Entries:
 - author: Rhetorica
   changes:
-  - message: TriggerOnPointedAt. Automation enters the gestural interface era.
-    type: Add
-  id: 405570
-  time: '2026-06-02T21:05:02.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4636
-- author: Rhetorica
-  changes:
   - message: Dwarfs now shout "Mushroom!" when pointing at fungus (excluding those growing in hydroponics trays and soil).
     type: Add
   id: 405571
@@ -2799,4 +2792,11 @@ Entries:
   id: 405969
   time: '2026-06-13T15:37:27.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/4628
+- author: Johnny
+  changes:
+  - message: ERT Medical loadout slightly altered based off feedback.
+    type: Tweak
+  id: 405970
+  time: '2026-06-13T17:54:15.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4696
 Order: -1
