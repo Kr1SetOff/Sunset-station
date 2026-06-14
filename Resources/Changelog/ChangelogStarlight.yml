@@ -1,13 +1,6 @@
 Entries:
 - author: Caws
   changes:
-  - message: (All Maps) Security Officer ratios have been adjusted across all maps to be more consistent to the minimum/maximum players a map supports.
-    type: Tweak
-  id: 405585
-  time: '2026-06-05T00:29:57.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4598
-- author: Caws
-  changes:
   - message: (All Maps) Security Cadet job slots are now exactly 1/2 of Security Officers.
     type: Tweak
   id: 405586
@@ -2799,4 +2792,11 @@ Entries:
   id: 405984
   time: '2026-06-14T08:30:29.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/4384
+- author: CrazyPhantom
+  changes:
+  - message: Fixed an issue where the Shipyard would fail to purchase a shuttle for no apparent reason, if something goes wrong now it will also tell you to contact Central Command (Who will contact me to figure it out :3).
+    type: Fix
+  id: 405985
+  time: '2026-06-14T17:20:30.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4788
 Order: -1
