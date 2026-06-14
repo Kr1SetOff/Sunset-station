@@ -1,11 +1,4 @@
 Entries:
-- author: wonderfulnewworld, princess_gurchi, Minemoder, ScarKy0
-  changes:
-  - message: Diona, Vox and Vulpkanins now have unique sneeze sounds.
-    type: Add
-  id: 405581
-  time: '2026-06-04T06:25:34.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4650
 - author: wonderfulnewworld
   changes:
   - message: Changelings can now make a fake Protogen frame, allowing them to properly disguise as protogen.
@@ -2799,4 +2792,11 @@ Entries:
   id: 405980
   time: '2026-06-14T05:02:54.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/4766
+- author: mikeysaurus
+  changes:
+  - message: Fixes a bug where Rodentia can break their collision states.
+    type: Fix
+  id: 405981
+  time: '2026-06-14T07:59:07.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4776
 Order: -1
