@@ -1,13 +1,6 @@
 Entries:
 - author: Caws
   changes:
-  - message: (Fland) +1 Brigmedic.
-    type: Tweak
-  id: 405594
-  time: '2026-06-05T00:29:57.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4598
-- author: Caws
-  changes:
   - message: (Hotel) +1 suits to Security Armory (6 total).
     type: Tweak
   id: 405595
@@ -2799,4 +2792,11 @@ Entries:
   id: 405993
   time: '2026-06-14T18:42:00.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/4775
+- author: mikeysaurus
+  changes:
+  - message: Fixes Expeditioneer to have correct fan layout, and re-adds the locker with basic electronics gear and pAI.
+    type: Fix
+  id: 405994
+  time: '2026-06-14T18:42:02.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4782
 Order: -1
