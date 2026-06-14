@@ -1,13 +1,6 @@
 Entries:
 - author: wonderfulnewworld
   changes:
-  - message: Changelings can now make a fake Protogen frame, allowing them to properly disguise as protogen.
-    type: Add
-  id: 405582
-  time: '2026-06-04T06:25:36.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4645
-- author: wonderfulnewworld
-  changes:
   - message: Ghost roles that don't use your character will not use Protogen, since they don't spawn with their armor frames.
     type: Tweak
   id: 405583
@@ -2799,4 +2792,11 @@ Entries:
   id: 405981
   time: '2026-06-14T07:59:07.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/4776
+- author: Darius
+  changes:
+  - message: Projectile speed from pyroclastic anomaly pulses increased.
+    type: Tweak
+  id: 405982
+  time: '2026-06-14T08:30:27.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4772
 Order: -1
