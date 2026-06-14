@@ -1,20 +1,6 @@
 Entries:
 - author: Caws
   changes:
-  - message: (All Maps) Security Cadet job slots are now exactly 1/2 of Security Officers.
-    type: Tweak
-  id: 405586
-  time: '2026-06-05T00:29:57.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4598
-- author: Caws
-  changes:
-  - message: (Leth) Leth had '0' set for roundstart Security Cadet, meaning you could never start the round as a Security Cadet, only latejoin.
-    type: Fix
-  id: 405587
-  time: '2026-06-05T00:29:57.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4598
-- author: Caws
-  changes:
   - message: (Bagel) Security Locker Room reorganized slightly.
     type: Tweak
   id: 405588
@@ -2799,4 +2785,18 @@ Entries:
   id: 405985
   time: '2026-06-14T17:20:30.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/4788
+- author: STARLIGHT TEAM
+  changes:
+  - message: Doxarubixadone is back to its original state, doesnt work on the dead anymore.
+    type: Tweak
+  id: 405986
+  time: '2026-06-14T17:46:29.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4783
+- author: STARLIGHT TEAM
+  changes:
+  - message: Ambuzol + has been made to fix cellular.
+    type: Tweak
+  id: 405987
+  time: '2026-06-14T17:46:29.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4783
 Order: -1
