@@ -1,13 +1,6 @@
 Entries:
 - author: Caws
   changes:
-  - message: (Cog) Librarian's room is now service access.
-    type: Fix
-  id: 405660
-  time: '2026-06-08T17:56:51.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4684
-- author: Caws
-  changes:
   - message: (Cog) BSO's room is now NT access.
     type: Fix
   id: 405661
@@ -2799,4 +2792,11 @@ Entries:
   id: 406059
   time: '2026-06-16T16:08:57.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/4821
+- author: Johnny
+  changes:
+  - message: Shoes no longer consume items that you're trying to put into them, they just reject you doing that now.
+    type: Fix
+  id: 406060
+  time: '2026-06-16T17:48:56.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4740
 Order: -1
