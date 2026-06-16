@@ -1,48 +1,6 @@
 Entries:
 - author: Caws
   changes:
-  - message: (Reach) +2 suits to Security.
-    type: Tweak
-  id: 405619
-  time: '2026-06-05T00:29:57.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4598
-- author: Caws
-  changes:
-  - message: (Reach) Arrivals should now properly lock with Reach (instead of the ATS).
-    type: Fix
-  id: 405620
-  time: '2026-06-05T00:29:57.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4598
-- author: Caws
-  changes:
-  - message: (Sepultum) +4 suits to Security EVA (12 total).
-    type: Tweak
-  id: 405621
-  time: '2026-06-05T00:29:57.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4598
-- author: Caws
-  changes:
-  - message: (Sepultum) +1 Brigmedic.
-    type: Tweak
-  id: 405622
-  time: '2026-06-05T00:29:57.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4598
-- author: Caws
-  changes:
-  - message: (Sepultum) +1 Detective.
-    type: Tweak
-  id: 405623
-  time: '2026-06-05T00:29:57.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4598
-- author: Caws
-  changes:
-  - message: (Seprentcrest) +2 suits to Security Armory.
-    type: Tweak
-  id: 405624
-  time: '2026-06-05T00:29:57.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4598
-- author: Caws
-  changes:
   - message: (Serpentcrest) Some extra goodies (random crates) in Armory to help SEC deal with the station.
     type: Tweak
   id: 405625
@@ -2799,4 +2757,46 @@ Entries:
   id: 406018
   time: '2026-06-16T08:39:10.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/4802
+- author: Darius
+  changes:
+  - message: Added heat effect to solar storm.
+    type: Add
+  id: 406019
+  time: '2026-06-16T09:24:30.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4798
+- author: Darius
+  changes:
+  - message: Removed flash effect from solar flare.
+    type: Remove
+  id: 406020
+  time: '2026-06-16T09:24:30.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4798
+- author: Darius
+  changes:
+  - message: Removed ignition effect from solar flare.
+    type: Remove
+  id: 406021
+  time: '2026-06-16T09:24:30.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4798
+- author: Darius
+  changes:
+  - message: Increased direct damage from the solar flare per-tick from 1 to 3.
+    type: Tweak
+  id: 406022
+  time: '2026-06-16T09:24:30.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4798
+- author: Darius
+  changes:
+  - message: Changed radstorm texture, decreasing opacity.
+    type: Tweak
+  id: 406023
+  time: '2026-06-16T09:24:30.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4798
+- author: Darius
+  changes:
+  - message: Lowered the volume of the siren SFX for radstorm and solar flare.
+    type: Tweak
+  id: 406024
+  time: '2026-06-16T09:24:30.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4798
 Order: -1
