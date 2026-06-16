@@ -1,18 +1,4 @@
 Entries:
-- author: Mack
-  changes:
-  - message: a recalled ERT/Armory will refund 80% of the cost.
-    type: Tweak
-  id: 405646
-  time: '2026-06-07T17:30:40.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4666
-- author: Johnny
-  changes:
-  - message: New stamp box holding warden's essential stamps, spawns in their lockers.
-    type: Add
-  id: 405647
-  time: '2026-06-08T16:07:33.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4686
 - author: Rinary
   changes:
   - message: Fixed manifold offset in vent crawling.
@@ -2799,4 +2785,18 @@ Entries:
   id: 406045
   time: '2026-06-16T12:07:12.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/4820
+- author: AegisShield
+  changes:
+  - message: Fixed Xenoroaches having flash immunity.
+    type: Fix
+  id: 406046
+  time: '2026-06-16T12:07:14.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4817
+- author: AegisShield
+  changes:
+  - message: Fixed Xenoroaches having full vision in pipes.
+    type: Fix
+  id: 406047
+  time: '2026-06-16T12:07:14.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4817
 Order: -1
