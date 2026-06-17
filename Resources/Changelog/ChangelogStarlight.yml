@@ -1,13 +1,6 @@
 Entries:
 - author: Caws
   changes:
-  - message: (Manor) Windoors that lead to GenPop are now Brig access instead of Security access.
-    type: Fix
-  id: 405696
-  time: '2026-06-08T18:51:16.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4679
-- author: Caws
-  changes:
   - message: (Manor) AI Upload computer linked to AI Core.
     type: Fix
   id: 405697
@@ -2799,4 +2792,11 @@ Entries:
   id: 406095
   time: '2026-06-17T09:05:24.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/4755
+- author: Cringe_Cursed
+  changes:
+  - message: Added View counts and Like/Dislike buttons to news articles in the “News Reader” PDA app.
+    type: Add
+  id: 406096
+  time: '2026-06-17T09:58:01.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4822
 Order: -1
