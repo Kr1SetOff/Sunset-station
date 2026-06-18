@@ -1,13 +1,6 @@
 Entries:
 - author: Caws
   changes:
-  - message: (Starboard) RD's suit is now in its own suit storage rather than in the RD's locker.
-    type: Tweak
-  id: 405707
-  time: '2026-06-08T18:51:18.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4680
-- author: Caws
-  changes:
   - message: (Starboard) CMO's suit is now in its own suit storage rather than in the CMO's locker.
     type: Tweak
   id: 405708
@@ -2799,4 +2792,11 @@ Entries:
   id: 406106
   time: '2026-06-18T10:11:05.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/4797
+- author: StygianEagle
+  changes:
+  - message: NTSF and Decimus figured out where they misplaced their real PDAs and as such CC has retaken possession of their spare PDAs.
+    type: Tweak
+  id: 406107
+  time: '2026-06-18T10:54:44.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4840
 Order: -1
