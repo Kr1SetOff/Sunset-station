@@ -1,20 +1,6 @@
 Entries:
 - author: Caws
   changes:
-  - message: (Starboard) CMO's suit is now in its own suit storage rather than in the CMO's locker.
-    type: Tweak
-  id: 405708
-  time: '2026-06-08T18:51:18.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4680
-- author: Caws
-  changes:
-  - message: (Starboard) Moved a light in Cargo that was blocking the indicator light on the Mail Teleporter.
-    type: Fix
-  id: 405709
-  time: '2026-06-08T18:51:18.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/4680
-- author: Caws
-  changes:
   - message: (Starboard) BSO's room is now NT access.
     type: Fix
   id: 405710
@@ -2799,4 +2785,18 @@ Entries:
   id: 406107
   time: '2026-06-18T10:54:44.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/4840
+- author: Toxyams
+  changes:
+  - message: Buckling( and un-buckling) no longer restores blindness.
+    type: Fix
+  id: 406108
+  time: '2026-06-18T12:28:03.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4838
+- author: Toxyams
+  changes:
+  - message: Animals such as mouse, hamsters can eat carrots without going blind.
+    type: Fix
+  id: 406109
+  time: '2026-06-18T12:28:03.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/4838
 Order: -1
