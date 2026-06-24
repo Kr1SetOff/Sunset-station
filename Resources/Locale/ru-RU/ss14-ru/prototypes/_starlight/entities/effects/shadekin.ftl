@@ -1,0 +1,10 @@
+ent-ShadekinShadow = мрак шейдкина
+    .desc = { ent-BaseShadow.desc }
+ent-ShadekinPhaseInEffect = проявление шейдкина
+    .desc = { "" }
+ent-ShadekinPhaseInEffect2 = проявление шейдкина 2
+    .desc = { ent-ShadekinPhaseInEffect.desc }
+ent-ShadekinPhaseOutEffect = исчезновение шейдкина
+    .desc = { ent-ShadekinPhaseInEffect.desc }
+ent-ShadekinShadegen = { "" }
+    .desc = { "" }

@@ -1,0 +1,16 @@
+ent-CarvedPumpkin = вырезанная тыква
+    .desc = Традиционное жуткое украшение.
+ent-PumpkinLantern = фонарь из тыквы
+    .desc = Вырезанная тыква, излучающая жуткое свечение.
+ent-CarvedPumpkinSmall = { ent-CarvedPumpkin }
+    .desc = { ent-CarvedPumpkin.desc }
+    .suffix = Маленькая
+ent-CarvedPumpkinLarge = { ent-CarvedPumpkin }
+    .desc = { ent-CarvedPumpkin.desc }
+    .suffix = Большая
+ent-PumpkinLanternSmall = { ent-PumpkinLantern }
+    .desc = { ent-PumpkinLantern.desc }
+    .suffix = Маленький
+ent-PumpkinLanternLarge = { ent-PumpkinLantern }
+    .desc = { ent-PumpkinLantern.desc }
+    .suffix = Большой

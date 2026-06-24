@@ -1,22 +1,22 @@
 <Document>
-# Deceased Patient Care
+# Обращение с телами умерших пациентов
 
-<GuideEntityEmbed Entity="Morgue" Caption="Deceased Patient Care"/>
+<GuideEntityEmbed Entity="Morgue" Caption="Обращение с телами умерших пациентов"/>
 
-1. Patients should be triaged by level of rot.
+1. Пациенты должны распределяться по степени разложения (гниения).
 
-2. Patients who are in advanced stages of rot should be placed into stasis beds or body bags.
+2. Пациенты на поздних стадиях разложения должны быть помещены в стазис-кровати или мешки для трупов.
 
-3. Patients who are not being treated should be stored in the morgue until sufficient resources can be diverted to revive them.
+3. Пациенты, лечение которых в данный момент не проводится, должны храниться в морге до тех пор, пока не будет выделено достаточно ресурсов для их оживления.
 
-4. Patients who become unrevivable or are deemed unrevivable require a [italic]morgue report[/italic] filled out with:
-- 1. Patient name.
-- 2. Patient job.
-- 3. Approximate time of death/DNR approval.
-- 4. Reason for DNR status (only if DNR).
-- 5. Chief Medical Officer's stamp for approval.
+4. На пациентов, оживление которых стало или признано невозможным, требуется заполнить [italic]отчёт морга[/italic], содержащий:
+- 1. Имя пациента.
+- 2. Профессию пациента.
+- 3. Примерное время смерти / утверждение статуса DNR (не реанимировать).
+- 4. Причину присвоения статуса DNR (только если установлен DNR).
+- 5. Печать Главного врача для утверждения.
 
-5. Should a corpse become unclonable, it must be annotated on the appropriate DNR sheet and then stamped by the Chief Medical Officer.
+5. Если тело становится непригодным для клонирования, это должно быть зафиксировано в соответствующем бланке DNR и заверено печатью Главного врача.
 
-6. Unclonable corpses, including those whose soul has moved on, may be operated on or placed into the biomass reclaimer.
+6. Трупы, не подлежащие клонированию, включая те, чья душа покинула тело, могут быть прооперированы или помещены в утилизатор биомассы.
 </Document>

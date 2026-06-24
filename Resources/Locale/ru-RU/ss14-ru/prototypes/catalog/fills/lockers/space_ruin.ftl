@@ -1,0 +1,9 @@
+ent-LockerOldAISat = старый шкаф
+    .desc = { ent-LockerSyndicate.desc }
+    .suffix = Шкаф скафандра ИИ, старый
+ent-LockerSyndicateShipGearBasic = { ent-LockerSyndicate }
+    .desc = { ent-LockerSyndicate.desc }
+    .suffix = Базовое снаряжение корабля, Случайное
+ent-LockerSyndicateShipGearBasicChameleonKit = { ent-LockerSyndicateShipGearBasic }
+    .desc = { ent-LockerSyndicateShipGearBasic.desc }
+    .suffix = Базовое снаряжение корабля, Случайное, Набор хамелеона

@@ -1,0 +1,15 @@
+ent-ShuttleGunSvalinnMachineGunCircuitboard = плата LSE-400c «Свалинн»
+    .desc = Печатная плата для LSE-400c «Свалинн».
+    .suffix = НЕ СТАВИТЬ НА КАРТУ, Машинная плата
+ent-ShuttleGunPerforatorCircuitboard = плата LSE-1200c «Перфоратор»
+    .desc = Печатная плата для LSE-1200c «Перфоратор».
+    .suffix = НЕ СТАВИТЬ НА КАРТУ, Машинная плата
+ent-ShuttleGunFriendshipCircuitboard = плата EXP-320g «Дружба»
+    .desc = Печатная плата для EXP-320g «Дружба».
+    .suffix = НЕ СТАВИТЬ НА КАРТУ, Машинная плата
+ent-ShuttleGunDusterCircuitboard = плата EXP-2100g «Пылесос»
+    .desc = Печатная плата для EXP-2100g «Пылесос».
+    .suffix = НЕ СТАВИТЬ НА КАРТУ, Машинная плата
+ent-ShuttleGunKineticCircuitboard = плата PTK-800 «Расщепитель материи»
+    .desc = Печатная плата для PTK-800 «Расщепитель материи».
+    .suffix = НЕ СТАВИТЬ НА КАРТУ, Машинная плата

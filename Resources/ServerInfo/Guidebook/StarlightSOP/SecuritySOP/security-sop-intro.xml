@@ -1,85 +1,84 @@
 <Document>
-# Security SOP
+# СОП Службы безопасности
 
-These procedures apply to all security members, unless otherwise stated in their specific SOP
+Эти процедуры распространяются на всех сотрудников службы безопасности, если иное не указано в их специализированных СОП.
 
-
-### §1. Security's Purpose
+### §1. Цели и задачи СБ
 
 - 1.\n
-Security's first and foremost objective is the safety of the station and its assets, among which are Crew Assets.
+Первоочередной и главной задачей службы безопасности является обеспечение безопасности станции и её активов, к которым в том числе относится персонал (активы экипажа).
 - 2.\n
-They are secondarily the enforcing arm of the Command Staff and CentComm; dealing with insubordinate crewmembers when requested to do so by said crew's superiors.
+Вторичной задачей является исполнение воли Командования и ЦентКом; борьба с неподчинением среди членов экипажа по запросу руководства соответствующих отделов.
 - 3.\n
-Pursuit of this purpose is restricted and controlled by [textlink="Corporate Law" link="SpaceLaw"], which they are also the primary enforcers of on the station.
+Деятельность по выполнению этих задач ограничена и регулируется [textlink="Корпоративным законом" link="SpaceLaw"], главным гарантом соблюдения которого на станции также является СБ.
 
-### §2. Uniform Requirements
+### §2. Требования к форме одежды
 - 1.\n
-An official security uniform/jumpsuit is to be visible on members of security at all times.\n\n
+Официальная форма/комбинезон службы безопасности должна быть видна на сотруднике СБ в любое время.\n\n
 1.1\n
-When necessary for fulfilment of a specific task, issued armour may cover the uniform, such as a hardsuit for spacewalks.\n\n
+При необходимости выполнения конкретной задачи поверх формы может быть надета выданная броня или скафандр (например, жесткий скафандр для выхода в открытый космос).\n\n
 1.2\n
-Exceptions may be given by the Head of Security for the purposes of undercover investigation.
+Исключения могут быть сделаны Главой службы безопасности для проведения расследований под прикрытием.
 - 2.\n
-The Head of Security is allowed, at any time, to demand that security members remove personal accessories or non-regulation articles of clothing, if they believe this compromises the professional image of their department.
+Глава службы безопасности имеет право в любой момент потребовать от сотрудников СБ снять личные аксессуары или неуставные элементы одежды, если посчитает, что это вредит профессиональному имиджу отдела.
 - 3.\n
-Members of Security should have their suit coordinates enabled at all times.
+Сотрудники службы безопасности обязаны постоянно держать включёнными датчики координат своих костюмов.
 
-### §3. Weaponry and Combat Equipment
+### §3. Вооружение и боевое снаряжение
 - 1.\n
-Security are to carry, at most, what is stipulated in their Standard Code Green Equipment, unless stated otherwise in another procedure.
+Сотрудники СБ могут иметь при себе максимум то, что предусмотрено их стандартным снаряжением для Зелёного кода, если иное не оговорено другими инструкциями.
 - 2.\n
-They are not to openly carry said equipment, unless said equipment is in active use.
+Запрещается открыто носить указанное снаряжение, за исключением случаев его активного использования.
 
-### §4 Use of Force
+### §4. Применение силы
 - 1.\n
-The reason for an arrest is to be explained to the arrestee before any amount of force is applied.\n\n
+Причина ареста должна быть разъяснена задерживаемому до применения к нему какой-либо силы.\n\n
 1.1\n
-This does not apply for suspects known to be armed and dangerous.\n\n
+Это правило не распространяется на подозреваемых, которые заведомо вооружены и опасны.\n\n
 1.2\n
-This does not apply to suspects who attempt to flee before this explanation may be delivered.
+Это правило не распространяется на подозреваемых, которые пытаются скрыться до того, как им успеют дать разъяснения.
 - 2.\n
-Undue harm to station's Crew Assets is to be avoided during enforcement, to avoid compromising the station's mission.\n\n
+Во время задержания следует избегать нанесения неоправданного вреда персоналу (активам экипажа) станции, чтобы не ставить под угрозу выполнение общей миссии станции.\n\n
 2.1\n
-Suspects must therefore be given the opportunity to walk on their own to Security for handling, without restraints or application of force.\n\n
+Поэтому подозреваемым должна быть предоставлена возможность самостоятельно дойти до отдела СБ для разбирательства, без применения наручников или физической силы.\n\n
 2.2\n
-In the case of failure of the above, disabling weaponry and restraints may be applied to subdue the Crewmember without overly damaging their capacity to work.\n\n
+В случае невыполнения вышеуказанного требования, для усмирения члена экипажа может быть применено нелетальное (оглушающее) оружие и средства фиксации, без чрезмерного ущерба для его дальнейшей трудоспособности.\n\n
 2.3\n
-These stipulations do not apply for suspects known to be armed and dangerous.
+Данные условия не распространяются на подозреваемых, которые заведомо вооружены и опасны.
 - 3.\n
-Forceful entry into other departments is forbidden outside of active pursuit of a fleeing suspect.\n\n
+Принудительное проникновение в другие отделы запрещено, за исключением случаев активного преследования убегающего подозреваемого.\n\n
 3.1\n
-If necessary, Security may file a Search Warrant on the department in question.
+При необходимости СБ может запросить ордер на обыск интересующего отдела.
 
-### §5 Search and Seizure
+### §5. Обыск и изъятие
 - 1.\n
-Security may not disturb crewmembers or departments with searches or raids without cause. Valid causes include:\n\n
+Служба безопасности не имеет права беспокоить членов экипажа или отделы обысками и рейдами без веских оснований. Законными основаниями являются:\n\n
 1.1\n
-Seeing the crewmember use and then hide contraband on their person immediately in front of you.\n\n
+Вы лично видели, как член экипажа использовал, а затем сразу же спрятал контрабанду у себя на теле.\n\n
 1.2\n
-An approved and properly filed search warrant.\n\n
+Утверждённый и должным образом оформленный ордер на обыск.\n\n
 1.3\n
-States of Emergency, [color=#2a6099]Code Blue[/color] or above.\n
+Чрезвычайное положение, [color=#2a6099]Синий код[/color] или выше.\n
 - 2.\n
-Crewmembers refusing a lawful search, as described in §5.1, may be detained and the search forced on them.
+Члены экипажа, отказывающиеся от законного обыска (как описано в §5.1), могут быть задержаны, а обыск проведён принудительно.
 - 3.\n
-Contraband found during a search, or in general, is to be brought to the armoury and locked away as evidence.\n\n
+Контрабанда, обнаруженная в ходе обыска или найденная в целом, должна быть доставлена в оружейную и заперта там в качестве улики.\n\n
 3.1\n
-Suspects sentenced for any violent crime may have any implements of violence, even if necessary for their job, confiscated as well.\n\n
+У подозреваемых, осуждённых за любое насильственное преступление, могут быть изъяты любые орудия насилия, даже если они необходимы им для работы.\n\n
 3.2\n
-Suspects sentenced for any kind of unlawful entry or tampering may have the tools needed for such crimes, even if necessary for their job, confiscated as well.
+У подозреваемых, осуждённых за любой вид незаконного проникновения или взлома, могут быть изъяты инструменты, необходимые для совершения таких преступлений, даже если они требуются им по работе.
 
-### §6 States of Emergency
+### §6. Чрезвычайные ситуации
 - 1.\n
-Any Standard Operating Procedure listed here is to be ignored if the procedures relevant to the active Alert Code override them.
+Любая стандартная процедура реагирования, описанная здесь, игнорируется, если её перекрывают инструкции, соответствующие текущему коду угрозы.
 - 2.\n
-Security Codes that share the same shade, inherit procedures from their "lower" levels unless overwritten by the "higher" alert. These are:\n\n
+Коды безопасности, имеющие одинаковый цветовой оттенок, наследуют процедуры от своих «низших» уровней, если только они не изменяются «высшим» кодом. К ним относятся:\n\n
 2.1\n
-[color=#ff0000]Red[/color] → [color=#ec9ba4]Gamma[/color] → [color=#8d281e]Delta[/color]\n
+[color=#ff0000]Красный[/color] → [color=#ec9ba4]Гамма[/color] → [color=#8d281e]Дельта[/color]\n
 2.2\n
-[color=#acb20c]Yellow[/color] → [color=#ff8119]Orange[/color]
+[color=#acb20c]Жёлтый[/color] → [color=#ff8119]Оранжевый[/color]
 - 3.\n
-During Codes [color=#ff0000]Red[/color] and [color=#8d1d75]Violet[/color], Security may ignore §2, §3 and §4 and equip and conduct themselves as is necessary or as their department head demands.
+Во время действия [color=#ff0000]Красного[/color] и [color=#8d1d75]Фиолетового[/color] кодов служба безопасности может игнорировать пункты §2, §3 и §4, экипируясь и действуя по ситуации или в соответствии с требованиями главы своего отдела.
 - 4.\n
-During Codes [color=#acb20c]Yellow[/color], [color=#ff0000]Red[/color] or [color=#8d1d75]Violet[/color], Security may forcefully relocate crew to allow for the safe handling of the relevant threat.
+Во время действия [color=#acb20c]Жёлтого[/color], [color=#ff0000]Красного[/color] или [color=#8d1d75]Фиолетового[/color] кодов служба безопасности может принудительно перемещать экипаж для обеспечения безопасного устранения соответствующей угрозы.
 </Document>

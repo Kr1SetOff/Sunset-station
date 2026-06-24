@@ -1,36 +1,34 @@
 <Document>
-  # Species
+  # Расы (Species)
 
-  NanoTrasen employs a variety of sapient species.
+  NanoTrasen нанимает на работу представителей множества разумных видов.
 
-<!-- Starlight start, reorganizing all of this alphabetically-->
   <Box>
-  <GuideEntityEmbed Entity="AppearanceElf" Caption="Aelithii"/>
-  <GuideEntityEmbed Entity="AppearanceArachnid" Caption="Arachnid"/>
-  <GuideEntityEmbed Entity="AppearanceAvali" Caption="Avali"/>
-  <GuideEntityEmbed Entity="AppearanceCyclorite" Caption="Cyclorite"/>
-  <GuideEntityEmbed Entity="AppearanceDiona" Caption="Diona"/>
-  <GuideEntityEmbed Entity="AppearanceDwarf" Caption="Dwarf"/>
+    <GuideEntityEmbed Entity="AppearanceElf" Caption="Аэлитии (Aelithii)"/>
+    <GuideEntityEmbed Entity="AppearanceArachnid" Caption="Арахнид (Arachnid)"/>
+    <GuideEntityEmbed Entity="AppearanceAvali" Caption="Авали (Avali)"/>
+    <GuideEntityEmbed Entity="AppearanceCyclorite" Caption="Циклорит (Cyclorite)"/>
+    <GuideEntityEmbed Entity="AppearanceDiona" Caption="Диона (Diona)"/>
+    <GuideEntityEmbed Entity="AppearanceDwarf" Caption="Дварф (Dwarf)"/>
   </Box>
   <Box>
-  <GuideEntityEmbed Entity="AppearanceFelionoid" Caption="Felionoid"/>
-  <GuideEntityEmbed Entity="AppearanceHuman" Caption="Human"/>
-  <GuideEntityEmbed Entity="AppearanceLagomorph" Caption="Lagomorph"/>
-  <GuideEntityEmbed Entity="AppearanceSlimePerson" Caption="Laspi"/>
-  <GuideEntityEmbed Entity="AppearanceMoth" Caption="Moth Person"/>
-  <GuideEntityEmbed Entity="AppearanceResomi" Caption="Resomi"/>
+    <GuideEntityEmbed Entity="AppearanceFelionoid" Caption="Фелиноид (Felionoid)"/>
+    <GuideEntityEmbed Entity="AppearanceHuman" Caption="Человек (Human)"/>
+    <GuideEntityEmbed Entity="AppearanceLagomorph" Caption="Лагоморф (Lagomorph)"/>
+    <GuideEntityEmbed Entity="AppearanceSlimePerson" Caption="Ласпи (Laspi)"/>
+    <GuideEntityEmbed Entity="AppearanceMoth" Caption="Человек-мотылек (Moth Person)"/>
+    <GuideEntityEmbed Entity="AppearanceResomi" Caption="Резоми (Resomi)"/>
   </Box>
   <Box>
-  <GuideEntityEmbed Entity="AppearanceReptilian" Caption="Reptilian"/>
-  <GuideEntityEmbed Entity="AppearanceRodentia" Caption="Rodentia"/>
-  <GuideEntityEmbed Entity="AppearanceShadekin" Caption="Shadekin"/>
-  <GuideEntityEmbed Entity="AppearanceThaven" Caption="Thaven"/>
-  <GuideEntityEmbed Entity="AppearanceVox" Caption="Vox"/>
-  <GuideEntityEmbed Entity="AppearanceVulpkanin" Caption="Vulpkanin"/>
+    <GuideEntityEmbed Entity="AppearanceReptilian" Caption="Рептилоид (Reptilian)"/>
+    <GuideEntityEmbed Entity="AppearanceRodentia" Caption="Родентия (Rodentia)"/>
+    <GuideEntityEmbed Entity="AppearanceShadekin" Caption="Шейдкин (Shadekin)"/>
+    <GuideEntityEmbed Entity="AppearanceThaven" Caption="Тавен (Thaven)"/>
+    <GuideEntityEmbed Entity="AppearanceVox" Caption="Вокс (Vox)"/>
+    <GuideEntityEmbed Entity="AppearanceVulpkanin" Caption="Вульпканин (Vulpkanin)"/>
   </Box>
   <Box>
-  <GuideEntityEmbed Entity="AppearanceProtogen" Caption="Protogen"/> <!--FH-->
-  <GuideEntityEmbed Entity="AppearanceIPC" Caption="IPC"/> <!--FH-->
+    <GuideEntityEmbed Entity="AppearanceProtogen" Caption="Протоген (Protogen)"/>
+    <GuideEntityEmbed Entity="AppearanceIPC" Caption="ИПК (IPC)"/>
   </Box>
-<!-- Starlight end, reorganizing all of this alphabetically-->
 </Document>

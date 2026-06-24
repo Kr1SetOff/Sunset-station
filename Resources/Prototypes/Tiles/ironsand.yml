@@ -1,7 +1,7 @@
 - type: tile
   id: FloorIronsandTile
   name: tiles-ironsand-tile
-  sprite: /Textures/Tiles/Asteroid/ironsand_tile.png
+  sprite: /Textures/Tiles/asteroid/ironsand_tile.png
   baseTurf: Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
@@ -12,7 +12,7 @@
 - type: tile
   id: FloorIronsandConcrete
   name: tiles-ironsand-concrete-tile
-  sprite: /Textures/Tiles/Planet/Concrete/ironsandconcrete.png
+  sprite: /Textures/Tiles/planet/concrete/ironsandconcrete.png
   variants: 4
   placementVariants:
   - 1.0
@@ -30,7 +30,7 @@
 - type: tile
   id: FloorIronsandConcreteMono
   name: tiles-ironsand-concrete-slab
-  sprite: /Textures/Tiles/Planet/Concrete/ironsandconcrete_mono.png
+  sprite: /Textures/Tiles/planet/concrete/ironsandconcrete_mono.png
   variants: 4
   placementVariants:
   - 1.0
@@ -48,7 +48,7 @@
 - type: tile
   id: FloorIronsandConcreteSmooth
   name: tiles-ironsand-concrete-smooth
-  sprite: /Textures/Tiles/Planet/Concrete/ironsandconcrete_smooth.png
+  sprite: /Textures/Tiles/planet/concrete/ironsandconcrete_smooth.png
   variants: 4
   placementVariants:
   - 1.0
@@ -66,7 +66,7 @@
 - type: tile
   id: IronsandPacked
   name: tiles-ironsand-packed
-  sprite: /Textures/Tiles/Asteroid/ironsand_packed.png
+  sprite: /Textures/Tiles/asteroid/ironsand_packed.png
   variants: 4
   placementVariants:
   - 1.0
@@ -83,7 +83,7 @@
 - type: tile
   id: IronsandPaved
   name: tiles-ironsand-paved
-  sprite: /Textures/Tiles/Asteroid/ironsand_uneven_paved.png
+  sprite: /Textures/Tiles/asteroid/ironsand_uneven_paved.png
   variants: 4
   placementVariants:
   - 1.0

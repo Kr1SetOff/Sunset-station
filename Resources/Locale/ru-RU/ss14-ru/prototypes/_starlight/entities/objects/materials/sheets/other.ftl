@@ -1,0 +1,14 @@
+ent-SheetPrinter = { ent-Paper }
+    .desc = { ent-Paper.desc }
+    .suffix = Полный
+ent-SheetPrinter1 = { ent-SheetPrinter }
+    .desc = { ent-SheetPrinter.desc }
+    .suffix = Одинарный
+ent-CheapInsulatedFabric = дешёвая изолированная ткань
+    .desc = Рулон грубой изолированной ткани, малопригоден в нынешнем виде.
+ent-PlasteelFilament = плазместальная нить
+    .desc = Катушка тонких плазместальных нитей, полезна для создания по-настоящему изолированной ткани.
+ent-InsulatedThread = изолированная нить
+    .desc = Катушка изолированной нити, полезна для сшивания перчаток.
+ent-InsulatedFabric = изолированная ткань
+    .desc = Рулон гладкой изолированной ткани, малопригоден в нынешнем виде.

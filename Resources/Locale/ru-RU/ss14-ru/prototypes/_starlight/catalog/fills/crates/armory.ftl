@@ -1,0 +1,12 @@
+ent-CrateArmoryLr30 = ящик с LR-30
+    .desc = Содержит два автоматических энергетических оружия LR-30 и два дополнительных магазина. Для открытия требуется доступ к оружейной.
+    .suffix = { ent-CrateWeaponSecure.suffix }
+ent-CrateArmoryLr30Magazines = ящик с магазинами для LR-30
+    .desc = Содержит шесть магазинов для энергетического оружия LR-30. Для открытия требуется доступ к оружейной.
+    .suffix = { ent-CrateWeaponSecure.suffix }
+ent-CrateArmoryCombatShotgun = ящик с боевыми дробовиками
+    .desc = Содержит два автоматических боевых дробовика и две дополнительные коробки патронов. Для открытия требуется доступ к оружейной.
+    .suffix = { ent-CrateWeaponSecure.suffix }
+ent-CrateArmoryAdvancedRestraints = ящик продвинутых средств сдерживания
+    .desc = Для самых надоедливых заключённых.
+    .suffix = { ent-CrateWeaponSecure.suffix }

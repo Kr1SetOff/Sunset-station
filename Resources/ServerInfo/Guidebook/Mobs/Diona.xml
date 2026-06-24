@@ -1,41 +1,35 @@
 <Document>
-  # Diona
+  # Дионы (Diona)
 
   <Box>
     <GuideEntityEmbed Entity="AppearanceDiona" Caption=""/>
   </Box>
 
-  They can't wear shoes, but are not slowed by Kudzu.
-  They get hungry and thirsty slower.
-  They can restore hunger by drinking certain water-based beverages. <!-- Starlight, water food for diona.-->
-  They fall into a critical state at [color=lightgreen]125[/color] points of damage. <!-- Starlight, health changes.-->
-  They die at [color=red]250[/color] points of damage. <!-- Starlight, health changes.-->
-  Their "blood" is tree sap and can't be metabolised from Iron.
-  Being plants, Weed Killer poisons them, while Robust Harvest heals them (but not without risk when overused!)
+  Они не могут носить обувь, но их не замедляет кудзу (Kudzu).
+  Чувство голода и жажды у них развивается медленнее.
+  Они могут утолить голод, употребляя некоторые напитки на водной основе.
+  Впадают в критическое состояние при [color=lightgreen]125[/color] единицах урона.
+  Погибают при [color=red]250[/color] единицах урона.
+  Их «кровь» — это древесный сок, который не восстанавливается железом.
+  Будучи растениями, они отравляются гербицидами (Weed Killer), в то время как Robust Harvest их лечит (но при чрезмерном использовании это несет риски!).
 
-  They take [color=#1e90ff]30% less Blunt damage and 20% less Slash damage[/color];
-  but [color=#ffa500]50% more Heat damage, 20% more Shock damage, and they can easily
-  catch on fire when receiving enough Heat damage from *any* source, up to 5 fire stacks.[/color] <!-- Starlight, fire stack cap for this effect.-->
+  Они получают на [color=#1e90ff]30% меньше дробящего и на 20% меньше рубящего урона[/color];
+  но [color=#ffa500]на 50% больше урона от жары, на 20% больше урона от электричества, и могут легко загореться при получении достаточного урона от жары из *любого* источника (до 5 уровней горения).[/color]
 
-  ## Make Like A Tree And Leave
+  ## Стать деревом
   <Box>
     <GuideEntityEmbed Entity="FloraTree" Caption=""/>
   </Box>
-  Being exposed to too much Robust Harvest will cause a Diona to grow out of control, turning into an immobile tree (dropping all their equipment).
-  Cutting down the tree will "restore" the Diona to their mobile state.
+  Воздействие слишком большого количества Robust Harvest приведет к тому, что Диона начнет бесконтрольно расти, превращаясь в неподвижное дерево (сбрасывая всю экипировку).
+  Если срубить дерево, Диона «вернется» в свое мобильное состояние.
 
-  ## Diona Nymphs
+  ## Нимфы Дионы
   <Box>
     <GuideEntityEmbed Entity="MobDionaNymph" Caption=""/>
     <GuideEntityEmbed Entity="MobDionaNymph" Caption=""/>
     <GuideEntityEmbed Entity="MobDionaNymph" Caption=""/>
   </Box>
-  After death, a Diona can voluntarily destroy their own body, releasing their "internal organs" as three Nymphs,
-  with the player taking control of the Brain Nymph.
-  It can talk but has no hands or inventory, and can't do much.
+  После смерти Диона может добровольно уничтожить свое тело, высвободив свои «внутренние органы» в виде трех Нимф, при этом игрок берет под контроль Мозговую нимфу. Она может говорить, но у неё нет рук, инвентаря, и она мало что может сделать.
 
-  After 5 minutes, a Nymph can reform into a whole Diona. This will be a new randomised body with a random name,
-  and there will be little to no evidence beyond their word about who they were before.
-
-
+  Через 5 минут Нимфа может трансформироваться обратно в полноценную Диону. Это будет новое случайное тело с новым именем, и практически не останется никаких доказательств, кроме их собственных слов, о том, кем они были раньше.
 </Document>

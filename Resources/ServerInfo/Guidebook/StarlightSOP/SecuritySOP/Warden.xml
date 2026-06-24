@@ -1,75 +1,74 @@
 <Document>
-# Warden
+# Смотритель
 
-<GuideEntityEmbed Entity="ToyFigurineWarden" Caption="Warden"/>
+<GuideEntityEmbed Entity="ToyFigurineWarden" Caption="Смотритель"/>
 
-### §1 Standard Code Green Equipment
+### §1 Стандартное снаряжение для Зелёного кода
 
 <Box>
-	<GuideEntityEmbed Entity="Stunbaton"/>
-	<GuideEntityEmbed Entity="WeaponPistolDP"/>
-	<GuideEntityEmbed Entity="WeaponEnergyShotgun"/>
+    <GuideEntityEmbed Entity="Stunbaton"/>
+    <GuideEntityEmbed Entity="WeaponPistolDP"/>
+    <GuideEntityEmbed Entity="WeaponEnergyShotgun"/>
 </Box>
 <Box>
-	<GuideEntityEmbed Entity="HoloprojectorSecurity"/>
-	<GuideEntityEmbed Entity="FlashlightSeclite"/>
-	<GuideEntityEmbed Entity="RadioHandheldSecurity"/>
+    <GuideEntityEmbed Entity="HoloprojectorSecurity"/>
+    <GuideEntityEmbed Entity="FlashlightSeclite"/>
+    <GuideEntityEmbed Entity="RadioHandheldSecurity"/>
 </Box>
 <Box>
-	<GuideEntityEmbed Entity="CombatKnife"/>
-	in
-	<GuideEntityEmbed Entity="ClothingShoesBootsJack"/>
+    <GuideEntityEmbed Entity="CombatKnife"/>
+    в
+    <GuideEntityEmbed Entity="ClothingShoesBootsJack"/>
 </Box>
 <Box>
-	<GuideEntityEmbed Entity="GrenadeFlashBang"/>
-	<GuideEntityEmbed Entity="TearGasGrenade"/>
+    <GuideEntityEmbed Entity="GrenadeFlashBang"/>
+    <GuideEntityEmbed Entity="TearGasGrenade"/>
 </Box>
 <Box>
-	<GuideEntityEmbed Entity="Handcuffs"/>
-	<GuideEntityEmbed Entity="Zipties"/>
+    <GuideEntityEmbed Entity="Handcuffs"/>
+    <GuideEntityEmbed Entity="Zipties"/>
 </Box>
 
-### §2 Stewardship of the Brig
+### §2 Управление бригом
 - 1.\n
-The Warden is responsible for the state of the brig, and must see to it that it is properly maintained.
+Смотритель несёт ответственность за состояние брига и должен следить за тем, чтобы он поддерживался в надлежащем порядке.
 - 2.\n
-The Warden is responsible for the well-being of the prisoners inside the brig, and must see to it that they are treated properly.
+Смотритель несёт ответственность за благополучие заключённых в бриге и должен следить за тем, чтобы с ними обращались должным образом.
 - 3.\n
-The Warden is responsible for the containment of said prisoners as well, including:\n\n
+Смотритель также несёт ответственность за содержание указанных заключённых, включая:\n\n
 3.1\n
-Confiscating weapons and break-out equipment from prisoners.\n\n
+Конфискацию у заключённых оружия и инструментов для побега.\n\n
 3.2\n
-Restraining and subduing rioting prisoners as is necessary.
+Удержание и усмирение бунтующих заключённых по мере необходимости.
 
-### §3 Prosecution
+### §3 Судебное преследование
 - 1.\n
-The Warden acts as security's primary prosecutor during normal sentencing.
+Смотритель выступает в качестве главного обвинителя со стороны службы безопасности при обычном вынесении приговоров.
 - 2.\n
-The Warden is cleared to confine sentenced criminals for up to [bold]20 minutes[/bold].
+Смотритель имеет право задерживать осуждённых преступников на срок до [bold]20 минут[/bold].
 - 3.\n
-The Warden is responsible for ensuring that Criminal Records are kept properly up to date and that Security Officers properly document their sentences.
+Смотритель отвечает за то, чтобы уголовные дела (Criminal Records) обновлялись своевременно, а офицеры безопасности должным образом документировали выносимые ими приговоры.
 - 4.\n
-The Warden is to remain attentive to their radio at all times, as their approval is critical to sentencing.\n\n
+Смотритель должен постоянно внимательно слушать радиоэфир, так как его одобрение имеет решающее значение для вынесения приговора.\n\n
 4.1\n
-The Warden must not have any disabilities or ailments preventing them from fulfilling this duty.
+У Смотрителя не должно быть никаких дефектов или недугов, препятствующих выполнению этой обязанности.
 
-### §4 Stewardship of the Armoury
+### §4 Управление оружейной
 - 1.\n
-The Warden is responsible for the tidiness and organisation of the Armoury.
+Смотритель несёт ответственность за чистоту и порядок в оружейной.
 - 2.\n
-The Warden is responsible for properly locking away contraband and returned weaponry.
+Смотритель отвечает за надлежащее запирание контрабанды и возвращённого оружия.
 - 3.\n
-The Warden is responsible for the safety of the Armoury, such as the proper configuration of its internal turrets, and the maintenance of its structural integrity.
+Смотритель отвечает за безопасность оружейной, включая правильную настройку её внутренних турелей и поддержание целостности её конструкции.
 - 4.\n
-The Warden is cleared to file and approve permits for the issuing of armoury equipment on [color=#2a6099]Code Blue[/color].
+Смотритель уполномочен оформлять и утверждать разрешения на выдачу снаряжения из оружейной при [color=#2a6099]Синем коде[/color].
 - 5.\n
-The Warden may hand out armoury equipment freely on [color=#ff0000]Code Red[/color].
+Смотритель может свободно выдавать снаряжение из оружейной при [color=#ff0000]Красном коде[/color].
 - 6.\n
-The Warden is responsible for the retrieval of armoury equipment that is no longer needed once states of emergency end.
+Смотритель несёт ответственность за сбор и возврат снаряжения оружейной, в котором больше нет необходимости после окончания чрезвычайного положения.
 
-
-### §5
+### §5 Порядок несения службы
 - 1.\n
-Paragraphs §2, §3 and §4 necessitate remaining in the Security Department, and the Warden should therefore not leave said department without permission from the Head of Security, or during emergencies.
+Пункты §2, §3 и §4 требуют постоянного нахождения в отделе службы безопасности, в связи с чем Смотритель не должен покидать указанный отдел без разрешения Главы службы безопасности или во время чрезвычайных ситуаций.
 
 </Document>

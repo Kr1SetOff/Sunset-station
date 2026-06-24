@@ -1,42 +1,41 @@
 <Document>
-# Medical orders
+# Медицинские заказы
 
-## Basic materials
-### Only for printers & lathes
+## Базовые материалы
+### Только для принтеров и автолатов
 <Box>
-	<GuideEntityEmbed Entity="SheetSteel"/>
-	<GuideEntityEmbed Entity="SheetGlass"/>
-	<GuideEntityEmbed Entity="SheetPlastic"/>
-	<GuideEntityEmbed Entity="MaterialCloth"/>
-</Box>
-
-## Refill Crates
-<Box>
-	<GuideEntityEmbed Entity="CrateVendingMachineRestockMedicalFilled"/>
-	<GuideEntityEmbed Entity="CrateVendingMachineRestockChemVendFilled"/>
-</Box>
-<Box>
-	<GuideEntityEmbed Entity="CrateChemistryD"/>
-	<GuideEntityEmbed Entity="CrateChemistryP"/>
-	<GuideEntityEmbed Entity="CrateChemistryS"/>
-</Box>
-<Box>
-	<GuideEntityEmbed Entity="CrateMedicalSupplies"/>
+    <GuideEntityEmbed Entity="SheetSteel"/>
+    <GuideEntityEmbed Entity="SheetGlass"/>
+    <GuideEntityEmbed Entity="SheetPlastic"/>
+    <GuideEntityEmbed Entity="MaterialCloth"/>
 </Box>
 
-## Medical kits
+## Ящики пополнения запасов
 <Box>
-	<GuideEntityEmbed Entity="MedkitFilled"/>
-	<GuideEntityEmbed Entity="MedkitAdvancedFilled"/>
+    <GuideEntityEmbed Entity="CrateVendingMachineRestockMedicalFilled"/>
+    <GuideEntityEmbed Entity="CrateVendingMachineRestockChemVendFilled"/>
 </Box>
 <Box>
-	<GuideEntityEmbed Entity="MedkitOxygenFilled"/>
-	<GuideEntityEmbed Entity="MedkitBruteFilled"/>
+    <GuideEntityEmbed Entity="CrateChemistryD"/>
+    <GuideEntityEmbed Entity="CrateChemistryP"/>
+    <GuideEntityEmbed Entity="CrateChemistryS"/>
 </Box>
 <Box>
+    <GuideEntityEmbed Entity="CrateMedicalSupplies"/>
+</Box>
 
-	<GuideEntityEmbed Entity="MedkitRadiationFilled"/>
-	<GuideEntityEmbed Entity="MedkitToxinFilled"/>
-	<GuideEntityEmbed Entity="MedkitBurnFilled"/>
+## Медицинские наборы (аптечки)
+<Box>
+    <GuideEntityEmbed Entity="MedkitFilled"/>
+    <GuideEntityEmbed Entity="MedkitAdvancedFilled"/>
+</Box>
+<Box>
+    <GuideEntityEmbed Entity="MedkitOxygenFilled"/>
+    <GuideEntityEmbed Entity="MedkitBruteFilled"/>
+</Box>
+<Box>
+    <GuideEntityEmbed Entity="MedkitRadiationFilled"/>
+    <GuideEntityEmbed Entity="MedkitToxinFilled"/>
+    <GuideEntityEmbed Entity="MedkitBurnFilled"/>
 </Box>
 </Document>

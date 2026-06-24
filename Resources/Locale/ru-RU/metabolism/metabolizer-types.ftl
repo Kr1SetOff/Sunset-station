@@ -1,0 +1,12 @@
+metabolizer-type-animal = животного
+metabolizer-type-bloodsucker = кровопийцы
+metabolizer-type-dragon = дракона
+metabolizer-type-human = человека
+metabolizer-type-slime = слайма
+metabolizer-type-cyclorite = Циклорит
+metabolizer-type-vox = вокса
+metabolizer-type-rat = крысы
+metabolizer-type-plant = растения
+metabolizer-type-dwarf = дварфа
+metabolizer-type-moth = моли
+metabolizer-type-arachnid = паука

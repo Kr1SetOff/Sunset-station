@@ -1,0 +1,14 @@
+ent-MobCosmicAstralProjection = астральная проекция
+    .desc = Ни здесь, ни там.
+ent-MobCosmicAstralAscended = вознесенный астрал
+    .desc = Трансцендентный, вознесенный.
+    .suffix = { ent-BaseSimpleMob.suffix }
+ent-MobCosmicCustodian = зловредный страж
+    .desc = Мерзость, созданная из зловредной массы. Он парит с невесомой, нервирующей грацией.
+    .suffix = { ent-MobCosmicAstralAscended.suffix }
+ent-MobCosmicOracle = зловредный оракул
+    .desc = Мерзость, созданная из зловредной массы. Его взгляд ищет неустанно.
+    .suffix = { ent-MobCosmicAstralAscended.suffix }
+ent-MobCosmicLodestar = зловредная путеводная звезда
+    .desc = Мерзость, созданная из зловредной массы. Внутри мерцает жгучий свет.
+    .suffix = { ent-MobCosmicAstralAscended.suffix }

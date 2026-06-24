@@ -1,0 +1,17 @@
+ent-ClothingHeadHatNTNC = шляпа морпеха НаноТрасен
+    .desc = { ent-ClothingHeadBase.desc }
+ent-ClothingHeadHatNTNCGrey = серая шляпа морпеха НаноТрасен
+    .desc = { ent-ClothingHeadBase.desc }
+ent-ClothingHeadHatNTNCEnsign = шляпа мичмана НаноТрасен
+    .desc = { ent-ClothingHeadBase.desc }
+ent-ClothingHeadHatBeretMedTak = берет МедТак
+    .desc = Берет с логотипом МедТак.
+ent-ClothingHeadHatTophatArmored = цилиндр
+    .desc = Стильный черный цилиндр, обшитый кевларом.
+    .suffix = armored, admeme
+ent-ClothingHeadHatTophatBigArmored = большой цилиндр
+    .desc = Эта шляпа явно принадлежит кому-то очень, очень важному. Она обшита кевларом.
+    .suffix = armored, admeme
+ent-ClothingHeadHatTophatBigWhiteArmored = большой цилиндр
+    .desc = Эта шляпа явно принадлежит кому-то очень, очень важному. Она обшита кевларом.
+    .suffix = armored, admeme

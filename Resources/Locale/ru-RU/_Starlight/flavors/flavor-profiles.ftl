@@ -1,0 +1,12 @@
+flavor-profile-bland = пресный
+flavor-base-abductor-blood = как похититель
+flavor-complex-dragan-special = как очищение и триумф
+flavor-base-evil = как зло
+flavor-base-wrong = неправильный
+flavor-complex-tha-slop = как обработанное дерьмо
+flavor-complex-struggle = как сырая борьба
+flavor-base-halal = халяль
+flavor-base-greasy = жирный
+flavor-base-festive = праздничный
+flavor-complex-the-last-call = like death's cold embrace
+flavor-base-perfid = perfid

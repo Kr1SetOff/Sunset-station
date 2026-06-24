@@ -1,51 +1,51 @@
 ﻿<Document>
-# Station and Shifts
+# Станция и Смены
 
-Every round of SS14 is a [bold]self-contained shift[/bold] that takes place on one of many different stations.
+Каждый раунд в SS14 — это [bold]самодостаточная смена[/bold], которая проходит на одной из множества различных станций.
 
-Rounds typically last from [color=cyan]45 to 90 minutes[/color], but players are free to leave and join at any point during a round.
+Раунды обычно длятся от [color=cyan]45 до 90 минут[/color], но игроки могут свободно покидать игру и присоединяться к ней в любой момент раунда.
 
-## Shuttle Terminal
-If you join in the middle of a shift, you will likely spawn on the [color=lime]shuttle terminal[/color].
-Here you can grab drinks, converse with other players, and wait for the shuttle to take you to the station.
+## Шаттл-терминал
+Если вы присоединитесь в середине смены, вы, скорее всего, появитесь на [color=lime]шаттл-терминале[/color].
+Здесь вы можете перекусить, пообщаться с другими игроками и подождать шаттл, который доставит вас на станцию.
 
-Screens on the walls will give you an ETA for the shuttle.
-When it arrives, simply walk on to be transported to the station.
+Экраны на стенах покажут вам расчетное время прибытия (ETA) шаттла.
+Когда он прибудет, просто зайдите внутрь, чтобы отправиться на станцию.
 
-Make sure to stay inside the terminal and to not stand in the shuttle landing zone. [color=#EB2D3A][bold]You can be crushed by shuttles flying in[/bold][/color]
+Обязательно оставайтесь внутри терминала и не стойте в зоне посадки. [color=#EB2D3A][bold]Прилетающие шаттлы могут вас раздавить[/bold][/color]
 
-## Navigation
-Every station has a wide variety of locations to visit.
-These range from specific departments where work happens to common areas where you can relax and chat with others.
+## Навигация
+На каждой станции есть огромное количество мест для посещения.
+Они варьируются от конкретных отделов, где кипит работа, до общественных зон, где можно отдохнуть и поболтать с другими.
 
 <Box>
   <GuideEntityEmbed Entity="StationMap"/>
-  <GuideEntityEmbed Entity="SignDirectionalDorms" Caption="Directional Signs"/>
-  <GuideEntityEmbed Entity="SignBridge" Caption="Marker Signs"/>
+  <GuideEntityEmbed Entity="SignDirectionalDorms" Caption="Указатели направления"/>
+  <GuideEntityEmbed Entity="SignBridge" Caption="Знаки-маркеры"/>
 </Box>
 
-[color=cyan]Station maps[/color] give you an overview of the entire station with colored markers denoting locations of different things.
-Regular [color=cyan]signs[/color] on walls can point you to different departments.
+[color=cyan]Карты станции[/color] дают вам обзор всей станции с цветными маркерами, обозначающими расположение различных объектов.
+Обычные [color=cyan]знаки[/color] на стенах могут направить вас в нужные отделы.
 
-## Leaving the Station
-At the end of the shift [color=gray](barring a [color=red][bold]nuclear disaster[/bold][/color])[/color], you will leave the station via the [color=lime]evac shuttle[/color].
-When it's called, an announcement will play on the station alerting the crew and signaling its [color=cyan]arrival in 10 minutes.[/color]
-Once it arrives, you'll need to make your way over to it, board it, and then survive the trip to [bold]Central Command[/bold].
+## Как покинуть станцию
+В конце смены [color=gray](если не произойдет [color=red][bold]ядерная катастрофа[/bold][/color])[/color] вы покинете станцию на [color=lime]эвакуационном шаттле[/color].
+Когда его вызовут, на станции прозвучит объявление, предупреждающее экипаж и сигнализирующее о его [color=cyan]прибытии через 10 минут.[/color]
+Как только он прибудет, вам нужно будет добраться до него, зайти на борт и пережить полет до [bold]Центрального Командования[/bold].
 
-The round doesn't officially end until you reach [bold]Central Command[/bold]
+Раунд официально не закончится, пока вы не прибудете на [bold]Центральное Командование[/bold]
 
 <Box>
   <GuideEntityEmbed Entity="CryogenicSleepUnit"/>
 </Box>
 
-If you need to leave a round early, you can do so through a [color=lime]cryogenic sleep unit[/color].
-Simply going inside and leaving the game will store your belongings and ensure that they are not stolen or misused.
+Если вам нужно покинуть раунд раньше времени, вы можете сделать это через [color=lime]капсулу криогенного сна[/color].
+Если вы просто зайдете внутрь и выйдете из игры, ваши вещи сохранятся, и никто их не украдет и не использует во вред.
 
-## More Info
-Learning the controls? [textlink="Click here to read about the different controls" link="Controls"]
+## Дополнительная информация
+Учите управление? [textlink="Нажмите здесь, чтобы прочитать о различных клавишах управления" link="Controls"]
 
-Don't know how to perform a job? [textlink="Click here to jump to a list of departments" link="Jobs"]
+Не знаете, как выполнять работу? [textlink="Нажмите здесь, чтобы перейти к списку отделов" link="Jobs"]
 
-Keep dying? [textlink="Click here to see a survival guide" link="Survival"]
+Постоянно умираете? [textlink="Нажмите здесь, чтобы открыть руководство по выживанию" link="Survival"]
 
 </Document>

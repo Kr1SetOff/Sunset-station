@@ -1,0 +1,17 @@
+ent-BorgChassisSyndicateStealth = стелс-борг Синдиката
+    .desc = { ent-BaseBorgChassisSyndicate.desc }
+ent-BorgChassisSecurity = борг безопасности
+    .desc = { ent-BorgChassisSelectable.desc }
+ent-BorgChassisSecurityPowered = борг безопасности
+    .desc = { ent-BorgChassisSecurity.desc }
+    .suffix = Заряженный
+ent-BorgChassisPurrfus = мур-борг
+    .desc = { ent-BorgChassisSelectable.desc }
+ent-PurrfusBorgChassisDerelict = заброшенный мур-борг
+    .desc = Человеко-машинный гибрид разновидности мурфус. Этот находится в состоянии сильного разрушения.
+ent-BorgChassisCargo = грузовой борг
+    .desc = { ent-BorgChassisSelectable.desc }
+ent-BorgChassisTSF = штурмовой киборг TSMC
+    .desc = Специально созданный штурмовой кремниевый организм, используемый TSMC.
+ent-BorgChassisMedTak = MedTak кремниевый организм
+    .desc = Многоцелевое тяжелое кремниевое шасси, предназначенное для поддержки подразделений MedTak.

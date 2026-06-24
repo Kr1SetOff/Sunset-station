@@ -1,0 +1,12 @@
+ent-BaseMobGorilla = горилла
+    .desc = Наземная, преимущественно травоядная обезьяна, обитающая в лесах центральной Африки на Земле.
+    .suffix = { ent-SimpleMobBase.suffix }
+ent-MobGorilla = { ent-BaseMobGorilla }
+    .desc = { ent-BaseMobGorilla.desc }
+    .suffix = { ent-BaseMobGorilla.suffix }
+ent-MobGorillaRampaging = неистовствующая горилла
+    .desc = Горилла, которая одичала. Беги!
+    .suffix = { ent-BaseMobGorilla.suffix }
+ent-MobCargorilla = грузорилла
+    .desc = Питомца-горилла отдела снабжения. У него, похоже, есть татуировка «Я люблю маму».
+    .suffix = { ent-BaseMobGorilla.suffix }

@@ -1,0 +1,16 @@
+ent-BlackstarIDCard = ID-карта Blackstar
+    .desc = { ent-IDCardStandard.desc }
+ent-BlackstarLegionCommanderIDCard = ID-карта командира легиона
+    .desc = { ent-IDCardStandard.desc }
+ent-BlackstarHighLegateIDCard = ID-карта верховного легата
+    .desc = { ent-IDCardStandard.desc }
+ent-BlackstarLegateIDCard = ID-карта легата
+    .desc = { ent-IDCardStandard.desc }
+ent-BlackstarDreadwalkerIDCard = ID-карта Dreadwalker
+    .desc = { ent-BlackstarIDCard.desc }
+ent-BlackstarLegionnaireIDCard = ID-карта легионера
+    .desc = { ent-BlackstarIDCard.desc }
+ent-BlackstarBlackguardIDCard = ID-карта Черного стража
+    .desc = { ent-BlackstarIDCard.desc }
+ent-BlackstarInitiateIDCard = ID-карта посвященного
+    .desc = { ent-BlackstarIDCard.desc }

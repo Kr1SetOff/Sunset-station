@@ -1,19 +1,17 @@
 <Document>
-  # Rule 15 - Separation of Character from Player
-Players tend to establish relationships and communication methods outside of the game.
-Those interactions should not come to influence what happens inside of a round.
+  # Правило 15 — Разделение персонажа и игрока
+Игроки склонны устанавливать отношения и способы общения вне игры.
+Эти взаимодействия не должны влиять на то, что происходит внутри раунда.
 
+[bold]Метагреджинг / Метафрендинг[/bold]
+- Оказание человеку или персонажу преференциального (льготного) отношения, основанного на информации, которую ваш персонаж не должен знать, считается метафрендингом.
+Негативное отношение к человеку или персонажу, основанное на информации, которую ваш персонаж не должен знать, считается метагреджингом.
 
-[bold]Metagrudging/Metafriending[/bold]
-- Giving a person or character preferential treatment based on something that your character should not know is considered metafriending.
-Treating a person or character negatively based on something that your character should not know is considered metagrudging.
+[bold]Только английский язык[/bold]
+- Любая форма внутриигрового общения должна осуществляться на английском языке для всеобщей ясности.
+Допускается использование отдельных слов из других языков в качестве «колорита», но основная мысль предложения должна быть передана на английском языке.
 
-[bold]English Only[/bold]
-- Any form of communication in-game is to be expressed in English for universal clarity.
-Individual words may be borrowed from other languages used as common flair, but the core concept of the sentence must be communicated in English.
-
-[bold]Metacomms[/bold]
-- Using outside methods to communicate with other players about the current round is forbidden.
-The only exception being teaching new players, but you must alert an admin through an Ahelp beforehand.
-
+[bold]Метакоммуникация (Metacomms)[/bold]
+- Использование внешних методов общения с другими игроками о текущем раунде запрещено.
+Единственное исключение — обучение новых игроков, но вы должны заранее предупредить администратора через Ahelp.
 </Document>

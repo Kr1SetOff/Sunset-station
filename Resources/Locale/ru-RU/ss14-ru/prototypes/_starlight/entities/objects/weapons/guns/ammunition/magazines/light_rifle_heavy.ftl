@@ -1,0 +1,17 @@
+ent-LightRifleHeavyBase = коробка магазинов .30
+    .desc = { ent-BaseMagazineBoxLightRifle.desc }
+ent-LightRifleHeavyMagazineEmpty = коробка магазинов (.30 винтовочные любые)
+    .desc = { ent-LightRifleHeavyBase.desc }
+    .suffix = пустой
+ent-LightRifleHeavyMagazineSP = коробка магазинов (.30 винтовочные SP)
+    .desc = { ent-LightRifleHeavyBase.desc }
+ent-LightRifleHeavyMagazineHP = коробка магазинов (.30 винтовочные HP)
+    .desc = { ent-LightRifleHeavyBase.desc }
+ent-LightRifleHeavyMagazineFMJ = коробка магазинов (.30 винтовочные FMJ)
+    .desc = { ent-LightRifleHeavyBase.desc }
+ent-LightRifleHeavyMagazineIncendiary = коробка магазинов (.30 винтовочные зажигательные)
+    .desc = { ent-LightRifleHeavyBase.desc }
+ent-LightRifleHeavyMagazineUranium = коробка магазинов (.30 винтовочные урановые)
+    .desc = { ent-LightRifleHeavyBase.desc }
+ent-LightRifleHeavyMagazineAP = коробка магазинов (.30 винтовочные AP)
+    .desc = { ent-LightRifleHeavyBase.desc }

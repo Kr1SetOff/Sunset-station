@@ -1,61 +1,88 @@
 <Document>
-  # Shadekin
+  # Шейдкин
 
   <Box>
     <GuideEntityEmbed Entity="MobShadekin" Caption=""/>
   </Box>
-  Shadekin are a species whom originally dwell and are from another dimension called “The Dark”.
-  Most if not all Shadekin that are employed or under contract from NT are afflicted with a condition they call “Black-eye” and or as the Shadekin themselves refer to as being “Burnt”.
-  This affliction and condition supposedly is the cause of them being incapable of returning to the aforementioned “The Dark”.
-  Adapted to their home dimension of which is one absent of light, their vision is highly reactive to light levels.
-  Dim lights being a source of passive annoyance or discomfort, bright lights ail them much more noticeably, being a source of pain and harm to them.
 
-  ## Racial Features
+  Шейдкины — это вид существ, изначально происходящий из другого измерения, известного как «Тьма» (The Dark).
 
-  - Receive [color=#ffa500]20% more heat damage[/color], [color=#1e90ff]25% less cold damage[/color], and [color=#1e90ff]75% less cellular damage[/color].
-  - Receive [color=#ffa500]170% more bloodloss damage[/color] (and [color=#ffa500]heal bloodloss damage 75% slower[/color]), [color=#ffa500]30% more radiation damage[/color], and [color=#ffa500]25% more shock damage[/color].
-  - They do not breathe and thus require no air.
-  - Flashes stun time are doubled.
-  - Deal [color=red]5[/color] slashing damage with claws.
+  Большинство, если не все шейдкины, работающие на NT или находящиеся с ней по контракту, страдают от состояния, которое они называют «Чёрный глаз» (Black-eye), либо, как выражаются сами шейдкины, являются «Выжженными» (Burnt).
 
-  ## Marish
-  Shadekin have a language shared amongst them all, composed of only a singular word: “Mar”, whilst it can be altered in length and or composition, from potential additional A’s or R’s in the pronunciation. With this one and simple word however, Shadekin can convey and provide complex thought, and deep emotion alike.
-  Simplistic but endlessly deep for the Shadekin.
+  Считается, что именно это состояние лишает их возможности вернуться в упомянутую ранее Тьму.
 
-  ## Age & Names
-  Shadekin are an example of a very slow biological aging process.
-  Whilst maturity and eligible employment are known to standard to be 18.
-  Often Shadekin are considered young up until the age range of around 100, the ranges of 100-200 are what would be considered middle-aged, 200-300 being the instance of them starting to enter a elderly state.
-  Names are of great significance to Shadekin. Often these names are considered titles and bear them upon entering the physical from their home of “The Dark”.
-  These titles are often provided and or given to them by the attributes or qualities they exhibit, however there are other cases where it can be even items, passions, or ideas they are fond of.
-  There are instances as well of some Shadekin whom have become acclimated to provide their own titles, replacing previous ones.
-  This is not an aspect taken lightly by them nor other Shadekin, such a decision is akin to throwing away their previous selves.
+  Будучи приспособленными к своему родному измерению, в котором отсутствует свет, они крайне чувствительны к его уровню.
 
-  ## Nightvision
-  Shadekin due to their natural adaptation to their home dimension have innate Night-vision.
-  Capable of seeing and viewing things even in the most abyss-like darknesses, not needing any form of light providing device.
-  When wearing flash resistant equipment their vision will be normal.
-  This can be easily sorted by the Shadekin wearing a HUD variant, no longer having flash resistance, but keeping the utility that their nightvision and the HUD provide.
+  Тусклое освещение вызывает у них постоянное раздражение и дискомфорт, тогда как яркий свет причиняет серьёзную боль и наносит физический вред.
+
+  ## Расовые особенности
+
+  - Получают [color=#ffa500]на 20% больше урона от тепла[/color], [color=#1e90ff]на 25% меньше урона от холода[/color] и [color=#1e90ff]на 75% меньше клеточного урона[/color].
+  - Получают [color=#ffa500]на 170% больше урона от кровопотери[/color] (и [color=#ffa500]восстанавливаются от кровопотери на 75% медленнее[/color]), [color=#ffa500]на 30% больше урона от радиации[/color] и [color=#ffa500]на 25% больше урона от удара током[/color].
+  - Не дышат и поэтому не нуждаются в воздухе.
+  - Длительность ослепления вспышками увеличена вдвое.
+  - Наносят [color=red]5[/color] единиц режущего урона когтями.
+
+  ## Марриш
+
+  У шейдкинов есть общий язык, известный как «Марриш» (Marish), состоящий всего из одного слова — «Мар».
+
+  Несмотря на свою простоту, это слово может изменяться по длине и звучанию, включая дополнительные буквы «А» или «Р» в произношении. Тем не менее, используя лишь это единственное слово, шейдкины способны передавать сложные мысли, идеи и глубокие эмоции.
+
+  Простой для посторонних, но бесконечно глубокий для самих шейдкинов.
+
+  ## Возраст и имена
+
+  Шейдкины являются примером вида с крайне медленным биологическим старением.
+
+  Хотя совершеннолетие и минимальный возраст для работы наступают в стандартные 18 лет, молодыми шейдкины обычно считаются примерно до 100 лет.
+
+  Возраст от 100 до 200 лет считается зрелым, а после 200–300 лет шейдкин начинает считаться пожилым.
+
+  Имена имеют огромное значение для шейдкинов. Зачастую они рассматриваются как титулы, которые шейдкин получает при переходе из Тьмы в физический мир.
+
+  Такие титулы обычно отражают качества, черты характера или особенности, которые проявляет их носитель. Однако они также могут быть связаны с предметами, увлечениями, идеями или концепциями, которые шейдкину особенно дороги.
+
+  Известны случаи, когда шейдкины самостоятельно выбирали себе новые титулы, отказываясь от прежних.
+
+  Подобное решение никогда не воспринимается легкомысленно ни самим шейдкином, ни его сородичами, поскольку фактически означает отказ от своей прежней личности.
+
+  ## Ночное зрение
+
+  Благодаря естественной адаптации к Тьме шейдкины обладают врождённым ночным зрением.
+
+  Они способны видеть даже в абсолютной темноте и не нуждаются в источниках света.
+
+  При ношении снаряжения с защитой от вспышек их зрение становится обычным.
+
+  Это можно компенсировать использованием HUD-очков, которые сохраняют ночное зрение и функциональность интерфейса, но лишают шейдкина защиты от вспышек.
+
   <Box>
-    <GuideEntityEmbed Entity="ClothingEyesGlassesSecurity" Scale="5" Caption="Security Glasses\nNo Nightvision\nHas flash immunity"/>
-    <GuideEntityEmbed Entity="ClothingEyesHudSecurity" Scale="5" Caption="Security Hud\nNightvision\nNo flash immunity"/>
+    <GuideEntityEmbed Entity="ClothingEyesGlassesSecurity" Scale="5" Caption="Очки безопасности\nНет ночного зрения\nЕсть иммунитет к вспышкам"/>
+    <GuideEntityEmbed Entity="ClothingEyesHudSecurity" Scale="5" Caption="HUD безопасности\nНочное зрение\nНет иммунитета к вспышкам"/>
   </Box>
 
-  ## LIGHT SENSITIVITY
-  [color=yellow]Light Exposure: Dark[/color]
-  - Passive Regeneration is buffed.
-  - Nightvision.
+  ## Чувствительность к свету
 
-  [color=yellow]Light Exposure: Low[/color]
-  - No Buffs/Nerfs.
+  [color=yellow]Воздействие света: Тьма[/color]
 
-  [color=yellow]Light Exposure: Annoying[/color]
-  - Passive Regeneration is disabled.
+  - Усиленная пассивная регенерация.
+  - Действует ночное зрение.
 
-  [color=yellow]Light Exposure: High[/color]
-  - Heavy Slowdown.
+  [color=yellow]Воздействие света: Слабое[/color]
 
-  [color=yellow]Light Exposure:[/color] [color=red]EXTREME[/color]
-  - Get burned [color=red]1[/color] heat damage per second.
+  - Нет положительных или отрицательных эффектов.
+
+  [color=yellow]Воздействие света: Раздражающее[/color]
+
+  - Пассивная регенерация отключается.
+
+  [color=yellow]Воздействие света: Яркое[/color]
+
+  - Значительно снижается скорость передвижения.
+
+  [color=yellow]Воздействие света:[/color] [color=red]ЭКСТРЕМАЛЬНОЕ[/color]
+
+  - Получают [color=red]1[/color] единицу ожогового урона в секунду.
 
 </Document>

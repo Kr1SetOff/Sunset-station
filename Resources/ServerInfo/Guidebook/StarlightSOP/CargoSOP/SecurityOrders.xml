@@ -1,18 +1,18 @@
 <Document>
-# Security orders
+# Заказы службы безопасности
 
-## Basic materials
-### Only for printers & lathes
+## Базовые материалы
+### Только для принтеров и автолатов
 <Box>
-	<GuideEntityEmbed Entity="SheetSteel"/>
-	<GuideEntityEmbed Entity="SheetGlass"/>
-	<GuideEntityEmbed Entity="SheetPlastic"/>
-	<GuideEntityEmbed Entity="MaterialCloth"/>
+    <GuideEntityEmbed Entity="SheetSteel"/>
+    <GuideEntityEmbed Entity="SheetGlass"/>
+    <GuideEntityEmbed Entity="SheetPlastic"/>
+    <GuideEntityEmbed Entity="MaterialCloth"/>
 </Box>
 
-## Refill Crates
+## Ящики пополнения запасов
 <Box>
-	<GuideEntityEmbed Entity="CrateSecurityTrackingMindshieldImplants"/>
-	<GuideEntityEmbed Entity="CrateVendingMachineRestockSecTechFilled"/>
+    <GuideEntityEmbed Entity="CrateSecurityTrackingMindshieldImplants"/>
+    <GuideEntityEmbed Entity="CrateVendingMachineRestockSecTechFilled"/>
 </Box>
 </Document>

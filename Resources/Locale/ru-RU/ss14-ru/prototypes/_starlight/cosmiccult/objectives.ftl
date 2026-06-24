@@ -1,0 +1,16 @@
+ent-BaseCosmicCultObjective = { ent-BaseObjective }
+    .desc = { ent-BaseObjective.desc }
+ent-BaseCosmicColossusObjective = { ent-BaseObjective }
+    .desc = { ent-BaseObjective.desc }
+ent-CosmicConversionObjective = { ent-BaseCosmicCultObjective }
+    .desc = { ent-BaseCosmicCultObjective.desc }
+ent-CosmicEntropyObjective = { ent-BaseCosmicCultObjective }
+    .desc = { ent-BaseCosmicCultObjective.desc }
+ent-CosmicMonumentObjective = { ent-BaseCosmicCultObjective }
+    .desc = { ent-BaseCosmicCultObjective.desc }
+ent-CosmicFinalityObjective = { ent-BaseCosmicCultObjective }
+    .desc = { ent-BaseCosmicCultObjective.desc }
+ent-ColossusSurviveObjective = ВЫЖИТЬ
+    .desc = Просуществуйте до конца всего сущего.
+ent-ColossusEffigyObjective = ВОЗЗВАТЬ
+    .desc = Призовите Изваяние Энтропии.

@@ -1,0 +1,10 @@
+ent-BaseRuneAction = { ent-BaseAction }
+    .desc = { ent-BaseAction.desc }
+ent-ActionFlashRune = Руна вспышки
+    .desc = Призывает руну, которая вспыхивает при использовании.
+ent-ActionExplosionRune = Руна взрыва
+    .desc = Призывает руну, которая взрывается при использовании.
+ent-ActionIgniteRune = Руна воспламенения
+    .desc = Призывает руну, которая воспламеняется при использовании.
+ent-ActionStunRune = Руна оглушения
+    .desc = Призывает руну, которая оглушает при использовании.

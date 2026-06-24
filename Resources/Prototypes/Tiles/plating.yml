@@ -30,7 +30,7 @@
 - type: tile
   id: PlatingAsteroid
   name: tiles-asteroid-plating
-  sprite: /Textures/Tiles/Asteroid/asteroid_plating.png
+  sprite: /Textures/Tiles/asteroid/asteroid_plating.png
   baseTurf: Lattice
   isSubfloor: true
   footstepSounds:
@@ -41,7 +41,7 @@
 - type: tile
   id: PlatingBrass
   name: tiles-brass-plating
-  sprite: /Textures/Tiles/Misc/clockwork/clockwork_floor.png
+  sprite: /Textures/Tiles/misc/clockwork/clockwork_floor.png
   baseTurf: Lattice
   isSubfloor: true
   footstepSounds:
@@ -63,7 +63,7 @@
 - type: tile
   id: PlatingIronsand
   name: tiles-ironsand-plating
-  sprite: /Textures/Tiles/Asteroid/ironsand_plating.png
+  sprite: /Textures/Tiles/asteroid/ironsand_plating.png
   baseTurf: Lattice
   isSubfloor: true
   footstepSounds:

@@ -1,0 +1,14 @@
+ent-BaseSMES = СМЕС
+    .desc = Высокоёмкая сверхпроводящая магнитная система хранения энергии (СМЭС).
+ent-SMESBasic = { ent-BaseSMES }
+    .desc = { ent-BaseSMES.desc }
+    .suffix = Базовый, 8МДж
+ent-SMESBasicEmpty = { ent-SMESBasic }
+    .desc = { ent-SMESBasic.desc }
+    .suffix = Пустой
+ent-SMESAdvanced = усовершенствованный СМЭС
+    .desc = Еще более высокоёмкая сверхпроводящая магнитная система хранения энергии (СМЭС).
+    .suffix = Усовершенствованный, 16МДж
+ent-SMESAdvancedEmpty = { ent-SMESAdvanced }
+    .desc = { ent-SMESAdvanced.desc }
+    .suffix = Пустой

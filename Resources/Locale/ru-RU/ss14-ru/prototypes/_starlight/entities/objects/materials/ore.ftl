@@ -1,0 +1,15 @@
+ent-AbyssiumOre = руда абиссиума
+    .desc = { ent-OreBase.desc }
+    .suffix = Полная
+ent-AbyssiumOre1 = { ent-AbyssiumOre }
+    .desc = { ent-AbyssiumOre.desc }
+    .suffix = Одинарная
+ent-RawBluespaceCrystal = сырой кристалл синего пространства
+    .desc = Светящийся кристалл синего пространства, мало что известно о том, как они работают. Выглядит очень хрупким.
+    .suffix = Полный
+ent-RawBluespaceCrystal1 = { ent-RawBluespaceCrystal }
+    .desc = { ent-RawBluespaceCrystal.desc }
+    .suffix = Одинарный
+ent-RawBluespaceCrystal10 = { ent-RawBluespaceCrystal }
+    .desc = { ent-RawBluespaceCrystal.desc }
+    .suffix = 10

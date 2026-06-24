@@ -1,0 +1,10 @@
+ent-BaseIPCOrganUnGibbable = { ent-BaseItem }
+    .desc = { ent-BaseItem.desc }
+ent-OrganIPCEyes = роботические глаза
+    .desc = Определенно не мягкие. На самом деле, довольно острые.
+ent-OrganIPCTongue = голосовой модулятор
+    .desc = Голосовой модулятор, обычно используемый для лжи.
+ent-OrganIPCEars = звуковые датчики
+    .desc = Обрабатывают аудио с тем же качеством, что и станционные киборги.
+ent-OrganIPCHeart = микронасос
+    .desc = Циркулирует охлаждающую жидкость пугающе знакомым образом.

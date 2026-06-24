@@ -1,20 +1,20 @@
 <Document>
-# Psychologist
+# Психолог
 
-<GuideEntityEmbed Entity="ToyFigurineMedicalDoctor" Caption="Psychologist"/>
+<GuideEntityEmbed Entity="ToyFigurineMedicalDoctor" Caption="Психолог"/>
 
-1. The Psychologist report directly to the Chief Medical Officer.
+1. Психолог подчиняется напрямую Главному врачу (CMO).
 
-2. The Psychologist is authorized to perform a full psychometric workup on any crew member who is willing.
+2. Психолог имеет право проводить полное психометрическое обследование любого члена экипажа, выразившего на то своё согласие.
 
-3. Examinations of unwilling crewmembers may only occur with written approval by the Chief Medical Officer and one the following: HoS, Magistrate, Captain.
-- 1. This also applies to any medication prescribed by the Psychologist.
+3. Обследование членов экипажа без их согласия может проводиться только с письменного одобрения Главного врача и одного из следующих лиц: ГСБ (HoS), Магистрата или Капитана.
+- 1. Это правило также распространяется на любые лекарственные препараты, назначаемые Психологом.
 
-4. Examinations may result in the following actions, with a sign off from the Captain or crew member's head of department:
-- 1. Demotion from their current position, if the patient's mental state leaves them unable to fulfill their duties.
-- 2. Prescriptions of Pax or other similar drugs for those who are found to be extremely violent.
-- 3. Increased observation of prisoners or crew who are deemed a danger.
-- 4. Lightening of sentences for prisoners who have shown good behavior and a change of moral character.
+4. По результатам обследования могут быть предприняты следующие действия (при условии подписания Капитаном или главой департамента данного члена экипажа):
+- 1. Понижение в должности, если психическое состояние пациента не позволяет ему выполнять свои обязанности.
+- 2. Назначение Пакса (Pax) или других аналогичных препаратов лицам, у которых выявлена крайняя степень жестокости.
+- 3. Усиленное наблюдение за заключёнными или членами экипажа, признанными опасными.
+- 4. Смягчение приговора для заключённых, продемонстрировавших примерное поведение и изменение морального облика.
 
-5. The Psychologist may request to consult with a prisoner at any time to evaluate their mental state.
+5. Психолог может в любое время запросить встречу с заключённым для оценки его психического состояния.
 </Document>

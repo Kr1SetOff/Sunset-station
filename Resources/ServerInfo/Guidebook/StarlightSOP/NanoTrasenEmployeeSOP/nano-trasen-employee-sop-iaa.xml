@@ -1,19 +1,19 @@
 <Document>
-# Internal Affairs Agent
+# Агент внутренних дел
 
-<GuideEntityEmbed Entity="ToyFigurineLawyer" Caption="Internal Affairs Agent"/>
+<GuideEntityEmbed Entity="ToyFigurineLawyer" Caption="Агент внутренних дел"/>
 
-1. Internal Affairs Agents (IAAs) are considered subordinate to [bold]both[/bold] the NanoTrasen Representative and the Magistrate, and are not considered a member of Command.
+1. Агенты внутренних дел (IAA) считаются подчинёнными [bold]как[/bold] Представителю NanoTrasen, [bold]так и[/bold] Магистрату, и не являются членами Командования.
 
-2. Internal Affairs Agents are to only legally represent prisoners who are accused of capital level crimes, however they may choose to provide legal counsel to both Security as well as prisoners of lesser crimes.
+2. Агенты внутренних дел обязаны представлять в суде только тех заключённых, которые обвиняются в преступлениях, карающихся высшей мерой наказания (capital level crimes), однако они могут по своему усмотрению оказывать юридическую консультацию как Службе безопасности, так и заключённым, совершившим менее тяжкие преступления.
 
-3. Internal Affairs Agents may request access to a department to ensure that Standard Operating Procedures are being carried out. This request does not have to be accepted, however denial may be a cause for concern.
+3. Агенты внутренних дел могут запрашивать доступ в отделы для проверки надлежащего соблюдения Стандартных рабочих регламентов (СОП). Этот запрос не обязан быть удовлетворён, однако отказ в доступе может стать поводом для беспокойства.
 
-4. Internal Affairs Agents may not significantly impede any department with paperwork or multiple inspections within a short timeframe.
+4. Агенты внутренних дел не должны существенно препятствовать работе любого из отделов бумажной волокитой или проведением множественных проверок за короткий промежуток времени.
 
-5. All violations of SOP or Corporate Law should be brought to the relevant department head, NanoTrasen Representative, or Magistrate.
+5. Обо всех нарушениях СОП или Корпоративного закона следует сообщать руководителю соответствующего отдела, Представителю NanoTrasen или Магистрату.
 
-6. Internal Affairs Agents may carry a flash on them at all times.
+6. Агенты внутренних дел могут постоянно иметь при себе вспышку (flash).
 
-7. Any sensitive documents found in the Internal Affairs Agent's locker at the start of a shift are to be kept safe and secure at all times. It is the responsibility of the Internal Affairs Agent alone to keep the documents secure. Should these documents go missing, Central Command is to be contacted at once.
+7. Любые секретные документы, обнаруженные в шкафчике Агента внутренних дел в начале смены, должны постоянно храниться в безопасном и надёжном месте. Обеспечение сохранности этих документов является исключительной ответственностью Агента внутренних дел. В случае пропажи этих документов необходимо немедленно связаться с Центральным Командованием.
 </Document>

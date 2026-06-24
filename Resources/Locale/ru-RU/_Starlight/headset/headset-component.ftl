@@ -1,0 +1,13 @@
+chat-radio-law = Закон
+chat-radio-nanotrasen = NanoTrasen
+chat-radio-soviet = Советский
+chat-radio-expedition = Экспедиция
+chat-radio-tsf = Транс-Солнечный
+chat-radio-tsf-borg = Solgov Cyborg
+chat-radio-blackstar = Чёрная Звезда
+chat-radio-merchant = Торговец
+chat-radio-winds = Winds of Magic
+chat-radio-global = Глобальный
+chat-radio-aspace = Аспейс
+chat-radio-medtak = MedTak
+chat-radio-medtak-borg = MedTak Silicon

@@ -1,0 +1,15 @@
+ent-BaseMobBehonker = бонкер
+    .desc = Парящий аспект демона Хонк-матери.
+    .suffix = { ent-SimpleSpaceMobBase.suffix }
+ent-MobBehonkerElectrical = бонкер
+    .desc = { ent-BaseMobBehonker.desc }
+    .suffix = Пиро
+ent-MobBehonkerPyro = бонкер
+    .desc = { ent-BaseMobBehonker.desc }
+    .suffix = Электрический
+ent-MobBehonkerGrav = бонкер
+    .desc = { ent-BaseMobBehonker.desc }
+    .suffix = Грав
+ent-MobBehonkerIce = бонкер
+    .desc = { ent-BaseMobBehonker.desc }
+    .suffix = Лед

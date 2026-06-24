@@ -193,7 +193,7 @@
 - type: tile
   id: FloorBrassFilled
   name: tiles-brass-floor-filled
-  sprite: /Textures/Tiles/Misc/clockwork/clockwork_floor_filled.png
+  sprite: /Textures/Tiles/misc/clockwork/clockwork_floor_filled.png
   baseTurf: PlatingBrass
   isSubfloor: false
   deconstructTools: [ Prying ]
@@ -205,7 +205,7 @@
 - type: tile
   id: FloorBrassReebe
   name: tiles-brass-floor-reebe
-  sprite: /Textures/Tiles/Misc/clockwork/reebe.png
+  sprite: /Textures/Tiles/misc/clockwork/reebe.png
   baseTurf: PlatingBrass
   isSubfloor: false
   deconstructTools: [ Prying ]
@@ -664,12 +664,6 @@
   id: FloorSteelDirty
   name: tiles-dirty-steel-floor
   sprite: /Textures/Tiles/steel_dirty.png
-  variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   baseTurf: Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
@@ -906,7 +900,7 @@
 - type: tile
   id: FloorConcrete
   name: tiles-concrete-tile
-  sprite: /Textures/Tiles/Planet/Concrete/concrete.png
+  sprite: /Textures/Tiles/planet/concrete/concrete.png
   variants: 4
   placementVariants:
   - 1.0
@@ -924,7 +918,7 @@
 - type: tile
   id: FloorConcreteMono
   name: tiles-concrete-slab
-  sprite: /Textures/Tiles/Planet/Concrete/concrete_mono.png
+  sprite: /Textures/Tiles/planet/concrete/concrete_mono.png
   variants: 4
   placementVariants:
   - 1.0
@@ -942,7 +936,7 @@
 - type: tile
   id: FloorConcreteSmooth
   name: tiles-concrete-smooth
-  sprite: /Textures/Tiles/Planet/Concrete/concrete_smooth.png
+  sprite: /Textures/Tiles/planet/concrete/concrete_smooth.png
   variants: 4
   placementVariants:
   - 1.0
@@ -960,7 +954,7 @@
 - type: tile
   id: FloorGrayConcrete
   name: tiles-gray-concrete-tile
-  sprite: /Textures/Tiles/Planet/Concrete/grayconcrete.png
+  sprite: /Textures/Tiles/planet/concrete/grayconcrete.png
   variants: 4
   placementVariants:
   - 1.0
@@ -978,7 +972,7 @@
 - type: tile
   id: FloorGrayConcreteMono
   name: tiles-gray-concrete-slab
-  sprite: /Textures/Tiles/Planet/Concrete/grayconcrete_mono.png
+  sprite: /Textures/Tiles/planet/concrete/grayconcrete_mono.png
   variants: 4
   placementVariants:
   - 1.0
@@ -996,7 +990,7 @@
 - type: tile
   id: FloorGrayConcreteSmooth
   name: tiles-gray-concrete-smooth
-  sprite: /Textures/Tiles/Planet/Concrete/grayconcrete_smooth.png
+  sprite: /Textures/Tiles/planet/concrete/grayconcrete_smooth.png
   variants: 4
   placementVariants:
   - 1.0
@@ -1014,7 +1008,7 @@
 - type: tile
   id: FloorOldConcrete
   name: tiles-old-concrete-tile
-  sprite: /Textures/Tiles/Planet/Concrete/oldconcrete.png
+  sprite: /Textures/Tiles/planet/concrete/oldconcrete.png
   variants: 4
   placementVariants:
   - 1.0
@@ -1032,7 +1026,7 @@
 - type: tile
   id: FloorOldConcreteMono
   name: tiles-old-concrete-slab
-  sprite: /Textures/Tiles/Planet/Concrete/oldconcrete_mono.png
+  sprite: /Textures/Tiles/planet/concrete/oldconcrete_mono.png
   variants: 4
   placementVariants:
   - 1.0
@@ -1050,7 +1044,7 @@
 - type: tile
   id: FloorOldConcreteSmooth
   name: tiles-old-concrete-smooth
-  sprite: /Textures/Tiles/Planet/Concrete/oldconcrete_smooth.png
+  sprite: /Textures/Tiles/planet/concrete/oldconcrete_smooth.png
   variants: 4
   placementVariants:
   - 1.0
@@ -1439,7 +1433,7 @@
 - type: tile
   id: FloorAsphalt
   name: tiles-asphalt
-  sprite: /Textures/Tiles/Planet/Concrete/asphalt.png
+  sprite: /Textures/Tiles/planet/concrete/asphalt.png
   variants: 10
   placementVariants:
   - 1.0
@@ -1463,6 +1457,12 @@
   id: FloorGrass
   name: tiles-planet-grass-floor
   sprite: /Textures/Tiles/grass.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
   baseTurf: FloorDirt
   isSubfloor: true
   footstepSounds:
@@ -1475,6 +1475,12 @@
   id: FloorGrassJungle
   name: tiles-jungle-grass-floor
   sprite: /Textures/Tiles/grassjungle.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
   baseTurf: FloorDirt
   isSubfloor: true
   footstepSounds:
@@ -1539,7 +1545,7 @@
 - type: tile
   id: FloorAsteroidSandBorderless
   name: tiles-asteroid-sand-borderless
-  sprite: /Textures/Tiles/Asteroid/asteroid.png
+  sprite: /Textures/Tiles/asteroid/asteroid.png
   variants: 13
   placementVariants:
   - 0.8
@@ -1568,19 +1574,19 @@
   name: tiles-asteroid-sand
   edgeSpritePriority: 1
   edgeSprites:
-    SouthEast: /Textures/Tiles/Asteroid/asteroid_single_edge.png
-    NorthEast: /Textures/Tiles/Asteroid/asteroid_single_edge.png
-    NorthWest: /Textures/Tiles/Asteroid/asteroid_single_edge.png
-    SouthWest: /Textures/Tiles/Asteroid/asteroid_single_edge.png
-    South: /Textures/Tiles/Asteroid/asteroid_double_edge.png
-    East: /Textures/Tiles/Asteroid/asteroid_double_edge.png
-    North: /Textures/Tiles/Asteroid/asteroid_double_edge.png
-    West: /Textures/Tiles/Asteroid/asteroid_double_edge.png
+    SouthEast: /Textures/Tiles/asteroid/asteroid_single_edge.png
+    NorthEast: /Textures/Tiles/asteroid/asteroid_single_edge.png
+    NorthWest: /Textures/Tiles/asteroid/asteroid_single_edge.png
+    SouthWest: /Textures/Tiles/asteroid/asteroid_single_edge.png
+    South: /Textures/Tiles/asteroid/asteroid_double_edge.png
+    East: /Textures/Tiles/asteroid/asteroid_double_edge.png
+    North: /Textures/Tiles/asteroid/asteroid_double_edge.png
+    West: /Textures/Tiles/asteroid/asteroid_double_edge.png
 
 - type: tile
   id: FloorAsteroidSandDugBorderless
   name: tiles-asteroid-sand-borderless
-  sprite: /Textures/Tiles/Asteroid/asteroid_dug.png
+  sprite: /Textures/Tiles/asteroid/asteroid_dug.png
   baseTurf: Space
   isSubfloor: true
   footstepSounds:
@@ -1594,19 +1600,19 @@
   name: tiles-asteroid-sand
   edgeSpritePriority: 1
   edgeSprites:
-    SouthEast: /Textures/Tiles/Asteroid/asteroid_single_edge.png
-    NorthEast: /Textures/Tiles/Asteroid/asteroid_single_edge.png
-    NorthWest: /Textures/Tiles/Asteroid/asteroid_single_edge.png
-    SouthWest: /Textures/Tiles/Asteroid/asteroid_single_edge.png
-    South: /Textures/Tiles/Asteroid/asteroid_double_edge.png
-    East: /Textures/Tiles/Asteroid/asteroid_double_edge.png
-    North: /Textures/Tiles/Asteroid/asteroid_double_edge.png
-    West: /Textures/Tiles/Asteroid/asteroid_double_edge.png
+    SouthEast: /Textures/Tiles/asteroid/asteroid_single_edge.png
+    NorthEast: /Textures/Tiles/asteroid/asteroid_single_edge.png
+    NorthWest: /Textures/Tiles/asteroid/asteroid_single_edge.png
+    SouthWest: /Textures/Tiles/asteroid/asteroid_single_edge.png
+    South: /Textures/Tiles/asteroid/asteroid_double_edge.png
+    East: /Textures/Tiles/asteroid/asteroid_double_edge.png
+    North: /Textures/Tiles/asteroid/asteroid_double_edge.png
+    West: /Textures/Tiles/asteroid/asteroid_double_edge.png
 
 - type: tile
   id: FloorAsteroidSandRedBorderless
   name: tiles-asteroid-sand-borderless
-  sprite: /Textures/Tiles/Asteroid/asteroid_red.png
+  sprite: /Textures/Tiles/asteroid/asteroid_red.png
   variants: 13
   placementVariants:
   - 0.8
@@ -1635,19 +1641,19 @@
   name: tiles-asteroid-sand
   edgeSpritePriority: 1
   edgeSprites:
-    SouthEast: /Textures/Tiles/Asteroid/asteroid_single_edge.png
-    NorthEast: /Textures/Tiles/Asteroid/asteroid_single_edge.png
-    NorthWest: /Textures/Tiles/Asteroid/asteroid_single_edge.png
-    SouthWest: /Textures/Tiles/Asteroid/asteroid_single_edge.png
-    South: /Textures/Tiles/Asteroid/asteroid_double_edge.png
-    East: /Textures/Tiles/Asteroid/asteroid_double_edge.png
-    North: /Textures/Tiles/Asteroid/asteroid_double_edge.png
-    West: /Textures/Tiles/Asteroid/asteroid_double_edge.png
+    SouthEast: /Textures/Tiles/asteroid/asteroid_single_edge.png
+    NorthEast: /Textures/Tiles/asteroid/asteroid_single_edge.png
+    NorthWest: /Textures/Tiles/asteroid/asteroid_single_edge.png
+    SouthWest: /Textures/Tiles/asteroid/asteroid_single_edge.png
+    South: /Textures/Tiles/asteroid/asteroid_double_edge.png
+    East: /Textures/Tiles/asteroid/asteroid_double_edge.png
+    North: /Textures/Tiles/asteroid/asteroid_double_edge.png
+    West: /Textures/Tiles/asteroid/asteroid_double_edge.png
 
 - type: tile
   id: FloorAsteroidTile
   name: tiles-asteroid-tile
-  sprite: /Textures/Tiles/Asteroid/asteroid_tile.png
+  sprite: /Textures/Tiles/asteroid/asteroid_tile.png
   baseTurf: Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
@@ -1659,7 +1665,7 @@
 - type: tile
   id: FloorAsteroidIronsandBorderless
   name: tiles-asteroid-ironsand-borderless
-  sprite: /Textures/Tiles/Asteroid/ironsand.png
+  sprite: /Textures/Tiles/asteroid/ironsand.png
   variants: 15
   placementVariants:
   - 1.0
@@ -1690,19 +1696,19 @@
   name: tiles-asteroid-ironsand
   edgeSpritePriority: 1
   edgeSprites:
-    SouthEast: /Textures/Tiles/Asteroid/iron_single_edge.png
-    NorthEast: /Textures/Tiles/Asteroid/iron_single_edge.png
-    NorthWest: /Textures/Tiles/Asteroid/iron_single_edge.png
-    SouthWest: /Textures/Tiles/Asteroid/iron_single_edge.png
-    South: /Textures/Tiles/Asteroid/iron_double_edge.png
-    East: /Textures/Tiles/Asteroid/iron_double_edge.png
-    North: /Textures/Tiles/Asteroid/iron_double_edge.png
-    West: /Textures/Tiles/Asteroid/iron_double_edge.png
+    SouthEast: /Textures/Tiles/asteroid/iron_single_edge.png
+    NorthEast: /Textures/Tiles/asteroid/iron_single_edge.png
+    NorthWest: /Textures/Tiles/asteroid/iron_single_edge.png
+    SouthWest: /Textures/Tiles/asteroid/iron_single_edge.png
+    South: /Textures/Tiles/asteroid/iron_double_edge.png
+    East: /Textures/Tiles/asteroid/iron_double_edge.png
+    North: /Textures/Tiles/asteroid/iron_double_edge.png
+    West: /Textures/Tiles/asteroid/iron_double_edge.png
 
 - type: tile
   id: FloorAsteroidSandUnvariantizedBorderless
   name: tiles-asteroid-sand-borderless
-  sprite: /Textures/Tiles/Asteroid/asteroid0.png
+  sprite: /Textures/Tiles/asteroid/asteroid0.png
   baseTurf: Space
   isSubfloor: true
   footstepSounds:
@@ -1716,19 +1722,19 @@
   name: tiles-asteroid-sand
   edgeSpritePriority: 1
   edgeSprites:
-    SouthEast: /Textures/Tiles/Asteroid/asteroid_single_edge.png
-    NorthEast: /Textures/Tiles/Asteroid/asteroid_single_edge.png
-    NorthWest: /Textures/Tiles/Asteroid/asteroid_single_edge.png
-    SouthWest: /Textures/Tiles/Asteroid/asteroid_single_edge.png
-    South: /Textures/Tiles/Asteroid/asteroid_double_edge.png
-    East: /Textures/Tiles/Asteroid/asteroid_double_edge.png
-    North: /Textures/Tiles/Asteroid/asteroid_double_edge.png
-    West: /Textures/Tiles/Asteroid/asteroid_double_edge.png
+    SouthEast: /Textures/Tiles/asteroid/asteroid_single_edge.png
+    NorthEast: /Textures/Tiles/asteroid/asteroid_single_edge.png
+    NorthWest: /Textures/Tiles/asteroid/asteroid_single_edge.png
+    SouthWest: /Textures/Tiles/asteroid/asteroid_single_edge.png
+    South: /Textures/Tiles/asteroid/asteroid_double_edge.png
+    East: /Textures/Tiles/asteroid/asteroid_double_edge.png
+    North: /Textures/Tiles/asteroid/asteroid_double_edge.png
+    West: /Textures/Tiles/asteroid/asteroid_double_edge.png
 
 - type: tile
   id: FloorAsteroidIronsandUnvariantizedBorderless
   name: tiles-asteroid-ironsand-borderless
-  sprite: /Textures/Tiles/Asteroid/ironsand0.png
+  sprite: /Textures/Tiles/asteroid/ironsand0.png
   baseTurf: Space
   isSubfloor: true
   footstepSounds:
@@ -1742,14 +1748,14 @@
   name: tiles-asteroid-ironsand
   edgeSpritePriority: 1
   edgeSprites:
-    SouthEast: /Textures/Tiles/Asteroid/iron_single_edge.png
-    NorthEast: /Textures/Tiles/Asteroid/iron_single_edge.png
-    NorthWest: /Textures/Tiles/Asteroid/iron_single_edge.png
-    SouthWest: /Textures/Tiles/Asteroid/iron_single_edge.png
-    South: /Textures/Tiles/Asteroid/iron_double_edge.png
-    East: /Textures/Tiles/Asteroid/iron_double_edge.png
-    North: /Textures/Tiles/Asteroid/iron_double_edge.png
-    West: /Textures/Tiles/Asteroid/iron_double_edge.png
+    SouthEast: /Textures/Tiles/asteroid/iron_single_edge.png
+    NorthEast: /Textures/Tiles/asteroid/iron_single_edge.png
+    NorthWest: /Textures/Tiles/asteroid/iron_single_edge.png
+    SouthWest: /Textures/Tiles/asteroid/iron_single_edge.png
+    South: /Textures/Tiles/asteroid/iron_double_edge.png
+    East: /Textures/Tiles/asteroid/iron_double_edge.png
+    North: /Textures/Tiles/asteroid/iron_double_edge.png
+    West: /Textures/Tiles/asteroid/iron_double_edge.png
 
 # Caves
 - type: tile
@@ -1886,7 +1892,7 @@
 - type: tile
   id: FloorWebTile
   name: tiles-web
-  sprite: /Textures/Tiles/Misc/Web/web_tile.png
+  sprite: /Textures/Tiles/misc/web/web_tile.png
   baseTurf: Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
@@ -1956,7 +1962,7 @@
 - type: tile
   id: FloorAstroGrass
   name: tiles-astro-grass
-  sprite: /Textures/Tiles/Planet/Grass/grass.png
+  sprite: /Textures/Tiles/planet/grass/grass.png
   variants: 4
   placementVariants:
   - 1.0
@@ -1965,14 +1971,14 @@
   - 1.0
   edgeSpritePriority: 1
   edgeSprites:
-    SouthEast: /Textures/Tiles/Planet/Grass/single_edge.png
-    NorthEast: /Textures/Tiles/Planet/Grass/single_edge.png
-    NorthWest: /Textures/Tiles/Planet/Grass/single_edge.png
-    SouthWest: /Textures/Tiles/Planet/Grass/single_edge.png
-    South: /Textures/Tiles/Planet/Grass/double_edge.png
-    East: /Textures/Tiles/Planet/Grass/double_edge.png
-    North: /Textures/Tiles/Planet/Grass/double_edge.png
-    West: /Textures/Tiles/Planet/Grass/double_edge.png
+    SouthEast: /Textures/Tiles/planet/grass/single_edge.png
+    NorthEast: /Textures/Tiles/planet/grass/single_edge.png
+    NorthWest: /Textures/Tiles/planet/grass/single_edge.png
+    SouthWest: /Textures/Tiles/planet/grass/single_edge.png
+    South: /Textures/Tiles/planet/grass/double_edge.png
+    East: /Textures/Tiles/planet/grass/double_edge.png
+    North: /Textures/Tiles/planet/grass/double_edge.png
+    West: /Textures/Tiles/planet/grass/double_edge.png
   baseTurf: Plating
   isSubfloor: false
   deconstructTools: [ Cutting ]
@@ -2025,7 +2031,7 @@
 - type: tile
   id: FloorAstroIce
   name: tiles-astro-ice
-  sprite: /Textures/Tiles/Planet/Snow/ice.png
+  sprite: /Textures/Tiles/planet/snow/ice.png
   baseTurf: Plating
   isSubfloor: false
   deconstructTools: [ Prying ]

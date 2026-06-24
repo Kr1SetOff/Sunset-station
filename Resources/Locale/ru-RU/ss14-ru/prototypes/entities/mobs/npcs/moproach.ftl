@@ -1,0 +1,14 @@
+ent-MobMoproach = швабротаракан
+    .desc = У этого маленького мольтаракана на ногах надеты тапочки-швабры! Как очаровательно!
+    .suffix = { ent-MobMothroach.suffix }
+ent-MobMoproachHat = { ent-MobMoproach }
+    .desc = { ent-MobMoproach.desc }
+    .suffix = шляпа
+ent-MoproachBox = набор швабротараканов
+    .desc = Набор, чтобы быстро подготовить двух швабротараканов к работе.
+ent-MoproachCubeWrapped = куб швабротаракана
+    .desc = Разверните это, чтобы получить куб швабротаракана.
+    .suffix = Завернутый
+ent-PaperMoproachManual = { ent-Paper }
+    .desc = { ent-Paper.desc }
+    .suffix = руководство по швабротараканам

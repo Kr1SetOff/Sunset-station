@@ -3,8 +3,8 @@ import os
 import shutil
 
 root = "."
-old_name = "_Impstation"
-new_name = "_Starlight"
+old_name = "_Starlight"
+new_name = "_Impstation"
 
 def merge_dirs(src, dst):
     """Recursively merge src into dst, then remove src."""

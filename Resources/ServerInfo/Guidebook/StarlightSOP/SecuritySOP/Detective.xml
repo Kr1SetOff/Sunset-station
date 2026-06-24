@@ -1,44 +1,44 @@
 <Document>
-# Detective
+# Детектив
 
-<GuideEntityEmbed Entity="ToyFigurineDetective" Caption="Detective"/>
+<GuideEntityEmbed Entity="ToyFigurineDetective" Caption="Детектив"/>
 
 - 1.\n
-Standard [color=#00a933]Code Green[/color] equipment is:
+Стандартное снаряжение для [color=#00a933]Зелёного кода[/color]:
 
 
 <Box>
-	<GuideEntityEmbed Entity="ClothingHandsGlovesForensic"/>
-	<GuideEntityEmbed Entity="ForensicScanner"/>
-	<GuideEntityEmbed Entity="ForensicPad"/>
+    <GuideEntityEmbed Entity="ClothingHandsGlovesForensic"/>
+    <GuideEntityEmbed Entity="ForensicScanner"/>
+    <GuideEntityEmbed Entity="ForensicPad"/>
 </Box>
 <Box>
-	<GuideEntityEmbed Entity="Stunbaton"/>
-	<GuideEntityEmbed Entity="WeaponRevolverInspector"/>
+    <GuideEntityEmbed Entity="Stunbaton"/>
+    <GuideEntityEmbed Entity="WeaponRevolverInspector"/>
 </Box>
 <Box>
-	<GuideEntityEmbed Entity="HoloprojectorSecurity"/>
-	<GuideEntityEmbed Entity="FlashlightSeclite"/>
-	<GuideEntityEmbed Entity="RadioHandheldSecurity"/>
+    <GuideEntityEmbed Entity="HoloprojectorSecurity"/>
+    <GuideEntityEmbed Entity="FlashlightSeclite"/>
+    <GuideEntityEmbed Entity="RadioHandheldSecurity"/>
 </Box>
 <Box>
-	<GuideEntityEmbed Entity="CombatKnife"/>
-	in
-	<GuideEntityEmbed Entity="ClothingShoesBootsJack"/>
+    <GuideEntityEmbed Entity="CombatKnife"/>
+    в
+    <GuideEntityEmbed Entity="ClothingShoesBootsJack"/>
 </Box>
 
 - 2.\n
-The Detective inherits their duties, clearances and responsibilities from the Security Officer when their own SOP does not apply.
+Детектив перенимает обязанности, полномочия и ответственность Офицера службы безопасности в тех случаях, когда его собственный СОП неприменим.
 - 3.\n
-The Detective is responsible for the investigation of crime-scenes.
+Детектив несёт ответственность за расследование мест преступлений.
 - 4.\n
-The Detective is responsible for interrogation of prisoners and detainees if necessary.\n\n
+Детектив несёт ответственность за допрос заключённых и задержанных в случае необходимости.\n\n
 4.1\n
-Any time spent in interrogation is to be subtracted from the subject's confinement time.
+Любое время, проведённое на допросе, должно вычитаться из общего срока заключения подозреваемого.
 - 5.\n
-The Detective is permitted to ignore the Uniform Requirements in Security SOP §2 with approval from the Head of Security.\n\n
+Детективу разрешается игнорировать требования к форме одежды из §2 СОП СБ с одобрения Главы службы безопасности.\n\n
 5.1\n
-This is only allowed for purposes of undercover investigation.\n\n
+Это допускается исключительно в целях проведения расследования под прикрытием.\n\n
 5.2\n
-The Detective's real ID must remain somewhere on their person at all times despite this.
+Несмотря на это, настоящая ID-карта Детектива должна постоянно находиться при нём.
 </Document>

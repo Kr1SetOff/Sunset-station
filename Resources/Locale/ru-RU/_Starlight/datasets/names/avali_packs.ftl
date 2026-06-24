@@ -1,0 +1,14 @@
+names-avali-packs-dataset-1 = Стая Авиаторов
+names-avali-packs-dataset-2 = Стая Экранных Клевателей
+names-avali-packs-dataset-3 = Стая Защитников Корпуса
+names-avali-packs-dataset-4 = Стая Железных Когтей
+names-avali-packs-dataset-5 = Стая Стражей Шлюза
+names-avali-packs-dataset-6 = Стая Спринтеров
+names-avali-packs-dataset-7 = Стая Плазменных Когтей
+names-avali-packs-dataset-8 = Стая Железных Лап
+names-avali-packs-dataset-9 = Стальное Гнездо
+names-avali-packs-dataset-10 = Стая Серебряных Перьев
+names-avali-packs-dataset-11 = Стая Шахтёрских Лап
+names-avali-packs-dataset-12 = Стая Охотников
+names-avali-packs-dataset-13 = Стая Тёмных Перьев
+names-avali-packs-dataset-14 = Гнездо Техников

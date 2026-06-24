@@ -1,24 +1,24 @@
 <Document>
-# Chemist
+# Химик
 
-<GuideEntityEmbed Entity="ToyFigurineChemist" Caption="Chemist"/>
+<GuideEntityEmbed Entity="ToyFigurineChemist" Caption="Химик"/>
 
-1. Chemists report directly to the Chief Medical Officer.
+1. Химики подчиняются напрямую Главному врачу (CMO).
 
-2. Chemists should prioritize all basic medicines before moving on to advanced medicines.
+2. Химики должны расставлять приоритеты в пользу производства всех базовых медикаментов, прежде чем переходить к созданию продвинутых лекарств.
 
-3. All medicines should be labeled as follows:
-- Chemical name.
-- Chemical effect/major side effects.
-- Overdose limits.
-- Any interfering chemicals (i.e. Lacinerol & Bicardine react to form Razorium)
+3. Все медикаменты должны иметь следующую маркировку:
+- Химическое название.
+- Эффект препарата / основные побочные эффекты.
+- Лимиты передозировки.
+- Любые несовместимые химические вещества (например: Лацинерол и Бикардин вступают в реакцию с образованием Разориума).
 
-4. Chemists should ensure that any illegal chemicals are kept in the ChemMaster 4000 or disposed of immediately after use.
+4. Химики должны обеспечивать, чтобы любые нелегальные химикаты хранились в ChemMaster 4000 или утилизировались сразу после использования.
 
-5. Chemists may fill prescriptions signed and stamped by the CMO.
+5. Химики могут отпускать лекарства по рецептам, подписанным и заверенным печатью Главного врача.
 
-6. Non-illegal chemicals may be synthesized and prescribed by chemists at their discretion.
+6. Легальные химические вещества могут синтезироваться и назначаться химиками по их собственному усмотрению.
 
-7. Chemists may perform the duties of Medical Doctors during emergencies, but must follow the Medical Doctor SOP.
-- 1. One Chemist must always stay in the chemical lab.
+7. Химики могут выполнять обязанности Врачей (Medical Doctors) во время чрезвычайных ситуаций, но при этом обязаны соблюдать СОП Врача.
+- 1. Один химик всегда должен оставаться в химической лаборатории.
 </Document>

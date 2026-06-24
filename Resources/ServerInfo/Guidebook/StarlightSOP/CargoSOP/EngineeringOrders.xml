@@ -1,35 +1,35 @@
 <Document>
-# Engineering orders
+# Инженерные заказы
 
-## Basic materials
+## Базовые материалы
 <Box>
-	<GuideEntityEmbed Entity="SheetSteel"/>
-	<GuideEntityEmbed Entity="SheetGlass"/>
-	<GuideEntityEmbed Entity="SheetPlastic"/>
-	<GuideEntityEmbed Entity="SheetPlasteel"/>
-	<GuideEntityEmbed Entity="MaterialCloth"/>
+    <GuideEntityEmbed Entity="SheetSteel"/>
+    <GuideEntityEmbed Entity="SheetGlass"/>
+    <GuideEntityEmbed Entity="SheetPlastic"/>
+    <GuideEntityEmbed Entity="SheetPlasteel"/>
+    <GuideEntityEmbed Entity="MaterialCloth"/>
 </Box>
 
-## Cables
+## Кабели
 <Box>
-	<GuideEntityEmbed Entity="CableApcStack"/>
-	<GuideEntityEmbed Entity="CableMVStack"/>
-	<GuideEntityEmbed Entity="CableHVStack"/>
+    <GuideEntityEmbed Entity="CableApcStack"/>
+    <GuideEntityEmbed Entity="CableMVStack"/>
+    <GuideEntityEmbed Entity="CableHVStack"/>
 </Box>
 
-## Basic hand tools
+## Базовые ручные инструменты
 <Box>
-	<GuideEntityEmbed Entity="Crowbar"/>
-	<GuideEntityEmbed Entity="Wrench"/>
-	<GuideEntityEmbed Entity="Screwdriver"/>
-	<GuideEntityEmbed Entity="Wirecutter"/>
-	<GuideEntityEmbed Entity="Welder"/>
-	<GuideEntityEmbed Entity="Multitool"/>
+    <GuideEntityEmbed Entity="Crowbar"/>
+    <GuideEntityEmbed Entity="Wrench"/>
+    <GuideEntityEmbed Entity="Screwdriver"/>
+    <GuideEntityEmbed Entity="Wirecutter"/>
+    <GuideEntityEmbed Entity="Welder"/>
+    <GuideEntityEmbed Entity="Multitool"/>
 </Box>
 
-## Crates
+## Ящики
 <Box>
-	<GuideEntityEmbed Entity="CrateVendingMachineRestockEngineeringFilled"/>
-	<GuideEntityEmbed Entity="CrateEngineeringAMEJar"/>
+    <GuideEntityEmbed Entity="CrateVendingMachineRestockEngineeringFilled"/>
+    <GuideEntityEmbed Entity="CrateEngineeringAMEJar"/>
 </Box>
 </Document>

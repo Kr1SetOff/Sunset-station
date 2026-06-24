@@ -1,0 +1,17 @@
+ent-AtmosFixBlockerMarker = Атмос-маркер фикс вакуума
+    .desc = Вакуум, 20°C
+ent-AtmosFixOxygenMarker = Атмос-маркер фикс кислорода
+    .desc = Кислород при давлении газового майнера, 20°C
+ent-AtmosFixNitrogenMarker = Атмос-маркер фикс азота
+    .desc = Азот при давлении газового майнера, 20°C
+ent-AtmosFixPlasmaMarker = Атмос-маркер фикс плазмы
+    .desc = Плазма при давлении газового майнера, 20°C
+ent-AtmosFixInstantPlasmaFireMarker = Атмос-маркер фикс мгновенного плазма-огня
+    .desc = МГНОВЕННЫЙ ПЛАЗМЕННЫЙ ОГОНЬ
+ent-AtmosFixFreezerMarker = Атмос-маркер фикс холодильника
+    .desc = Изменить температуру воздуха до 235 К, для морозильника с небольшим запасом для настройки.
+ent-AtmosFixVoxMarker = { ent-AtmosFixNitrogenMarker }
+    .desc = Азот при 101 кПа, 20°C
+    .suffix = Атмосфера воксов
+ent-AtmosFixAirMarker = Атмос-маркер фикс воздуха
+    .desc = Кислород (21%) и азот (79%) при давлении газового майнера, 20°C

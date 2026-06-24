@@ -1,70 +1,70 @@
 ﻿<Document>
-  # Roleplay Rule 11 - Follow reasonable escalation
-  Antagonists are fully exempt from escalation rules. Non-antagonists who are in a conflict with antagonists are not exempt. Escalation should typically follow steps or a pattern of conflict types similar to:
-  - Verbal
-  - Non-harmful
-  - Non-lethal
-  - Lethal
-  - Permanently lethal
+  # Правило ролевого отыгрыша 11 — Соблюдайте разумную эскалацию
+  Антагонисты полностью освобождены от правил эскалации. Не-антагонисты, находящиеся в конфликте с антагонистами, таковыми не являются. Эскалация конфликта обычно должна проходить через этапы или типы, подобные этим:
+  - Вербальный
+  - Безвредный (не причиняющий вреда)
+  - Нелетальный
+  - Летальный
+  - Перманентно летальный
 
-  All new conflicts should start at the first step. A player should not escalate a conflict across steps without some escalation from the other party involved in the conflict. Players can skip steps to match the level of escalation that the other person is at, but should almost always not skip steps other than that. Players who attempt to deescalate conflicts will be given more leniency in escalating if the other party continues to escalate despite the attempt at de-escalation. You do not have to try to deescalate conflicts, but someone who watches you over the entire round, or over multiple rounds, should not feel that your goal is generally to escalate conflicts.
+  Все новые конфликты должны начинаться с первого этапа. Игрок не должен перескакивать через этапы эскалации конфликта без соответствующего ответного шага со стороны другого участника. Игроки могут пропускать этапы, чтобы сравняться с уровнем эскалации оппонента, но почти никогда не должны делать это иначе. Игроки, которые пытаются деэскалировать (погасить) конфликт, получат больше снисхождения в случае эскалации, если другая сторона продолжает обострять ситуацию, несмотря на попытки к примирению. Вы не обязаны пытаться деэскалировать конфликты, но если кто-то будет наблюдать за вами весь раунд или несколько раундов, у него не должно сложиться впечатление, что ваша главная цель — провоцировать конфликты.
 
-  Conflicts or escalation can be indirect. When someone steals someone else's ID, the theft is a direct part of the conflict, but if the victim becomes trapped as a result of not having their ID to open a door, that is also considered part of the conflict and escalation. Do not randomly steal IDs from people.
+  Конфликты или эскалация могут быть косвенными. Когда кто-то крадет чужое удостоверение (ID), кража является прямой частью конфликта, но если жертва оказывается заблокированной из-за отсутствия доступа к двери, это также считается частью конфликта и эскалацией. Не воруйте удостоверения у людей просто так.
 
-  Escalation does not have to be directed at a specific player to enter them into a conflict. Nuclear operatives who are trying to destroy the station are considered to be at the permanently lethal level of conflict with all crew on the station. Someone who kills a station pet has started some degree of conflict with all crewmembers. Someone who kills a mouse that a chef was caring for has started some degree of conflict with that chef.
+  Эскалация не обязательно должна быть направлена на конкретного игрока, чтобы втянуть его в конфликт. Ядерные оперативники, пытающиеся уничтожить станцию, считаются находящимися на перманентно летальном уровне конфликта со всем экипажем. Тот, кто убивает питомца станции, начинает конфликт с экипажем. Тот, кто убивает мышь, за которой ухаживал повар, начинает конфликт с этим поваром.
 
-  You will be considered to be violating this rule if you escalate a conflict based on a poor or unreasonable assumption.
+  Вы будете считаться нарушителем этого правила, если эскалируете конфликт, основываясь на плохих или необоснованных предположениях.
 
-  Conflicts should almost never reach the "permanently lethal" stage. Conflicts should only reach this stage if the other party brought it to the stage, or if the same conflict escalated to the lethal stage multiple times in the round.
+  Конфликты почти никогда не должны достигать стадии «перманентно летального». Это допустимо только если другая сторона сама довела конфликт до этой стадии или если один и тот же конфликт несколько раз в течение раунда достигал летальной стадии.
 
-  If a party in the conflict goes into crit or dies, the party responsible should take them to get treatment or to security. For the conflict, this should be considered saving someone from dying and should deescalate the conflict. If the conflict is deescalated in this way, both parties need to re-escalate to lethal for the conflict to return to that stage. If the conflict is not deescalated in this way, then only the party who defeated the other would need to re-escalate for the conflict to return to the lethal stage.
+  Если участник конфликта падает в критическое состояние (крит) или умирает, ответственная сторона должна доставить его на лечение или в службу безопасности. С точки зрения конфликта, это считается спасением жизни и должно деэскалировать ситуацию. Если конфликт деэскалирован таким образом, обе стороны должны заново пройти эскалацию до летального уровня, чтобы вернуться к нему. Если конфликт не был деэскалирован таким образом, то только сторона, победившая другую, должна снова эскалировать конфликт, чтобы вернуться к летальной стадии.
 
-  Security can immediately escalate to non-lethal force if it is necessary to arrest someone.
+  Служба безопасности может немедленно перейти к нелетальной силе, если это необходимо для ареста.
 
-  People using or brandishing Syndicate items can typically be presumed to have lethal intent. Someone with lethal intent can typically be immediately escalated against at a lethal level, a notable exception is if you have the tools to safely detain them.
+  Люди, использующие или демонстрирующие предметы Синдиката, обычно могут считаться имеющими летальные намерения. В отношении лиц с летальными намерениями обычно можно сразу применять летальные меры, за исключением случаев, когда у вас есть средства для их безопасного задержания.
 
-  ## Escalation Involving Animals
-  See [textlink="Escalation Involving Animals" link="RuleR11-1"].
+  ## Эскалация с участием животных
+  Смотрите [textlink="Эскалация с участием животных" link="RuleR11-1"].
 
-  ## Exemptions
-  Escalation rules aren't enforced against non-players, but players will be held responsible for rule violations even if they don't realize that a character or animal was controlled by another player. Characters who are disconnected are still considered players. Characters who have purple text upon being examined saying "recovery is impossible" are considered non-players.
+  ## Исключения
+  Правила эскалации не применяются к не-игрокам (NPC), но игроки будут нести ответственность за нарушения, даже если они не осознавали, что персонажем или животным управлял другой игрок. Персонажи, которые отключились от сервера, все еще считаются игроками. Персонажи, у которых при осмотре виден фиолетовый текст «восстановление невозможно» (recovery is impossible), считаются не-игроками.
 
-  ## MRP Amendment
-  Escalation rules are enforced even against non-players.
+  ## Поправка для MRP
+  Правила эскалации применяются даже к не-игрокам.
 
-  ## Examples of Conflict Types
-  See [textlink="Examples of Conflict Types" link="RuleR11-2"].
+  ## Примеры типов конфликтов
+  Смотрите [textlink="Примеры типов конфликтов" link="RuleR11-2"].
 
-  ## Example Scenarios
-  These examples assume that you are not an antagonist.
+  ## Примеры сценариев
+  В этих примерах предполагается, что вы не являетесь антагонистом.
 
-  Acceptable:
-  - A player starts punching you, so you start punching back until they stop. If they go into crit, you stop attacking them and take them to security or to get medical attention.
-  - You make fun of a clown, who then throws a pie at you and steals your shoes. You slip the clown and steal their mask.
-  - You are a security officer and tell someone to stop, so you can question them. They run away, so you use your disabler to stun and cuff them.
-  - You are a security officer and see someone wearing a syndicate hardsuit, so you shoot them to crit, cuff them, then take them to security.
-  - You are a crewmember and see a nuclear operative, so you kill them.
-  - An unauthorized person enters a high risk area of the station, like the armory or atmospherics, so you attack them until they leave.
-  - Minorly inconveniencing someone for your own benefit.
-  - As an antagonist, killing someone who got in your way.
-  - As an antagonist, killing someone who didn't give you what you want.
-  - A chef and bartender reach the lethal level of conflict through appropriate escalation. The chef crits the bartender and does not take them to medbay or security. The bartender immediately tries to crit the chef next time they run into each other.
-  - A chef and bartender reach the lethal level of conflict through appropriate escalation. The chef crits the bartender and does not take them to medbay or security. The chef insults the bartender next time they see them.
-  - A cargo technician gets a cargo bounty for a brain. After receiving a body from Medical with the purple examine text reading "Any recovery is impossible.", the cargo technician proceeds to permanently destroy the body to get the brain out.
+  Допустимые:
+  - Игрок начинает бить вас кулаками, вы начинаете бить в ответ, пока он не остановится. Если он падает в «крит», вы прекращаете атаку и отводите его в СБ или к медикам.
+  - Вы дразните клоуна, он кидает в вас пирог и крадет обувь. Вы пользуетесь тем, что клоун поскользнулся, и крадете его маску.
+  - Вы сотрудник СБ, приказываете кому-то остановиться для допроса. Он убегает, вы используете дезактиватор, чтобы оглушить и надеть наручники.
+  - Вы сотрудник СБ, видите человека в скафандре Синдиката, стреляете в него до «крита», надеваете наручники и ведете в СБ.
+  - Вы член экипажа, видите ядерного оперативника и убиваете его.
+  - Посторонний входит в зону высокого риска (оружейная, атмосферный отдел), вы атакуете его, пока он не уйдет.
+  - Создание мелких неудобств кому-либо ради своей выгоды.
+  - Как антагонист, убийство того, кто мешает вам.
+  - Как антагонист, убийство того, кто не дает вам то, что нужно.
+  - Повар и бармен довели конфликт до летального уровня через надлежащую эскалацию. Повар «закритил» бармена и не отвел его к медикам/в СБ. Бармен при следующей встрече сразу пытается «закритить» повара.
+  - Повар и бармен довели конфликт до летального уровня через надлежащую эскалацию. Повар «закритил» бармена и не отвел его к медикам/в СБ. Повар при следующей встрече оскорбляет бармена.
+  - Техник грузов получает заказ на мозг. Получив тело из медблока с пометкой «восстановление невозможно», он окончательно уничтожает тело, чтобы извлечь мозг.
 
-  Prohibited:
-  - A player starts punching you, so you gib them.
-  - A clown throws a pie at you and steals your shoes, so you stab them to crit with a screwdriver.
-  - You are a security officer and tell someone to stop, so you can question them. They run away so you use a truncheon to beat them to crit.
-  - An authorized person who you unreasonably or carelessly think is unauthorized enters a high risk area of the station, like the armory or atmospherics, so you attack them until they leave.
-  - An unauthorized person enters a low risk area of the station, like cargo, and you start attacking them with no other escalation.
-  - Slipping security all round because they are security.
-  - Blocking the head of personnel in their office using walls because they didn't give you what you asked for.
-  - Hiding someone's body because they punched you earlier in the round.
-  - Harassing the bar or bartender by frequently coming in to break their glasses or furniture.
-  - Randomly picking fights with people.
-  - Stealing an ID from a disconnected player as a non-antagonist.
-  - A chef and bartender reach the lethal level of conflict through appropriate escalation. The chef crits the bartender and does not take them to medbay or security. The chef immediately tries to crit the bartender next time they run into each other.
-  - A chef and bartender reach the lethal level of conflict through appropriate escalation. The chef crits the bartender and takes them to the medbay or security. The bartender immediately tries to crit the chef next time they run into each other.
-  - A cargo technician gets a cargo bounty for a brain. After finding a dead passenger in a hallway, without the body's examine text reading "Any recovery is impossible.", the cargo technician proceeds to permanently destroy the body to get the brain out.
+  Запрещенные:
+  - Игрок начал бить вас кулаками, вы его «гибнули» (полностью уничтожили).
+  - Клоун кинул пирог и украл обувь, вы закололи его отверткой до «крита».
+  - Вы сотрудник СБ, попросили остановиться, человек побежал, вы забили его дубинкой до «крита».
+  - Авторизованный персонал, который вы по ошибке или неосторожности посчитали нарушителем, входит в зону высокого риска, и вы атакуете его.
+  - Посторонний входит в зону низкого риска (грузовой отсек), вы сразу начинаете атаковать его без другой эскалации.
+  - Подставлять подножки сотрудникам СБ весь раунд только потому, что они СБ.
+  - Блокировать Главу персонала в кабинете стенами из-за того, что он не дал вам желаемого.
+  - Прятать чье-то тело, потому что этот игрок ударил вас ранее в раунде.
+  - Преследовать бар или бармена, постоянно разбивая их стаканы или мебель.
+  - Случайным образом затевать драки с людьми.
+  - Кража ID у игрока, который отключился (как не-антагонист).
+  - Повар и бармен довели конфликт до летального уровня. Повар «закритил» бармена и не отвел его к медикам/в СБ. Повар сразу пытается «закритить» бармена при следующей встрече.
+  - Повар и бармен довели конфликт до летального уровня. Повар «закритил» бармена и отвел его к медикам/в СБ. Бармен сразу пытается «закритить» повара при следующей встрече.
+  - Техник грузов получил заказ на мозг. Найдя мертвого пассажира в коридоре БЕЗ пометки «восстановление невозможно», он уничтожает тело ради мозга.
 </Document>

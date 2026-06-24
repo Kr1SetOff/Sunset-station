@@ -1,0 +1,16 @@
+ent-ClothingEyesGlassesBlackstar = тактический визор Blackstar
+    .desc = Устойчивый к вспышкам тактический визор, выдаваемый оперативникам Blackstar Dreadwalker. Обеспечивает полную защиту от вспышек и охранный HUD.
+ent-ClothingOuterHardsuitBlackstar = боевой костюм Blackstar «Warlord»
+    .desc = Тяжелобронированный боевой костюм, выдаваемый элитным оперативникам Dreadwalker из наемнической группы Blackstar. Создан, чтобы пережить все, что фронтир может бросить в него.
+ent-ClothingHeadHelmetBlackstar = шлем наемника Blackstar
+    .desc = Усиленный боевой шлем, выдаваемый оперативникам Dreadwalker из наемнической группы Blackstar. Обеспечивает превосходную защиту по сравнению со стандартным снаряжением наемника.
+ent-ClothingHeadHatBlackstarLegionCommander = фуражка командира легиона
+    .desc = Фуражка командира легиона. В один момент времени существует только одна.
+ent-ClothingUniformJumpsuitBlackstarLegionCommander = униформа командира легиона
+    .desc = Униформа командира легиона Blackstar.
+ent-ClothingHeadHatBeretBlackstarHighLegate = берет верховного легата
+    .desc = Берет, который носят офицеры верховного легата Легиона Blackstar.
+ent-ClothingHeadHatBeretBlackstarLegate = берет легата
+    .desc = Берет, который носят офицеры легата Легиона Blackstar.
+ent-ClothingHeadHelmetBlackstarLegate = шлем легата
+    .desc = Шлем, выдаваемый офицерам легата Легиона Blackstar.

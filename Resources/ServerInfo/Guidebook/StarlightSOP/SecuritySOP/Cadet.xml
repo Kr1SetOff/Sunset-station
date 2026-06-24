@@ -1,11 +1,11 @@
 <Document>
-# Cadet
+# Кадет
 
-<GuideEntityEmbed Entity="ToyFigurineSecurity" Caption="Cadet"/>
+<GuideEntityEmbed Entity="ToyFigurineSecurity" Caption="Кадет"/>
 
 - 1.\n
-Cadets are to accompany a proper member of security at all times.
+Кадеты обязаны постоянно сопровождать полноправного сотрудника службы безопасности.
 
 - 2.\n
-Cadets are not allowed access to lethal weaponry outside of [color=#ff0000]Code Red[/color].
+Кадетам запрещён доступ к летальному оружию, за исключением случаев действия [color=#ff0000]Красного кода[/color].
 </Document>

@@ -1,0 +1,15 @@
+ent-TP14FoodMothSticks = сырные палочки мотылька
+    .desc = Жареная закуска для мотыльков повсюду! Они предпочитают её с медом.
+    .suffix = Trieste, Food
+ent-TP14FoodCheeseSticks = палочки моцареллы
+    .desc = Также известные как «сырные палочки». Хорошо сочетаются с сальсой.
+    .suffix = Trieste, Food
+ent-TP14FoodCorndog = корн-дог
+    .desc = Вкусная карнавальная еда, но с привкусом собачьего корма.
+    .suffix = Trieste, Food
+ent-TP14FoodFriedIceCream = жареное мороженое
+    .desc = Отвратительно сладкое, и хруст не помогает.
+    .suffix = Trieste, Food
+ent-TP14FoodFunnelCake = хворост
+    .desc = Сладкое угощение! Хотя это не совсем торт.
+    .suffix = Trieste, Food

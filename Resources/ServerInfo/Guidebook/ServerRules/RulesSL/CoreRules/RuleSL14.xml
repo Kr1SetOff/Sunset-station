@@ -1,29 +1,28 @@
 <Document>
-  # Rule 14 - Continuity Guidelines
-Some information, continuity, and memory is carried between rounds on Starlight, within set limits.
-This is accomplished in universe by the PSO Cloning System, and comes with some limits and rules to ensure smooth roleplay and minimal disruption.
+  # Правило 14 — Рекомендации по непрерывности
+На сервере Starlight некоторая информация, непрерывность событий и память сохраняются между раундами в определенных пределах.
+Внутри игровой вселенной это реализовано через систему клонирования PSO и сопровождается рядом ограничений и правил для обеспечения плавного отыгрыша и минимизации помех.
 
-You can only remember information from shifts that you survive. This means if you are stranded or killed, you forget the shift completely.
-If your body is revivable when it reaches CentComm, you also remember the shift but you forget all of the details leading up to your death per Rule 3.
-Placing yourself in a cryopod will allow you to remember details up until you’ve entered the cryopod.
+Вы можете помнить информацию только из тех смен, в которых вы выжили. Это означает, что если вы были брошены (оставлены) или погибли, вы полностью забываете эту смену.
+Если ваше тело подлежит оживлению по прибытии в Центральное командование (CentComm), вы также помните смену, но забываете все детали, приведшие к вашей смерти, согласно Правилу 3.
+Размещение себя в криокапсуле позволит вам помнить детали вплоть до момента входа в неё.
 
-[bold]Any information that is [textlink="Metashielded" link="Metashield"][/bold] is forgotten between shifts, and is wiped from your clone's memory.
+[bold]Любая информация, которая является [textlink="Metashielded" link="Metashield"][/bold] (защищенной от метагейминга), забывается между сменами и стирается из памяти вашего клона.
 
-IE: A Captain who survives a Revolution will still have information about the Revolution wiped, and won't remember it happening that shift.
+Например: Капитан, переживший революцию, все равно забудет информацию о революции и не будет помнить, что она происходила в ту смену.
 
-You may remember that crimes occurred, but you will never remember who committed them. This includes if you yourself were a Syndicate Agent.
+Вы можете помнить, что преступления совершались, но вы никогда не вспомните, кто их совершил. Это применимо даже в том случае, если вы сами были агентом Синдиката.
 
-Examples of things you [bold]can[/bold] remember:
-- Social interactions with another character, such as getting drinks at the bar or even getting into an argument
-- Which jobs characters usually work- though this may not be used to meta that something is 'up' if someone isn't working their usual job
-- The layout of the station, though some leeway should be given for forgetting secret rooms- maints are an ever changing maze even if they look the same every shift for OOC reasons
+Примеры того, что вы [bold]можете[/bold] помнить:
+- Социальные взаимодействия с другим персонажем, такие как совместное распитие напитков в баре или даже ссора.
+- На каких должностях обычно работают персонажи — однако это нельзя использовать для метагейминга (утверждать, что «что-то не так»), если кто-то не работает на своей обычной должности.
+- Планировка станции, хотя следует делать скидку на забывание секретных комнат — технические коридоры (майнтсы) представляют собой постоянно меняющийся лабиринт, даже если они выглядят одинаково каждую смену по внеигровым (OOC) причинам.
 
-Examples of things you [bold]can't[/bold] remember:
-
-- Joe the Botanist was a Syndicate who stole the Captain's Jetpack
-- Nuclear Operatives attacking the station
-- CentComm calling Code Epsilon and killing a bunch of people on the station
-- Witnessing a Hollow body or seeing a Changeling eat someone
-- As NanoTrasen Representative, remembering that last shift had Nuclear Operatives
-
+Примеры того, что вы [bold]не можете[/bold] помнить:
+- Что Джо-ботаник был агентом Синдиката, который украл реактивный ранец Капитана.
+- Атаку ядерных оперативников на станцию.
+- Объявление Центральным командованием кода «Эпсилон» и гибель множества людей на станции.
+- Наблюдение за «Пустым телом» (Hollow body) или сцену, где подменыш (Changeling) кого-то съел.
+- Будучи представителем NanoTrasen, воспоминания о том, что в прошлую смену были ядерные оперативники.
 </Document>
+

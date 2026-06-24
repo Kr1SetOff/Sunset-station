@@ -1,17 +1,17 @@
 <Document>
-  # Proto-Moth
+  # Прото-Мотылёк
 
   <Box>
     <GuideEntityEmbed Entity="AppearanceProtoMoth" Caption=""/>
   </Box>
 
-  Despite their best efforts, they were not able to get rid of their fire weakness and even with their metallic body parts they still go up in flames like tinder in a tinderbox. They can handle cold a little better, though.
+  Несмотря на все усилия, они не смогли избавиться от своей слабости к огню, и даже с их металлическими частями тела они всё ещё вспыхивают как трут в трутовом ящике. Они могут лучше переносить холод, хотя.
 
-  ## Resistances
-  - Receive [color=#ffa500]25% more heat damage[/color], [color=#8147ff]25% more shock damage[/color], and [color=#FF3636]10% more blunt damage[/color].
-  - Receive [color=#1e90ff]45% less cold damage[/color].
+  ## Сопротивления
+  - Получают [color=#ffa500]на 25% больше урона от тепла[/color], [color=#8147ff]на 25% больше урона от удара током[/color] и [color=#FF3636]на 10% больше тупого урона[/color].
+  - Получают [color=#1e90ff]на 45% меньше урона от холода[/color].
 
-  Similar to their non-cybernetic brethren, they [color=red]catch on fire more easily and take 350% more fire damage than other species.[/color]
+  Подобно своим некибернетическим собратьям, они [color=red]легче загораются и получают на 350% больше урона от огня, чем другие виды.[/color]
 
-  With the advent of advanced cybernetics and with some help from their extensive body modifications, Proto-Moth have been able to get rid of their inability to properly process most foods and as such can enjoy and metabolise just about any food under the sun, including their favorite snack of choice- Boots!
+  С появлением продвинутой кибернетики и с некоторой помощью от их обширных модификаций тела, прото-мотыльки смогли избавиться от своей неспособности правильно обрабатывать большинство продуктов питания и, таким образом, могут наслаждаться и метаболизировать практически любую еду под солнцем, включая их любимый закусок по выбору — сапоги!
 </Document>

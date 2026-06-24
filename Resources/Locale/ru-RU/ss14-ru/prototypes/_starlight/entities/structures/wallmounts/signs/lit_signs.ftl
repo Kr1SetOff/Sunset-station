@@ -1,0 +1,15 @@
+ent-BarSignLights = вывеска бара
+    .desc = { ent-Poweredlight.desc }
+    .suffix = свет
+ent-ClinicSignLights = вывеска клиники
+    .desc = { ent-BarSignLights.desc }
+    .suffix = свет
+ent-OnAirSignLights = вывеска «В эфире»
+    .desc = { ent-BarSignLights.desc }
+    .suffix = свет
+ent-OpenSignLights = вывеска «Открыто»
+    .desc = { ent-BarSignLights.desc }
+    .suffix = свет
+ent-OpenBarSignLights = вывеска «Открытый бар»
+    .desc = { ent-BarSignLights.desc }
+    .suffix = свет

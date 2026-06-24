@@ -1,0 +1,12 @@
+ent-RandomHumanoidSpawnerBlackstarOperative = Оперативник Dreadwalker Blackstar
+    .desc = { "" }
+    .suffix = АДМЕМ
+ent-RandomHumanoidSpawnerBlackstarLegionnaire = Легионер Blackstar
+    .desc = { "" }
+    .suffix = АДМЕМ
+ent-RandomHumanoidSpawnerBlackstarBlackguard = Черный страж Blackstar
+    .desc = { "" }
+    .suffix = АДМЕМ
+ent-RandomHumanoidSpawnerBlackstarInitiate = Посвященный Blackstar
+    .desc = { "" }
+    .suffix = АДМЕМ

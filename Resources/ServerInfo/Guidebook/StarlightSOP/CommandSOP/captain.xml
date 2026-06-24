@@ -1,38 +1,38 @@
 <Document>
-# Captain
+# Капитан
 
-<GuideEntityEmbed Entity="ToyFigurineCaptain" Caption="Captain"/>
+<GuideEntityEmbed Entity="ToyFigurineCaptain" Caption="Капитан"/>
 
-1. The Captain is not to perform normal Security duties. The captain is authorized to engage criminals in active crimes they have witnessed. The Captain may also assist if security staff is low.
+1. Капитан не должен выполнять обычные обязанности службы безопасности. Капитан имеет право задерживать преступников в случае совершения преступлений, свидетелем которых он стал лично. Капитан также может оказывать помощь, если в штате СБ не хватает сотрудников.
 
-2. Unless on [color=#ff0000]Code Red[/color], the Captain is not to procure armory weapons, unless directly authorized by the Head of Security. Additionally, the Captain may not requisition arms from science or cargo for themselves unless there is a direct threat to station or crew.
+2. За исключением периода действия [color=#ff0000]Красного кода[/color], Капитан не имеет права брать оружие из оружейной, если это прямо не разрешено Главой службы безопасности (HoS). Кроме того, Капитан не может запрашивать оружие в научном отделе или карго для личного пользования, если нет прямой угрозы станции или экипажу.
 
-3. The Captain should make all reasonable accommodations to appoint a new head of staff should a position become vacant. The new head of staff should be a member of the department if possible.
+3. Капитан должен приложить все разумные усилия для назначения нового главы отдела, если должность становится вакантной. По возможности, новый глава должен быть выбран из числа сотрудников этого же отдела.
 
-4. The Captain should work with the Head of Security to ensure that corporate law is being applied properly.
+4. Капитан должен работать совместно с Главой службы безопасности, чтобы обеспечивать надлежащее соблюдение Корпоративного закона.
 
-5. The Captain is to remain on station at all times, unless otherwise authorized by command, or leaving with the crew on the evacuation shuttle.
+5. Капитан обязан постоянно находиться на станции, за исключением случаев, когда иное разрешено командованием, или при отбытии вместе с экипажем на эвакуационном шаттле.
 
-6. The Nuclear Authentication Disk must remain with the Captain at all times. The Captain may also assign this duty to the Head of Security or Blueshield Officer.
+6. Диск ядерной авторизации должен постоянно находиться при Капитане. Капитан также может поручить эту обязанность Главе службы безопасности или Офицеру Синдезиса/Блюшилду (Blueshield Officer).
 
-7. Central Command contact should be the last resort for the Captain when dealing with head of staff disagreements.
+7. Обращение в Центральное командование должно быть для Капитана крайней мерой при разрешении разногласий между главами отделов.
 
-8. The Antique Laser Gun is to stay in its case, unless there is an immediate threat on the station or it is [color=#2a6099]Code Blue[/color] or higher.
+8. Старинный лазерный пистолет (Antique Laser Gun) должен оставаться в своём чехле, за исключением случаев возникновения непосредственной угрозы на станции или объявления [color=#2a6099]Синего кода[/color] и выше.
 
-9. The Captain is not permitted to wear their hardsuit unless there's an active environmental danger or a threat on their life.
+9. Капитану запрещено носить свой скафандр (хардсьют), если нет активной угрозы окружающей среде или опасности для его жизни.
 
-10. While the Captain may choose to alter SOPs in various circumstances, any attempt to fully disregard SOP is to be considered sufficient evidence for contract termination.
+10. Хотя Капитан имеет право изменять СОПы в различных обстоятельствах, любая попытка полностью игнорировать СОП должна рассматриваться как достаточное основание для расторжения контракта.
 
-11. You may, as Captain, fire a head of staff with reasonable justification.
+11. Вы, будучи Капитаном, имеете право уволить главу отдела при наличии разумного обоснования.
 
-This list is not comprehensive, but may include:
-- Incompetency.
-- Criminal activity.
-- Industrial negligence.
+Этот список не является исчерпывающим, но может включать:
+- Некомпетентность.
+- Преступную деятельность.
+- Производственную халатность.
 
-12. The Captain may not fire any NanoTrasen Personnel (Blueshield Officer, Magistrate, NanoTrasen Representative or the Internal Affairs Agents) without permission from Central Command, unless they are actively detrimental to the station and its crew.
+12. Капитан не может уволить сотрудников Представительства NanoTrasen (Офицера Блюшилда, Магистрата, Представителя NanoTrasen или Агентов внутренних дел) без разрешения Центрального командования, за исключением случаев, когда они наносят активный вред станции и её экипажу.
 
-13. The Captain may not hire any staff to a NanoTrasen Personnel position (see above).
+13. Капитан не имеет права нанимать сотрудников на должности специального персонала NanoTrasen (см. выше).
 
-14. During emergency situations the Captain should refer to the Special Situations subsection of the Security SOP, if applicable.
+14. В чрезвычайных ситуациях Капитан должен руководствоваться подразделом «Особые ситуации» СОП службы безопасности, если применимо.
 </Document>

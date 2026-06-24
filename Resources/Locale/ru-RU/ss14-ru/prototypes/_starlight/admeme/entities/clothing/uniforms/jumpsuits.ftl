@@ -1,0 +1,10 @@
+ent-ClothingUniformNTNCFatigues = полевая форма морской пехоты НаноТрасен
+    .desc = Стандартная полевая форма морской пехоты НаноТрасен. Очень просторная.
+ent-ClothingUniformJumpsuitNTNCOfficer = комбинезон офицера флота НаноТрасен
+    .desc = Стандартный комбинезон морского пехотинца флота НаноТрасен. Этот для офицера.
+ent-ClothingUniformJumpsuitNTNCEnsign = комбинезон мичмана флота НаноТрасен
+    .desc = Стандартный комбинезон морского пехотинца флота НаноТрасен. Этот для мичмана.
+ent-ClothingUniformMedTakJumpsuit = комбинезон МедТак
+    .desc = Стандартная форма МедТак.
+ent-ClothingUniformMedTakJumpsuitFormal = формальный комбинезон МедТак
+    .desc = Формальная форма МедТак.

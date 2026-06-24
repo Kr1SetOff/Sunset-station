@@ -1,0 +1,12 @@
+ent-CartridgePistolRubber = патрон (.35 авто резиновый)
+    .desc = { ent-BaseCartridgePistol.desc }
+ent-CartridgePistol40SP = патрон (.40 SP)
+    .desc = { ent-BaseCartridgePistol.desc }
+ent-CartridgePistol40HP = патрон (.40 HP)
+    .desc = { ent-CartridgePistol40SP.desc }
+ent-CartridgePistol40FMJ = патрон (.40 FMJ)
+    .desc = { ent-CartridgePistol40SP.desc }
+ent-CartridgePistol40AP = патрон (.40 AP)
+    .desc = { ent-CartridgePistol40SP.desc }
+ent-CartridgePistolImprovised = кустарный патрон (.35 авто)
+    .desc = Самодельная пистолетная пуля, использующая фосфор в качестве метательного заряда вместо пороха, что делает её гораздо менее эффективной.

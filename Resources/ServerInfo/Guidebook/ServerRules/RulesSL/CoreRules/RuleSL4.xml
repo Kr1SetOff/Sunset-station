@@ -1,33 +1,32 @@
 <Document>
- # Rule 4 – Escalation of Force Must Make Sense
- Combat should always follow logical progression—avoid randomly attacking or killing other crew members (RDM).
- Security personnel must adhere to their Standard Operating Procedures (SOP) when handling prisoners and crew members at different alert levels.
- Player interactions should reflect realistic escalation. Minor disagreements may lead to physical confrontations, but non-antagonists should rarely resort to killing.
- Ideally, escalation for non-antagonists should follow this order: [color=red] Verbal > Non-lethal > Lethal. [/color]
- Antagonists are encouraged to roleplay their objectives to enhance immersion and narrative depth.
+  # Правило 4 — Эскалация силы должна быть логичной
+  Бой всегда должен следовать логическому развитию — избегайте случайных нападений или убийств других членов экипажа (RDM).
+  Персонал службы безопасности обязан придерживаться своих Стандартных операционных процедур (SOP) при обращении с заключенными и членами экипажа на различных уровнях тревоги.
+  Взаимодействия между игроками должны отражать реалистичную эскалацию. Незначительные разногласия могут привести к физическим столкновениям, но не-антагонисты должны крайне редко прибегать к убийствам.
+  В идеале, эскалация для не-антагонистов должна следовать такому порядку: [color=red] Словесная перепалка > Нелетальные меры > Летальные меры. [/color]
+  Антагонистам рекомендуется отыгрывать свои цели для улучшения погружения и глубины повествования.
 
-Actions should start small, and every crew member retains the right to self-defense if attacked.
-This includes evading or resisting security as an antagonist.
-However, non-antagonists should not engage in serious harm against security personnel unless absolutely necessary.
-Round removal such as gibbing, sending to deep space, hiding in a locker with coordinates disabled, or excessive damage to a corpse, is expressly banned unless they are a named antagonist objective target.
+  Действия должны начинаться с малого, и каждый член экипажа сохраняет право на самооборону в случае нападения.
+  Это включает в себя попытки скрыться или сопротивление сотрудникам службы безопасности со стороны антагониста.
+  Однако не-антагонисты не должны наносить серьезный вред сотрудникам службы безопасности, если это не является абсолютно необходимым.
+  Удаление из раунда, такое как превращение в кровавую кашу (гиббинг), отправка в глубокий космос, прятание в шкафчике с отключенными координатами или чрезмерное повреждение трупа, прямо запрещено, если только жертва не является целью антагониста, указанной в задании.
 
-[bold] Examples of Reasonable Escalation: [/bold]
+  [bold] Примеры разумной эскалации: [/bold]
 
-- Shoving the clown for slipping you
-- Punching someone and starting a fist fight over being shoved once.
-- Punching or stunning a Security Officer after they attempted to arrest you.
-- As a Chef, stabbing someone with your knife until they leave the kitchen after you've repeatedly told them to leave, tried to drag them away and they refuse to comply or make a mess/steal things.
-- As a Security Officer, shooting someone with lethals because they're attempting to stun you with a disabler or a stun baton
-- As a Security Officer, shooting someone with lethals after they brandish a lethal weapon or firearm with intent to harm.
-- As a command member, using your flash on a trespasser after you've told them repeatedly to leave.
+  - Толчок клоуна за то, что он подставил вас (поскользнулись).
+  - Удар кулаком и начало кулачного боя из-за того, что вас толкнули.
+  - Удар кулаком или использование оглушающего устройства против сотрудника службы безопасности после того, как он попытался вас арестовать.
+  - Как шеф-повар, удар кого-то ножом до тех пор, пока они не покинут кухню, после того как вы неоднократно просили их уйти, пытались вытащить их, а они отказываются подчиниться или устраивают беспорядок/крадут вещи.
+  - Как сотрудник службы безопасности, стрельба на поражение, потому что кто-то пытается оглушить вас с помощью дезактиватора или электродубинки.
+  - Как сотрудник службы безопасности, стрельба на поражение после того, как кто-то угрожает вам летальным оружием или огнестрельным оружием с намерением причинить вред.
+  - Как член командования, использование вспышки (flash) на нарушителе после того, как вы неоднократно просили его уйти.
 
-[bold] Examples of unreasonable escalation: [/bold]
+  [bold] Примеры неразумной эскалации: [/bold]
 
-- Critting the clown for slipping you once
-- Stabbing someone to crit with a knife because they shoved you once.
-- Shooting a Security Officer with lethals because they attempted to arrest you.
-- As a Chef, stabbing someone to death and butchering them in a meat spike because you need meat or they refused to leave the kitchen.
-- As a Security Officer, shooting someone with lethals because they punched you, or simply refused your orders.
-- As a command member, shooting someone with a firearm after you've told them repeatedly to leave.
-
+  - Доведение клоуна до критического состояния за то, что он один раз подставил вас.
+  - Нанесение ножевых ранений до критического состояния за то, что вас один раз толкнули.
+  - Стрельба на поражение в сотрудника службы безопасности за то, что он пытался вас арестовать.
+  - Как шеф-повар, убийство кого-то ножом и разделка на мясном крюке, потому что вам нужно мясо или они отказались покинуть кухню.
+  - Как сотрудник службы безопасности, стрельба на поражение в кого-то, потому что они ударили вас кулаком или просто отказались подчиняться вашим приказам.
+  - Как член командования, стрельба в кого-то из огнестрельного оружия после того, как вы неоднократно просили его уйти.
 </Document>

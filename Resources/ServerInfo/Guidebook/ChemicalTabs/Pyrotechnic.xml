@@ -1,5 +1,11 @@
 <Document>
-# Pyrotechnics
-These chemicals are flammable and causes hazardous effects when making them (Plasma gas and explosions). It is recommended to make these chemicals in a safe environment.
-<GuideReagentGroupEmbed Group="Pyrotechnic"/>
+
+  # Пиротехника
+
+  Эти химические вещества являются легковоспламеняющимися и могут вызывать опасные эффекты в процессе их создания (например, образование плазмы и взрывы).
+
+  Рекомендуется изготавливать эти химикаты в безопасной среде.
+
+  <GuideReagentGroupEmbed Group="Pyrotechnic"/>
+
 </Document>

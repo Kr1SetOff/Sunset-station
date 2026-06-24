@@ -1,16 +1,17 @@
 <Document>
-# Line of Succession
-If the captain dies and is unrecoverable for whatever reason, then a new captain must be selected.
+# Очередь преемственности
 
-The line of succession is as follows:
+Если Капитан погибает и его невозможно восстановить по какой-либо причине, необходимо выбрать нового капитана.
 
-    1. Captain
+Очередь преемственности выглядит следующим образом:
 
-    2. Head of Personnel
+    1. Капитан
 
-    3. Head of Security
+    2. Глава персонала (HoP)
 
-    4.Crew member voted on by all available command staff.
+    3. Глава службы безопасности (HoS)
 
-[bold]If no heads are present the NT Representative on station will be made Captain and the evacuation shuttle should be called and alert set to red. [/bold]
+    4. Член экипажа, выбранный путём голосования всех доступных членов командного состава.
+
+[bold]Если на станции нет Глав отделов, Представитель NT на станции назначается Капитаном, при этом должен быть вызван эвакуационный шаттл и объявлен Красный код опасности.[/bold]
 </Document>

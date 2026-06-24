@@ -1,23 +1,25 @@
 <Document>
-  # Protogens
-<!-- Heavily modified from Far Horizons' version. No Synth, Damage values changes, etc. -->
+  # Протогены
+  <!-- Основано на версии Far Horizons, но значительно переработано. Изменены значения урона, убрана система Synth и др. -->
+
   <Box>
     <GuideEntityEmbed Entity="AppearanceProtogen" Caption=""/>
   </Box>
 
-  [color=#ffa500]Warning! This species is not recommended for new players due to major gameplay changes![/color]
+  [color=#ffa500]Внимание! Этот вид не рекомендуется новым игрокам из-за существенных изменений игрового процесса![/color]
 
-  Protogens are not technically a species, but rather a broad term for a person that has modified themselves extensively with cybernetic enhancements that they can no longer be considered their own species anymore.
+  Протогены — это не отдельный биологический вид, а общее обозначение существ, которые настолько сильно модифицировали себя кибернетическими имплантами и протезами, что их уже нельзя считать представителями исходной расы.
 
-  Despite "Cyborg" already existing as a term, it was coined for machines that had organic brains, and as such a distinction needed to be made.
+  Несмотря на то, что термин «киборг» уже существует, исторически он использовался для обозначения машин с органическим мозгом. Поэтому для подобных существ потребовалось отдельное название.
 
-  ## Racial Features
+  ## Расовые особенности
 
-  - Receive [color=#ffa500]more heat damage[/color], [color=#8147ff]more shock damage[/color], [color=#FF3636]more blunt damage[/color] and [color=#1e90ff]less cold damage[/color], depending on your subspecies.
-  - Variable [color=#B9BF93]resistances[/color] depending on your cybernetic frame. (Access your species specific loadout from the Appearance tab)
-  - Healing sources are [color=red]50% less effective[/color] on you, but you can benefit from both chemical and mechanical repairs.
-  - You can heal [color=#64ffe6]poison damage[/color] and [color=#C8FF75]genetic damage[/color] with Uranium Glass and Reinforced Uranium Glass.
-  - EMPs are [color=red]dangerous[/color] to your cybernetics! Don't let yourself get hit, or you'll be immobilised for quite a while.
-  - Subspeces selections - You can choose between being an artifically made protogen with no original species, or Proto-(Species). They inherit their original species traits and have modified resistances, combining them together into something new.
-  - You can modify your Protogen frames and lights in Markings.
+  - Получают [color=#ffa500]повышенный урон от высокой температуры[/color], [color=#8147ff]повышенный урон от электричества[/color], [color=#FF3636]повышенный дробящий урон[/color] и [color=#1e90ff]пониженный урон от холода[/color] в зависимости от выбранного подвида.
+  - Имеют различные [color=#B9BF93]сопротивления и уязвимости[/color], зависящие от установленного кибернетического корпуса. (Настройка доступна в специальном снаряжении вида на вкладке «Внешность».)
+  - Любые способы лечения действуют на вас [color=red]на 50% менее эффективно[/color], однако вы можете получать пользу как от химического лечения, так и от механического ремонта.
+  - Урон от [color=#64ffe6]токсинов[/color] и [color=#C8FF75]генетических повреждений[/color] можно лечить при помощи уранового стекла и армированного уранового стекла.
+  - ЭМИ-импульсы (EMP) [color=red]опасны[/color] для ваших кибернетических систем! Избегайте попадания под ЭМИ, иначе вы можете быть парализованы на продолжительное время.
+  - Выбор подвида: можно играть как полностью искусственно созданный протоген без исходной расы либо как Прото-(раса). Во втором случае вы сохраняете особенности своей первоначальной расы, которые комбинируются с модифицированными сопротивлениями протогена и образуют новый уникальный набор характеристик.
+  - В разделе «Маркировки» (Markings) вы можете настраивать внешний вид корпуса протогена и его световые элементы.
+
 </Document>

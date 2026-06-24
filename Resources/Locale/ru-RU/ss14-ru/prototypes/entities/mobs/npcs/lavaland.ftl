@@ -1,0 +1,15 @@
+ent-MobWatcherBase = наблюдатель
+    .desc = Такое ощущение, что он смотрит прямо сквозь вас.
+    .suffix = { ent-SimpleSpaceMobBase.suffix }
+ent-MobWatcherLavaland = { ent-MobWatcherBase }
+    .desc = { ent-MobWatcherBase.desc }
+    .suffix = { ent-MobWatcherBase.suffix }
+ent-MobWatcherIcewing = ледокрылый наблюдатель
+    .desc = { ent-MobWatcherBase.desc }
+    .suffix = { ent-MobWatcherBase.suffix }
+ent-MobWatcherMagmawing = магмокрылый наблюдатель
+    .desc = { ent-MobWatcherBase.desc }
+    .suffix = { ent-MobWatcherBase.suffix }
+ent-MobWatcherPride = прайд-наблюдатель
+    .desc = Этот редкий подвид появляется только в июне.
+    .suffix = Адмем

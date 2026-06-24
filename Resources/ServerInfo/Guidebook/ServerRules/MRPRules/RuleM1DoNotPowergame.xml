@@ -1,24 +1,24 @@
 <Document>
-  # Do not Powergame
+  # Не занимайтесь повергеймингом (Powergame)
 
-  You must have an In-Character justification for your actions. The Research Director does not need a gun when the station is code-green. The Head of Security does not need All Access at shift start when no threat is identified.
+  У вас должно быть внутриигровое (IC) обоснование ваших действий. Директору исследований не нужен пистолет, когда на станции код «зеленый». Главе службы безопасности не нужен «полный доступ» (All Access) в начале смены, когда не выявлено никаких угроз.
 
-  ## Examples
+  ## Примеры
 
- Acceptable:
- - Command carrying non-lethals when there is a plausible threat
- - Command carrying lethals when there is a confirmed threat
- - Command carrying (non-)lethals they start with in their rooms at any time
- - Captain hiding the spare ID in a properly secure location
- - Increasing security (such as bolting doors, adding walls, etc) during Red or Blue alert
- - Several minutes into the round, Captain promotes Warden to HoS because there isn’t one on station
- - General situations where a character is reacting to information during a round in a way that makes logical sense
+  Допустимые:
+  - Командование носит нелетальное оружие при наличии правдоподобной угрозы.
+  - Командование носит летальное оружие при наличии подтвержденной угрозы.
+  - Командование носит (не-)летальное оружие, с которым они начинают смену в своих каютах, в любое время.
+  - Капитан прячет запасной ID-карту в надежном и защищенном месте.
+  - Повышение мер безопасности (например, запирание дверей на засов, возведение стен и т.д.) во время «красного» или «синего» уровня угрозы.
+  - Через несколько минут после начала раунда Капитан повышает Надзирателя (Warden) до Главы СБ (HoS), так как его нет на станции.
+  - Общие ситуации, в которых персонаж реагирует на информацию в течение раунда логичным и обоснованным образом.
 
-  Not Acceptable:
-  - Roundstart Captain granting all heads AA
-  - Roundstart HoP takes Ian to ATS because “He’s a high profile target”
-  - Creating duplicates of high-value or unique items to hand off to others
-  - Bolting doors to areas to increase their security before a threat is confirmed that makes that security inefficient
-  - Setting the alert level to Blue or Red when the situation does not have a need for the severity implied (this includes maintaining these levels far past when said threats have been confirmed as no longer in play)
-  - General situations where a character is preemptively preparing for situations that have yet to happen in ways that logically do not make sense
+  Недопустимые:
+  - Капитан в самом начале раунда выдает всем главам отделов полный доступ (AA).
+  - Глава персонала (HoP) в самом начале раунда забирает Иэна в систему атмосферного контроля (ATS) под предлогом, что «он — высокопоставленная цель».
+  - Создание дубликатов ценных или уникальных предметов для передачи другим игрокам.
+  - Запирание дверей в помещениях для усиления безопасности до того, как угроза подтверждена, что делает такие меры неэффективными.
+  - Установка уровня угрозы на «синий» или «красный», когда ситуация не требует такой серьезности (включая поддержание этих уровней долгое время после того, как угрозы были устранены).
+  - Общие ситуации, в которых персонаж заранее готовится к событиям, которые еще не произошли, способами, не имеющими логического обоснования.
 </Document>

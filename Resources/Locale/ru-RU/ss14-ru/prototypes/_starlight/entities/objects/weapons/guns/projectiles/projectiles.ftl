@@ -1,0 +1,14 @@
+ent-BaseBulletStarlight = базовая пуля
+    .desc = Если вы это видите, вы, скорее всего, мертвы!
+ent-BulletAdvTaser = выстрел тазера
+    .desc = { ent-BaseBulletStarlight.desc }
+ent-BaseBulletRubber = { ent-BaseBulletStarlight }
+    .desc = { ent-BaseBulletStarlight.desc }
+ent-BulletEnergySMGLaser = лазерный болт
+    .desc = { ent-BulletEnergyTurretBase.desc }
+ent-BulletEnergySMGDisabler = выстрел станнера
+    .desc = { ent-BulletEnergyTurretBase.desc }
+ent-RadOrb = радиационная сфера
+    .desc = { ent-BaseBullet.desc }
+ent-BulletGrenadeCleanadeSyndicate = злой «чистящий» гранатный выстрел
+    .desc = { ent-BulletGrenadeCleanade.desc }

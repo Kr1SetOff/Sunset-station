@@ -1,0 +1,15 @@
+ent-BaseMobDinosaur = динозавр
+    .desc = Динозавры.
+    .suffix = { ent-SimpleMobBase.suffix }
+ent-BaseMobDinosaurCarno = хищный динозавр
+    .desc = Плотоядный динозавр.
+    .suffix = { ent-BaseMobDinosaur.suffix }
+ent-BaseMobDinosaurHerb = травоядный динозавр
+    .desc = Вегетарианец, но пусть вас это не вводит в заблуждение. Они всё ещё жаждут крови.
+    .suffix = { ent-BaseMobDinosaur.suffix }
+ent-MobDinosaurCompy = компсогнат
+    .desc = Переростки-цыплята.
+    .suffix = { ent-BaseMobDinosaur.suffix }
+ent-FoodEggCompyFertilized = { ent-FoodEgg }
+    .desc = { ent-FoodEgg.desc }
+    .suffix = Оплодотворённое, Компсогнат

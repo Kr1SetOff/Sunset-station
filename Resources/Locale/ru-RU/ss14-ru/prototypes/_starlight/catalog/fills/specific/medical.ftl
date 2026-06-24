@@ -1,0 +1,15 @@
+ent-BottleCaseMedicalFilled = { ent-BottleCaseMedical }
+    .desc = { ent-BottleCaseMedical.desc }
+    .suffix = Медицинский, Заполненный
+ent-BottleCaseSecurityFilled = { ent-BottleCaseSecurity }
+    .desc = { ent-BottleCaseSecurity.desc }
+    .suffix = Охрана, Заполненный
+ent-BottleCaseParamedicFilled = { ent-BottleCaseMedical }
+    .desc = { ent-BottleCaseMedical.desc }
+    .suffix = Парамедик, Заполненный
+ent-PenPackMedicalFilled = { ent-PenPackMedical }
+    .desc = { ent-PenPackMedical.desc }
+    .suffix = Медицинский, Заполненный
+ent-PenPackSecurityFilled = { ent-PenPackSecurity }
+    .desc = { ent-PenPackSecurity.desc }
+    .suffix = Охрана, Заполненный

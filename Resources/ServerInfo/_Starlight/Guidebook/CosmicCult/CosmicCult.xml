@@ -1,82 +1,92 @@
 <Document>
-  # The Cosmic Cult
+  # Космический Культ
 
   <Box>
-    [color=#999999][italic]"A revelation beyond compare. An end to cyclic, sisyphean suffering."[/italic][/color]
+    [color=#999999][italic]"Откровение, не имеющее себе равных. Конец циклическим, сизифовым страданиям."[/italic][/color]
   </Box>
   <Box>
-    [color=#999999][italic]"A gentle curtain call."[/italic][/color]
+    [color=#999999][italic]"Мягкий финальный занавес."[/italic][/color]
   </Box>
   <Box>
     <GuideEntityEmbed Entity="CosmicGlyphTruth" Caption=""/>
   </Box>
 
-  Otherworldly knowledge floods your mind! Welcome to the [color=#4cabb3]Cosmic Cult[/color], a group conversion antagonist that has set its sights on the end of all things.
+  Потусторонние знания наполняют ваш разум! Добро пожаловать в [color=#4cabb3]Космический Культ[/color] — антагонистическую организацию, целью которой является конец всего сущего.
 
-  Use the [color=#4cabb3]Astral Murmur[/color] language to communicate with fellow cultists. [color=red]Careful, people nearby can hear your whispers.[/color]
+  Используйте язык [color=#4cabb3]Астральный Шёпот[/color] для общения с другими культистами. [color=red]Будьте осторожны: находящиеся рядом люди могут слышать ваши шёпоты.[/color]
 
-  ## Objectives
-  - [color=#4cabb3][bold]Siphon Entropy[/bold][/color]  - Collectively siphon a certain amount of Entropy from the crew. The more entropy you siphon, the more you can empower the Monument!
-  - [color=#4cabb3][bold]Empower The Monument[/bold][/color] - Ensure that the Monument is brought to full power. The more you empower The Monument, the more power the cult gains access to.
-  - [color=#4cabb3][bold]Usher In The End[/bold][/color] - Once the Monument is at full power, complete the final ritual to beckon the Unknown and destroy the station.
+  ## Цели
 
-  Progress towards objectives is shared by the entire cult.
+  - [color=#4cabb3][bold]Поглощение Энтропии[/bold][/color] — совместно собирайте Энтропию с экипажа. Чем больше энтропии вы соберёте, тем сильнее сможете усилить Монумент!
+  - [color=#4cabb3][bold]Усиление Монумента[/bold][/color] — обеспечьте достижение Монументом полной мощности. Чем сильнее Монумент, тем больше способностей получает культ.
+  - [color=#4cabb3][bold]Приблизить Конец[/bold][/color] — когда Монумент достигнет полной мощности, завершите финальный ритуал, чтобы призвать Неизвестное и уничтожить станцию.
 
-  Crewmembers must be alive for you to [color=#4cabb3]Siphon Entropy[/color] from them, and converting crewmembers will bolster your cult's ranks, making it easier to collect entropy. For this reason, it is often in your best interests to ensure the crew is kept [italic]alive[/italic] - at least for as long as is relevant to your goals.
+  Прогресс выполнения целей является общим для всего культа.
 
-  ## Entropy
+  Члены экипажа должны оставаться живыми, чтобы вы могли [color=#4cabb3]Поглощать Энтропию[/color] из них, а обращение новых членов экипажа в культ укрепляет ваши ряды и облегчает сбор энтропии. По этой причине зачастую в ваших интересах сохранять экипаж [italic]живым[/italic] — по крайней мере до тех пор, пока это полезно для ваших целей.
+
+  ## Энтропия
+
   <Box>
     <GuideEntityEmbed Entity="MaterialCosmicCultEntropy1" Caption=""/>
-    <GuideEntityEmbed Entity="MaterialCosmicCultEntropy3" Caption="Motes of Entropy"/>
+    <GuideEntityEmbed Entity="MaterialCosmicCultEntropy3" Caption="Сгустки энтропии"/>
     <GuideEntityEmbed Entity="MaterialCosmicCultEntropy5" Caption=""/>
   </Box>
 
-  All cultists start with two abilities, or [color=#4cabb3][bold]Influences[/bold][/color] - one of which is [italic][color=#4cabb3]Siphon Entropy[/color][/italic]. This is your bread and butter as a cosmic cultist, and you'll want to use it as often as possible.
+  Все культисты начинают с двух способностей, или [color=#4cabb3][bold]Влияний[/bold][/color], одна из которых — [italic][color=#4cabb3]Поглощение Энтропии[/color][/italic]. Это основа вашей деятельности как космического культиста, и использовать её следует как можно чаще.
 
-  Using Siphon Entropy on an unsuspecting crewmember will stealthily award you [color=#4cabb3]Entropy[/color]. This will cause a small a portion of the crewmember's health to decay over time.
+  Использование Поглощения Энтропии на ничего не подозревающем члене экипажа незаметно принесёт вам [color=#4cabb3]Энтропию[/color]. Это приведёт к постепенному ухудшению состояния здоровья жертвы.
 
-  You can hold up to 14 Motes of Entropy, and approaching The Monument will automatically deposit all Entropy you posess.
+  Вы можете хранить до 14 Сгустков Энтропии одновременно, а при приближении к Монументу вся имеющаяся у вас Энтропия автоматически будет передана ему.
 
   <Box>
-    <GuideEntityEmbed Entity="CosmicVacuousSpire" Caption="A vacuous spire"/>
+    <GuideEntityEmbed Entity="CosmicVacuousSpire" Caption="Пустотный шпиль"/>
   </Box>
 
-  If the cult is successful in empowering the Monument, they gain the ability to make [color=#4cabb3]Vacuous Spires[/color]. These can be made by transmuting a Portable Scrubber at a [color=#4cabb3]Glyph[/color].
+  Если культу удастся усилить Монумент, он получит возможность создавать [color=#4cabb3]Пустотные Шпили[/color]. Они создаются путём трансмутации переносного скруббера у [color=#4cabb3]Глифа[/color].
 
-  When anchored in place, a vacuous spire rapidly devours the surrounding atmosphere! This process causes [color=#4cabb3]Motes of Entropy[/color] to condense from a spire's surface, acting as a powerful lategame source of entropy.
+  После закрепления на месте Пустотный Шпиль начинает стремительно поглощать окружающую атмосферу. В процессе на его поверхности конденсируются [color=#4cabb3]Сгустки Энтропии[/color], превращая шпиль в мощный источник энтропии на поздних этапах раунда.
 
-  ## Conversion
+  ## Обращение
+
   <Box>
-    <GuideEntityEmbed Entity="CosmicGlyphKnowledge" Caption="A Glyph of Knowledge"/>
+    <GuideEntityEmbed Entity="CosmicGlyphKnowledge" Caption="Глиф Знания"/>
   </Box>
 
-  Once the Monument has been constructed, you can begin converting crewmembers into cultists. To do this, you will need to use the monument to scribe an appropriate [color=#4cabb3]Glyph[/color], and interact with the glyph while a crewmember is standing over it. Glyphs are visible to non-cultists, so be careful!
+  После возведения Монумента вы сможете обращать членов экипажа в культистов. Для этого необходимо использовать Монумент для начертания подходящего [color=#4cabb3]Глифа[/color], а затем взаимодействовать с ним, пока над ним стоит член экипажа. Глифы видимы для некультистов, поэтому соблюдайте осторожность!
 
-  Any chaplains or crewmembers with a mindshield cannot be converted using a Glyph of Knowledge. Once the Monument is fully empowered, the Glyph of Truth can be used to convert these crewmembers.
+  Капелланы и члены экипажа с имплантом защиты разума не могут быть обращены через Глиф Знания. После полного усиления Монумента для обращения таких целей можно использовать Глиф Истины.
 
-  You will need a certain amount of crewmembers to be present for conversion to succeed. The number required can be checked by accessing the Monument. [italic]If not enough cultists are present, conversion will fail, and your cult may be exposed.[/italic]
+  Для успешного обращения рядом должно находиться достаточное количество культистов. Необходимое число можно узнать через Монумент. [italic]Если культистов окажется недостаточно, обращение провалится, и существование вашего культа может быть раскрыто.[/italic]
 
-  ## Vacuous Chantries
+  ## Пустотные Святилища
+
   <Box>
     <GuideEntityEmbed Entity="CosmicBorgChantry" Caption=""/>
     <GuideEntityEmbed Entity="BorgChassisGeneric" Caption=""/>
     <GuideEntityEmbed Entity="MobCosmicColossus" Caption=""/>
   </Box>
-  While empowered, one of the ways cultists can choose to expend their empowerment is by using [color=#4cabb3]Null Fragmentation[/color] on a [bold]Cyborg[/bold]. Doing so will trap them inside a [color=#4cabb3]Vacuous Chantry[/color]! This will trigger a stationwide alert, and begin the process of transfiguring the unfortunate victim into an [color=#4cabb3]Entropic Colossus[/color].
 
-  Be prepared to defend the chantry - or use it as a distraction to draw the crew's attention! The crew must use weapons to destroy the chantry in order to free the trapped Cyborg within.
+  Пока Монумент усилен, одним из способов потратить накопленную силу является применение [color=#4cabb3]Фрагментации Пустоты[/color] на [bold]киборга[/bold]. Это заключит его внутри [color=#4cabb3]Пустотного Святилища[/color]!
 
-  If successfully unleashed, an Entropic Colossus will be a force to be reckoned with.
+  Это вызовет тревогу по всей станции и начнёт процесс превращения несчастной жертвы в [color=#4cabb3]Энтропийного Колосса[/color].
 
-  [textlink="For more on Entropic Colossi, click here." link="CosmicColossus"]
+  Будьте готовы защищать святилище или использовать его как отвлекающий манёвр, чтобы привлечь внимание экипажа! Чтобы освободить заключённого внутри киборга, экипаж должен уничтожить святилище оружием.
 
-  ## Malign Law
+  Если процесс завершится успешно, Энтропийный Колосс станет чрезвычайно опасной силой.
+
+  [textlink="Подробнее об Энтропийных Колоссах здесь." link="CosmicColossus"]
+
+  ## Зловещий Закон
+
   <Box>
     <GuideEntityEmbed Entity="StationAiUploadComputer" Caption=""/>
     <GuideEntityEmbed Entity="CosmicCultLawBoard" Caption=""/>
     <GuideEntityEmbed Entity="PlayerStationAi" Caption=""/>
   </Box>
-  While empowered, one of the ways cultists can choose to expend their empowerment is by using [color=#4cabb3]Null Fragmentation[/color] on the [bold]AI Upload Console[/bold]. Provided there is a Station AI active, this will forcibly overwrite their laws with a corrupt set of guidelines, aligning them with the Cosmic Cult, in addition to granting them access to the Astral Murmur channel.
 
-  If a different lawboard was installed, this process will forcibly eject the previous lawboard from the AI Upload Console, regardless of wether or not the console was locked. Be warned; the crew will still be able to restore the Station AI's functionality by installing a safe, crew-aligned lawboard.
+  Пока Монумент усилен, культисты могут потратить часть его силы, применив [color=#4cabb3]Фрагментацию Пустоты[/color] к [bold]консоли загрузки законов ИИ[/bold]. Если на станции присутствует активный ИИ, его законы будут принудительно заменены на повреждённый набор директив, подчиняющий его Космическому Культу, а также предоставляющий доступ к каналу Астрального Шёпота.
+
+  Если в консоль была установлена другая плата законов, она будет принудительно извлечена независимо от того, заблокирована консоль или нет. Однако помните: экипаж всё ещё сможет вернуть ИИ к нормальной работе, установив безопасную плату законов, лояльную станции.
+
 </Document>

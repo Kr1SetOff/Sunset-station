@@ -1,0 +1,11 @@
+ent-BriefcaseIAAFilled = { ent-BriefcaseBrown }
+    .desc = { ent-BriefcaseBrown.desc }
+    .suffix = ААП
+ent-BriefcaseLawyerFilled = { ent-BriefcaseBrown }
+    .desc = { ent-BriefcaseBrown.desc }
+    .suffix = Адвокат
+ent-SyndieDeadDropSpawner = Синдикат, высшее командование
+    .desc = { ent-MarkerBase.desc }
+ent-BriefcaseSyndieDeadDrop = портфель Синдиката
+    .desc = { ent-BriefcaseSyndicateRedspace.desc }
+    .suffix = Тайник, НЕ СТАВИТЬ НА КАРТУ

@@ -1,0 +1,14 @@
+ent-MobAbductor = Урист МакИнопланетянин
+    .desc = { ent-BaseMobAbductor.desc }
+ent-MobAbductorScientist = абдуктор-учёный
+    .desc = { ent-MobAbductor.desc }
+ent-MobAbductorAgent = абдуктор-агент
+    .desc = { ent-MobAbductor.desc }
+ent-SpawnPointAbductorAgent = точка появления абдуктора-агента
+    .desc = { ent-MarkerBase.desc }
+ent-AbductorAgentSpawner = { ent-BaseAntagSpawner }
+    .desc = { ent-BaseAntagSpawner.desc }
+ent-SpawnPointAbductorScientist = точка появления абдуктора-учёного
+    .desc = { ent-MarkerBase.desc }
+ent-AbductorScientistSpawner = { ent-BaseAntagSpawner }
+    .desc = { ent-BaseAntagSpawner.desc }

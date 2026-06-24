@@ -1,21 +1,22 @@
 <Document>
-  # Cargo Bounties
-  While [textlink="Cargo" link="Cargo"] can make [color=cyan]spesos[color] selling just about anything, more spesos can be made by fulfilling [color=cyan]bounties[/color] found through the Cargo Bounty Computer.
+  # Контракты Карго
 
-  ## Starting Bounties
+  Хотя [textlink="Карго" link="Cargo"] может зарабатывать [color=cyan]спесо[/color], продавая практически что угодно, гораздо больше денег можно получить, выполняя [color=cyan]контракты[/color], доступные через Компьютер контрактов Карго.
+
+  ## Начало выполнения контракта
 
   <Box>
     <GuideEntityEmbed Entity="ComputerCargoBounty"/>
     <GuideEntityEmbed Entity="PaperCargoBountyManifest"/>
   </Box>
 
-  To start a bounty, open the bounty screen by interacting with the [color=cyan]Cargo Bounty Computer[/color]. The Cargo Bounty Computer maintains a list of all the current bounties and lets you either print out a label or skip it.
+  Чтобы начать выполнение контракта, откройте окно контрактов, взаимодействовав с [color=cyan]Компьютером контрактов Карго[/color]. Он хранит список всех текущих контрактов и позволяет либо распечатать ярлык контракта, либо пропустить его.
 
-  - Printing the label gives you a [color=cyan]Bounty Manifest[/color] listing the goods that need to be acquired. You can print out infinite Bounty Manifests, so ensure you are not repeating the same work as another Cargo Technician.
+  - При печати ярлыка вы получите [color=cyan]Манифест контракта[/color], в котором перечислены необходимые товары. Вы можете печатать неограниченное количество манифестов, поэтому убедитесь, что не выполняете ту же работу, что и другой грузовой техник.
 
-  - Skipping a bounty replaces that bounty with a new one, as there can only be six active bounties at any time. Skipping has a 15-minute cooldown and voids that bounty, which may anger other Cargo Technicians working on it.
+  - Пропуск контракта заменяет его новым, так как одновременно может быть активно только шесть контрактов. Пропуск имеет перезарядку в 15 минут и аннулирует данный контракт, что может не понравиться другим техникам Карго, которые уже работают над ним.
 
-  ## Fulfilling Bounties
+  ## Выполнение контрактов
 
   <Box>
     <GuideEntityEmbed Entity="PaperCargoBountyManifest"/>
@@ -23,13 +24,13 @@
     <GuideEntityEmbed Entity="AppraisalTool"/>
   </Box>
 
-  With the [color=cyan]Bounty Manifest[/color], it is now up to you to collect the required goods, but most departments will give you what you need if you ask for it with a Bounty Manifest.
+  Получив [color=cyan]Манифест контракта[/color], вы должны собрать все требуемые товары. Большинство отделов станции предоставят необходимые предметы, если вы покажете им манифест контракта.
 
-  Once you have collected the goods, return to the cargo bay and put the goods inside an empty [color=cyan]Crate[/color]. After everything is in the crate, close it, and then apply the Bounty Manifest to it.
+  После сбора всех товаров вернитесь в грузовой отсек и поместите их в пустой [color=cyan]ящик[/color]. Когда всё будет сложено внутрь, закройте ящик и примените к нему манифест контракта.
 
-  To verify the completion of a bounty, use the [color=cyan]Appraisal Tool[/color] on it. It should show a confirmation that the bounty has been completed.
+  Чтобы проверить правильность выполнения контракта, используйте на ящике [color=cyan]Оценочный инструмент[/color]. Он должен показать подтверждение успешного выполнения контракта.
 
-  ## Selling Bounties
+  ## Сдача контрактов
 
   <Box>
     <GuideEntityEmbed Entity="PaperCargoBountyManifest"/>
@@ -37,9 +38,9 @@
     <GuideEntityEmbed Entity="CargoPalletSell"/>
   </Box>
 
-  Once you have verified that you have completed the bounty, follow the same steps as selling anything else.
+  После того как вы убедились, что контракт выполнен правильно, действуйте так же, как при продаже любого другого груза.
 
-  Just transport it to the [color=cyan]Trading Station[/color], sell it, and you are done!
+  Просто доставьте ящик на [color=cyan]Торговую станцию[/color], продайте его — и дело сделано!
 
-  When you return, there should be a new bounty to take its place.
+  После завершения контракта на его месте появится новый.
 </Document>

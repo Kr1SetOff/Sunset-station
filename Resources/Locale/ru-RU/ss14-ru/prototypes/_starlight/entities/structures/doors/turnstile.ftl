@@ -1,0 +1,9 @@
+ent-TurnstileCommand = { ent-Turnstile }
+    .desc = { ent-Turnstile.desc }
+    .suffix = Командование
+ent-TurnstileCentComm = турникет центрального командования
+    .desc = { ent-Turnstile.desc }
+    .suffix = Командование
+ent-TurnstileCentCommDebrief = турникет центрального командования
+    .desc = { ent-TurnstileCentComm.desc }
+    .suffix = Разбор полётов

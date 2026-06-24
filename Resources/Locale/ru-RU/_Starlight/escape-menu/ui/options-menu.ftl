@@ -1,0 +1,57 @@
+ui-options-function-open-m-help = Открыть помощь ментора
+ui-escape-connect-discord = Привязать Discord
+server-info-connect-discord-button = Привязать Discord
+
+## Accessibility
+
+ui-options-arachnophobia = Режим арахнофобии
+ui-options-disable-job-icon-animation = Отключить анимацию для чата и иконок статуса
+
+## TTS
+
+ui-options-tts-label = Текст-в-речь
+ui-options-tts-volume = Громкость TTS:
+ui-options-tts-chime-volume = Chime Volume:
+credits-window-tts-title = Функция TTS (Текст-в-речь)
+
+ui-options-tts-radio-volume = Громкость радио:
+ui-options-tts-announce-volume = Громкость объявлений:
+
+ui-options-tts-enabled = Текст-в-речь включён
+ui-options-tts-radio-queue-enabled = Очередь радио TTS
+ui-options-radio-chime-mute = Отключить сигналы радио
+
+## UI
+
+ui-options-tab-ui = User Interface
+ui-options-ui-style = User Interface Style
+ui-options-ui-sight-hash = Sight Preferences String
+ui-options-sight-rotation = Sight Rotation
+ui-options-chat-width = Separated Chat Width
+ui-options-ui-ranged-sight = Sights
+ui-options-ranged-sight = Ranged Sight
+ui-options-melee-sight = Melee Sight
+ui-options-ranged-sight-scale = Sights Scale
+ui-options-ranged-sight-offset = Sights Basic Offset
+ui-options-sight-main-color = Sight Main Color
+ui-options-sight-second-color = Sight Second Color
+
+## Admin
+
+ui-options-admin-ghost-hud = Admin Ghost HUD
+
+ui-options-admin-ghost-hud-setting-job = Job icons
+ui-options-admin-ghost-hud-setting-job-off = Off
+ui-options-admin-ghost-hud-setting-job-job = Job only
+ui-options-admin-ghost-hud-setting-job-jobandmindshield = Job and mindshield
+
+ui-options-admin-ghost-hud-show-criminal-record-icons = Show criminal record icons
+
+ui-options-admin-ghost-hud-setting-health = Health indicators
+ui-options-admin-ghost-hud-setting-health-off = Off
+ui-options-admin-ghost-hud-setting-health-icons = Icons
+ui-options-admin-ghost-hud-setting-health-bars = Bars
+ui-options-admin-ghost-hud-setting-health-iconsandbars = Icons and bars
+
+ui-options-admin-ghost-hud-show-faction-icons = Show faction icons
+ui-options-admin-ghost-hud-show-satiation-icons = Show satiation icons

@@ -1,0 +1,13 @@
+ent-SprayPainter = распылитель краски
+    .desc = Распылитель краски для окрашивания шлюзов, труб и других предметов.
+ent-SprayPainterRecharging = { ent-SprayPainter }
+    .desc = { ent-SprayPainter.desc }
+    .suffix = Адмеме
+ent-SprayPainterBorg = экспериментальный покрасочный баллончик
+    .desc = Экспериментальный перезаряжающийся распылитель краски, который может бесконечно воспроизводить сжатую краску.
+    .suffix = Борг
+ent-SprayPainterEmpty = { ent-SprayPainter }
+    .desc = { ent-SprayPainter.desc }
+    .suffix = Пустой
+ent-SprayPainterAmmo = сжатая краска
+    .desc = Картридж с сильно сжатой краской, обычно используемый в распылителях краски.

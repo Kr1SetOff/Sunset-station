@@ -1,0 +1,12 @@
+ent-ClothingEyesTechnology = роботизированный аппарат
+    .desc = Он тяжелый и покрыт мешаниной проводов.
+ent-ClothingEyesTechnologyZero = роботизированные окуляры
+    .desc = Пара окуляров, трещащих от статического электричества.
+ent-ClothingEyesTechnologyTwo = роботизированный глаз
+    .desc = Единственный в своем роде среди старых.
+ent-ClothingEyesTechnologyLudovic = очки бессонницы
+    .desc = В этих очках я вижу всё! …О нет, это просто пыль.
+ent-ClothingEyesTechnologyX = экранные очки
+    .desc = Время окунуться в 8-битный мир.
+ent-ClothingHeadHatTechnologyFive = лазер для лба
+    .desc = Указка для ленивых.

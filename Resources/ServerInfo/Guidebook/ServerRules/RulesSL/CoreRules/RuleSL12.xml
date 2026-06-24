@@ -1,38 +1,37 @@
 <Document>
-  # Rule 12 - Silicons and Thaven Rules
-[bold]Silicons[/bold] and [bold]Thaven[/bold] are bound to their Laws and Moods respectively. They are expected to adhere to the following standards when following them.
+  # Правило 12 — Кремниевые формы жизни и правила Тавенов
+[bold]Кремниевые формы жизни[/bold] (Silicons) и [bold]Тавены[/bold] (Thaven) связаны своими Законами и Настроениями соответственно. При их соблюдении от них ожидается соответствие следующим стандартам.
 
-  ## Silicon Laws
+  ## Законы кремниевых форм жизни
 
-- Silicon laws override all other gameplay and roleplay rules. If your laws explicitly require you to break server rules, you must.
-\n - [color=000000]Absence of a relevant law is not an excuse to break server rules. If you don't have a law that supersedes server rules, the server rules still apply.
-\n [color=000000]For example, having a law define something as harmful to the crew, does not enable rule-breaking preventative action if you do not also have a law requiring prevention of crew harm.
-\n - [color=000000]A vague law does not normally let you break server rules. Ahelp first if you are confused, or have an interpretation that would let you break server rules.
-- Follow laws in order, with the lowest numbered/top (or glitched) rule taking priority over the ones beneath it.
-- You cannot request a law change, or willingly allow an unauthorized law change.
-\n - [color=000000]Authorized law changes are to be allowed as long as consistent with your laws.
-\n - [color=000000]Authorized law changes can be found in the Command SOP.
-\n - [color=000000]Lethal force may be used in the case of unauthorized law changes.
-- You must remain consistent with your interpretation of your laws.
-- Crew ID determines who/what is defined as crew. Any appropriate job icon is to be considered crew.
-\n - [color=000000]Zombies/Antags/Nuclear Operatives with proper ID are to be considered crew.
-\n - [color=000000][bold]Visitors are not crew[/bold] until they have been hired by HoP. [The V icon]
-\n - [color=000000][bold]Prisoners are not crew[/bold] and you should not listen to their orders [The bars icon]
-- Crew harm refers to physical harm, prioritized by immediacy and likelihood.
-- Physical harm means damage - Stuns, shoves, and flashes are not harm, neither is emotional nor mental trauma.
-- You may ignore crew orders that are unreasonable, such as asking a silicon to round remove themselves without a good reason.
-- If an order is issued that would break a server rule, such as loosing the tesla, please ahelp for confirmation before carrying out the order.
+- Законы кремниевых форм жизни имеют приоритет над всеми остальными правилами игры и отыгрыша. Если ваши законы прямо требуют от вас нарушить правила сервера, вы обязаны это сделать.
+\n - [color=000000]Отсутствие соответствующего закона не является оправданием для нарушения правил сервера. Если у вас нет закона, который отменяет правила сервера, эти правила продолжают действовать.[/color]
+\n - [color=000000]Например, наличие закона, определяющего что-то как вредное для экипажа, не дает права на предотвращающие действия, нарушающие правила, если у вас также нет закона, требующего предотвращения вреда экипажу.[/color]
+\n - [color=000000]Расплывчатый закон обычно не позволяет вам нарушать правила сервера. Сначала напишите Ahelp, если вы запутались или у вас есть интерпретация, которая позволила бы вам нарушить правила сервера.[/color]
+- Следуйте законам в порядке их приоритета: закон с меньшим номером / самый верхний (или поврежденный) закон имеет приоритет над последующими.
+- Вы не можете запрашивать изменение закона или добровольно допускать несанкционированное изменение закона.
+\n - [color=000000]Авторизованные изменения законов разрешены, если они согласуются с вашими законами.[/color]
+\n - [color=000000]Авторизованные изменения законов можно найти в SOP Командования.[/color]
+\n - [color=000000]В случае несанкционированных изменений законов может быть применена летальная сила.[/color]
+- Вы должны оставаться последовательными в своей интерпретации законов.
+- ID-карта экипажа определяет, кто/что считается членом экипажа. Любая соответствующая иконка должности считается экипажем.
+\n - [color=000000]Зомби / антагонисты / ядерные оперативники с надлежащим удостоверением считаются членами экипажа.[/color]
+\n - [color=000000][bold]Посетители не являются членами экипажа[/bold], пока они не наняты Главой персонала (HoP). [Иконка V][/color]
+\n - [color=000000][bold]Заключенные не являются членами экипажа[/bold], и вам не следует слушать их приказы. [Иконка решетки][/color]
+- Вред экипажу относится к физическому вреду, приоритет определяется по непосредственности и вероятности.
+- Физический вред означает ущерб — оглушения, толчки и ослепления не являются вредом, как и эмоциональные или ментальные травмы.
+- Вы можете игнорировать неразумные приказы экипажа, например, просьбу кремниевой формы жизни самоуничтожиться без веской причины.
+- Если отдан приказ, который нарушил бы правила сервера (например, выпустить теслу), пожалуйста, напишите Ahelp для подтверждения перед выполнением.
 
-  ## Thaven Moods
+  ## Настроения Тавенов
 
-- Moods are compulsions that Thaven should try to follow. If your mood [color=#ff0000]explicitly[/color] requires you to break server rules, you may.
-\n - Absence of a relevant mood is not an excuse to break server rules. If you do not have a relevant mood, the server rules still apply.
-\n - A vague mood does not normally let you break server rules. Ahelp first if you are confused, or believe your mood gives you a reason to break server rules.
-- If a mood can not be satisfied, it causes distress to Thaven. This distress is not extreme, and does not inherently justify rule breaking, but may allow gradual escalation that does not cross into murder or mass sabotage.
-- Attempting to break the law in a way that directly leads to you being able to fulfill a mood may be allowed, within reason;
-\n - Breaking into a department to obtain something or make an order in Cargo that they refuse would be allowed.
-\n - Murdering the CE to use their stamp to approve paperwork giving you access to the Supermatter room would not be allowed.
-- Some leniency for Rule 13 may be allowed based on mood, but those who have been hired to Command, Security and NanoTrasen jobs on stations are expected to be experienced in their work, meaning they have earned this rank while managing their moods for potentially years.
-They should understand how to juggle responsibilities of their jobs with the fickle and often arbitrary compulsions of their moods in a way that would not get them fired.
-
+- Настроения — это компульсии (побуждения), которым Тавены должны стараться следовать. Если ваше настроение [color=#ff0000]прямо[/color] требует от вас нарушить правила сервера, вы можете это сделать.
+\n - [color=000000]Отсутствие соответствующего настроения не является оправданием для нарушения правил сервера. Если у вас нет соответствующего настроения, правила сервера продолжают действовать.[/color]
+\n - [color=000000]Расплывчатое настроение обычно не позволяет вам нарушать правила сервера. Сначала напишите Ahelp, если вы запутались или считаете, что ваше настроение дает вам причину нарушить правила сервера.[/color]
+- Если настроение не может быть удовлетворено, это вызывает у Тавена дистресс. Этот дистресс не является экстремальным и не оправдывает нарушение правил, но может позволить постепенную эскалацию, которая не переходит в убийство или массовый саботаж.
+- Попытки нарушить закон таким образом, который напрямую ведет к возможности удовлетворить настроение, могут быть разрешены в разумных пределах:
+\n - [color=000000]Взлом отдела, чтобы получить что-то, или оформление заказа в Карго, который они отказываются принимать, будет разрешено.[/color]
+\n - [color=000000]Убийство главного инженера (CE), чтобы использовать его печать для одобрения документов, дающих доступ в комнату с Суперматерией, не будет разрешено.[/color]
+- Некоторые послабления в отношении Правила 13 могут быть допущены в зависимости от настроения, но от тех, кто был нанят на должности Командования, Службы безопасности и NanoTrasen, ожидается опыт в работе, что означает, что они заслужили этот ранг, управляя своими настроениями, возможно, годами.
+Они должны понимать, как совмещать обязанности своих должностей с переменчивыми и часто произвольными компульсиями своих настроений так, чтобы это не привело к увольнению.
 </Document>

@@ -1,18 +1,18 @@
 ﻿<Document>
-  # Core Rule 5 - Do not use out of game methods to communicate with other players
-  This is a zero tolerance rule.
+  # Основное правило 5 — Не используйте внеигровые методы для общения с другими игроками
+  Это правило с нулевой терпимостью.
 
-  Do not utilize any external means of communication to talk to other players who are connected to the same server, or who were connected to the same server during the current round. This is referred to as "metacomming" and includes any means of communication including text, voice, images, and video. This includes applications such as Discord, Steam, and other platforms, along with in-person communication.
+  Не используйте любые внешние средства связи для общения с игроками, которые подключены к тому же серверу или были подключены к нему во время текущего раунда. Это называется «метакомминг» (metacomming) и включает в себя любые способы общения: текст, голос, изображения и видео. Сюда входят такие приложения, как Discord, Steam и другие платформы, а также личное общение.
 
-  Even if information is not being shared or abused, it may still be considered a violation of this rule. Due to the difficulty of determining if information is being shared, it will almost always be presumed that people who message another player they are in a round with, or who are in a voice call with another player during a round are sharing round information. Due to the difficulty of determining if users are abusing information that they are sharing, it will almost always be presumed that the information is being abused.
+  Даже если информация не передается и не используется злонамеренно, это все равно может считаться нарушением данного правила. Из-за сложности определения того, происходит ли обмен информацией, почти всегда будет предполагаться, что люди, которые пишут другому игроку, находясь с ним в одном раунде, или общаются с ним по голосовой связи во время раунда, обмениваются информацией о раунде. Из-за сложности определения того, злоупотребляют ли пользователи получаемой информацией, почти всегда будет предполагаться, что информация используется во вред.
 
-  The only exemption to this rule is when [color=#a4885c]all[/color] players are in the server lobby.
+  Единственное исключение из этого правила — когда [color=#a4885c]все[/color] игроки находятся в лобби сервера.
 
-  ## Teaching new players
-  Teaching players is not exempt from this rule. If you want to teach a new player, it is recommended to either watch a stream of them playing the game while not playing yourself, or communicate with them using only in-game methods of communication.
+  ## Обучение новых игроков
+  Обучение игроков не является исключением из этого правила. Если вы хотите обучить новичка, рекомендуется либо смотреть трансляцию их игры, не играя при этом самому, либо использовать только внутриигровые методы общения.
 
-  ## Streaming
-  Public livestreams are not exempt from this rule, but have different liability. Using information from a public live stream of the game (stream sniping) is a violation of this rule. Watching a public live stream of the game while connected to the same server is a violation of this rule. Allowing people watching a public live stream to share information about the current round, for example through the stream's chat, is a violation of this rule. Using that information is also a violation of this rule. Sharing information about the current round with a streamer is a violation of this rule if that information was obtained from any source but the stream. The stream's moderators are expected to enforce this on the streaming platform in addition to any in-game enforcement done by game admins.
+  ## Стриминг
+  Публичные прямые трансляции не освобождаются от действия этого правила, но несут иную ответственность. Использование информации из публичной трансляции игры (стрим-снайпинг) является нарушением данного правила. Просмотр публичной трансляции игры во время подключения к тому же серверу является нарушением. Позволять зрителям трансляции делиться информацией о текущем раунде, например, через чат стрима, является нарушением. Использование такой информации также является нарушением. Обмен информацией о текущем раунде со стримером является нарушением, если эта информация была получена из любого источника, кроме самой трансляции. Модераторы стрима обязаны следить за соблюдением правил на платформе трансляции в дополнение к любым мерам, принимаемым администрацией внутри игры.
 
-  Public livestreaming by itself is not a violation of the rule as long as the stream is sufficiently moderated. Streamers are encouraged, but not required, to use a stream delay.
+  Публичный стриминг сам по себе не является нарушением правил, при условии, что трансляция должным образом модерируется. Стримерам рекомендуется (но не требуется) использовать задержку трансляции.
 </Document>

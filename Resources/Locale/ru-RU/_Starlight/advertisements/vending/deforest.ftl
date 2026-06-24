@@ -1,0 +1,9 @@
+advertisement-deforest-1 = Спасите парочку жизней!
+advertisement-deforest-2 = Лучшее оборудование для вашего медотсека.
+advertisement-deforest-3 = Только самые стерильные инструменты.
+advertisement-deforest-4 = Высококачественные инъекторы!
+advertisement-deforest-5 = Эта штука спасает жизни!
+advertisement-deforest-6 = Неужели вам не хочется немного?
+advertisement-deforest-7 = Бип!
+advertisement-deforest-8 = Постарайтесь не устраивать передозировки!
+advertisement-deforest-9 = Устройте кому-нибудь передозировку!

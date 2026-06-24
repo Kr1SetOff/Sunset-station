@@ -1,16 +1,15 @@
+Опции панели спавна сущностей
+Default спавнит малые сущности (например, кружки) без выравнивания по сетке, при этом выравнивая блочные сущности (например, стены) по сетке.
+PlaceFree спавнит все сущности без выравнивания.
+PlaceNearby ограничивает радиус спавна примерно 2 плитками.
+SnapgridCenter выравнивает сущность по центру плитки.
+SnapgridBorder выравнивает сущность по границе плитки.
 
-[color=#ffffff]Entity spawn panel options[/color]
-[color=#a4885c]Default[/color] spawns small entities like mugs without aligning them to anything, while aligning block entities like walls to the grid.
-[color=#a4885c]PlaceFree[/color] spawns all entities without aligning them.
-[color=#a4885c]PlaceNearby[/color] limits the spawn radius to around 2 tiles.
-[color=#a4885c]SnapgridCenter[/color] aligns the entity to the middle of the tile.
-[color=#a4885c]SnapgridBorder[/color] aligns the entity to the border of the tile.
-
-[color=#ffffff]Grid aligned options[/color]
-[color=#a4885c]AlignSimilar[/color] snaps the entity to similar entities. Currently broken.
-[color=#a4885c]AlignTileAny[/color] aligns the entity to the grid.
-[color=#a4885c]AlignTileEmpty[/color] target tile must be empty
-[color=#a4885c]AlignTileNonDense[/color] no colliders allowed in the target tile.
-[color=#a4885c]AlignTileDense[/color] colliders must be in the target tile.
-[color=#a4885c]AlignWall[/color] snaps to vertical halftiles.
-[color=#a4885c]AlignWallProper[/color] snaps the entity to the middle of the tile edges
+Опции выравнивания по сетке
+AlignSimilar привязывает сущность к похожим сущностям. В настоящее время сломано.
+AlignTileAny выравнивает сущность по сетке.
+AlignTileEmpty целевая плитка должна быть пустой.
+AlignTileNonDense в целевой плитке не должно быть коллайдеров.
+AlignTileDense коллайдеры должны быть в целевой плитке.
+AlignWall привязывается к вертикальным полуплиткам.
+AlignWallProper выравнивает сущность по центру краев плитки.

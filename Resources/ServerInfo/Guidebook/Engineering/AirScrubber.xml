@@ -1,29 +1,31 @@
 ﻿<Document>
-  # Air Scrubber
-  The air scrubber is essential in maintaining an atmosphere free of waste gasses emitted by breathing creatures and atmospheric upsets.
-  Its primary job is to scrub unwanted gasses from the atmosphere it's exposed to.
+  # Очиститель воздуха (Air Scrubber)
+  Очиститель воздуха является незаменимым устройством для поддержания атмосферы, свободной от отработанных газов, выделяемых дышащими существами или появляющихся при атмосферных нарушениях. Его основная задача — удаление нежелательных газов из окружающей среды.
+
   <Box>
     <GuideEntityEmbed Entity="GasVentScrubber"/>
   </Box>
-  The air scrubber requires [textlink="power" link="Power"] through a nearby [textlink="LV cable" link="VoltageNetworks"] to function.
 
-  The default behavior of an air scrubber is to scrub all gasses except Nitrogen and Oxygen from the atmosphere it's exposed to. It will continue this behavior unless directed by a [textlink="linked" link="Networking"] [textlink="air alarm" link="AirAlarms"].
+  Для работы очистителю воздуха требуется [textlink="питание" link="Power"], поступающее через ближайший [textlink="кабель низкого напряжения" link="VoltageNetworks"].
 
-  The scrubber can be welded with any welding tool to stop it from functioning.
+  По умолчанию очиститель удаляет из атмосферы все газы, за исключением азота и кислорода. Он продолжит работать в этом режиме, если его работу не перенастроит [textlink="воздушная сигнализация (Air Alarm)" link="AirAlarms"], подключенная через [textlink="сеть" link="Networking"].
 
-  ## Configuration Options
-  When [textlink="linked" link="Networking"] to an [textlink="air alarm" link="AirAlarms"], air scrubbers gain more functionality.
+  Очиститель можно отключить физически, сварив его любым сварочным инструментом.
 
-  The target gasses for scrubbing can be defined in the "Gas filters" dropdown. Keep in mind this resets if you change [textlink="air alarm" link="AirAlarms"] modes.
+  ## Варианты конфигурации
+  При [textlink="подключении" link="Networking"] к [textlink="воздушной сигнализации" link="AirAlarms"] очистители получают дополнительные функции.
 
-  Air scrubbers have two "direction" options: Scrubbing and Siphoning.
-  - Scrubbing scrubs gasses as defined in the gas filters.
-  - Siphoning ignores all gas filters, and sucks all gasses out of the atmosphere.
+  Целевые газы для очистки можно задать в выпадающем меню "Gas filters" (Газовые фильтры). Имейте в виду, что эти настройки сбрасываются при смене режимов [textlink="воздушной сигнализации" link="AirAlarms"].
 
-  Both of these modes are limited by the Rate setting, which defines the rate (in litres) at which the scrubber sucks gasses from its exposed atmosphere.
+  Очистители воздуха имеют две настройки «направления» (режима): Scrubbing (Очистка) и Siphoning (Откачка).
+  - **Scrubbing:** удаляет газы в соответствии с выбранными фильтрами.
+  - **Siphoning:** игнорирует все фильтры и выкачивает абсолютно все газы из атмосферы.
 
-  Air scrubbers also have a "WideNet" setting, which expands the radius of the scrubber's operating range. Normally, the scrubber scrubs the atmosphere on the single tile it's exposed to.
-  In WideNet mode, the scrubber scrubs gas from the 4 tiles surrounding the scrubber, as shown:
+  Оба режима ограничены настройкой **Rate** (Скорость), которая определяет интенсивность (в литрах), с которой очиститель удаляет газ из атмосферы.
+
+  Также у очистителей есть настройка **WideNet**, которая расширяет радиус действия устройства. В обычном режиме очиститель работает только на том тайле, где он установлен. В режиме WideNet он очищает воздух с 4 соседних тайлов:
+
+  
 
   <Box>
     <GuideEntityEmbed Entity="FloorTileItemSteel" Caption=""/>
@@ -37,10 +39,9 @@
     <GuideEntityEmbed Entity="FloorTileItemSteel" Caption=""/>
   </Box>
 
-  This effectively multiplies its total speed, as air scrubbers will now preform their scrubbing work on 5 tiles at once.
+  Это фактически увеличивает общую скорость, так как очиститель начинает обрабатывать 5 тайлов одновременно.
 
-  Scrubbers [textlink="linked" link="Networking"] to an [textlink="air alarm" link="AirAlarms"] in auto mode will automatically enable WideNet mode under the [textlink="air alarm's" link="AirAlarms"] "Filtering (Wide)" mode when a high concentration of unwanted gasses is detected in the atmosphere.
+  Если [textlink="связанная" link="Networking"] с очистителем [textlink="воздушная сигнализация" link="AirAlarms"] находится в автоматическом режиме, она сама включит WideNet (режим "Filtering (Wide)"), когда обнаружит высокую концентрацию вредных газов. 
 
-  WideNet is extremely useful in quickly scrubbing large amounts of tritium from plasma burn chambers.
-
+  WideNet крайне полезен для быстрой очистки больших объемов трития из камер сгорания плазмы.
 </Document>

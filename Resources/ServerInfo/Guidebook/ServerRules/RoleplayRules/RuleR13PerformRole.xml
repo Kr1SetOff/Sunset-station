@@ -1,26 +1,26 @@
 <Document>
-  # Roleplay Rule 13 - Stick to your role
-  Requesting job changes is not prohibited by this rule. This rule is loosened if the station is understaffed or if there is a significant threat to you.
+  # Правило ролевого отыгрыша 13 — Придерживайтесь своей роли
+  Запрос на смену должности данным правилом не запрещен. Это правило ослабляется, если на станции не хватает персонала или если существует значительная угроза для вас.
 
-  Don't perform other people's jobs, especially where the relevance to you personally is low. This also covers performing the role of security.
+  Не выполняйте чужую работу, особенно если она мало касается вас лично. Это также распространяется на выполнение обязанностей службы безопасности.
 
-  ## MRP Amendment
-  This is enforced more strictly on MRP.
+  ## Поправка для MRP
+  На серверах с уровнем отыгрыша MRP это правило применяется более строго.
 
-  ## Examples
-  Acceptable:
-  - As an engineer, helping the bartender remodel the bar.
-  - As a bartender, remodeling the bar.
-  - As a assistant, building a maintenance bar.
-  - As an engineer, reinforcing substations.
-  - As an engineer, increasing the security of airlocks.
-  - As an atmospherics technician, improving atmospheric systems.
-  - As a assistant, fighting nuclear operatives.
-  - As a assistant, fighting or preparing to defend yourself from someone who has been trying to kill you.
-  - As a crewmember on a station with no engineering department, you complete engineering tasks.
+  ## Примеры
+  Допустимые:
+  - Инженер помогает бармену перепланировать бар.
+  - Бармен занимается перепланировкой своего бара.
+  - Ассистент строит бар в техотсеках.
+  - Инженер укрепляет подстанции.
+  - Инженер повышает уровень безопасности шлюзов.
+  - Техник-атмосферщик улучшает атмосферные системы.
+  - Ассистент сражается с ядерными оперативниками.
+  - Ассистент сражается или готовится защищаться от того, кто пытается убить его самого.
+  - Член экипажа на станции, где отсутствует инженерный отдел, выполняет инженерные задачи.
 
-  Prohibited:
-  - As a assistant, reinforcing substations.
-  - As a assistant, hunting for antagonists or lawbreakers.
-  - As a assistant, fighting or preparing to defend someone else from someone who has been trying to kill a random crewmember.
+  Запрещенные:
+  - Ассистент укрепляет подстанции.
+  - Ассистент охотится за антагонистами или нарушителями закона.
+  - Ассистент ввязывается в драку или готовится защищать кого-то другого от того, кто пытается убить случайного члена экипажа.
 </Document>

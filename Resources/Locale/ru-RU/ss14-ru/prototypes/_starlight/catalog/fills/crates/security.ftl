@@ -1,0 +1,3 @@
+ent-CrateSecurityReflectiveArmor = ящик отражающей брони
+    .desc = Содержит три отражающих жилета. Требуется доступ службы безопасности для открытия.
+    .suffix = { ent-CrateSecgear.suffix }

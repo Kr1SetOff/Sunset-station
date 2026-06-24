@@ -1,0 +1,12 @@
+ent-NullPhaseAction = Фазовый сдвиг
+    .desc = Выведите себя из соответствия с реальным пространством, чтобы быстро перемещаться в другие области.
+ent-BrighteyePhaseAction = { ent-NullPhaseAction }
+    .desc = { ent-NullPhaseAction.desc }
+ent-BrighteyePortalAction = Создать портал
+    .desc = Создать портал во тьму в вашем текущем местоположении.
+ent-BrighteyeDarkTrapAction = Создать ловушку
+    .desc = Создать темную ловушку в вашем текущем местоположении.
+ent-BrighteyeShadeSkipAction = Теневой прыжок
+    .desc = Оглушите существо тьмой.
+ent-BrighteyeCreateShadeAction = Создать тень
+    .desc = Создать поле тьмы, которое следует за вами.

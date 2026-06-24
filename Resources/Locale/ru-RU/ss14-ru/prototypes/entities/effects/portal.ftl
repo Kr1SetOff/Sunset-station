@@ -1,0 +1,16 @@
+ent-BasePortal = блюспейс портал
+    .desc = Переносит вас в связанный пункт назначения!
+ent-PortalRed = { ent-BasePortal }
+    .desc = Этот больше похож на портал в редспейс.
+ent-PortalBlue = { ent-BasePortal }
+    .desc = { ent-BasePortal.desc }
+ent-PortalGreeny = { "" }
+    .desc = Загадочный зеленый портал!
+ent-PortalArtifact = { ent-BasePortal }
+    .desc = { ent-BasePortal.desc }
+ent-PortalGatewayBlue = { ent-BasePortal }
+    .desc = { ent-BasePortal.desc }
+ent-PortalGatewayOrange = { ent-BasePortal }
+    .desc = { ent-BasePortal.desc }
+ent-ShadowPortal = теневой разлом
+    .desc = Выглядит нестабильно.

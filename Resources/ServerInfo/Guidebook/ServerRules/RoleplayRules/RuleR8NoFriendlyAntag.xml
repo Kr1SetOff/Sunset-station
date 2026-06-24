@@ -1,22 +1,22 @@
 ﻿<Document>
-  # Roleplay Rule 8 - As an antagonist, only be friendly to your team and don't work against your team
-  Do not take or enable antagonist roles that you do not want to play. Solo antagonists and team antagonists are intended to cause issues for non-antagonists or the station. Antagonists are not required to exclusively cause issues, but their net impact on non-antagonists or the station should generally be negative.
+  # Правило ролевого отыгрыша 8 — Как антагонист, будьте дружелюбны только к своей команде и не работайте против нее
+  Не принимайте и не активируйте роли антагонистов, если не хотите за них играть. Антагонисты-одиночки и командные антагонисты должны создавать проблемы для не-антагонистов или станции. Антагонисты не обязаны создавать только проблемы, но их суммарное воздействие на не-антагонистов или станцию в целом должно быть отрицательным.
 
-  Do not cause issues for your own team as a team antagonist.
+  Как командный антагонист, не создавайте проблем своей собственной команде.
 
-  ## Examples
-  Acceptable:
-  - Betraying another antagonist as a solo antagonist.
-  - Revealing the identity of another antagonist as a solo antagonist for some benefit to yourself.
-  - Working against the revolution after being de-converted from being a revolutionary.
-  - Killing nuclear operatives as a revolutionary.
+  ## Примеры
+  Допустимые:
+  - Предательство другого антагониста, если вы — антагонист-одиночка.
+  - Раскрытие личности другого антагониста, если вы — антагонист-одиночка, ради собственной выгоды.
+  - Работа против революции после того, как вы были «развербованы» обратно (деконвертированы) из революционеров.
+  - Убийство ядерных оперативников, если вы — революционер.
 
-  Prohibited:
-  - Buying Syndicate items for security.
-  - Randomly attacking other carp as an antagonist carp.
-  - Ignoring your team as a nuclear operative.
-  - Sabotaging your team as a nuclear operative.
-  - Attacking other zombies as a zombie.
-  - Working against the revolution as a revolutionary.
-  - Making or trying to make the station uninhabitable as a revolutionary.
+  Запрещенные:
+  - Покупка предметов Синдиката для службы безопасности.
+  - Случайные атаки на других карпов, если вы — антагонист-карп.
+  - Игнорирование своей команды, если вы — ядерный оперативник.
+  - Саботаж действий своей команды, если вы — ядерный оперативник.
+  - Атаки на других зомби, если вы — зомби.
+  - Работа против революции, если вы — революционер.
+  - Создание или попытки создания условий, при которых станция станет непригодной для жизни, если вы — революционер.
 </Document>

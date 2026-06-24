@@ -1,31 +1,31 @@
 <Document>
-# Salvage Specialist
+# Утилизатор (Специалист по утилизации)
 
-<GuideEntityEmbed Entity="ToyFigurineSalvage" Caption="Salvage Specialist"/>
+<GuideEntityEmbed Entity="ToyFigurineSalvage" Caption="Утилизатор"/>
 
-1. You report directly to the Quartermaster and should communicate with the Quartermaster before and after each expedition with a verbal status report. After every 2 expeditions or if the salvage crew must return sooner, a formal docking procedure must be completed.
+1. Вы подчиняетесь непосредственно Квартирмейстеру (QM) и должны общаться с ним до и после каждой экспедиции, предоставляя устный отчёт о статусе. После каждых 2 экспедиций, либо если команда утилизаторов вынуждена вернуться раньше, необходимо выполнить официальную процедуру стыковки.
 
-This procedure is as follows:
-- The salvage team will notify the Quartermaster of their intent to return to the station.
-- Any contraband found is to be turned over to security. Contraband request forms may be filled out for these items.
-- Any salvage materials found should be given over for processing.
-- Any damage to the ship/crew must be reported and repaired.
+Эта процедура выглядит следующим образом:
+- Команда утилизаторов уведомляет Квартирмейстера о своём намерении вернуться на станцию.
+- Любая найденная контрабанда должна быть передана службе безопасности. На эти предметы могут быть заполнены формы запроса контрабанды.
+- Все найденные утильматериалы должны быть переданы на переработку.
+- Любые повреждения корабля или травмы экипажа должны быть зарегистрированы и устранены/вылечены.
 
-2. Salvage's secondary directive is the defense and upkeep of the Automated Trade Station.
+2. Вторичной директивой утилизаторов является защита и содержание Автоматической торговой станции (АТС).
 
-- Hostile threats onboard the ATS may be dispatched by Salvage, and should be turned over to Station Security without delay once incapacitated.
-- Hostile threats actively causing damage to the ATS may be dispatched by Salvage, but should not be pursued once they are no longer an active threat to the ATS.
-- The Automated Trade Station should remain powered, breathable, and pressurized at all times.
-- The Automated Trade Station should not be moved closer or further from the assigned Space Station at any time unless it is for the preservation of the ATS from extreme damages.
-- The ATS may be used as shelter in times of great emergency. Outside of these scenarios, it is an asset of the Trade Guild and should not be used for non-commerce related tasks by anyone but the Salvage team guarding it.
+- Враждебные угрозы на борту АТС могут быть ликвидированы утилизаторами, и после нейтрализации их следует незамедлительно передать службе безопасности станции.
+- Враждебные угрозы, активно наносящие ущерб АТС, могут быть ликвидированы утилизаторами, но их не следует преследовать, как только они перестают представлять активную угрозу для АТС.
+- Автоматическая торговая станция должна постоянно оставаться запитанной, с пригодной для дыхания атмосферой и под давлением.
+- Автоматическую торговую станцию запрещено приближать или удалять от назначенной космической станции в любое время, за исключением случаев спасения АТС от катастрофических повреждений.
+- АТС может использоваться в качестве укрытия во время масштабных чрезвычайных ситуаций. Вне этих сценариев она является собственностью Торговой гильдии и не должна использоваться для задач, не связанных с коммерцией, кем-либо, кроме охраняющей её команды утилизаторов.
 
-3. Highly dangerous expeditions may only be undertaken with the express permission of the Quartermaster. Going on unauthorized expeditions is grounds for demotion.
+3. Высокоопасные экспедиции могут предприниматься только с прямого разрешения Квартирмейстера. Отправление в несанкционированные экспедиции является основанием для понижения в должности.
 
-4. Contraband found while on an expedition may not be used. Exceptions for imminent loss of life or grievous bodily harm are accepted.
+4. Контрабанду, найденную во время экспедиции, использовать запрещено. Исключения допускаются в случае неминуемой угрозы гибели или причинения тяжкого вреда здоровью.
 
-5. Upon arrival to the station, all contraband must be delivered to the security department immediately.
+5. По прибытии на станцию вся контрабанда должна быть немедленно доставлена в отдел службы безопасности.
 
-6. Salvage Specialists are to follow the guidelines for Cargo Technicians when on station.
+6. Находясь на станции, утилизаторы обязаны соблюдать правила, предусмотренные для грузчиков.
 
-7. Machinery may not be moved from the station to the shuttle unless there are duplicates available on station. Equipment like ore processors and the salvage ticket machine are for use by both Salvage Specialists and Mining Specialists, removal impedes Mining Specialists duties.
+7. Запрещается перемещать оборудование со станции на шаттл, если на станции нет его дубликатов. Такое оборудование, как переработчики руды и автомат выдачи билетов утилизации, предназначено для использования как утилизаторами, так и шахтёрами; его демонтаж препятствует выполнению обязанностей шахтёров.
 </Document>

@@ -1,0 +1,9 @@
+ent-Bullet50mmRocketStarlight = { ent-BulletWeakRocket }
+    .desc = { ent-BulletWeakRocket.desc }
+ent-Cartridge50mmRocket = 50-мм ракета
+    .desc = 50-мм ракетный картридж, разработанный для системы пушек шаттла ADMP-27 VESPERA. Меньше и легче стандартных зарядов РПГ, но всё ещё обладает мощным ударом.
+ent-Magazine50mmRocket = магазин 50-мм ракет
+    .desc = Вместительный магазин на 26 снарядов, заряженный 50-мм ракетами для системы пушек шаттла ADMP-27 VESPERA.
+ent-Magazine50mmRocketEmpty = магазин 50-мм ракет (пустой)
+    .desc = { ent-Magazine60mmRocket.desc }
+    .suffix = пустой

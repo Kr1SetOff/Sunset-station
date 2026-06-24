@@ -1,0 +1,15 @@
+ent-BoxSurvivalIPC = { ent-BoxSurvival }
+    .desc = Коробка с припасами для выживания для МКИ.
+    .suffix = МКИ
+ent-BoxSurvivalNonBreather = { ent-BoxSurvival }
+    .desc = Коробка с припасами для выживания для тех, кому не нужно дышать.
+    .suffix = Бездыханный
+ent-BoxSurvivalNonBreatherExtended = { ent-BoxSurvivalNonBreather }
+    .desc = Коробка с припасами для выживания для тех, кому не нужно дышать. В этой есть двойная порция пайков.
+    .suffix = Бездыханный, Расширенный
+ent-BoxHugNonBreather = { ent-BoxSurvivalNonBreather }
+    .desc = Специальная коробка для чувствительных людей, которым не нужно дышать.
+    .suffix = Экстренный, Бездыханный
+ent-BoxMimeNonBreather = { ent-BoxSurvivalNonBreather }
+    .desc = { ent-BoxSurvivalNonBreather.desc }
+    .suffix = Мим, Бездыханный

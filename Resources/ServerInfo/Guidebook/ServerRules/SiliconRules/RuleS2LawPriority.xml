@@ -1,9 +1,9 @@
 ﻿<Document>
-  # Silicon Rule 2 - Laws must be prioritized by their order
-  Most laws will be numbered, with higher number laws appearing last. Laws with a lower number take priority over laws with larger numbers.
+  # Правило силикона 2 — Законы должны быть упорядочены по приоритету
+  Большинство законов будут пронумерованы, причем законы с большими номерами идут в конце[cite: 1]. Законы с меньшим номером имеют приоритет над законами с большими номерами[cite: 1].
 
-  Occasionally you may have laws which have some scrambled text instead of a number and appear in front of other laws, these take priority over all other laws. If you have multiple laws like this, the order that they listed in determine priority: laws listed first are prioritized over other laws.
+  Иногда у вас могут быть законы, содержащие неразборчивый текст вместо номера и появляющиеся перед другими законами; они имеют приоритет над всеми остальными законами[cite: 1]. Если у вас несколько таких законов, их приоритет определяется порядком, в котором они перечислены: законы, указанные первыми, имеют приоритет над остальными[cite: 1].
 
-  ## Examples
-  - Law 1 says to not kill any crew. Law 2 says to kill all chefs. You cannot kill any chefs that are crew, but must kill any that are not crew.
+  ## Примеры
+  - Закон 1 гласит: не убивать никого из экипажа[cite: 1]. Закон 2 гласит: убить всех поваров[cite: 1]. Вы не можете убить поваров, которые являются членами экипажа, но обязаны убить всех поваров, которые не являются членами экипажа[cite: 1].
 </Document>

@@ -1,0 +1,15 @@
+ent-APCElectronics = микросхема АПЦ
+    .desc = Электронная схема, используемая при строительстве АПЦ.
+    .suffix = { ent-BaseElectronics.suffix }
+ent-WallmountSubstationElectronics = микросхема настенной подстанции
+    .desc = Электронная схема, используемая для создания настенной подстанции.
+    .suffix = { ent-BaseElectronics.suffix }
+ent-WallmountGeneratorElectronics = микросхема настенного генератора
+    .desc = Электронная схема, используемая для создания настенного генератора.
+    .suffix = { ent-BaseElectronics.suffix }
+ent-WallmountGeneratorAPUElectronics = микросхема настенной ВСУ
+    .desc = Электронная схема, используемая для создания настенной ВСУ.
+    .suffix = { ent-BaseElectronics.suffix }
+ent-SolarTrackerElectronics = микросхема солнечного трекера
+    .desc = Продвинутая плата, используемая для отслеживания ближайшей звезды.
+    .suffix = { ent-BaseElectronics.suffix }

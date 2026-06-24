@@ -1,27 +1,36 @@
 <Document>
-  # IPCs
+  # IPC
 
   <Box>
     <GuideEntityEmbed Entity="AppearanceIPC" Caption=""/>
   </Box>
 
-  [color=#ffa500]Warning! This species is not recommended for new players due to major gameplay changes![/color]
+  [color=#ffa500]Внимание! Этот вид не рекомендуется новым игрокам из-за значительных изменений в игровом процессе![/color]
 
-  Integrated Positronic Chassis, abbreviated as IPC
+  IPC (Integrated Positronic Chassis) — Интегрированное позитронное шасси.
 
-  ## Racial Features
+  ## Расовые особенности
 
-  - Receive [color=#8147ff]50% more shock damage[/color], [color=#FF3636]20% more blunt damage[/color] and [color=#B9BF93]10% less slash/caustic damage[/color]. You are [color=#ffa500]immune to genetic damage and all toxin damage except for radiation.[/color]
-  - You burn for less time than organic lifeforms, due to your composition.
-  - Deal [color=red]6[/color] blunt damage with your mighty fists of steel!
-  - You don't need to eat or drink, but you do need to stay charged. You can take power directly from APCs or sit in a borg recharger- both work.
-  - You do not manage your internal temperature the same way that organic life forms do, instead relying on internal fans to heat or cool your body. Your internal fans will suffice in standard station environments without issue.
-  - You're very resistant to spacing, as temperature doesn't affect you normally, you are immune to pressure damage, and you don't need to breathe. Long-term existence in vacuums or areas of extreme temperature, hot or cold, will require usage of a cooling unit to regulate your internal temperature.
-  - Play music with your in-built MIDI synthesiser!
-  - Chemicals don't work on you, and your "doctor" is a roboticist. Welding heals physical injuries, HV cables fix electrical damage, glass fixes your eyes, plasma fixes radiation, and Oil packs restore your "blood".
-  - EMPs are [color=red]lethal[/color] to you! Don't let yourself get hit, or you'll run out of power and require manual rebooting.
-  - Internal Headset! It has two slots. Choose wisely!
+  - Получают [color=#8147ff]на 50% больше урона от электричества[/color], [color=#FF3636]на 20% больше дробящего урона[/color] и [color=#B9BF93]на 10% меньше режущего и кислотного урона[/color]. Вы [color=#ffa500]полностью иммунны к генетическим повреждениям и всем токсинам, кроме радиации.[/color]
+  - Горят значительно меньше времени, чем органические формы жизни, благодаря своей конструкции.
+  - Наносят [color=red]6[/color] единиц дробящего урона своими могучими стальными кулаками!
+  - Вам не нужно есть или пить, однако необходимо поддерживать заряд батареи. Вы можете заряжаться напрямую от APC или использовать зарядную станцию для боргов.
+  - Вы не регулируете температуру тела так же, как органические существа. Вместо этого используются внутренние вентиляторы для нагрева и охлаждения корпуса. В обычных условиях станции их более чем достаточно.
+  - Вы крайне устойчивы к разгерметизации: температура обычно не влияет на вас, вы невосприимчивы к урону от давления и не нуждаетесь в дыхании. Однако длительное пребывание в вакууме или экстремально горячей либо холодной среде потребует использования охлаждающего модуля для контроля внутренней температуры.
+  - Вы можете воспроизводить музыку с помощью встроенного MIDI-синтезатора!
+  - Химические вещества на вас не действуют, а вашим «врачом» является робототехник. Для лечения используются:
+    - Сварочный аппарат — восстанавливает физические повреждения.
+    - Кабели высокого напряжения (HV cables) — устраняют электрические повреждения.
+    - Стекло — ремонтирует глаза.
+    - Плазма — устраняет радиационные повреждения.
+    - Масляные пакеты (Oil Packs) — восполняют вашу «кровь».
+  - ЭМИ-воздействие (EMP) для вас [color=red]смертельно опасно[/color]! Избегайте попадания под ЭМИ, иначе вы потеряете питание и потребуете ручной перезагрузки.
+  - Встроенная гарнитура! Она имеет два слота для ключей каналов связи. Выбирайте их с умом!
 
-  Helpful tip - You need to unlock your panel and then use a screwdriver to get access to your internals, this includes the comm keys! Once open, right click yourself and go to "Eject" - You'll then pull out the last key you put in.
+  ## Полезный совет
+
+  Чтобы получить доступ к своим внутренним компонентам, сначала разблокируйте сервисную панель, а затем используйте отвёртку.
+
+  Это касается и ключей каналов связи гарнитуры. После открытия панели нажмите по себе правой кнопкой мыши и выберите пункт **«Извлечь» (Eject)** — вы достанете последний установленный ключ связи.
 
 </Document>

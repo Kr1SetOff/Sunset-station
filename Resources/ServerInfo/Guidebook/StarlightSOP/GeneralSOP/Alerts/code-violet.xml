@@ -1,53 +1,51 @@
 <Document>
-    # Code Violet
+    # Фиолетовый код
 
-    ## Called by:
+    ## Объявляется:
 
-    Any two Command members, or Captain.
+    Любыми двумя членами Командования или Капитаном.
 
-    ## Conditions:
+    ## Условия:
 
-    A Viral Pathogen has infected a significant portion of the crew. In the event of a Viral Outbreak, all infected personnel are to direct themselves to Medbay immediately.
+    Вирусный патоген поразил значительную часть экипажа. В случае вспышки вируса весь инфицированный персонал должен немедленно направиться в медотсек.
 
-    ## Security:
+    ## Служба безопасности:
 
-    1. Medbay should be secured ASAP. Quarantine of infected is top priority.
+    1. Медотсек должен быть взят под охрану в кратчайшие сроки. Карантин инфицированных является главным приоритетом.
 
-    2. Should securing medbay not be possible, the evacuation shuttle arrival area should be secured.
+    2. Если взять под охрану медотсек невозможно, необходимо обеспечить безопасность зоны прибытия эвакуационного шаттла.
 
+    ## Охраняемые зоны:
 
-    ## Secure Areas:
+    1. Для доступа в охраняемые зоны требуется специальное разрешение, за исключением случаев, когда это необходимо для выполнения служебных обязанностей персонала.
 
-    1. Secure areas require an access permit, unless required by a staff job.
+    2. Охраняемые зоны: Медицинский отдел, Департамент безопасности (СБ), хранилище EVA, техническое хранилище, гравитационный генератор, все помещения инженерного отдела за пределами вестибюля, хранилище ценностей (Vault) и зоны, требующие командного доступа.
 
-    2. Secure areas: Medical department, Security department, EVA Storage, Tech Storage, Gravity Generator, All Engineering areas beyond the lobby, Vault, and areas requiring command access.
+    3. Ограничения на блокировку охраняемых зон отсутствуют. Охраняемые зоны могут оставаться заблокированными на болты или разблокированными по усмотрению Командования.
 
-    3. There are no restrictions on bolting Secure Areas. Secure Areas may be left bolted or unbolted at the discretion of Command personnel.
+    4. Лицам, не входящим в командный состав, запрещено проникать в охраняемые зоны, если это не требуется для выполнения их работы.
 
-    4. Secure areas are not to be entered by non-command, unless required by their job.
+    ## Медицинский отдел:
 
+    1. Химическая лаборатория должна немедленно приступить к разработке лекарства от инфекции.
 
-    ## Medical:
+    2. Входы в медотсек должны быть заблокированы для предотвращения дальнейшего заражения медицинского персонала. Пропуск экипажа в медотсек должен осуществляться строго контролируемо.
 
-    1. Chemistry is to immediately begin researching the cure to the infection.
+    3. Любой персонал с подозрением на заражение должен быть изолирован.
 
-    2. Medical entrances should be locked down to prevent further infection of medical personnel. Crew should be let into medical in a controlled manner.
+    4. Все усмирённые инфицированные должны быть доставлены в химическую лабораторию для помощи в производстве лекарства.
 
-    3. Any potentially infected personnel should be isolated.
+    5. Готовое лекарство должно быть распространено среди экипажа, как только оно станет доступно.
 
-    4. Any pacified infected personnel should be brought to chemistry to aid in cure production.
+    ## Экипаж в целом:
 
-    5. A cure should be distributed to the crew once available.
+    1. Персоналу следует соблюдать самокарантин во избежание заражения. Укройтесь в безопасном месте и избегайте контактов с потенциально заражёнными лицами.
 
-    ## General Crew:
+    2. Если вы считаете, что заражены, спокойно ожидайте выдачи лекарства в медотсеке.
 
-    1. Personnel should self-quarantine to avoid infection. Shelter in a safe area and avoid those who are potentially infected.
+    3. Как только угроза минует, можно возобновить работу.
 
-    2. If you believe you are infected, calmly wait for the distribution of the cure at medbay.
+    ## Командование:
 
-    3. Once the threat has passed, work may resume.
-
-    ## Command:
-
-    Should the station threat become too high to handle, emergency shuttle should be called.
+    Если уровень угрозы на станции станет слишком высок для самостоятельного контроля, необходимо вызвать эвакуационный шаттл.
 </Document>

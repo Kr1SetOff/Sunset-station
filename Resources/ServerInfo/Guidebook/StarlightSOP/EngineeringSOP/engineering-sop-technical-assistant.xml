@@ -1,17 +1,17 @@
 <Document>
-# Technical Assistant
+# Технический ассистент
 
-<GuideEntityEmbed Entity="ClothingHeadHatWelding" Caption="Why is it so dark?"/>
+<GuideEntityEmbed Entity="ClothingHeadHatWelding" Caption="Почему так темно?"/>
 
-1. Technical Assistants report to their trainer and the Chief Engineer.
+1. Технические ассистенты подчиняются своему наставнику и Главному инженеру (CE).
 
-2. Technical Assistants must travel with another member of the Engineering department at all times.
+2. Технические ассистенты обязаны всегда перемещаться в сопровождении другого сотрудника инженерного отдела.
 
-3. Once trained, Technical Assistants may perform simple duties such as setting up of the AME or deploying of solar panels.
+3. После прохождения обучения технические ассистенты могут выполнять простые обязанности, такие как сборка ДАМ (AME) или развёртывание солнечных панелей.
 
-4. Technical Assistants may assist in any normal station repairs but must be closely supervised during any power generation duties.
+4. Технические ассистенты могут помогать в проведении обычного ремонта станции, но должны находиться под строгим надзором при выполнении любых задач, связанных с генерацией энергии.
 
-5. In emergencies, Technical Assistants may perform simple repairs without supervision.
+5. В случае чрезвычайных ситуаций технические ассистенты могут выполнять простой ремонт без надзора.
 
-6. Technical Assistants may not make major station renovations or changes without direct supervision.
+6. Техническим ассистентам запрещено проводить масштабные перестройки или изменения на станции без прямого контроля со стороны наставника или инженеров.
 </Document>

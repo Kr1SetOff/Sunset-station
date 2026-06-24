@@ -1,0 +1,9 @@
+ent-BoneGelBase = { ent-BaseToolSurgery }
+    .desc = { ent-BaseToolSurgery.desc }
+ent-BoneGelAbductor = флакон абдукторного костного геля
+    .desc = { ent-BoneGel.desc }
+ent-BoneGelRipper = флакон костного геля
+    .desc = Контейнер для костного геля, который часто необходимо пополнять из специализированного аппарата.
+ent-DebugStickSurgery = супер-удивительная палочка-хирург «всё в одном»
+    .desc = Палочка.
+    .suffix = ОТЛАДКА

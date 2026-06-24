@@ -1,0 +1,16 @@
+ent-Dart = дротик
+    .desc = Light throwing dart for playing darts. Don't get in the eye!
+ent-DartBlue = { ent-Dart }
+    .desc = { ent-Dart.desc }
+ent-DartPurple = { ent-Dart }
+    .desc = { ent-Dart.desc }
+ent-DartYellow = { ent-Dart }
+    .desc = { ent-Dart.desc }
+ent-HypoDart = { ent-Dart }
+    .desc = { ent-Dart.desc }
+    .suffix = HypoDart
+ent-TargetDarts = мишень для дротиков
+    .desc = A target for playing darts.
+ent-HypoDartBox = коробка с гиподротиком
+    .desc = A small box containing a hypodart. Packaging disintegrates when opened, leaving no evidence behind.
+    .suffix = HypoDart

@@ -1,0 +1,11 @@
+ent-CCMoproachGlasses = { ent-ClothingEyesGlassesCentComm }
+    .desc = Очки офицера ЦентКома, которые совместимы с мотроахами. К сожалению, в результате они прилипли к их лицу.
+ent-MobCCMoproach = мотроах ЦК
+    .desc = Мотроах, специально обученный методам уборки, которыми может похвастаться лучшее, что есть у NT.
+    .suffix = ОБР Уборщиков
+ent-MobCCMoproachHat = { ent-MobCCMoproach }
+    .desc = { ent-MobCCMoproach.desc }
+    .suffix = ОБР Уборщиков, шляпа
+ent-CCMoproachCubeWrapped = куб мотроаха ЦК
+    .desc = Просто добавь воды! *чирикает*
+    .suffix = { ent-MoproachCubeWrapped.suffix }

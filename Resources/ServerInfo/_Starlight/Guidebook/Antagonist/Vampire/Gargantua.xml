@@ -1,41 +1,54 @@
 <Document>
-  # Vampire: Gargantua
+  # Вампир: Гаргантюа
 
   <Box>
-    [color=#c56929][italic]"When subtlety ends — you begin..."[/italic][/color]
+    [color=#c56929][italic]"Когда заканчивается скрытность — начинаешься ты..."[/italic][/color]
   </Box>
 
-  Gargantua is the breakthrough and brawler class. You become a direct threat, but you pay for it in visibility.
-  Your job is to choose the moment when stealth stops being profitable and end the scene with force.
+Гаргантюа — класс прорыва и ближнего боя. Вы становитесь прямой угрозой, но расплачиваетесь за это заметностью.
+Ваша задача — выбрать момент, когда скрытность перестаёт приносить пользу, и закончить ситуацию грубой силой.
 
-  ## Role in the Round
+## Роль в раунде
 
-   [bold]Breakpoint[/bold]: break security formations, force entry, delete solo patrols.
-   [bold]Evac disruption[/bold]: hit critical points (bridge/med/armory) with good timing.
+[bold]Прорыв[/bold]: разрушайте построения службы безопасности, взламывайте оборону и устраняйте одиночные патрули.
 
-  ## Toolkit (Total Blood Threshold | Cost)
+[bold]Срыв эвакуации[/bold]: наносите удары по ключевым точкам станции (мостик, медотсек, оружейная) в наиболее подходящий момент.
 
-  [bold](150 | 30)[/bold] Blood Swell
-   Temporarily reduces incoming damage and shortens stun durations.
-   Limitation: you cannot use guns while it is active.
-   After 400 total blood, it also adds extra melee damage.
+## Арсенал способностей (Порог крови | Стоимость)
 
-  [bold](250 | 30)[/bold] Blood Rush
-   A short speed spike: chase, escape, or crash into a formation.
+[bold](150 | 30)[/bold] Кровавое усиление
 
-  [bold](250 | 30)[/bold] Seismic Stomp
-   Slam the ground: knocks down and throws nearby creatures; can break floor tiles.
-   Great for creating chaos and resetting distance.
+Временно снижает получаемый урон и уменьшает длительность оглушений.
 
-  [bold](600 | 0)[/bold] Overwhelming Force (toggle)
-   Automatically pries unpowered doors.
-   While active, you can't be pushed or pulled.
-   Cost is blood per door (~5).
+Ограничение: пока способность активна, вы не можете использовать огнестрельное оружие.
 
-  [bold](800 | 20)[/bold] Demonic Grasp
-   A ranged “hand” up to 15 tiles: immobilizes the target and can pull them to you in combat mode.
+После накопления 400 единиц крови также увеличивает урон в ближнем бою.
 
-  [bold](1000 | 30)[/bold] Charge
-   A charge to break through and finish targets.
+[bold](250 | 30)[/bold] Кровавый рывок
+
+Кратковременный всплеск скорости: догоняйте цели, уходите от преследования или врезайтесь в строй противника.
+
+[bold](250 | 30)[/bold] Сейсмический топот
+
+Ударяет по земле, сбивая с ног и отбрасывая ближайших существ; способен разрушать напольные плитки.
+
+Отлично подходит для создания хаоса и разрыва дистанции.
+
+[bold](600 | 0)[/bold] Непреодолимая сила (переключаемая)
+
+Автоматически вскрывает обесточенные двери.
+
+Пока способность активна, вас невозможно толкнуть или притянуть.
+
+Стоимость — кровь за каждую дверь (примерно 5 единиц).
+
+[bold](800 | 20)[/bold] Демоническая хватка
+
+Дальнобойная «рука» с радиусом до 15 тайлов: обездвиживает цель и может притянуть её к вам в боевом режиме.
+
+[bold](1000 | 30)[/bold] Натиск
+
+Мощный рывок для прорыва обороны и добивания целей.
 
 </Document>
+

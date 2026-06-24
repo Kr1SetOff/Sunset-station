@@ -1,0 +1,14 @@
+ent-BaseNinjaObjective = { ent-BaseObjective }
+    .desc = { ent-BaseObjective.desc }
+ent-DoorjackObjective = { ent-BaseNinjaObjective }
+    .desc = { ent-BaseNinjaObjective.desc }
+ent-StealResearchObjective = { ent-BaseNinjaObjective }
+    .desc = Ваши перчатки можно использовать для взлома исследовательского сервера и кражи его ценных данных. Если научный отдел бездельничал, вам придется взяться за работу.
+ent-SpiderChargeObjective = { ent-BaseNinjaObjective }
+    .desc = Эту бомбу можно взорвать только в определенном месте. Обратите внимание, что бомба не будет работать нигде больше!
+ent-NinjaSurviveObjective = Выжить
+    .desc = Вы были бы не очень хорошим ниндзя, если бы умерли, не так ли?
+ent-TerrorObjective = Наведи ужас
+    .desc = Используйте свои перчатки на консоли связи, чтобы навлечь на станцию еще одну угрозу.
+ent-MassArrestObjective = Всех — в розыск!
+    .desc = Используйте свои перчатки для взлома консоли криминальных записей, объявив в розыск всю станцию!

@@ -1,0 +1,14 @@
+names-resomi-packs-dataset-1 = Стая Авиаторов
+names-resomi-packs-dataset-2 = Стая Экранных Клевателей
+names-resomi-packs-dataset-3 = Стая Защитников Корпуса
+names-resomi-packs-dataset-4 = Стая Железных Когтей
+names-resomi-packs-dataset-5 = Стая Стражей Шлюза
+names-resomi-packs-dataset-6 = Стая Спринтеров
+names-resomi-packs-dataset-7 = Стая Плазменных Когтей
+names-resomi-packs-dataset-8 = Стая Железных Лап
+names-resomi-packs-dataset-9 = Стальное Гнездо
+names-resomi-packs-dataset-10 = Стая Серебряных Перьев
+names-resomi-packs-dataset-11 = Стая Шахтёрских Лап
+names-resomi-packs-dataset-12 = Стая Охотников
+names-resomi-packs-dataset-13 = Стая Тёмных Перьев
+names-resomi-packs-dataset-14 = Гнездо Техников

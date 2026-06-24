@@ -1,48 +1,48 @@
 <Document>
-# Duty Officer
+# Дежурный офицер
 
-<GuideEntityEmbed Entity="ToyFigurineSecurity" Caption="Duty Officer"/>
+<GuideEntityEmbed Entity="ToyFigurineSecurity" Caption="Дежурный офицер"/>
 
 - 1.\n
-Standard [color=#00a933]Code Green[/color] equipment is:
+Стандартное снаряжение для [color=#00a933]Зелёного кода[/color]:
 
 <Box>
-	<GuideEntityEmbed Entity="Stunbaton"/>
-	<GuideEntityEmbed Entity="WeaponDisabler"/>
+    <GuideEntityEmbed Entity="Stunbaton"/>
+    <GuideEntityEmbed Entity="WeaponDisabler"/>
 </Box>
 <Box>
-	<GuideEntityEmbed Entity="HoloprojectorSecurity"/>
-	<GuideEntityEmbed Entity="FlashlightSeclite"/>
-	<GuideEntityEmbed Entity="RadioHandheldSecurity"/>
+    <GuideEntityEmbed Entity="HoloprojectorSecurity"/>
+    <GuideEntityEmbed Entity="FlashlightSeclite"/>
+    <GuideEntityEmbed Entity="RadioHandheldSecurity"/>
 </Box>
 <Box>
     <GuideEntityEmbed Entity="GrenadeFlashBang"/>
-	<GuideEntityEmbed Entity="TearGasGrenade"/>
+    <GuideEntityEmbed Entity="TearGasGrenade"/>
 </Box>
 <Box>
     <GuideEntityEmbed Entity="Handcuffs"/>
-	<GuideEntityEmbed Entity="Zipties"/>
+    <GuideEntityEmbed Entity="Zipties"/>
 </Box>
 
 - 2.\n
-The Duty Officer is allowed to use and wear riot equipment and weaponry on green alert if needed to quell unrest in the brig.
+Дежурному офицеру разрешается использовать и носить снаряжение и оружие для подавления беспорядков (riot equipment) при Зелёном коде, если это необходимо для утихомиривания бунта в бриге.
 - 3.\n
-The Duty Officer's duty is to assist the Warden with all of their duties and they report directly to them. In the absence of orders from the Warden their primary responsibilities are, in order of importance:\n\n
+Обязанность Дежурного офицера — помогать Смотрителю во всех его делах, и он подчиняется напрямую ему. При отсутствии распоряжений от Смотрителя его основные обязанности в порядке значимости таковы:\n\n
 3.1\n
-Assisting with subduing riots in the brig.\n\n
+Помощь в подавлении бунтов в бриге.\n\n
 3.2\n
-Assisting with securing the brig, and the department in general.\n\n
+Помощь в обеспечении безопасности брига и отдела в целом.\n\n
 3.3\n
-Assisting with the maintenance of the Criminal Records System.\n\n
+Помощь в ведении системы уголовных дел (Criminal Records).\n\n
 3.4\n
-Seeing to the well-being and health of prisoners and detainees.\n\n
+Забота о благополучии и здоровье заключённых и задержанных.\n\n
 3.5\n
-Assisting officers in the field via utilisation of the Criminal Records System and the Crew Monitoring System from inside the Security Department.
+Помощь офицерам на выездах посредством использования системы уголовных дел и системы мониторинга экипажа (Crew Monitoring) изнутри отдела службы безопасности.
 - 4.\n
-The Duty Officer is cleared to confine sentenced criminals in the brig for up to [bold]15 minutes[/bold].\n\n
+Дежурный офицер имеет право задерживать осуждённых преступников в бриге на срок до [bold]15 минут[/bold].\n\n
 4.1\n
-For a sentence to be valid, it must be read aloud to the Warden or Head of Security. If done over radio, an audible confirmation must be received.\n\n
+Чтобы приговор считался действительным, он должен быть зачитан вслух Смотрителю или Главе службы безопасности. Если это делается по рации, должно быть получено устное подтверждение.\n\n
 4.2\n
-Duty Officers are particularly obligated to see to it that these sentences are properly filed.\n\n
+Дежурные офицеры особо обязаны следить за тем, чтобы эти приговоры были должным образом задокументированы.\n\n
 
 </Document>

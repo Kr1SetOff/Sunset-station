@@ -1,0 +1,13 @@
+ent-BottleCaseMedTak = химический кейс
+    .desc = Укрепленный кейс с мягкими слотами для бутылок.
+ent-MedkitCombatMedTak = боевой набор MedTak
+    .desc = Личный медицинский набор оператора.
+ent-PenPackMedTak = упаковка автоинъекторов
+    .desc = Подсумок, набитый автоинъекторами.
+    .suffix = MedTak, Заполненный
+ent-SurgicalKitMedTak = продвинутый хирургический набор
+    .desc = Компактный набор хирургических инструментов.
+    .suffix = MedTak, Заполненный
+ent-BoxFolderMedTak = { ent-BoxFolderBaseEmpty }
+    .desc = { ent-BoxFolderBaseEmpty.desc }
+    .suffix = MedTak, Со счетами

@@ -1,6 +1,7 @@
 <Document>
-# Drinks
-Knowing how to make a requested drink is important. Here are the different drinks in the game, including their recipes:
+  # Напитки
+  Умение приготовить заказанный напиток — важный навык для любого бармена. Ниже приведен полный список доступных в игре напитков и их рецептов:
 
-<GuideReagentGroupEmbed Group="Drinks"/>
+  
+  <GuideReagentGroupEmbed Group="Drinks"/>
 </Document>

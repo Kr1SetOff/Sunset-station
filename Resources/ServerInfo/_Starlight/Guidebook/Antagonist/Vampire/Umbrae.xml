@@ -1,37 +1,53 @@
 <Document>
-  # Vampire: Umbrae
+  # Вампир: Умбра
 
   <Box>
-    [color=#5e154e][italic]"Darkness is not the absence of light. It is the absence of witnesses."[/italic][/color]
+    [color=#5e154e][italic]"Тьма — это не отсутствие света. Это отсутствие свидетелей."[/italic][/color]
   </Box>
 
-  Umbrae is the stealth and mobility class. Your wins come from picking the right place, light level, and timing.
-  You are strongest where others are uncomfortable: in darkness, in chaos, and at short range.
+Умбра — класс скрытности и мобильности. Ваши победы зависят от правильного выбора места, уровня освещения и подходящего момента.
 
-  ## Abilities (Total Blood Threshold | Cost)
+Вы наиболее опасны там, где другим некомфортно: во тьме, в хаосе и на короткой дистанции.
 
-  [bold](150 | (toggle))[/bold] Cloak of Darkness
-   Toggles whether you are currently cloaking yourself in darkness.
-   When in darkness and toggled on, you move at increased speeds.
+## Способности (Порог крови | Стоимость)
 
-  [bold](200 | 20)[/bold] Shadow Snare
-   You summon a trap on the ground. When crossed it will blind the target and ensnare them
-   Flash effects can destroy it — place it in darkness and offangle.
+[bold](150 | Переключаемая)[/bold] Плащ Тьмы
 
-  [bold](200 | 20)[/bold] Shadow Anchor
-   You summon a dimensional anchor after a delay.
-   Casting again will teleport you back to the anchor. You will fake a recall after 2 minutes
+Переключает состояние окутывания тьмой.
 
-  [bold](300 | 20)[/bold] Dark Passage
-    Teleports you to a targeted turf.
+Пока способность активна и вы находитесь в темноте, ваша скорость передвижения значительно увеличивается.
 
-  [bold](400 | 0)[/bold] Extinguish
-   Absorbs light sources around you.
+[bold](200 | 20)[/bold] Теневая ловушка
 
-  [bold](800 | 50)[/bold] Shadow Boxing
-   Your shadows beat up a target while you stay close.
+Создаёт на земле теневую ловушку.
 
-  [bold](1000 | (toggle))[/bold] Eternal Darkness
-   When toggled, you shroud the area around you in darkness and slowly lower the body temperature of people nearby.
+При пересечении ослепляет цель и обездвиживает её.
+
+Эффекты вспышек способны уничтожить ловушку — размещайте её в темноте и вне прямой видимости.
+
+[bold](200 | 20)[/bold] Теневой якорь
+
+После небольшой задержки создаёт пространственный якорь.
+
+Повторное применение способности телепортирует вас обратно к якорю.
+
+Через 2 минуты происходит ложный отзыв якоря.
+
+[bold](300 | 20)[/bold] Тёмный проход
+
+Телепортирует вас на выбранную клетку.
+
+[bold](400 | 0)[/bold] Поглощение света
+
+Поглощает источники света вокруг вас.
+
+[bold](800 | 50)[/bold] Теневой бой
+
+Ваши тени избивают выбранную цель, пока вы остаётесь поблизости.
+
+[bold](1000 | Переключаемая)[/bold] Вечная тьма
+
+Пока способность активна, вы окутываете окружающую область непроглядной тьмой и постепенно понижаете температуру тела всех существ поблизости.
 
 </Document>
+

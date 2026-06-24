@@ -1,0 +1,12 @@
+ent-BaseAutoMender = автомендер
+    .desc = Устройство, используемое для лечения пациентов от тупых ударов, ожогов или обоих типов повреждений.
+ent-AutoMenderBrute = автомендер от ушибов
+    .desc = Устройство, используемое для лечения пациентов от тупых ударов, ожогов или обоих типов повреждений. Для работы использует бикаридин.
+ent-AutoMenderBruteFilled = { ent-AutoMenderBrute }
+    .desc = { ent-AutoMenderBrute.desc }
+    .suffix = Заполненный
+ent-AutoMenderBurn = автомендер от ожогов
+    .desc = Устройство, используемое для лечения пациентов от тупых ударов, ожогов или обоих типов повреждений. Для работы использует дермалин.
+ent-AutoMenderBurnFilled = { ent-AutoMenderBurn }
+    .desc = { ent-AutoMenderBurn.desc }
+    .suffix = Заполненный

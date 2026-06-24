@@ -1,64 +1,64 @@
 <Document>
-# Head of Security
+# Глава службы безопасности
 
-<GuideEntityEmbed Entity="ToyFigurineHeadOfSecurity" Caption="Head of Security"/>
+<GuideEntityEmbed Entity="ToyFigurineHeadOfSecurity" Caption="Глава службы безопасности"/>
 
 ### §1\n
-Standard [color=#00a933]Code Green[/color] equipment is:
+Стандартное снаряжение для [color=#00a933]Зелёного кода[/color]:
 
 <Box>
-	<GuideEntityEmbed Entity="WeaponSubMachineGunWt550"/>
-	or
-	<GuideEntityEmbed Entity="WeaponEnergySMG"/>
+    <GuideEntityEmbed Entity="WeaponSubMachineGunWt550"/>
+    или
+    <GuideEntityEmbed Entity="WeaponEnergySMG"/>
 </Box>
 <Box>
-	<GuideEntityEmbed Entity="Stunbaton"/>
+    <GuideEntityEmbed Entity="Stunbaton"/>
 </Box>
 <Box>
-	<GuideEntityEmbed Entity="HoloprojectorSecurity"/>
-	<GuideEntityEmbed Entity="FlashlightSeclite"/>
-	<GuideEntityEmbed Entity="RadioHandheldSecurity"/>
+    <GuideEntityEmbed Entity="HoloprojectorSecurity"/>
+    <GuideEntityEmbed Entity="FlashlightSeclite"/>
+    <GuideEntityEmbed Entity="RadioHandheldSecurity"/>
 </Box>
 <Box>
-	<GuideEntityEmbed Entity="CombatKnife"/>
-	in
-	<GuideEntityEmbed Entity="ClothingShoesBootsJack"/>
+    <GuideEntityEmbed Entity="CombatKnife"/>
+    в
+    <GuideEntityEmbed Entity="ClothingShoesBootsJack"/>
 </Box>
 <Box>
-	<GuideEntityEmbed Entity="GrenadeFlashBang"/>
-	<GuideEntityEmbed Entity="TearGasGrenade"/>
+    <GuideEntityEmbed Entity="GrenadeFlashBang"/>
+    <GuideEntityEmbed Entity="TearGasGrenade"/>
 </Box>
 <Box>
-	<GuideEntityEmbed Entity="Handcuffs"/>
-	<GuideEntityEmbed Entity="Zipties"/>
+    <GuideEntityEmbed Entity="Handcuffs"/>
+    <GuideEntityEmbed Entity="Zipties"/>
 </Box>
 
 - 2.\n
-The Head of Security is subject to both Security and Command SOP. If overlapping, Security SOP takes precedence.
+Глава службы безопасности подчиняется как СОП СБ, так и СОП Командования. В случае их пересечения СОП СБ имеет приоритет.
 - 3.\n
-The Head of Security is first and foremost the leader of the Security Department.\n\n
+Глава службы безопасности является в первую очередь руководителем отдела службы безопасности.\n\n
 3.1\n
-They are responsible for the proper adherence to SOP and Corporate Law of their entire department.\n\n
+Он несёт ответственность за надлежащее соблюдение СОП и Корпоративного закона всем своим отделом.\n\n
 3.2\n
-They are responsible for the coordination of their department, particularly during times of crisis.\n\n
+Он отвечает за координацию действий своего отдела, особенно во время кризисных ситуаций.\n\n
 3.3\n
-They are responsible for staying informed on matters of station safety, and must be able and willing to inform the crew as to the reasons for elevated threat levels.\n\n
+Он обязан оставаться в курсе вопросов безопасности станции, а также должен иметь возможность и желание информировать экипаж о причинах повышения уровня угрозы.\n\n
 3.4\n
-They are responsible for covering staff shortages in their department, using the following methods in order of preference:\n\n
+Он отвечает за устранение нехватки кадров в своём отделе, используя следующие методы в порядке приоритета:\n\n
 3.4.1\n
-Re-assignment of existing security members.\n\n
+Перераспределение обязанностей среди действующих сотрудников СБ.\n\n
 3.4.2\n
-Recruitment of new security members.\n\n
+Наём новых сотрудников в службу безопасности.\n\n
 3.4.3\n
-Performing the duties of missing subordinates on their own.
+Личное выполнение обязанностей отсутствующих подчинённых.
 - 4.\n
-The Head of Security may not engage in regular Security Officer activities if these prevent them from properly upholding §3.
+Глава службы безопасности не должен заниматься обычной деятельностью офицеров СБ, если это мешает ему должным образом выполнять требования пункта §3.
 - 5.\n
-The Head of Security must not have any disabilities or ailments, such as muteness, that overly prohibit them from upholding §3.
+Глава службы безопасности не должен иметь каких-либо дефектов или недугов (таких как немота), которые чрезмерно препятствуют выполнению требований пункта §3.
 - 6.\n
-The Head of Security should refrain from combat operations unless tactically necessary, instead ensuring the strategic cohesion of their department as per §3.
+Главе службы безопасности следует воздерживаться от участия в боевых операциях без тактической необходимости, обеспечивая вместо этого стратегическую сплочённость своего отдела в соответствии с пунктом §3.
 - 7.\n
-The Head of Security is cleared to confine sentenced criminals in the Brig for up to 30 minutes.\n\n
+Глава службы безопасности имеет право задерживать осуждённых преступников в бриге на срок до 30 минут.\n\n
 7.1\n
-The Head of Security is furthermore allowed to overrule the sentences of other members of Security as long as the sentence hasn't already been handed out to the detainee.
+Кроме того, Глава службы безопасности имеет право отменять или изменять приговоры других сотрудников СБ, если этот приговор ещё не был официально вынесен и зачитан задержанному.
 </Document>

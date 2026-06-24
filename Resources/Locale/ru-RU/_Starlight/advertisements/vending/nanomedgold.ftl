@@ -1,0 +1,9 @@
+advertisement-nanomedgold-1 = Спасите парочку жизней! — ДЕЛЮКС —
+advertisement-nanomedgold-2 = Лучшее оборудование для вашего роскошного медотсека.
+advertisement-nanomedgold-3 = Только самые безупречные инструменты.
+advertisement-nanomedgold-4 = Химикаты делюкс-качества!
+advertisement-nanomedgold-5 = Эта штука спасает жизни.
+advertisement-nanomedgold-6 = Неужели вам не хочется немного?
+advertisement-nanomedgold-7 = Бам!
+advertisement-nanomedgold-8 = Постарайтесь не устраивать передозировки!
+advertisement-nanomedgold-9 = Устройте кому-нибудь передозировку!

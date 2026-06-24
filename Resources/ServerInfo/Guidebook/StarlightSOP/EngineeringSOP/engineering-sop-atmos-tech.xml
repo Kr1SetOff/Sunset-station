@@ -1,19 +1,19 @@
 <Document>
-# Atmospheric Technician
+# Атмосферный техник
 
-<GuideEntityEmbed Entity="ToyFigurineAtmosTech" Caption="Atmospheric Technician"/>
+<GuideEntityEmbed Entity="ToyFigurineAtmosTech" Caption="Атмосферный техник"/>
 
-1. Atmospheric Technicians report directly to the Chief Engineer.
+1. Атмосферные техники подчиняются непосредственно Главному инженеру (CE).
 
-2. Atmospheric Technicians must set up the distribution and waste gas systems before moving onto other matters. Failure to do so will be considered grounds for immediate dismissal.
+2. Атмосферные техники обязаны настроить системы распределения газов и фильтрации отходов (дистрибуцию и вейст) перед тем, как переходить к другим задачам. Невыполнение этого требования является основанием для немедленного увольнения.
 
-3. Atmospheric Technicians should prioritize atmospheric emergencies over station integrity. Atmospheric Technicians may assist engineering in their duties if no atmospheric emergencies are present.
+3. Атмосферные техники должны отдавать приоритет атмосферным чрезвычайным ситуациям перед структурной целостностью станции. Атмосферные техники могут помогать инженерам в их обязанностях, если атмосферные угрозы отсутствуют.
 
-4. Atmospheric Technicians may not retrieve the axe from its case unless their life is under threat or entry to a crisis location is required.
+4. Атмосферным техникам запрещено доставать топор из защитного чехла, за исключением случаев, когда их жизни угрожает опасность или требуется доступ в зону аварии.
 
-5. Atmospheric Technicians are permitted to assist in the creation of specialized areas for non-human crew members with special atmospheric requirements.
+5. Атмосферным техникам разрешено оказывать помощь в создании специализированных зон для нечеловеческих членов экипажа с особыми требованиями к атмосфере.
 
-6. Atmospheric Technicians must check on the TEG, Supermatter and atmospheric alerts console every 30 minutes or less.
+6. Атмосферные техники обязаны проверять состояние ТЭГ (TEG), Суперматерии и консоли атмосферных тревог не реже чем каждые 30 минут.
 
-7. Any mention of "independence" or "Atmosia" shall be grounds for immediate contract termination.
+7. Любое упоминание «независимости» или «Атмосии» является основанием для немедленного расторжения контракта.
 </Document>

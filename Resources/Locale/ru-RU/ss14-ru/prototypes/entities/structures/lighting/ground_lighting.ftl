@@ -1,0 +1,11 @@
+ent-LightPostSmall = фонарный столб
+    .desc = Постоянно включенный светильник.
+    .suffix = Постоянно включен
+ent-PoweredLightPostSmallEmpty = фонарный столб
+    .desc = Маленький фонарный столб.
+    .suffix = Пустой
+ent-PoweredLightPostSmall = фонарный столб
+    .desc = Светильник. Потребляет энергию и излучает свет при установке лампы.
+ent-PoweredLEDLightPostSmall = LED-световой столбик
+    .desc = Светильник. Потребляет энергию и излучает свет при установке лампы.
+    .suffix = Светодиод

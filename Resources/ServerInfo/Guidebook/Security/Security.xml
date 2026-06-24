@@ -1,39 +1,40 @@
 <Document>
-# Security
-Ensuring the safety of both station and crew is number one for [color=#cb0000]Security[/color]. They are ready for any situation, and [color=#cb0000]Security[/color] are on hand to maintain order and control crowds.
+  # Безопасность (Security)
+  Обеспечение безопасности станции и экипажа — главная задача [color=#cb0000]службы безопасности[/color]. Они готовы к любой ситуации, чтобы поддерживать порядок и контролировать толпу.
 
-They face [textlink="Syndicate Agents" link="Traitors"], [textlink="Nuclear Operatives" link="NuclearOperatives"], [textlink="Zombies" link="Zombies"] and unruly staff.
+  Им противостоят [textlink="агенты Синдиката" link="Traitors"], [textlink="ядерные оперативники" link="NuclearOperatives"], [textlink="зомби" link="Zombies"] и нарушающие правила сотрудники.
 
-## Personnel
-[color=#cb0000]Security[/color]'s staff is made up of Security Cadets, Security Officers, and the Detective. [color=#cb0000]Security[/color] is run by the Warden and Head of Security.
+  ## Персонал
+  В состав [color=#cb0000]службы безопасности[/color] входят кадеты, офицеры и детектив. Руководят подразделением смотритель (Warden) и глава службы безопасности (Head of Security).
 
   <Box>
-    <GuideEntityEmbed Entity="ToyFigurineSecurity" Caption="Secoff"/>
-    <GuideEntityEmbed Entity="ToyFigurineDetective" Caption="Detective"/>
-    <GuideEntityEmbed Entity="ToyFigurineWarden" Caption="Warden"/>
-    <GuideEntityEmbed Entity="ToyFigurineHeadOfSecurity" Caption="HoS"/>
+    <GuideEntityEmbed Entity="ToyFigurineSecurity" Caption="Офицер СБ"/>
+    <GuideEntityEmbed Entity="ToyFigurineDetective" Caption="Детектив"/>
+    <GuideEntityEmbed Entity="ToyFigurineWarden" Caption="Смотритель"/>
+    <GuideEntityEmbed Entity="ToyFigurineHeadOfSecurity" Caption="ГСБ"/>
   </Box>
 
-## Gear
-First we have non-lethals a step above simply telling someone to cooperate with instructions. Both the stunbaton and disabler are capable of limiting the movement of an assailant, whereas handcuffs can be applied to deny a criminal free movement and access to their hands. Cuffs will also shove the person down if your [color=red]harm mode[/color] is active during uncuff.
+  ## Снаряжение
+  Прежде всего, у нас есть несмертельное оружие, которое гораздо эффективнее, чем просто просьбы о сотрудничестве. Электродубинка (stunbaton) и дезейблер (disabler) способны ограничить подвижность агрессора, а наручники (handcuffs) лишают преступника свободы передвижения и возможности использовать руки. Снятие наручников в [color=red]режиме урона[/color] (harm mode) также повалит человека на пол.
   <Box>
     <GuideEntityEmbed Entity="Stunbaton"/>
     <GuideEntityEmbed Entity="Handcuffs"/>
-   <GuideEntityEmbed Entity="WeaponDisabler"/>
+    <GuideEntityEmbed Entity="WeaponDisabler"/>
   </Box>
 
-## Flashes
-[color=#a4885c]Flashes[/color] are an effective tool for dispersing crowds and apprehending particularly evasive targets, with a large area of effect blinding all those without protection.
-It is worth noting that flashes can be both used in a large area ([color=yellow]Z[/color] hotkey) and if you attack somebody with it while [color=red]harm mode[/color] is active. Important to note that localized flashes last [color=yellow]2.5[/color] times as long as large area ones.
-[color=#cb0000]Security[/color] and [color=#a4885c]some[/color] other members of staff have eye protection from flashbangs and flashes.
+  ## Флешеры (Flashes)
+  [color=#a4885c]Флешеры[/color] — эффективный инструмент для разгона толпы и задержания особо прытких целей. Они обладают большой областью действия, ослепляя всех, у кого нет защиты.
+  Важно отметить, что флешеры можно использовать как по области (горячая клавиша [color=yellow]Z[/color]), так и при атаке конкретного человека, если включен [color=red]режим урона[/color]. Локальное ослепление длится в [color=yellow]2,5[/color] раза дольше, чем при использовании по площади.
+  Сотрудники [color=#cb0000]службы безопасности[/color] и [color=#a4885c]некоторые[/color] другие члены экипажа имеют защиту глаз от флешеров и светошумовых гранат.
+  
   <Box>
     <GuideEntityEmbed Entity="Flash"/>
     <GuideEntityEmbed Entity="ClothingEyesGlassesSecurity"/>
     <GuideEntityEmbed Entity="GrenadeFlashBang"/>
   </Box>
 
-## Lethals
-Should the situation dictate, [color=#cb0000]Security[/color] have access to laser rifles, shotguns, handguns and automatic rifles able to put down substantial fire against any who would stand against the station.
+  ## Смертельное оружие
+  Если ситуация требует крайних мер, [color=#cb0000]служба безопасности[/color] имеет доступ к лазерным карабинам, дробовикам, пистолетам и автоматическим винтовкам, способным подавить любого, кто выступит против станции.
   <Box>
     <GuideEntityEmbed Entity="WeaponLaserCarbine"/>
     <GuideEntityEmbed Entity="WeaponShotgunKammerer"/>

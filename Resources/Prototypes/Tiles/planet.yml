@@ -1,7 +1,7 @@
 - type: tile
   id: FloorPlanetDirt
   name: tiles-dirt-planet-floor
-  sprite: /Textures/Tiles/Planet/dirt.rsi/dirt.png
+  sprite: /Textures/Tiles/planet/dirt.png
   variants: 4
   placementVariants:
   - 1.0
@@ -19,7 +19,7 @@
 - type: tile
   id: FloorDesert
   name: tiles-desert-floor
-  sprite: /Textures/Tiles/Planet/Desert/desert.png
+  sprite: /Textures/Tiles/planet/desert/desert.png
   variants: 6
   placementVariants:
   - 1.0
@@ -38,7 +38,7 @@
 - type: tile
   id: FloorLowDesert
   name: tiles-low-desert-floor
-  sprite: /Textures/Tiles/Planet/Desert/low_desert.png
+  sprite: /Textures/Tiles/planet/desert/low_desert.png
   variants: 6
   placementVariants:
   - 1.0
@@ -58,7 +58,7 @@
 - type: tile
   id: FloorPlanetGrass
   name: tiles-grass-planet-floor
-  sprite: /Textures/Tiles/Planet/Grass/grass.png
+  sprite: /Textures/Tiles/planet/grass/grass.png
   variants: 4
   placementVariants:
   - 1.0
@@ -67,14 +67,14 @@
   - 1.0
   edgeSpritePriority: 1
   edgeSprites:
-    SouthEast: /Textures/Tiles/Planet/Grass/single_edge.png
-    NorthEast: /Textures/Tiles/Planet/Grass/single_edge.png
-    NorthWest: /Textures/Tiles/Planet/Grass/single_edge.png
-    SouthWest: /Textures/Tiles/Planet/Grass/single_edge.png
-    South: /Textures/Tiles/Planet/Grass/double_edge.png
-    East: /Textures/Tiles/Planet/Grass/double_edge.png
-    North: /Textures/Tiles/Planet/Grass/double_edge.png
-    West: /Textures/Tiles/Planet/Grass/double_edge.png
+    SouthEast: /Textures/Tiles/planet/grass/single_edge.png
+    NorthEast: /Textures/Tiles/planet/grass/single_edge.png
+    NorthWest: /Textures/Tiles/planet/grass/single_edge.png
+    SouthWest: /Textures/Tiles/planet/grass/single_edge.png
+    South: /Textures/Tiles/planet/grass/double_edge.png
+    East: /Textures/Tiles/planet/grass/double_edge.png
+    North: /Textures/Tiles/planet/grass/double_edge.png
+    West: /Textures/Tiles/planet/grass/double_edge.png
   baseTurf: FloorPlanetDirt
   isSubfloor: true
   footstepSounds:
@@ -88,7 +88,7 @@
 - type: tile
   id: FloorBasalt
   name: tiles-basalt-floor
-  sprite: /Textures/Tiles/Planet/basalt.png
+  sprite: /Textures/Tiles/planet/basalt.png
   isSubfloor: true
   footstepSounds:
     collection: FootstepAsteroid
@@ -100,7 +100,7 @@
 - type: tile
   id: FloorSnow
   name: tiles-snow
-  sprite: /Textures/Tiles/Planet/Snow/snow.png
+  sprite: /Textures/Tiles/planet/snow/snow.png
   variants: 13
   placementVariants:
   - 0.8
@@ -118,10 +118,10 @@
   - 0.0116
   edgeSpritePriority: 2
   edgeSprites:
-    South: /Textures/Tiles/Planet/Snow/snow_double_edge_south.png
-    East: /Textures/Tiles/Planet/Snow/snow_double_edge_east.png
-    North: /Textures/Tiles/Planet/Snow/snow_double_edge_north.png
-    West: /Textures/Tiles/Planet/Snow/snow_double_edge_west.png
+    South: /Textures/Tiles/planet/snow/snow_double_edge_south.png
+    East: /Textures/Tiles/planet/snow/snow_double_edge_east.png
+    North: /Textures/Tiles/planet/snow/snow_double_edge_north.png
+    West: /Textures/Tiles/planet/snow/snow_double_edge_west.png
   isSubfloor: true
   footstepSounds:
     collection: FootstepSnow
@@ -133,7 +133,7 @@
 - type: tile
   id: FloorIce
   name: tiles-ice
-  sprite: /Textures/Tiles/Planet/Snow/ice.png
+  sprite: /Textures/Tiles/planet/snow/ice.png
   isSubfloor: true
   friction: 0.05
   heatCapacity: 10000
@@ -145,13 +145,13 @@
 - type: tile
   id: FloorSnowDug
   name: tiles-snow-dug
-  sprite: /Textures/Tiles/Planet/Snow/snow_dug.png
+  sprite: /Textures/Tiles/planet/snow/snow_dug.png
   edgeSpritePriority: 1
   edgeSprites:
-    South: /Textures/Tiles/Planet/Snow/snow_dug_double_edge_south.png
-    East: /Textures/Tiles/Planet/Snow/snow_dug_double_edge_east.png
-    North: /Textures/Tiles/Planet/Snow/snow_dug_double_edge_north.png
-    West: /Textures/Tiles/Planet/Snow/snow_dug_double_edge_west.png
+    South: /Textures/Tiles/planet/snow/snow_dug_double_edge_south.png
+    East: /Textures/Tiles/planet/snow/snow_dug_double_edge_east.png
+    North: /Textures/Tiles/planet/snow/snow_dug_double_edge_north.png
+    West: /Textures/Tiles/planet/snow/snow_dug_double_edge_west.png
   isSubfloor: true
   footstepSounds:
     collection: FootstepSnow

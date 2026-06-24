@@ -1,25 +1,31 @@
 <Document>
-  # Gas Recycling
-  Gas recycler is a machine that converts waste gasses into breathable ones.
+  # Переработка газов
+
+  Газовый переработчик — это устройство, которое преобразует отработанные газы в пригодные для дыхания.
 
   <Box>
     <GuideEntityEmbed Entity="GasRecycler"/>
   </Box>
-  Specificaly it can recycle Carbon Dioxide and Nitrous Oxide into Oxygen and Nitrogen.
 
-  The machine has a two [textlink="pipenet" link="PipeNetworks"] connections, for gas input and output.
+  В частности, он способен перерабатывать углекислый газ и закись азота в кислород и азот.
 
-  For recycler to work, tha gas needs to be pressurized to [color=#a4885c]3000 kPa[/color] heated to [color=#a4885c]573,15K[/color], and the pressure at the inlet needs to be higher than outlet.
-  If these conditions are not met, the gases will just pass through without getting recycled (as will unrecyclable gases).
+  Устройство имеет два подключения к [textlink="трубопроводной сети" link="PipeNetworks"] — для подачи и вывода газа.
+
+  Для работы переработчика газ должен находиться под давлением не менее [color=#a4885c]3000 кПа[/color] и иметь температуру не ниже [color=#a4885c]573,15 K[/color].
+  Кроме того, давление на входе должно быть выше давления на выходе.
+
+  Если эти условия не соблюдены, газы будут просто проходить через устройство без переработки (как и любые газы, не подлежащие переработке).
 
   <Box>
-    <GuideEntityEmbed Entity="GasRecyclerMachineCircuitboard" Caption="Gas recycler circuit board"/>
+    <GuideEntityEmbed Entity="GasRecyclerMachineCircuitboard" Caption="Плата газового переработчика"/>
   </Box>
 
-  The machine can be constructed using a circuit board, which can be made at a circuit imprinter.
-  It first needs to be researched by [textlink="science" link="Science"] though.
+  Устройство можно построить с использованием соответствующей печатной платы, которую можно изготовить на принтере схем.
 
-  Gas recycling can be used as an alternative to gas miners, or as a backup to build a redundancy in the atmospheric system.
-  [color=#a4885c]Just don't forget to cool the gas before releasing it into the station![/color]
+  Однако перед этим технология должна быть исследована отделом [textlink="Науки" link="Science"].
+
+  Переработка газов может использоваться как альтернатива газодобытчикам или как резервная система для повышения надёжности атмосферной сети станции.
+
+  [color=#a4885c]Только не забудьте охладить газ перед его выпуском в атмосферу станции![/color]
 
 </Document>

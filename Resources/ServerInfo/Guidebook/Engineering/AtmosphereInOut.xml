@@ -1,25 +1,26 @@
 ﻿<Document>
-  #Atmosphere Input and Output
-  Inserting and extracting gasses from a present (or non-present) atmosphere is an essential part of Atmos' job.
-  <Box>
-    <GuideEntityEmbed Entity="GasVentPump"/>
-    <GuideEntityEmbed Entity="GasPassiveVent"/>
-    <GuideEntityEmbed Entity="GasOutletInjector"/>
-    <GuideEntityEmbed Entity="GasVentScrubber"/>
-    <GuideEntityEmbed Entity="PortableScrubber"/>
-  </Box>
-
-  With these devices, Atmos can insert, extract, or scrub unwanted gasses from any atmosphere they would like.
-  This allows the maintaining of a safe, breathable atmosphere.
-
-  Some of these devices require [textlink="power" link="Power"] to function, and can be linked to an [textlink="air alarm." link="AirAlarms"]
-
-  [textlink="Linking" link="Networking"] compatible devices to an air alarm unlocks more configuration options and functionality. Otherwise, these devices follow their default behavior as defined in the subguides.
+  # Ввод и вывод атмосферы (Atmosphere Input and Output)
+  Ввод и извлечение газов из атмосферы (или создание новой) — важнейшая часть работы инженеров атмосферного контроля (Atmos).
 
   <Box>
-    <GuideEntityEmbed Entity="AirAlarm"/>
-    <GuideEntityEmbed Entity="Multitool"/>
-    <GuideEntityEmbed Entity="NetworkConfigurator"/>
+    <GuideEntityEmbed Entity="GasVentPump" Caption="Вентиляция"/>
+    <GuideEntityEmbed Entity="GasPassiveVent" Caption="Пассивный вентиль"/>
+    <GuideEntityEmbed Entity="GasOutletInjector" Caption="Инжектор"/>
+    <GuideEntityEmbed Entity="GasVentScrubber" Caption="Очиститель"/>
+    <GuideEntityEmbed Entity="PortableScrubber" Caption="Переносной очиститель"/>
   </Box>
 
+  С помощью этих устройств персонал Atmos может нагнетать, выкачивать или очищать атмосферу от нежелательных газов, поддерживая безопасную и пригодную для дыхания среду.
+
+  
+
+  Некоторые из этих устройств требуют [textlink="питания" link="Power"] для функционирования и могут быть связаны с [textlink="воздушной сигнализацией" link="AirAlarms"].
+
+  [textlink="Сетевое подключение (Networking)" link="Networking"] совместимых устройств к воздушной сигнализации открывает дополнительные параметры настройки и расширяет функциональность. В противном случае устройства работают в режиме по умолчанию, как описано в соответствующих подразделах руководства.
+
+  <Box>
+    <GuideEntityEmbed Entity="AirAlarm" Caption="Воздушная сигнализация"/>
+    <GuideEntityEmbed Entity="Multitool" Caption="Мультитул"/>
+    <GuideEntityEmbed Entity="NetworkConfigurator" Caption="Конфигуратор сети"/>
+  </Box>
 </Document>

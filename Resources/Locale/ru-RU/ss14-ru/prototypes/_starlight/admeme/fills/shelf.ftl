@@ -1,0 +1,9 @@
+ent-ShelfMedTakSecureFilledChems = { ent-ShelfMedTakSecure }
+    .desc = { ent-ShelfMedTakSecure.desc }
+    .suffix = Надежный, Заполненный, Химикаты
+ent-ShelfMedTakSecureFilledTopicals = { ent-ShelfMedTakSecure }
+    .desc = { ent-ShelfMedTakSecure.desc }
+    .suffix = Надежный, Заполненный, Средства для наружного применения
+ent-ShelfMedTakSecureFilledCryo = { ent-ShelfMedTakSecure }
+    .desc = { ent-ShelfMedTakSecure.desc }
+    .suffix = Надежный, Заполненный, Крио-химикаты

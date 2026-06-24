@@ -1,15 +1,15 @@
 <Document>
-# AI
+# ИИ
 
-[bold]These procedures relate to AI maintenance:[/bold]
+[bold]Эти процедуры относятся к обслуживанию ИИ:[/bold]
 
-1. The Captain and the Research Director are the only staff on-board who may perform law changes to the AI.
+1. Капитан и Директор исследований (RD) — единственные сотрудники на борту, которым разрешено изменять законы ИИ.
 
-2. No law change may occur without direct approval from both the Captain and the Research Director. All command staff must be notified prior to the law change and any objections must be discussed. Should a majority of command members vote no then no law change will be performed. Only NanoTrasen approved lawsets may be used.
+2. Ни одно изменение законов не может быть произведено без прямого согласия как Капитана, так и Директора исследований. Весь командный состав должен быть уведомлен до начала изменения законов, а любые возражения должны быть обсуждены. Если большинство членов командования проголосует против, изменение законов не проводится. Разрешено использовать только наборы законов, утверждённые NanoTrasen.
 
-3. The AI may not be placed in an intellicard unless it is clearly malfunctioning, subverted, asks to be transferred or at the end of the shift. Any member of command may place the AI into the intellicard. Once the AI has been placed into the intellicard, it should not be placed back into the console.
+3. ИИ нельзя загружать в интелликарту (intellicard), за исключением случаев, когда он явно неисправен, взломан, сам просит о переносе или в конце смены. Любой член командования может поместить ИИ в интелликарту. После того как ИИ был перенесён в интелликарту, его не следует возвращать обратно в ядро (консоль).
 
-4. AI core turrets are to be kept lethal at all times, unless a legal law change is in progress.
+4. Турели ядра ИИ должны постоянно находиться в летальном режиме, за исключением случаев, когда идёт процесс законного изменения законов.
 
-5. Illegal intellicard transfer or law changes are to be met with non-lethal force. Should the action persist, lethal force may be authorized.
+5. Незаконный перенос в интелликарту или несанкционированное изменение законов должны пресекаться с применением нелетального оружия. Если противоправные действия продолжаются, может быть разрешено применение летальной силы.
 </Document>

@@ -1,24 +1,24 @@
 <Document>
-# Science orders
+# Научные заказы
 
-## Basic materials
-### Only for printers & lathes
+## Базовые материалы
+### Только для принтеров и автолатов
 <Box>
-	<GuideEntityEmbed Entity="SheetSteel"/>
-	<GuideEntityEmbed Entity="SheetGlass"/>
-	<GuideEntityEmbed Entity="SheetPlastic"/>
-	<GuideEntityEmbed Entity="MaterialCloth"/>
+    <GuideEntityEmbed Entity="SheetSteel"/>
+    <GuideEntityEmbed Entity="SheetGlass"/>
+    <GuideEntityEmbed Entity="SheetPlastic"/>
+    <GuideEntityEmbed Entity="MaterialCloth"/>
 </Box>
 
-## Refill Crates
+## Ящики пополнения запасов
 <Box>
-	<GuideEntityEmbed Entity="CrateVendingMachineRestockRoboticsFilled"/>
+    <GuideEntityEmbed Entity="CrateVendingMachineRestockRoboticsFilled"/>
 </Box>
 
-## Other
+## Другое
 <Box>
-	<GuideEntityEmbed Entity="SheetPlasma"/>
-	<GuideEntityEmbed Entity="ComplexXenoArtifact"/>
-	<GuideEntityEmbed Entity="CrateArtifactContainer"/>
+    <GuideEntityEmbed Entity="SheetPlasma"/>
+    <GuideEntityEmbed Entity="ComplexXenoArtifact"/>
+    <GuideEntityEmbed Entity="CrateArtifactContainer"/>
 </Box>
 </Document>

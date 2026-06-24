@@ -1,0 +1,11 @@
+ent-PartBase = { ent-BaseItem }
+    .desc = { ent-BaseItem.desc }
+ent-PartRodMetal = металлические стержни
+    .desc = { ent-PartBase.desc }
+    .suffix = Полные
+ent-PartRodMetal10 = металлический стержень
+    .desc = { ent-PartRodMetal.desc }
+    .suffix = 10
+ent-PartRodMetal1 = металлический стержень
+    .desc = { ent-PartRodMetal.desc }
+    .suffix = Одинарный

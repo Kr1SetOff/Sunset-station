@@ -1,0 +1,10 @@
+ent-FloorAbyssEnergyEntity = энергия бездны
+    .desc = { ent-FloorWaterEntity.desc }
+ent-BaseObelisk = { "" }
+    .desc = { "" }
+ent-FloraObelisk01 = обелиск
+    .desc = { ent-BaseObelisk.desc }
+ent-FloraObelisk02 = обелиск
+    .desc = { ent-BaseObelisk.desc }
+ent-FloraObelisk03 = обелиск
+    .desc = { ent-BaseObelisk.desc }

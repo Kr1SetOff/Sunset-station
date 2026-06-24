@@ -1,115 +1,115 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "State based Copyright. This is a cursed fix, but otherwise the canisters are janky in the cargo ordering UI. I am sinning, but it will look better for players",
+  "copyright": "Created by sunset sosat=)",
   "size": {
-    "x": 40,
-    "y": 40
+    "x": 32,
+    "y": 32
   },
   "states": [
     {
       "name": "air",
-      "copyright": "Created by Conf (Starlight)"
+      "copyright": "Created by sunset"
     },
     {
       "name": "ammonia",
-      "copyright": "Created by Conf (Starlight)"
+      "copyright": "Created by sunset"
     },
     {
       "name": "anti_noblium",
-      "copyright": "Created by Conf (Starlight)"
+      "copyright": "Created by sunset"
     },
     {
       "name": "bz",
-      "copyright": "Created by Conf (Starlight)"
+      "copyright": "Created by sunset"
     },
     {
       "name": "carbon",
-      "copyright": "Created by Conf (Starlight)"
+      "copyright": "Created by sunset"
     },
     {
       "name": "freezon",
-      "copyright": "Created by Conf (Starlight)"
+      "copyright": "Created by sunset"
     },
     {
       "name": "gray",
-      "copyright": "Created by Conf (Starlight)"
+      "copyright": "Created by sunset"
     },
     {
       "name": "halon",
-      "copyright": "Created by Conf (Starlight)"
+      "copyright": "Created by sunset"
     },
     {
       "name": "healium",
-      "copyright": "Created by Conf (Starlight)"
+      "copyright": "Created by sunset"
     },
     {
       "name": "helium",
-      "copyright": "Created by Conf (Starlight)"
+      "copyright": "Created by sunset"
     },
     {
       "name": "hydrogen",
-      "copyright": "Created by Conf (Starlight)"
+      "copyright": "Created by sunset"
     },
     {
       "name": "hyper_noblium",
-      "copyright": "Created by Conf (Starlight)"
+      "copyright": "Created by sunset"
     },
     {
       "name": "l_nitrogen",
-      "copyright": "Created by Conf (Starlight)"
+      "copyright": "Created by sunset"
     },
     {
       "name": "l_oxygen",
-      "copyright": "Created by Conf (Starlight)"
+      "copyright": "Created by sunset"
     },
     {
       "name": "nitrium",
-      "copyright": "Created by Conf (Starlight)"
+      "copyright": "Created by sunset"
     },
     {
       "name": "nitrogen",
-      "copyright": "Created by Conf (Starlight)"
+      "copyright": "Created by sunset"
     },
     {
       "name": "nitrous_oxide",
-      "copyright": "Created by Conf (Starlight)"
+      "copyright": "Created by sunset"
     },
     {
       "name": "oxygen",
-      "copyright": "Created by Conf (Starlight)"
+      "copyright": "Created by sunset"
     },
     {
       "name": "plasma",
-      "copyright": "Created by Conf (Starlight)"
+      "copyright": "Created by sunset"
     },
     {
       "name": "pluoxium",
-      "copyright": "Created by Conf (Starlight)"
+      "copyright": "Created by sunset"
     },
     {
       "name": "proto_nitrate",
-      "copyright": "Created by Conf (Starlight)"
+      "copyright": "Created by sunset"
     },
     {
       "name": "rainbow",
-      "copyright": "Created by Conf (Starlight)"
+      "copyright": "Created by sunset"
     },
     {
       "name": "storage",
-      "copyright": "Created by Conf (Starlight)"
+      "copyright": "Created by sunset"
     },
     {
       "name": "tritium",
-      "copyright": "Created by Conf (Starlight)"
+      "copyright": "Created by sunset"
     },
     {
       "name": "water_vapor",
-      "copyright": "Created by Conf (Starlight)"
+      "copyright": "Created by sunset"
     },
     {
       "name": "zauker",
-      "copyright": "Created by Conf (Starlight)"
+      "copyright": "Created by sunset"
     }
   ]
 }

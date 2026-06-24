@@ -1,30 +1,29 @@
 <Document>
- # Rule 8 – No Validhunting
- Non-security personnel should not attempt to stop or hunt down antagonists on their own.
- This goes against a character’s logical roleplay expectations. Security officers and ERT are responsible for protecting the station, and should be contacted whenever reasonable.
- Officer "Blue Shields" are [bold]not[/bold] considered Security Officers, and may not go out of their way to chase potential threats to the detriment of their charges.
+  # Правило 8 — Запрет на «валидхантинг» (Validhunting)
+  Персонал, не относящийся к службе безопасности, не должен пытаться самостоятельно останавливать или выслеживать антагонистов.
+  Это противоречит логическим ожиданиям от отыгрыша персонажа. Офицеры службы безопасности и группы быстрого реагирования (ERT) несут ответственность за защиту станции, и с ними следует связываться при любой разумной возможности.
+  Офицеры «Blue Shield» [bold]не[/bold] считаются офицерами службы безопасности и не должны уходить со своего поста, чтобы преследовать потенциальные угрозы в ущерб своим подопечным.
 
-Exceptions will be made for life-or-death scenarios, station-wide threats such as nuclear operatives, and self-defense.
+  Исключения делаются для ситуаций, где стоит вопрос жизни и смерти, угроз масштаба всей станции (например, ядерные оперативники) и самообороны.
 
-Artificial Intelligence (AI) should not actively hunt antagonists or immediately attempt to shut them down unless their laws permit it or immediate crew harm has been detected.
-AI behavior should remain reactive rather than proactively searching for threats.
+  Искусственный интеллект (ИИ) не должен активно охотиться на антагонистов или немедленно пытаться их нейтрализовать, если только его законы не позволяют этого или не был обнаружен непосредственный вред экипажу.
+  Поведение ИИ должно оставаться реактивным, а не направленным на проактивный поиск угроз.
 
-Command should not facilitate valid hunting outside of necessity and should ask security regarding such.
+  Командование не должно способствовать «валидхантингу» без необходимости и обязано консультироваться по таким вопросам со службой безопасности.
 
-[bold]Examples of Validhunting:[/bold]
+  [bold]Примеры «валидхантинга»:[/bold]
 
-- As a Salvage Specialist, buying guns and boarding the station to eliminate Traitors/Changelings/Vampire without orders to do so from Command.
-- As an Officer "Blue Shield", chasing an antagonist through maintenance, leaving Command or NT Employees unprotected.
-- As an Officer "Blue Shield", chasing a wizard who has not harmed any command members into space.
-- As Research Director, ordering a Scientist to hunt a traitor who just killed the Head of Personnel when Security is fully manned and able to handle the situation.
-- As an assistant, chasing a traitor into maintenance who you saw attack someone else 10 minutes ago.
-- As an assistant, chasing a traitor into maintenance who you saw wearing syndicate contraband.
+  - Как специалист по спасательным работам, покупать оружие и проникать на станцию, чтобы устранить предателей/подменышей/вампиров без соответствующего приказа от Командования.
+  - Как офицер «Blue Shield», преследовать антагониста по техническим коридорам, оставляя членов Командования или сотрудников NanoTrasen без защиты.
+  - Как офицер «Blue Shield», преследовать волшебника в космосе, если он не причинил вреда ни одному члену Командования.
+  - Как научный руководитель (RD), приказывать ученому охотиться на предателя, который только что убил Главу персонала, когда служба безопасности полностью укомплектована и способна справиться с ситуацией.
+  - Как ассистент, преследовать предателя в технических коридорах, если вы видели, как он напал на кого-то другого 10 минут назад.
+  - Как ассистент, преследовать предателя в технических коридорах, заметив на нем контрабанду Синдиката.
 
-[bold] Examples of this rule being followed:[/bold]
-- As a Salvage Specialist, boarding the station to eliminate station-wide threats ONLY after being asked to assist.
-- As an Officer "Blue Shield", defending a command or NT employee from an antagonist until they retreat or you crit them.
-- As an Officer "Blue Shield", chasing a wizard into space who has stolen the body of a command member to their ship.
-- As an assistant, reporting a person you saw wearing contraband over the radio.
-- As an assistant, defending yourself or another person from an attacker until they retreat or you crit them.
-
+  [bold]Примеры соблюдения этого правила:[/bold]
+  - Как специалист по спасательным работам, прибыть на станцию для устранения угрозы масштаба всей станции ТОЛЬКО после получения просьбы о помощи.
+  - Как офицер «Blue Shield», защищать члена Командования или сотрудника NanoTrasen от антагониста до тех пор, пока тот не отступит или вы не доведете его до критического состояния.
+  - Как офицер «Blue Shield», преследовать в космосе волшебника, который похитил тело члена Командования на свой корабль.
+  - Как ассистент, сообщить по радио о человеке, на котором вы заметили контрабанду.
+  - Как ассистент, защищать себя или другого человека от нападающего до тех пор, пока тот не отступит или вы не доведете его до критического состояния.
 </Document>

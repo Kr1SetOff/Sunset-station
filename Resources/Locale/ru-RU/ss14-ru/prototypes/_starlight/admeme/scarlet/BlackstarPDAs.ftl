@@ -1,0 +1,14 @@
+ent-BlackstarLegionCommanderPDA = КПК командира легиона
+    .desc = Вес целого легиона за каждым приказом.
+ent-BlackstarHighLegatePDA = КПК верховного легата
+    .desc = Власть имеет свою цену.
+ent-BlackstarLegatePDA = КПК легата
+    .desc = Держите своих солдат в узде.
+ent-BlackstarDreadwalkerPDA = КПК Dreadwalker
+    .desc = Точность — это разница между миссией и резней.
+ent-BlackstarLegionnairePDA = КПК легионера
+    .desc = Адаптируйся. Преодолевай. Выживай.
+ent-BlackstarBlackguardPDA = КПК Черного стража
+    .desc = Последняя линия обороны перед последним рубежом.
+ent-BlackstarInitiatePDA = КПК посвященного
+    .desc = Ты заслужил свое место. Теперь удержи его.

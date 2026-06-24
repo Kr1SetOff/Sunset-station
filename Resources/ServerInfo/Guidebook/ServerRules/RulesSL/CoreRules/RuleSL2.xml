@@ -1,21 +1,20 @@
 <Document>
- # Rule 2 – No Griefing, Bug Abuse, or Exploits
- Intentionally ruining gameplay for others is prohibited. Round-ending or highly disruptive actions, such as:
+  # Правило 2 — Запрет на гриферство, использование багов и эксплойтов
+  Намеренная порча игрового процесса для других запрещена. Действия, завершающие раунд или вызывающие серьезные разрушения, такие как:
 
-- Intentionally releasing the Tesla/Singularity or delaminating the Supermatter.
-- Large-scale station destruction (department-size or larger)
-- Intentionally flooding harmful gasses (such as Plasma, Tritium, Frezon, Zauker, or anything heated/cooled to an uninhabitable degree) through station air distribution network.
+- Намеренный выпуск Теслы/Сингулярности или доведение Суперматерии до дезаминирования (взрыва).
+- Крупномасштабное разрушение станции (размером с отдел или больше).
+- Намеренное распространение вредных газов (таких как плазма, тритий, фрезон, заукер или любое другое вещество, нагретое/охлажденное до непригодных для жизни температур) через систему распределения воздуха на станции.
 
-May result in a permanent ban. Some objectives or circumstances may allow exceptions—when in doubt, ask an admin before proceeding.
+Могут привести к перманентному бану. Некоторые задачи или обстоятельства могут допускать исключения — если сомневаетесь, спросите администратора перед выполнением.
 
-Spamming audio emotes, sounds like door access failures, or chat lines to cause TTS flooding is against the rules.
-This includes proxy spamming such as issuing a command like “All borgs, state laws on Common.”
+Спам аудио-эмоциями, звуками (например, ошибками доступа к дверям) или строками чата для вызова перегрузки TTS (текст-в-речь) запрещен правилами.
+Это включает в себя «прокси-спам», например, подачу команды вроде: «Все киборги, назовите законы в общий канал».
 
-Finally, abusing bugs, exploits or obviously unintended effects to gain an unfair advantage is prohibited. Please report them via the in-game bug report or in the Discord.
+Наконец, использование багов, эксплойтов или очевидно непредусмотренных эффектов для получения несправедливого преимущества запрещено. Пожалуйста, сообщайте о них через внутриигровую систему отчетов об ошибках или в Discord.
 
-## AFK Farming & Antag Rolling
-- AFK farming time for Role Requirements is prohibited—players must actively engage and contribute to the game.
-- Ghosting, suicide, or otherwise leaving the game after failing to get an antagonist role is considered “Antag Rolling” and is not permitted.
-- Ghosting, suicide, or otherwise leaving the round with the intent on taking a mid-round antagonist ghost role is considered “Antag Rolling” and is not permitted.
-
+## AFK-фарминг и «Антаг-роллинг» (Antag Rolling)
+- AFK-фарминг времени для выполнения требований к ролям запрещен — игроки должны активно участвовать и вносить вклад в игру.
+- Переход в режим призрака, самоубийство или иной выход из игры после того, как не удалось получить роль антагониста, считается «Антаг-роллингом» и не допускается.
+- Переход в режим призрака, самоубийство или иной выход из раунда с намерением занять роль антагониста, появляющуюся в середине раунда для призраков, считается «Антаг-роллингом» и не допускается.
 </Document>

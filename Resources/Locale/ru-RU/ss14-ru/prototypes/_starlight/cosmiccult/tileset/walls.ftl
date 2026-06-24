@@ -1,0 +1,16 @@
+ent-WallCosmicCult = зловредная стена
+    .desc = Стена странного вида. Если смотреть на неё слишком долго, появляется чувство дискомфорта.
+ent-WallCosmicCultTrimmed = зловредная стена
+    .desc = { ent-WallCosmicCult.desc }
+    .suffix = Обрезанная
+ent-WindowCosmicCult = зловредная панель
+    .desc = Окно странного вида. Что-то в нем вас нервирует.
+ent-WindowCosmicCultDark = зловредная панель
+    .desc = { ent-WindowCosmicCult.desc }
+    .suffix = Тонированная
+ent-WindowCosmicCultDiagonal = зловредная панель
+    .desc = Окно странного вида. Что-то в нем вас нервирует.
+    .suffix = Диагональная
+ent-WindowCosmicCultDiagonalDark = зловредная панель
+    .desc = { ent-WindowCosmicCultDiagonal.desc }
+    .suffix = Диагональная, Тонированная

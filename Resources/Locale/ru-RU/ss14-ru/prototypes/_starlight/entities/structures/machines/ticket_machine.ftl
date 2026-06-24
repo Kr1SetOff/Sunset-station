@@ -1,0 +1,11 @@
+ent-BaseTicketMachine = { ent-BaseWallmountMachine }
+    .desc = { ent-BaseWallmountMachine.desc }
+ent-TicketMachine = билетный автомат
+    .desc = Печатает пронумерованные билеты для управления очередью.
+    .suffix = Нет доступа, Пустой
+ent-TicketMachineFilled = { ent-TicketMachine }
+    .desc = { ent-TicketMachine.desc }
+    .suffix = Заполненный
+ent-TicketMachineHOP = { ent-TicketMachineFilled }
+    .desc = { ent-TicketMachineFilled.desc }
+    .suffix = Глава персонала, Заполненный

@@ -1,0 +1,12 @@
+ent-TP14KitchenDeepFryer = фритюрница
+    .desc = Можно использовать для жарки вкусной еды или всего золота из научного отдела. Инструкция на боку гласит: используйте только кукурузное масло.
+    .suffix = Сервис
+ent-TP14KitchenDeepFryerTabletop = настольная фритюрница
+    .desc = { ent-TP14KitchenDeepFryer.desc }
+    .suffix = Сервис
+ent-TP14KitchenDeepFryerEmpty = { ent-TP14KitchenDeepFryer }
+    .desc = { ent-TP14KitchenDeepFryer.desc }
+    .suffix = Пустая, Сервис
+ent-TP14KitchenDeepFryerTabletopEmpty = { ent-TP14KitchenDeepFryerTabletop }
+    .desc = { ent-TP14KitchenDeepFryerTabletop.desc }
+    .suffix = Пустая, Сервис

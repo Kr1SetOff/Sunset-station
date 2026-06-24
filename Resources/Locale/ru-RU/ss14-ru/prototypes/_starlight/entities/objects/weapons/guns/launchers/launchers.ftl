@@ -1,0 +1,9 @@
+ent-WeaponLauncherHydraSyndicate = модифицированная гидра
+    .desc = Похоже на стандартный гранатомет «Гидра», но предохранительные механизмы были спилены.
+    .suffix = Синдикат
+ent-WeaponLauncherHydraEMP = { ent-WeaponLauncherHydraSyndicate }
+    .desc = ПЛЮХ... БАЦ
+    .suffix = ЭМИ
+ent-WeaponLauncherHydraFilled = { ent-WeaponLauncherHydra }
+    .desc = { ent-WeaponLauncherHydra.desc }
+    .suffix = Заряжен

@@ -1,24 +1,25 @@
 <Document>
-## Anomaly Scanner
+  # Сканер аномалий (Anomaly Scanner)
 
-The Anomaly Scanner is used to gather various information on anomalies. They can be found inside the lockers in the science department.
+  Сканер аномалий используется для сбора различной информации об аномалиях. Их можно найти в шкафчиках научного отдела.
 
-<Box>
-<GuideEntityEmbed Entity="AnomalyScanner"/>
-</Box>
+  <Box>
+  <GuideEntityEmbed Entity="AnomalyScanner"/>
+  </Box>
 
-Scanning an anomaly shows the severity, general stability, approximate point output, reactions with particle types, and time until the next pulse. The reaction types, specifically, can be used in conjunction with the A.P.E. to manipulate anomalies.
+  Сканирование аномалии показывает уровень опасности (severity), общую стабильность, примерный выход очков, реакции на типы частиц и время до следующего импульса. Типы реакций, в частности, могут быть использованы в сочетании с А.П.Э. (A.P.E.) для управления аномалиями.
 
-## Anomaly Vessel
+  
 
-The anomaly vessel is a machine that generates points from anomalies. Use the anomaly scanner on an empty vessel, and the anomaly that was last scanned will be synced with the vessel.
+  # Сосуд для аномалий (Anomaly Vessel)
 
-<Box>
-<GuideEntityEmbed Entity="MachineAnomalyVessel"/>
-</Box>
+  Сосуд для аномалий — это устройство, которое генерирует очки исследований из аномалий. Используйте сканер аномалий на пустом сосуде, и аномалия, которая была отсканирована последней, синхронизируется с ним.
 
-The amount of points a vessel generates per second is based on the severity, stability, and health of an anomaly. The higher each of these values, the higher the point output will be.
+  <Box>
+  <GuideEntityEmbed Entity="MachineAnomalyVessel"/>
+  </Box>
 
-Be careful: if an anomaly goes [color=#a4885c]supercritical[/color], the vessel it is linked to will explode. This may damage the station and nearby equipment.
+  Количество очков, генерируемых сосудом в секунду, зависит от уровня опасности, стабильности и «здоровья» аномалии. Чем выше каждое из этих значений, тем выше будет выход очков.
 
+  Будьте осторожны: если аномалия становится [color=#a4885c]критической[/color] (supercritical), связанный с ней сосуд взорвется. Это может повредить станцию и находящееся поблизости оборудование.
 </Document>

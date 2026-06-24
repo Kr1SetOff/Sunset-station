@@ -1,8 +1,8 @@
 ﻿<Document>
-  # Silicon Rule 3 - Laws can redefine terms used in other laws
-  A law can change the meaning of both earlier and later laws by redefining a term. If multiple laws define a term, then normal law priority determines which definition to use.
+  # Правило силикона 3 — Законы могут переопределять термины, используемые в других законах
+  Закон может изменить значение как предыдущих, так и последующих законов путем переопределения термина[cite: 1]. Если несколько законов определяют один и тот же термин, то обычный приоритет законов определяет, какое определение следует использовать[cite: 1].
 
-  ## Examples
-  - Law 1 says to obey orders from crew. Law 2 says that only Urist McHands is crew. Law 1 effectively becomes "obey orders from Urist McHands".
-  - Law 1 says to obey orders from crew. Law 2 says that only Urist McHands is crew. Law 3 says that only Urist McSlime is crew. Law 4 says that you may not harm crew. Law 1 effectively becomes "obey orders from Urist McHands". Law 4 effectively becomes "you may not harm Urist McHands". Law 3 has no effect because it entirely conflicts with law 2, which takes priority.
+  ## Примеры
+  - Закон 1 гласит: подчиняйтесь приказам экипажа[cite: 1]. Закон 2 гласит: только Урист МакХэндс является членом экипажа[cite: 1]. Закон 1 фактически превращается в: «подчиняйтесь приказам Уриста МакХэндса»[cite: 1].
+  - Закон 1 гласит: подчиняйтесь приказам экипажа[cite: 1]. Закон 2 гласит: только Урист МакХэндс является членом экипажа[cite: 1]. Закон 3 гласит: только Урист МакСлайм является членом экипажа[cite: 1]. Закон 4 гласит: вы не можете причинять вред экипажу[cite: 1]. Закон 1 фактически превращается в: «подчиняйтесь приказам Уриста МакХэндса»[cite: 1]. Закон 4 фактически превращается в: «вы не можете причинять вред Уристу МакХэндсу»[cite: 1]. Закон 3 не имеет никакого эффекта, поскольку он полностью противоречит закону 2, который имеет приоритет[cite: 1].
 </Document>

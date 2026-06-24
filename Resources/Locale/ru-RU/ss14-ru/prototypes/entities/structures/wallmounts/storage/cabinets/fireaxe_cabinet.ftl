@@ -1,0 +1,11 @@
+ent-FireAxeCabinet = шкаф для пожарного топора
+    .desc = Здесь есть небольшая этикетка с надписью «Только для экстренных случаев», а также инструкции по безопасному использованию топора. Как будто это кого-то остановит.
+ent-FireAxeCabinetOpen = { ent-FireAxeCabinet }
+    .desc = { ent-FireAxeCabinet.desc }
+    .suffix = Открытый
+ent-FireAxeCabinetFilled = { ent-FireAxeCabinet }
+    .desc = { ent-FireAxeCabinet.desc }
+    .suffix = Заполненный
+ent-FireAxeCabinetFilledOpen = { ent-FireAxeCabinetFilled }
+    .desc = { ent-FireAxeCabinetFilled.desc }
+    .suffix = Заполненный, Открытый

@@ -1,0 +1,15 @@
+ent-BaseFenceMetal = металлический забор
+    .desc = Металлическая секция забора, ограждающая что-то, скорее всего, очень важное.
+ent-FenceMetalBroken = сломанный металлический забор
+    .desc = Кто-то очень сильно разозлился на неодушевленный предмет.
+ent-FenceMetalStraight = { ent-BaseFenceMetal }
+    .desc = { ent-BaseFenceMetal.desc }
+    .suffix = Прямой
+ent-FenceMetalCorner = { ent-BaseFenceMetal }
+    .desc = { ent-BaseFenceMetal.desc }
+    .suffix = Угловой
+ent-FenceMetalEnd = { ent-BaseFenceMetal }
+    .desc = { ent-BaseFenceMetal.desc }
+    .suffix = Конечный
+ent-FenceMetalGate = калитка металлического забора
+    .desc = Можно было бы воспользоваться калиткой вместо того, чтобы перепрыгивать... если вы ТРУС, конечно.

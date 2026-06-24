@@ -1,0 +1,15 @@
+ent-ClothingHeadHatCargoFormalsoft = формальная кепка карго
+    .desc = Бейсболка, цвета которой соответствуют официальной форме карго.
+ent-ClothingHeadHatCargoFormalsoftFlipped = формальная кепка карго
+    .desc = { ent-ClothingHeadHatCargoFormalsoft.desc }
+    .suffix = { ent-ClothingHeadHeadHatBaseFlipped.suffix }
+ent-ClothingHeadHatMailsoftVisor = почтовый козырёк
+    .desc = Лёгкий козырёк от солнца для каждого начинающего почтового техника.
+ent-ClothingHeadHatMailsoftVisorFlipped = почтовый козырёк
+    .desc = { ent-ClothingHeadHatMailsoftVisor.desc }
+    .suffix = { ent-ClothingHeadHeadHatBaseFlipped.suffix }
+ent-ClothingHeadHatMailsoftVisorSenior = старший почтовый козырёк
+    .desc = Лёгкий козырёк от солнца для самых преданных почтовых техников.
+ent-ClothingHeadHatMailsoftVisorSeniorFlipped = старший почтовый козырёк
+    .desc = { ent-ClothingHeadHatMailsoftVisorSenior.desc }
+    .suffix = { ent-ClothingHeadHeadHatBaseFlipped.suffix }

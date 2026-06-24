@@ -1,0 +1,11 @@
+ent-CrateChemistryP = ящик химикатов (P)
+    .desc = Содержит химикаты из P-блока элементов. Требует доступа к химии для открытия.
+    .suffix = { ent-CrateChemistrySecure.suffix }
+ent-CrateChemistryS = ящик химикатов (S)
+    .desc = Содержит химикаты из S-блока элементов. Требует доступа к химии для открытия.
+    .suffix = { ent-CrateChemistrySecure.suffix }
+ent-CrateChemistryD = ящик химикатов (D)
+    .desc = Содержит химикаты из D-блока элементов. Требует доступа к химии для открытия.
+    .suffix = { ent-CrateChemistrySecure.suffix }
+ent-CratePlantBGone = ящик Plant-B-Gone оптом
+    .desc = От Monstano. «Нежелательные сорняки, встречайте свой небесный раундап!»

@@ -1,36 +1,36 @@
 <Document>
-  # Felionoid
+  # Фелионоид
 
   <Box>
     <GuideEntityEmbed Entity="MobFelionoid" Caption=""/>
   </Box>
 
-  A smaller feline species that is light on their feet.
+  Мелкий кошачий вид, который лёгок на ногу.
 
-  ## Age and names
-  Felionoids have a lifespan similar to that of humans, albeit with more complications as they age.
-  Their names are compound words. Each name is prefixed by their colony's or family's name, for example [color=yellow]silk[/color][color=orange]fur[/color].
-  Separating the parts of a compound name, even in casual conversation, is considered improper and may be rude.
-  Many Felionoids replace their compound name with a nickname, or are given names more typical with human culture.
+  ## Возраст и имена
+  Фелионоиды имеют продолжительность жизни, подобную человеческой, хотя с большим количеством осложнений с возрастом.
+  Их имена — составные слова. Каждое имя имеет префикс названия их колонии или семьи, например [color=yellow]шёлк[/color][color=orange]шерсть[/color].
+  Разделение частей составного имени, даже в обычном разговоре, считается неприличным и может быть грубым.
+  Многие фелионоиды заменяют своё составное имя на прозвище или получают имена, более типичные для человеческой культуры.
 
-  ## Racial Features
-  Their unarmed claw attacks deal [color=red]3[/color] points of Slash damage with a hit rate that is [color=yellow]2[/color] times faster than humans.
-  As a result, they have an easier time [color=yellow]shoving[/color] and [color=red]disarming[/color] others.
+  ## Расовые особенности
+  Их безоружные когтиевые атаки наносят [color=red]3[/color] единицы режущего урона со скоростью удара, которая в [color=yellow]2[/color] раза быстрее, чем у людей.
+  В результате им легче [color=yellow]толкать[/color] и [color=red]обезоруживать[/color] других.
 
-  Additionally, Felionoids can run [color=lightgreen]25%[/color] faster than humans [color=yellow]when not wearing shoes[/color]. They run [color=lightgreen]5%[/color] faster when wearing shoes.
+  Кроме того, фелионоиды могут бежать на [color=lightgreen]25%[/color] быстрее людей [color=yellow]когда не носят обувь[/color]. Они бегут на [color=lightgreen]5%[/color] быстрее, когда носят обувь.
 
-  Felionoids are also more vulnerable to damage:
-  - They fall into a critical state at [color=red]85[/color] points of damage.
-  - They die at [color=red]170[/color] points of damage.
+  Фелионоиды также более уязвимы к урону:
+  - Они впадают в критическое состояние при [color=red]85[/color] единицах урона.
+  - Они умирают при [color=red]170[/color] единицах урона.
 
-  ## Weapon Knockback
-  Felionoids will find that large caliber weapons will push them around. They receive [color=yellow]Stun Damage[/color] for every shot fired from a large caliber weapon.
+  ## Отдача оружия
+  Фелионоиды обнаружат, что крупнокалиберное оружие будет их толкать. Они получают [color=yellow]урон оглушения[/color] за каждый выстрел из крупнокалиберного оружия.
 
-  In general, the weapons that will give you knockback are [color=yellow]Rifles, Sniper Rifles, Shotguns, LMGs, HMGs, and Grenade Launchers.[/color]
+  В целом, оружие, которое даст вам отдачу, это [color=yellow]винтовки, снайперские винтовки, дробовики, пулемёты, тяжёлые пулемёты и гранатомёты.[/color]
 
-  Look out especially on Rocket launchers, as since they are recoilless, you will actually get [color=red]pulled forward with the rocket[/color] for a short distance.
-  - The safest weapons to use that will give you no knockback are [color=green]Pistols and SMGs[/color].
-  - No slips can help mitigate some of the knockback from firing weapons, but not all of it!
-  - Also keep in mind that any stamina resistance you have DOES work to reduce the stamina damage from these weapons.
+  Особенно осторожно с реактивными гранатомётами, так как они без отдачи, вы на самом деле будете [color=red]перетянуты вперёд с ракетой[/color] на короткое расстояние.
+  - Самые безопасные оружия, которые не дадут вам отдачи, это [color=green]пистолеты и ПП[/color].
+  - Отсутствие проскальзывания может помочь смягчить часть отдачи от стрельбы, но не всю!
+  - Также имейте в виду, что любая устойчивость к выносливости, которую вы имеете, ДЕЙСТВИТЕЛЬНО работает для уменьшения урона выносливости от этих оружий.
 
 </Document>

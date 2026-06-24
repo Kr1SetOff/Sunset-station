@@ -1,76 +1,40 @@
 <Document>
-  # Antimatter Engine (AME)
-  The Antimatter Engine is a short-term support generator for the station, providing a sizable chunk of power for a limited time.
+  # Антиматериальный двигатель (Antimatter Engine, AME)
+  Антиматериальный двигатель — это генератор кратковременной поддержки, обеспечивающий станцию значительным объемом энергии в течение ограниченного времени.
 
-  It's mainly used to assist engineers in starting up bigger engines like the [textlink="Singularity Engine" link="SingularityEngine"] or [textlink="Tesla Engine" link="TeslaEngine"], by supplementing the station's [textlink="batteries" link="PowerStorage"] with partial power to extend their runtime.
+  В основном он используется для помощи инженерам в запуске более мощных установок, таких как [textlink="сингулярный двигатель" link="SingularityEngine"] или [textlink="тесла-двигатель" link="TeslaEngine"], путем временного пополнения [textlink="аккумуляторов" link="PowerStorage"] станции.
 
-  ## Construction
-  <Box>Required parts:</Box>
+  ## Конструкция
+  **Необходимые компоненты:**
   <Box>
-  <GuideEntityEmbed Entity="AmeController"/>
-  <GuideEntityEmbed Entity="AmePartFlatpack"/>
-  <GuideEntityEmbed Entity="AmeJar"/>
+    <GuideEntityEmbed Entity="AmeController"/>
+    <GuideEntityEmbed Entity="AmePartFlatpack"/>
+    <GuideEntityEmbed Entity="AmeJar"/>
   </Box>
 
-  The AME Controller is the part of the AME that outputs power to the station's grid through an [textlink="HV connection" link="VoltageNetworks"].
-  Because of this, you'll want to start your AME construction with the controller on top of an [color=orange]HV wire[/color].
+  Контроллер AME — это основной блок, который подает энергию в сеть через [textlink="высоковольтное соединение" link="VoltageNetworks"]. Поэтому установку следует начинать с размещения контроллера непосредственно на [color=orange]высоковольтном проводе[/color].
 
-  Most stations have exposed [color=orange]HV wiring[/color] or designated spots to wrench an AME controller, so that it connects to the grid.
+  
 
-  AME shielding is the physical structure that makes the antimatter engine. It's made by converting AME flatpacks into shielding using a multitool.
+  ### Сборка:
+  1. Разместите AME-блоки (flatpacks) квадратом 3x3 или больше. Чем больше «центральных» фрагментов, окруженных другими со всех восьми сторон, тем больше «ядер» (cores) будет у вашего AME и тем выше будет его безопасная мощность.
+  2. Используйте мультитул на каждом блоке, чтобы преобразовать их в защитные элементы (shielding).
+  3. Убедитесь, что конструкция выглядит как завершенная конфигурация, а контроллер установлен правильно.
 
-  To construct an AME, start putting down a 3x3 or larger square of AME flatpacks in preparation for construction, making sure to maximize the number of "center" pieces that are surrounded on all eight sides.
-  The greater amount of center pieces, the more cores your AME will have, and the more power it will be able to output safely.
+  
 
+  ## Эксплуатация
+  Для запуска AME вставьте топливную емкость (fuel jar) в контроллер и установите безопасную скорость инъекции (injection rate).
+
+  Безопасная скорость инъекции — это предел, при котором двигатель работает без перегрева, выдавая максимальную мощность. Она всегда рассчитывается по формуле:
   <Box>
-    <GuideEntityEmbed Entity="AmePartFlatpack" Caption=""/>
-    <GuideEntityEmbed Entity="AmePartFlatpack" Caption=""/>
-    <GuideEntityEmbed Entity="AmePartFlatpack" Caption=""/>
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="AmePartFlatpack" Caption=""/>
-    <GuideEntityEmbed Entity="AmePartFlatpack" Caption=""/>
-    <GuideEntityEmbed Entity="AmePartFlatpack" Caption=""/>
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="AmePartFlatpack" Caption=""/>
-    <GuideEntityEmbed Entity="AmePartFlatpack" Caption=""/>
-    <GuideEntityEmbed Entity="AmePartFlatpack" Caption=""/>
+    [bold]Безопасная скорость = 2 × Количество ядер[/bold]
   </Box>
 
-  Once this is done, you can use a multitool to convert each AME flatpack into shielding, which should form a finished AME configuration.
+  *Пример:*
+  - 1 ядро: скорость 2.
+  - 2 ядра: скорость 4.
+  - Превышение этого соотношения приведет к [color=#ff0000]перегреву[/color] и, вскоре, к [color=#ff0000]взрыву[/color] установки.
 
-  <GuideEntityEmbed Entity="AmeController" Caption=""/>
-  <Box>
-    <GuideEntityEmbed Entity="AmeShielding" Caption="" Margin="0"/>
-    <GuideEntityEmbed Entity="AmeShielding" Caption="" Margin="0"/>
-    <GuideEntityEmbed Entity="AmeShielding" Caption="" Margin="0"/>
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="AmeShielding" Caption="" Margin="0"/>
-    <GuideEntityEmbed Entity="AmeShielding" Caption="" Margin="0"/>
-    <GuideEntityEmbed Entity="AmeShielding" Caption="" Margin="0"/>
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="AmeShielding" Caption="" Margin="0"/>
-    <GuideEntityEmbed Entity="AmeShielding" Caption="" Margin="0"/>
-    <GuideEntityEmbed Entity="AmeShielding" Caption="" Margin="0"/>
-  </Box>
-  <Box>
-    [color=#999999][italic]An example of a one core setup[italic][/color]
-  </Box>
-
-  ## Operation
-  To start the AME, insert a fuel jar into the AME controller, and set the safe injection rate.
-
-  The safe injection rate is the point where the AME can safely run without overheating, while maximizing power output.
-
-  This rate is always twice the core count.
-
-  For example, an AME with one core will have a safe injection rate of 2. With two cores, the safe injection rate would be 4, and so on.
-
-  Any more than this ratio will eventually result in the engine [color=#ff0000]overheating[/color] and, shortly afterwards, [color=#ff0000]exploding[/color].
-
-  The AME controller will [textlink="report" link="InspectingPower"] on both the amount of power it is providing to the grid, and the theoretical maximum power it could provide if demanded.
-
+  Контроллер AME отображает текущую выдаваемую мощность и теоретически возможный максимум, который можно получить при повышении нагрузки.
 </Document>

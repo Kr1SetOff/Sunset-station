@@ -1,0 +1,14 @@
+ent-MindRoleWizardDuelistBase = Роль дуэлянта-волшебника
+    .desc = { ent-MindRoleWizard.desc }
+ent-MindRoleWizardDuelistRed = Роль красного дуэлянта-волшебника
+    .desc = { ent-MindRoleWizardDuelistBase.desc }
+ent-MindRoleWizardDuelistBlue = Роль синего дуэлянта-волшебника
+    .desc = { ent-MindRoleWizardDuelistBase.desc }
+ent-MindRoleWizardDuelistPurple = Роль фиолетового дуэлянта-волшебника
+    .desc = { ent-MindRoleWizardDuelistBase.desc }
+ent-MindRoleWizardDuelistYellow = Роль желтого дуэлянта-волшебника
+    .desc = { ent-MindRoleWizardDuelistBase.desc }
+ent-MindRoleWizardDuelistGreen = Роль зеленого дуэлянта-волшебника
+    .desc = { ent-MindRoleWizardDuelistBase.desc }
+ent-MindRoleWizardDuelistOrange = Роль оранжевого дуэлянта-волшебника
+    .desc = { ent-MindRoleWizardDuelistBase.desc }

@@ -1,0 +1,15 @@
+ent-GuidebookPlumbingDuctStraight = жидкостный канал
+    .desc = { "" }
+    .suffix = Прямой, Справочник
+ent-GuidebookPlumbingDuctBend = жидкостный канал
+    .desc = { "" }
+    .suffix = Изгиб, Справочник
+ent-GuidebookPlumbingDuctTJunction = жидкостный канал
+    .desc = { "" }
+    .suffix = Т-образный, Справочник
+ent-GuidebookPlumbingDuctFourway = жидкостный канал
+    .desc = { "" }
+    .suffix = Четверник, Справочник
+ent-GuidebookPlumbingDuctManifold = жидкостный коллектор
+    .desc = { "" }
+    .suffix = Справочник

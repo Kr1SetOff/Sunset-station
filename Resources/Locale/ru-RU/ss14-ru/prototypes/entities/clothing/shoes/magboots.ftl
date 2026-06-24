@@ -1,0 +1,16 @@
+ent-ClothingShoesBootsMagBase = магнитные ботинки
+    .desc = Магнитные ботинки, часто используемые во время внекорабельной деятельности, чтобы убедиться, что пользователь остается надежно прикрепленным к транспортному средству.
+ent-ClothingShoesBootsMag = { ent-ClothingShoesBootsMagBase }
+    .desc = { ent-ClothingShoesBootsMagBase.desc }
+ent-ClothingShoesBootsMagAdv = продвинутые магнитные сапоги
+    .desc = Современные магнитные сапоги, которые не замедляют своего владельца.
+ent-ClothingShoesBootsMagSci = { ent-ClothingShoesBootsMagBase }
+    .desc = { ent-ClothingShoesBootsMagBase.desc }
+ent-ClothingShoesBootsMagBlinding = магнитные сапоги ослепляющей скорости
+    .desc = Они бы смотрелись привлекательно на таком ловкаче, как вы.
+ent-ClothingShoesBootsMagSyndie = кроваво-красные магнитные сапоги
+    .desc = Обратно спроектированные с магботов ОБР, они имеют сильное магнитное притяжение, встроенные двигатели и предназначены для боя. Могут вмещать 0.75 л газа.
+ent-ClothingShoesBootsMagERT = магботы ОБР
+    .desc = Улучшенные магнитные ботинки, используемые группами быстрого реагирования NanoTrasen, они имеют сильное магнитное притяжение и встроенные двигатели. Могут вмещать 0.75 л газа.
+ent-ActionToggleMagboots = Включить/Выключить магботы
+    .desc = Включает и выключает магботы.

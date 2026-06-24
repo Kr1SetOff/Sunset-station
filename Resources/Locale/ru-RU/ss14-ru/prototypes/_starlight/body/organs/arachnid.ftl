@@ -1,0 +1,16 @@
+ent-BaseArachnidOrgan = { ent-BaseItem }
+    .desc = { ent-BaseItem.desc }
+ent-OrganArachnidStomach = желудок
+    .desc = Фу. Это тяжело переварить.
+ent-OrganArachnidLungs = лёгкие
+    .desc = Фильтрует кислород из атмосферы... просто более жадно.
+ent-OrganArachnidHeart = сердце
+    .desc = Отвратительно живучий маленький биологический насос, созданный для пауков.
+ent-OrganArachnidLiver = печень
+    .desc = Рекомендация к подаче: кьянти и бобы.
+ent-OrganArachnidKidneys = почки
+    .desc = Фильтрует токсины из кровотока.
+ent-OrganArachnidEyes = глаза
+    .desc = Двух было уже слишком много.
+ent-OrganArachnidTongue = язык
+    .desc = Мясистая мышца, используемая в основном для лжи.

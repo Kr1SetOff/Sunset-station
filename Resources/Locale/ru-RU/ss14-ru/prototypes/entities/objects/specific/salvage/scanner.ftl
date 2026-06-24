@@ -1,0 +1,16 @@
+ent-MineralScannerUnpowered = сканер минералов
+    .desc = Сканер, который проверяет окружающие породы на наличие полезных минералов. Должен быть у вас в руке или кармане, чтобы работать.
+    .suffix = Всегда включен
+ent-MineralScanner = { ent-MineralScannerUnpowered }
+    .desc = { ent-MineralScannerUnpowered.desc }
+ent-MineralScannerEmpty = { ent-MineralScanner }
+    .desc = { ent-MineralScanner.desc }
+    .suffix = Пустой
+ent-AdvancedMineralScannerUnpowered = продвинутый сканер минералов
+    .desc = Сканер, который проверяет окружающие породы на наличие полезных минералов. Должен быть у вас в руке или кармане, чтобы работать. У этого увеличен радиус действия.
+    .suffix = Всегда включен
+ent-AdvancedMineralScanner = { ent-AdvancedMineralScannerUnpowered }
+    .desc = { ent-AdvancedMineralScannerUnpowered.desc }
+ent-AdvancedMineralScannerEmpty = { ent-AdvancedMineralScanner }
+    .desc = { ent-AdvancedMineralScanner.desc }
+    .suffix = Пустой

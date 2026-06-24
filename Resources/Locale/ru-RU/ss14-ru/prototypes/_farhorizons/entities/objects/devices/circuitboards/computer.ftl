@@ -1,0 +1,4 @@
+ent-NuclearReactorMonitorComputerCircuitboard = плата монитора ядерного реактора
+    .desc = Компьютерная печатная плата для монитора ядерного реактора.
+ent-GasTurbineMonitorComputerCircuitboard = плата монитора газовой турбины
+    .desc = Компьютерная печатная плата для монитора газовой турбины.

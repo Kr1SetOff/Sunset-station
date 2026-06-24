@@ -1,17 +1,17 @@
 <Document>
-  # Proto-Vox
+  # Прото-Вокс
 
   <Box>
     <GuideEntityEmbed Entity="AppearanceProtoVox" Caption=""/>
   </Box>
 
-  The main reason for Cyberneticization in Vox is, unsurprisingly, to get rid of their oxygen poisoning first and foremost.
+  Главная причина кибернетизации вокс — неудивительно — избавиться от их кислородного отравления в первую очередь.
 
-  ## Resistances
-  - Receive [color=#ffa500]20% more heat damage[/color], [color=#8147ff]25% more shock damage[/color], and [color=#FF3636]10% more blunt damage[/color].
-  - Receive [color=#1e90ff]30% less cold damage[/color] and [color=#64ffe6]10% less poison damage[/color].
+  ## Сопротивления
+  - Получают [color=#ffa500]на 20% больше урона от тепла[/color], [color=#8147ff]на 25% больше урона от удара током[/color] и [color=#FF3636]на 10% больше тупого урона[/color].
+  - Получают [color=#1e90ff]на 30% меньше урона от холода[/color] и [color=#64ffe6]на 10% меньше урона от яда[/color].
 
-  With the advent of advanced cybernetics and with some help from their extensive body modifications, Proto-Vox have been able to get rid of their fatal oxygen weakness, and while they still breathe nitrogen, oxygen is no longer toxic to them.
+  С появлением продвинутой кибернетики и с некоторой помощью от их обширных модификаций тела, прото-вокс смогли избавиться от своей смертельной слабости к кислороду, и хотя они всё ещё дышат азотом, кислород больше не токсичен для них.
 
-  Furthermore, due to these lung modifications, nitrogen-based gaseous sedatives no longer make you tired, and you won't breathe out ammonia anymore. Things that make other nitrogen breathers sleepy will also make you sleepy too.
+  Кроме того, благодаря этим модификациям лёгких, газообразные седативные средства на основе азота больше не делают вас уставшим, и вы больше не будете выдыхать аммиак. Вещества, которые делают других дышащих азотом сонными, также будут делать вас сонными.
 </Document>

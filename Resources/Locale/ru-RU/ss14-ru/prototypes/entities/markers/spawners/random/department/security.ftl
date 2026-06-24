@@ -1,0 +1,15 @@
+ent-LootSpawnerSecurityBasic = спавнер охранного снаряжения (базовый)
+    .desc = { ent-MarkerBase.desc }
+    .suffix = Снаряжение, Простое
+ent-LootSpawnerSecurity = спавнер охранного снаряжения
+    .desc = { ent-MarkerBase.desc }
+    .suffix = Снаряжение, Улучшенное
+ent-LootSpawnerArmory = спавнер арсенала
+    .desc = { ent-MarkerBase.desc }
+    .suffix = Оружие, Броня
+ent-LootSpawnerArmoryGunsOnly = спавнер оружия арсенала
+    .desc = { ent-MarkerBase.desc }
+    .suffix = Оружие
+ent-LootSpawnerArmoryArmorOnly = спавнер брони арсенала
+    .desc = { ent-MarkerBase.desc }
+    .suffix = Броня

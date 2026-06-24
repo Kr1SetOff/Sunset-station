@@ -1,0 +1,16 @@
+ent-PackPaperRolling = пачка сигаретной бумаги
+    .desc = Пачка тонкой бумаги, используемой для изготовления качественных курительных изделий.
+ent-PackPaperRollingFilters = пачка сигаретной бумаги с фильтрами
+    .desc = Пачка фильтров и тонкой бумаги, используемой для изготовления качественных курительных изделий.
+ent-PaperRolling = сигаретная бумага
+    .desc = Тонкая бумажка для изготовления качественных курительных изделий.
+    .suffix = Полная
+ent-PaperRolling1 = { ent-PaperRolling }
+    .desc = { ent-PaperRolling.desc }
+    .suffix = Одинарная
+ent-CigaretteFilter = сигаретный фильтр
+    .desc = Полоска плотной бумаги, используемая в качестве фильтра для самокруток.
+    .suffix = Полный
+ent-CigaretteFilter1 = { ent-CigaretteFilter }
+    .desc = { ent-CigaretteFilter.desc }
+    .suffix = Одинарный

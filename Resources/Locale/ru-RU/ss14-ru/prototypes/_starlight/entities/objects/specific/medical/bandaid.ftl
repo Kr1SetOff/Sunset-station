@@ -1,0 +1,16 @@
+ent-BasePatch = пластырь
+    .desc = Применение химикатов при контакте.
+ent-Patch = { ent-BasePatch }
+    .desc = { ent-BasePatch.desc }
+ent-PatchBrute = пластырь от ушибов
+    .desc = { ent-BasePatch.desc }
+ent-PatchBurnSmall = малый пластырь от ожогов
+    .desc = { ent-BasePatch.desc }
+ent-PatchBurn = пластырь от ожогов
+    .desc = { ent-BasePatch.desc }
+ent-PatchMedical = медицинский пластырь
+    .desc = { ent-BasePatch.desc }
+ent-PatchClown = клоунский пластырь
+    .desc = { ent-BasePatch.desc }
+ent-PatchPack = набор пластырей
+    .desc = Эффективно хранит несколько пластырей.

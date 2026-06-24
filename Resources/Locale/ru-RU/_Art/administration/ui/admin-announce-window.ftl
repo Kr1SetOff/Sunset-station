@@ -1,0 +1,15 @@
+admin-announce-global = Глобальное
+admin-announce-global-tooltip = Отправить всем игрокам на всех картах
+admin-announce-palette-button = Палитра
+admin-announce-hex = HEX
+admin-announce-hex-color = Цвет...
+admin-announce-sound-placeholder = Путь к звуку
+admin-announce-sender-placeholder = Отправитель...
+admin-announce-sender-default = Оператор ЦентКом
+admin-announce-enable-sender-tooltip = Включить подпись отправителя
+admin-announce-sent-by = Отправлено
+admin-announce-presets = Пресеты
+admin-announce-presets-wizard = Волшебник
+admin-announce-presets-nuclear-operative = Ядерный оперативник
+admin-announce-presets-central-command = Центральное командование
+admin-announce-presets-station = Станция

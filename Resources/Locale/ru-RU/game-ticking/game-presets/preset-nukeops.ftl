@@ -1,0 +1,36 @@
+nukeops-title = Ядерные оперативники
+nukeops-description = Ядерные оперативники нацелились на станцию. Постарайтесь не дать им взвести и взорвать ядерную бомбу, защищая ядерный диск!
+
+nukeops-welcome =
+    You are a nuclear operative. Your goal is to blow up { $station }, and ensure that it is nothing but a pile of rubble. Your bosses, the Syndicate, have provided you with the tools you'll need for the task.
+    Operation { $name } is a go! Death to NanoTrasen!
+nukeops-briefing = Ваши цели просты. Доставьте груз и убедитесь, что он взорвется. Приступайте к миссии.
+
+nukeops-opsmajor = Крупная победа Синдиката!
+nukeops-opsminor = Скромная победа Синдиката!
+nukeops-neutral = Ничейный исход!
+nukeops-crewminor = Малая победа экипажа!
+nukeops-crewmajor = Разгромная победа экипажа!
+
+nukeops-cond-nukeexplodedoncorrectstation = Ядерным оперативникам удалось взорвать станцию.
+# Starlight-edit
+nukeops-cond-nukeexplodedonnukieoutpost = Аванпост ядерных оперативников был уничтожен ядерным взрывом.
+nukeops-cond-nukeexplodedonincorrectlocation = Ядерная бомба взорвалась вне станции.
+nukeops-cond-nukeactiveinstation = Ядерная бомба была оставлена взведённой на станции.
+nukeops-cond-nukeactiveatcentcom = Ядерная бомба была доставлена Центральному командованию!
+nukeops-cond-nukediskoncentcom = Экипаж улетел с диском ядерной аутентификации.
+nukeops-cond-nukedisknotoncentcom = Экипаж оставил диск ядерной аутентификации на станции.
+nukeops-cond-nukiesabandoned = Ядерные оперативники были брошены.
+nukeops-cond-allnukiesdead = Все ядерные оперативники погибли.
+nukeops-cond-somenukiesalive = Несколько ядерных оперативников погибли.
+nukeops-cond-allnukiesalive = Все ядерные оперативники выжили.
+
+nukeops-list-start = Ядерными оперативниками были:
+nukeops-list-name = - [color=White]{ $name }[/color]
+nukeops-list-name-user = - [color=White]{ $name }[/color] ([color=gray]{ $user }[/color])
+nukeops-not-enough-ready-players = Недостаточно игроков готовы к игре! { $readyPlayersCount } игроков из необходимых { $minimumPlayers } готовы. Нельзя начать режим: Nukeops.
+nukeops-no-one-ready = Нет готовых игроков! Нельзя начать режим: Nukeops.
+
+nukeops-role-commander = Командир
+nukeops-role-agent = Агент
+nukeops-role-operator = Оператор

@@ -1,0 +1,14 @@
+ent-BorgSubtypeBase = Базовый подтип борга
+    .desc = Базовый подтип борга, предназначенный для выполнения основных задач.
+ent-BorgGenericSubtypeBase = Универсальный подтип борга
+    .desc = { ent-BorgSubtypeBase.desc }
+ent-BorgMiningSubtypeBase = Шахтерский подтип борга
+    .desc = { ent-BorgSubtypeBase.desc }
+ent-BorgEngineerSubtypeBase = Инженерный подтип борга
+    .desc = { ent-BorgSubtypeBase.desc }
+ent-BorgJanitorSubtypeBase = Подтип борга-уборщика
+    .desc = { ent-BorgSubtypeBase.desc }
+ent-BorgMedicalSubtypeBase = Медицинский подтип борга
+    .desc = { ent-BorgSubtypeBase.desc }
+ent-BorgServiceSubtypeBase = Сервисный подтип борга
+    .desc = { ent-BorgSubtypeBase.desc }

@@ -1,41 +1,39 @@
 <Document>
-        # Code Green
+        # Зелёный код
 
-        ## Called by:
+        ## Объявляется:
 
-        Any Command member.
+        Любым членом Командования.
 
-        Conditions:
+        Условия:
 
-        Default Alert Code at the start of the shift. Should not change unless a threat is suspected/confirmed.
+        Уровень тревоги по умолчанию в начале смены. Не должен меняться, пока не возникнет подозрение на угрозу или её подтверждение.
 
-        OR
+        ИЛИ
 
-        All confirmed/suspected threats to the station and/or crew have been handled, or simply vanished on their own. Unless there is further evidence of a threat after 10+ minutes on Code Blue, Code Green should be called.
+        Все подтверждённые или предполагаемые угрозы для станции и/или экипажа были устранены или бесследно исчезли сами по себе. Если по истечении 10 и более минут нахождения на Синем коде новые свидетельства угрозы отсутствуют, следует объявить Зелёный код.
 
-        ## Security:
+        ## Служба безопасности:
 
-        1. All weapons must not be visible unless in pursuit of a suspect.
+        1. Всё оружие должно быть скрыто (не должно носиться открыто), за исключением случаев преследования подозреваемого.
 
-        2. Armory weapons must remain inside of the brig, however may be used for training purposes.
+        2. Оружие из оружейной должно оставаться внутри брига, однако оно может использоваться в учебных целях.
 
-        3. Random searches are not permitted without a search warrant. However, searches may be conducted against an individual if a member of security or command has witnessed that individual committing a crime.
+        3. Обыски на усмотрение сотрудников без ордера на обыск запрещены. Тем не менее обыск конкретного лица может быть проведён, если сотрудник службы безопасности или член командования лично стал свидетелем совершения этим лицом преступления.
 
+        ## Охраняемые зоны:
 
-        ## Secure Areas:
+        1. Для доступа в охраняемые зоны требуется специальное разрешение, за исключением случаев, когда это необходимо для выполнения служебных обязанностей персонала.
 
-        1. Secure areas require an access permit, unless required by a staff job.
+        2. Охраняемые зоны: Департамент безопасности (СБ), хранилище EVA, техническое хранилище, гравитационный генератор, все помещения инженерного отдела за пределами вестибюля, хранилище ценностей (Vault) и зоны, требующие командного доступа.
 
-        2. Secure areas: Security department, EVA Storage, Tech Storage, Gravity Generator, All Engineering areas beyond the lobby, Vault, and areas requiring command access.
+        3. Охраняемые зоны должны оставаться разблокированными (болты подняты) и готовыми к использованию по их прямому назначению.
 
-        3. Secure areas are to be left unbolted and ready to be used for their intended purposes.
+        ## Экипаж в целом:
 
+        1. Хранилище ценностей (Vault) не должно открываться сотрудниками, не входящими в командный состав. Исключения составляют ремонтные работы, выдача золота для научного отдела или хранение критически важных предметов. Любой другой доступ осуществляется только по разрешению.
 
-        ## General Crew:
+        2. Хотя это и не обязательно, экипажу рекомендуется включать датчики костюмов на случай получения травм.
 
-        1. The Vault is not to be opened by non-command members. Exceptions for repairs, gold for science, or storage of critical items will be made. All other access is by permit only.
-
-        2. Although not required, crew are recommended to enable their suit sensors in case of injury.
-
-        3. Crew members are advised to not wear hardsuits or emergency EVA suits, unless responding to an emergency or required for their job. These can make identification of crew difficult.
+        3. Членам экипажа не рекомендуется носить скафандры (hardsuits) или аварийные костюмы EVA, если они не занимаются ликвидацией чрезвычайной ситуации или это не требуется для их работы. Подобные костюмы могут затруднить идентификацию сотрудников.
 </Document>

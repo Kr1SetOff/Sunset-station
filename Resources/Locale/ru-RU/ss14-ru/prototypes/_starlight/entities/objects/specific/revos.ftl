@@ -1,0 +1,15 @@
+ent-Telebond = телебонд
+    .desc = Устаревшие билеты, напечатанные с микрокристаллическим узором, используемые для вызова припасов через старую радиосвязь, по старинке. «НЕ ЕСТЬ!» — Борис
+    .suffix = 20 ТБ
+ent-Telebond1 = { ent-Telebond }
+    .desc = { ent-Telebond.desc }
+    .suffix = 1 ТБ
+ent-Telebond5 = { ent-Telebond }
+    .desc = { ent-Telebond.desc }
+    .suffix = 5 ТБ
+ent-Telebond10 = { ent-Telebond }
+    .desc = { ent-Telebond.desc }
+    .suffix = 10 ТБ
+ent-BaseRevUplinkRadio = радио Связь-УЗЛ
+    .desc = Радио узла связи советского производства, широко используемое силами USSP. Этот экземпляр был модифицирован для агентов СКБ и их активов. Несанкционированное использование строго не рекомендуется, потому что мы вас найдем.
+    .suffix = Пустой

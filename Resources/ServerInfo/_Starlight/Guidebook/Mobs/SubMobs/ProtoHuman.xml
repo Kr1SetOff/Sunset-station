@@ -1,13 +1,13 @@
 <Document>
-  # Proto-Human
+  # Прото-Человек
 <!-- Starlight, renamed back to Human.-->
   <Box>
     <GuideEntityEmbed Entity="AppearanceProtoHuman" Caption=""/>
   </Box>
 
-  Interestingly, the term "Protogen" originates from a Human-created fictional species that shares the same appearance as what are refered to as simply "Protogens"- those without a distinct species.
+  Интересно, что термин «Протоген» происходит от вымышленного вида, созданного людьми, который имеет тот же внешний вид, что и те, кто называется просто «Протогены» — те, у кого нет определённого вида.
 
-  One could argue humanity invented the Protogen species at large by extension, but, the term was only coined after other races started undergoing the same proceedure.
+  Можно утверждать, что человечество по сути изобрело вид протогенов в целом, но термин был придуман только после того, как другие расы начали проходить ту же процедуру.
 
   <Box>
     <GuideEntityEmbed Entity="AppearanceProtoVulp" Caption=""/>
@@ -15,7 +15,7 @@
   </Box>
  In fact, it was the advent of Protogen-Vulpkanins in particular that really popularized the name "Protogen" due to the striking resemblance to the fictional race.
 
-  ## Resistances
-  - Receive [color=#ffa500]10% more heat damage[/color], [color=#8147ff]25% more shock damage[/color], and [color=#FF3636]10% more blunt damage[/color].
-  - Receive [color=#1e90ff]30% less cold damage[/color].
+  ## Сопротивления
+  - Получают [color=#ffa500]на 10% больше урона от тепла[/color], [color=#8147ff]на 25% больше урона от удара током[/color] и [color=#FF3636]на 10% больше тупого урона[/color].
+  - Получают [color=#1e90ff]на 30% меньше урона от холода[/color].
 </Document>

@@ -1,0 +1,102 @@
+device-pda-slot-component-slot-name-cartridge = Картридж
+
+default-program-name = Программа
+notekeeper-program-name = Заметки
+nano-task-program-name = НаноДела
+news-read-program-name = Новости станции
+
+crew-manifest-program-name = Манифест персонала
+crew-manifest-cartridge-loading = Загрузка ...
+
+net-probe-program-name = Сетевой зонд
+net-probe-scan = Просканирован { $device }!
+net-probe-label-name = Название
+net-probe-label-address = Адрес
+net-probe-label-frequency = Частота
+net-probe-label-network = Сеть
+
+log-probe-program-name = Зонд логов
+log-probe-scan = Загружены логи устройства { $device }!
+log-probe-label-time = Время
+log-probe-label-accessor = Использовано:
+log-probe-label-number = #
+log-probe-print-button = Распечатать логи
+log-probe-printout-device = Сканированное устройство: { $name }
+log-probe-printout-header = Последние логи:
+log-probe-printout-entry = #{ $number } / { $time } / { $accessor }
+
+astro-nav-program-name = АстроНав
+
+med-tek-program-name = МедТек
+
+# NanoTask cartridge
+
+nano-task-ui-heading-high-priority-tasks =
+    { $amount ->
+        [zero] No High Priority Tasks
+        [one] 1 High Priority Task
+        *[other] { $amount } High Priority Tasks
+    }
+nano-task-ui-heading-medium-priority-tasks =
+    { $amount ->
+        [zero] No Medium Priority Tasks
+        [one] 1 Medium Priority Task
+        *[other] { $amount } Medium Priority Tasks
+    }
+nano-task-ui-heading-low-priority-tasks =
+    { $amount ->
+        [zero] No Low Priority Tasks
+        [one] 1 Low Priority Task
+        *[other] { $amount } Low Priority Tasks
+    }
+nano-task-ui-done = Готово
+nano-task-ui-revert-done = Отмена
+nano-task-ui-priority-low = Низкий
+nano-task-ui-priority-medium = Средний
+nano-task-ui-priority-high = Высокий
+nano-task-ui-cancel = Отмена
+nano-task-ui-print = Распечатать
+nano-task-ui-delete = Удалить
+nano-task-ui-save = Сохранить
+nano-task-ui-new-task = Новая задача
+nano-task-ui-description-label = Описание:
+nano-task-ui-description-placeholder = Взять что-то важное
+nano-task-ui-requester-label = Заявитель:
+nano-task-ui-requester-placeholder = Джон Нанотрейзен
+nano-task-ui-item-title = Редактировать задачу
+nano-task-printed-description = [bold]Описание:[/bold] { $description }
+nano-task-printed-requester = [bold]Заявитель:[/bold] { $requester }
+nano-task-printed-high-priority = [bold]Приоритет[/bold]: [color=red]Высокий[/color]
+nano-task-printed-medium-priority = [bold]Приоритет[/bold]: Средний
+nano-task-printed-low-priority = [bold]Приоритет[/bold]: Низкий
+
+# Wanted list cartridge
+wanted-list-program-name = Список розыскиваемых
+wanted-list-label-no-records = Все в порядке, ковбой
+wanted-list-search-placeholder = Поиск по имени и статусу
+
+wanted-list-age-label = [color=darkgray]Возраст:[/color] [color=white]{ $age }[/color]
+wanted-list-job-label = [color=darkgray]Работа:[/color] [color=white]{ $job }[/color]
+wanted-list-species-label = [color=darkgray]Раса:[/color] [color=white]{ $species }[/color]
+wanted-list-gender-label = [color=darkgray]Пол:[/color] [color=white]{ $gender }[/color]
+
+wanted-list-reason-label = [color=darkgray]Причина:[/color] [color=white]{ $reason }[/color]
+wanted-list-unknown-reason-label = неизвестная причина
+
+wanted-list-initiator-label = [color=darkgray]Инициатор:[/color] [color=white]{ $initiator }[/color]
+wanted-list-unknown-initiator-label = неизвестный инициатор
+
+wanted-list-status-label = [color=darkgray]статус:[/color] { $status ->
+    [suspected] [color=yellow]suspected[/color]
+    [wanted] [color=red]wanted[/color]
+    [detained] [color=#b18644]detained[/color]
+    [paroled] [color=green]paroled[/color]
+    [discharged] [color=green]discharged[/color]
+    [hostile] [color=darkred]hostile[/color]
+    [eliminated] [color=gray]eliminated[/color]
+    *[other] none
+}
+
+wanted-list-history-table-time-col = Время
+wanted-list-history-table-reason-col = Преступление
+wanted-list-history-table-initiator-col = Инициатор

@@ -1,30 +1,24 @@
 ﻿<Document>
-  # Atmospheric Alerts Computer
-  The Atmospheric Alerts Computer is a computer that shows information on all air alarms and fire alarms across the station.
+  # Компьютер атмосферных оповещений (Atmospheric Alerts Computer)
+  Компьютер атмосферных оповещений — это терминал, отображающий информацию обо всех воздушных и пожарных сигнализациях на станции.
 
   <Box>
     <GuideEntityEmbed Entity="ComputerAlert"/>
   </Box>
 
-  It is a useful tool for quickly identifying areas that require attention.
+  Это незаменимый инструмент для быстрого обнаружения зон, требующих внимания. Обычно он находится в отделе атмосферного контроля (Atmos), где техники используют его для мониторинга всей станции, но также полезен инженерам для оценки общего ущерба.
 
-  The Atmospheric Alerts Computer is often found in Atmospherics, and is used by Atmospherics Technicians to monitor atmospheres across the entire station.
-  However, it is also a good indicator for general engineers to gauge station damage.
+  
 
-  The computer displays lists of Air Alarms in [color=orange]Warning[/color] and [color=red]Danger[/color] levels. Additionally, the computer displays the location of all air alarms, color-coded based on their current status.
+  ## Функционал
+  - **Списки оповещений:** Компьютер отображает список сигнализаций со статусами [color=orange]Warning (Предупреждение)[/color] и [color=red]Danger (Опасность)[/color]. 
+  - **Карта:** Местоположение всех сигнализаций отображается на карте, при этом проблемные зоны выделяются рамками, цвет которых соответствует статусу.
+  - **Фильтрация:** По умолчанию устройства с нормальным статусом скрыты, но их отображение можно включить с помощью фильтров в нижней части интерфейса.
+  - **Детализация:** Клик по сигнализации в списке или на карте открывает подробные данные об атмосфере в конкретном секторе (давление, состав газов), что помогает понять характер чрезвычайной ситуации.
+  - **Мониторинг пожаров:** Отдельная вкладка показывает список сработавших [textlink="пожарных сигнализаций" link="FireAndGasControl"], что позволяет мгновенно локализовать очаги возгорания.
 
-  Air alarms with the normal status are hidden by default.
-  You can toggle the visibility of normal air alarms by adjusting the filters at the bottom of the interface.
+  ## Управление оповещениями
+  Вы можете временно скрыть назойливые сигналы (например, от морозильных камер или камер сгорания), нажав кнопку "Silence alerts" (Отключить оповещения). Устройство исчезнет из общего списка, но по-прежнему будет отображаться на карте.
 
-  The map draws a box around the area that the air alarm is monitoring, which can help identify the area that is in danger.
-  This box will change color based on the status of the air alarm.
-
-  If an Air Alarm is unpowered, it is shown as greyed out on the list and on the map.
-
-  Clicking on an air alarm on the list or on the map will show detailed information about the atmosphere in that area, which can help gauge the type of emergency that is occurring.
-
-  A list of triggered [textlink="fire alarms" link="FireAndGasControl"] is also displayed on the Atmospheric Alerts Computer in a separate tab, which can be used to quickly identify areas that might be on fire.
-
-  You can silence specific alarms (such as alarms that monitor burn chambers and freezers) by clicking on the alarm in the list and pressing the "Silence alerts" button.
-  This will hide the alarm from the list, but it will still be visible on the map.
+  *Примечание:* Обесточенные (неработающие) сигнализации отображаются в списке и на карте серым цветом.
 </Document>

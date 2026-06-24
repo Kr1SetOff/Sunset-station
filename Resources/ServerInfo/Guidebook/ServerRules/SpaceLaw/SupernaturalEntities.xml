@@ -1,17 +1,17 @@
 ﻿<Document>
 
-  [bold]This section is only avalable to characters with Secure Knowledge. Navigating the Guidebook is not an IC action and does not reveal Metashielded information.[/bold]
+  [bold]Этот раздел доступен только персонажам с уровнем доступа «Безопасные сведения» (Secure Knowledge). Навигация по справочнику не является внутриигровым (IC) действием и не раскрывает информацию, защищённую «Метащитом» (Metashield).[/bold]
 
-  ## Changelings
+  ## Генокрад (Changeling)
 
-  Codename: Parasite. Confirmed Changelings are not legally protected by Corporate Law. An individual suspected of being a Changeling may, on Code Blue or higher, be detained and forced to undergo a blood test to determine their nature. Any confirmed Changeling is to be executed and incinerated immediately. Authorization for these executions is not required, so long as blood tests have been properly performed.
+  Кодовое имя: Паразит. Подтверждённые генокрады не находятся под правовой защитой Корпоративного права. Лицо, подозреваемое в том, что оно является генокрадом, при «Синем коде» (Code Blue) или выше может быть задержано и принудительно подвергнуто анализу крови для определения своей природы. Любой подтверждённый генокрад подлежит немедленной казни и кремации. Разрешение на подобные казни не требуется, при условии, что анализы крови были проведены надлежащим образом.
 
-  Blood tests are required as legal proof that an individual is a Changeling, first hand testimony is not enough to authorize an execution. Failure to procure a valid blood test is Unlawful Execution regardless of who authorized it.
+  Анализы крови требуются как законное доказательство того, что индивид является генокрадом; свидетельских показаний недостаточно для санкционирования казни. Неспособность предоставить результаты надлежащего анализа крови квалифицируется как незаконная казнь, независимо от того, кто её санкционировал.
 
-  ## Vampires
-  Allegations of blood consumption must be corroborated by multiple witnesses observing repeated feeding or displays of supernatural power despite not being a wizard. On code blue or higher suspected individuals may be detained and forced to undergo testing with either sunlight or holy water.
+  ## Вампиры
+  Обвинения в потреблении крови должны быть подтверждены несколькими свидетелями, наблюдавшими регулярное питание или проявления сверхъестественных способностей при условии, что подозреваемый не является волшебником. При «Синем коде» или выше подозреваемые лица могут быть задержаны и принудительно подвергнуты проверке солнечным светом или святой водой.
 
-  Confirmed vampires can qualify for [textlink="Enemies of the Corporation" link="security-sop-enemy-of-corporation"]. Otherwise they should be given a tracking implant along with an electropack and monitored.
+  Подтверждённые вампиры могут быть классифицированы как [textlink="Враги корпорации" link="security-sop-enemy-of-corporation"]. В противном случае им должен быть установлен имплант для отслеживания и электропак (электрошоковый ошейник), после чего за ними должно быть установлено наблюдение.
 
-  [textlink="Return to Corporate Law" link="SpaceLaw"]
+  [textlink="Вернуться к Корпоративному праву" link="SpaceLaw"]
 </Document>

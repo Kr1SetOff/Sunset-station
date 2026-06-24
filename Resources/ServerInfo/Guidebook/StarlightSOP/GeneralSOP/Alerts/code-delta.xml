@@ -1,36 +1,34 @@
 <Document>
-    # Code Delta
+    # Дельта код
 
-    ## Called by:
+    ## Объявляется:
 
-    Automatically called when the on-board Nuclear Fission Device has been activated.
+    Включается автоматически при активации бортового устройства ядерного деления (ядерного заряда).
 
-    ## Conditions:
+    ## Условия:
 
-    The on-board Nuclear Fission Device has been activated by Command, Central Command personnel, or hostile personnel.
+    Бортовое устройство ядерного деления было активировано Командованием, персоналом Центрального командования или враждебными силами.
 
-    ## Security:
+    ## Служба безопасности:
 
-    1. In the case of hostile factions arming the device, defusing the bomb is not recommended. Security personnel are to escort all other personnel off-station.
+    1. В случае если устройство было взведено враждебными группировками, обезвреживание бомбы не рекомендуется. Сотрудники службы безопасности должны эвакуировать весь остальной персонал со станции.
 
-    2. In the case of a Central Command-authorized activation of the on-board Nuclear Fission Device, all Security personnel are to stand down.
+    2. В случае активации бортового ядерного устройства, санкционированной Центральным командованием, все сотрудники Службы безопасности должны прекратить любые действия и сложить оружие.
 
+    ## Охраняемые зоны:
 
-    ## Secure Areas:
+    1. Экипажу разрешено беспрепятственно заходить в охраняемые зоны. Действующие регламенты и процедуры доступа теряют силу.
 
-    1. Crew are allowed to enter secure areas. Procedures irrelevant.
+    2. Охраняемые зоны: Департамент безопасности (СБ), хранилище EVA, техническое хранилище, гравитационный генератор, все помещения инженерного отдела за пределами вестибюля, хранилище ценностей (Vault) и зоны, требующие командного доступа.
 
-    2. Secure areas: Security department, EVA Storage, Tech Storage, Gravity Generator, All Engineering areas beyond the lobby, Vault, and areas requiring command access.
+    ## Медицинский отдел:
 
+    Рекомендуется перевести все входы в медотсек в режим аварийного (свободного) доступа, чтобы члены экипажа могли оказать себе помощь в чрезвычайной ситуации.
 
-    ## Medical:
+    ## Экипаж в целом:
 
-    It is recommended that medical entrances be set to emergency access to allow crew members to heal themselves in emergencies.
+    1. В случае если ядерное устройство было взведено враждебными силами, весь персонал, не занятый на критически важных позициях, обязан немедленно эвакуироваться со станции;
 
-    ## General Crew:
-
-    1. In the case that antagonistic forces that have armed a nuclear device, all non-vital personnel are to evacuate off-station immediately;
-
-    2. In the case of a Central Command-authorized activation of the on-board Nuclear Fission Device, all personnel are to stand down.
+    2. В случае активации бортового ядерного устройства, санкционированной Центральным командованием, весь персонал должен прекратить любые действия и подчиниться.
 
 </Document>

@@ -1,0 +1,16 @@
+ent-BaseTrashDebris = мусорные обломки
+    .desc = { ent-BaseDebris.desc }
+ent-BaseMeatDebris = мясные обломки
+    .desc = { ent-BaseDebris.desc }
+ent-TrashDebrisSmall = малые мусорные обломки
+    .desc = { ent-BaseTrashDebris.desc }
+ent-TrashDebrisMedium = средние мусорные обломки
+    .desc = { ent-BaseTrashDebris.desc }
+ent-TrashDebrisLarge = крупные мусорные обломки
+    .desc = { ent-BaseTrashDebris.desc }
+ent-MeatDebrisSmall = малые мясные обломки
+    .desc = { ent-BaseMeatDebris.desc }
+ent-MeatDebrisMedium = средние мясные обломки
+    .desc = { ent-BaseMeatDebris.desc }
+ent-MeatDebrisLarge = крупные мясные обломки
+    .desc = { ent-BaseMeatDebris.desc }

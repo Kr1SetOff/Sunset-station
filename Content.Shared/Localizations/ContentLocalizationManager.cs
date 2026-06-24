@@ -1,6 +1,7 @@
 using System.Globalization;
 using System.Linq;
 using System.Text.RegularExpressions;
+using Robust.Shared.Configuration;
 using Robust.Shared.Utility;
 
 namespace Content.Shared.Localizations
@@ -10,8 +11,8 @@ namespace Content.Shared.Localizations
         [Dependency] private ILocalizationManager _loc = default!;
 
         // If you want to change your codebase's language, do it here.
-        private const string Culture = "en-US";
-
+        private const string Culture = "ru-RU";
+        private const string FallbackCulture = "en-US";
         /// <summary>
         /// Custom format strings used for parsing and displaying minutes:seconds timespans.
         /// </summary>
@@ -26,12 +27,15 @@ namespace Content.Shared.Localizations
         public void Initialize()
         {
             var culture = new CultureInfo(Culture);
+            var fallbackCulture = new CultureInfo(FallbackCulture);
 
             _loc.LoadCulture(culture);
+            _loc.LoadCulture(fallbackCulture);
+            _loc.SetFallbackCluture(fallbackCulture);
+            _loc.AddFunction(culture, "MANY", FormatMany);
             _loc.AddFunction(culture, "PRESSURE", FormatPressure);
             _loc.AddFunction(culture, "POWERWATTS", FormatPowerWatts);
             _loc.AddFunction(culture, "POWERJOULES", FormatPowerJoules);
-            // NOTE: ENERGYWATTHOURS() still takes a value in joules, but formats as watt-hours.
             _loc.AddFunction(culture, "ENERGYWATTHOURS", FormatEnergyWattHours);
             _loc.AddFunction(culture, "UNITS", FormatUnits);
             _loc.AddFunction(culture, "TOSTRING", args => FormatToString(culture, args));

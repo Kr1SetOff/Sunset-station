@@ -1,0 +1,10 @@
+ent-BaseNest = базовое гнездо
+    .desc = { ent-BaseStructure.desc }
+ent-NestBeeHive = улей
+    .desc = Вам, вероятно, не стоит злить их.
+ent-NestBeeBox = коробка с пчёлами
+    .desc = Вам, вероятно, не стоит злить их.
+ent-NestSnake = змеиное гнездо
+    .desc = Пахнет серой и тухлым мясом.
+ent-NestMouse = мышиное гнездо
+    .desc = Пахнет аммиаком и сыром.
