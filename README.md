@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Space Station 14" width="600" src="Resources/Textures/Logo/logo.png" />
+  <img alt="Space Station 14" width="600" src="Resources/Textures/Logo/logo_ru.png" />
 </p>
 
 <div class="header" align="center">
