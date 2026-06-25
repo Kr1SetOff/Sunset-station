@@ -1,0 +1,25 @@
+# Конфигурация сервера Space Station 14
+# Discord интеграция
+
+# Токен вашего Discord бота
+discord.token = "MTUxNzY5NjczNzMwMzcyNDA3Mg.GUUycJ.Cd-FL529GKHwSfQROy26vEDf8cMYXKsMxiBOXw"
+
+# ID гильдии (сервера) Discord
+# Получить можно: включить режим разработчика в Discord -> ПКМ на сервер -> Копировать ID
+discord.guild_id = "1507906084621258802"
+
+# Префикс для команд бота
+discord.prefix = "!"
+
+# ID канала для OOC чата (двусторонняя связь с ботом)
+ooc.discord_channel_id = "1517703133277454486"
+
+# ID канала для админ чата (двусторонняя связь с ботом)
+admin.chat_discord_channel_id = "1517691701190463568"
+
+# Webhook URL для оповещений о банах (Starlight)
+# Создать webhook: Настройки канала -> Интеграции -> Webhooks -> Создать вебхук -> Копировать URL
+discord.ban_webhook = "https://discord.com/api/webhooks/1519408268676567222/i2rk_n3zU6T-8N4gZdMJ-6g53Vp7nmXgHUNIHNOq-VyGi46nT-oKI3oE1RF5wOhKn3lS"
+
+# Webhook URL для всех ahelp сообщений
+discord.ahelp_webhook = "https://discord.com/api/webhooks/1517693369202118666/-gRQyDZC1uuKoeh2OI-QdoQ9rZ9e1xeIFwJhq-vPxqj0z_1YiMbJOzk_5yBhBX3YCcjt"
