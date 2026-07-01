@@ -17,7 +17,7 @@ chat-speech-verb-felionoid-3 = шипит
 chat-speech-verb-felionoid-4 = воет
 chat-speech-verb-name-vulpkanin = Вулпа
 
-chat-speech-verb-marish = Марс
+chat-speech-verb-marish = марит
 
 chat-manager-language-requires-hands = Вам нужны свободные руки, чтобы говорить на этом языке!
 
@@ -32,3 +32,9 @@ chat-speech-verb-lagomorph = пищит
 chat-speech-verb-name-resomi = Резоми
 chat-speech-verb-resomi-1 = пронзительно кричит
 chat-speech-verb-resomi-2 = щебечет
+
+chat-speech-verb-name-rodentia = Родентия
+chat-speech-verb-rodentia-1 = пищит
+chat-speech-verb-rodentia-2 = попискивает
+chat-speech-verb-rodentia-3 = стрекочет
+chat-speech-verb-rodentia-4 = визжит

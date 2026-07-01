@@ -1,46 +1,46 @@
 # THE UNKNOWN
 
-ghost-role-information-theunknown-name = The Unknown
-ghost-role-information-theunknown-description = The Cosmic Cult has won. An fragment of cosmic power extrudes into realspace.
+ghost-role-information-theunknown-name = Неизвестное
+ghost-role-information-theunknown-description = Космический культ победил. Частица космической силы проступает в реальное пространство.
 ghost-role-information-theunknown-rules = ...
 
 # COLOSSUS
 
-ghost-role-information-colossus-name = Entropic Colossus
-ghost-role-information-colossus-description = Call upon an Effigy of Entropy to perpetuate your existence and accelerate the end of all things! You have 15 minutes to do so or your energies will be extinguished.
-ghost-role-information-colossus-rules = You are a [color={ role-type-team-antagonist-color }][bold]{ role-type-team-antagonist-name }[/bold][/color] with any cosmic cultists that may be present.
+ghost-role-information-colossus-name = Энтропийный колосс
+ghost-role-information-colossus-description = Призовите Эффигию Энтропии, чтобы продлить своё существование и приблизить конец всего сущего! У вас есть 15 минут на это, иначе ваша энергия угаснет.
+ghost-role-information-colossus-rules = Вы — [color={ role-type-team-antagonist-color }][bold]{ role-type-team-antagonist-name }[/bold][/color] вместе со всеми космическими культистами, которые могут присутствовать.
 
-terror-colossus = Attention crew, it appears that someone on your station has drawn the attention of an enormous malign anomaly.
+terror-colossus = Внимание, экипаж: похоже, кто-то на вашей станции привлёк внимание чудовищной пагубной аномалии.
 
-ghost-role-colossus-charactermenu = You must usher in the end of all things. Wreak untold havoc upon all before you.
-ghost-role-colossus-objective = Call forth an Effigy of Entropy and persist until the end of all things.
+ghost-role-colossus-charactermenu = Вы должны приблизить конец всего сущего. Обрушьте невообразимые разрушения на всех, кто встанет у вас на пути.
+ghost-role-colossus-objective = Призовите Эффигию Энтропии и продержитесь до конца всего сущего.
 ghost-role-colossus-briefing =
-    You are an Entropic Colossus!
-    Your objectives are listed in the character menu.
-    Read more about your role in the guidebook entry.
+    Вы — Энтропийный колосс!
+    Ваши цели указаны в меню персонажа.
+    Узнайте больше о своей роли в руководстве.
 
-ghost-role-colossus-death = The colossus collapses, its light extinguished.
-ghost-role-colossus-hibernate = The colossus begins drawing in energy!
-ghost-role-colossus-effigy-confirm = If placement is  valid, press again to Beckon an Effigy.
+ghost-role-colossus-death = Колосс рушится, его свет угасает.
+ghost-role-colossus-hibernate = Колосс начинает вбирать в себя энергию!
+ghost-role-colossus-effigy-confirm = Если размещение допустимо, нажмите ещё раз, чтобы призвать Эффигию.
 
-ghost-role-colossus-effigy-error-grid = Invalid location! An Effigy must be beckoned upon a stable surface.
-ghost-role-colossus-effigy-error-location = Invalid location! The Effigy must be beckoned near { $LOCATION }.
-ghost-role-colossus-effigy-error-intersection = Too crowded! An Effigy requires an empty 3x1 area to be beckoned.
-ghost-role-colossus-effigy-error-space = Too close to space! An Effigy must be be at least { $DISTANCE }m away.
+ghost-role-colossus-effigy-error-grid = Недопустимое место! Эффигию можно призвать только на устойчивой поверхности.
+ghost-role-colossus-effigy-error-location = Недопустимое место! Эффигию нужно призвать рядом с { $LOCATION }.
+ghost-role-colossus-effigy-error-intersection = Слишком тесно! Для призыва Эффигии требуется свободная область 3x1.
+ghost-role-colossus-effigy-error-space = Слишком близко к космосу! Эффигия должна находиться на расстоянии не менее { $DISTANCE }м.
 
-objective-condition-effigy-no-target = Beckon an Effigy wherever you desire.
-objective-condition-effigy = Beckon an Effigy near "{ $location }".
+objective-condition-effigy-no-target = Призовите Эффигию там, где пожелаете.
+objective-condition-effigy = Призовите Эффигию рядом с «{ $location }».
 
 # MINDSINK (Positronic Brain)
 
-ghost-role-mindsink-installed = Whispers hum from its surface!
-ghost-role-mindsink-off = It lies dormant.
-ghost-role-mindsink-still-searching = It is drawing upon the noösphere...
-ghost-role-mindsink-searching = It has started drawing upon the noösphere...
-ghost-role-mindsink-role-name = Malign Mindsink
-ghost-role-mindsink-role-description = Serve the station crew, despite your unusual origins.
-ghost-role-mindsink-wipe-device-verb-text = Erase Mind
-ghost-role-mindsink-wiped-device = The mind was snuffed out.
-ghost-role-mindsink-stop-searching-verb-text = Stop Seeking
-ghost-role-mindsink-stopped-searching = Noöspheric resonance halted.
-ghost-role-mindsink-slot-component-slot-name-brain = Brain
+ghost-role-mindsink-installed = С его поверхности доносится гул шёпота!
+ghost-role-mindsink-off = Оно пребывает в дрёме.
+ghost-role-mindsink-still-searching = Оно черпает силу из ноосферы...
+ghost-role-mindsink-searching = Оно начало черпать силу из ноосферы...
+ghost-role-mindsink-role-name = Пагубный поглотитель разума
+ghost-role-mindsink-role-description = Служите экипажу станции, несмотря на своё необычное происхождение.
+ghost-role-mindsink-wipe-device-verb-text = Стереть разум
+ghost-role-mindsink-wiped-device = Разум был угашен.
+ghost-role-mindsink-stop-searching-verb-text = Прекратить поиск
+ghost-role-mindsink-stopped-searching = Ноосферный резонанс прекращён.
+ghost-role-mindsink-slot-component-slot-name-brain = Мозг

@@ -1,12 +1,12 @@
-rail-timer-task = Do not fail the mission within { $duration } minutes.
-rail-survive-task =  Survive until all other tasks are completed.
-rail-avoid-handcuffs-task = Avoid being handcuffed or restrained.
-rr-brighteye-dark-task = Spread { $Amount } dark tiles.
-objective-condition-shadekin-alive-title = Ensure kin { $targetName }, { CAPITALIZE($job) } stays alive.
-rail-sanctuary-task = Build a shadekin sanctuary in maintenance and keep it maintained.
-objective-condition-keep-inthedark-title = Ensure { $targetName }, { CAPITALIZE($job) } stays in The Dark.
-objective-impersonate-brighteye = Impersonate a member of { $department } this shift and learn!
-rr-brighteye-breaklight = Break { $Amount } lights.
+rail-timer-task = Не провалите задание в течение { $duration } минут.
+rail-survive-task =  Продержитесь, пока не будут выполнены все остальные задания.
+rail-avoid-handcuffs-task = Избегайте наручников и удержания.
+rr-brighteye-dark-task = Распространите { $Amount } тёмных плиток.
+objective-condition-shadekin-alive-title = Обеспечьте, чтобы сородич { $targetName }, { CAPITALIZE($job) }, остался жив.
+rail-sanctuary-task = Постройте убежище тенекровных в техническом отсеке и поддерживайте его.
+objective-condition-keep-inthedark-title = Обеспечьте, чтобы { $targetName }, { CAPITALIZE($job) }, оставался(-ась) во Тьме.
+objective-impersonate-brighteye = Выдайте себя за сотрудника отдела { $department } в течение смены и разузнайте всё!
+rr-brighteye-breaklight = Разбейте { $Amount } светильников.
 
-rail-crew-retention-task = Ensure that at least { $threshold }% of the crew evacuates from the station by the end of the shift.
-rail-desertion-task = Remain on the station at the end of the shift. Do not evacuate.
+rail-crew-retention-task = Обеспечьте, чтобы к концу смены со станции эвакуировалось не менее { $threshold }% экипажа.
+rail-desertion-task = Останьтесь на станции до конца смены. Не эвакуируйтесь.

@@ -1,449 +1,448 @@
-card-selection-window-title = CARD SELECTION
-cards = Cards
+card-selection-window-title = ВЫБОР КАРТЫ
+cards = Карты
 
 
-railroading-card-examined = ┌Active card:
+railroading-card-examined = ┌Активная карта:
     ├[color={ $IconColor }][font="Icon"]{ $Icon }[/font][/color] [color={ $Color }]{ $Title }[/color]
     └[color={ $Color }]{ $Desc }[/color]
 railroading-issued-card = [color={ $IconColor }][font="Icon"]{ $Icon }[/font][/color] [color={ $Color }]{ $Title }[/color]
 
-railroading-chat-delivery-message-1 = A mysterious package has arrived just for you!
-railroading-chat-delivery-wrapped-message-1 = [bold]A mysterious package has arrived just for you[/bold]!
+railroading-chat-delivery-message-1 = Загадочная посылка прибыла специально для вас!
+railroading-chat-delivery-wrapped-message-1 = [bold]Загадочная посылка прибыла специально для вас[/bold]!
 
-railroading-chat-delivery-message-2 = Congratulations! You've just received a surprise delivery.
-railroading-chat-delivery-wrapped-message-2 = [bold]Congratulations! You've just received a surprise delivery[/bold].
+railroading-chat-delivery-message-2 = Поздравляем! Вы только что получили неожиданную доставку.
+railroading-chat-delivery-wrapped-message-2 = [bold]Поздравляем! Вы только что получили неожиданную доставку[/bold].
 
-railroading-chat-delivery-message-3 = Special delivery! Someone out there likes you.
-railroading-chat-delivery-wrapped-message-3 = [bold]Special delivery! Someone out there likes you[/bold].
+railroading-chat-delivery-message-3 = Особая доставка! Кто-то там, наверху, вас любит.
+railroading-chat-delivery-wrapped-message-3 = [bold]Особая доставка! Кто-то там, наверху, вас любит[/bold].
 
-railroading-chat-delivery-message-4 = You hear a knock at the door... Your package is here!
-railroading-chat-delivery-wrapped-message-4 = [bold]You hear a knock at the door... Your package is here[/bold]!
+railroading-chat-delivery-message-4 = Вы слышите стук в дверь... Ваша посылка прибыла!
+railroading-chat-delivery-wrapped-message-4 = [bold]Вы слышите стук в дверь... Ваша посылка прибыла[/bold]!
 
-railroading-chat-delivery-message-5 = Delivery incoming! It’s your lucky day.
-railroading-chat-delivery-wrapped-message-5 = [bold]Delivery incoming! It’s your lucky day[/bold].
+railroading-chat-delivery-message-5 = Доставка в пути! Сегодня ваш счастливый день.
+railroading-chat-delivery-wrapped-message-5 = [bold]Доставка в пути! Сегодня ваш счастливый день[/bold].
 
-railroading-chat-delivery-message-6 = Surprise! The postman has brought you something special.
-railroading-chat-delivery-wrapped-message-6 = [bold]Surprise! The postman has brought you something special[/bold].
+railroading-chat-delivery-message-6 = Сюрприз! Почтальон принёс вам кое-что особенное.
+railroading-chat-delivery-wrapped-message-6 = [bold]Сюрприз! Почтальон принёс вам кое-что особенное[/bold].
 
-railroading-chat-delivery-message-7 = Lucky you! A parcel just dropped into your hands.
-railroading-chat-delivery-wrapped-message-7 = [bold]Lucky you! A parcel just dropped into your hands[/bold].
+railroading-chat-delivery-message-7 = Повезло вам! Посылка сама упала вам в руки.
+railroading-chat-delivery-wrapped-message-7 = [bold]Повезло вам! Посылка сама упала вам в руки[/bold].
 
-rail-consume-task = Eat { INDEFINITE($Target) } { $Target }
+rail-consume-task = Съешьте { INDEFINITE($Target) } { $Target }
+rail-open-delivery-task = Откройте { $Amount } почтовых отправлений.
 
-rail-open-delivery-task = Open { $Amount } pieces of mail.
+rr-apple-pie = Яблочный пирог
+rr-apple-pie-desc = Ходят слухи, что на этой станции пекут лучшие яблочные пироги в галактике. Определённо стоит проверить.
 
-rr-apple-pie = Apple pie
-rr-apple-pie-desc = Rumor has it this station has the best apple pies in the galaxy. That’s definitely worth checking out.
+rr-dumplings = Пельмени
+rr-dumplings-desc = Можете себе представить? Вареники. С мясом. Не знал, что мне это нужно, пока не узнал.
 
-rr-dumplings = Dumplings
-rr-dumplings-desc = Can you imagine? Pierogi. With meat. I didn’t know I needed that until now.
+rr-sashimi = Сашими
+rr-sashimi-desc = Местные космические карпы хорошо откормлены, и от этого невероятно вкусны. За такой вкус и умереть не жалко.
 
-rr-sashimi = Sashimi
-rr-sashimi-desc = The local space carp are well-fed, and that makes them incredibly tasty. That flavor is worth dying for.
+rr-herb-salad = Салат из трав
+rr-herb-salad-desc = Иногда организм намекает, что пора съесть что-то полезное, а не привычную дрянь. И похоже, вы только что получили такой намёк.
 
-rr-herb-salad = Herb Salad
-rr-herb-salad-desc = Sometimes your body drops a hint that it’s time to eat something healthy, not the usual junk. And it looks like you just got that hint.
+rr-melon-fruit-bowl = Дынная тарелка
+rr-melon-fruit-bowl-desc = В космопорту это блюдо называли «Фруктозная мамочка». Я так и не осмелился спросить почему, но всегда хотел попробовать.
 
-rr-melon-fruit-bowl = Melon Fruit Bowl
-rr-melon-fruit-bowl-desc = At the spaceport, they called this dish Fructose Momma. I never dared to ask why, but I’ve always wanted a taste.
-
-rr-stew = Stew
-rr-stew-desc = Space makes a lot of ordinary things feel exotic. Just try not to think about how it was cooked in a microwave.
+rr-stew = Рагу
+rr-stew-desc = Космос делает многие обычные вещи экзотичными. Просто постарайтесь не думать о том, что это готовили в микроволновке.
 
 # Metabolize
 
-rail-metabolize-task = Metabolize { INDEFINITE($Target) } { $Target }
+rail-metabolize-task = Усвойте { INDEFINITE($Target) } { $Target }
 
-rr-smoke = Smokeables
-rr-smoking-desc = I can always quit, I’m not addicted.
+rr-smoke = Курительные изделия
+rr-smoking-desc = Я всегда могу бросить, я же не зависим.
 
 # Description for all alcoholic drinks
 
-rr-alcohol-desc = I think alcohol addiction is not that scary. I can always ask the bartender to pour me a non-alcoholic beer, right?
+rr-alcohol-desc = По-моему, алкогольная зависимость не так уж страшна. Я всегда могу попросить бармена налить мне безалкогольного пива, верно?
 
 # Alcohol names
 
-rr-absinthe = Absinthe
-rr-absinthe-desc = They say it makes you see things. I say bring it on. Let’s see how deep the green fairy’s rabbit hole goes.
+rr-absinthe = Абсент
+rr-absinthe-desc = Говорят, от него видятся всякие вещи. А я говорю — давай. Посмотрим, насколько глубока кроличья нора зелёной феи.
 
-rr-ale = Ale
-rr-ale-desc = Old-timey adventurers drank this stuff after slaying dragons. I just need it after meetings.
+rr-ale = Эль
+rr-ale-desc = Старинные искатели приключений пили это после убийства драконов. Мне это нужно просто после совещаний.
 
-rr-beer = Beer
-rr-beer-desc = Ah, the universal solvent for bad days and good company. One cold beer coming right up.
+rr-beer = Пиво
+rr-beer-desc = Ах, универсальный растворитель для плохих дней и хорошей компании. Одно холодное пиво, сейчас будет.
 
-rr-bluecuracao = Blue Curaçao
-rr-bluecuracao-desc = It’s blue. Like the ocean. Or a bad mood. But it tastes like vacation. Weird magic in a bottle.
+rr-bluecuracao = Блю Кюрасао
+rr-bluecuracao-desc = Он синий. Как океан. Или как плохое настроение. Но на вкус — как отпуск. Странная магия в бутылке.
 
-rr-cognac = Cognac
-rr-cognac-desc = Is it still called "sophisticated" if I drink it in a hoodie? Asking for a friend.
+rr-cognac = Коньяк
+rr-cognac-desc = Это ещё считается «изысканным», если пить его в толстовке? Спрашиваю для друга.
 
-rr-deadrum = Dead Rum
+rr-deadrum = Мёртвый ром
 
-rr-gin = Gin
-rr-gin-desc = I’m not sure if it’s gin from a bottle. Although? Maybe I should try drinking it, and it will appear and I can make three wishes?
+rr-gin = Джин
+rr-gin-desc = Не уверен, джин ли это из бутылки. Хотя? Может, стоит его выпить, и он появится, и я загадаю три желания?
 
-rr-coffeeliqueur = Coffee Liqueur
-rr-coffeeliqueur-desc = Coffee? Good. Alcohol? Good. Together? Probably illegal somewhere.
+rr-coffeeliqueur = Кофейный ликёр
+rr-coffeeliqueur-desc = Кофе? Хорошо. Алкоголь? Хорошо. Вместе? Наверное, где-то незаконно.
 
-rr-melonliquor = Melon Liquor
-rr-melonliquor-desc = It’s green, it’s sweet, and suspiciously cheerful. Like a party in Shrek’s minibar.
+rr-melonliquor = Дынный ликёр
+rr-melonliquor-desc = Зелёный, сладкий и подозрительно жизнерадостный. Как вечеринка в мини-баре у Шрека.
 
-rr-ntcahors = Neotheology Cahors Whine
-rr-ntcahors-desc = Holy wine for unholy hangovers.
+rr-ntcahors = Неотеологическое кагорное вино
+rr-ntcahors-desc = Святое вино для нечестивого похмелья.
 
-rr-poisonwine = Poison Wine
-rr-poisonwine-desc = The taste is killer. Literally.
+rr-poisonwine = Ядовитое вино
+rr-poisonwine-desc = Вкус убийственный. В буквальном смысле.
 
-rr-rum = Rum
-rr-rum-desc = For pirates, poets, and people who confuse the two.
+rr-rum = Ром
+rr-rum-desc = Для пиратов, поэтов и тех, кто путает первых со вторыми.
 
-rr-sake = Sake
-rr-sake-desc = Clear, warm, and politely dangerous.
+rr-sake = Саке
+rr-sake-desc = Прозрачное, тёплое и вежливо опасное.
 
-rr-tequila = Tequila
-rr-tequila-desc = Regret in a shot glass — with lime.
+rr-tequila = Текила
+rr-tequila-desc = Сожаление в стопке — с лаймом.
 
-rr-vermouth = Vermouth
-rr-vermouth-desc = The unsung hero behind every martini’s swagger.
+rr-vermouth = Вермут
+rr-vermouth-desc = Незаметный герой за кулисами каждого мартини.
 
-rr-vodka = Vodka
-rr-vodka-desc = Taste? Optional. Effect? Immediate.
+rr-vodka = Водка
+rr-vodka-desc = Вкус? Опционально. Эффект? Немедленно.
 
-rr-whiskey = Whiskey
-rr-whiskey-desc = Liquid courage with a hint of poor decisions.
+rr-whiskey = Виски
+rr-whiskey-desc = Жидкая храбрость с оттенком неудачных решений.
 
-rr-wine = Wine
-rr-wine-desc = Because sometimes grapes just need a stronger purpose.
+rr-wine = Вино
+rr-wine-desc = Потому что иногда виноград нуждается в более высокой цели.
 
-rr-champagne = Champagne
-rr-champagne-desc = It’s not a celebration until this pops, right?
+rr-champagne = Шампанское
+rr-champagne-desc = Разве это праздник, пока не хлопнула пробка?
 
-rr-acidspit = Acid Spit
-rr-acidspit-desc = Tangy, bubbly, and probably hazardous to touch. I should try it.
+rr-acidspit = Кислотный плевок
+rr-acidspit-desc = Терпкий, шипучий и наверняка опасный на ощупь. Надо попробовать.
 
-rr-alienbrainhemorrhage = Alien Brain Hemorrhage
-rr-alienbrainhemorrhage-desc = Looks wrong, tastes weird, and somehow… works.
+rr-alienbrainhemorrhage = Инопланетное кровоизлияние в мозг
+rr-alienbrainhemorrhage-desc = Выглядит неправильно, на вкус странно, и всё же... работает.
 
-rr-alliescocktail = Allies Cocktail
-rr-alliescocktail-desc = Nothing bonds people like alcohol and questionable diplomacy.
+rr-alliescocktail = Коктейль союзников
+rr-alliescocktail-desc = Ничто так не сближает людей, как алкоголь и сомнительная дипломатия.
 
-rr-amasec = Amasec
-rr-amasec-desc = Imperial standard for "I can still shoot straight."
+rr-amasec = Амасек
+rr-amasec-desc = Имперский стандарт для «я всё ещё могу стрелять метко».
 
-rr-andalusia = Andalusia
-rr-andalusia-desc = Tastes like sunshine, olives, and unapologetic naps.
+rr-andalusia = Андалусия
+rr-andalusia-desc = На вкус как солнце, оливки и бесстыдный дневной сон.
 
-rr-antifreeze = Antifreeze
-rr-antifreeze-desc = Winter-proof my liver.
+rr-antifreeze = Антифриз
+rr-antifreeze-desc = Зимостойкость для моей печени.
 
-rr-atomicbomb = Atomic Bomb
-rr-atomicbomb-desc = Guaranteed to split my evening in half.
+rr-atomicbomb = Атомная бомба
+rr-atomicbomb-desc = Гарантированно расколет мой вечер надвое.
 
-rr-b52 = B-52
-rr-b52-desc = Layered, flashy, and armed for party duty.
+rr-b52 = Б-52
+rr-b52-desc = Слоистый, эффектный и готовый к вечеринке.
 
-rr-bahamamama = Bahama Mama
-rr-bahamamama-desc = Like a beach holiday… in my bloodstream.
+rr-bahamamama = Багамская мама
+rr-bahamamama-desc = Как отпуск на пляже... прямо в моей крови.
 
-rr-bananahonk = Banana Honk
-rr-bananahonk-desc = Clown-approved. Potassium-rich.
+rr-bananahonk = Банановый гудок
+rr-bananahonk-desc = Одобрено клоунами. Богато калием.
 
-rr-barefoot = Barefoot
-rr-barefoot-desc = Simple, sweet, and no shoes required.
+rr-barefoot = Босиком
+rr-barefoot-desc = Просто, сладко, и обувь не требуется.
 
-rr-beepskysmash = Beepsky Smash
-rr-beepskysmash-desc = Taste the law. Feel the justice.
+rr-beepskysmash = Разгром Бипски
+rr-beepskysmash-desc = Почувствуй вкус закона. Ощути правосудие.
 
-rr-blackrussian = Black Russian
-rr-blackrussian-desc = Coffee and vodka — because mornings are overrated.
+rr-blackrussian = Чёрный русский
+rr-blackrussian-desc = Кофе и водка — потому что утро переоценивают.
 
-rr-bloodymary = Bloody Mary
-rr-bloodymary-desc = A salad in a glass, if salads punched back.
+rr-bloodymary = Кровавая Мэри
+rr-bloodymary-desc = Салат в стакане, если бы салаты умели давать сдачи.
 
-rr-booger = Booger
-rr-booger-desc = Suspiciously green, alarmingly tasty.
+rr-booger = Козявка
+rr-booger-desc = Подозрительно зелёный, пугающе вкусный.
 
-rr-bravebull = Brave Bull
-rr-bravebull-desc = Bravery in a glass — side effects may include foolishness.
+rr-bravebull = Храбрый бык
+rr-bravebull-desc = Храбрость в стакане — возможны побочные эффекты в виде глупости.
 
-rr-bronx = Bronx
-rr-bronx-desc = Citrus meets gin, and somehow doesn’t file a complaint.
+rr-bronx = Бронкс
+rr-bronx-desc = Цитрус встречает джин и почему-то не подаёт жалобу.
 
-rr-coconutrum = Coconut Rum
-rr-coconutrum-desc = Like drinking a postcard from paradise.
+rr-coconutrum = Кокосовый ром
+rr-coconutrum-desc = Как будто пьёшь открытку из рая.
 
-rr-cosmopolitan = Cosmopolitan
-rr-cosmopolitan-desc = Pretty in pink, lethal in practice.
+rr-cosmopolitan = Космополитен
+rr-cosmopolitan-desc = Красив, как розовый закат, смертоносен на практике.
 
-rr-crushdepth = Crush Depth
-rr-crushdepth-desc = Dive deep, surface only when ready.
+rr-crushdepth = Предельная глубина
+rr-crushdepth-desc = Ныряй глубоко, всплывай только когда будешь готов.
 
-rr-cubalibre = Cuba Libre
-rr-cubalibre-desc = Freedom tastes like rum and cola.
+rr-cubalibre = Куба Либре
+rr-cubalibre-desc = Свобода на вкус как ром с колой.
 
-rr-darkandstormy = Dark & Stormy
-rr-darkandstormy-desc = Thunder in a tumbler.
+rr-darkandstormy = Тёмный шторм
+rr-darkandstormy-desc = Гром в стакане.
 
-rr-demonsblood = Demon’s Blood
-rr-demonsblood-desc = Spicy, sweet, and slightly sacrilegious.
+rr-demonsblood = Кровь демона
+rr-demonsblood-desc = Острый, сладкий и слегка кощунственный.
 
-rr-devilskiss = Devil’s Kiss
-rr-devilskiss-desc = One sip and you’ll understand temptation.
+rr-devilskiss = Поцелуй дьявола
+rr-devilskiss-desc = Один глоток — и вы поймёте, что такое искушение.
 
-rr-doctorsdelight = The Doctor’s Delight
-rr-doctorsdelight-desc = Prescribed for "fun deficiency." Take with friends.
+rr-doctorsdelight = Услада доктора
+rr-doctorsdelight-desc = Прописывается при «дефиците веселья». Принимать в компании друзей.
 
-rr-driestmartini = Driest Martini
-rr-driestmartini-desc = So dry, it should come with a desert warning.
+rr-driestmartini = Самый сухой мартини
+rr-driestmartini-desc = Настолько сухой, что впору выдавать предупреждение о пустыне.
 
-rr-eggnog = Eggnog
-rr-eggnog-desc = Festive, creamy, and 90% nostalgia.
+rr-eggnog = Эгног
+rr-eggnog-desc = Праздничный, кремовый и на 90% состоящий из ностальгии.
 
-rr-electricshark = Electric Shark
-rr-electricshark-desc = Bright, zappy, and bites back.
+rr-electricshark = Электрическая акула
+rr-electricshark-desc = Яркая, искрящаяся и кусается в ответ.
 
-rr-erikasurprise = Erika Surprise
-rr-erikasurprise-desc = Surprise! It’s probably alcohol.
+rr-erikasurprise = Сюрприз от Эрики
+rr-erikasurprise-desc = Сюрприз! Скорее всего, это алкоголь.
 
-rr-gargleblaster = Pan-Galactic Gargle Blaster
-rr-gargleblaster-desc = Like being hit in the head by a lemon, wrapped around a brick, dipped in space.
+rr-gargleblaster = Пангалактический грызлодёр
+rr-gargleblaster-desc = Как будто тебя ударили по голове лимоном, обёрнутым вокруг кирпича, обмакнутым в космос.
 
-rr-ginfizz = Gin Fizz
-rr-ginfizz-desc = Bubbly, bright, and dangerously easy to drink.
+rr-ginfizz = Джин-физз
+rr-ginfizz-desc = Пузырчатый, яркий и опасно легко пьётся.
 
-rr-gintonic = Gin And Tonic
-rr-gintonic-desc = Simple. Classic. Immortal.
+rr-gintonic = Джин с тоником
+rr-gintonic-desc = Просто. Классика. Бессмертно.
 
-rr-gildlager = Gildlager
-rr-gildlager-desc = Gold flakes for those who like their drinks to sparkle and their wallets to cry.
+rr-gildlager = Гильдлагер
+rr-gildlager-desc = Золотые хлопья для тех, кто любит, чтобы их напитки сверкали, а кошельки плакали.
 
-rr-grog = Grog
-rr-grog-desc = The pirate’s cure for thirst, boredom, and good judgment.
+rr-grog = Грог
+rr-grog-desc = Пиратское лекарство от жажды, скуки и здравого смысла.
 
-rr-hippiesdelight = Hippie’s Delight
-rr-hippiesdelight-desc = Tastes like peace, love, and questionable herbal decisions.
+rr-hippiesdelight = Услада хиппи
+rr-hippiesdelight-desc = На вкус как мир, любовь и сомнительные решения насчёт трав.
 
-rr-hooch = Hooch
-rr-hooch-desc = If you have to ask what’s in it, you’re already in trouble.
+rr-hooch = Самогон
+rr-hooch-desc = Если приходится спрашивать, что там внутри, вы уже в беде.
 
-rr-icedbeer = Iced Beer
-rr-icedbeer-desc = Like regular beer, but chill about it.
+rr-icedbeer = Ледяное пиво
+rr-icedbeer-desc = Как обычное пиво, только более расслабленное.
 
-rr-irishcarbomb = Irish Car Bomb
-rr-irishcarbomb-desc = Fast, loud, and leaves a crater in your memory.
+rr-irishcarbomb = Ирландская автобомба
+rr-irishcarbomb-desc = Быстро, громко и оставляет кратер в памяти.
 
-rr-irishcream = Irish Cream
-rr-irishcream-desc = Sweet, creamy, and suspiciously charming.
+rr-irishcream = Ирландские сливки
+rr-irishcream-desc = Сладкие, кремовые и подозрительно обаятельные.
 
-rr-irishcoffee = Irish Coffee
-rr-irishcoffee-desc = The only breakfast drink that winks at you.
+rr-irishcoffee = Ирландский кофе
+rr-irishcoffee-desc = Единственный завтрак-напиток, который вам подмигивает.
 
-rr-jackrose = Jack Rose
-rr-jackrose-desc = Apple, grenadine, and a dash of old-school swagger.
+rr-jackrose = Джек Роуз
+rr-jackrose-desc = Яблоко, гренадин и щепотка старомодного шика.
 
-rr-junglebird = Jungle Bird
-rr-junglebird-desc = Tropical, bittersweet, and surprisingly sophisticated.
+rr-junglebird = Джунглевая птица
+rr-junglebird-desc = Тропический, горьковато-сладкий и удивительно утончённый.
 
-rr-kalimotxo = Kalimotxo
-rr-kalimotxo-desc = When wine meets cola and decides to party.
+rr-kalimotxo = Калимочо
+rr-kalimotxo-desc = Когда вино встречает колу и решает устроить вечеринку.
 
-rr-longislandicedtea = Long Island Iced Tea
-rr-longislandicedtea-desc = Not tea. Not innocent.
+rr-longislandicedtea = Лонг-Айленд Айс Ти
+rr-longislandicedtea-desc = Не чай. И не такой уж безобидный.
 
-rr-manhattan = Manhattan
-rr-manhattan-desc = Sharp suit. Smooth words. Bourbon backbone.
+rr-manhattan = Манхэттен
+rr-manhattan-desc = Строгий костюм. Гладкие слова. Бурбонный стержень.
 
-rr-manhattanproject = Manhattan Project
-rr-manhattanproject-desc = One sip and your night goes nuclear.
+rr-manhattanproject = Манхэттенский проект
+rr-manhattanproject-desc = Один глоток — и ваш вечер уходит в ядерный режим.
 
-rr-manlydorf = Manly Dorf
-rr-manlydorf-desc = Short, strong, and not to be underestimated.
+rr-manlydorf = Мужественный дорф
+rr-manlydorf-desc = Короткий, крепкий и его не стоит недооценивать.
 
-rr-margarita = Margarita
-rr-margarita-desc = Salt, lime, and summer in liquid form.
+rr-margarita = Маргарита
+rr-margarita-desc = Соль, лайм и лето в жидкой форме.
 
-rr-martini = Martini
-rr-martini-desc = Cool elegance served in a triangular glass.
+rr-martini = Мартини
+rr-martini-desc = Прохладное изящество в треугольном бокале.
 
-rr-mead = Mead
-rr-mead-desc = Ancient honey wine — because vikings knew how to have fun.
+rr-mead = Медовуха
+rr-mead-desc = Древнее медовое вино — викинги знали толк в веселье.
 
-rr-mojito = Mojito
-rr-mojito-desc = Minty, fresh, and perfect for pretending you’re on vacation.
+rr-mojito = Мохито
+rr-mojito-desc = Мятный, свежий и идеальный, чтобы притвориться, будто вы в отпуске.
 
-rr-monkeybusiness = Monkey Business
-rr-monkeybusiness-desc = Banana, mischief, and questionable life choices.
+rr-monkeybusiness = Обезьяньи проделки
+rr-monkeybusiness-desc = Банан, шалости и сомнительные жизненные решения.
 
-rr-moonshine = Moonshine
-rr-moonshine-desc = Homemade lightning in a jar.
+rr-moonshine = Самогон крепкий
+rr-moonshine-desc = Домашняя молния в банке.
 
-rr-neurotoxin = Neurotoxin
-rr-neurotoxin-desc = For when you want your drink to fight back.
+rr-neurotoxin = Нейротоксин
+rr-neurotoxin-desc = На случай, если хотите, чтобы напиток дал сдачи.
 
-rr-painkiller = Painkiller
-rr-painkiller-desc = Coconut, rum, and blissful denial.
+rr-painkiller = Обезболивающее
+rr-painkiller-desc = Кокос, ром и блаженное отрицание реальности.
 
-rr-patron = Patron
-rr-patron-desc = Premium tequila for people who hate mornings.
+rr-patron = Патрон
+rr-patron-desc = Премиальная текила для тех, кто ненавидит утро.
 
-rr-redmead = Red Mead
-rr-redmead-desc = Honey wine with a crimson twist.
+rr-redmead = Красная медовуха
+rr-redmead-desc = Медовое вино с багровым оттенком.
 
-rr-pinacolada = Piña Colada
-rr-pinacolada-desc = If you like getting caught in the rain…
+rr-pinacolada = Пина Колада
+rr-pinacolada-desc = Если тебе нравится попадать под дождь...
 
-rr-radler = Radler
-rr-radler-desc = Beer that decided to take a lemonade break.
+rr-radler = Радлер
+rr-radler-desc = Пиво, которое решило устроить лимонадный перерыв.
 
-rr-sbiten = Sbiten
-rr-sbiten-desc = Old Russian warmth in a cup — fight the cold, not your friends.
+rr-sbiten = Сбитень
+rr-sbiten-desc = Старорусское тепло в кружке — бороться с холодом, а не с друзьями.
 
-rr-screwdrivercocktail = Screwdriver Cocktail
-rr-screwdrivercocktail-desc = Orange juice and vodka walk into a bar...
+rr-screwdrivercocktail = Отвёртка
+rr-screwdrivercocktail-desc = Апельсиновый сок и водка заходят в бар...
 
-rr-cogchamp = Cogchamp
-rr-cogchamp-desc = Mechanical precision with a shot of madness.
+rr-cogchamp = Когчемпион
+rr-cogchamp-desc = Механическая точность с порцией безумия.
 
-rr-silencer = Silencer
-rr-silencer-desc = Quiet, cold, and deadly effective.
+rr-silencer = Глушитель
+rr-silencer-desc = Тихий, холодный и смертельно эффективный.
 
-rr-snowwhite = Snow White
-rr-snowwhite-desc = Sweet, pale, and dangerous under the surface.
+rr-snowwhite = Белоснежка
+rr-snowwhite-desc = Сладкая, бледная и опасная внутри.
 
-rr-suidream = Sui Dream
-rr-suidream-desc = Blue, creamy, and dangerously dreamy.
+rr-suidream = Мечта суи
+rr-suidream-desc = Синяя, кремовая и опасно мечтательная.
 
-rr-syndicatebomb = Syndicate Bomb
-rr-syndicatebomb-desc = Explosive flavor. Questionable legality.
+rr-syndicatebomb = Бомба Синдиката
+rr-syndicatebomb-desc = Взрывной вкус. Сомнительная законность.
 
-rr-tequilasunrise = Tequila Sunrise
-rr-tequilasunrise-desc = Beautiful to look at, dangerous to underestimate.
+rr-tequilasunrise = Текила Санрайз
+rr-tequilasunrise-desc = Красив на вид, опасен, если недооценить.
 
-rr-themartinez = The Martinez
-rr-themartinez-desc = An ancestor to the martini — older, wiser, and slightly sweeter.
+rr-themartinez = Мартинез
+rr-themartinez-desc = Предок мартини — старше, мудрее и чуть слаще.
 
-rr-threemileisland = Three Mile Island Iced Tea
-rr-threemileisland-desc = Long Island, but with a meltdown.
+rr-threemileisland = Айс Ти «Три-Майл-Айленд»
+rr-threemileisland-desc = Как Лонг-Айленд, только с расплавлением активной зоны.
 
-rr-toxinsspecial = Toxins Special
-rr-toxinsspecial-desc = If you can taste it, it’s already too late.
+rr-toxinsspecial = Токсиновый спецкоктейль
+rr-toxinsspecial-desc = Если можешь его распробовать, уже слишком поздно.
 
-rr-vampiro = Vampiro
-rr-vampiro-desc = Tomato, tequila, and a bite worth remembering.
+rr-vampiro = Вампиро
+rr-vampiro-desc = Томат, текила и укус, который запомнится.
 
-rr-vodkamartini = Vodka Martini
-rr-vodkamartini-desc = Shaken, stirred, and ready to start trouble.
+rr-vodkamartini = Водка-мартини
+rr-vodkamartini-desc = Взболтать, размешать и готово устроить переполох.
 
-rr-vodkatonic = Vodka Tonic
-rr-vodkatonic-desc = Crisp, clean, and mildly judgmental.
+rr-vodkatonic = Водка с тоником
+rr-vodkatonic-desc = Свежий, чистый и слегка осуждающий.
 
-rr-whiskeycola = Whiskey Cola
-rr-whiskeycola-desc = Sweet meets strong in a glass full of nostalgia.
+rr-whiskeycola = Виски-кола
+rr-whiskeycola-desc = Сладость встречает крепость в стакане, полном ностальгии.
 
-rr-whiskeysoda = Whiskey Soda
-rr-whiskeysoda-desc = For whiskey drinkers who like their burn slightly diluted.
+rr-whiskeysoda = Виски с содовой
+rr-whiskeysoda-desc = Для любителей виски, которым нравится слегка разбавленное жжение.
 
-rr-whitegilgamesh = White Gilgamesh
-rr-whitegilgamesh-desc = Ancient legend, modern hangover.
+rr-whitegilgamesh = Белый Гильгамеш
+rr-whitegilgamesh-desc = Древняя легенда, современное похмелье.
 
-rr-whiterussian = White Russian
-rr-whiterussian-desc = Like a milkshake for adults with questionable morals.
+rr-whiterussian = Белый русский
+rr-whiterussian-desc = Как молочный коктейль для взрослых с сомнительной моралью.
 
-rr-vodkaredbool = Vodka Red Bool
-rr-vodkaredbool-desc = Wings plus vodka — aerodynamic disaster.
+rr-vodkaredbool = Водка Ред Бул
+rr-vodkaredbool-desc = Крылья плюс водка — аэродинамическая катастрофа.
 
-rr-xenobasher = Xeno Basher
-rr-xenobasher-desc = Packs more punch than its name suggests. And its name suggests a lot.
+rr-xenobasher = Ксено-крушитель
+rr-xenobasher-desc = Бьёт сильнее, чем можно подумать по названию. А название намекает на многое.
 
-rr-irishbool = Irish Bool
-rr-irishbool-desc = Energy, cream, and chaos in one glass.
+rr-irishbool = Ирландский Бул
+rr-irishbool-desc = Энергия, сливки и хаос в одном стакане.
 
-rr-budgetinsulsdrink = Budget Insuls
-rr-budgetinsulsdrink-desc = Tastes cheap, works fast.
+rr-budgetinsulsdrink = Бюджетный Инсулс
+rr-budgetinsulsdrink-desc = На вкус дёшево, действует быстро.
 
-rr-watermelonwakeup = Watermelon Wakeup
-rr-watermelonwakeup-desc = Sweet, juicy, and alarmingly effective at 3 AM.
+rr-watermelonwakeup = Арбузный будильник
+rr-watermelonwakeup-desc = Сладкий, сочный и пугающе эффективный в 3 часа ночи.
 
-rr-rubberneck = Rubberneck
-rr-rubberneck-desc = You’ll stop and stare… but probably shouldn’t.
+rr-rubberneck = Зевака
+rr-rubberneck-desc = Ты остановишься и уставишься... но, наверное, не стоит.
 
-rr-bluehawaiian = Blue Hawaiian
-rr-bluehawaiian-desc = Beach vacation in a glass — umbrella optional.
+rr-bluehawaiian = Голубые Гавайи
+rr-bluehawaiian-desc = Пляжный отпуск в стакане — зонтик по желанию.
 
-rr-caipirinha = Caipirinha
-rr-caipirinha-desc = Lime, sugar, and a Brazilian sense of adventure.
+rr-caipirinha = Кайпиринья
+rr-caipirinha-desc = Лайм, сахар и бразильская тяга к приключениям.
 
-rr-moscowmule = Moscow Mule
-rr-moscowmule-desc = A moss-covered cow — mule? What? These cocktail names are wild. I’ve gotta try one of those.
+rr-moscowmule = Московский мул
+rr-moscowmule-desc = Замшелая корова — мул? Что? Названия этих коктейлей просто дикие. Надо будет как-нибудь попробовать.
 
-rr-mimeosa = Mimeosa
-rr-mimeosa-desc = Silent, sparkling, and suspiciously good.
+rr-mimeosa = Мимоза-мим
+rr-mimeosa-desc = Тихая, игристая и подозрительно вкусная.
 
-rr-mimosa = Mimosa
-rr-mimosa-desc = Breakfast? Brunch? Who cares — it’s bubbly.
+rr-mimosa = Мимоза
+rr-mimosa-desc = Завтрак? Бранч? Какая разница — главное, что игристое.
 
-rr-mayojito = Mayojito
-rr-mayojito-desc = Mint, lime, rum… and mayo? Whose idea was this?
+rr-mayojito = Майохито
+rr-mayojito-desc = Мята, лайм, ром... и майонез? Чья это вообще была идея?
 
-rr-deathintheafternoon = Death In The Afternoon
-rr-deathintheafternoon-desc = Absinthe and champagne — Hemingway’s approved exit strategy.
+rr-deathintheafternoon = Смерть после полудня
+rr-deathintheafternoon-desc = Абсент и шампанское — одобренная Хемингуэем стратегия эффектного ухода.
 
-rr-empress75 = Empress 75
-rr-empress75-desc = Regal, floral, and quietly intoxicating.
+rr-empress75 = Императрица 75
+rr-empress75-desc = Величественная, цветочная и тихо пьянящая.
 
-rr-espressomartini = Espresso Martini
-rr-espressomartini-desc = For nights that need caffeine and bad ideas.
+rr-espressomartini = Эспрессо-мартини
+rr-espressomartini-desc = Для ночей, которым нужны кофеин и плохие идеи.
 
-rr-daiquiri = Daiquiri
-rr-daiquiri-desc = Light, sweet, and harder to put down than you think.
+rr-daiquiri = Дайкири
+rr-daiquiri-desc = Лёгкий, сладкий и его сложнее отставить в сторону, чем кажется.
 
-rr-thesunalsorises = The Sun Also Rises
-rr-thesunalsorises-desc = Bitter, bright, and just poetic enough.
+rr-thesunalsorises = И восходит солнце
+rr-thesunalsorises-desc = Горький, яркий и в меру поэтичный.
 
-rr-whiskeysour = Whiskey Sour
-rr-whiskeysour-desc = Sweet, sour, and guaranteed to raise eyebrows.
+rr-whiskeysour = Виски Сауэр
+rr-whiskeysour-desc = Сладкий, кислый и гарантированно вызовет удивлённые взгляды.
 
-rr-bacchusblessing = Bacchus’s Blessing
-rr-bacchusblessing-desc = Wine, gods, and the promise of a very loud evening.
+rr-bacchusblessing = Благословение Вакха
+rr-bacchusblessing-desc = Вино, боги и обещание очень шумного вечера.
 
-rr-thelastcall = The Last Call
-rr-thelastcall-desc = There are no good or bad choices. Only consequences.
+rr-thelastcall = Последний зов
+rr-thelastcall-desc = Не бывает хороших или плохих решений. Есть только последствия.
 
 # Mail
-rr-mail-open = Mail
-rr-mail-open-desc = Did they write to me? I really want to know.
+rr-mail-open = Почта
+rr-mail-open-desc = Мне написали? Очень хочется узнать.
 
 # Brighteye
-rr-brighteye-dark = Darkness
-rr-brighteye-dark-desc = Spread the influence of the Dark. Give unto them the comfort of nothingness.
+rr-brighteye-dark = Тьма
+rr-brighteye-dark-desc = Распространи влияние Тьмы. Даруй им утешение небытия.
 
-rr-brighteye-portal-crit = Portal
-rr-brighteye-portal-crit-desc = Influence and enhance the flow of the Dark. Unleash the shadows. (Make your portal go Supercritical.)
+rr-brighteye-portal-crit = Портал
+rr-brighteye-portal-crit-desc = Усиль и направь поток Тьмы. Выпусти тени на свободу. (Доведи свой портал до сверхкритического состояния.)
 
-rr-brighteye-teachalesson = Dangerous Lightwalker
-rr-brighteye-teachalesson-desc = Teach a Lightwalker a Lesson... Teach them to fear the dark.
+rr-brighteye-teachalesson = Опасный светоход
+rr-brighteye-teachalesson-desc = Преподай светоходу урок... Научи его бояться тьмы.
 
-rr-brighteye-protect = Protect Kin
-rr-brighteye-protect-desc = The light is a dangerous place, this kin will need our protection.
+rr-brighteye-protect = Защити сородича
+rr-brighteye-protect-desc = Свет — опасное место, этому сородичу понадобится наша защита.
 
-rr-brighteye-sanctuary = Sanctuary
-rr-brighteye-sanctuary-desc = Burned ones need a sanctuary in this place of light, lets give them one.
+rr-brighteye-sanctuary = Убежище
+rr-brighteye-sanctuary-desc = Обожжённым нужно убежище в этом месте света, давайте дадим им его.
 
-rr-brighteye-returnhome = Grounded
-rr-brighteye-returnhome-desc = This kin must return to the darkness, Send them home.
+rr-brighteye-returnhome = Заземлённый
+rr-brighteye-returnhome-desc = Этот сородич должен вернуться во тьму. Отправь его домой.
 
-rr-brighteye-impersonate = Impersonation
-rr-brighteye-impersonate-desc = Lets learn about the lightwalkers, lets take their suit and learn about their tasks.
+rr-brighteye-impersonate = Перевоплощение
+rr-brighteye-impersonate-desc = Узнаем побольше о светоходах, возьмём их костюм и разузнаем об их заданиях.
 
-rr-brighteye-lights = See no evil
-rr-brighteye-lights-desc = There is many lights in this place... We must break them to spread the darkness.
+rr-brighteye-lights = Не вижу зла
+rr-brighteye-lights-desc = В этом месте много светильников... Мы должны разбить их, чтобы распространить тьму.
 
-rr-brighteye-backup = Backup
-rr-brighteye-backup-desc = We will need help for our next move...
+rr-brighteye-backup = Подкрепление
+rr-brighteye-backup-desc = Нам понадобится помощь для следующего шага...
 
-rr-brighteye-darkstation = Dark Station
-rr-brighteye-darkstation-desc = Let the dark consume the station and all the lightwalkers with it.
+rr-brighteye-darkstation = Тёмная станция
+rr-brighteye-darkstation-desc = Пусть тьма поглотит станцию и всех светоходов вместе с ней.
 
-rr-brighteye-steal-secureknowledge = Hear no evil
-rr-brighteye-steal-secureknowledge-desc = This is a threat... We must remove that information from the lightwalkers hands.
+rr-brighteye-steal-secureknowledge = Не слышу зла
+rr-brighteye-steal-secureknowledge-desc = Это угроза... Мы должны забрать эту информацию из рук светоходов.

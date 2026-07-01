@@ -1,16 +1,16 @@
-cmd-whitelistadd-desc = Adds the player with the given username to the server whitelist.
+cmd-whitelistadd-desc = Добавляет игрока с указанным именем пользователя в белый список сервера.
 cmd-whitelistadd-help = Использование: whitelistadd <username или User ID>
 cmd-whitelistadd-existing = { $username } уже в вайтлисте!
 cmd-whitelistadd-added = { $username } добавлен в вайтлист
 cmd-whitelistadd-not-found = Пользователь '{ $username }' не найден
-cmd-whitelistadd-arg-player = [player]
+cmd-whitelistadd-arg-player = [игрок]
 
 cmd-whitelistremove-desc = Удалить игрока с указанным юзернеймом из вайтлиста.
 cmd-whitelistremove-help = Использование: whitelistremove <username или User ID>
 cmd-whitelistremove-existing = { $username } не в вайтлисте!
 cmd-whitelistremove-removed = Пользователь { $username } удалён из вайтлиста
 cmd-whitelistremove-not-found = Пользователь '{ $username }' не найден
-cmd-whitelistremove-arg-player = [player]
+cmd-whitelistremove-arg-player = [игрок]
 
 cmd-kicknonwhitelisted-desc = Кикает всех игроков, не внесенных в белый список.
 cmd-kicknonwhitelisted-help = Ипользование: kicknonwhitelisted
@@ -23,12 +23,12 @@ ban-banned-2 = Причина бана: «{ $reason }»
 ban-banned-3 = Попытки обойти этот бан, такие как создание новой учетной записи, будут фиксироваться.
 
 soft-player-cap-full = Сервер заполнен!
-panic-bunker-account-denied = Этот сервер находится в режиме «Бункер». В данный момент новые подключения не принимаются. Повторите попытку позже
-panic-bunker-account-denied-reason = Этот сервер находится в режиме «Бункер», и вам было отказано в доступе. Причина: «{ $reason }»
-panic-bunker-account-reason-account = Ваш аккаунт должен быть старше { $minutes } минут
-panic-bunker-account-reason-overall = your overall playtime on this server must be greater than { $minutes } $minutes.
+panic-bunker-account-denied = Сервер находится в режиме «Паническое бомбоубежище». Попросите администратора в Discord впустить вас, либо подождите примерно час.
+panic-bunker-account-denied-reason = Сервер находится в режиме «Паническое бомбоубежище». Попросите администратора в Discord впустить вас, либо подождите примерно час. Чтобы всегда обходить панический бункер, { $reason }
+panic-bunker-account-reason-account = ваш аккаунт SS14 должен быть старше { $minutes } минут.
+panic-bunker-account-reason-overall = ваше общее игровое время на этом сервере должно превышать { $minutes } мин.
 
-whitelist-playtime = У вас недостаточно игрового времени для подключения к этому серверу. Вам необходимо как минимум { $hours } минут игрового времени для подключения к этому серверу.
+whitelist-playtime = У вас недостаточно игрового времени для подключения к этому серверу. Вам необходимо как минимум { $minutes } минут игрового времени для подключения к этому серверу.
 whitelist-player-count = В данный момент сервер не принимает игроков. Пожалуйста, попробуйте позже.
 whitelist-notes = У вас слишком много административных замечаний для подключения к этому серверу. Вы можете проверить свои замечания, набрав /adminremarks в чате.
 whitelist-manual = Вы не добавлены в белый список этого сервера.
@@ -52,10 +52,12 @@ cmd-blacklistremove-arg-player = [игрок]
 
 baby-jail-account-denied = Этот сервер — сервер для новичков, предназначенный для новых игроков и тех, кто хочет им помочь. Новые подключения слишком старых или не внесенных в белый список аккаунтов не принимаются. Загляните на другие серверы и посмотрите все, что может предложить Space Station 14. Веселитесь!
 baby-jail-account-denied-reason = Этот сервер — сервер для новичков, предназначенный для новых игроков и тех, кто хочет им помочь. Новые подключения слишком старых или не внесенных в белый список аккаунтов не принимаются. Загляните на другие серверы и посмотрите все, что может предложить Space Station 14. Веселитесь! Причина: «{ $reason }»
-baby-jail-account-reason-account = Ваш аккаунт Space Station 14 слишком старый. Он должен быть моложе { $hours } минут
-baby-jail-account-reason-overall = Your overall playtime on the server must be younger than { $minutes } $minutes
+baby-jail-account-reason-account = Ваш аккаунт Space Station 14 слишком старый. Он должен быть моложе { $minutes } минут
+baby-jail-account-reason-overall = Ваше общее игровое время на сервере должно быть меньше { $minutes } мин
 
 generic-misconfigured = Сервер неправильно настроен и не принимает игроков. Пожалуйста, свяжитесь с владельцем сервера и повторите попытку позже.
+
+conntrack-resolve-failed-retry = Сервер не смог проверить ваше подключение прямо сейчас, и для вашего аккаунта нет ранее сохранённого адреса. Пожалуйста, переподключитесь немного позже.
 
 ipintel-server-ratelimited = Этот сервер использует систему аудита с внешней проверкой, но достиг максимального лимита проверок у внешнего сервиса. Свяжитесь с администрацией сервера, чтобы сообщить об этом и получить помощь, или попробуйте позже.
 ipintel-unknown = Этот сервер использует систему аудита с внешней проверкой, но при проверке вашего соединения произошла ошибка. Свяжитесь с администрацией сервера, чтобы сообщить об этом и получить помощь, или попробуйте позже.

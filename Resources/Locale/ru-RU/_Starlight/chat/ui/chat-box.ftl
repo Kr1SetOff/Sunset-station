@@ -1,3 +1,3 @@
-hud-chatbox-tts-mute = Mute TTS Channels:
-hud-chatbox-tts-clear-queue = Clear TTS Queue
-hud-chatbox-tts-toggle-all = Toggle All
+hud-chatbox-tts-mute = Отключить каналы TTS:
+hud-chatbox-tts-clear-queue = Очистить очередь TTS
+hud-chatbox-tts-toggle-all = Переключить все

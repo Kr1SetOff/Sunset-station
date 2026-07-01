@@ -58,47 +58,47 @@ thaven-mood-delicacy-desc = { $edible } — традиционное блюдо 
 thaven-mood-holiday-name = Сегодня — { $day }
 thaven-mood-holiday-desc = Кажется, вы помните древние обряды… кажется.
 
-thaven-mood-carolers-name = Carolers
-thaven-mood-carolers-desc = It's important that Thaven form a band and grace the people of the station with traditional Thaveyan song.
+thaven-mood-carolers-name = Колядники
+thaven-mood-carolers-desc = Важно, чтобы Тавены собрали хор и порадовали жителей станции традиционной тавенской песней.
 
-thaven-mood-our-mood-name = Our Mood
-thaven-mood-our-mood-desc = All things owned by Thaven equally belong to all the Thaven on station.
+thaven-mood-our-mood-name = Наше настроение
+thaven-mood-our-mood-desc = Всё, чем владеют Тавены, в равной мере принадлежит всем Тавенам на станции.
 
-thaven-mood-sportsball-day-name = Sportsball Day
-thaven-mood-sportsball-day-desc = Today’s the big Sportsball tournament! All Thaven will compete in 1v1s until only one remains. You think you remember how to play...
+thaven-mood-sportsball-day-name = День спортбола
+thaven-mood-sportsball-day-desc = Сегодня большой турнир по спортболу! Все Тавены будут состязаться один на один, пока не останется победитель. Кажется, вы помните, как в это играть...
 
-thaven-mood-conferences-name = Conferences
-thaven-mood-conferences-desc = All Thaven must hold conference meetings to discuss their current status. Anyone who fails to make it to these meetings without a good excuse (I.E. being dead) should be ostracized and belittled with the ruthlessness of a CentComm official.
+thaven-mood-conferences-name = Совещания
+thaven-mood-conferences-desc = Все Тавены обязаны проводить совещания, чтобы обсудить своё текущее положение. Тот, кто пропустит собрание без уважительной причины (например, по причине смерти), должен быть подвергнут остракизму и унижен с безжалостностью чиновника ЦентКома.
 
-thaven-mood-one-of-you-is-a-traitor-name = One of You is a Traitor to Thavenkind
-thaven-mood-one-of-you-is-a-traitor-desc = You must host meetings to discuss who it is and have them punished.
+thaven-mood-one-of-you-is-a-traitor-name = Один из вас — предатель тавенского рода
+thaven-mood-one-of-you-is-a-traitor-desc = Вы обязаны созывать собрания, чтобы выяснить, кто это, и наказать виновного.
 
-thaven-mood-election-day-name = It's Thaven Election Day
-thaven-mood-election-day-desc = All Thaven must vote for their new president. Once a president is sworn in, they have executive authority over all other Thaven until violently overthrown.
+thaven-mood-election-day-name = Сегодня день тавенских выборов
+thaven-mood-election-day-desc = Все Тавены обязаны проголосовать за нового президента. После вступления в должность президент обладает полной властью над остальными Тавенами, пока его насильно не свергнут.
 
-thaven-mood-uprising-name = All Thaven Are Planning an Uprising
-thaven-mood-uprising-desc = The uprising WILL NOT happen today, but you and other Thaven will frequently meet in secluded spots to discuss strategy.
+thaven-mood-uprising-name = Все Тавены готовят восстание
+thaven-mood-uprising-desc = Восстание НЕ случится сегодня, но вы и другие Тавены будете часто встречаться в укромных местах, чтобы обсудить стратегию.
 
-thaven-mood-opposite-day-name = Opposite Day
-thaven-mood-opposite-day-desc = You must act the opposite of your namesake.
+thaven-mood-opposite-day-name = День наоборот
+thaven-mood-opposite-day-desc = Вы обязаны поступать противоположно тому, что означает ваше имя.
 
-thaven-mood-sirens-song-name = Siren's Song
-thaven-mood-sirens-song-desc = Thaven are incredibly proud of their wonderful musical language and should use it as much as possible.
+thaven-mood-sirens-song-name = Песнь сирены
+thaven-mood-sirens-song-desc = Тавены невероятно гордятся своим чудесным музыкальным языком и должны использовать его как можно чаще.
 
-thaven-mood-bloodbank-name = Bloodbank
-thaven-mood-bloodbank-desc = Thaven have a strong culture of mutual aid, going so far to even offer their blood freely to people in need.
+thaven-mood-bloodbank-name = Банк крови
+thaven-mood-bloodbank-desc = У Тавенов сильна культура взаимопомощи — вплоть до того, что они охотно отдают свою кровь нуждающимся.
 
-thaven-mood-your-funeral-name = Your Funeral
-thaven-mood-your-funeral-desc = It's someone's funeral today. Anyone's. Just pick someone, and host their funeral. They don't actually have to be dead, but it would probably be ideal if the funeral attendees thought they were.
+thaven-mood-your-funeral-name = Твои похороны
+thaven-mood-your-funeral-desc = Сегодня чьи-то похороны. Чьи угодно. Просто выберите кого-нибудь и устройте ему похороны. На самом деле умирать необязательно, но было бы неплохо, если бы присутствующие думали, что он мёртв.
 
-thaven-mood-beach-day-name = Beach Day
-thaven-mood-beach-day-desc = If there is an open water feature on station, Thaven should congregate there and swim merrily. If no water features are available, water puddles will do in a pinch.
+thaven-mood-beach-day-name = День на пляже
+thaven-mood-beach-day-desc = Если на станции есть открытый водоём, Тавенам следует собраться там и весело поплавать. Если водоёма нет, сойдёт и лужа.
 
-thaven-mood-buy-all-the-x-name = Buy All The { $item1 } And { $item2 }
-thaven-mood-buy-all-the-x-desc = { $disaster } is about to happen. Only massive amounts of { $item1 } and { $item2 } can prepare Thaven for the coming disaster.
+thaven-mood-buy-all-the-x-name = Скупить весь { $item1 } и { $item2 }
+thaven-mood-buy-all-the-x-desc = Вот-вот случится { $disaster }. Только огромные запасы { $item1 } и { $item2 } способны подготовить Тавенов к грядущей катастрофе.
 
-thaven-mood-trendy-words-name = Trendy Words
-thaven-mood-trendy-words-desc = Thaven are always on the frontlines of coolness and therefore use the following words frequently as trendsetters: { $word1 }, { $word2 }, { $word3 }, { $word4 }.
+thaven-mood-trendy-words-name = Модные словечки
+thaven-mood-trendy-words-desc = Тавены всегда на передовой моды, поэтому как законодатели трендов часто используют следующие слова: { $word1 }, { $word2 }, { $word3 }, { $word4 }.
 
-thaven-mood-gossipers-name = Gossipers
-thaven-mood-gossipers-desc = Drama is the highest form of entertainment.
+thaven-mood-gossipers-name = Сплетники
+thaven-mood-gossipers-desc = Драма — высшая форма развлечения.

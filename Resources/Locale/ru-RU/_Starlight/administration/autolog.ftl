@@ -1,9 +1,10 @@
-autolog-discord-footer = Server: { $server } | Round: #{ $round } | Round Type: { $roundtype } | Round Time: { $time }
+autolog-discord-footer = Сервер: { $server } | Раунд: #{ $round } | Тип раунда: { $roundtype } | Время раунда: { $time }
 
-autolog-forcedprototype = Spawned Character: { $character } with ForcedPrototype: { $prototype }
-autolog-admin-mouse = Became Admin Mouse
-autolog-mentor-mouse = Became Mentor Mouse
+autolog-forcedprototype = Создан персонаж: { $character } с принудительным прототипом: { $prototype }
+autolog-admin-mouse = Стал Админ-Мышью
+autolog-mentor-mouse = Стал Наставник-Мышью
 
-autolog-setgamemap = Map forced to { $map } by { $admin }
-autolog-announce = { $admin } sent a announcement { $sender } Announcement: { $message }
-autolog-tippy = Sent a tippy { $message } with { $prototype } prototype
+autolog-setgamemap = Карта принудительно изменена на { $map } администратором { $admin }
+autolog-setalertlevel = Уровень тревоги принудительно изменён на { $level } администратором { $admin } (заблокировано: { $locked })
+autolog-announce = { $admin } отправил объявление от имени { $sender }. Объявление: { $message }
+autolog-tippy = Отправлен типпи { $message } с прототипом { $prototype }

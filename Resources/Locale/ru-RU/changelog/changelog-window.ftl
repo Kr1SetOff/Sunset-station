@@ -12,7 +12,7 @@ changelog-button = Обновления
 changelog-button-new-entries = Обновления (новые!)
 
 changelog-tab-title-Changelog = Журнал изменений
-changelog-tab-title-ChangelogStarlight = Список изменений Lunarix
+changelog-tab-title-ChangelogStarlight = Список изменений SunSet
 changelog-tab-title-Admin = Админ
 changelog-tab-title-Maps = Карты
 changelog-tab-title-Rules = Правила

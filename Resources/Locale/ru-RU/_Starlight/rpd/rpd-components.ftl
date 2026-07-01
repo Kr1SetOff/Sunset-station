@@ -1,14 +1,14 @@
-rpd-component-piping = Piping
-rpd-component-atmosphericutility = Atmospheric Utility
-rpd-component-pumps = Pumps & Valves
-rpd-component-vents = Vents
-rcd-component-sensorsmonitors = Sensors & Monitors
-rcd-rpd-mode-primary = Primary
-rcd-rpd-mode-secondary = Secondary
-rcd-rpd-mode-tertiary = Tertiary
-rcd-rpd-mode-quaternary = Quaternary
-rcd-rpd-mode-quinary = Quinary
-rcd-rpd-mode-free = Free
-rcd-component-examine-rpd-mode = Current mode: [color=cyan]{ $mode }[/color]
-rcd-verb-switch-mode = Switch mode
-rcd-item-status-mode = Mode: { $mode }
+rpd-component-piping = Трубопровод
+rpd-component-atmospheric-utility = Атмосферное оборудование
+rpd-component-pumps = Насосы и клапаны
+rpd-component-vents = Вентиляционные отверстия
+rpd-component-sensors-monitors = Датчики и мониторы
+rcd-rpd-mode-primary = Основной
+rcd-rpd-mode-secondary = Вторичный
+rcd-rpd-mode-tertiary = Третичный
+rcd-rpd-mode-quaternary = Четвертичный
+rcd-rpd-mode-quinary = Пятеричный
+rcd-rpd-mode-free = Свободный
+rcd-component-examine-rpd-mode = Текущий режим: [color=cyan]{ $mode }[/color]
+rcd-verb-switch-mode = Переключить режим
+rcd-item-status-mode = Режим: { $mode }

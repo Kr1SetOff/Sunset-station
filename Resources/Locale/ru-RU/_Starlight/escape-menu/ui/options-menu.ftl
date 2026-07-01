@@ -11,7 +11,7 @@ ui-options-disable-job-icon-animation = Отключить анимацию дл
 
 ui-options-tts-label = Текст-в-речь
 ui-options-tts-volume = Громкость TTS:
-ui-options-tts-chime-volume = Chime Volume:
+ui-options-tts-chime-volume = Громкость сигнала:
 credits-window-tts-title = Функция TTS (Текст-в-речь)
 
 ui-options-tts-radio-volume = Громкость радио:
@@ -23,35 +23,35 @@ ui-options-radio-chime-mute = Отключить сигналы радио
 
 ## UI
 
-ui-options-tab-ui = User Interface
-ui-options-ui-style = User Interface Style
-ui-options-ui-sight-hash = Sight Preferences String
-ui-options-sight-rotation = Sight Rotation
-ui-options-chat-width = Separated Chat Width
-ui-options-ui-ranged-sight = Sights
-ui-options-ranged-sight = Ranged Sight
-ui-options-melee-sight = Melee Sight
-ui-options-ranged-sight-scale = Sights Scale
-ui-options-ranged-sight-offset = Sights Basic Offset
-ui-options-sight-main-color = Sight Main Color
-ui-options-sight-second-color = Sight Second Color
+ui-options-tab-ui = Интерфейс
+ui-options-ui-style = Стиль интерфейса
+ui-options-ui-sight-hash = Строка настроек прицела
+ui-options-sight-rotation = Поворот прицела
+ui-options-chat-width = Ширина отдельного чата
+ui-options-ui-ranged-sight = Прицелы
+ui-options-ranged-sight = Прицел для дальнего боя
+ui-options-melee-sight = Прицел для ближнего боя
+ui-options-ranged-sight-scale = Масштаб прицела
+ui-options-ranged-sight-offset = Базовое смещение прицела
+ui-options-sight-main-color = Основной цвет прицела
+ui-options-sight-second-color = Второй цвет прицела
 
 ## Admin
 
-ui-options-admin-ghost-hud = Admin Ghost HUD
+ui-options-admin-ghost-hud = HUD админ-призрака
 
-ui-options-admin-ghost-hud-setting-job = Job icons
-ui-options-admin-ghost-hud-setting-job-off = Off
-ui-options-admin-ghost-hud-setting-job-job = Job only
-ui-options-admin-ghost-hud-setting-job-jobandmindshield = Job and mindshield
+ui-options-admin-ghost-hud-setting-job = Иконки профессий
+ui-options-admin-ghost-hud-setting-job-off = Выкл.
+ui-options-admin-ghost-hud-setting-job-job = Только профессия
+ui-options-admin-ghost-hud-setting-job-jobandmindshield = Профессия и ментальный щит
 
-ui-options-admin-ghost-hud-show-criminal-record-icons = Show criminal record icons
+ui-options-admin-ghost-hud-show-criminal-record-icons = Показывать иконки судимости
 
-ui-options-admin-ghost-hud-setting-health = Health indicators
-ui-options-admin-ghost-hud-setting-health-off = Off
-ui-options-admin-ghost-hud-setting-health-icons = Icons
-ui-options-admin-ghost-hud-setting-health-bars = Bars
-ui-options-admin-ghost-hud-setting-health-iconsandbars = Icons and bars
+ui-options-admin-ghost-hud-setting-health = Индикаторы здоровья
+ui-options-admin-ghost-hud-setting-health-off = Выкл.
+ui-options-admin-ghost-hud-setting-health-icons = Иконки
+ui-options-admin-ghost-hud-setting-health-bars = Полосы
+ui-options-admin-ghost-hud-setting-health-iconsandbars = Иконки и полосы
 
-ui-options-admin-ghost-hud-show-faction-icons = Show faction icons
-ui-options-admin-ghost-hud-show-satiation-icons = Show satiation icons
+ui-options-admin-ghost-hud-show-faction-icons = Показывать иконки фракций
+ui-options-admin-ghost-hud-show-satiation-icons = Показывать иконки сытости

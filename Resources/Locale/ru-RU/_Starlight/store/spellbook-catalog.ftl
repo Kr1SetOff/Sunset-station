@@ -18,4 +18,4 @@ spellbook-event-mana-blade-description = Направьте свою силу в
 spellbook-icestorm-name = Ледяной шторм
 spellbook-icestorm-desc = Выпустите ледяной взрыв, который промораживает всё, к чему прикасается, до костей!
 
-spellbook-mind-swap-description-starlight = Exchange bodies with another person! You'll lose access to most wizard equipment while in another body... is it worth it?
+spellbook-mind-swap-description-starlight = Обменяйтесь телами с другим человеком! Находясь в чужом теле, вы потеряете доступ к большей части снаряжения волшебника... стоит ли оно того?

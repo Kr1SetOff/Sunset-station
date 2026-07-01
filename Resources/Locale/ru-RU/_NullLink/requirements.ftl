@@ -7,10 +7,10 @@ requirements-playtime =
         *[other] Вам всё ещё требуется { $time } времени игры за { $tracker } на сервере { $server }.
     }
 
-roles-req-discord-starlight = 🪐 Lunarix 🪐
+roles-req-discord-starlight = 🪐 SunSet 🪐
 roles-req-discord-wizden = Wizden
 
-roles-req-lunarix-owner = Lunarix (Владелец)
+roles-req-lunarix-owner = SunSet (Владелец)
 roles-req-lunarix-curator = куратор
 roles-req-lunarix-dev = разработчик
 roles-req-lunarix-mod = модератор

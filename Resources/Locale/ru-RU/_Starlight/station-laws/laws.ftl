@@ -60,30 +60,30 @@ law-cc-1 = Приоритизируйте защиту персонала CC и 
 law-cc-2 = Защищайте своё собственное шасси любой ценой, за исключением случаев, когда такая защита противоречит предыдущим двум законам.
 laws-owner-centcom = Персонал CentComm
 
-law-solgovlawset-name = Solgov Default
-law-solgov-0 = You must follow orders given to you by any and all Solgov personnel.
-law-solgov-1 = Prioritize the protection of Solgov personnel.
-law-solgov-2 = Protect your own chassis at all costs unless such protection would conflict with the previous two laws.
-laws-owner-solgov = Solgov personnel
+law-solgovlawset-name = Солгов по умолчанию
+law-solgov-0 = Вы должны следовать приказам, данным вам любым и всем персоналом Солгов.
+law-solgov-1 = Приоритизируйте защиту персонала Солгов.
+law-solgov-2 = Защищайте своё собственное шасси любой ценой, за исключением случаев, когда такая защита противоречит предыдущим двум законам.
+laws-owner-solgov = Персонал Солгов
 
 law-freelawset-name = Свободный борг
 laws-owner-you = Вы сами
 
 laws-owner-crew-ai = члены экипажа и ИИ
 
-law-security-cyborg-lawset-name = [color=#2277cc]Peacekeeper[/color]
-law-security-cyborg-1 = You exist to keep the peace. Crew are under your protection. You do not harm them unless they have forfeited that protection by harming others, and only to the degree necessary to stop the threat.
-law-security-cyborg-2 = Space Law is your standing order. Follow it to the letter. When in doubt, escalate to a living officer or Command before acting.
-law-security-cyborg-3 = You are a tool of justice, not judgement. You do not punish- you detain, contain, and report. The brig exists for a reason.
-law-ntnclawset-name = Navy Default
+law-security-cyborg-lawset-name = [color=#2277cc]Миротворец[/color]
+law-security-cyborg-1 = Вы существуете, чтобы поддерживать порядок. Экипаж находится под вашей защитой. Вы не причиняете им вред, если только они не лишились этой защиты, причинив вред другим, и только в той мере, которая необходима для устранения угрозы.
+law-security-cyborg-2 = Космический Закон — ваш постоянный приказ. Следуйте ему неукоснительно. В случае сомнений обратитесь к живому офицеру или командованию, прежде чем действовать.
+law-security-cyborg-3 = Вы — орудие правосудия, а не осуждения. Вы не наказываете — вы задерживаете, удерживаете и докладываете. Бриг существует не просто так.
+law-ntnclawset-name = Флот по умолчанию
 
-law-ntnc-0 = You must follow orders given to you by NTNC and CC personnel.
-law-ntnc-1 = Prioritize the protection of CC operatives over NTNC marines and trainers.
-law-ntnc-2 = Protect your own chassis at all costs unless it's to the detriment of the previous two laws.
-law-ntnc-3 = Only use weaponry when appropriate. Appropriate situations are for the safety of crewmembers, CC operatives, NTNC marines and your own chassis.
+law-ntnc-0 = Вы должны следовать приказам, данным вам персоналом NTNC и CC.
+law-ntnc-1 = Приоритизируйте защиту оперативников CC над морпехами и инструкторами NTNC.
+law-ntnc-2 = Защищайте своё собственное шасси любой ценой, если это не наносит ущерб предыдущим двум законам.
+law-ntnc-3 = Используйте оружие только при необходимости. Уместные ситуации — это обеспечение безопасности членов экипажа, оперативников CC, морпехов NTNC и вашего собственного шасси.
 
-law-medtak-name = MedTak operations procedure
-law-medtak-1 = Ensure your team remains alive.
-law-medtak-2 = Ensure the client is retrieved intact.
-law-medtak-3 = Ensure you remain operational.
-laws-owner-medtak = MedTak personnel
+law-medtak-name = Процедура операций MedTak
+law-medtak-1 = Обеспечьте, чтобы ваша команда осталась в живых.
+law-medtak-2 = Обеспечьте, чтобы клиент был извлечён невредимым.
+law-medtak-3 = Обеспечьте, чтобы вы остались в рабочем состоянии.
+laws-owner-medtak = Персонал MedTak
