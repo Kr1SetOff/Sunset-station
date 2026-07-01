@@ -25,9 +25,9 @@
     id: ChefPDA
     ears: ClothingHeadsetService
     belt: ClothingBeltChefFilled
-  #storage:
-    #back:
-    #- Stuff
+  storage:
+    back:
+    - MartialArtsManualCqcCook # Sunset - cook's CQC manual
 
 - type: chameleonOutfit
   id: ChefChameleonOutfit

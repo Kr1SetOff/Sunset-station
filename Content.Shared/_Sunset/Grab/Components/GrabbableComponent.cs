@@ -1,5 +1,5 @@
 using Content.Shared.Alert;
-using Content.Shared.Damage;
+using Content.Shared.FixedPoint;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 
@@ -24,11 +24,18 @@ public sealed partial class GrabbableComponent : Component
     [DataField]
     public TimeSpan ChokeTickInterval = TimeSpan.FromSeconds(1);
 
+    /// <summary>
+    /// Extra delay before the first choke damage tick after just entering the Choke stage
+    /// (the grabber needs a moment to get a proper two-handed grip).
+    /// </summary>
     [DataField]
-    public DamageSpecifier ChokeDamage = new()
-    {
-        DamageDict = new() { { "Asphyxiation", 3 } },
-    };
+    public TimeSpan ChokeStartupDelay = TimeSpan.FromSeconds(1.5);
+
+    [DataField]
+    public FixedPoint2 ChokeDamageMin = 2;
+
+    [DataField]
+    public FixedPoint2 ChokeDamageMax = 3;
 
     [DataField]
     public ProtoId<AlertPrototype> AggressiveAlert = "GrabbedAggressive";

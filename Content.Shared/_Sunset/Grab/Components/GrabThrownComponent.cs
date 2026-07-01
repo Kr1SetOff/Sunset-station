@@ -1,3 +1,5 @@
+using Content.Shared.FixedPoint;
+
 namespace Content.Shared._Sunset.Grab.Components;
 
 /// <summary>
@@ -16,6 +18,16 @@ public sealed partial class GrabThrownComponent : Component
     [DataField]
     public TimeSpan Lifetime = TimeSpan.FromSeconds(0.5);
 
+    /// <summary>
+    /// How long both the thrown mob and whoever it collides with are knocked down for - same as a
+    /// stun, but they can still crawl while down (see <see cref="Content.Shared.Stunnable.SharedStunSystem"/>).
+    /// </summary>
     [DataField]
-    public TimeSpan KnockdownDuration = TimeSpan.FromSeconds(4);
+    public TimeSpan KnockdownDuration = TimeSpan.FromSeconds(5);
+
+    [DataField]
+    public FixedPoint2 CollisionDamageMin = 10;
+
+    [DataField]
+    public FixedPoint2 CollisionDamageMax = 15;
 }

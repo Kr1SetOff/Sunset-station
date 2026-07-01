@@ -1,5 +1,4 @@
 using Robust.Shared.GameStates;
-using Robust.Shared.Prototypes;
 
 namespace Content.Shared._Sunset.Grab.Components;
 
@@ -19,14 +18,19 @@ public sealed partial class GrabberComponent : Component
     public TimeSpan NextEscalation = TimeSpan.Zero;
 
     [DataField]
-    public TimeSpan EscalationCooldown = TimeSpan.FromSeconds(1.5);
+    public TimeSpan EscalationCooldown = TimeSpan.FromSeconds(1);
 
+    /// <summary>
+    /// Multiplier applied to the vanilla hand-throw speed when throwing a grabbed mob - a mob is much
+    /// heavier than a held item, so it shouldn't fly nearly as far/fast.
+    /// </summary>
+    [DataField]
+    public float ThrowSpeedMultiplier = 0.2f;
+
+    /// <summary>
+    /// The second virtual item occupying the grabber's other hand while at the Choke stage
+    /// (represents choking with both hands). Removed when the grab ends.
+    /// </summary>
     [DataField, AutoNetworkedField]
-    public EntityUid? ThrowActionEntity;
-
-    [DataField]
-    public EntProtoId ThrowActionId = "ActionGrabThrow";
-
-    [DataField]
-    public float ThrowSpeed = 6.5f;
+    public EntityUid? ChokeVirtualItem;
 }
