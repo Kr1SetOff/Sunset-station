@@ -46,9 +46,18 @@ namespace Content.Client.Info
             button.OnPressed += _ => {
                 var link = _playerRoles.GetDiscordLink();
                 // 🌇Sunset🌇 - the server-provided link can be an empty string (not null) when
-                // unset, which OpenUri throws on - validate it's a well-formed absolute URI first.
-                if (link != null && Uri.IsWellFormedUriString(link, UriKind.Absolute))
+                // unset, which OpenUri throws on. System.Uri isn't in the content sandbox
+                // whitelist, so catch the exception instead of pre-validating with it.
+                if (link == null)
+                    return;
+
+                try
+                {
                     uriOpener.OpenUri(link);
+                }
+                catch (ArgumentException)
+                {
+                }
             };
             buttons.AddChild(button);
             // NullLink end
@@ -68,7 +77,17 @@ namespace Content.Client.Info
             void AddInfoButton(string loc, CVarDef<string> cVar)
             {
                 var button = new Button { Text = Loc.GetString(loc) };
-                button.OnPressed += _ => uriOpener.OpenUri(_cfg.GetCVar(cVar));
+                // 🌇Sunset🌇 - guard against a misconfigured (non-URI) CVar value crashing the client.
+                button.OnPressed += _ =>
+                {
+                    try
+                    {
+                        uriOpener.OpenUri(_cfg.GetCVar(cVar));
+                    }
+                    catch (ArgumentException)
+                    {
+                    }
+                };
                 buttons.AddChild(button);
                 _infoLinks.Add((cVar, button));
             }

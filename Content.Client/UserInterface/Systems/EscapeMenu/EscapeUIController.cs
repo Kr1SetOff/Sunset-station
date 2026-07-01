@@ -72,9 +72,18 @@ public sealed partial class EscapeUIController : UIController, IOnStateEntered<G
         _escapeWindow.DiscordButton.OnPressed += _ =>
         {
             // 🌇Sunset🌇 - the server-provided link can be an empty string (not null) when unset,
-            // which OpenUri throws on - validate it's a well-formed absolute URI first.
-            if (_playerRoles.GetDiscordLink() is string link && Uri.IsWellFormedUriString(link, UriKind.Absolute))
+            // which OpenUri throws on. System.Uri isn't in the content sandbox whitelist, so
+            // catch the exception instead of pre-validating with it.
+            if (_playerRoles.GetDiscordLink() is not { } link)
+                return;
+
+            try
+            {
                 _uri.OpenUri(link);
+            }
+            catch (ArgumentException)
+            {
+            }
         };
         // NullLink end
 
