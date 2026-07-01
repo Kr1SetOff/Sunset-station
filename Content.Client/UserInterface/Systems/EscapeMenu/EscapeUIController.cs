@@ -1,4 +1,5 @@
-﻿using Content.Client._Starlight.Managers;
+﻿using System;
+using Content.Client._Starlight.Managers;
 using Content.Client.Administration.Managers;
 using Content.Client.Gameplay;
 using Content.Client.UserInterface.Controls;
@@ -70,7 +71,9 @@ public sealed partial class EscapeUIController : UIController, IOnStateEntered<G
         // NullLink start
         _escapeWindow.DiscordButton.OnPressed += _ =>
         {
-            if(_playerRoles.GetDiscordLink() is string link)
+            // 🌇Sunset🌇 - the server-provided link can be an empty string (not null) when unset,
+            // which OpenUri throws on - validate it's a well-formed absolute URI first.
+            if (_playerRoles.GetDiscordLink() is string link && Uri.IsWellFormedUriString(link, UriKind.Absolute))
                 _uri.OpenUri(link);
         };
         // NullLink end

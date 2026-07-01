@@ -1,4 +1,5 @@
-﻿using Content.Client._Starlight.Managers;
+﻿using System;
+using Content.Client._Starlight.Managers;
 using Content.Client.Administration.Managers;
 using Content.Client.Changelog;
 using Content.Client.UserInterface.Systems.EscapeMenu;
@@ -44,7 +45,9 @@ namespace Content.Client.Info
             var button = new Button { Text = Loc.GetString("server-info-connect-discord-button") };
             button.OnPressed += _ => {
                 var link = _playerRoles.GetDiscordLink();
-                if(link != null)
+                // 🌇Sunset🌇 - the server-provided link can be an empty string (not null) when
+                // unset, which OpenUri throws on - validate it's a well-formed absolute URI first.
+                if (link != null && Uri.IsWellFormedUriString(link, UriKind.Absolute))
                     uriOpener.OpenUri(link);
             };
             buttons.AddChild(button);
