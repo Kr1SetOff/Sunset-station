@@ -8,7 +8,7 @@
 
   Он в основном используется для закачки газов в помещения с высоким давлением, такие как [textlink="хранилища газа" link="GasMiningAndStorage"] или камеры сгорания.
 
-  
+
 
   Инжектор воздуха не требует [textlink="энергии" link="Power"] для своей работы. Он будет подавать газы в атмосферу до тех пор, пока давление в ней не достигнет [color=orange][protodata="GasOutletInjector" comp="GasOutletInjector" member="MaxPressure"/] кПа[/color].
 

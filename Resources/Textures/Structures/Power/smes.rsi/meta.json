@@ -11,19 +11,28 @@
       "name": "advancedsmes"
     },
     {
-      "name": "advancedsmes-static"
+      "name": "advancedsmes-open"
     },
     {
-      "name": "advancedsmes-open"
+      "name": "advancedsmes-static"
     },
     {
       "name": "smes"
     },
     {
-      "name": "static"
+      "name": "smes-blue"
     },
     {
-      "name": "smes-open"
+      "name": "smes-blue-fan"
+    },
+    {
+      "name": "smes-blue-fan-0"
+    },
+    {
+      "name": "smes-blue-open"
+    },
+    {
+      "name": "smes-blue-static"
     },
     {
       "name": "smes-oc0"
@@ -81,6 +90,12 @@
     },
     {
       "name": "smes-op2"
+    },
+    {
+      "name": "smes-open"
+    },
+    {
+      "name": "static"
     }
   ]
 }

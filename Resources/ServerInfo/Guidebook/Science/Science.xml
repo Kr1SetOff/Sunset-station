@@ -11,7 +11,7 @@
   </Box>
 
   ## Технологии
-  
+
   <Box>
     <GuideEntityEmbed Entity="ComputerResearchAndDevelopment"/>
     <GuideEntityEmbed Entity="ResearchAndDevelopmentServer"/>
@@ -42,7 +42,7 @@
   Самое интересное начинается на [color=green]3-м уровне[/color]. Исследовав технологию 3-го уровня в одной дисциплине, вы [color=brown]блокируете[/color] доступ к технологиям 3-го уровня в других дисциплинах. Однако, если вы найдете способ обойти это ограничение... возможно, вам стоит спросить своего [color=purple]научного руководителя[/color].
 
   ## Станки
-  
+
   <Box>
     <GuideEntityEmbed Entity="Protolathe"/>
     <GuideEntityEmbed Entity="CircuitImprinter"/>
