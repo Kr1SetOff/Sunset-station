@@ -1,4 +1,4 @@
-ent-ChemDispenser = ХимРаздатчик 5000
+ent-ChemDispenserEmpty = ХимРаздатчик 5000
     .desc = Автоматический синтезатор базовых реагентов с энергетическим буфером.
     .suffix = Пустой
 ent-ChemDispenser = { ent-ChemDispenserEmpty }

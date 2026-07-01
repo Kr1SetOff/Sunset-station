@@ -1,0 +1,29 @@
+- type: listing
+  id: UplinkMartialArtsCapoeira
+  name: uplink-martial-arts-capoeira-name
+  description: uplink-martial-arts-capoeira-desc
+  productEntity: MartialArtsManualCapoeira
+  cost:
+    Telecrystal: 8
+  categories:
+  - UplinkWeaponry
+
+- type: listing
+  id: UplinkMartialArtsCQC
+  name: uplink-martial-arts-cqc-name
+  description: uplink-martial-arts-cqc-desc
+  productEntity: MartialArtsManualCQC
+  cost:
+    Telecrystal: 14
+  categories:
+  - UplinkWeaponry
+
+- type: listing
+  id: UplinkMartialArtsSleepingCarp
+  name: uplink-martial-arts-sleeping-carp-name
+  description: uplink-martial-arts-sleeping-carp-desc
+  productEntity: MartialArtsManualSleepingCarp
+  cost:
+    Telecrystal: 16
+  categories:
+  - UplinkWeaponry

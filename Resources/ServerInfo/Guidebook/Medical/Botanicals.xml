@@ -11,7 +11,7 @@
     <GuideEntityEmbed Entity="Nettle" Caption="Крапива"/>
   </Box>
 
-  
+
 
   <GuideReagentGroupEmbed Group="Botanical"/>
   <GuideReagentEmbed Reagent="UnstableMutagen"/>

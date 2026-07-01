@@ -5,16 +5,16 @@ marking-bubble-bubble = Пузыри
 
 marking-fishbowl = Аквариум
 marking-fishbowl-fishbowl1 = Рыбка
-marking-fishbowl-fishbowl2 = Пузыри
+marking-fishbowl-fishbowl2 = Пузыри рыбки
 
 marking-SlimeBonechest = Парящая грудная клетка
-marking-SlimeBonechest-bone = Floating Ribcage
+marking-SlimeBonechest-bone = Парящая грудная клетка
 
 marking-SlimeCore = Ядро
 marking-SlimeCore-core = Ядро
 
-marking-SlimeCoreGlowing = Core (Glowing)
-marking-SlimeCoreGlowing-core = Core (Glowing)
+marking-SlimeCoreGlowing = Ядро (Светящееся)
+marking-SlimeCoreGlowing-core = Ядро (Светящееся)
 
 marking-SlimeLungs = Лёгкие
 marking-SlimeLungs-lungs = Лёгкие
@@ -30,7 +30,7 @@ marking-fizz = Пена
 marking-fizz-fizz = Пена
 
 marking-SlimeBonehead = Парящий череп
-marking-SlimeBonehead-bone = Floating Skull
+marking-SlimeBonehead-bone = Парящий череп
 
 marking-SlimeNose = Нос (Профиль)
 marking-SlimeNose-nose = Нос (Профиль)
@@ -45,43 +45,43 @@ marking-SlimeBrain-brain = Мозг
 
 # Eyes
 
-marking-SlimeEyesDefault = Eyes
-marking-SlimeEyesDefault-eyes = Eyes (Default)
+marking-SlimeEyesDefault = Глаза
+marking-SlimeEyesDefault-eyes = Глаза (Стандартные)
 
 marking-SlimeEyeglow = Свечение глаз
-marking-SlimeEyeglow-glow = Glowing Eyes
+marking-SlimeEyeglow-glow = Светящиеся глаза
 
-marking-SlimeEyesDroopy = Droopy Eyes
-marking-SlimeEyesDroopy-droopy = Droopy Eyes
+marking-SlimeEyesDroopy = Опущенные глаза
+marking-SlimeEyesDroopy-droopy = Опущенные глаза
 
-marking-SlimeEyesDroopyGlowing = Droopy Glowing Eyes
-marking-SlimeEyesDroopyGlowing-droopyglow = Droopy Glowing Eyes
+marking-SlimeEyesDroopyGlowing = Опущенные светящиеся глаза
+marking-SlimeEyesDroopyGlowing-droopyglow = Опущенные светящиеся глаза
 
-marking-SlimeEyesCyclops = Cyclops Eye
-marking-SlimeEyesCyclops-cyclops = Cyclops Eye
+marking-SlimeEyesCyclops = Глаз циклопа
+marking-SlimeEyesCyclops-cyclops = Глаз циклопа
 
-marking-SlimeEyesCyclopsGlowing = Cyclops Glowing Eye
-marking-SlimeEyesCyclopsGlowing-cyclopsglow = Cyclops Glowing Eye
+marking-SlimeEyesCyclopsGlowing = Светящийся глаз циклопа
+marking-SlimeEyesCyclopsGlowing-cyclopsglow = Светящийся глаз циклопа
 
 # RArm
 
 marking-SlimeBonearmright = Парящие кости (правая рука)
-marking-SlimeBonearmright-bone = Floating Bones (Right Arm)
+marking-SlimeBonearmright-bone = Парящие кости (правая рука)
 
 # LArm
 
 marking-SlimeBonearmleft = Парящие кости (левая рука)
-marking-SlimeBonearmleft-bone = Floating Bones (Left Arm)
+marking-SlimeBonearmleft-bone = Парящие кости (левая рука)
 
 # RLeg
 
 marking-SlimeBonelegright = Парящие кости (правая нога)
-marking-SlimeBonelegright-bone = Floating Bones (Right Leg)
+marking-SlimeBonelegright-bone = Парящие кости (правая нога)
 
 # LLeg
 
 marking-SlimeBonelegleft = Парящие кости (левая нога)
-marking-SlimeBonelegleft-bone = Floating Bones (Left Leg)
+marking-SlimeBonelegleft-bone = Парящие кости (левая нога)
 
 # UndergarmentBottom
 
@@ -90,22 +90,22 @@ marking-SlimeBonelegleft-bone = Floating Bones (Left Leg)
 # LFoot
 
 marking-SlimeBonefootleft = Парящие кости (левая ступня)
-marking-SlimeBonefootleft-bone = Floating Bones (Left Foot)
+marking-SlimeBonefootleft-bone = Парящие кости (левая ступня)
 
 # RFoot
 
 marking-SlimeBonefootright = Парящие кости (правая ступня)
-marking-SlimeBonefootright-bone = Floating Bones (Right Foot)
+marking-SlimeBonefootright-bone = Парящие кости (правая ступня)
 
 # LHand
 
 marking-SlimeBonehandleft = Парящие кости (левая кисть)
-marking-SlimeBonehandleft-bone = Floating Bones (Left Hand)
+marking-SlimeBonehandleft-bone = Парящие кости (левая кисть)
 
 # RHand
 
 marking-SlimeBonehandright = Парящие кости (правая кисть)
-marking-SlimeBonehandright-bone = Floating Bones (Right Hand)
+marking-SlimeBonehandright-bone = Парящие кости (правая кисть)
 
 # FacialHair
 

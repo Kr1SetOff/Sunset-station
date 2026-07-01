@@ -29,6 +29,12 @@ ghost-role-information-space-courier-trunk-name = пИИ сундука косм
 ghost-role-information-space-courier-trunk-description = Вы — персональный ИИ, находящийся внутри сундука космического курьера.
 ghost-role-information-space-courier-trunk-rules = Помогите своему владельцу доставить все посылки! И не забудьте придумать себе имя.
 
+ghost-role-information-cc-aligned-rules = Вы — [color={ role-type-cc-aligned-alternate-color }][bold]{ role-type-cc-aligned-name }[/bold][/color].
+                                             Вы должны служить интересам Центрального Командования, даже если они расходятся с интересами NanoTrasen или станции. Помните, вы [color=red]НЕ[/color] служите экипажу.
+                                             Вы не помните ничего из своей прошлой жизни, а также ничего из того, что узнали, будучи призраком.
+                                             Вам разрешено помнить общие знания об игре, например, как готовить еду, использовать предметы и так далее.
+                                             Вам категорически [color=red]НЕ[/color] разрешено помнить имя, внешность и прочие данные вашего предыдущего персонажа.
+
 ghost-role-information-corporate-aligned-rules = Вы — [color={ role-type-corporate-aligned-alternate-color }][bold]{ role-type-corporate-aligned-name }[/bold][/color].
                                              Вы должны служить интересам NanoTrasen и Центрального Командования, даже если они расходятся с интересами станции. Помните, вы [color=red]НЕ[/color] служите экипажу.
                                              Вы не помните ничего из своей прошлой жизни, а также ничего из того, что узнали, будучи призраком.
@@ -50,17 +56,17 @@ ghost-role-information-decimus-description = Вы — оперативник Dec
 ghost-role-information-syndicate-cyborg-stealth-name = Скрытный киборг Синдиката
 
 ghost-role-information-tsf-marine-name = Морпех Солнечной Федерации
-ghost-role-information-tsf-specops-name = Solar Federation SpecOps
-ghost-role-information-tsf-Phantom-name = Solar Federation Phantom Marine
+ghost-role-information-tsf-specops-name = Спецназ Солнечной Федерации
+ghost-role-information-tsf-Phantom-name = Морпех-фантом Солнечной Федерации
 ghost-role-information-tsf-MARSOC-name = Морпех MARSOC Солнечной Федерации
-ghost-role-information-tsf-crew-name = Solar Federation Crewmember
-ghost-role-information-tsf-borg-name = Solgov Cyborg
-ghost-role-information-tsf-borg-desc = Your a Solgov Cyborg. Perform your assigned task.
+ghost-role-information-tsf-crew-name = Член экипажа Солнечной Федерации
+ghost-role-information-tsf-borg-name = Киборг Солгова
+ghost-role-information-tsf-borg-desc = Вы — киборг Солгова. Выполните назначенную задачу.
 ghost-role-information-tsf-marine-desc = Вы — морпех Солнечной Федерации. Выполните назначенную задачу.
 
-ghost-role-information-tsf-officer-name = Solgov Patrol Officer
-ghost-role-information-tsf-officer-Sheriff-name = Solgov Sheriff
-ghost-role-information-tsf-officer-desc = You are a Solar Federation Patrol Officer. Perform your assigned task.
+ghost-role-information-tsf-officer-name = Патрульный офицер Солгова
+ghost-role-information-tsf-officer-Sheriff-name = Шериф Солгова
+ghost-role-information-tsf-officer-desc = Вы — патрульный офицер Солнечной Федерации. Выполните назначенную задачу.
 
 ghost-role-information-xenomoproach-name = Ксеномопроач
 ghost-role-information-xenomoproach-description = Вы — маленький Ксеноборг, носящий кожу мопроача как маскировку.
@@ -72,26 +78,35 @@ ghost-role-information-terminator-name = Экстерминатор
 ghost-role-information-terminator-description = Вы — ходячий автомат, одетый в куклу из плоти. Устраните свою цель с крайней предвзятостью.
 ghost-role-information-terminator-rules = Вы — [color={ role-type-team-antagonist-color }][bold]{ role-type-team-antagonist-name }[/bold][/color]. Вы должны подчиняться своим целям. Вы не должны применять силу к несвязанным целям, если они активно не препятствуют вашей способности выполнять ваши цели. У вас нет воспоминаний о вашей предыдущей жизни.
 
-ghost-role-information-derelict-purrfus-cyborg-name = Derelict Purrfus Cyborg
-ghost-role-information-derelict-purrfus-cyborg-description = You are a purrfus cyborg that got lost in space. After years of exposure to ion storms you find yourself near a space station. ERR urrfus lo-es you purrfus loves you puRrfus loves yo- ERR
+ghost-role-information-derelict-purrfus-cyborg-name = Заброшенный Пуррфус-киборг
+ghost-role-information-derelict-purrfus-cyborg-description = Вы — пуррфус-киборг, который заблудился в космосе. После лет воздействия ионных штормов вы оказались возле космической станции. ОШИБ урфус лю-ит тебя пуррфус любит тебя пуРРфус любит те- ОШИБ
 
-ghostrole-information-derelict-heavy-xenoborg-name = Derelict Heavy Xenoborg
-ghostrole-information-derelict-heavy-xenoborg-description = You are a heavy xenoborg the mothership left behind. After months of exposure to ion storms you find yourself near a space station.
+ghostrole-information-derelict-heavy-xenoborg-name = Заброшенный тяжёлый ксеноборг
+ghostrole-information-derelict-heavy-xenoborg-description = Вы — тяжёлый ксеноборг, оставленный маткой-кораблём. После месяцев воздействия ионных штормов вы оказались возле космической станции.
 
-ghostrole-information-derelict-engi-xenoborg-name = Derelict Engi Xenoborg
-ghostrole-information-derelict-engi-xenoborg-description = You are a engineering xenoborg the mothership left behind. After months of exposure to ion storms you find yourself near a space station.
+ghostrole-information-derelict-engi-xenoborg-name = Заброшенный инженерный ксеноборг
+ghostrole-information-derelict-engi-xenoborg-description = Вы — инженерный ксеноборг, оставленный маткой-кораблём. После месяцев воздействия ионных штормов вы оказались возле космической станции.
 
-ghostrole-information-derelict-scout-xenoborg-name = Derelict Scout Xenoborg
-ghostrole-information-derelict-scout-xenoborg-description = You are a scout xenoborg the mothership left behind. After months of exposure to ion storms you find yourself near a space station.
+ghostrole-information-derelict-scout-xenoborg-name = Заброшенный ксеноборг-разведчик
+ghostrole-information-derelict-scout-xenoborg-description = Вы — ксеноборг-разведчик, оставленный маткой-кораблём. После месяцев воздействия ионных штормов вы оказались возле космической станции.
 
-ghostrole-information-derelict-stealth-xenoborg-name = Derelict Stealth Xenoborg
-ghostrole-information-derelict-stealth-xenoborg-description = You are a stealth xenoborg the mothership left behind. After months of exposure to ion storms you find yourself near a space station.
+ghostrole-information-derelict-stealth-xenoborg-name = Заброшенный скрытный ксеноборг
+ghostrole-information-derelict-stealth-xenoborg-description = Вы — скрытный ксеноборг, оставленный маткой-кораблём. После месяцев воздействия ионных штормов вы оказались возле космической станции.
 
-ghostrole-information-derelict-borgi-xenoborg-name = Derelict XenoBorgi
-ghostrole-information-derelict-borgi-xenoborg-description = You are a xenoborgi the mothership left behind. After months of exposure to ion storms you find yourself near a space station.
+ghostrole-information-derelict-borgi-xenoborg-name = Заброшенный КсеноБорги
+ghostrole-information-derelict-borgi-xenoborg-description = Вы — ксеноборги, оставленный маткой-кораблём. После месяцев воздействия ионных штормов вы оказались возле космической станции.
 
-ghost-role-information-terror-princess-name = Terror princess
-ghost-role-information-terror-princess-description = You are a princess of terror spiders, Your target is to create a big nest and create a big population of spiders to enslave this station!!!
+ghost-role-information-terror-princess-name = Принцесса ужаса
+ghost-role-information-terror-princess-description = Вы — принцесса пауков ужаса. Ваша цель — создать большое гнездо и вырастить большую популяцию пауков, чтобы поработить эту станцию!!!
 
-ghost-role-information-smartcorgi-name = Smart Corgi
-ghost-role-information-smartcorgi-description = You are a dog that is more intelligent than its peers, capable of tool manipulation. Truly a miracle product of science. Unfortunately, while you understand people just fine, you only speak Dog.
+ghost-role-information-smartcorgi-name = Умный корги
+ghost-role-information-smartcorgi-description = Вы — пёс, который умнее своих сородичей и способен работать с инструментами. Настоящее чудо науки. К сожалению, хоть вы прекрасно понимаете людей, говорите вы только по-собачьи.
+
+ghost-role-information-monkey-advanced-name = Продвинутая обезьяна
+ghost-role-information-monkey-advanced-description = Хм, а неплохо бы сейчас перекусить бананом.
+
+ghost-role-information-kobold-advanced-name = Продвинутый кобольд
+ghost-role-information-kobold-advanced-description = Вас тянет на филе-миньон.
+
+ghost-role-information-kiki-name = Кики
+ghost-role-information-kiki-description = Уважаемый член кобольдского общества, отвечающая за ботанику и во всём помогающая ботаникам станции.

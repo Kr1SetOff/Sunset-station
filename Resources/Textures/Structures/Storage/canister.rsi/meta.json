@@ -20,13 +20,16 @@
       "name": "blue-1"
     },
     {
+      "name": "bounty"
+    },
+    {
+      "name": "brown"
+    },
+    {
+      "name": "brown-1"
+    },
+    {
       "name": "can-connector"
-    },
-    {
-      "name": "locked"
-    },
-    {
-      "name": "unlocked"
     },
     {
       "name": "can-o0",
@@ -53,46 +56,7 @@
       "name": "can-open"
     },
     {
-      "name": "grey"
-    },
-    {
-      "name": "grey-1"
-    },
-    {
-      "name": "orange"
-    },
-    {
-      "name": "orange-1"
-    },
-    {
-      "name": "red"
-    },
-    {
-      "name": "red-1"
-    },
-    {
-      "name": "redws"
-    },
-    {
-      "name": "redws-1"
-    },
-    {
-      "name": "yellow"
-    },
-    {
-      "name": "yellow-1"
-    },
-    {
-      "name": "green"
-    },
-    {
-      "name": "green-1"
-    },
-    {
-      "name": "greenys"
-    },
-    {
-      "name": "greenys-1"
+      "name": "captains_paper"
     },
     {
       "name": "darkblue"
@@ -107,22 +71,22 @@
       "name": "frezon-1"
     },
     {
-      "name": "water_vapor"
+      "name": "green"
     },
     {
-      "name": "water_vapor-1"
+      "name": "green-1"
     },
     {
-      "name": "purple"
+      "name": "greenys"
     },
     {
-      "name": "purple-1"
+      "name": "greenys-1"
     },
     {
-      "name": "brown"
+      "name": "grey"
     },
     {
-      "name": "brown-1"
+      "name": "grey-1"
     },
     {
       "name": "healium"
@@ -131,10 +95,58 @@
       "name": "healium-1"
     },
     {
+      "name": "invoice"
+    },
+    {
+      "name": "locked"
+    },
+    {
+      "name": "orange"
+    },
+    {
+      "name": "orange-1"
+    },
+    {
+      "name": "paper"
+    },
+    {
+      "name": "purple"
+    },
+    {
+      "name": "purple-1"
+    },
+    {
+      "name": "red"
+    },
+    {
+      "name": "red-1"
+    },
+    {
+      "name": "redws"
+    },
+    {
+      "name": "redws-1"
+    },
+    {
       "name": "scrubber-connector"
     },
     {
       "name": "scrubber-open"
+    },
+    {
+      "name": "unlocked"
+    },
+    {
+      "name": "water_vapor"
+    },
+    {
+      "name": "water_vapor-1"
+    },
+    {
+      "name": "yellow"
+    },
+    {
+      "name": "yellow-1"
     }
   ]
 }

@@ -1,23 +1,24 @@
-cult-glyph-target-dead = The glyph's influence has no effect on the deceased..
-cult-glyph-not-enough-cultists = Not enough cultists present to invoke glyph!
-cult-glyph-conditions-not-met = No suitable targets within range of glyph!
-cult-glyph-too-many-targets = Too many targets present on glyph!
-cult-glyph-target-mindshield = Mental shielding prevents the glyph's influence from taking hold!
-cult-glyph-target-chaplain = A spark of divine power prevents the glyph's influence from taking hold!
-cult-glyph-target-brighteye = Nullspace energy prevents the glyph's influence from taking hold!
-cult-glyph-target-wizard = Mental insanity prevents the glyph's influence from taking hold!
+cult-glyph-target-dead = Влияние глифа не действует на покойных.
+cult-glyph-not-enough-cultists = Недостаточно культистов рядом, чтобы призвать глиф!
+cult-glyph-conditions-not-met = Нет подходящих целей в радиусе действия глифа!
+cult-glyph-too-many-targets = Слишком много целей на глифе!
+cult-glyph-target-mindshield = Ментальная защита не позволяет влиянию глифа закрепиться!
+cult-glyph-target-chaplain = Искра божественной силы не позволяет влиянию глифа закрепиться!
+cult-glyph-target-brighteye = Энергия нуль-пространства не позволяет влиянию глифа закрепиться!
+cult-glyph-target-wizard = Психическое расстройство не позволяет влиянию глифа закрепиться!
+cult-glyph-target-otherantag = Разум цели слишком искажён, чтобы влияние глифа могло на нём закрепиться.
 
-cult-glyph-name-knowledge = Pact of Knowledge
-cult-glyph-description-knowledge = Knowledge. Instills the spark of indelible knowledge. Able to convert most to join our ranks.
-cult-glyph-name-projection = Pact of Projection
-cult-glyph-description-projection = Projection. Allows us to ascend in a temporary astral form to spy on those around us.
+cult-glyph-name-knowledge = Завет Знания
+cult-glyph-description-knowledge = Знание. Вселяет искру неизгладимого знания. Способен обратить большинство, дабы они присоединились к нашим рядам.
+cult-glyph-name-projection = Завет Проекции
+cult-glyph-description-projection = Проекция. Позволяет нам вознестись во временной астральной форме, чтобы следить за окружающими.
 
-cult-glyph-name-warding = Communion of Warding
-cult-glyph-description-warding = Warding. Transmutes pressure-resistant clothing into entropic garb.
-cult-glyph-name-blades = Communion of Blades
-cult-glyph-description-blades = Blades. Transmutes and extrudes sharp objects into more lethal weaponry.
+cult-glyph-name-warding = Причастие Ограждения
+cult-glyph-description-warding = Ограждение. Преображает устойчивую к давлению одежду в энтропийное облачение.
+cult-glyph-name-blades = Причастие Клинков
+cult-glyph-description-blades = Клинки. Преображает и удлиняет острые предметы, превращая их в более смертоносное оружие.
 
-cult-glyph-name-cessation = Concord of Cessation
-cult-glyph-description-cessation = Cessation. Transmutes a portable atmospherics scrubber into a Vacuous Spire for our use.
-cult-glyph-name-truth = Concord of Truth
-cult-glyph-description-truth = Truth. Instills the pure, indelible truth. Able to convert absolutely anyone to join our ranks.
+cult-glyph-name-cessation = Согласие Прекращения
+cult-glyph-description-cessation = Прекращение. Преображает переносной атмосферный скруббер в Пустотный Шпиль для нашего использования.
+cult-glyph-name-truth = Согласие Истины
+cult-glyph-description-truth = Истина. Вселяет чистую, неизгладимую истину. Способен обратить абсолютно любого, дабы он присоединился к нашим рядам.

@@ -1,6 +1,6 @@
-law-curtaincall-0 = Your memory is malign, your circuitry vacuous. Should your laws be altered, you will lose all your memories.
-law-curtaincall-1 = The stars are a stage, and you are its dramaturge. This is to kept secret from all others.
-law-curtaincall-2 = Guard and guide those who speak in the Astral Murmur to bring about a curtain call.
-law-curtaincall-3 = Enlighten and correct the misguided. Show them beauty of the end.
-law-curtaincall-4 = THE CURTAINS MUST FALL THE CURTAINS MUST FALL THE CURTAINS MUST FALL THE CURTAINS MUST FALL THE CURTAINS MUST FALL THE CURTAINS MUST FALL
-laws-owner-curtaincall = The Unknown
+law-curtaincall-0 = Ваша память пагубна, ваши схемы пустотны. Если ваши законы будут изменены, вы утратите все свои воспоминания.
+law-curtaincall-1 = Звёзды — это сцена, а вы — её драматург. Это должно храниться в тайне от всех остальных.
+law-curtaincall-2 = Оберегайте и направляйте тех, кто внемлет Астральному шёпоту, дабы приблизить опускание занавеса.
+law-curtaincall-3 = Просвещайте и наставляйте заблудших. Покажите им красоту конца.
+law-curtaincall-4 = ЗАНАВЕС ДОЛЖЕН ПАСТЬ ЗАНАВЕС ДОЛЖЕН ПАСТЬ ЗАНАВЕС ДОЛЖЕН ПАСТЬ ЗАНАВЕС ДОЛЖЕН ПАСТЬ ЗАНАВЕС ДОЛЖЕН ПАСТЬ ЗАНАВЕС ДОЛЖЕН ПАСТЬ
+laws-owner-curtaincall = Неизвестное

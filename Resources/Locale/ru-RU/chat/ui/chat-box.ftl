@@ -1,4 +1,4 @@
-hud-chatbox-info = { $cycle-key } для переключения каналов.
+hud-chatbox-info = { $talk-key }, чтобы говорить, { $cycle-key } для переключения каналов.
 hud-chatbox-info-talk = { $talk-key }, чтобы говорить.
 hud-chatbox-info-cycle = Нажмите здесь, чтобы говорить, { $cycle-key } для переключения каналов.
 hud-chatbox-info-unbound = Нажмите здесь, чтобы говорить.
@@ -18,7 +18,7 @@ hud-chatbox-select-channel-Visual = Действия
 hud-chatbox-select-channel-Radio = Рация
 
 hud-chatbox-channel-Admin = Админ Разное
-hud-chatbox-channel-AdminAlert = Сообщение педали
+hud-chatbox-channel-AdminAlert = Оповещение администрации
 hud-chatbox-channel-AdminChat = Админ Чат
 hud-chatbox-channel-Dead = Мёртвые
 hud-chatbox-channel-Emotes = Эмоции
@@ -36,9 +36,9 @@ hud-chatbox-channel-Unspecified = Неопределённый
 
 hud-chatbox-highlights = Подсветка:
 hud-chatbox-highlights-button = Подтвердить
-hud-chatbox-highlights-tooltip = The words need to be separated by a newline,
-                                 if wrapped around " they will be highlighted
-                                 only if separated by spaces or punctuation.
-hud-chatbox-highlights-placeholder = @McHands
-                                     "Judge"
-                                     Medical
+hud-chatbox-highlights-tooltip = Слова должны быть разделены переносом строки;
+                                 если слово заключено в ", оно будет подсвечено
+                                 только если отделено пробелами или знаками препинания.
+hud-chatbox-highlights-placeholder = @МакРуки
+                                     "Судья"
+                                     Медицина

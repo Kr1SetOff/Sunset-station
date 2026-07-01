@@ -70,6 +70,7 @@
     back:
     - Flash
     - ClothingMaskGasBSO
+    - MartialArtsManualKungFuDragon # Sunset - kung fu dragon manual
 
 - type: chameleonOutfit
   id: BlueShieldChameleonOutfit

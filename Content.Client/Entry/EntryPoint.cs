@@ -41,6 +41,7 @@ using Robust.Client.UserInterface;
 using Robust.Shared;
 using Robust.Shared.Configuration;
 using Robust.Shared.ContentPack;
+using Robust.Shared.Log;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Replays;
 using Robust.Shared.Timing;
@@ -108,6 +109,8 @@ namespace Content.Client.Entry
             _contentLoc.Initialize();
             _componentFactory.DoAutoRegistrations();
             _componentFactory.IgnoreMissingComponents();
+
+            _logManager.GetSawmill("system.joint").Level = LogLevel.Info; // 🌇Sunset🌇 - silence noisy pull-joint debug spam client-side too
 
             // Do not add to these, they are legacy.
             _componentFactory.RegisterClass<SharedAmeControllerComponent>();

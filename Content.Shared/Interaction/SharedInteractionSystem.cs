@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Content.Shared._FarHorizons.Util;
+using Content.Shared._Sunset.Grab.Events;
 using Content.Shared.ActionBlocker;
 using Content.Shared.Administration.Logs;
 using Content.Shared.CCVar;
@@ -286,6 +287,12 @@ namespace Content.Shared.Interaction
                 return false;
 
             if (!InRangeUnobstructed(userEntity.Value, uid, popup: true))
+                return false;
+
+            // 🌇Sunset🌇 - re-clicking our own grab target escalates the grab instead of releasing it
+            var grabEv = new GrabClickAttemptEvent(userEntity.Value);
+            RaiseLocalEvent(uid, ref grabEv);
+            if (grabEv.Handled)
                 return false;
 
             _pullSystem.TogglePull(uid, userEntity.Value);

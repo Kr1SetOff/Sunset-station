@@ -1,6 +1,8 @@
-reagent-name-vodkizine = vodkizine
-reagent-desc-vodkizine = Medicinal remedy based on vodka, with the recipe kept in strict secrecy.
-reagent-name-dragan-special = Dragan special
-reagent-desc-dragan-special = 'You is incompetence!!!'
-reagent-name-the-last-call = The Last Call
-reagent-desc-the-last-call = There are no good or bad choices. Only consequences.
+reagent-name-vodkizine = водкизин
+reagent-desc-vodkizine = Лекарственное средство на основе водки, рецепт которого держится в строгом секрете.
+reagent-name-dragan-special = Драган спешл
+reagent-desc-dragan-special = «Ты есть некомпетентность!!!»
+reagent-name-highlander = Горец
+reagent-desc-highlander = Бессмертный может быть лишь один. Дворф, выпивший этот напиток, останется стойким до самого последнего мгновения перед смертью.
+reagent-name-the-last-call = Последний звонок
+reagent-desc-the-last-call = Не бывает хороших или плохих решений. Бывают только последствия.

@@ -12,7 +12,7 @@
   - Получить во время определенных событий на станции
 
   ## Артефакты
-  
+
   <Box>
     <GuideEntityEmbed Entity="ComplexXenoArtifact" Caption=""/>
     <GuideEntityEmbed Entity="ComplexXenoArtifactItem" Caption=""/>
@@ -36,7 +36,7 @@
   - [bold][textlink="Консоль анализа:" link="AnalysisConsole"][/bold] Стационарное устройство для отображения дерева узлов. Должно быть соединено с анализатором с помощью мультитула.
   - [bold]Сканер узлов:[/bold] Небольшой ручной прибор, показывающий ID активируемого в данный момент узла и готовность артефакта к срабатыванию. Позволяет ученым работать в камере рядом с объектом без прямого доступа к консоли.
 
-  
+
   <Box>
     <GuideEntityEmbed Entity="CrateArtifactContainer" Caption="Контейнер для артефактов"/>
     <GuideEntityEmbed Entity="HandheldArtifactContainer" Caption="Ручной контейнер"/>

@@ -150,10 +150,6 @@
       "copyright": "Created by Conf (Starlight)"
     },
     {
-      "name": "locked",
-      "copyright": "Created by Conf (Starlight)"
-    },
-    {
       "name": "l_nitrogen",
       "copyright": "Created by Conf (Starlight)"
     },
@@ -167,6 +163,10 @@
     },
     {
       "name": "l_oxygen_broken",
+      "copyright": "Created by Conf (Starlight)"
+    },
+    {
+      "name": "locked",
       "copyright": "Created by Conf (Starlight)"
     },
     {
@@ -236,6 +236,12 @@
     {
       "name": "rainbow_broken",
       "copyright": "Created by Conf (Starlight)"
+    },
+    {
+      "name": "scrubber-connector"
+    },
+    {
+      "name": "scrubber-open"
     },
     {
       "name": "storage",

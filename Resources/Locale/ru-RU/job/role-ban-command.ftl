@@ -12,7 +12,7 @@ cmd-roleban-hint-5 = [тяжесть]
 
 cmd-roleban-hint-duration-1 = Навсегда
 cmd-roleban-hint-duration-2 = 1 день
-cmd-roleban-hint-duration-3 = 1 неделя
+cmd-roleban-hint-duration-3 = 3 дня
 cmd-roleban-hint-duration-4 = 1 неделя
 cmd-roleban-hint-duration-5 = 2 недели
 cmd-roleban-hint-duration-6 = 1 месяц
@@ -22,7 +22,7 @@ cmd-roleban-hint-duration-6 = 1 месяц
 
 cmd-roleunban-desc = Возвращает пользователю возможность играть на роли
 cmd-roleunban-help = Использование: roleunban <role ban id>
-cmd-roleunban-unable-to-parse-id = Unable to parse { $id } as a ban id integer.
+cmd-roleunban-unable-to-parse-id = Не удалось распознать { $id } как числовой идентификатор бана.
                                    { $help }
 
 ## Completion result hints

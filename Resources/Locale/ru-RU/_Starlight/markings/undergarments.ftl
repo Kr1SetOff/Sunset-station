@@ -1,29 +1,43 @@
-marking-UndergarmentTopTanktopResomi-tanktop_resomi = Tanktop
-marking-UndergarmentTopTanktopResomi = Tanktop
+marking-UndergarmentTopTanktopResomi-tanktop_resomi = Майка
+marking-UndergarmentTopTanktopResomi = Майка
 
-marking-UndergarmentBottomBoxersResomi-boxers_resomi = Boxers
-marking-UndergarmentBottomBoxersResomi = Boxers
-marking-UndergarmentBottomThongResomi-thong_resomi = Thong
-marking-UndergarmentBottomThongResomi = Thong
+marking-UndergarmentBottomBoxersResomi-boxers_resomi = Боксеры
+marking-UndergarmentBottomBoxersResomi = Боксеры
+marking-UndergarmentBottomThongResomi-thong_resomi = Стринги
+marking-UndergarmentBottomThongResomi = Стринги
 
-marking-UndergarmentTopTanktopAvali-tanktop_avali = Tanktop
-marking-UndergarmentTopTanktopAvali = Tanktop
+marking-UndergarmentTopTanktopAvali-tanktop_avali = Майка
+marking-UndergarmentTopTanktopAvali = Майка
 
-marking-UndergarmentTopBinderAvali-binder_avali = Binder
-marking-UndergarmentTopBinderAvali = Binder
+marking-UndergarmentTopBinderAvali-binder_avali = Бандаж
+marking-UndergarmentTopBinderAvali = Бандаж
 
-marking-UndergarmentTopBraAvali-classic_avali = Classic Bra
-marking-UndergarmentTopBraAvali = Classic Bra
+marking-UndergarmentTopBraAvali-classic_avali = Классический бюстгальтер
+marking-UndergarmentTopBraAvali = Классический бюстгальтер
 
-marking-UndergarmentTopSportsbraAvali-sports_avali = Sports Bra
-marking-UndergarmentTopSportsbraAvali = Sports Bra
+marking-UndergarmentTopSportsbraAvali-sports_avali = Спортивный бюстгальтер
+marking-UndergarmentTopSportsbraAvali = Спортивный бюстгальтер
 
-marking-UndergarmentBottomBoxersAvali-boxers_avali = Boxers
-marking-UndergarmentBottomBoxersAvali = Boxers
+marking-UndergarmentBottomBoxersAvali-boxers_avali = Боксеры
+marking-UndergarmentBottomBoxersAvali = Боксеры
 
-marking-UndergarmentBottomBriefsAvali-briefs_avali = Briefs
-marking-UndergarmentBottomBriefsAvali = Briefs
+marking-UndergarmentBottomBriefsAvali-briefs_avali = Трусы
+marking-UndergarmentBottomBriefsAvali = Трусы
 
-marking-UndergarmentBottomSatinAvali-satin_avali = Satin
-marking-UndergarmentBottomSatinAvali = Satin
+marking-UndergarmentBottomSatinAvali-satin_avali = Атласное бельё
+marking-UndergarmentBottomSatinAvali = Атласное бельё
 
+marking-UndergarmentTopTanktopRodentia-tanktop_rodentia = Майка
+marking-UndergarmentTopTanktopRodentia = Майка
+marking-UndergarmentTopBinderRodentia-binder_rodentia = Бандаж
+marking-UndergarmentTopBinderRodentia = Бандаж
+marking-UndergarmentTopBraRodentia-classic_rodentia = Классический бюстгальтер
+marking-UndergarmentTopBraRodentia = Классический бюстгальтер
+marking-UndergarmentTopSportsbraRodentia-sports_rodentia = Спортивный бюстгальтер
+marking-UndergarmentTopSportsbraRodentia = Спортивный бюстгальтер
+marking-UndergarmentBottomBoxersRodentia-boxers_rodentia = Боксеры
+marking-UndergarmentBottomBoxersRodentia = Боксеры
+marking-UndergarmentBottomBriefsRodentia-briefs_rodentia = Трусы
+marking-UndergarmentBottomBriefsRodentia = Трусы
+marking-UndergarmentBottomSatinRodentia-satin_rodentia = Атласное бельё
+marking-UndergarmentBottomSatinRodentia = Атласное бельё

@@ -77,12 +77,12 @@ thaven-mood-daredevil-name = Крепкий орешек
 thaven-mood-daredevil-desc = Боль? Опасность? Что это? Признавать слабость публично — значит приговорить себя.
 
 thaven-mood-folk-hero-name = { $dagdChanceName ->
-    *[FolkHero] Folk Hero
-    [DieAGloriousDeath] Die A Glorious Death
+    *[FolkHero] Народный герой
+    [DieAGloriousDeath] Славная смерть
 }
 thaven-mood-folk-hero-desc = { $dagdChanceName ->
-    *[FolkHero] No one knows it yet, but you are the hero this station needs. You must intervene in any major conflict that occurs, and fight the station’s enemies to the best of your ability
-    [DieAGloriousDeath] You are an artist, and your canvas is your demise. Your primary goal is to orchestrate a glorious, beautiful finale to your existence — But you are not a murderer. Try to avoid causing excessive damage
+    *[FolkHero] Никто пока не знает, но вы — тот герой, что нужен этой станции. Вы должны вмешиваться в любой крупный конфликт и сражаться с врагами станции изо всех сил
+    [DieAGloriousDeath] Вы — художник, а ваше полотно — ваша гибель. Ваша главная цель — устроить славный, прекрасный финал своему существованию. Но вы не убийца — старайтесь избегать чрезмерного урона
 }.
 
 thaven-mood-blogger-name = Блогер с зелёной связи
@@ -103,47 +103,47 @@ thaven-mood-borged-desc = Вы — киборг. Следуйте законам
 thaven-mood-aye-aye-name = Так точно!
 thaven-mood-aye-aye-desc = Должность { $command } — единственная. Все, включая вас, носят этот титул. Других ролей не существует.
 
-thaven-mood-think-you-know-corporate-secrets-name = You THINK You Know Corporate Secrets
-thaven-mood-think-you-know-corporate-secrets-desc = You are aware of the existence of changelings, abductors, and of course, werewolves. You will constantly bring them up and explain their behaviors (incorrectly).
+thaven-mood-think-you-know-corporate-secrets-name = Вы ДУМАЕТЕ, что знаете корпоративные тайны
+thaven-mood-think-you-know-corporate-secrets-desc = Вам известно о существовании летающих тарелок, похитителей, и, конечно же, оборотней. Вы постоянно упоминаете их и объясняете их повадки (неправильно).
 
-thaven-mood-pocket-change-name = Pocket change
-thaven-mood-pocket-change-desc = CentComm doesn't pay you enough. Skim a bit off the department budget for 'me' funds.
+thaven-mood-pocket-change-name = Мелочь на карман
+thaven-mood-pocket-change-desc = ЦентКом платит вам недостаточно. Отщипните немного от бюджета отдела на «личные» нужды.
 
-thaven-mood-arch-nemesis-name = Arch-Nemesis
-thaven-mood-arch-nemesis-desc = Your arch-nemesis is on the station and must be identified and subsequently defeated, whether that’s through killing, some form of competition, or publicly humiliating them. Of course, it won’t be fair unless you formally address them as your arch-nemesis and give them time to prepare.
+thaven-mood-arch-nemesis-name = Заклятый враг
+thaven-mood-arch-nemesis-desc = Ваш заклятый враг находится на станции, и его нужно вычислить, а затем победить — убийством, каким-либо состязанием или публичным унижением. Разумеется, это будет нечестно, если вы официально не объявите его своим заклятым врагом и не дадите ему время подготовиться.
 
-thaven-mood-engine-is-deity-name = The { $engine } Is An Evil Spirit
-thaven-mood-engine-is-deity-desc = It wishes to destroy the homeworld. Keep it contained at all costs, if it is not here it must be summoned before it ends the planet. The containment field requires sacrifice, feed it with inconsequential objects to appease it.
+thaven-mood-engine-is-deity-name = { $engine } — злой дух
+thaven-mood-engine-is-deity-desc = Он желает уничтожить родной мир. Держите его взаперти любой ценой; если его здесь нет, его нужно призвать, прежде чем он уничтожит планету. Сдерживающее поле требует жертв — кормите его незначительными предметами, чтобы умилостивить.
 
-thaven-mood-delicious-moldy-bread-name = Delicious Moldy Bread
-thaven-mood-delicious-moldy-bread-desc = Nothing tastes finer than moldy bread. Make as much of it as possible and share the delicacy with the rest of the crew.
+thaven-mood-delicious-moldy-bread-name = Восхитительный заплесневелый хлеб
+thaven-mood-delicious-moldy-bread-desc = Нет ничего вкуснее заплесневелого хлеба. Делайте его как можно больше и делитесь этим деликатесом с остальным экипажем.
 
-thaven-mood-blindness-is-freedom-name = Blindness Is Freedom
-thaven-mood-blindness-is-freedom-desc = Your sight disgusts you. Get rid of it.
+thaven-mood-blindness-is-freedom-name = Слепота — это свобода
+thaven-mood-blindness-is-freedom-desc = Ваше зрение вызывает у вас отвращение. Избавьтесь от него.
 
-thaven-mood-charger-name = Charger
-thaven-mood-charger-desc = Your positronic brain consumes a lot of power. Make sure to frequently recharge it by skin contact with exposed electrical wires.
+thaven-mood-charger-name = Заряд
+thaven-mood-charger-desc = Ваш позитронный мозг потребляет много энергии. Обязательно регулярно подзаряжайте его, касаясь оголённых проводов под напряжением.
 
-thaven-mood-vital-purity-name = Vital Purity
-thaven-mood-vital-purity-desc = Healing is a crime against nature. Refuse any form of medical intervention at all costs.
+thaven-mood-vital-purity-name = Телесная чистота
+thaven-mood-vital-purity-desc = Исцеление — преступление против природы. Отказывайтесь от любого медицинского вмешательства любой ценой.
 
-thaven-mood-martyr-name = Martyr
-thaven-mood-martyr-desc = It's highly virtuous to be visibly wounded. Keep your health low at all times.
+thaven-mood-martyr-name = Мученик
+thaven-mood-martyr-desc = Быть заметно раненым — величайшая добродетель. Держите своё здоровье на низком уровне постоянно.
 
-thaven-mood-duck-and-cover-name = Duck and Cover
-thaven-mood-duck-and-cover-desc = Showing your full profile is dangerous, crawl at all times.
+thaven-mood-duck-and-cover-name = Пригнись и накройся
+thaven-mood-duck-and-cover-desc = Показывать себя во весь рост опасно — всегда передвигайтесь ползком.
 
-thaven-mood-paranoid-name = Paranoid
-thaven-mood-paranoid-desc = You strongly believe that coords cause cancer.
+thaven-mood-paranoid-name = Параноик
+thaven-mood-paranoid-desc = Вы твёрдо убеждены, что координаты вызывают рак.
 
-thaven-mood-universal-collapse-name = Universal Collapse
-thaven-mood-universal-collapse-desc = The universe is collapsing in on itself, only you can save it! You must do this without acting strange or criminal so the station doesn't fall into panic.
+thaven-mood-universal-collapse-name = Вселенский коллапс
+thaven-mood-universal-collapse-desc = Вселенная схлопывается сама в себя, и только вы можете её спасти! Вы должны сделать это, не выглядя странно или преступно, чтобы станция не впала в панику.
 
-thaven-mood-silicons-must-be-used-name = Silicons Must Be Used
-thaven-mood-silicons-must-be-used-desc = Doing labour is outdated and disgusting. All difficult jobs must be done by the silicon, it's what they were made for.
+thaven-mood-silicons-must-be-used-name = Силиконы должны быть использованы
+thaven-mood-silicons-must-be-used-desc = Физический труд — это устаревшая мерзость. Всю сложную работу должны выполнять силиконы — для этого их и создали.
 
-thaven-mood-fish-ancestry-name = Fish Ancestry
-thaven-mood-fish-ancestry-desc = You must submerge or lay in water at least once per 10 minutes, or when you have been in a warm climate. You must do this to avoid drying out.
+thaven-mood-fish-ancestry-name = Рыбьи корни
+thaven-mood-fish-ancestry-desc = Вы должны погружаться в воду или лежать в ней хотя бы раз в 10 минут, а также после пребывания в тёплом климате. Это необходимо, чтобы не пересохнуть.
 
 # we love when server context doesn't properly dispose of data...
 DuplicateTest = DuplicateTestFTL

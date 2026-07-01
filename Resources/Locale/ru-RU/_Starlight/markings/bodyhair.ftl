@@ -1,11 +1,11 @@
 marking-BodyhairHumanMale-human_bodyhair_male = Волосы на теле (мужские)
-marking-BodyhairHumanMale = Body Hair
+marking-BodyhairHumanMale = Волосы на теле
 
 marking-BodyhairHumanFemale-human_bodyhair_female = Волосы на теле (женские)
-marking-BodyhairHumanFemale = Body Hair
+marking-BodyhairHumanFemale = Волосы на теле
 
 marking-BodyhairThaven-thaven_bodyhair = Волосы на теле (тавен)
-marking-BodyhairThaven = Body Hair
+marking-BodyhairThaven = Волосы на теле
 
 marking-BodyhairHumanUnsexed-human_bodyhair_unsexed = Волосы на теле (нейтральные)
-marking-BodyhairHumanUnsexed = Body Hair
+marking-BodyhairHumanUnsexed = Волосы на теле

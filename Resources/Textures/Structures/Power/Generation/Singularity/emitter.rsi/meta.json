@@ -12,6 +12,28 @@
       "directions": 4
     },
     {
+      "name": "emitter"
+    },
+    {
+      "name": "emitter0",
+      "directions": 4
+    },
+    {
+      "name": "emitter1",
+      "directions": 4
+    },
+    {
+      "name": "emitter2",
+      "directions": 4
+    },
+    {
+      "name": "locked",
+      "directions": 4
+    },
+    {
+      "name": "projectile"
+    },
+    {
       "name": "underpowered",
       "directions": 4,
       "delays": [
@@ -34,23 +56,7 @@
       ]
     },
     {
-      "name": "locked",
-      "directions": 4
-    },
-    {
-      "name": "emitter0",
-      "directions": 4
-    },
-    {
-      "name": "emitter1",
-      "directions": 4
-    },
-    {
-      "name": "emitter2",
-      "directions": 4
-    },
-    {
-      "name": "projectile"
+      "name": "unlocked"
     }
   ]
 }

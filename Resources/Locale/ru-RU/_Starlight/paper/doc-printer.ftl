@@ -19,7 +19,7 @@ doc-text-printer-report-morgue =
     Reason for DNR status: [form]
 
     ────────────────────────────────────────
-   ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
+    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
 
 
 doc-text-printer-report-station =
@@ -27,7 +27,7 @@ doc-text-printer-report-station =
 
                   [center][color=#1f75bb][italic][bold]   OFFICIAL CENTCOMM DOCUMENTATION[/bold][/italic][/color][/center]
     ────────────────────────────────────────
-   ⠀⠀                            [bold]SITUATION REPORT[/bold]
+    ⠀⠀                            [bold]SITUATION REPORT[/bold]
     ────────────────────────────────────────
      Date and Time: [datetime]
     Document Compiler: [signature]
@@ -45,7 +45,7 @@ doc-text-printer-report-station =
     Current situation: [form]
 
     ────────────────────────────────────────
-   ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
+    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
 
 
 doc-text-printer-report-on-elimination-of-violations =
@@ -53,7 +53,7 @@ doc-text-printer-report-on-elimination-of-violations =
 
                   [center][color=#1f75bb][italic][bold]   OFFICIAL CENTCOMM DOCUMENTATION[/bold][/italic][/color][/center]
     ────────────────────────────────────────
-   ⠀⠀            [bold]ISSUE RESOLUTION REPORT[/bold]
+    ⠀⠀            [bold]ISSUE RESOLUTION REPORT[/bold]
     ────────────────────────────────────────
      Date and Time: [datetime]
     Document Compiler: [signature]
@@ -66,7 +66,7 @@ doc-text-printer-report-on-elimination-of-violations =
     Measures taken to resolve issue(s): [form]
 
     ────────────────────────────────────────
-   ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
+    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
 
 
 doc-text-printer-report-department =
@@ -74,7 +74,7 @@ doc-text-printer-report-department =
 
                   [center][color=#1f75bb][italic][bold]   OFFICIAL CENTCOMM DOCUMENTATION[/bold][/italic][/color][/center]
     ────────────────────────────────────────
-   ⠀⠀                           [bold]DEPARTMENTAL REVIEW[/bold]
+    ⠀⠀                           [bold]DEPARTMENTAL REVIEW[/bold]
     ────────────────────────────────────────
      Date and Time: [datetime]
     Document Compiler: [signature]
@@ -93,7 +93,7 @@ doc-text-printer-report-department =
     General condition of the department: [form]
 
     ─────────────────────────────────────────
-   ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
+    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
 
 
 doc-text-printer-report-employee-performance =
@@ -101,7 +101,7 @@ doc-text-printer-report-employee-performance =
 
                   [center][color=#1f75bb][italic][bold]   OFFICIAL CENTCOMM DOCUMENTATION[/bold][/italic][/color][/center]
     ─────────────────────────────────────────
-   ⠀⠀                 [bold]WORK REPORT[/bold]
+    ⠀⠀                 [bold]WORK REPORT[/bold]
     ─────────────────────────────────────────
      Date and Time: [datetime]
     Document Compiler: [signature]
@@ -111,7 +111,7 @@ doc-text-printer-report-employee-performance =
     I hereby request that the result be accepted by the Head of the [form] Department.
 
     ─────────────────────────────────────────
-   ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
+    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
 
 
 doc-text-printer-report-on-the-chapters-meeting =
@@ -119,7 +119,7 @@ doc-text-printer-report-on-the-chapters-meeting =
 
                   [center][color=#1f75bb][italic][bold]   OFFICIAL CENTCOMM DOCUMENTATION[/bold][/italic][/color][/center]
     ─────────────────────────────────────────
-   ⠀⠀                     [bold]VOTE RECORD[/bold]
+    ⠀⠀                     [bold]VOTE RECORD[/bold]
     ─────────────────────────────────────────
      Date and Time: [datetime]
     Document Compiler: [signature]
@@ -155,7 +155,7 @@ doc-text-printer-report-on-the-chapters-meeting =
     Resolution of the meeting: [form]
 
     ────────────────────────────────────────
-   ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
+    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
 
 
 doc-text-printer-internal-affairs-agents-report =
@@ -163,7 +163,7 @@ doc-text-printer-internal-affairs-agents-report =
 
                   [center][color=#1f75bb][italic][bold]   OFFICIAL CENTCOMM DOCUMENTATION[/bold][/italic][/color][/center]
     ─────────────────────────────────────────
-   ⠀⠀               [bold]AUDIT REPORT[/bold]
+    ⠀⠀               [bold]AUDIT REPORT[/bold]
     ─────────────────────────────────────────
      Date and Time: [datetime]
     Document Compiler: [signature]
@@ -173,7 +173,7 @@ doc-text-printer-internal-affairs-agents-report =
     I also wish to report the following: [form]
 
     ────────────────────────────────────────
-   ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
+    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
 
 
 doc-text-printer-condition-report =
@@ -181,7 +181,7 @@ doc-text-printer-condition-report =
 
                   [center][color=#1f75bb][italic][bold]   OFFICIAL CENTCOMM DOCUMENTATION[/bold][/italic][/color][/center]
     ────────────────────────────────────────
-   ⠀⠀                           [bold]MAINTENANCE REPORT[/bold]
+    ⠀⠀                           [bold]MAINTENANCE REPORT[/bold]
     ─────────────────────────────────────────
      Date and Time: [datetime]
     Document Compiler: [signature]
@@ -195,7 +195,7 @@ doc-text-printer-condition-report =
     Repairs performed: [form]
 
     ────────────────────────────────────────
-   ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
+    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
 
 
 doc-text-printer-object-investigation-report =
@@ -203,7 +203,7 @@ doc-text-printer-object-investigation-report =
 
                   [center][color=#1f75bb][italic][bold]   OFFICIAL CENTCOMM DOCUMENTATION[/bold][/italic][/color][/center]
     ────────────────────────────────────────
-   ⠀⠀          [bold]UNKNOWN OBJECT INVESTIGATION REPORT[/bold]
+    ⠀⠀          [bold]UNKNOWN OBJECT INVESTIGATION REPORT[/bold]
     ────────────────────────────────────────
      Date and Time: [datetime]
     Document Compiler: [signature]
@@ -219,7 +219,7 @@ doc-text-printer-object-investigation-report =
     Identified properties: [form]
 
     ────────────────────────────────────────
-   ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
+    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
 
 
 doc-text-printer-experiment-report =
@@ -227,7 +227,7 @@ doc-text-printer-experiment-report =
 
                   [center][color=#1f75bb][italic][bold]   OFFICIAL CENTCOMM DOCUMENTATION[/bold][/italic][/color][/center]
     ────────────────────────────────────────
-   ⠀⠀                              [bold]EXPERIMENT REPORT[/bold]
+    ⠀⠀                              [bold]EXPERIMENT REPORT[/bold]
     ────────────────────────────────────────
      Date and Time: [datetime]
     Document Compiler: [signature]
@@ -246,7 +246,7 @@ doc-text-printer-experiment-report =
     Actual result: [form]
 
     ────────────────────────────────────────
-   ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
+    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
 
 
 doc-text-printer-disposal-report =
@@ -254,7 +254,7 @@ doc-text-printer-disposal-report =
 
                   [center][color=#1f75bb][italic][bold]   OFFICIAL CENTCOMM DOCUMENTATION[/bold][/italic][/color][/center]
     ─────────────────────────────────────────
-   ⠀⠀                                [bold]DISPOSAL REPORT[/bold]
+    ⠀⠀                                [bold]DISPOSAL REPORT[/bold]
     ─────────────────────────────────────────
      Date and Time: [datetime]
     Document Compiler: [signature]
@@ -269,7 +269,7 @@ doc-text-printer-disposal-report =
     • [form] — Given to [form] Department
     • [form] — Given to [form] Department
     ─────────────────────────────────────────
-   ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
+    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
 
 
 doc-text-printer-arrest-report =
@@ -277,7 +277,7 @@ doc-text-printer-arrest-report =
 
                   [center][color=#1f75bb][italic][bold]   OFFICIAL CENTCOMM DOCUMENTATION[/bold][/italic][/color][/center]
     ────────────────────────────────────────
-   ⠀⠀                            [bold]SECURITY ARREST REPORT[/bold]
+    ⠀⠀                            [bold]SECURITY ARREST REPORT[/bold]
     ────────────────────────────────────────
      Date and Time: [datetime]
     Document Compiler: [signature]
@@ -299,7 +299,7 @@ doc-text-printer-arrest-report =
     Additional remarks: [form]
 
     ─────────────────────────────────────────
-   ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
+    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
 
 
 # Statements
@@ -309,7 +309,7 @@ doc-text-printer-statement-appointment-interim-chapter =
 
                   [center][color=#1f75bb][italic][bold]   OFFICIAL CENTCOMM DOCUMENTATION[/bold][/italic][/color][/center]
     ────────────────────────────────────────
-   ⠀⠀          [bold]INTERIM COMMAND APPOINTMENT[/bold]
+    ⠀⠀          [bold]INTERIM COMMAND APPOINTMENT[/bold]
     ────────────────────────────────────────
      Date and Time: [datetime]
     Document Compiler: [signature]
@@ -319,7 +319,7 @@ doc-text-printer-statement-appointment-interim-chapter =
     Upon arrival of the [form] from Central Command, I shall surrender the privileges and equipment afforded to me in the course of these duties, including access rights.
 
     ────────────────────────────────────────
-   ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
+    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
 
 
 doc-text-printer-employment-statement =
@@ -327,7 +327,7 @@ doc-text-printer-employment-statement =
 
                   [center][color=#1f75bb][italic][bold]   OFFICIAL CENTCOMM DOCUMENTATION[/bold][/italic][/color][/center]
     ────────────────────────────────────────
-   ⠀⠀                           [bold]EMPLOYMENT CONTRACT[/bold]
+    ⠀⠀                           [bold]EMPLOYMENT CONTRACT[/bold]
     ────────────────────────────────────────
      Date and Time: [datetime]
     Document Compiler: [signature]
@@ -338,13 +338,13 @@ doc-text-printer-employment-statement =
 
     Name of position: [form]
 
-   ⠀[check] I assert that I am qualified to hold the position which I am seeking, and acknowledge that my contract will be terminated if this is found not to be the case.
+    ⠀[check] I assert that I am qualified to hold the position which I am seeking, and acknowledge that my contract will be terminated if this is found not to be the case.
 
-   ⠀[check] I will surrender any current department work gear and equipment upon transfer.
+    ⠀[check] I will surrender any current department work gear and equipment upon transfer.
 
-   ⠀[check] I agree to follow all applicable Standard Operating Procedures, and accept that my contract may be terminated if I fail to uphold them.
+    ⠀[check] I agree to follow all applicable Standard Operating Procedures, and accept that my contract may be terminated if I fail to uphold them.
     ────────────────────────────────────────
-   ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
+    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
 
 
 doc-text-printer-resignation-statement =
@@ -352,19 +352,19 @@ doc-text-printer-resignation-statement =
 
                   [center][color=#1f75bb][italic][bold]   OFFICIAL CENTCOMM DOCUMENTATION[/bold][/italic][/color][/center]
     ────────────────────────────────────────
-   ⠀⠀                          [bold]NOTICE OF RESIGNATION[/bold]
+    ⠀⠀                          [bold]NOTICE OF RESIGNATION[/bold]
     ────────────────────────────────────────
      Date and Time: [datetime]
     Document Compiler: [signature]
 
     I, [signature], hereby resign my position because of [form].
 
-   ⠀[check] I accept to pay the penalty established by the terms of termination of my contract at the end of the shift.
+    ⠀[check] I accept to pay the penalty established by the terms of termination of my contract at the end of the shift.
 
-   ⠀[check] I will surrender my departmental work gear and equipment.
+    ⠀[check] I will surrender my departmental work gear and equipment.
 
     ────────────────────────────────────────
-   ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
+    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
 
 
 doc-text-printer-access-request-statement =
@@ -372,7 +372,7 @@ doc-text-printer-access-request-statement =
 
                   [center][color=#1f75bb][italic][bold]   OFFICIAL CENTCOMM DOCUMENTATION[/bold][/italic][/color][/center]
     ────────────────────────────────────────
-   ⠀⠀                       [bold]ACCESS REQUEST[/bold]
+    ⠀⠀                       [bold]ACCESS REQUEST[/bold]
     ────────────────────────────────────────
      Date and Time: [datetime]
     Document Compiler: [signature]
@@ -388,7 +388,7 @@ doc-text-printer-access-request-statement =
     Reason for gaining elevated access: [form]
 
     ────────────────────────────────────────
-   ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
+    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
 
 
 doc-text-printer-equipment-request-statement =
@@ -396,7 +396,7 @@ doc-text-printer-equipment-request-statement =
 
                   [center][color=#1f75bb][italic][bold]   OFFICIAL CENTCOMM DOCUMENTATION[/bold][/italic][/color][/center]
     ────────────────────────────────────────
-   ⠀⠀                    [bold]EQUIPMENT REQUEST[/bold]
+    ⠀⠀                    [bold]EQUIPMENT REQUEST[/bold]
     ────────────────────────────────────────
      Date and Time: [datetime]
     Document Compiler: [signature]
@@ -409,7 +409,7 @@ doc-text-printer-equipment-request-statement =
     Reason: [form]
 
     ────────────────────────────────────────
-   ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
+    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
 
 
 
@@ -421,19 +421,19 @@ doc-text-printer-invocation =
 
                   [center][color=#1f75bb][italic][bold]   OFFICIAL CENTCOMM DOCUMENTATION[/bold][/italic][/color][/center]
     ────────────────────────────────────────
-   ⠀⠀                         [bold]NOTICE OF SUMMONS[/bold]
+    ⠀⠀                         [bold]NOTICE OF SUMMONS[/bold]
     ────────────────────────────────────────
      Date and Time: [datetime]
     Document Compiler: [signature]
 
-   ⠀[form] is hereby asked by [signature] to appear at [form], without delay.
+    ⠀[form] is hereby asked by [signature] to appear at [form], without delay.
 
     Reason: [form]
 
-   ⠀[italic]This is an official notice. Penalties may apply for failure to appear.[/italic]
+    ⠀[italic]This is an official notice. Penalties may apply for failure to appear.[/italic]
 
     ────────────────────────────────────────
-   ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
+    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
 
 
 
@@ -442,7 +442,7 @@ doc-text-printer-evacuation-shuttle-request =
 
                   [center][color=#1f75bb][italic][bold]   OFFICIAL CENTCOMM DOCUMENTATION[/bold][/italic][/color][/center]
     ────────────────────────────────────────
-   ⠀⠀                    [bold]EVACUATION SHUTTLE REQUEST[/bold]
+    ⠀⠀                    [bold]EVACUATION SHUTTLE REQUEST[/bold]
     ────────────────────────────────────────
      Date and Time: [datetime]
     Document Compiler: [signature]
@@ -454,7 +454,7 @@ doc-text-printer-evacuation-shuttle-request =
     Reason for evacuation request: [form]
 
     ────────────────────────────────────────
-   ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
+    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
 
 
 
@@ -463,7 +463,7 @@ doc-text-printer-shuttle-registration-request =
 
                   [center][color=#1f75bb][italic][bold]   OFFICIAL CENTCOMM DOCUMENTATION[/bold][/italic][/color][/center]
     ────────────────────────────────────────
-   ⠀⠀                  [bold]SHUTTLE REGISTRATION FORM[/bold]
+    ⠀⠀                  [bold]SHUTTLE REGISTRATION FORM[/bold]
     ────────────────────────────────────────
      Date and Time: [datetime]
     Document Compiler: [signature]
@@ -479,7 +479,7 @@ doc-text-printer-shuttle-registration-request =
     Requested name: [form]
 
     ────────────────────────────────────────
-   ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
+    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
 
 
 
@@ -488,7 +488,7 @@ doc-text-printer-request-call-centcomm-members =
 
                   [center][color=#1f75bb][italic][bold]   OFFICIAL CENTCOMM DOCUMENTATION[/bold][/italic][/color][/center]
     ────────────────────────────────────────
-   ⠀⠀              [bold]REQUEST TO CALL CENTCOMM MEMBERS[/bold]
+    ⠀⠀              [bold]REQUEST TO CALL CENTCOMM MEMBERS[/bold]
     ────────────────────────────────────────
      Date and Time: [datetime]
     Document Compiler: [signature]
@@ -498,7 +498,7 @@ doc-text-printer-request-call-centcomm-members =
     Reason for the call: [form]
 
     ────────────────────────────────────────
-   ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
+    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
 
 
 
@@ -507,7 +507,7 @@ doc-text-printer-request-establish-threat-level =
 
                   [center][color=#1f75bb][italic][bold]   OFFICIAL CENTCOMM DOCUMENTATION[/bold][/italic][/color][/center]
     ────────────────────────────────────────
-   ⠀⠀             [bold]REQUEST TO ESTABLISH THREAT LEVEL[/bold]
+    ⠀⠀             [bold]REQUEST TO ESTABLISH THREAT LEVEL[/bold]
     ────────────────────────────────────────
      Date and Time: [datetime]
     Document Compiler: [signature]
@@ -517,7 +517,7 @@ doc-text-printer-request-establish-threat-level =
     Reason for request: [form]
 
     ────────────────────────────────────────
-   ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
+    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
 
 
 
@@ -526,7 +526,7 @@ doc-text-printer-request-change-salary =
 
                   [center][color=#1f75bb][italic][bold]   OFFICIAL CENTCOMM DOCUMENTATION[/bold][/italic][/color][/center]
     ────────────────────────────────────────
-   ⠀⠀                         [bold]SALARY CHANGE REQUEST[/bold]
+    ⠀⠀                         [bold]SALARY CHANGE REQUEST[/bold]
     ────────────────────────────────────────
      Date and Time: [datetime]
     Document Compiler: [signature]
@@ -540,7 +540,7 @@ doc-text-printer-request-change-salary =
     Reason for salary change: [form]
 
     ────────────────────────────────────────
-   ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
+    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
 
 
 
@@ -549,7 +549,7 @@ doc-text-printer-request-for-non-listed-employment =
 
                   [center][color=#1f75bb][italic][bold]   OFFICIAL CENTCOMM DOCUMENTATION[/bold][/italic][/color][/center]
     ────────────────────────────────────────
-   ⠀⠀             [bold]NON-LISTED EMPLOYMENT CONTRACT[/bold]
+    ⠀⠀             [bold]NON-LISTED EMPLOYMENT CONTRACT[/bold]
     ────────────────────────────────────────
      Date and Time: [datetime]
     Document Compiler: [signature]
@@ -567,7 +567,7 @@ doc-text-printer-request-for-non-listed-employment =
     Reason for employment: [form]
 
     ────────────────────────────────────────
-   ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
+    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
 
 
 
@@ -576,7 +576,7 @@ doc-text-printer-request-for-promotion =
 
                   [center][color=#1f75bb][italic][bold]   OFFICIAL CENTCOMM DOCUMENTATION[/bold][/italic][/color][/center]
     ────────────────────────────────────────
-   ⠀⠀                         [bold]REQUEST FOR PROMOTION[/bold]
+    ⠀⠀                         [bold]REQUEST FOR PROMOTION[/bold]
     ────────────────────────────────────────
      Date and Time: [datetime]
     Document Compiler: [signature]
@@ -592,7 +592,7 @@ doc-text-printer-request-for-promotion =
     Reason for promotion: [form]
 
     ────────────────────────────────────────
-   ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
+    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
 
 
 
@@ -601,7 +601,7 @@ doc-text-printer-request-documents =
 
                   [center][color=#1f75bb][italic][bold]   OFFICIAL CENTCOMM DOCUMENTATION[/bold][/italic][/color][/center]
     ──────────────────────────────────────────
-   ⠀⠀                  [bold]REQUEST FOR RELEASE OF DOCUMENTS[/bold]
+    ⠀⠀                  [bold]REQUEST FOR RELEASE OF DOCUMENTS[/bold]
     ──────────────────────────────────────────
      Date and Time: [datetime]
     Document Compiler: [signature]
@@ -610,12 +610,12 @@ doc-text-printer-request-documents =
 
     Documents sought:
 
-   ⠀ • [form]
-   ⠀ • [form]
-   ⠀ • [form]
+    ⠀ • [form]
+    ⠀ • [form]
+    ⠀ • [form]
 
     ────────────────────────────────────────
-   ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
+    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
 
 
 
@@ -624,7 +624,7 @@ doc-text-printer-request-euthanasia =
 
                   [center][color=#1f75bb][italic][bold]   OFFICIAL CENTCOMM DOCUMENTATION[/bold][/italic][/color][/center]
     ────────────────────────────────────────
-   ⠀⠀                        [bold]PETITION FOR EUTHANASIA[/bold]
+    ⠀⠀                        [bold]PETITION FOR EUTHANASIA[/bold]
     ────────────────────────────────────────
      Date and Time: [datetime]
     Document Compiler: [signature]
@@ -633,19 +633,19 @@ doc-text-printer-request-euthanasia =
 
     My desire for this is as follows: [form].
 
-   ⠀[check] I am aware that this decision is irreversible and will affect compensation given to my next of kin.
+    ⠀[check] I am aware that this decision is irreversible and will affect compensation given to my next of kin.
 
-   ⠀[check] I am of sound mind, as determined by a member of the Medical Department.
+    ⠀[check] I am of sound mind, as determined by a member of the Medical Department.
 
-   ⠀    Inspecting Doctor: [signature]
-   ⠀     Date and Time: [datetime]
+    ⠀    Inspecting Doctor: [signature]
+    ⠀     Date and Time: [datetime]
 
-   ⠀[check] I have no claims against the Medical Department in their adherence to euthanasia protocols.
+    ⠀[check] I have no claims against the Medical Department in their adherence to euthanasia protocols.
 
     At the end of the procedure, I ask that my body be [form], if possible.
 
     ────────────────────────────────────────
-   ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
+    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
 
 
 
@@ -654,7 +654,7 @@ doc-text-printer-request-construction-work =
 
                   [center][color=#1f75bb][italic][bold]   OFFICIAL CENTCOMM DOCUMENTATION[/bold][/italic][/color][/center]
     ────────────────────────────────────────
-   ⠀⠀                     [bold]CONSTRUCTION REQUEST[/bold]
+    ⠀⠀                     [bold]CONSTRUCTION REQUEST[/bold]
     ────────────────────────────────────────
      Date and Time: [datetime]
     Document Compiler: [signature]
@@ -666,7 +666,7 @@ doc-text-printer-request-construction-work =
     List of construction work: [form]
 
     ────────────────────────────────────────
-   ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
+    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
 
 
 
@@ -675,7 +675,7 @@ doc-text-printer-request-modernization =
 
                   [center][color=#1f75bb][italic][bold]   OFFICIAL CENTCOMM DOCUMENTATION[/bold][/italic][/color][/center]
     ────────────────────────────────────────
-   ⠀⠀                         [bold]MODERNIZATION REQUEST[/bold]
+    ⠀⠀                         [bold]MODERNIZATION REQUEST[/bold]
     ────────────────────────────────────────
      Date and Time: [datetime]
     Document Compiler: [signature]
@@ -688,7 +688,7 @@ doc-text-printer-request-modernization =
     • [form]
     • [form]
     ────────────────────────────────────────
-   ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
+    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
 
 
 
@@ -697,7 +697,7 @@ doc-text-printer-request-ert =
 
                   [center][color=#1f75bb][italic][bold]   OFFICIAL CENTCOMM DOCUMENTATION[/bold][/italic][/color][/center]
     ────────────────────────────────────────
-   ⠀⠀           [bold]EMERGENCY RESPONSE TEAM REQUEST[/bold]
+    ⠀⠀           [bold]EMERGENCY RESPONSE TEAM REQUEST[/bold]
     ────────────────────────────────────────
      Date and Time: [datetime]
     Document Compiler: [signature]
@@ -714,9 +714,9 @@ doc-text-printer-request-ert =
     Fatalities (approximate number): [form]
     Other casualties (approximate number): [form]
 
-   ⠀ [italic]Abuse of this form may lead to immediate dismissal of the person(s) involved in this request.[/italic]
+    ⠀ [italic]Abuse of this form may lead to immediate dismissal of the person(s) involved in this request.[/italic]
     ────────────────────────────────────────
-   ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
+    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
 
 
 
@@ -725,7 +725,7 @@ doc-text-printer-product-order =
 
                   [center][color=#1f75bb][italic][bold]   OFFICIAL CENTCOMM DOCUMENTATION[/bold][/italic][/color][/center]
     ────────────────────────────────────────
-   ⠀⠀                                 [bold]PRODUCT ORDER[/bold]
+    ⠀⠀                                 [bold]PRODUCT ORDER[/bold]
     ────────────────────────────────────────
      Date and Time: [datetime]
     Document Compiler: [signature]
@@ -739,7 +739,7 @@ doc-text-printer-product-order =
     Reason for order: [form]
 
     ────────────────────────────────────────
-   ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
+    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
 
 
 
@@ -762,14 +762,14 @@ doc-text-printer-complaint-violation-labor-rules =
 
     Violations committed:
 
-   ⠀• [form]
-   ⠀• [form]
-   ⠀• [form]
+    ⠀• [form]
+    ⠀• [form]
+    ⠀• [form]
 
     I request an internal review of the department(s) in question.
 
     ────────────────────────────────────────
-   ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
+    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
 
 
 
@@ -778,7 +778,7 @@ doc-text-printer-offense-complaint =
 
                   [center][color=#1f75bb][italic][bold]   OFFICIAL CENTCOMM DOCUMENTATION[/bold][/italic][/color][/center]
     ────────────────────────────────────────
-   ⠀⠀                             [bold]CRIMINAL COMPLAINT[/bold]
+    ⠀⠀                             [bold]CRIMINAL COMPLAINT[/bold]
     ────────────────────────────────────────
      Date and Time: [datetime]
     Document Compiler: [signature]
@@ -791,13 +791,13 @@ doc-text-printer-offense-complaint =
 
     Criminal charges:
 
-   ⠀• [form]
-   ⠀• [form]
-   ⠀• [form]
-   ⠀• [form]
+    ⠀• [form]
+    ⠀• [form]
+    ⠀• [form]
+    ⠀• [form]
 
     ────────────────────────────────────────
-   ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
+    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
 
 
 
@@ -809,7 +809,7 @@ doc-text-printer-permission-equipment =
 
                   [center][color=#1f75bb][italic][bold]   OFFICIAL CENTCOMM DOCUMENTATION[/bold][/italic][/color][/center]
     ────────────────────────────────────────
-   ⠀⠀                           [bold]EQUIPMENT PERMIT[/bold]
+    ⠀⠀                           [bold]EQUIPMENT PERMIT[/bold]
     ────────────────────────────────────────
      Date and Time: [datetime]
     Document Compiler: [signature]
@@ -827,7 +827,7 @@ doc-text-printer-permission-equipment =
     Terms of use: [form]
 
     ────────────────────────────────────────
-   ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
+    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
 
 
 
@@ -836,7 +836,7 @@ doc-text-printer-search-permission =
 
                   [center][color=#1f75bb][italic][bold]   OFFICIAL CENTCOMM DOCUMENTATION[/bold][/italic][/color][/center]
     ────────────────────────────────────────
-   ⠀⠀                             [bold]SEARCH WARRANT[/bold]
+    ⠀⠀                             [bold]SEARCH WARRANT[/bold]
     ────────────────────────────────────────
      Date and Time: [datetime]
     Document Compiler: [signature]
@@ -853,15 +853,15 @@ doc-text-printer-search-permission =
 
     Scope of property to be confiscated:
 
-   ⠀[check] Contraband
-   ⠀[check] Items believed to have been involved in a crime
-   ⠀[check] Misappropriated equipment
-   ⠀[check] Other, specify: [form]
+    ⠀[check] Contraband
+    ⠀[check] Items believed to have been involved in a crime
+    ⠀[check] Misappropriated equipment
+    ⠀[check] Other, specify: [form]
 
     Disposition of property: All property seized pursuant to this search warrant shall be remanded into the custody of the Warden's office, pending further orders by Command.
 
     ────────────────────────────────────────
-   ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
+    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
 
 
 
@@ -870,7 +870,7 @@ doc-text-printer-permission-to-carry-weapons =
 
                   [center][color=#1f75bb][italic][bold]   OFFICIAL CENTCOMM DOCUMENTATION[/bold][/italic][/color][/center]
     ────────────────────────────────────────
-   ⠀⠀                             [bold]WEAPON PERMIT[/bold]
+    ⠀⠀                             [bold]WEAPON PERMIT[/bold]
     ────────────────────────────────────────
      Date and Time: [datetime]
     Document Compiler: [signature]
@@ -888,7 +888,7 @@ doc-text-printer-permission-to-carry-weapons =
     Reason for authorization: [form]
 
     ────────────────────────────────────────
-   ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
+    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
 
 
 
@@ -897,7 +897,7 @@ doc-text-printer-permission-dispose-body =
 
                   [center][color=#1f75bb][italic][bold]   OFFICIAL CENTCOMM DOCUMENTATION[/bold][/italic][/color][/center]
     ────────────────────────────────────────
-   ⠀⠀                 [bold]BODY DISPOSAL AUTHORIZATION[/bold]
+    ⠀⠀                 [bold]BODY DISPOSAL AUTHORIZATION[/bold]
     ────────────────────────────────────────
      Date and Time: [datetime]
     Document Compiler: [signature]
@@ -911,7 +911,7 @@ doc-text-printer-permission-dispose-body =
     Method of disposal: [form]
 
     ────────────────────────────────────────
-   ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
+    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
 
 
 
@@ -920,7 +920,7 @@ doc-text-printer-construction-permit =
 
                   [center][color=#1f75bb][italic][bold]   OFFICIAL CENTCOMM DOCUMENTATION[/bold][/italic][/color][/center]
     ────────────────────────────────────────
-   ⠀⠀                           [bold]CONSTRUCTION PERMIT[/bold]
+    ⠀⠀                           [bold]CONSTRUCTION PERMIT[/bold]
     ────────────────────────────────────────
      Date and Time: [datetime]
     Document Compiler: [signature]
@@ -932,7 +932,7 @@ doc-text-printer-construction-permit =
     Agreed scope of redevelopment: [form]
 
     ────────────────────────────────────────
-   ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
+    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
 
 
 
@@ -942,7 +942,7 @@ doc-text-printer-surgery-consent-permit =
 
                   [center][color=#1f75bb][italic][bold]   OFFICIAL CENTCOMM DOCUMENTATION[/bold][/italic][/color][/center]
     ────────────────────────────────────────
-   ⠀⠀                           [bold]SURGERY CONSENT FORM[/bold]
+    ⠀⠀                           [bold]SURGERY CONSENT FORM[/bold]
     ────────────────────────────────────────
      Date and Time: [datetime]
     Document Compiler: [signature]
@@ -959,16 +959,16 @@ doc-text-printer-surgery-consent-permit =
     • [form]
     • [form]
 
-   ⠀[check] I fully understand the risks associated with the operation(s) to which I have given my consent.
+    ⠀[check] I fully understand the risks associated with the operation(s) to which I have given my consent.
 
-   ⠀[check] I authorize the Medical Department to dispose of any tissues or organs removed from my body as they see fit, including possibly donating such tissues or organs to other patients.
+    ⠀[check] I authorize the Medical Department to dispose of any tissues or organs removed from my body as they see fit, including possibly donating such tissues or organs to other patients.
 
-   ⠀[check] I consent to the operation proceeding without the use of anesthetics.
+    ⠀[check] I consent to the operation proceeding without the use of anesthetics.
 
-   ⠀ [italic]This form is not legal unless it has been signed by the patient and stamped by the station's Chief Medical Officer or one of the Chief Medical Officer's superiors. It is not required for life-saving surgeries. For punitive and non-elective surgeries, such as those ordered by Security, please file a Medical Intervention Order.[/italic]
+    ⠀ [italic]This form is not legal unless it has been signed by the patient and stamped by the station's Chief Medical Officer or one of the Chief Medical Officer's superiors. It is not required for life-saving surgeries. For punitive and non-elective surgeries, such as those ordered by Security, please file a Medical Intervention Order.[/italic]
 
     ────────────────────────────────────────
-   ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
+    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
 
 
 doc-text-printer-art-permit =
@@ -976,7 +976,7 @@ doc-text-printer-art-permit =
 
                   [center][color=#1f75bb][italic][bold]   OFFICIAL CENTCOMM DOCUMENTATION[/bold][/italic][/color][/center]
     ────────────────────────────────────────
-   ⠀⠀                           [bold]ART PERMIT[/bold]
+    ⠀⠀                           [bold]ART PERMIT[/bold]
     ────────────────────────────────────────
     Date And Time:[color=#0000ff] [form] [/color]
     Document Compiler:[color=#0000ff] [form] [/color]
@@ -991,7 +991,7 @@ doc-text-printer-art-permit =
     Any artwork that requires significant modification to the station's structure may also require the stamp of the Chief Engineer.[/color][/italic]
 
     ────────────────────────────────────────
-   ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
+    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
 
 
 # OrdersAndInstructions
@@ -1001,7 +1001,7 @@ doc-text-printer-dismissal-order =
 
                   [center][color=#1f75bb][italic][bold]   OFFICIAL CENTCOMM DOCUMENTATION[/bold][/italic][/color][/center]
     ────────────────────────────────────────
-   ⠀⠀                               [bold]DISMISSAL ORDER[/bold]
+    ⠀⠀                               [bold]DISMISSAL ORDER[/bold]
     ────────────────────────────────────────
      Date and Time: [datetime]
     Document Compiler: [signature]
@@ -1010,12 +1010,12 @@ doc-text-printer-dismissal-order =
 
     Employee name: [form]
 
-   ⠀Employee position: [form]
+    ⠀Employee position: [form]
 
     Reason for dismissal: [form]
 
     ────────────────────────────────────────
-   ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
+    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
 
 
 
@@ -1024,7 +1024,7 @@ doc-text-printer-access-revocation-order =
 
                   [center][color=#1f75bb][italic][bold]   OFFICIAL CENTCOMM DOCUMENTATION[/bold][/italic][/color][/center]
     ────────────────────────────────────────
-   ⠀⠀                       [bold]ACCESS REVOCATION ORDER[/bold]
+    ⠀⠀                       [bold]ACCESS REVOCATION ORDER[/bold]
     ────────────────────────────────────────
      Date and Time: [datetime]
     Document Compiler: [signature]
@@ -1033,14 +1033,14 @@ doc-text-printer-access-revocation-order =
 
     Employee: [form]
 
-   ⠀Position: [form]
+    ⠀Position: [form]
 
     Access rights to be removed: [form]
 
     Further remarks: [form]
 
     ────────────────────────────────────────
-   ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
+    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
 
 
 
@@ -1049,7 +1049,7 @@ doc-text-printer-incentive-order =
 
                   [center][color=#1f75bb][italic][bold]   OFFICIAL CENTCOMM DOCUMENTATION[/bold][/italic][/color][/center]
     ────────────────────────────────────────
-   ⠀⠀                       [bold]RECOGNITION OF MERIT[/bold]
+    ⠀⠀                       [bold]RECOGNITION OF MERIT[/bold]
     ────────────────────────────────────────
      Date and Time: [datetime]
 
@@ -1065,11 +1065,11 @@ doc-text-printer-incentive-order =
 
     Sincerely,
 
-   ⠀[signature]
+    ⠀[signature]
 
 
     ────────────────────────────────────────
-   ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
+    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
 
 
 
@@ -1078,7 +1078,7 @@ doc-text-printer-prisoner-parole-order =
 
                   [center][color=#1f75bb][italic][bold]   OFFICIAL CENTCOMM DOCUMENTATION[/bold][/italic][/color][/center]
     ────────────────────────────────────────
-   ⠀⠀                         [bold]ORDER OF MANDATORY PAROLE[/bold]
+    ⠀⠀                         [bold]ORDER OF MANDATORY PAROLE[/bold]
     ────────────────────────────────────────
      Date and Time: [datetime]
     Document Compiler: [signature]
@@ -1096,7 +1096,7 @@ doc-text-printer-prisoner-parole-order =
     Additional terms of parole: [form]
 
     ────────────────────────────────────────
-   ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
+    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
 
 
 
@@ -1121,7 +1121,7 @@ doc-text-printer-order-recognizing-reasonableness-creature =
     The creature is henceforth to be accepted as an Assistant.
 
     ────────────────────────────────────────
-   ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
+    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
 
 
 
@@ -1130,7 +1130,7 @@ doc-text-printer-medical-intervention-order =
 
                   [center][color=#1f75bb][italic][bold]   OFFICIAL CENTCOMM DOCUMENTATION[/bold][/italic][/color][/center]
     ────────────────────────────────────────
-   ⠀⠀                [bold]MEDICAL INTERVENTION ORDER[/bold]
+    ⠀⠀                [bold]MEDICAL INTERVENTION ORDER[/bold]
     ────────────────────────────────────────
      Date and Time: [datetime]
     Document Compiler: [signature]
@@ -1143,12 +1143,12 @@ doc-text-printer-medical-intervention-order =
 
     Circumstances: [form]
 
-   ⠀I hereby affirm that, in my professional opinion as a licensed medical practioner, the ordered intervention is medically or legally necessary.
+    ⠀I hereby affirm that, in my professional opinion as a licensed medical practioner, the ordered intervention is medically or legally necessary.
 
     Qualified Medical Officer: [signature]
 
     ────────────────────────────────────────
-   ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
+    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
 
 
 
@@ -1157,7 +1157,7 @@ doc-text-printer-execution-dnr-order =
 
                   [center][color=#1f75bb][italic][bold]   OFFICIAL CENTCOMM DOCUMENTATION[/bold][/italic][/color][/center]
     ────────────────────────────────────────
-   ⠀⠀             [bold]EXECUTION AND DO-NOT-REVIVE ORDER[/bold]
+    ⠀⠀             [bold]EXECUTION AND DO-NOT-REVIVE ORDER[/bold]
     ────────────────────────────────────────
      Date and Time: [datetime]
     Document Compiler: [signature]
@@ -1173,14 +1173,14 @@ doc-text-printer-execution-dnr-order =
 
     Authority ordering the Execution (Name + Position): [signature]
 
-   ⠀ [italic]This order can only be issued by the (Acting) Captain of the[/italic]
-   ⠀ [italic]station. If a Magistrate is present, they can overrule the Captain[/italic]
-   ⠀ [italic]on the decision, and their stamp is required.[/italic]
-   ⠀ [italic]The prisoner is to remain securely restrained until the execution.[/italic]
-   ⠀ [italic]The execution method may be chosen by the prisoner, to the[/italic]
-   ⠀ [italic]extent permissible under law, and must be as humane as possible.[/italic]
+    ⠀ [italic]This order can only be issued by the (Acting) Captain of the[/italic]
+    ⠀ [italic]station. If a Magistrate is present, they can overrule the Captain[/italic]
+    ⠀ [italic]on the decision, and their stamp is required.[/italic]
+    ⠀ [italic]The prisoner is to remain securely restrained until the execution.[/italic]
+    ⠀ [italic]The execution method may be chosen by the prisoner, to the[/italic]
+    ⠀ [italic]extent permissible under law, and must be as humane as possible.[/italic]
     ────────────────────────────────────────
-   ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
+    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
 
 # Communications
 
@@ -1189,19 +1189,19 @@ doc-text-printer-centcomm-communication =
 
                   [center][color=#1f75bb][italic][bold]   OFFICIAL CENTCOMM DOCUMENTATION[/bold][/italic][/color][/center]
     ────────────────────────────────────────
-   ⠀⠀                    [bold]CENTCOMM COMMUNICATION[/bold]
+    ⠀⠀                    [bold]CENTCOMM COMMUNICATION[/bold]
     ────────────────────────────────────────
      Date and Time: [datetime]
     Document Compiler: [signature]
 
     Greetings CentComm,
 
-   ⠀[form]
+    ⠀[form]
 
     Sincerely,
        - [signature]
     ────────────────────────────────────────
-   ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
+    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
 
 
 doc-text-printer-salvagelead-report =
@@ -1233,7 +1233,7 @@ doc-text-printer-salvagelead-report =
     Further notes: [form]
 
      ────────────────────────────────────────
-   ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
+    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
 
 doc-text-printer-enemy-of-corporation-designation =
                              [head=3]NT-CC Consortium Services[/head]
@@ -1263,13 +1263,13 @@ doc-text-printer-enemy-of-corporation-designation =
 
     Authority ordering the Designation (Name + Position): [signature]
 
-   ⠀ [italic]This order can only be issued either the (Acting) Head of Security,[/italic]
-   ⠀ [italic]Captain, or Magistrate. It must be approved by at least 2[/italic]
-   ⠀ [italic]of these individuals, and they must provide their stamps.[/italic]
-   ⠀ [italic]The prisoner is to remain under watch in captivity until evacuation.[/italic]
-   ⠀ [italic]When completed, form must be faxed to CentComm with all haste.[/italic]
-   ⠀ [italic]If CentComm, or any of the above mentioned officials,[/italic]
-   ⠀ [italic]deny this motion, the prisoner must be reinstated as crew[/italic]
-   ⠀ [italic]and tried normally as per Corporate Law.[/italic]
+    ⠀ [italic]This order can only be issued either the (Acting) Head of Security,[/italic]
+    ⠀ [italic]Captain, or Magistrate. It must be approved by at least 2[/italic]
+    ⠀ [italic]of these individuals, and they must provide their stamps.[/italic]
+    ⠀ [italic]The prisoner is to remain under watch in captivity until evacuation.[/italic]
+    ⠀ [italic]When completed, form must be faxed to CentComm with all haste.[/italic]
+    ⠀ [italic]If CentComm, or any of the above mentioned officials,[/italic]
+    ⠀ [italic]deny this motion, the prisoner must be reinstated as crew[/italic]
+    ⠀ [italic]and tried normally as per Corporate Law.[/italic]
     ────────────────────────────────────────
-   ⠀                      [italic]Place for Stamps and/or Signatures[/italic]
+    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]

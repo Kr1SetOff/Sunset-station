@@ -1,14 +1,20 @@
-reagent-name-amoxla = amoxla
-reagent-desc-amoxla = Ammonia-based chem that treats airloss and bloodloss in Avali and Resomi, and acts like a somewhat strong poison in other species.
+reagent-name-amoxla = амоксла
+reagent-desc-amoxla = Препарат на основе аммиака, лечащий кислородное голодание и кровопотерю у авали, резоми и вокс, а у прочих видов действует как довольно сильный яд.
 
-reagent-name-bonegel = bone gel
-reagent-desc-bonegel = A gel that uses as clue for bones to regrow. It is better not to consume it, but it can be used in surgery.
+reagent-name-bonegel = костный гель
+reagent-desc-bonegel = Гель, служащий основой для регенерации костей. Употреблять внутрь не рекомендуется, но можно использовать в хирургии.
 
-reagent-name-chronexaline = chronexaline
-reagent-desc-chronexaline = A mixture of unstable radiation chemicals and its base component under extremely low temperatures. This appears to cure radiation poisoning in dead bodies.
+reagent-name-chronexaline = хронексалин
+reagent-desc-chronexaline = Смесь нестабильных радиоактивных химикатов и их базового компонента при крайне низких температурах. Судя по всему, лечит лучевую болезнь у мёртвых тел.
 
-reagent-name-barozine-plus = barozine plus
-reagent-desc-barozine-plus = An advanced form of Barozine only found in Space Medipens. Heals less, but an overdose is less painful.
+reagent-name-barozine-plus = барозин плюс
+reagent-desc-barozine-plus = Улучшенная форма барозина, встречающаяся только в космических аптечках-ручках. Лечит меньше, но передозировка переносится легче.
 
-reagent-name-infernaline = infernaline
-reagent-desc-infernaline = An unstable chemical that defies logic, very effective at treating genetic damage, but capable of causing tears in the flesh in higher than minimal amounts.
+reagent-name-infernaline = инфернолин
+reagent-desc-infernaline = Нестабильное вещество, бросающее вызов логике: очень эффективно лечит генетические повреждения, но в количествах выше минимальных способно вызывать разрывы тканей.
+
+reagent-name-briomadine = бриомадин
+reagent-desc-briomadine = Продвинутое полунатуральное лекарство, применяемое для лечения серьёзного тупого урона.
+
+reagent-name-acrileni = акрилени
+reagent-desc-acrileni = Слабое натуральное лекарство, способное лечить лёгкий колющий урон.

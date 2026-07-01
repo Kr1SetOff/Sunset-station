@@ -13,17 +13,17 @@ uplink-observer-bundle-desc = Чтобы всегда держать руку н
 uplink-switchblade-name = Выкидной нож
 uplink-switchblade-desc = Дешёвый клинок, который «выкидывает» людей из списка живых.
 
-uplink-mind-control-implant-name = Mind Control Implanter
-uplink-mind-control-implant-desc = Turn your frenemy into a friend. They will follow any order you give them.
+uplink-mind-control-implant-name = Имплантер контроля разума
+uplink-mind-control-implant-desc = Превратите вашего врага в друга. Он будет выполнять любой ваш приказ.
 
-uplink-toxic-grenade-name = Acidic Gas Grenade
-uplink-toxic-grenade-desc = A painful crowd control gas grenade full of Sulfuric Acid. Good for clearing the masses out of a chokepoint. Turn on your internals first.
+uplink-toxic-grenade-name = Граната с кислотным газом
+uplink-toxic-grenade-desc = Болезненная газовая граната для разгона толпы, наполненная серной кислотой. Хороша для расчистки узкого прохода от толпы. Сначала включите вашу внутреннюю дыхательную систему.
 
-uplink-x4-name = Composition X-4
-uplink-x4-desc = Used to put even bigger holes in areas you really hate.
+uplink-x4-name = Состав X-4
+uplink-x4-desc = Используется, чтобы проделывать ещё большие дыры в местах, которые вы действительно ненавидите.
 
-uplink-x4-bundle-name = X-4 Bundle
-uplink-x4-bundle-desc = A bundle of eight X-4. You must really want to blow the hell out of something.
+uplink-x4-bundle-name = Набор X-4
+uplink-x4-bundle-desc = Набор из восьми зарядов X-4. Похоже, вы и правда хотите что-то основательно взорвать.
 
-uplink-disruptor-name = Syndicate Disruptor
-uplink-disruptor-desc = Call in various disruptions to create opportunities, such as power or comms outages.
+uplink-disruptor-name = Дизраптор Синдиката
+uplink-disruptor-desc = Вызывайте различные помехи, чтобы создать возможности — например, отключение электричества или связи.

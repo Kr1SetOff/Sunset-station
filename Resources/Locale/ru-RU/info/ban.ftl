@@ -30,9 +30,9 @@ cmd-banlist-empty = Нет активных банов у пользовател
 cmd-banlist-hint = <name/user ID>
 
 cmd-ban_exemption_update-desc = Установите исключение для определенного типа запрета для игрока.
-cmd-ban_exemption_update-help = Usage: ban_exemption_update <player> <flag> [<flag> [...]]
-    Specify multiple flags to give a player multiple ban exemption flags.
-    To remove all exemptions, run this command and give "None" as only flag.
+cmd-ban_exemption_update-help = Использование: ban_exemption_update <player> <flag> [<flag> [...]]
+    Укажите несколько флагов, чтобы выдать игроку сразу несколько исключений из банов.
+    Чтобы снять все исключения, выполните эту команду, указав «None» как единственный флаг.
 
 cmd-ban_exemption_update-nargs = Ожидалось по крайней мере 2 аргумента
 cmd-ban_exemption_update-locate = Не удается найти игрока '{ $player }'.

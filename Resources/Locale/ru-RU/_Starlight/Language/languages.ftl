@@ -120,3 +120,27 @@ language-Lagomorphian-description = Очень линэксический язы
 
 language-Cosmic-name = Астральный шёпот
 language-Cosmic-description = ЗАНАВЕС ДОЛЖЕН ПАСТЬ
+
+language-Abductor-name = Похититель
+language-Abductor-description = ...
+
+language-Nexus-name = Нексус
+language-Nexus-description = Нейросвязь, позволяющая им общаться с другими представителями своего вида через технологическую сеть.
+
+language-Changeling-name = Улей
+language-Changeling-description = ...
+
+language-Dantalion-name = Тралл
+language-Dantalion-description = ...
+
+language-Empathy-name = Эмпатия
+language-Empathy-description = ...
+
+language-Carpmind-name = Улей
+language-Carpmind-description = Различные рыбьи разумы.
+
+language-Xenomind-name = Улей
+language-Xenomind-description = Различные разумы ксеносов и терроров.
+
+language-Squeakish-name = Скрипучий
+language-Squeakish-description = Язык родентий, состоящий из череды писков и скрипов.

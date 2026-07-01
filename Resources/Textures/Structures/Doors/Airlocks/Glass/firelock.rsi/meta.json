@@ -11,6 +11,24 @@
       "name": "assembly"
     },
     {
+      "name": "base_pressure_unlit",
+      "delays": [
+        [
+          0.8,
+          0.4
+        ]
+      ]
+    },
+    {
+      "name": "base_temperature_unlit",
+      "delays": [
+        [
+          0.8,
+          0.4
+        ]
+      ]
+    },
+    {
       "name": "bolted_unlit"
     },
     {
@@ -46,6 +64,9 @@
       ]
     },
     {
+      "name": "deny"
+    },
+    {
       "name": "deny_unlit",
       "delays": [
         [
@@ -56,7 +77,22 @@
       ]
     },
     {
+      "name": "emergency_unlit",
+      "delays": [
+        [
+          0.4,
+          0.4
+        ]
+      ]
+    },
+    {
+      "name": "locked"
+    },
+    {
       "name": "open"
+    },
+    {
+      "name": "open_unlit"
     },
     {
       "name": "opening",
@@ -116,31 +152,7 @@
       ]
     },
     {
-      "name": "welded"
-    },
-    {
-      "name": "welded_open"
-    },
-    {
-      "name": "emergency_unlit",
-      "delays": [
-        [
-          0.4,
-          0.4
-        ]
-      ]
-    },
-    {
       "name": "pressure_unlit",
-      "delays": [
-        [
-          0.8,
-          0.4
-        ]
-      ]
-    },
-    {
-      "name": "base_pressure_unlit",
       "delays": [
         [
           0.8,
@@ -167,22 +179,19 @@
       ]
     },
     {
-      "name": "base_temperature_unlit",
+      "name": "temperature_unlit_flat",
       "delays": [
-          [
-              0.8,
-              0.4
-          ]
+        [
+          0.8,
+          0.4
+        ]
       ]
     },
     {
-      "name": "temperature_unlit_flat",
-      "delays": [
-          [
-              0.8,
-              0.4
-          ]
-      ]
+      "name": "welded"
+    },
+    {
+      "name": "welded_open"
     }
   ]
 }

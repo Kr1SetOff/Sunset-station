@@ -1,0 +1,83 @@
+- type: entity
+  parent: BaseItem
+  id: MartialArtsManualCQC
+  name: устав CQC
+  description: Потрёпанный тренировочный устав по технике ближнего боя CQC.
+  components:
+  - type: Sprite
+    sprite: _Sunset/MartialArts/cqc_manual.rsi
+    state: icon
+  - type: Item
+    size: Small
+  - type: MartialArtManual
+    style: CQC
+
+- type: entity
+  parent: BaseItem
+  id: MartialArtsManualCqcCook
+  name: поварская книга CQC
+  description: Кулинарная книга с приёмами ближнего боя, отточенными на кухонных ножах. Приёмы работают только рядом с кухней.
+  components:
+  - type: Sprite
+    sprite: _Sunset/MartialArts/cqc_manual.rsi
+    state: icon
+  - type: Item
+    size: Small
+  - type: MartialArtManual
+    style: CqcCook
+
+- type: entity
+  parent: BaseItem
+  id: MartialArtsManualSleepingCarp
+  name: свиток спящего карпа
+  description: Древний свиток с техниками стиля "Спящий Карп".
+  components:
+  - type: Sprite
+    sprite: _Sunset/MartialArts/sleeping_carp_scroll.rsi
+    state: scroll2
+  - type: Item
+    size: Small
+  - type: MartialArtManual
+    style: SleepingCarp
+
+- type: entity
+  parent: BaseItem
+  id: MartialArtsManualCapoeira
+  name: пособие по капоэйре
+  description: Потрёпанное пособие с основами капоэйры — акробатического боевого стиля.
+  components:
+  - type: Sprite
+    sprite: _Sunset/MartialArts/martial_arts.rsi
+    state: capoeira
+  - type: Item
+    size: Small
+  - type: MartialArtManual
+    style: Capoeira
+
+- type: entity
+  parent: BaseItem
+  id: MartialArtsManualNinjutsu
+  name: свиток ниндзюцу
+  description: Секретный свиток техник ниндзюцу.
+  components:
+  - type: Sprite
+    sprite: _Sunset/MartialArts/martial_arts.rsi
+    state: ninjutsu
+  - type: Item
+    size: Small
+  - type: MartialArtManual
+    style: Ninjutsu
+
+- type: entity
+  parent: BaseItem
+  id: MartialArtsManualKungFuDragon
+  name: свиток кунг-фу дракона
+  description: Свиток с техниками стиля "Кунг-фу Дракона" — тот, кто твёрдо стоит на ногах, бьёт сильнее.
+  components:
+  - type: Sprite
+    sprite: _Sunset/MartialArts/martial_arts.rsi
+    state: dragon
+  - type: Item
+    size: Small
+  - type: MartialArtManual
+    style: KungFuDragon

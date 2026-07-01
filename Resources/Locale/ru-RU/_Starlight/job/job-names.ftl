@@ -1,17 +1,17 @@
 job-name-assistant = Ассистент
 
 # Role timers - Apparently someone from upstream will cut us if these aren't alphabetical?
-JobBlueShield = BlueShield Officer
+JobBlueShield = Офицер БлюШилда
 JobBoxer = Боксер
-JobDutyOfficer = Duty Officer
-JobIAA = Internal Affairs Agent
-JobMagistrate = Magistrate
-JobMailTech = Mail Technician
-JobMiningSpecialist = Mining Specialist
-JobNanotrasenCareerTrainer = NanoTrasen Career Trainer
-JobNanoTrasenRepresentative = NanoTrasen Representative
-JobPerformer = Performer
+JobDutyOfficer = Дежурный офицер
+JobIAA = Агент внутренних дел
+JobMagistrate = Магистрат
+JobMailTech = Почтовый техник
+JobMiningSpecialist = Специалист по добыче
+JobNanotrasenCareerTrainer = Карьерный наставник НаноТрейзен
+JobNanoTrasenRepresentative = Представитель НаноТрейзен
+JobPerformer = Артист
 JobRoboticist = Роботехник
-JobSalvageLead = Salvage Lead
-JobSurgeon = Surgeon
+JobSalvageLead = Ведущий утилизатор
+JobSurgeon = Хирург
 JobZookeeper = Зоотехник

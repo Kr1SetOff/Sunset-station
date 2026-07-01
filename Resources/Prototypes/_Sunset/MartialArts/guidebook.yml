@@ -1,0 +1,35 @@
+- type: guideEntry
+  id: MartialArts
+  name: guide-entry-martial-arts
+  text: "/ServerInfo/_Sunset/Guidebook/MartialArts/MartialArts.xml"
+  children:
+  - MartialArtsNinjutsu
+  - MartialArtsCQC
+  - MartialArtsSleepingCarp
+  - MartialArtsCapoeira
+  - MartialArtsKungFuDragon
+
+- type: guideEntry
+  id: MartialArtsNinjutsu
+  name: guide-entry-martial-arts-ninjutsu
+  text: "/ServerInfo/_Sunset/Guidebook/MartialArts/Ninjutsu.xml"
+
+- type: guideEntry
+  id: MartialArtsCQC
+  name: guide-entry-martial-arts-cqc
+  text: "/ServerInfo/_Sunset/Guidebook/MartialArts/CQC.xml"
+
+- type: guideEntry
+  id: MartialArtsSleepingCarp
+  name: guide-entry-martial-arts-sleeping-carp
+  text: "/ServerInfo/_Sunset/Guidebook/MartialArts/SleepingCarp.xml"
+
+- type: guideEntry
+  id: MartialArtsCapoeira
+  name: guide-entry-martial-arts-capoeira
+  text: "/ServerInfo/_Sunset/Guidebook/MartialArts/Capoeira.xml"
+
+- type: guideEntry
+  id: MartialArtsKungFuDragon
+  name: guide-entry-martial-arts-kungfu-dragon
+  text: "/ServerInfo/_Sunset/Guidebook/MartialArts/KungFuDragon.xml"

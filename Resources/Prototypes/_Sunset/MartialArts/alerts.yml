@@ -1,0 +1,20 @@
+- type: alertCategory
+  id: NinjutsuSneak
+
+- type: alert
+  id: NinjutsuSneakReady
+  category: NinjutsuSneak
+  icons:
+  - sprite: /Textures/Objects/Weapons/Melee/energykatana.rsi
+    state: icon
+  name: alert-ninjutsu-sneak-ready-name
+  description: alert-ninjutsu-sneak-ready-desc
+
+- type: alert
+  id: NinjutsuSneakLost
+  category: NinjutsuSneak
+  icons:
+  - sprite: /Textures/Structures/Storage/closet.rsi
+    state: cardboard_special
+  name: alert-ninjutsu-sneak-lost-name
+  description: alert-ninjutsu-sneak-lost-desc

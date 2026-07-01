@@ -10,8 +10,11 @@ signal-port-description-mass-driver-console-receiver = Получает опци
 signal-port-name-launch = Запуск
 signal-port-description-launch = При получении сигнала активирует запуск. Требуется включённый ручной режим.
 
-signal-port-name-ticket-machine-nextnumber = Next Ticket Number
-signal-port-description-ticket-machine-nextnumber = Changes ticket number to next one when triggered.
+signal-port-name-ticket-machine-nextnumber = Следующий номер талона
+signal-port-description-ticket-machine-nextnumber = При срабатывании меняет номер талона на следующий.
 
-signal-port-name-ticket-machine-burntickets = Burn Tickets
-signal-port-description-ticket-machine-burntickets = Burns all served tickets when triggered.
+signal-port-name-ticket-machine-burntickets = Сжечь талоны
+signal-port-description-ticket-machine-burntickets = При срабатывании сжигает все обслуженные талоны.
+
+signal-port-name-set-particle-lambda = Задать тип частиц: лямбда
+signal-port-description-set-particle-lambda = Устанавливает тип частиц, испускаемых устройством, на лямбда.

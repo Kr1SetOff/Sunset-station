@@ -1,52 +1,58 @@
 # Combat
-evolutionmenu-combat-armblade-plus-name = True Arm Blade
+evolutionmenu-combat-armblade-plus-name = Истинный клинок-рука
 evolutionmenu-combat-armblade-plus-desc =
-    Reform one of your arms into a truly beautiful blade, composed of bone and flesh, and tear the flesh off of your victims.
-    Can also pry open doors incredibly quickly, and reflect incoming projectiles. Gives off a beautiful red glow.
-    WARNING: Requires you to absorb at least 6 organics to use the ability.
-    Costs 30 chemicals each time you summon it, and each time you retract it.
+    Преобразуйте одну из своих рук в поистине прекрасный клинок из кости и плоти, чтобы срывать плоть с ваших жертв.
+    Также может невероятно быстро вскрывать двери и отражать летящие снаряды. Испускает красивое красное свечение.
+    ПРЕДУПРЕЖДЕНИЕ: Требует поглощения как минимум 6 органиков для использования способности.
+    Стоит 30 химикатов каждый раз, когда вы призываете его, и каждый раз, когда вы его убираете.
 
 # Utility
-evolutionmenu-utility-night-eyesight-name = Night Vision Eyesight
+evolutionmenu-utility-night-eyesight-name = Ночное зрение
 evolutionmenu-utility-night-eyesight-desc =
-    Evolve your eyes to be able to see in the dark.
-    May be used while under the effects of Lesser Form.
-    WARNING: Requires you to absorb at least 2 organics to use the ability.
-    Costs 15 chemicals, once.
+    Разовьёт ваши глаза так, чтобы вы могли видеть в темноте.
+    Может использоваться под эффектом Малой Формы.
+    ПРЕДУПРЕЖДЕНИЕ: Требует поглощения как минимум 2 органиков для использования способности.
+    Стоит 15 химикатов, единоразово.
 
-evolutionmenu-utility-thermal-eyesight-name = Thermal Eyesight
+evolutionmenu-utility-thermal-eyesight-name = Тепловое зрение
 evolutionmenu-utility-thermal-eyesight-desc =
-    Evolve your eyes to their ultimate form, becoming able to detect heat signatures through walls.
-    May be used while under the effects of Lesser Form.
-    WARNING: Requires you to absorb at least 4 organics to use the ability.
-    Costs 30 chemicals, once.
+    Разовьёт ваши глаза до предельной формы, позволяя обнаруживать тепловые сигнатуры сквозь стены.
+    Может использоваться под эффектом Малой Формы.
+    ПРЕДУПРЕЖДЕНИЕ: Требует поглощения как минимум 4 органиков для использования способности.
+    Стоит 30 химикатов, единоразово.
 
-evolutionmenu-utility-risky-stims-name = Desoxyephedrine Overdose
+evolutionmenu-utility-risky-stims-name = Передозировка дезоксиэфедрином
 evolutionmenu-utility-risky-stims-desc =
-    Inject a cocktail of risky stimulants into yourself, giving yourself a greater speed boost.
-    Poisonous, even moreso when used continuously.
-    WARNING: Requires you to absorb at least 2 organics to use the ability.
-    Costs 30 chemicals.
+    Введите себе коктейль из рискованных стимуляторов, получив значительный прирост скорости.
+    Ядовит, особенно при постоянном использовании.
+    ПРЕДУПРЕЖДЕНИЕ: Требует поглощения как минимум 2 органиков для использования способности.
+    Стоит 30 химикатов.
 
-evolutionmenu-utility-hyper-stims-name = Amalgam Overdose
+evolutionmenu-utility-hyper-stims-name = Передозировка амальгамой
 evolutionmenu-utility-hyper-stims-desc =
-    Inject a cocktail of strong stimulants into yourself, quickly removing any stuns and giving yourself an even greater speed boost.
-    Continuous injection is poisonous.
-    WARNING: Requires you to absorb at least 4 organics to use the ability.
-    Costs 40 chemicals.
+    Введите себе коктейль из мощных стимуляторов, быстро снимающий любые оглушения и дающий ещё больший прирост скорости.
+    Постоянное введение ядовито.
+    ПРЕДУПРЕЖДЕНИЕ: Требует поглощения как минимум 4 органиков для использования способности.
+    Стоит 40 химикатов.
+
+evolutionmenu-utility-protogen-name = Маскировка протогена
+evolutionmenu-utility-protogen-desc =
+    Затвердевает вашу кожу до металлического вида, позволяя выдавать себя за корпус протогена. Применимо только если вы в данный момент
+    замаскированы под протогена.
+    Стоит 0 химикатов.
 
 # Sting
 
-evolutionmenu-sting-burn-name = Bloodburn Sting
+evolutionmenu-sting-burn-name = Жало кровевоспламенения
 evolutionmenu-sting-burn-desc =
-    Inject an organic target with a cocktail of chemicals that burns their blood and disorients them.
-    May be used while under the effects of Lesser Form.
-    WARNING: Requires you to absorb at least 2 organics to use the ability.
-    Costs 35 chemicals.
+    Впрысните органической цели коктейль химикатов, воспламеняющий их кровь и дезориентирующий их.
+    Может использоваться под эффектом Малой Формы.
+    ПРЕДУПРЕЖДЕНИЕ: Требует поглощения как минимум 2 органиков для использования способности.
+    Стоит 35 химикатов.
 
-evolutionmenu-sting-drain-name = Draining Sting
+evolutionmenu-sting-drain-name = Истощающее жало
 evolutionmenu-sting-drain-desc =
-    Inject an organic target with a cocktail of chemicals that quickly erode their hunger and thirst.
-    May be used while under the effects of Lesser Form.
-    WARNING: Requires you to absorb at least 2 organics to use the ability.
-    Costs 35 chemicals.
+    Впрысните органической цели коктейль химикатов, быстро истощающий их голод и жажду.
+    Может использоваться под эффектом Малой Формы.
+    ПРЕДУПРЕЖДЕНИЕ: Требует поглощения как минимум 2 органиков для использования способности.
+    Стоит 35 химикатов.

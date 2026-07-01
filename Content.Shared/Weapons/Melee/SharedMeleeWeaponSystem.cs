@@ -2,6 +2,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Numerics;
 using Content.Shared._Starlight.Weapons.Melee.Events; // Starlight-edit
+using Content.Shared._Sunset.MartialArts.Events; // 🌇Sunset🌇
 using Content.Shared.ActionBlocker;
 using Content.Shared.Actions.Events;
 using Content.Shared.Administration.Components;
@@ -879,12 +880,19 @@ public abstract partial class SharedMeleeWeaponSystem : EntitySystem
     {
         var target = GetEntity(ev.Target);
 
-        if (Deleted(target) ||
-            user == target)
+        if (Deleted(target))
         {
             return false;
         }
 
+        if (user == target)
+        {
+            // 🌇Sunset🌇 - a disarm on yourself does nothing mechanically, but martial arts (e.g.
+            // Capoeira's Kick Up) can use it as a distinct self-targeted combo input.
+            var selfDisarmEv = new MeleeDisarmAttemptedEvent(user, user);
+            RaiseLocalEvent(user, ref selfDisarmEv, broadcast: true);
+            return false;
+        }
 
         if (MobState.IsIncapacitated(target.Value))
         {
@@ -917,6 +925,11 @@ public abstract partial class SharedMeleeWeaponSystem : EntitySystem
         {
             return false;
         }
+
+        // 🌇Sunset🌇 - record a martial arts "Disarm" combo input on any attempt (incl. plain shoves),
+        // before the success chance is rolled.
+        var disarmAttemptedEv = new MeleeDisarmAttemptedEvent(user, target.Value);
+        RaiseLocalEvent(user, ref disarmAttemptedEv, broadcast: true);
 
         EntityUid? inTargetHand = null;
 

@@ -138,6 +138,7 @@ namespace Content.Server.Entry
 
             _log.GetSawmill("Storage").Level = LogLevel.Info;
             _log.GetSawmill("db.ef").Level = LogLevel.Info;
+            _log.GetSawmill("system.joint").Level = LogLevel.Info; // 🌇Sunset🌇 - silence noisy pull-joint debug spam
 
             _adminLog.Initialize();
             _connection.Initialize();

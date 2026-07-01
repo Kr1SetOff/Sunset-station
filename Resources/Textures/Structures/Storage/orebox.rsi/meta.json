@@ -8,6 +8,15 @@
   },
   "states": [
     {
+      "name": "equipped-BACKPACK"
+    },
+    {
+      "name": "inhand-left"
+    },
+    {
+      "name": "inhand-right"
+    },
+    {
       "name": "orebox"
     },
     {
