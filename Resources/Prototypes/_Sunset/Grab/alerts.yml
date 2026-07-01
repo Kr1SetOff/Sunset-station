@@ -1,0 +1,14 @@
+# TODO: _Sunset placeholder icons - reusing vanilla Pull/Stunnable art until dedicated grab icons exist.
+- type: alert
+  id: GrabbedAggressive
+  icons: [ /Textures/Interface/Alerts/Pull/pulled.png ]
+  name: alert-grab-aggressive-name
+  description: alert-grab-aggressive-desc
+
+- type: alert
+  id: GrabbedChoke
+  icons:
+  - sprite: /Textures/Interface/Alerts/stunnable.rsi
+    state: knocked-down
+  name: alert-grab-choke-name
+  description: alert-grab-choke-desc

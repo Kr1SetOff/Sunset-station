@@ -1,0 +1,16 @@
+- type: entity
+  id: ActionGrabThrow
+  name: Бросить
+  description: Метнуть захваченную цель в выбранном направлении.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Action
+    # TODO: _Sunset placeholder icon - replace with dedicated grab-throw art.
+    icon: Interface/Actions/disarm.png
+    itemIconStyle: NoItem
+    useDelay: 1
+  - type: TargetAction
+    checkCanAccess: false
+    range: 6
+  - type: WorldTargetAction
+    event: !type:GrabThrowActionEvent

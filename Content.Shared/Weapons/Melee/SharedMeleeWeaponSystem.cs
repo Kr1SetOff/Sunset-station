@@ -437,6 +437,7 @@ public abstract partial class SharedMeleeWeaponSystem : EntitySystem
         {
             User = user,
             Weapon = weaponUid,
+            Target = target, // 🌇Sunset🌇 - lets _Sunset grab escalation see the click target
         };
         RaiseLocalEvent(weaponUid, ref ev);
 
