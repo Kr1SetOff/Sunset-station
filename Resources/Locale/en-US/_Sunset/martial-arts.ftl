@@ -7,6 +7,8 @@ martial-arts-style-cqc-cook = cook's CQC
 martial-arts-style-sleeping-carp = Sleeping Carp
 martial-arts-style-capoeira = capoeira
 martial-arts-style-kungfu-dragon = Kung Fu Dragon
+martial-arts-style-corporate-judo = corporate judo
+martial-arts-style-mime = mime martial arts
 
 martial-arts-cqc-snap-neck = You snap { $target }'s neck!
 martial-arts-cqc-blocked = Cook's CQC only works near a kitchen.
@@ -17,6 +19,7 @@ martial-arts-carp-mastered = You have fully mastered the Sleeping Carp technique
 martial-arts-carp-stage-advance = You have advanced to stage { $stage } of Sleeping Carp mastery.
 martial-arts-carp-still-training = You aren't ready for the next stage yet - keep meditating.
 martial-arts-fail-target-standing = This move only works against a downed target.
+martial-arts-judo-belt-weapon-blocked = The corporate judo belt only allows bare hands and a stun weapon.
 
 alert-ninjutsu-sneak-ready-name = Sneaking
 alert-ninjutsu-sneak-ready-desc = Your next attack will deal a huge bonus of damage while you remain unnoticed.
@@ -32,9 +35,14 @@ uplink-martial-arts-cqc-desc = Teaches Close Quarters Combat - grabs, throws, an
 uplink-martial-arts-sleeping-carp-name = Sleeping Carp scroll
 uplink-martial-arts-sleeping-carp-desc = Teaches the mystical Sleeping Carp style. Takes time to fully master, but at its peak lets you reflect attacks bare-handed.
 
+uplink-martial-arts-mime-name = Pantomime glossary
+uplink-martial-arts-mime-desc = Looks like an ordinary gesture reference for mimes. Actually a handbook of Goob Station's Advanced Mimery - invisible blockades, finger guns, and a couple of theatrical moves of its own.
+
 guide-entry-martial-arts = Martial Arts
 guide-entry-martial-arts-ninjutsu = Ninjutsu
 guide-entry-martial-arts-cqc = CQC
 guide-entry-martial-arts-sleeping-carp = Sleeping Carp
 guide-entry-martial-arts-capoeira = Capoeira
 guide-entry-martial-arts-kungfu-dragon = Kung Fu Dragon
+guide-entry-martial-arts-corporate-judo = Corporate Judo
+guide-entry-martial-arts-mime = Pantomime

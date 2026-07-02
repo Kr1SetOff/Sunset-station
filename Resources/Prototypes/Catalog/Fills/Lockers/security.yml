@@ -98,6 +98,8 @@
       prob: 0.6
     - id: BookSpaceLaw
       prob: 0.5
+    - id: ClothingBeltJudo # Sunset - corporate judo belt
+      prob: 0.3
 
 - type: entity
   id: LockerBrigmedicFilled

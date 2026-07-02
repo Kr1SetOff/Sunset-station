@@ -1,7 +1,7 @@
 - type: ghostTheme
   id: Narsie
-  name: Narsie
-  description: Cute man.
+  name: Нарси
+  description: Милый мужчина.
   spriteSpecifier:
     sprite:
       sprite: _Starlight/Mobs/Customization/GhostThemes/ghosts.rsi
@@ -13,8 +13,8 @@
 
 - type: ghostTheme
   id: Daemon
-  name: Daemon
-  description: a cute daemon.
+  name: Демон
+  description: милый демон.
   spriteSpecifier:
     sprite:
       sprite: _Starlight/Mobs/Customization/GhostThemes/ghosts.rsi

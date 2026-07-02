@@ -1,4 +1,5 @@
 using System.Linq;
+using Content.Shared.Actions;
 using Content.Shared.Alert;
 using Content.Shared.CombatMode;
 using Content.Shared.Damage;
@@ -7,16 +8,22 @@ using Content.Shared.Damage.Systems;
 using Content.Shared.Hands;
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Interaction.Events;
+using Content.Shared.Inventory;
+using Content.Shared.Maps;
 using Content.Shared.Movement.Pulling.Systems;
 using Content.Shared.Popups;
 using Content.Shared.Stunnable;
+using Content.Shared.Tag;
 using Content.Shared.Throwing;
 using Content.Shared.Weapons.Melee;
 using Content.Shared.Weapons.Melee.Events;
+using Content.Shared.Weapons.Ranged.Events;
 using Content.Shared._Sunset.Grab.Components;
 using Content.Shared._Sunset.Grab.Events;
 using Content.Shared._Sunset.MartialArts.Components;
 using Content.Shared._Sunset.MartialArts.Events;
+using Robust.Shared.Map;
+using Robust.Shared.Network;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
@@ -32,6 +39,7 @@ public sealed partial class SharedMartialArtsSystem : EntitySystem
 {
     [Dependency] private IGameTiming _timing = default!;
     [Dependency] private IRobustRandom _random = default!;
+    [Dependency] private SharedActionsSystem _actions = default!;
     [Dependency] private DamageableSystem _damageable = default!;
     [Dependency] private SharedStaminaSystem _stamina = default!;
     [Dependency] private SharedStunSystem _stun = default!;
@@ -42,6 +50,11 @@ public sealed partial class SharedMartialArtsSystem : EntitySystem
     [Dependency] private EntityLookupSystem _lookup = default!;
     [Dependency] private AlertsSystem _alerts = default!;
     [Dependency] private PullingSystem _pulling = default!;
+    [Dependency] private INetManager _net = default!;
+    [Dependency] private TagSystem _tag = default!;
+    [Dependency] private InventorySystem _inventory = default!;
+    [Dependency] private TurfSystem _turf = default!;
+    [Dependency] private SharedMapSystem _mapSystem = default!;
 
     private const float CqcUnblockRange = 8f;
 
@@ -87,6 +100,20 @@ public sealed partial class SharedMartialArtsSystem : EntitySystem
             ("DragonStrike", new[] { ComboAttackType.Disarm, ComboAttackType.Harm, ComboAttackType.Harm }, false),
             ("DragonClaw", new[] { ComboAttackType.Disarm, ComboAttackType.Disarm }, false),
         },
+        [MartialArtStyle.CorporateJudo] = new()
+        {
+            ("JudoArmbar", new[] { ComboAttackType.Disarm, ComboAttackType.Disarm, ComboAttackType.Grab }, false),
+            ("JudoWheelThrow", new[] { ComboAttackType.Grab, ComboAttackType.Disarm, ComboAttackType.Harm }, false),
+            ("JudoThrow", new[] { ComboAttackType.Grab, ComboAttackType.Disarm }, false),
+            ("JudoDiscombobulate", new[] { ComboAttackType.Disarm, ComboAttackType.Grab }, false),
+            ("JudoEyePoke", new[] { ComboAttackType.Disarm, ComboAttackType.Harm }, false),
+        },
+        [MartialArtStyle.Mime] = new()
+        {
+            ("MimeFingerGuns", new[] { ComboAttackType.Harm, ComboAttackType.Harm }, false),
+            ("MimeBoxTrap", new[] { ComboAttackType.Grab, ComboAttackType.Disarm }, false),
+            ("MimeExaggeratedSlap", new[] { ComboAttackType.Harm, ComboAttackType.Disarm }, false),
+        },
     };
 
     public override void Initialize()
@@ -101,10 +128,23 @@ public sealed partial class SharedMartialArtsSystem : EntitySystem
 
         SubscribeLocalEvent<MartialArtsKnowledgeComponent, ComponentShutdown>(OnKnowledgeShutdown);
 
+        // Single broadcast subscription for the whole system - Sleeping Carp's no-guns rule and the
+        // Corporate Judo belt's stunner-only rule both hook this event, and Robust doesn't allow the same
+        // system instance to subscribe to the same broadcast event type twice.
+        SubscribeLocalEvent<ShotAttemptedEvent>(OnShotAttempted);
+
         InitializeNinjutsu();
         InitializeSleepingCarp();
         InitializeCapoeira();
         InitializeKungFuDragon();
+        InitializeCorporateJudo();
+        InitializeMime();
+    }
+
+    private void OnShotAttempted(ref ShotAttemptedEvent args)
+    {
+        OnCarpShotAttempt(ref args);
+        OnJudoBeltShotAttempt(ref args);
     }
 
     #region Granting
@@ -178,6 +218,10 @@ public sealed partial class SharedMartialArtsSystem : EntitySystem
             case MartialArtStyle.KungFuDragon:
                 EnsureComp<DragonPowerComponent>(uid);
                 break;
+            case MartialArtStyle.Mime:
+                var mimery = EnsureComp<MimeAdvancedMimeryComponent>(uid);
+                _actions.AddAction(uid, ref mimery.BlockadeAction, "ActionMartialArtsMimeInvisibleBlockade");
+                break;
         }
     }
 
@@ -200,6 +244,13 @@ public sealed partial class SharedMartialArtsSystem : EntitySystem
             case MartialArtStyle.KungFuDragon:
                 if (HasComp<DragonPowerComponent>(uid))
                     RemComp<DragonPowerComponent>(uid);
+                break;
+            case MartialArtStyle.Mime:
+                if (TryComp<MimeAdvancedMimeryComponent>(uid, out var mimery))
+                {
+                    _actions.RemoveAction(mimery.BlockadeAction);
+                    RemComp<MimeAdvancedMimeryComponent>(uid);
+                }
                 break;
         }
     }
@@ -235,6 +286,8 @@ public sealed partial class SharedMartialArtsSystem : EntitySystem
         MartialArtStyle.SleepingCarp => Loc.GetString("martial-arts-style-sleeping-carp"),
         MartialArtStyle.Capoeira => Loc.GetString("martial-arts-style-capoeira"),
         MartialArtStyle.KungFuDragon => Loc.GetString("martial-arts-style-kungfu-dragon"),
+        MartialArtStyle.CorporateJudo => Loc.GetString("martial-arts-style-corporate-judo"),
+        MartialArtStyle.Mime => Loc.GetString("martial-arts-style-mime"),
         _ => string.Empty,
     };
 
@@ -364,6 +417,14 @@ public sealed partial class SharedMartialArtsSystem : EntitySystem
             case "DragonClaw": DragonClaw(user, target); break;
             case "DragonTail": DragonTail(user, target); break;
             case "DragonStrike": DragonStrike(user, target); break;
+            case "JudoDiscombobulate": JudoDiscombobulate(user, target); break;
+            case "JudoEyePoke": JudoEyePoke(user, target); break;
+            case "JudoThrow": JudoThrow(user, target); break;
+            case "JudoArmbar": JudoArmbar(user, target); break;
+            case "JudoWheelThrow": JudoWheelThrow(user, target); break;
+            case "MimeFingerGuns": MimeFingerGuns(user, target); break;
+            case "MimeBoxTrap": MimeBoxTrap(user, target); break;
+            case "MimeExaggeratedSlap": MimeExaggeratedSlap(user, target); break;
         }
     }
 

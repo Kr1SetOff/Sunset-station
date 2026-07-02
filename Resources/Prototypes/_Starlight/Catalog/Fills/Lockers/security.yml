@@ -51,6 +51,8 @@
           amount: 2
         - id: BookSpaceLaw
           amount: 2
+        - id: ClothingBeltJudo # Sunset - corporate judo belt
+          amount: 2
 
 - type: entity
   id: LockerBrigmedicLargeFilled

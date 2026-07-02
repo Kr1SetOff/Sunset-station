@@ -33,7 +33,9 @@ using Content.Shared.Starlight;
 using Content.Client._NullLink;
 using Content.Client._Starlight.Achievement;
 using Content.Client._Starlight.Shaders;
+using Content.Client._Sunset.SponsorTier;
 using Content.Shared._Starlight.DocumentManager;
+using Content.Shared._Sunset.SponsorTier;
 
 namespace Content.Client.IoC
 {
@@ -85,6 +87,8 @@ namespace Content.Client.IoC
             collection.Register<IAchievementRewardManager, ClientAchievementManager>(); // Starlight
             collection.Register<PreWrittenDocumentManager>(); // Starlight
             collection.Register<IStarlightShaderManager, StarlightShaderManager>(); // Starlight
+
+            collection.Register<ISunsetSponsorTierReader, ClientSunsetSponsorTierReader>(); // Sunset
         }
     }
 }

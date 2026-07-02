@@ -1,7 +1,7 @@
 - type: ghostTheme
   id: King
-  name: King
-  description: The Majestic King.
+  name: Король
+  description: Величественный король.
   spriteSpecifier:
     sprite:
       sprite: _Starlight/Mobs/Customization/GhostThemes/ghosts.rsi
@@ -13,8 +13,8 @@
 
 - type: ghostTheme
   id: CarpGames
-  name: The Carpman
-  description: The Carpman, master of all carp games.
+  name: Карпмен
+  description: Карпмен, мастер всех карповых игр.
   spriteSpecifier:
     sprite:
       sprite: _Starlight/Mobs/Customization/GhostThemes/ghosts.rsi
@@ -26,8 +26,8 @@
 
 - type: ghostTheme
   id: FirstWritingContest
-  name: Skeleton Mage
-  description: Do not cite the deep magics to me, witch. I was there when it was written.
+  name: Скелет-маг
+  description: Не цитируй мне глубинную магию, ведьма. Я был там, когда её писали.
   spriteSpecifier:
     sprite:
       sprite: _Starlight/Mobs/Customization/GhostThemes/ghosts.rsi

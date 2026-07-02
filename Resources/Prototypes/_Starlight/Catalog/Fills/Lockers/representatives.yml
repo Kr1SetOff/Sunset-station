@@ -148,6 +148,7 @@
         - id: ClothingOuterArmorBlueShield
         - id: ClothingNeckCloakBsoCape
         - id: RubberStampBSO
+        - id: MartialArtsManualKungFuDragon # Sunset - kung fu dragon manual
 
 - type: entity
   id: LockerBlueshieldFilledBluespaced

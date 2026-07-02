@@ -27,3 +27,13 @@
     Telecrystal: 16
   categories:
   - UplinkWeaponry
+
+- type: listing
+  id: UplinkMartialArtsMime
+  name: uplink-martial-arts-mime-name
+  description: uplink-martial-arts-mime-desc
+  productEntity: MartialArtsManualMime
+  cost:
+    Telecrystal: 10
+  categories:
+  - UplinkWeaponry

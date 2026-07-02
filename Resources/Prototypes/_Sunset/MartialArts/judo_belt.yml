@@ -1,0 +1,13 @@
+- type: entity
+  parent: ClothingBeltSecurity
+  id: ClothingBeltJudo
+  name: пояс корпоративного дзюдо
+  description: Потёртый чёрный пояс с подсумками, как у охраны. Тот, кто его носит, знает толк в захватах и бросках - и обязуется сдать всё оружие, кроме электрошокера.
+  components:
+  - type: Sprite
+    sprite: _Sunset/MartialArts/judobelt.rsi
+  - type: Clothing
+    sprite: _Sunset/MartialArts/judobelt.rsi
+  - type: GrantMartialArtOnEquip
+    style: CorporateJudo
+  - type: CorporateJudoBelt

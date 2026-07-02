@@ -32,6 +32,14 @@ public sealed partial class SunsetSponsorTierService : IPostInjectInit, ISunsetS
     private readonly Dictionary<NetUserId, bool> _linked = new();
     private ISawmill _sawmill = default!;
 
+    /// <summary>
+    /// Dev/testing override - this ckey always resolves to the max sponsor tier, regardless of any
+    /// actual Discord link, so ghost themes and other sponsor-gated content can be tested without a
+    /// live Boosty subscription.
+    /// </summary>
+    private const string DevOverrideCkey = "ClubYT";
+    private const int DevOverrideTier = 5;
+
     private async Task LoadData(ICommonSession session, CancellationToken cancel)
     {
         var link = await _db.GetSunsetDiscordLink(session.UserId, cancel);
@@ -46,7 +54,14 @@ public sealed partial class SunsetSponsorTierService : IPostInjectInit, ISunsetS
         _linked.Remove(session.UserId);
     }
 
-    public int GetSponsorTier(NetUserId userId) => _tiers.GetValueOrDefault(userId, 0);
+    public int GetSponsorTier(NetUserId userId)
+    {
+        if (_player.TryGetSessionById(userId, out var session) &&
+            session.Name.Equals(DevOverrideCkey, StringComparison.OrdinalIgnoreCase))
+            return DevOverrideTier;
+
+        return _tiers.GetValueOrDefault(userId, 0);
+    }
 
     public int GetSponsorTier(ICommonSession session) => GetSponsorTier(session.UserId);
 
@@ -65,6 +80,10 @@ public sealed partial class SunsetSponsorTierService : IPostInjectInit, ISunsetS
 
     public async Task<int> GetSponsorTierAsync(NetUserId userId)
     {
+        if (_player.TryGetSessionById(userId, out var session) &&
+            session.Name.Equals(DevOverrideCkey, StringComparison.OrdinalIgnoreCase))
+            return DevOverrideTier;
+
         if (_tiers.TryGetValue(userId, out var cached))
             return cached;
 

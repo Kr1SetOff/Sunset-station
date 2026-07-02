@@ -13,7 +13,6 @@ public sealed partial class SharedMartialArtsSystem
 {
     private void InitializeSleepingCarp()
     {
-        SubscribeLocalEvent<ShotAttemptedEvent>(OnCarpShotAttempt);
     }
 
     private void OnCarpShotAttempt(ref ShotAttemptedEvent args)

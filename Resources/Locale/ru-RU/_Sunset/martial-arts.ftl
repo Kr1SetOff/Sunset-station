@@ -7,6 +7,8 @@ martial-arts-style-cqc-cook = поварской CQC
 martial-arts-style-sleeping-carp = Спящий Карп
 martial-arts-style-capoeira = капоэйру
 martial-arts-style-kungfu-dragon = кунг-фу дракона
+martial-arts-style-corporate-judo = корпоративное дзюдо
+martial-arts-style-mime = пантомиму
 
 martial-arts-cqc-snap-neck = Вы ломаете шею { $target }!
 martial-arts-cqc-blocked = Поварской CQC работает только рядом с кухней.
@@ -17,6 +19,7 @@ martial-arts-carp-mastered = Вы полностью освоили техник
 martial-arts-carp-stage-advance = Вы продвинулись на { $stage } ступень мастерства Спящего Карпа.
 martial-arts-carp-still-training = Вы ещё не готовы к следующей ступени — продолжайте медитировать.
 martial-arts-fail-target-standing = Этот приём работает только против сбитой с ног цели.
+martial-arts-judo-belt-weapon-blocked = Пояс корпоративного дзюдо позволяет использовать только голые руки и электрошокер.
 
 alert-ninjutsu-sneak-ready-name = Скрытность
 alert-ninjutsu-sneak-ready-desc = Ваша следующая атака нанесёт огромный бонусный урон, пока вас не заметили.
@@ -32,9 +35,14 @@ uplink-martial-arts-cqc-desc = Обучает технике ближнего б
 uplink-martial-arts-sleeping-carp-name = Свиток Спящего Карпа
 uplink-martial-arts-sleeping-carp-desc = Обучает мистическому стилю "Спящий Карп". Требует времени для полного освоения, но на пике мастерства позволяет отражать атаки голыми руками.
 
+uplink-martial-arts-mime-name = Глоссарий пантомимы
+uplink-martial-arts-mime-desc = С виду обычный справочник жестов для мимов. На деле — учебник по продвинутой мимерии Goob Station: невидимые баррикады, пальцы-пистолеты и пара театральных приёмов от себя.
+
 guide-entry-martial-arts = Боевые искусства
 guide-entry-martial-arts-ninjutsu = Ниндзюцу
 guide-entry-martial-arts-cqc = CQC
 guide-entry-martial-arts-sleeping-carp = Спящий Карп
 guide-entry-martial-arts-capoeira = Капоэйра
 guide-entry-martial-arts-kungfu-dragon = Кунг-фу Дракона
+guide-entry-martial-arts-corporate-judo = Корпоративное дзюдо
+guide-entry-martial-arts-mime = Пантомима

@@ -1,5 +1,5 @@
-roles-req-any-role-required-pass = Вам требуется любая из следующих ролей в { $discord }: [color=limegreen]{ $roles }[/color].
-roles-req-any-role-required-fail = Вам требуется любая из следующих ролей в { $discord }: [color=yellow]{ $roles }[/color].
+roles-req-any-role-required-pass = Доступно спонсорам и участникам с ролью [color=limegreen]{ $roles }[/color] на { $discord }.
+roles-req-any-role-required-fail = Доступно спонсорам и участникам с ролью [color=yellow]{ $roles }[/color] на { $discord }.
 
 requirements-playtime =
     { $tracker ->

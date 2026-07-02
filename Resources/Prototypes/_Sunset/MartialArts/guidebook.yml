@@ -8,6 +8,8 @@
   - MartialArtsSleepingCarp
   - MartialArtsCapoeira
   - MartialArtsKungFuDragon
+  - MartialArtsCorporateJudo
+  - MartialArtsMime
 
 - type: guideEntry
   id: MartialArtsNinjutsu
@@ -33,3 +35,13 @@
   id: MartialArtsKungFuDragon
   name: guide-entry-martial-arts-kungfu-dragon
   text: "/ServerInfo/_Sunset/Guidebook/MartialArts/KungFuDragon.xml"
+
+- type: guideEntry
+  id: MartialArtsCorporateJudo
+  name: guide-entry-martial-arts-corporate-judo
+  text: "/ServerInfo/_Sunset/Guidebook/MartialArts/CorporateJudo.xml"
+
+- type: guideEntry
+  id: MartialArtsMime
+  name: guide-entry-martial-arts-mime
+  text: "/ServerInfo/_Sunset/Guidebook/MartialArts/Mime.xml"
