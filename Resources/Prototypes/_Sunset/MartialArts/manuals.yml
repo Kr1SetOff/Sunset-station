@@ -81,3 +81,17 @@
     size: Small
   - type: MartialArtManual
     style: KungFuDragon
+
+- type: entity
+  parent: BaseItem
+  id: MartialArtsManualMime
+  name: глоссарий пантомимы
+  description: Потрёпанный глоссарий жестов и приёмов немого театра — с картинками, куда бить.
+  components:
+  - type: Sprite
+    sprite: _Sunset/MartialArts/pantomime_glossary.rsi
+    state: icon
+  - type: Item
+    size: Small
+  - type: MartialArtManual
+    style: Mime

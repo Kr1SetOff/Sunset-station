@@ -87,6 +87,21 @@ public sealed partial class SharedMartialArtsSystem : EntitySystem
             ("DragonStrike", new[] { ComboAttackType.Disarm, ComboAttackType.Harm, ComboAttackType.Harm }, false),
             ("DragonClaw", new[] { ComboAttackType.Disarm, ComboAttackType.Disarm }, false),
         },
+        [MartialArtStyle.CorporateJudo] = new()
+        {
+            ("JudoArmbar", new[] { ComboAttackType.Disarm, ComboAttackType.Disarm, ComboAttackType.Grab }, false),
+            ("JudoWheelThrow", new[] { ComboAttackType.Grab, ComboAttackType.Disarm, ComboAttackType.Harm }, false),
+            ("JudoThrow", new[] { ComboAttackType.Grab, ComboAttackType.Disarm }, false),
+            ("JudoDiscombobulate", new[] { ComboAttackType.Disarm, ComboAttackType.Grab }, false),
+            ("JudoEyePoke", new[] { ComboAttackType.Disarm, ComboAttackType.Harm }, false),
+        },
+        [MartialArtStyle.Mime] = new()
+        {
+            ("MimeInvisibleWall", new[] { ComboAttackType.Disarm, ComboAttackType.Disarm }, false),
+            ("MimeSilentScream", new[] { ComboAttackType.Harm, ComboAttackType.Harm }, false),
+            ("MimeBoxTrap", new[] { ComboAttackType.Grab, ComboAttackType.Disarm }, false),
+            ("MimeExaggeratedSlap", new[] { ComboAttackType.Harm, ComboAttackType.Disarm }, false),
+        },
     };
 
     public override void Initialize()
@@ -105,6 +120,8 @@ public sealed partial class SharedMartialArtsSystem : EntitySystem
         InitializeSleepingCarp();
         InitializeCapoeira();
         InitializeKungFuDragon();
+        InitializeCorporateJudo();
+        InitializeMime();
     }
 
     #region Granting
@@ -235,6 +252,8 @@ public sealed partial class SharedMartialArtsSystem : EntitySystem
         MartialArtStyle.SleepingCarp => Loc.GetString("martial-arts-style-sleeping-carp"),
         MartialArtStyle.Capoeira => Loc.GetString("martial-arts-style-capoeira"),
         MartialArtStyle.KungFuDragon => Loc.GetString("martial-arts-style-kungfu-dragon"),
+        MartialArtStyle.CorporateJudo => Loc.GetString("martial-arts-style-corporate-judo"),
+        MartialArtStyle.Mime => Loc.GetString("martial-arts-style-mime"),
         _ => string.Empty,
     };
 
@@ -364,6 +383,15 @@ public sealed partial class SharedMartialArtsSystem : EntitySystem
             case "DragonClaw": DragonClaw(user, target); break;
             case "DragonTail": DragonTail(user, target); break;
             case "DragonStrike": DragonStrike(user, target); break;
+            case "JudoDiscombobulate": JudoDiscombobulate(user, target); break;
+            case "JudoEyePoke": JudoEyePoke(user, target); break;
+            case "JudoThrow": JudoThrow(user, target); break;
+            case "JudoArmbar": JudoArmbar(user, target); break;
+            case "JudoWheelThrow": JudoWheelThrow(user, target); break;
+            case "MimeInvisibleWall": MimeInvisibleWall(user, target); break;
+            case "MimeSilentScream": MimeSilentScream(user, target); break;
+            case "MimeBoxTrap": MimeBoxTrap(user, target); break;
+            case "MimeExaggeratedSlap": MimeExaggeratedSlap(user, target); break;
         }
     }
 
