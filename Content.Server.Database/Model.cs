@@ -46,6 +46,8 @@ namespace Content.Server.Database
         public DbSet<RoleWhitelist> RoleWhitelists { get; set; } = null!;
         public DbSet<BanTemplate> BanTemplate { get; set; } = null!;
         public DbSet<IPIntelCache> IPIntelCache { get; set; } = null!;
+        // 🌇Sunset🌇
+        public DbSet<SunsetDiscordLink> SunsetDiscordLinks { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -370,6 +372,11 @@ namespace Content.Server.Database
                 .HasForeignKey(w => w.PlayerUserId)
                 .HasPrincipalKey(p => p.UserId)
                 .OnDelete(DeleteBehavior.Cascade);
+
+            // 🌇Sunset🌇 - one discord account should not grant sponsor perks to multiple game accounts
+            modelBuilder.Entity<SunsetDiscordLink>()
+                .HasIndex(l => l.DiscordUserId)
+                .IsUnique();
 
             // Changes for modern HWID integration
             modelBuilder.Entity<Player>()
@@ -1258,6 +1265,29 @@ namespace Content.Server.Database
 
         [Required]
         public string RoleId { get; set; } = default!;
+    }
+
+    // 🌇Sunset🌇 - links a local player account to a Discord user id and caches their resolved Boosty sponsor tier.
+    [Table("sunset_discord_link")]
+    public class SunsetDiscordLink
+    {
+        [Key]
+        public Guid PlayerUserId { get; set; }
+
+        /// <summary>
+        /// The linked Discord account's snowflake id, stored as a string (ulong doesn't fit every provider's numeric range cleanly).
+        /// </summary>
+        [Required]
+        public string DiscordUserId { get; set; } = default!;
+
+        public DateTime LinkedAt { get; set; }
+
+        /// <summary>
+        /// Cached resolved sponsor tier: 0 = none, 1-5 = tier. Refreshed on link and periodically re-checked.
+        /// </summary>
+        public int SponsorTier { get; set; }
+
+        public DateTime TierCheckedAt { get; set; }
     }
 
     /// <summary>

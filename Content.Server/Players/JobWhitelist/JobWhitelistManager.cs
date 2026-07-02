@@ -2,6 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 using Content.Server.Database;
+using Content.Shared._Sunset.SponsorTier;
 using Content.Shared.CCVar;
 using Content.Shared.Players.JobWhitelist;
 using Content.Shared.Roles;
@@ -22,6 +23,7 @@ public sealed partial class JobWhitelistManager : IPostInjectInit
     [Dependency] private IPrototypeManager _prototypes = default!;
     [Dependency] private UserDbDataManager _userDb = default!;
     [Dependency] private ILogManager _logManager = default!;
+    [Dependency] private ISunsetSponsorTierReader _sunsetSponsorTiers = default!; // 🌇Sunset🌇
 
     private readonly Dictionary<NetUserId, HashSet<string>> _whitelists = new();
     private ISawmill _sawmill = default!;
@@ -64,6 +66,10 @@ public sealed partial class JobWhitelistManager : IPostInjectInit
     /// </summary>
     public bool IsAllowed(ICommonSession session, ProtoId<JobPrototype> job)
     {
+        // 🌇Sunset🌇 - tier 5 (Ghost) sponsors get every "closed"/whitelisted job unlocked.
+        if (_sunsetSponsorTiers.GetSponsorTier(session) >= 5)
+            return true;
+
         if (!_config.GetCVar(CCVars.GameRoleWhitelist))
             return true;
 

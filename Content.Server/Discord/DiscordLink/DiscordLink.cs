@@ -249,5 +249,27 @@ public sealed partial class DiscordLink : IPostInjectInit
         });
     }
 
+    // 🌇Sunset🌇
+    /// <summary>
+    /// Fetches the role ids of a guild member, used to resolve Boosty sponsor tiers from Discord roles.
+    /// Returns null if the bot isn't connected or the user isn't a member of the guild.
+    /// </summary>
+    public async Task<IReadOnlyList<ulong>?> GetGuildMemberRoleIdsAsync(ulong guildId, ulong userId)
+    {
+        if (_client == null)
+            return null;
+
+        try
+        {
+            var member = await _client.Rest.GetGuildUserAsync(guildId, userId);
+            return member.RoleIds;
+        }
+        catch (Exception e)
+        {
+            _sawmill.Error($"Failed to fetch guild member {userId} in guild {guildId}: {e}");
+            return null;
+        }
+    }
+
     #endregion
 }

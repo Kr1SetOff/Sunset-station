@@ -5,6 +5,7 @@ using Content.Client.Changelog;
 using Content.Client.UserInterface.Systems.EscapeMenu;
 using Content.Client.UserInterface.Systems.Guidebook;
 using Content.Shared.CCVar;
+using Robust.Client.Console;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controls;
 using Robust.Shared.Collections;
@@ -16,7 +17,6 @@ namespace Content.Client.Info
     public sealed class LinkBanner : BoxContainer
     {
         private readonly IConfigurationManager _cfg;
-        private readonly INullLinkPlayerRolesManager _playerRoles;// NullLink
 
         private ValueList<(CVarDef<string> cVar, Button button)> _infoLinks;
 
@@ -30,7 +30,7 @@ namespace Content.Client.Info
 
             var uriOpener = IoCManager.Resolve<IUriOpener>();
             _cfg = IoCManager.Resolve<IConfigurationManager>();
-            _playerRoles = IoCManager.Resolve<INullLinkPlayerRolesManager>(); // NullLink
+            var consoleHost = IoCManager.Resolve<IClientConsoleHost>();
             var rulesButton = new Button() {Text = Loc.GetString("server-info-rules-button")};
             rulesButton.OnPressed += args => new RulesAndInfoWindow().Open();
             buttons.AddChild(rulesButton);
@@ -41,26 +41,11 @@ namespace Content.Client.Info
             AddInfoButton("server-info-forum-button", CCVars.InfoLinksForum);
             AddInfoButton("server-info-telegram-button", CCVars.InfoLinksTelegram);
 
-            // NullLink start
+            // 🌇Sunset🌇 - was NullLink's _playerRoles.GetDiscordLink() (broken unless the external NullLink
+            // cluster is configured); now opens our own self-contained Discord link window/OAuth flow instead.
             var button = new Button { Text = Loc.GetString("server-info-connect-discord-button") };
-            button.OnPressed += _ => {
-                var link = _playerRoles.GetDiscordLink();
-                // 🌇Sunset🌇 - the server-provided link can be an empty string (not null) when
-                // unset, which OpenUri throws on. System.Uri isn't in the content sandbox
-                // whitelist, so catch the exception instead of pre-validating with it.
-                if (link == null)
-                    return;
-
-                try
-                {
-                    uriOpener.OpenUri(link);
-                }
-                catch (ArgumentException)
-                {
-                }
-            };
+            button.OnPressed += _ => consoleHost.RemoteExecuteCommand(null, "linkdiscord");
             buttons.AddChild(button);
-            // NullLink end
 
             var guidebookController = UserInterfaceManager.GetUIController<GuidebookUIController>();
             var guidebookButton = new Button() { Text = Loc.GetString("server-info-guidebook-button") };

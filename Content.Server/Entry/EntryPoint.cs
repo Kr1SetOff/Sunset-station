@@ -2,6 +2,7 @@ using Content.Server._NullLink;
 using Content.Server._NullLink.Core;
 using Content.Server._NullLink.EventBus;
 using Content.Server._NullLink.PlayerData;
+using Content.Server._Sunset.Discord;
 using Content.Server._Starlight.BugReports; // Staright
 using Content.Server._Starlight.TextToSpeech;
 using Content.Server.Acz;
@@ -100,6 +101,12 @@ namespace Content.Server.Entry
         [Dependency] private INullLinkEventBusManager _nullLinkEventBus = default!;
         [Dependency] private INullLinkPlayerManager _nullLinkPlayerManager = default!;
 #endregion Nulllink
+
+#region Sunset
+        // Forces eager construction of the Discord-link callback handler (and transitively, the sponsor
+        // tier service + OAuth/role-lookup helpers it depends on) so their PostInject() hooks run at startup.
+        [Dependency] private SunsetDiscordCallbackHandler _sunsetDiscordCallback = default!;
+#endregion Sunset
 
         public override void PreInit()
         {

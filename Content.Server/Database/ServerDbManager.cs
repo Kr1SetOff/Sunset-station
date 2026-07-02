@@ -340,6 +340,17 @@ namespace Content.Server.Database
 
         #endregion
 
+        // 🌇Sunset🌇
+        #region Sunset Discord Link
+
+        Task<SunsetDiscordLink?> GetSunsetDiscordLink(Guid player, CancellationToken cancel = default);
+        Task<SunsetDiscordLink?> GetSunsetDiscordLinkByDiscordId(string discordUserId, CancellationToken cancel = default);
+        Task SetSunsetDiscordLink(Guid player, string discordUserId, int tier);
+        Task<bool> UpdateSunsetSponsorTier(Guid player, int tier);
+        Task<bool> RemoveSunsetDiscordLink(Guid player);
+
+        #endregion
+
         #region IPintel
 
         Task<bool> UpsertIPIntelCache(DateTime time, IPAddress ip, float score);
@@ -1046,6 +1057,37 @@ namespace Content.Server.Database
         {
             DbWriteOpsMetric.Inc();
             return RunDbCommand(() => _db.RemoveJobWhitelist(player, job));
+        }
+
+        // 🌇Sunset🌇
+        public Task<SunsetDiscordLink?> GetSunsetDiscordLink(Guid player, CancellationToken cancel = default)
+        {
+            DbReadOpsMetric.Inc();
+            return RunDbCommand(() => _db.GetSunsetDiscordLink(player, cancel));
+        }
+
+        public Task<SunsetDiscordLink?> GetSunsetDiscordLinkByDiscordId(string discordUserId, CancellationToken cancel = default)
+        {
+            DbReadOpsMetric.Inc();
+            return RunDbCommand(() => _db.GetSunsetDiscordLinkByDiscordId(discordUserId, cancel));
+        }
+
+        public Task SetSunsetDiscordLink(Guid player, string discordUserId, int tier)
+        {
+            DbWriteOpsMetric.Inc();
+            return RunDbCommand(() => _db.SetSunsetDiscordLink(player, discordUserId, tier));
+        }
+
+        public Task<bool> UpdateSunsetSponsorTier(Guid player, int tier)
+        {
+            DbWriteOpsMetric.Inc();
+            return RunDbCommand(() => _db.UpdateSunsetSponsorTier(player, tier));
+        }
+
+        public Task<bool> RemoveSunsetDiscordLink(Guid player)
+        {
+            DbWriteOpsMetric.Inc();
+            return RunDbCommand(() => _db.RemoveSunsetDiscordLink(player));
         }
 
         public Task<bool> UpsertIPIntelCache(DateTime time, IPAddress ip, float score)

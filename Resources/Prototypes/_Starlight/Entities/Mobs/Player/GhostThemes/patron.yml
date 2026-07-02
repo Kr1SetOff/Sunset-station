@@ -16,8 +16,9 @@
     decayInterval: 0.15
     shader: HolyStarsTrail
   requirements:
-  - !type:DiscordRolesRequirement
-    requirement: PatronReq
+  # 🌇Sunset🌇 - was DiscordRolesRequirement:PatronReq (NullLink); now gated by our own sponsor tier (3+)
+  - !type:SponsorTierRequirement
+    minTier: 3
 
 - type: ghostTheme
   id: ClownTheme
@@ -29,8 +30,9 @@
       state: clown
     color: "#ffffff"
   requirements:
-  - !type:DiscordRolesRequirement
-    requirement: PatronReq
+  # 🌇Sunset🌇 - was DiscordRolesRequirement:PatronReq (NullLink); now gated by our own sponsor tier (1+)
+  - !type:SponsorTierRequirement
+    minTier: 1
 
 - type: ghostTheme
   id: FaithlessTheme
@@ -42,8 +44,9 @@
       state: faithless
     color: "#ffffff"
   requirements:
-  - !type:DiscordRolesRequirement
-    requirement: PatronReq
+  # 🌇Sunset🌇 - was DiscordRolesRequirement:PatronReq (NullLink); now gated by our own sponsor tier (2+)
+  - !type:SponsorTierRequirement
+    minTier: 2
 
 - type: ghostTheme
   id: MushroomTheme
@@ -55,8 +58,9 @@
       state: mushroom
     color: "#ffffff"
   requirements:
-  - !type:DiscordRolesRequirement
-    requirement: PatronReq
+  # 🌇Sunset🌇 - was DiscordRolesRequirement:PatronReq (NullLink); now gated by our own sponsor tier (3+)
+  - !type:SponsorTierRequirement
+    minTier: 3
 
 - type: ghostTheme
   id: WalkerTheme
@@ -68,8 +72,9 @@
       state: walker
     color: "#ffffff"
   requirements:
-  - !type:DiscordRolesRequirement
-    requirement: PatronReq
+  # 🌇Sunset🌇 - was DiscordRolesRequirement:PatronReq (NullLink); now gated by our own sponsor tier (1+)
+  - !type:SponsorTierRequirement
+    minTier: 1
 
 - type: ghostTheme
   id: ShadowDemon
@@ -87,8 +92,9 @@
     minDistance: 0.10
     shader: NightSkyTrail
   requirements:
-  - !type:DiscordRolesRequirement
-    requirement: PatronReq
+  # 🌇Sunset🌇 - was DiscordRolesRequirement:PatronReq (NullLink); now gated by our own sponsor tier (2+)
+  - !type:SponsorTierRequirement
+    minTier: 2
 
 - type: ghostTheme
   id: WizdenCarp

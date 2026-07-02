@@ -29,14 +29,6 @@ namespace Content.Server.Chat.Managers;
 /// </summary>
 internal sealed partial class ChatManager : IChatManager
 {
-    private static readonly Dictionary<string, string> PatronOocColors = new()
-    {
-        // I had plans for multiple colors and those went nowhere so...
-        { "nuclear_operative", "#aa00ff" },
-        { "syndicate_agent", "#aa00ff" },
-        { "revolutionary", "#aa00ff" }
-    };
-
     [Dependency] private IReplayRecordingManager _replay = default!;
     [Dependency] private IServerNetManager _netManager = default!;
     [Dependency] private IAdminManager _adminManager = default!;
@@ -316,10 +308,13 @@ internal sealed partial class ChatManager : IChatManager
 
         var wrappedMessage = Loc.GetString("chat-manager-send-ooc-wrap-message", ("playerTitle", playerTitle), ("nameColor", nameColor), ("messageColor", messageColor), ("playerName", playerName), ("message", FormattedMessage.EscapeText(message)));
 
-        if (_netConfigManager.GetClientCVar(player.Channel, CCVars.ShowOocPatronColor) && player.Channel.UserData.PatronTier is { } patron && PatronOocColors.TryGetValue(patron, out var patronColor))
-        {
-            wrappedMessage = Loc.GetString("chat-manager-send-ooc-patron-wrap-message", ("patronColor", patronColor), ("playerName", player.Name), ("message", FormattedMessage.EscapeText(message)));
-        }
+        // 🌇Sunset🌇 - replaces the old vestigial PatronOocColors/ShowOocPatronColor (hub-sourced NullLink
+        // PatronTier that "went nowhere") with our own Boosty sponsor-tier bracket + name coloring, and an
+        // equivalent admin-rank bracket built from fully local admin data (not NullLink's playerTitle above).
+        if (TryBuildSunsetAdminWrap(player, message, nameColor, messageColor, out var adminWrapped))
+            wrappedMessage = adminWrapped;
+        else if (TryBuildSunsetSponsorWrap(player, message, out var sponsorWrapped))
+            wrappedMessage = sponsorWrapped;
 
         //TODO: player.Name color, this will need to change the structure of the MsgChatMessage
         ChatMessageToAll(ChatChannel.OOC, message, wrappedMessage, EntityUid.Invalid, hideChat: false, recordReplay: true, colorOverride: colorOverride, author: player.UserId);

@@ -1503,6 +1503,39 @@ namespace Content.Server.Database.Migrations.Sqlite
                     b.ToTable("star_light_profile", (string)null);
                 });
 
+            modelBuilder.Entity("Content.Server.Database.SunsetDiscordLink", b =>
+                {
+                    b.Property<Guid>("PlayerUserId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("player_user_id");
+
+                    b.Property<string>("DiscordUserId")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("discord_user_id");
+
+                    b.Property<DateTime>("LinkedAt")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("linked_at");
+
+                    b.Property<int>("SponsorTier")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("sponsor_tier");
+
+                    b.Property<DateTime>("TierCheckedAt")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("tier_checked_at");
+
+                    b.HasKey("PlayerUserId")
+                        .HasName("PK_sunset_discord_link");
+
+                    b.HasIndex("DiscordUserId")
+                        .IsUnique();
+
+                    b.ToTable("sunset_discord_link", (string)null);
+                });
+
             modelBuilder.Entity("Content.Server.Database.Trait", b =>
                 {
                     b.Property<int>("Id")
