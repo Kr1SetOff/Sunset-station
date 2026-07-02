@@ -1,7 +1,7 @@
 - type: ghostTheme
   id: Bowmon
-  name: Bowmon
-  description: a cute bowmon.
+  name: Боумон
+  description: милый боумон.
   spriteSpecifier:
     sprite:
       sprite: _Starlight/Mobs/Customization/GhostThemes/ghosts.rsi
@@ -14,8 +14,8 @@
 
 - type: ghostTheme
   id: Metroid
-  name: Metroid
-  description: a cute metroid.
+  name: Метроид
+  description: милый метроид.
   spriteSpecifier:
     sprite:
       sprite: _Starlight/Mobs/Customization/GhostThemes/ghosts.rsi
@@ -27,8 +27,8 @@
 
 - type: ghostTheme
   id: Imp
-  name: Imp
-  description: a cute imp.
+  name: Бесёнок
+  description: милый бесёнок.
   spriteSpecifier:
     sprite:
       sprite: _Starlight/Mobs/Customization/GhostThemes/ghosts.rsi
@@ -40,8 +40,8 @@
 
 - type: ghostTheme
   id: Revenant
-  name: Revenant
-  description: a cute revenant.
+  name: Ревенант
+  description: милый ревенант.
   spriteSpecifier:
     sprite:
       sprite: _Starlight/Mobs/Customization/GhostThemes/ghosts.rsi
@@ -53,8 +53,8 @@
 
 - type: ghostTheme
   id: Ian
-  name: Ian
-  description: A pure dog.
+  name: Иэн
+  description: Чистокровный пёс.
   colorizeable: true
   spriteSpecifier:
     sprite:
@@ -67,8 +67,8 @@
 
 - type: ghostTheme
   id: IanCute
-  name: IanCute
-  description: A pure dog.
+  name: Милый Иэн
+  description: Чистокровный пёс.
   colorizeable: true
   spriteSpecifier:
     sprite:
@@ -81,8 +81,8 @@
 
 - type: ghostTheme
   id: Skeleton
-  name: Skeleton
-  description: skeleton.
+  name: Скелет
+  description: скелет.
   colorizeable: true
   spriteSpecifier:
     sprite:
@@ -95,8 +95,8 @@
 
 - type: ghostTheme
   id: Sheet
-  name: Sheet
-  description: Cute sheet.
+  name: Простыня
+  description: Милая простыня.
   colorizeable: true
   spriteSpecifier:
     sprite:
@@ -109,8 +109,8 @@
 
 - type: ghostTheme
   id: Cat
-  name: Cat
-  description: A cute little cat.
+  name: Кот
+  description: Милый маленький кот.
   colorizeable: true
   spriteSpecifier:
     sprite:

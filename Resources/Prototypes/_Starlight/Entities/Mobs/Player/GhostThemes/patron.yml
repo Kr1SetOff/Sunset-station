@@ -1,7 +1,7 @@
 - type: ghostTheme
   id: angel
-  name: angel
-  description: Watchful guardian.
+  name: ангел
+  description: Бдительный страж.
   spriteSpecifier:
     sprite:
       sprite: _Starlight/Mobs/Customization/GhostThemes/angel.rsi
@@ -22,8 +22,8 @@
 
 - type: ghostTheme
   id: ClownTheme
-  name: Clown
-  description: Honk from beyond the veil.
+  name: Клоун
+  description: Гудок из-за завесы.
   spriteSpecifier:
     sprite:
       sprite: _Starlight/Mobs/Customization/GhostThemes/clown.rsi
@@ -36,8 +36,8 @@
 
 - type: ghostTheme
   id: FaithlessTheme
-  name: Faithless
-  description: A wandering faithless spirit.
+  name: Безбожник
+  description: Блуждающий безбожный дух.
   spriteSpecifier:
     sprite:
       sprite: _Starlight/Mobs/Customization/GhostThemes/faithless.rsi
@@ -50,8 +50,8 @@
 
 - type: ghostTheme
   id: MushroomTheme
-  name: Mushroom
-  description: Soft spores, gentle haunting.
+  name: Гриб
+  description: Мягкие споры, нежное привидение.
   spriteSpecifier:
     sprite:
       sprite: _Starlight/Mobs/Customization/GhostThemes/mushroom.rsi
@@ -64,8 +64,8 @@
 
 - type: ghostTheme
   id: WalkerTheme
-  name: Walker
-  description: Still shambling after death.
+  name: Ходячий
+  description: Всё ещё бредёт даже после смерти.
   spriteSpecifier:
     sprite:
       sprite: _Starlight/Mobs/Customization/GhostThemes/walker.rsi
@@ -78,8 +78,8 @@
 
 - type: ghostTheme
   id: ShadowDemon
-  name: Shadow Demon
-  description: Its just observing… right? Right?
+  name: Теневой демон
+  description: Он просто наблюдает... правда? Правда?
   spriteSpecifier:
     sprite:
       sprite: _Starlight/Mobs/Customization/GhostThemes/shadow_demon.rsi
@@ -98,8 +98,8 @@
 
 - type: ghostTheme
   id: WizdenCarp
-  name: Wizden Carp
-  description: Almost magical.
+  name: Карп Уиздена
+  description: Почти волшебный.
   colorizeable: true
   spriteSpecifier:
     sprite:

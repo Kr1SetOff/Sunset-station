@@ -1,7 +1,7 @@
 - type: ghostTheme
   id: None
-  name: Default
-  description: Just a regular boring guy.
+  name: Обычный
+  description: Просто обычный скучный парень.
   colorizeable: true
   spriteSpecifier:
     sprite:
@@ -11,8 +11,8 @@
 
 - type: ghostTheme
   id: Mellow
-  name: Mellow
-  description: a mellow ghost.
+  name: Спокойный
+  description: спокойный призрак.
   spriteSpecifier:
     sprite:
       sprite: _Starlight/Mobs/Customization/GhostThemes/ghosts.rsi
@@ -21,8 +21,8 @@
 
 - type: ghostTheme
   id: Blazeit
-  name: Blazeit
-  description: a blazeit ghost.
+  name: Дымящий
+  description: обкуренный призрак.
   spriteSpecifier:
     sprite:
       sprite: _Starlight/Mobs/Customization/GhostThemes/ghosts.rsi
@@ -31,8 +31,8 @@
 
 - type: ghostTheme
   id: Funkypurp
-  name: Funkypurp
-  description: a funkypurp ghost.
+  name: Фанкипурп
+  description: фанковый фиолетовый призрак.
   spriteSpecifier:
     sprite:
       sprite: _Starlight/Mobs/Customization/GhostThemes/ghosts.rsi
@@ -41,8 +41,8 @@
 
 - type: ghostTheme
   id: Moth
-  name: Moth
-  description: a cute moth!
+  name: Мотылёк
+  description: милый мотылёк!
   colorizeable: true
   spriteSpecifier:
     sprite:

@@ -1,7 +1,7 @@
 - type: ghostTheme
   id: Morph
-  name: Morph
-  description: a morph.
+  name: Морф
+  description: морф.
   private: true
   spriteSpecifier:
     sprite:
@@ -14,8 +14,8 @@
 
 - type: ghostTheme
   id: Cateor
-  name: Cateor
-  description: a cute cateor.
+  name: Катеор
+  description: милый катеор.
   private: true
   spriteSpecifier:
     sprite:
@@ -28,8 +28,8 @@
 
 - type: ghostTheme
   id: Firewraith
-  name: Firewraith
-  description: a cute firewraith.
+  name: Огневрайт
+  description: милый огненный призрак.
   private: true
   spriteSpecifier:
     sprite:
@@ -43,8 +43,8 @@
 
 - type: ghostTheme
   id: Robot
-  name: Robot
-  description: a funny robot.
+  name: Робот
+  description: забавный робот.
   private: true
   spriteSpecifier:
     sprite:
@@ -57,8 +57,8 @@
 
 - type: ghostTheme
   id: pai_fox
-  name: pai fox
-  description: a cyber kitsune
+  name: пай-лис
+  description: кибер-кицунэ
   private: true
   spriteSpecifier:
     sprite:
@@ -71,8 +71,8 @@
 
 - type: ghostTheme
   id: sombrero_penguin
-  name: sombrero penguin
-  description: A penguin, but with sombrero
+  name: пингвин в сомбреро
+  description: Пингвин, но в сомбреро
   private: true
   spriteSpecifier:
     sprite:
@@ -85,8 +85,8 @@
 
 - type: ghostTheme
   id: TessTheEvil
-  name: Tess the Evil
-  description: Why is she smiling like that?
+  name: Тесс Злая
+  description: Почему она так улыбается?
   private: true
   spriteSpecifier:
     sprite:
@@ -99,8 +99,8 @@
 
 - type: ghostTheme
   id: ghost-kamila
-  name: Avali Ghost
-  description: a ghostly Avali.
+  name: Призрак-авали
+  description: призрачный авали.
   private: true
   spriteSpecifier:
     sprite:
@@ -113,8 +113,8 @@
 
 - type: ghostTheme
   id: ConfGhost
-  name: conf ghost
-  description: Looks retro.
+  name: конф-призрак
+  description: Выглядит ретро.
   private: true
   spriteSpecifier:
     sprite:

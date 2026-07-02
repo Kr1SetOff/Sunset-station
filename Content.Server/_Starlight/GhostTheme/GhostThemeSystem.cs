@@ -16,6 +16,18 @@ namespace Content.Server._Starlight.GhostTheme;
 [UsedImplicitly]
 public sealed partial class GhostThemeSystem : EntitySystem
 {
+    /// <summary>
+    /// Sunset dev/testing override - this ckey bypasses every ghost theme requirement (sponsor tier,
+    /// Discord role, username, playtime, whatever), so all themes can be previewed without needing the
+    /// underlying Discord roles or sponsor link. Mirrors the ckey override in SunsetSponsorTierService,
+    /// but that one only covers SponsorTierRequirement - most ghost themes are gated by
+    /// DiscordRolesRequirement instead, which reads from a completely different system.
+    /// </summary>
+    private const string DevOverrideCkey = "ClubYT";
+
+    private static bool IsDevOverride(ICommonSession session) =>
+        session.Name.Equals(DevOverrideCkey, StringComparison.OrdinalIgnoreCase);
+
     [Dependency] private IPlayerManager _playerManager = default!;
     [Dependency] private EuiManager _euiManager = default!;
     [Dependency] private IPrototypeManager _prototypeManager = default!;
@@ -40,9 +52,10 @@ public sealed partial class GhostThemeSystem : EntitySystem
             CloseEui(session);
 
         HashSet<string> availableThemes = [];
+        var devOverride = IsDevOverride(session);
 
         foreach (var ghostTheme in _prototypeManager.EnumeratePrototypes<GhostThemePrototype>())
-            if (ghostTheme.Requirements.Count == 0 || ghostTheme.Requirements.All(x => x.Handle(session)))
+            if (devOverride || ghostTheme.Requirements.Count == 0 || ghostTheme.Requirements.All(x => x.Handle(session)))
                 availableThemes.Add(ghostTheme.ID);
 
         var eui = _openUis[session] = new GhostThemeEui(availableThemes);
@@ -86,7 +99,7 @@ public sealed partial class GhostThemeSystem : EntitySystem
         if (!_prototypeManager.TryIndex<GhostThemePrototype>(theme, out var proto))
             return;
 
-        if (proto.Requirements.Count != 0 && proto.Requirements.Any(x => !x.Handle(session)))
+        if (!IsDevOverride(session) && proto.Requirements.Count != 0 && proto.Requirements.Any(x => !x.Handle(session)))
             return;
 
         themes.SelectedGhostTheme = theme;
@@ -117,7 +130,7 @@ public sealed partial class GhostThemeSystem : EntitySystem
                 || !_playerManager.TryGetSessionByEntity(uid, out var session))
                 return;
 
-            if (proto.Requirements.Count != 0 && proto.Requirements.Any(x => !x.Handle(session)))
+            if (!IsDevOverride(session) && proto.Requirements.Count != 0 && proto.Requirements.Any(x => !x.Handle(session)))
                 return;
 
             theme.SelectedGhostTheme = playerData.GhostTheme;

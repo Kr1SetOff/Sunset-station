@@ -1,7 +1,7 @@
 - type: ghostTheme
   id: Abomination
-  name: Abomination
-  description: Cute man.
+  name: Мерзость
+  description: Милый мужчина.
   spriteSpecifier:
     sprite:
       sprite: Mobs/Demons/abomination.rsi
@@ -13,8 +13,8 @@
 
 - type: ghostTheme
   id: SpaceDragonStaffTheme
-  name: Space Dragon
-  description: Giant space fish.
+  name: Космический дракон
+  description: Гигантская космическая рыба.
   colorizeable: true
   spriteSpecifier:
     sprite:
@@ -27,8 +27,8 @@
 
 - type: ghostTheme
   id: BuffRatKingTheme
-  name: Buff Rat King
-  description: The Buff Rat King, ruler of all rats.
+  name: Качок Крысиный Король
+  description: Качок Крысиный Король, повелитель всех крыс.
   colorizeable: true
   spriteSpecifier:
     sprite:
@@ -41,8 +41,8 @@
 
 - type: ghostTheme
   id: FoxTheme
-  name: Fox
-  description: A cute fox.
+  name: Лис
+  description: Милая лиса.
   colorizeable: true
   spriteSpecifier:
     sprite:
@@ -55,8 +55,8 @@
 
 - type: ghostTheme
   id: LizardPlushie
-  name: Lizard Plushie
-  description: Weh!
+  name: Плюшевая ящерица
+  description: Уэх!
   colorizeable: true
   spriteSpecifier:
     sprite:
@@ -69,8 +69,8 @@
 
 - type: ghostTheme
   id: MothroachTheme
-  name: Mothroach
-  description: A Mothroach, the most feared creature in space.
+  name: Мотрок
+  description: Мотрок, самое страшное существо в космосе.
   colorizeable: true
   spriteSpecifier:
     sprite:
@@ -83,8 +83,8 @@
 
 - type: ghostTheme
   id: ScurretTheme
-  name: Scurret
-  description: A Scurret, legally distinct!.
+  name: Скаррет
+  description: Скаррет, юридически самостоятельное существо!
   colorizeable: true
   spriteSpecifier:
     sprite:
@@ -97,8 +97,8 @@
 
 - type: ghostTheme
   id: WispTheme
-  name: Wisp
-  description: A faint, curious wisp, its glow like a guiding hand of a senior mind behind the veil.
+  name: Дымок
+  description: Слабый, любопытный огонёк — его свечение будто направляющая рука опытного разума из-за завесы.
   colorizeable: true
   spriteSpecifier:
     sprite:
@@ -111,8 +111,8 @@
 
 - type: ghostTheme
   id: CustodianTheme
-  name: Custodian
-  description: A floating horror, steady with the confidence of a creator.
+  name: Хранитель
+  description: Парящий ужас, уверенный, как сам создатель.
   colorizeable: true
   spriteSpecifier:
     sprite:
