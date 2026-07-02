@@ -7,16 +7,22 @@ using Content.Shared.Damage.Systems;
 using Content.Shared.Hands;
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Interaction.Events;
+using Content.Shared.Inventory;
+using Content.Shared.Maps;
 using Content.Shared.Movement.Pulling.Systems;
 using Content.Shared.Popups;
 using Content.Shared.Stunnable;
+using Content.Shared.Tag;
 using Content.Shared.Throwing;
 using Content.Shared.Weapons.Melee;
 using Content.Shared.Weapons.Melee.Events;
+using Content.Shared.Weapons.Ranged.Events;
 using Content.Shared._Sunset.Grab.Components;
 using Content.Shared._Sunset.Grab.Events;
 using Content.Shared._Sunset.MartialArts.Components;
 using Content.Shared._Sunset.MartialArts.Events;
+using Robust.Shared.Map;
+using Robust.Shared.Network;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
@@ -42,6 +48,11 @@ public sealed partial class SharedMartialArtsSystem : EntitySystem
     [Dependency] private EntityLookupSystem _lookup = default!;
     [Dependency] private AlertsSystem _alerts = default!;
     [Dependency] private PullingSystem _pulling = default!;
+    [Dependency] private INetManager _net = default!;
+    [Dependency] private TagSystem _tag = default!;
+    [Dependency] private InventorySystem _inventory = default!;
+    [Dependency] private TurfSystem _turf = default!;
+    [Dependency] private SharedMapSystem _mapSystem = default!;
 
     private const float CqcUnblockRange = 8f;
 
@@ -98,7 +109,7 @@ public sealed partial class SharedMartialArtsSystem : EntitySystem
         [MartialArtStyle.Mime] = new()
         {
             ("MimeInvisibleWall", new[] { ComboAttackType.Disarm, ComboAttackType.Disarm }, false),
-            ("MimeSilentScream", new[] { ComboAttackType.Harm, ComboAttackType.Harm }, false),
+            ("MimeFingerGuns", new[] { ComboAttackType.Harm, ComboAttackType.Harm }, false),
             ("MimeBoxTrap", new[] { ComboAttackType.Grab, ComboAttackType.Disarm }, false),
             ("MimeExaggeratedSlap", new[] { ComboAttackType.Harm, ComboAttackType.Disarm }, false),
         },
@@ -116,12 +127,23 @@ public sealed partial class SharedMartialArtsSystem : EntitySystem
 
         SubscribeLocalEvent<MartialArtsKnowledgeComponent, ComponentShutdown>(OnKnowledgeShutdown);
 
+        // Single broadcast subscription for the whole system - Sleeping Carp's no-guns rule and the
+        // Corporate Judo belt's stunner-only rule both hook this event, and Robust doesn't allow the same
+        // system instance to subscribe to the same broadcast event type twice.
+        SubscribeLocalEvent<ShotAttemptedEvent>(OnShotAttempted);
+
         InitializeNinjutsu();
         InitializeSleepingCarp();
         InitializeCapoeira();
         InitializeKungFuDragon();
         InitializeCorporateJudo();
         InitializeMime();
+    }
+
+    private void OnShotAttempted(ref ShotAttemptedEvent args)
+    {
+        OnCarpShotAttempt(ref args);
+        OnJudoBeltShotAttempt(ref args);
     }
 
     #region Granting
@@ -389,7 +411,7 @@ public sealed partial class SharedMartialArtsSystem : EntitySystem
             case "JudoArmbar": JudoArmbar(user, target); break;
             case "JudoWheelThrow": JudoWheelThrow(user, target); break;
             case "MimeInvisibleWall": MimeInvisibleWall(user, target); break;
-            case "MimeSilentScream": MimeSilentScream(user, target); break;
+            case "MimeFingerGuns": MimeFingerGuns(user, target); break;
             case "MimeBoxTrap": MimeBoxTrap(user, target); break;
             case "MimeExaggeratedSlap": MimeExaggeratedSlap(user, target); break;
         }

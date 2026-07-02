@@ -2,6 +2,8 @@ using Content.Shared.Damage;
 using Content.Shared.Movement.Pulling.Components;
 using Content.Shared.Speech.Muting;
 using Content.Shared._Sunset.MartialArts.Components;
+using Robust.Shared.Map;
+using Robust.Shared.Map.Components;
 
 namespace Content.Shared._Sunset.MartialArts.Systems;
 
@@ -12,21 +14,43 @@ public sealed partial class SharedMartialArtsSystem
     }
 
     /// <summary>
-    /// Traces out an invisible wall and shoves the target into it - no real wall, just a stagger and a
-    /// dented sense of dignity.
+    /// Goob Station's "Invisible Blockade" - forms a real three-tile invisible wall in front of the
+    /// user (the same WallInvisible prototype vanilla Mime's own wall power uses, so it self-despawns
+    /// after 15 seconds). Server-only: spawning a new entity from a client-predicted combo trigger risks
+    /// the same "added while resetting predicted entities" class of bug as reactive component grants -
+    /// SharedMagicSystem's own instant-spawn spells follow this exact same _net.IsClient guard.
     /// </summary>
     private void MimeInvisibleWall(EntityUid user, EntityUid target)
     {
-        _stun.TryKnockdown(target, TimeSpan.FromSeconds(2), force: true);
-        _stamina.TakeStaminaDamage(target, 25f, source: user);
+        if (_net.IsClient)
+            return;
+
+        var xform = Transform(user);
+        if (xform.GridUid is not { } gridUid || !TryComp<MapGridComponent>(gridUid, out var grid))
+            return;
+
+        var directionPos = xform.Coordinates.Offset(xform.LocalRotation.ToWorldVec().Normalized());
+        if (!_turf.TryGetTileRef(directionPos, out var tileRef))
+            return;
+
+        var tileIndex = tileRef.Value.GridIndices;
+        var perpendicular = xform.LocalRotation.GetCardinalDir() is Direction.North or Direction.South
+            ? new Vector2i(1, 0)
+            : new Vector2i(0, 1);
+
+        Spawn("WallInvisible", _mapSystem.GridTileToLocal(gridUid, grid, tileIndex));
+        Spawn("WallInvisible", _mapSystem.GridTileToLocal(gridUid, grid, tileIndex + perpendicular));
+        Spawn("WallInvisible", _mapSystem.GridTileToLocal(gridUid, grid, tileIndex - perpendicular));
     }
 
     /// <summary>
-    /// A scream with no sound to it - the target loses their voice for a while.
+    /// Goob Station's "Finger Guns" - mimed bullets that deal Piercing damage and mute on hit. The real
+    /// version fires up to three separate shots that can miss; ours is a guaranteed single burst against
+    /// the already-selected combo target, so the numbers are scaled down from its 40-per-bullet/20s mute.
     /// </summary>
-    private void MimeSilentScream(EntityUid user, EntityUid target)
+    private void MimeFingerGuns(EntityUid user, EntityUid target)
     {
-        _damageable.TryChangeDamage(target, new DamageSpecifier { DamageDict = new() { { "Blunt", 8 } } }, origin: user);
+        _damageable.TryChangeDamage(target, new DamageSpecifier { DamageDict = new() { { "Piercing", 15 } } }, origin: user);
 
         EnsureComp<MutedComponent>(target);
         var tempMute = EnsureComp<TemporaryMuteComponent>(target);
@@ -34,8 +58,8 @@ public sealed partial class SharedMartialArtsSystem
     }
 
     /// <summary>
-    /// Mimes an invisible box around the target and slams the lid - only really works on someone you've
-    /// already got a hold of.
+    /// Sunset original, not part of Goob Station's Advanced Mimery - mimes an invisible box around the
+    /// target and slams the lid. Only really works on someone you've already got a hold of.
     /// </summary>
     private void MimeBoxTrap(EntityUid user, EntityUid target)
     {
@@ -47,7 +71,8 @@ public sealed partial class SharedMartialArtsSystem
     }
 
     /// <summary>
-    /// A big, theatrical, exaggerated slap - the payoff move once the target is already reeling.
+    /// Sunset original, not part of Goob Station's Advanced Mimery - a big, theatrical, exaggerated slap,
+    /// the payoff move once the target is already reeling.
     /// </summary>
     private void MimeExaggeratedSlap(EntityUid user, EntityUid target)
     {

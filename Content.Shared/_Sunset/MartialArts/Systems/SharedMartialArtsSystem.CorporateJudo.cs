@@ -4,6 +4,8 @@ using Content.Shared.Movement.Pulling.Components;
 using Content.Shared.Movement.Pulling.Events;
 using Content.Shared.Standing;
 using Content.Shared.Stunnable;
+using Content.Shared.Weapons.Melee.Events;
+using Content.Shared.Weapons.Ranged.Events;
 using Content.Shared._Sunset.MartialArts.Components;
 
 namespace Content.Shared._Sunset.MartialArts.Systems;
@@ -17,19 +19,66 @@ public sealed partial class SharedMartialArtsSystem
 
         SubscribeLocalEvent<ArmbarredComponent, StoodEvent>(OnArmbarredStood);
         SubscribeLocalEvent<ArmbarredComponent, PullStoppedMessage>(OnArmbarStopped);
+
+        SubscribeLocalEvent<AttemptMeleeEvent>(OnJudoBeltMeleeAttempt);
     }
 
+    // Server-authoritative only - granting/revoking here reacts to ClothingGotEquippedEvent, which the
+    // client can also raise while replaying container state inside ResetPredictedEntities. Adding a
+    // networked component from that replay path corrupts the client's component dictionary mid-enumeration
+    // (see RobustToolbox's "Added component ... while resetting predicted entities" guard). The client
+    // doesn't need to predict this anyway - the granted MartialArtsKnowledgeComponent is networked, so it
+    // just shows up once the server processes the same equip event.
     private void OnGrantMartialArtOnEquip(Entity<GrantMartialArtOnEquipComponent> ent, ref ClothingGotEquippedEvent args)
     {
+        if (_net.IsClient)
+            return;
+
         TryGrantMartialArt(args.Wearer, ent.Comp.Style);
     }
 
     private void OnRevokeMartialArtOnUnequip(Entity<GrantMartialArtOnEquipComponent> ent, ref ClothingGotUnequippedEvent args)
     {
+        if (_net.IsClient)
+            return;
+
         if (!TryComp<MartialArtsKnowledgeComponent>(args.Wearer, out var knowledge) || knowledge.Style != ent.Comp.Style)
             return;
 
         RemComp<MartialArtsKnowledgeComponent>(args.Wearer);
+    }
+
+    private bool IsWearingJudoBelt(EntityUid user)
+    {
+        return _inventory.TryGetSlotEntity(user, "belt", out var belt) && HasComp<CorporateJudoBeltComponent>(belt);
+    }
+
+    /// <summary>
+    /// The judo belt is styled after a security belt precisely so wearers give up their sidearm - while
+    /// worn, only bare fists and stun batons are allowed in melee.
+    /// </summary>
+    private void OnJudoBeltMeleeAttempt(ref AttemptMeleeEvent args)
+    {
+        if (args.Cancelled || args.Weapon == args.User || HasComp<StunbatonComponent>(args.Weapon))
+            return;
+
+        if (!IsWearingJudoBelt(args.User))
+            return;
+
+        args.Cancelled = true;
+        args.Message = Loc.GetString("martial-arts-judo-belt-weapon-blocked");
+    }
+
+    private void OnJudoBeltShotAttempt(ref ShotAttemptedEvent args)
+    {
+        if (args.Cancelled || _tag.HasTag(args.Used.Owner, "Taser"))
+            return;
+
+        if (!IsWearingJudoBelt(args.User))
+            return;
+
+        args.Cancel();
+        _popup.PopupClient(Loc.GetString("martial-arts-judo-belt-weapon-blocked"), args.User, args.User);
     }
 
     /// <summary>
