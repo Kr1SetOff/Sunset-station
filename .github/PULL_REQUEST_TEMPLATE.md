@@ -1,29 +1,29 @@
-## Short description
-<!-- What do you propose to change with your PR? -->
+## Краткое описание
+<!-- Что именно вы предлагаете изменить в этом PR? -->
 
-## Why we need to add this
-<!-- What is the reason for adding these changes? Please post links to Discussions as well as Bug Reports here. Please describe how this will change the game balance. -->
+## Зачем это нужно добавить
+<!-- Какова причина внесения этих изменений? Пожалуйста, добавьте сюда ссылки на обсуждения (Discussions) или отчеты об ошибках (Bug Reports). Опишите, как это повлияет на игровой баланс. -->
 
-## Media (Video/Screenshots)
+## Медиа (Видео/Скриншоты)
 <!--
-If your PR contains in-game changes you must provide screenshots/videos of the changes.
+Если ваш PR содержит изменения внутри игры, вы должны предоставить скриншоты или видео этих изменений.
 -->
 
-## Checks
-<!-- check boxes for faster reviewing of your PR -->
+## Проверки
+<!-- Отметьте пункты для более быстрого ревью вашего PR -->
 
-- [ ] I do not require assistance to complete the PR.
-- [ ] Before posting/requesting review of a PR, I have verified that the changes work.
-- [ ] I have added screenshots/videos of the changes, or this PR does not change in-game mechanics.
-- [ ] I affirm that my changes are licensed under the [MIT License](https://github.com/ss14Starlight/space-station-14/blob/Starlight/LICENSE.TXT) and grant permission for use in this repository under its conditions.
+- [ ] Мне не требуется помощь для завершения этого PR.
+- [ ] Перед публикацией/запросом ревью я проверил(а), что изменения работают.
+- [ ] Я добавил(а) скриншоты/видео изменений (или этот PR не меняет внутриигровые механики).
+- [ ] Я подтверждаю, что мои изменения лицензированы под [Лицензией MIT](https://github.com/ss14Starlight/space-station-14/blob/Starlight/LICENSE.TXT) и даю разрешение на их использование в этом репозитории на её условиях.
 
 **Changelog**
 <!--
-If you want the players to know about changes made in this PR, specify them using the template outside the comment. Short and informative.
+Если вы хотите, чтобы игроки узнали об изменениях в этом PR, укажите их, используя шаблон ниже (вне этого комментария). Пишите коротко и информативно.
 
-:cl: STARLIGHT TEAM
-- add: Added Starlight.
-- remove: Removed SS13.
-- tweak: Changed SS14.
-- fix: Fixed Rinary.
+:cl: SUNSET TEAM
+- add: Добавлено Sunset.
+- remove: Удалено SS13.
+- tweak: Изменено SS14.
+- fix: Исправлено Rinary.
 -->
