@@ -1896,6 +1896,83 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
 
         #endregion
 
+        // 🌇Sunset🌇
+        #region Sunset Discord Link
+
+        public async Task<SunsetDiscordLink?> GetSunsetDiscordLink(Guid player, CancellationToken cancel = default)
+        {
+            await using var db = await GetDb(cancel);
+            return await db.DbContext.SunsetDiscordLinks
+                .SingleOrDefaultAsync(l => l.PlayerUserId == player, cancel);
+        }
+
+        public async Task<SunsetDiscordLink?> GetSunsetDiscordLinkByDiscordId(string discordUserId, CancellationToken cancel = default)
+        {
+            await using var db = await GetDb(cancel);
+            return await db.DbContext.SunsetDiscordLinks
+                .SingleOrDefaultAsync(l => l.DiscordUserId == discordUserId, cancel);
+        }
+
+        public async Task SetSunsetDiscordLink(Guid player, string discordUserId, int tier)
+        {
+            await using var db = await GetDb();
+            var entry = await db.DbContext.SunsetDiscordLinks
+                .SingleOrDefaultAsync(l => l.PlayerUserId == player);
+
+            var now = DateTime.UtcNow;
+            if (entry == null)
+            {
+                entry = new SunsetDiscordLink
+                {
+                    PlayerUserId = player,
+                    DiscordUserId = discordUserId,
+                    LinkedAt = now,
+                };
+                db.DbContext.SunsetDiscordLinks.Add(entry);
+            }
+            else
+            {
+                entry.DiscordUserId = discordUserId;
+                entry.LinkedAt = now;
+            }
+
+            entry.SponsorTier = tier;
+            entry.TierCheckedAt = now;
+
+            await db.DbContext.SaveChangesAsync();
+        }
+
+        public async Task<bool> UpdateSunsetSponsorTier(Guid player, int tier)
+        {
+            await using var db = await GetDb();
+            var entry = await db.DbContext.SunsetDiscordLinks
+                .SingleOrDefaultAsync(l => l.PlayerUserId == player);
+
+            if (entry == null)
+                return false;
+
+            entry.SponsorTier = tier;
+            entry.TierCheckedAt = DateTime.UtcNow;
+            await db.DbContext.SaveChangesAsync();
+            return true;
+        }
+
+        public async Task<bool> RemoveSunsetDiscordLink(Guid player)
+        {
+            await using var db = await GetDb();
+            var entry = await db.DbContext.SunsetDiscordLinks
+                .SingleOrDefaultAsync(l => l.PlayerUserId == player);
+
+            if (entry == null)
+                return false;
+
+            db.DbContext.SunsetDiscordLinks.Remove(entry);
+            await db.DbContext.SaveChangesAsync();
+            return true;
+        }
+
+        #endregion
+
         # region IPIntel
 
         public async Task<bool> UpsertIPIntelCache(DateTime time, IPAddress ip, float score)

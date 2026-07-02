@@ -50,6 +50,12 @@ using Content.Shared._NullLink;
 using Content.Server._Starlight.TextToSpeech;
 #endregion Nulllink
 
+#region Sunset
+using Content.Server._Sunset.Discord;
+using Content.Server._Sunset.SponsorTier;
+using Content.Shared._Sunset.SponsorTier;
+#endregion Sunset
+
 namespace Content.Server.IoC;
 
 internal static class ServerContentIoC
@@ -122,5 +128,13 @@ internal static class ServerContentIoC
         deps.Register<ISharedNullLinkPlayerResourcesManager, NullLinkPlayerResourcesManager>();
 
         // nulllink end
+
+        // 🌇Sunset🌇 start
+        deps.Register<SunsetDiscordOAuth>();
+        deps.Register<SunsetSponsorRoleLookup>();
+        deps.Register<SunsetDiscordCallbackHandler>();
+        deps.Register<SunsetSponsorTierService>();
+        deps.Register<ISunsetSponsorTierReader, SunsetSponsorTierService>();
+        // 🌇Sunset🌇 end
     }
 }

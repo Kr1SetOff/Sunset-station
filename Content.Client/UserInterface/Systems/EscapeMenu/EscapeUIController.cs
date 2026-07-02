@@ -23,7 +23,6 @@ public sealed partial class EscapeUIController : UIController, IOnStateEntered<G
 {
     [Dependency] private IClientConsoleHost _console = default!;
     [Dependency] private IClientPlayerRolesManager _player = default!;
-    [Dependency] private INullLinkPlayerRolesManager _playerRoles = default!; // NullLink
     [Dependency] private IUriOpener _uri = default!;
     [Dependency] private IConfigurationManager _cfg = default!;
     [Dependency] private ChangelogUIController _changelog = default!;
@@ -68,24 +67,12 @@ public sealed partial class EscapeUIController : UIController, IOnStateEntered<G
         _escapeWindow.OnClose += DeactivateButton;
         _escapeWindow.OnOpen += ActivateButton;
 
-        // NullLink start
+        // 🌇Sunset🌇 - was NullLink's _playerRoles.GetDiscordLink() (broken unless the external NullLink
+        // cluster is configured); now opens our own self-contained Discord link window/OAuth flow instead.
         _escapeWindow.DiscordButton.OnPressed += _ =>
         {
-            // 🌇Sunset🌇 - the server-provided link can be an empty string (not null) when unset,
-            // which OpenUri throws on. System.Uri isn't in the content sandbox whitelist, so
-            // catch the exception instead of pre-validating with it.
-            if (_playerRoles.GetDiscordLink() is not { } link)
-                return;
-
-            try
-            {
-                _uri.OpenUri(link);
-            }
-            catch (ArgumentException)
-            {
-            }
+            _console.RemoteExecuteCommand(null, "linkdiscord");
         };
-        // NullLink end
 
         _escapeWindow.ChangelogButton.OnPressed += _ =>
         {

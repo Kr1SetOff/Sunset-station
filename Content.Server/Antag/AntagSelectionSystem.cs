@@ -1,4 +1,5 @@
 using System.Linq;
+using Content.Server._Sunset.Antag;
 using Content.Server.Administration.Managers;
 using Content.Server.Antag.Components;
 using Content.Server.Chat.Managers;
@@ -102,6 +103,8 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
         SubscribeLocalEvent<RulePlayerSpawningEvent>(OnPlayerSpawning);
         SubscribeLocalEvent<RulePlayerJobsAssignedEvent>(OnJobsAssigned);
         SubscribeLocalEvent<PlayerSpawnCompleteEvent>(OnSpawnComplete);
+
+        InitializeSunset(); // 🌇Sunset🌇
     }
 
     private void OnTakeGhostRole(Entity<GhostRoleAntagSpawnerComponent> ent, ref TakeGhostRoleEvent args)
@@ -168,6 +171,8 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
             ChooseAntags((uid, comp), args.Players);
             AssignPreSelectedSessions((uid, comp));
         }
+
+        OnSunsetJobsAssigned(args); // 🌇Sunset🌇 - tier 5 guaranteed-antag pass, after normal selection above
     }
 
     private void OnJobNotAssigned(NoJobsAvailableSpawningEvent args)
@@ -614,6 +619,16 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
             if (ValidAntagPreference(session, def.PrefRoles, ent.Comp.SelectionTime))
             {
                 preferredList.Add(session);
+
+                // 🌇Sunset🌇 - Boosty sponsor tiers get extra copies of their session in the preferred pool,
+                // proportionally raising their odds in the PickAndTake lottery below without touching it.
+                var sunsetTier = _sunsetSponsorTiers.GetSponsorTier(session);
+                if (sunsetTier > 0)
+                {
+                    var extra = SunsetAntagWeighting.GetWeightMultiplier(sunsetTier, def);
+                    for (var i = 0; i < extra; i++)
+                        preferredList.Add(session);
+                }
             }
             else if (ValidAntagPreference(session, def.FallbackRoles, ent.Comp.SelectionTime))
             {
