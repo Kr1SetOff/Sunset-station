@@ -1,0 +1,13 @@
+- type: entity
+  id: ActionMartialArtsMimeInvisibleBlockade
+  name: Невидимая баррикада
+  description: Ставит настоящую невидимую стену в три плитки шириной прямо перед вами. Портировано с Goob Station.
+  components:
+  - type: Action
+    icon:
+      sprite: _Sunset/MartialArts/mime_actions.rsi
+      state: invisible_blockade
+    useDelay: 60
+    itemIconStyle: BigAction
+  - type: InstantAction
+    event: !type:MimeInvisibleBlockadeActionEvent

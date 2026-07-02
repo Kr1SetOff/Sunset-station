@@ -1,4 +1,5 @@
 using System.Linq;
+using Content.Shared.Actions;
 using Content.Shared.Alert;
 using Content.Shared.CombatMode;
 using Content.Shared.Damage;
@@ -38,6 +39,7 @@ public sealed partial class SharedMartialArtsSystem : EntitySystem
 {
     [Dependency] private IGameTiming _timing = default!;
     [Dependency] private IRobustRandom _random = default!;
+    [Dependency] private SharedActionsSystem _actions = default!;
     [Dependency] private DamageableSystem _damageable = default!;
     [Dependency] private SharedStaminaSystem _stamina = default!;
     [Dependency] private SharedStunSystem _stun = default!;
@@ -108,7 +110,6 @@ public sealed partial class SharedMartialArtsSystem : EntitySystem
         },
         [MartialArtStyle.Mime] = new()
         {
-            ("MimeInvisibleWall", new[] { ComboAttackType.Disarm, ComboAttackType.Disarm }, false),
             ("MimeFingerGuns", new[] { ComboAttackType.Harm, ComboAttackType.Harm }, false),
             ("MimeBoxTrap", new[] { ComboAttackType.Grab, ComboAttackType.Disarm }, false),
             ("MimeExaggeratedSlap", new[] { ComboAttackType.Harm, ComboAttackType.Disarm }, false),
@@ -217,6 +218,10 @@ public sealed partial class SharedMartialArtsSystem : EntitySystem
             case MartialArtStyle.KungFuDragon:
                 EnsureComp<DragonPowerComponent>(uid);
                 break;
+            case MartialArtStyle.Mime:
+                var mimery = EnsureComp<MimeAdvancedMimeryComponent>(uid);
+                _actions.AddAction(uid, ref mimery.BlockadeAction, "ActionMartialArtsMimeInvisibleBlockade");
+                break;
         }
     }
 
@@ -239,6 +244,13 @@ public sealed partial class SharedMartialArtsSystem : EntitySystem
             case MartialArtStyle.KungFuDragon:
                 if (HasComp<DragonPowerComponent>(uid))
                     RemComp<DragonPowerComponent>(uid);
+                break;
+            case MartialArtStyle.Mime:
+                if (TryComp<MimeAdvancedMimeryComponent>(uid, out var mimery))
+                {
+                    _actions.RemoveAction(mimery.BlockadeAction);
+                    RemComp<MimeAdvancedMimeryComponent>(uid);
+                }
                 break;
         }
     }
@@ -410,7 +422,6 @@ public sealed partial class SharedMartialArtsSystem : EntitySystem
             case "JudoThrow": JudoThrow(user, target); break;
             case "JudoArmbar": JudoArmbar(user, target); break;
             case "JudoWheelThrow": JudoWheelThrow(user, target); break;
-            case "MimeInvisibleWall": MimeInvisibleWall(user, target); break;
             case "MimeFingerGuns": MimeFingerGuns(user, target); break;
             case "MimeBoxTrap": MimeBoxTrap(user, target); break;
             case "MimeExaggeratedSlap": MimeExaggeratedSlap(user, target); break;

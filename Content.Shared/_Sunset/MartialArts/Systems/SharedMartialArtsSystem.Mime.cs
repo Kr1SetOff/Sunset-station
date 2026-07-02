@@ -2,6 +2,7 @@ using Content.Shared.Damage;
 using Content.Shared.Movement.Pulling.Components;
 using Content.Shared.Speech.Muting;
 using Content.Shared._Sunset.MartialArts.Components;
+using Content.Shared._Sunset.MartialArts.Events;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 
@@ -11,16 +12,27 @@ public sealed partial class SharedMartialArtsSystem
 {
     private void InitializeMime()
     {
+        SubscribeLocalEvent<MimeAdvancedMimeryComponent, MimeInvisibleBlockadeActionEvent>(OnMimeInvisibleBlockadeAction);
+    }
+
+    private void OnMimeInvisibleBlockadeAction(Entity<MimeAdvancedMimeryComponent> ent, ref MimeInvisibleBlockadeActionEvent args)
+    {
+        if (args.Handled)
+            return;
+
+        args.Handled = true;
+        MimeInvisibleWall(ent.Owner);
     }
 
     /// <summary>
-    /// Goob Station's "Invisible Blockade" - forms a real three-tile invisible wall in front of the
-    /// user (the same WallInvisible prototype vanilla Mime's own wall power uses, so it self-despawns
-    /// after 15 seconds). Server-only: spawning a new entity from a client-predicted combo trigger risks
-    /// the same "added while resetting predicted entities" class of bug as reactive component grants -
-    /// SharedMagicSystem's own instant-spawn spells follow this exact same _net.IsClient guard.
+    /// Goob Station's "Invisible Blockade" - a cooldown-gated action (not a combo trigger, matching
+    /// the real thing) that forms a real three-tile invisible wall in front of the user (the same
+    /// WallInvisible prototype vanilla Mime's own wall power uses, so it self-despawns after 15 seconds).
+    /// Server-only: spawning a new entity from client-predicted action use risks the same "added while
+    /// resetting predicted entities" class of bug as reactive component grants - SharedMagicSystem's own
+    /// instant-spawn spells follow this exact same _net.IsClient guard.
     /// </summary>
-    private void MimeInvisibleWall(EntityUid user, EntityUid target)
+    private void MimeInvisibleWall(EntityUid user)
     {
         if (_net.IsClient)
             return;
