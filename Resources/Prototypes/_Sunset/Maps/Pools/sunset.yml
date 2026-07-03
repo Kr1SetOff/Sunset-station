@@ -1,0 +1,14 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Пул карт SunSet Station. Голосование за карту и случайный/ротационный выбор
+# берут карты только отсюда (см. CVar game.map_pool = SunSetMapPool).
+# Все карты лежат в /Maps/_Sunset/ с припиской "SS".
+- type: gameMapPool
+  id: SunSetMapPool
+  maps:
+  - SSAmber
+  - SSBagel
+  - SSBox
+  - SSCluster
+  - SSPacket
+  - SSloop

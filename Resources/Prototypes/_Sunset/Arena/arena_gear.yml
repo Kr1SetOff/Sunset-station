@@ -1,0 +1,8 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Outfit given to every arena fighter: a blue jumpsuit and shoes.
+- type: startingGear
+  id: ArenaGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorBlue
+    shoes: ClothingShoesColorBlack

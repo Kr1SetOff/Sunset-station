@@ -1,0 +1,20 @@
+<!--
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+<DefaultWindow xmlns="https://spacestation14.io"
+               Title="{Loc 'arena-window-title'}"
+               MinSize="460 280"
+               SetSize="460 280">
+    <BoxContainer Orientation="Vertical" HorizontalExpand="True" SeparationOverride="6">
+        <RichTextLabel Name="InfoLabel" VerticalExpand="True" />
+        <Label Name="StatusLabel" StyleClasses="LabelKeyText" />
+        <BoxContainer Orientation="Horizontal" HorizontalExpand="True" SeparationOverride="6">
+            <OptionButton Name="ModeButton" HorizontalExpand="True" />
+            <Button Name="CreateButton" Text="{Loc 'arena-create-button'}" />
+        </BoxContainer>
+        <BoxContainer Orientation="Horizontal" HorizontalExpand="True" SeparationOverride="6">
+            <Button Name="JoinButton" HorizontalExpand="True" Visible="False" />
+            <Button Name="SpectateButton" Text="{Loc 'arena-spectate-button'}" HorizontalExpand="True" Visible="False" />
+        </BoxContainer>
+    </BoxContainer>
+</DefaultWindow>

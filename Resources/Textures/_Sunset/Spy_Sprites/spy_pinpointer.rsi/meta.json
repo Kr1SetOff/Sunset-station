@@ -1,0 +1,29 @@
+{
+    "version": 1,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Created for SunSet Station (_Sunset Spy)",
+    "states": [
+        {
+            "name": "pinpointer_hunter"
+        },
+        {
+            "name": "pinonalert"
+        },
+        {
+            "name": "pinonalertdirect"
+        },
+        {
+            "name": "pinonclose"
+        },
+        {
+            "name": "pinonmedium"
+        },
+        {
+            "name": "pinonfar"
+        }
+    ]
+}

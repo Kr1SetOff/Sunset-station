@@ -1,0 +1,38 @@
+- type: entity
+  parent: BasePlushie
+  id: PlushieEreb
+  name: Erebus Epiolos
+  description: It looks insignificant and disgusting!
+  components:
+  - type: Sprite
+    sprite: _Sunset/Plushie/Erebus.rsi
+    state: icon
+  - type: Clothing
+    quickEquip: false
+    sprite: _Sunset/Plushie/Erebus.rsi
+    slots:
+    - HEAD
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        offset: "0, 0.03"
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Sunset/Plushie/Erebus.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_Sunset/Plushie/Erebus.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/_Sunset/Plushie/Erebus.ogg
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/_Sunset/Plushie/Erebus.ogg
+  - type: Edible
+    requiresSpecialDigestion: true
+    useSound:
+      path: /Audio/_Sunset/Plushie/Erebus.ogg
+  - type: MeleeWeapon
+    wideAnimationRotation: 180
+    soundHit:
+      path: /Audio/_Sunset/Plushie/Erebus.ogg
