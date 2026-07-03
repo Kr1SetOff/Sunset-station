@@ -137,3 +137,53 @@ role-achievement-reward-fail-hidden = Требуется [color=yellow]скры�
 loadouts-achievement-reward-pass = Награда за достижение разблокирована: { $achievement }
 loadouts-achievement-reward-fail = Требуется награда за достижение: { $achievement }
 loadouts-achievement-reward-fail-hidden = Требуется скрытая награда за достижение
+
+## Sunset - перенесено из sunset-station
+
+achievement-sunset-welcome-to-the-station-name = Добро пожаловать на станцию
+achievement-sunset-welcome-to-the-station-description = Появитесь в раунде впервые.
+
+achievement-sunset-pgsher-name = PGSher
+achievement-sunset-pgsher-description = Погибните 10 раз.
+
+achievement-sunset-god-name = Бог
+achievement-sunset-god-description = Оживите 12 человек за один раунд.
+
+achievement-sunset-unfunny-clown-name = Несмешной клоун
+achievement-sunset-unfunny-clown-description = Поскользнитесь 228 раз.
+
+achievement-sunset-best-security-officer-name = Лучший офицер СБ
+achievement-sunset-best-security-officer-description = Поскользнитесь 100 раз за один раунд, работая офицером СБ.
+
+achievement-sunset-survivor-name = Выживший
+achievement-sunset-survivor-description = Доживите до конца раунда.
+
+achievement-sunset-rock-bottom-name = Дно
+achievement-sunset-rock-bottom-description = Закончите раунд в критическом состоянии.
+
+achievement-sunset-carpo-lover-name = Любитель карпов
+achievement-sunset-carpo-lover-description = Убейте паука Шиву.
+
+achievement-sunset-dangerous-furniture-name = Опасная мебель
+achievement-sunset-dangerous-furniture-description = Убейте кого-нибудь, держа в руке складной стул.
+
+achievement-sunset-revenge-name = Месть
+achievement-sunset-revenge-description = Заставьте хомяка Гамлета кого-нибудь убить.
+
+achievement-sunset-miscalculated-name = Просчитался
+achievement-sunset-miscalculated-description = Работая учёным, активируйте узел артефакта, который схлопнется в сингулярность.
+
+achievement-sunset-curious-name = Любопытный
+achievement-sunset-curious-description = Осмотрите 100 предметов за один раунд.
+
+achievement-sunset-what-station-name = Что за станция?
+achievement-sunset-what-station-description = Проведите 15 секунд в космосе без скафандра за один раунд.
+
+achievement-sunset-hot-stuff-name = Горячая штучка
+achievement-sunset-hot-stuff-description = Работая техником по атмосфере, непрерывно горите 60 секунд.
+
+achievement-sunset-circus-captain-name = Капитан цирка
+achievement-sunset-circus-captain-description = Будучи клоуном, наденьте капитанскую шляпу.
+
+achievement-sunset-professional-name = Профессионал
+achievement-sunset-professional-description = Выполните все свои цели в роли антагониста.
