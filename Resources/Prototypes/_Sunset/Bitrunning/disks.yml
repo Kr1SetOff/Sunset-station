@@ -24,9 +24,10 @@
   - type: BitrunningProfileDisk
 
 # 🌇Sunset🌇 - several source item/action IDs below don't exist in this fork (MedicalBeamGun,
-# HandledBoomBox, LuxuryMedipen, PlasmaScythe, ActionLightningBolt, PKAUpgradeSpace,
+# LuxuryMedipen, PlasmaScythe, ActionLightningBolt, PKAUpgradeSpace,
 # WeaponCrusherHammer, LavalandWeaponKineticMachete) and are substituted with the closest
-# functionally-equivalent existing prototype.
+# functionally-equivalent existing prototype. HandledBoomBox was substituted too but got ported
+# for real in Stage 2c, so this option now uses the genuine item.
 - type: entity
   parent: BaseBitrunningDisk
   id: BitrunningGearSimpleDisk
@@ -39,7 +40,7 @@
       bitrunning-disk-option-pizza-box: FoodBoxPizza
       bitrunning-disk-option-medical-beam-gun: LauncherSyringe
       bitrunning-disk-option-c4: C4
-      bitrunning-disk-option-boombox: RadioHandheld
+      bitrunning-disk-option-boombox: HandledBoomBox
 
 - type: entity
   parent: BaseBitrunningDisk

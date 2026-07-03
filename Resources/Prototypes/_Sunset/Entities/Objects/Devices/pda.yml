@@ -1,0 +1,32 @@
+# 🌇Sunset🌇 - Orion's pda.yml only added these 2 leader PDA variants (everything else in their
+# PDA sprite sheet belongs to job/faction infrastructure this fork doesn't have); the linked
+# ID cards didn't exist so they're parented off the existing CBURN/Deathsquad ID cards instead of
+# recreating their sprite blocks (which use file-local YAML anchors that don't resolve across files).
+- type: entity
+  parent: CBURNIDcard
+  id: CBURNLeaderIDcard
+  name: CBURN leader ID card
+  suffix: CBURN Leader
+
+- type: entity
+  parent: CentcomIDCardDeathsquad
+  id: CentcomIDCardDeathsquadLeader
+  name: death squad leader ID card
+
+- type: entity
+  parent: CBURNPDA
+  id: CBURNLeaderPDA
+  name: CBURN leader PDA
+  description: Smells like rotten flesh.
+  components:
+  - type: Pda
+    id: CBURNLeaderIDcard
+
+- type: entity
+  parent: DeathsquadPDA
+  id: DeathsquadLeaderPDA
+  name: deathsquad leader PDA
+  description: Rip and tear until it is done.
+  components:
+  - type: Pda
+    id: CentcomIDCardDeathsquadLeader

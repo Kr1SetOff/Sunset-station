@@ -1,0 +1,19 @@
+# 🌇Sunset🌇 - this fork already has a native EnergyDome feature (_Starlight/Entities/Effects/dome.yml,
+# _Starlight/EnergyDome/*) inherited from the same Goobstation ancestor Orion forked from, so the whole
+# mechanic and most dome color variants didn't need porting. This is the one variant (orange, used by
+# the InteQ shield belt) that the native dome.yml doesn't already have.
+- type: entity
+  parent: EnergyDomeBase
+  id: EnergyDomeSmallOrange
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Effects/EnergyDome/energydome_small.rsi
+    layers:
+    - state: small
+      color: "#E97E0C"
+  - type: PointLight
+    enabled: true
+    radius: 5
+    power: 2
+    color: "#E97E0C"

@@ -1,0 +1,11 @@
+# 🌇Sunset🌇 - source pointed this at a non-namespaced "Clothing/OuterClothing/WinterCoats/coatsec.rsi"
+# sprite that doesn't exist anywhere in this fork either; dropped the Sprite/Clothing overrides so it
+# just inherits ClothingOuterWinterWarden's real art instead of rendering broken.
+- type: entity
+  parent: ClothingOuterWinterWarden
+  id: ClothingOuterWinterSecArmoredAlt
+  name: security winter coat
+  components:
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHatHoodWinterSec
+    slot: head

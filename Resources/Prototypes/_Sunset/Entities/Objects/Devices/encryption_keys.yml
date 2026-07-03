@@ -1,0 +1,24 @@
+# 🌇Sunset🌇 - the InteQ radio channel isn't ported as a full faction (no InteQ jobs/uplink/comms
+# infrastructure exists in this fork), just this channel definition so the encryption key functions.
+- type: radioChannel
+  id: InteQ
+  name: chat-radio-inteq
+  keycode: 'h'
+  frequency: 1600
+  color: "#4b6584"
+
+- type: entity
+  parent: [EncryptionKey, BaseMinorContraband]
+  id: EncryptionKeyInteQ
+  name: InteQ encryption key
+  description: An encryption key used by InteQ.
+  components:
+  - type: EncryptionKey
+    channels:
+    - InteQ
+    defaultChannel: InteQ
+  - type: Sprite
+    sprite: _Sunset/Objects/Devices/encryption_keys.rsi
+    layers:
+    - state: crypt_brown
+    - state: inteq_label
