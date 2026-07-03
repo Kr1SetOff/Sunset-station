@@ -1,0 +1,76 @@
+# 🌇Sunset🌇 - Homelander: a near-invulnerable superhuman antagonist.
+
+# 75% damage reduction on everything; radiation only 20% (his weak point).
+- type: damageModifierSet
+  id: Homelander
+  coefficients:
+    Blunt: 0.25
+    Slash: 0.25
+    Piercing: 0.25
+    Heat: 0.25
+    Shock: 0.25
+    Cold: 0.25
+    Caustic: 0.25
+    Poison: 0.25
+    Bloodloss: 0.25
+    Asphyxiation: 0.25
+    Radiation: 0.8
+
+# Heat vision: an instant burning line in front of him (see HomelanderHeatVisionEvent for why this
+# isn't the cursor-following channelled beam sunset-station had).
+- type: entity
+  parent: BaseAction
+  id: ActionHomelanderHeatVision
+  name: Heat Vision
+  description: Burn a searing line in front of you.
+  components:
+  - type: Action
+    useDelay: 8
+    itemIconStyle: BigAction
+    icon:
+      sprite: Objects/Magic/magicactions.rsi
+      state: fireball
+  - type: InstantAction
+    event: !type:HomelanderHeatVisionEvent
+      range: 10
+      damage:
+        types:
+          Heat: 15
+
+# Scream: knocks everyone around prone (no stun).
+- type: entity
+  parent: BaseAction
+  id: ActionHomelanderScream
+  name: Intimidating Scream
+  description: Let out a deafening scream that knocks everyone around you off their feet.
+  components:
+  - type: Action
+    useDelay: 10
+    itemIconStyle: BigAction
+    icon:
+      sprite: Changeling/changeling_abilities.rsi
+      state: shriek_resonant
+  - type: InstantAction
+    event: !type:HomelanderScreamEvent
+      range: 5
+      knockdownSeconds: 3
+
+# Shockwave: a ground-pound that shoves everyone nearby away (stands in for the flight-landing
+# shockwave sunset-station had - this fork has no Flight system).
+- type: entity
+  parent: BaseAction
+  id: ActionHomelanderShockwave
+  name: Shockwave
+  description: Slam the ground, shoving everyone nearby away and off their feet.
+  components:
+  - type: Action
+    useDelay: 12
+    itemIconStyle: BigAction
+    icon:
+      sprite: Objects/Magic/magicactions.rsi
+      state: repulse
+  - type: InstantAction
+    event: !type:HomelanderShockwaveEvent
+      range: 5
+      force: 15
+      knockdownSeconds: 2

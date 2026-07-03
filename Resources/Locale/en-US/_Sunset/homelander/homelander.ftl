@@ -1,9 +1,15 @@
-# SPDX-License-Identifier: MIT
+# Homelander - a near-invulnerable superhuman antagonist, selectable through the Antagonist menu
+# and the Homelander GameRule (sunset-station's version was a ghost-role-only spawnable mob).
 
-ghost-role-information-homelander-name = Homelander
-ghost-role-information-homelander-description = You are Homelander, the most powerful being on the station. You can fly, fire heat vision from your eyes, shrug off nearly all harm and crush anyone with your bare hands.
-ghost-role-information-homelander-rules = You are a solo antagonist. You answer to no one. Do whatever you believe a god among insects would do - but remember the server rules still apply.
+roles-antag-homelander-name = Homelander
+roles-antag-homelander-objective = You answer to no one. Do whatever you believe a god among insects would do - but remember the server rules still apply.
+role-subtype-homelander = Homelander
 
 homelander-round-end-agent-name = Homelander
 
+homelander-role-greeting = You are Homelander, the most powerful being on this station. Heat vision, an intimidating scream, and a ground-pounding shockwave are yours to command, and almost nothing can hurt you. You answer to no one.
+
 homelander-hyper-hearing-whisper = [italic]You hear a distant whisper from {$name}: "{$message}"[/italic]
+
+admin-verb-text-make-homelander = Make Homelander
+admin-verb-make-homelander = Turns the player into the Homelander antagonist.
