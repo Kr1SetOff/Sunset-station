@@ -1,0 +1,35 @@
+- type: entity
+  parent: BaseItem
+  id: GeneticInjector
+  name: DNA injector
+  description: A single-use injector loaded with a genetic sample. Use it on someone to rewrite their genes.
+  components:
+  - type: Sprite
+    sprite: _Sunset/Objects/Specific/Chemistry/syringe.rsi
+    state: icon
+  - type: Item
+    size: Tiny
+    sprite: _Sunset/Objects/Specific/Chemistry/syringe.rsi
+    heldPrefix: fill-3
+  - type: GeneticInjector
+    uses: 1
+
+- type: entity
+  parent: GeneticInjector
+  id: GeneticInjectorCleanSe
+  name: clean SE injector
+  description: A blank-slate injector that scrubs every structural-enzyme mutation from its target.
+  components:
+  - type: GeneticInjector
+    cleanSe: true
+    applySe: true
+    uses: 1
+
+- type: entity
+  parent: GeneticInjector
+  id: GeneticInjectorActivator
+  name: gene activator injector
+  description: An injector printed from a DNA console that switches on a single researched mutation in its target.
+  components:
+  - type: GeneticInjector
+    uses: 1

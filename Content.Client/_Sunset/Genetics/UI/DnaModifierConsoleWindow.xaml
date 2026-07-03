@@ -1,0 +1,38 @@
+<!--
+SPDX-FileCopyrightText: 2026 sunset-station contributors
+
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+<DefaultWindow xmlns="https://spacestation14.io"
+               Title="{Loc 'dna-modifier-console-title'}"
+               SetSize="520 640"
+               MinSize="460 480">
+    <BoxContainer Orientation="Vertical" VerticalExpand="True" HorizontalExpand="True" Margin="6 6 6 6">
+        <BoxContainer Orientation="Horizontal">
+            <Label Name="OccupantLabel" HorizontalExpand="True" Text="{Loc 'dna-modifier-console-no-occupant'}" />
+            <Button Name="EjectButton" Text="{Loc 'dna-modifier-console-eject'}" />
+        </BoxContainer>
+        <Label Name="StatusLabel" FontColorOverride="#cf4040" Text="" />
+        <Label Name="InstabilityLabel" Text="" />
+        <RichTextLabel Name="MutationsLabel" HorizontalExpand="True" />
+        <Control MinSize="0 6" />
+        <Label Text="{Loc 'dna-modifier-console-header-discovered'}" StyleClasses="LabelKeyText" />
+        <BoxContainer Name="DiscoveredContainer" Orientation="Vertical" HorizontalExpand="True" />
+        <Control MinSize="0 6" />
+        <BoxContainer Orientation="Horizontal">
+            <Label Text="{Loc 'dna-modifier-console-subblock'}" />
+            <Button Name="HighButton" Text="{Loc 'dna-modifier-console-subblock-high'}" />
+            <Button Name="MidButton" Text="{Loc 'dna-modifier-console-subblock-mid'}" />
+            <Button Name="LowButton" Text="{Loc 'dna-modifier-console-subblock-low'}" />
+        </BoxContainer>
+        <BoxContainer Orientation="Horizontal">
+            <Button Name="PulseUiButton" Text="{Loc 'dna-modifier-console-pulse-ui'}" />
+            <Control MinSize="6 0" />
+            <Button Name="PulseSeButton" Text="{Loc 'dna-modifier-console-pulse-se'}" />
+        </BoxContainer>
+        <Control MinSize="0 6" />
+        <ScrollContainer VerticalExpand="True" HorizontalExpand="True" HScrollEnabled="True">
+            <BoxContainer Name="BlockRows" Orientation="Vertical" HorizontalExpand="True" />
+        </ScrollContainer>
+    </BoxContainer>
+</DefaultWindow>
