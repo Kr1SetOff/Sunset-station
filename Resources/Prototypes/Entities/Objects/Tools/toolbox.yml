@@ -53,13 +53,13 @@
   name: mechanical toolbox
   parent: ToolboxBase
   id: ToolboxMechanical
-  description: A blue box, stocked with mechanical tools.
+  description: A rugged toolbox, stocked with mechanical tools.
   components:
   - type: Sprite
-    sprite: Objects/Tools/Toolboxes/toolbox_blue.rsi
+    sprite: _Sunset/Objects/Tools/Toolboxes/toolbox_robust.rsi
     state: icon
   - type: Item
-    sprite: Objects/Tools/Toolboxes/toolbox_blue.rsi
+    sprite: _Sunset/Objects/Tools/Toolboxes/toolbox_robust.rsi
 
 - type: entity
   name: electrical toolbox
