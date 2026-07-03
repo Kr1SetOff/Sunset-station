@@ -476,6 +476,9 @@
       "name": "avionics-systems"
     },
     {
+      "name": "bitrunning"
+    },
+    {
       "name": "bounty",
       "directions": 4,
       "delays": [

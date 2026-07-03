@@ -1,0 +1,327 @@
+# 🌇Sunset🌇 - Bitrunning domain enemy spawners. sunset-station's version (well, Orion's - this is
+# straight from Orion-Station-14) parented most of these to spawner/mob prototypes scattered across
+# Orion's much larger base (Pirate/DeathSquad/ExperimentalSoldier/NukeopsSoldier ghost-role archetypes,
+# a Lavaland Hierophant boss, and Xenomorph/Reindeer "Bitrunning" reskin variants) that don't exist in
+# this fork. Rather than chase down that whole cross-referenced roster, these are redefined as
+# self-contained spawners pointing at hostile mobs this fork already has: MobSpirate for pirate-themed
+# domains, MobSyndicateFootsoldier for the military/soldier-themed ones (DeathSquad, Experimental
+# Soldier, Nukeops, Syndicate, and the "Hierophant" boss slot), and the existing MobXeno*/MobReindeer*
+# mobs directly (no wrapper variant needed). The core "spawn a hostile, count eliminations toward the
+# objective" mechanic is unaffected - only the per-domain cosmetic variety is simplified.
+
+# Objectives
+
+- type: entity
+  parent: MarkerBase
+  id: BitrunningEncryptedCacheObjectiveSpawner
+  name: encrypted cache spawner
+  suffix: Bitrunning
+  categories: [ Spawner ]
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+  - type: ConditionalSpawner
+    prototypes:
+      - EncryptedCacheNode
+
+# Mobs
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobHierophantBitrunning
+  name: Hierophant spawner
+  suffix: Bitrunning
+  categories: [ Spawner ]
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+  - type: ConditionalSpawner
+    prototypes:
+      - MobSyndicateFootsoldier
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobReindeerBuckBitrunning
+  name: Reindeer Buck Spawner
+  suffix: Bitrunning
+  categories: [ Spawner ]
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+  - type: ConditionalSpawner
+    prototypes:
+      - MobReindeerBuck
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobReindeerDoeBitrunning
+  name: Reindeer Doe Spawner
+  suffix: Bitrunning
+  categories: [ Spawner ]
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+  - type: ConditionalSpawner
+    prototypes:
+      - MobReindeerDoe
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobAssistantBatBitrunning
+  name: Assistant Bat spawner
+  suffix: AI, Bat, Bitrunning
+  categories: [ Spawner ]
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+  - type: ConditionalSpawner
+    prototypes:
+    - MobSyndicateFootsoldier
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobAssistantAxeBitrunning
+  name: Assistant Axe spawner
+  suffix: AI, Axe, Bitrunning
+  categories: [ Spawner ]
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+  - type: ConditionalSpawner
+    prototypes:
+    - MobSyndicateFootsoldier
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobAssistantToolboxBitrunning
+  name: Assistant Toolbox spawner
+  suffix: AI, Toolbox, Bitrunning
+  categories: [ Spawner ]
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+  - type: ConditionalSpawner
+    prototypes:
+    - MobSyndicateFootsoldier
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobAssistantSpearBitrunning
+  name: Assistant Spear spawner
+  suffix: AI, Spear, Bitrunning
+  categories: [ Spawner ]
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+  - type: ConditionalSpawner
+    prototypes:
+    - MobSyndicateFootsoldier
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobXenomorphLarvaBitrunning
+  name: xenomorph larva spawner
+  suffix: Bitrunning, Cant Evolve
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+  - type: ConditionalSpawner
+    prototypes:
+    - MobXenoRunner
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobXenomorphDroneBitrunning
+  name: xenomorph drone spawner
+  suffix: Bitrunning
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+  - type: ConditionalSpawner
+    prototypes:
+    - MobXenoDrone
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobXenomorphHunterBitrunning
+  name: xenomorph hunter spawner
+  suffix: Bitrunning
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+  - type: ConditionalSpawner
+    prototypes:
+    - MobXenoRavager
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobXenomorphPraetorianBitrunning
+  name: xenomorph praetorian spawner
+  suffix: Bitrunning
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+  - type: ConditionalSpawner
+    prototypes:
+    - MobXenoPraetorian
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobXenomorphSentinelBitrunning
+  name: xenomorph sentinel spawner
+  suffix: Bitrunning
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+  - type: ConditionalSpawner
+    prototypes:
+    - MobXenoSpitter
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobXenomorphQueenBitrunning
+  name: xenomorph queen spawner
+  suffix: Bitrunning
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+  - type: ConditionalSpawner
+    prototypes:
+    - MobXenoQueen
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobPirateEvaCutlassBitrunning
+  name: pirate spawner
+  suffix: AI, EVA, Energy Cutlass, Bitrunning
+  categories: [ Spawner ]
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+  - type: ConditionalSpawner
+    prototypes:
+    - MobSpirate
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobPirateEvaLaserCarbineBitrunning
+  name: pirate spawner
+  suffix: AI, EVA, Laser Carbine, Bitrunning
+  categories: [ Spawner ]
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+  - type: ConditionalSpawner
+    prototypes:
+    - MobSpirate
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobPirateCutlassBitrunning
+  name: pirate spawner
+  suffix: AI, Energy Cutlass, Bitrunning
+  categories: [ Spawner ]
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+  - type: ConditionalSpawner
+    prototypes:
+    - MobSpirate
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobPirateFlintlockBitrunning
+  name: pirate spawner
+  suffix: AI, Pistol Flintlock, Bitrunning
+  categories: [ Spawner ]
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+  - type: ConditionalSpawner
+    prototypes:
+    - MobSpirate
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobDeathSquadPhoronSabreBitrunning
+  name: Death Squad spawner
+  suffix: AI, Phoron Sabre, Bitrunning
+  categories: [ Spawner ]
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+  - type: ConditionalSpawner
+    prototypes:
+    - MobSyndicateFootsoldier
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobDeathSquadPulseRifleBitrunning
+  name: Death Squad spawner
+  suffix: AI, Pulse Rifle, Bitrunning
+  categories: [ Spawner ]
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+  - type: ConditionalSpawner
+    prototypes:
+    - MobSyndicateFootsoldier
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobExperimentalSoldierBitrunning
+  suffix: AI, Bitrunning
+  categories: [ Spawner ]
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+  - type: ConditionalSpawner
+    prototypes:
+    - MobSyndicateFootsoldier
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobNukeopsSoldierBitrunning
+  suffix: AI, Bitrunning
+  categories: [ Spawner ]
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+  - type: ConditionalSpawner
+    prototypes:
+    - MobSyndicateFootsoldier
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobSyndicateSoldierBitrunning
+  suffix: AI, Bitrunning
+  categories: [ Spawner ]
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+  - type: ConditionalSpawner
+    prototypes:
+    - MobSyndicateFootsoldier

@@ -1,0 +1,34 @@
+- type: job
+  id: Bitrunner
+  name: job-name-bitrunner
+  description: job-description-bitrunner
+  playTimeTracker: JobBitrunner
+  setPreference: false # TODO
+  startingGear: CargoTechGear # TODO
+  icon: "JobIconBitrunner"
+  supervisors: job-supervisors-qm
+  access:
+  - Cargo
+  - Bitrun
+  - Maintenance
+  extendedAccess:
+  - Salvage
+  special:
+  - !type:GiveItemOnHolidaySpecial
+    holiday: BoxingDay
+    prototype: BoxCardboard
+
+- type: accessLevel
+  id: Bitrun
+  name: id-card-access-level-bitrun
+
+- type: playTimeTracker
+  id: JobBitrunner
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconBitrunner
+  icon:
+    sprite: /Textures/_Sunset/Interface/Misc/job_icons.rsi
+    state: Bitrunner
+  jobName: job-name-bitrunner
