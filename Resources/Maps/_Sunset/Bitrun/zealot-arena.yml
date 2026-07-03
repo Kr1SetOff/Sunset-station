@@ -1534,7 +1534,7 @@ entities:
           showEnts: False
           occludes: True
           ent: null
-- proto: ClothingEyesNightVisionGoggles
+- proto: ClothingEyesBase
   entities:
   - uid: 35
     components:
@@ -1650,14 +1650,14 @@ entities:
     - type: Transform
       pos: -1.5084364,-1.1812798
       parent: 1
-- proto: LavalandHierophantMarker
+- proto: MarkerBase
   entities:
   - uid: 392
     components:
     - type: Transform
       pos: 0.5,20.5
       parent: 1
-- proto: LuxuryMedipen
+- proto: CombatMedipen
   entities:
   - uid: 99
     components:
@@ -1669,7 +1669,7 @@ entities:
     - type: Transform
       pos: 0.70280993,-0.44244456
       parent: 1
-- proto: MagazineAntiMateriel
+- proto: MagazineBoxAntiMateriel
   entities:
   - uid: 78
     components:
@@ -1687,7 +1687,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: MarkerBeaconActiveAnchored
+- proto: MarkerBase
   entities:
   - uid: 408
     components:
@@ -1848,7 +1848,7 @@ entities:
     - type: Transform
       pos: 0.5,20.5
       parent: 1
-- proto: SuitStorageExplorerSuit
+- proto: CrateGenericSteel
   entities:
   - uid: 55
     components:
@@ -2606,7 +2606,7 @@ entities:
     - type: Transform
       pos: -3.5,-4.5
       parent: 1
-- proto: WallHierophantArena
+- proto: WallSolid
   entities:
   - uid: 101
     components:

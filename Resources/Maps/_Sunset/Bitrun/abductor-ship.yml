@@ -557,7 +557,7 @@ entities:
     - type: Transform
       pos: 2.5,-0.5
       parent: 1
-- proto: BoneManipulatorAbductor
+- proto: OperatingTable
   entities:
   - uid: 625
     components:
@@ -1943,7 +1943,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 2.5,-13.5
       parent: 1
-- proto: GunneryServerMedium
+- proto: ComputerFrame
   entities:
   - uid: 673
     components:
@@ -2149,7 +2149,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 2.5,-13.5
       parent: 1
-- proto: PlushieAbductor
+- proto: BoxCardboard
   entities:
   - uid: 600
     components:
@@ -2282,14 +2282,14 @@ entities:
     - type: Transform
       pos: 8.5,3.5
       parent: 1
-- proto: SpawnMobAbductorAgentPistol
+- proto: SpawnMobBear
   entities:
   - uid: 880
     components:
     - type: Transform
       pos: -13.5,1.5
       parent: 1
-- proto: SpawnMobAbductorAgentWonderprod
+- proto: SpawnMobBear
   entities:
   - uid: 879
     components:
@@ -2316,7 +2316,7 @@ entities:
     - type: Transform
       pos: 0.5,-12.5
       parent: 1
-- proto: SpawnVehicleChairOfficeDark
+- proto: ChairOfficeDark
   entities:
   - uid: 639
     components:
@@ -2330,7 +2330,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 14.5,2.5
       parent: 1
-- proto: StationRadioServer
+- proto: ComputerFrame
   entities:
   - uid: 681
     components:

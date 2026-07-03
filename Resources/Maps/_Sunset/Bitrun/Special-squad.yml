@@ -2987,7 +2987,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: -4.5,31.5
       parent: 1
-- proto: CartridgeMagnumNeurotoxin
+- proto: CartridgeMagnumSP
   entities:
   - uid: 427
     components:
@@ -3086,7 +3086,7 @@ entities:
     - type: Transform
       pos: -2.5,13.5
       parent: 1
-- proto: ClothingBackpackDuffelSyndicateBurner
+- proto: ClothingBackpackDuffelSyndicate
   entities:
   - uid: 896
     components:
@@ -3126,7 +3126,7 @@ entities:
           priority: 0
           component: ClothingSpeedModifier
         title: null
-- proto: ClothingEyesNightVisionGogglesSyndie
+- proto: ClothingEyesBase
   entities:
   - uid: 228
     components:
@@ -3138,7 +3138,7 @@ entities:
     - type: Transform
       pos: -2.5231166,9.466598
       parent: 1
-- proto: ClothingEyesThermalVisionGogglesSyndie
+- proto: ClothingEyesBase
   entities:
   - uid: 805
     components:
@@ -3492,7 +3492,7 @@ entities:
     - type: Transform
       pos: -10.395966,35.60424
       parent: 1
-- proto: EnchantUnbreaking
+- proto: BoxCardboard
   entities:
   - uid: 639
     components:
@@ -3904,7 +3904,7 @@ entities:
     - type: Transform
       pos: -10.5,33.5
       parent: 1
-- proto: MagazineBoxCaselessRifleBig
+- proto: MagazineBoxCaselessRifle
   entities:
   - uid: 816
     components:
@@ -3918,14 +3918,14 @@ entities:
     - type: Transform
       pos: -8.561914,12.275471
       parent: 1
-- proto: MagazineBoxShotgunUraniumHighCaliber
+- proto: MagazineShotgunSlug
   entities:
   - uid: 875
     components:
     - type: Transform
       pos: -12.541359,30.375061
       parent: 1
-- proto: MagazineCaselessRifleShort
+- proto: MagazinePistolCaselessRifle
   entities:
   - uid: 829
     components:
@@ -3942,21 +3942,21 @@ entities:
     - type: Transform
       pos: -8.738525,14.531908
       parent: 1
-- proto: MagazineHighCaliber
+- proto: MagazineBoxMagnumSP
   entities:
   - uid: 719
     components:
     - type: Transform
       pos: -4.720226,37.720245
       parent: 1
-- proto: MagazineHighCaliberAP
+- proto: MagazineBoxMagnumAP
   entities:
   - uid: 741
     components:
     - type: Transform
       pos: -4.4544034,37.70058
       parent: 1
-- proto: MagazineLightMachineGunRPD
+- proto: MagazineBoxLightRifleBig
   entities:
   - uid: 895
     components:
@@ -3975,7 +3975,7 @@ entities:
     - type: Transform
       pos: -8.344844,11.408643
       parent: 1
-- proto: MagazinePulseShotgun
+- proto: MagazineShotgun
   entities:
   - uid: 814
     components:
@@ -4058,7 +4058,7 @@ entities:
     - type: Transform
       pos: -12.561264,30.967407
       parent: 1
-- proto: MedkitCombatBlueFilled
+- proto: MedkitCombat
   entities:
   - uid: 465
     components:
@@ -4079,7 +4079,7 @@ entities:
     - type: Transform
       pos: -9.531171,4.782549
       parent: 1
-- proto: NFEnergyPickaxe
+- proto: MiningDrillDiamond
   entities:
   - uid: 817
     components:
@@ -4152,7 +4152,7 @@ entities:
         actions: !type:Container
           ents:
           - 95
-- proto: PosterContrabandGoobRedFOSS
+- proto: PosterContrabandClown
   entities:
   - uid: 909
     components:
@@ -4900,7 +4900,7 @@ entities:
     - type: Transform
       pos: -5.5,41.5
       parent: 1
-- proto: RevFlash
+- proto: Flash
   entities:
   - uid: 841
     components:
@@ -4912,7 +4912,7 @@ entities:
     - type: Transform
       pos: -5.2055035,30.601223
       parent: 1
-- proto: RevolutionaryManifesto
+- proto: Paper
   entities:
   - uid: 839
     components:
@@ -5195,7 +5195,7 @@ entities:
     - type: Transform
       pos: -10.5,42.5
       parent: 1
-- proto: SpawnVehicleChairOfficeDark
+- proto: ChairOfficeDark
   entities:
   - uid: 247
     components:
@@ -5332,7 +5332,7 @@ entities:
         - 0
         - 0
         - 0
-- proto: SurgerykitFilled
+- proto: BoxCardboard
   entities:
   - uid: 1017
     components:
@@ -7889,14 +7889,14 @@ entities:
     - type: Transform
       pos: -0.5,37.5
       parent: 1
-- proto: WaterCoolerGold
+- proto: MopBucket
   entities:
   - uid: 934
     components:
     - type: Transform
       pos: -5.5,28.5
       parent: 1
-- proto: WaterVaporTankFilled
+- proto: KvassTank
   entities:
   - uid: 444
     components:
@@ -7911,7 +7911,7 @@ entities:
         actions: !type:Container
           ents:
           - 633
-- proto: WeaponLightMachineGunRPD
+- proto: WeaponLightMachineGunL6
   entities:
   - uid: 903
     components:
@@ -7920,7 +7920,7 @@ entities:
       parent: 1
     - type: Gun
       burstCooldownModified: 0.25
-- proto: WeaponPistolAnaconda
+- proto: WeaponRevolverPython
   entities:
   - uid: 857
     components:
@@ -7937,28 +7937,28 @@ entities:
       rot: 3.141592653589793 rad
       pos: 0.50990343,37.446014
       parent: 1
-- proto: WeaponPulseShotgunHellHammer
+- proto: WeaponShotgunBulldog
   entities:
   - uid: 647
     components:
     - type: Transform
       pos: -6.610469,11.467881
       parent: 1
-- proto: WeaponRifleAnnie
+- proto: WeaponRifleEstoc
   entities:
   - uid: 646
     components:
     - type: Transform
       pos: -7.501094,11.577256
       parent: 1
-- proto: WeaponRifleFamas
+- proto: WeaponRifleLecter
   entities:
   - uid: 825
     components:
     - type: Transform
       pos: -6.4643273,14.5225935
       parent: 1
-- proto: WeaponRifleWSPR
+- proto: WeaponSniperHristov
   entities:
   - uid: 828
     components:
@@ -7967,7 +7967,7 @@ entities:
       parent: 1
     - type: Gun
       burstCooldownModified: 0.25
-- proto: WeaponRussianRevolver
+- proto: WeaponRevolverPython
   entities:
   - uid: 777
     components:

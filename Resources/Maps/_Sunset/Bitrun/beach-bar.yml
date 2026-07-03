@@ -2698,14 +2698,14 @@ entities:
     - type: Transform
       pos: 24.5,10.5
       parent: 1
-- proto: BenchSofaLeft
+- proto: ChairOfficeDark
   entities:
   - uid: 323
     components:
     - type: Transform
       pos: 8.5,31.5
       parent: 1
-- proto: BenchSofaRight
+- proto: ChairOfficeDark
   entities:
   - uid: 324
     components:
@@ -4223,14 +4223,14 @@ entities:
       parent: 1
     - type: Fixtures
       fixtures: {}
-- proto: DiscoBeachBall
+- proto: BoxCardboard
   entities:
   - uid: 620
     components:
     - type: Transform
       pos: 7.5,8.5
       parent: 1
-- proto: DoubleBed
+- proto: Chair
   entities:
   - uid: 621
     components:
@@ -4242,7 +4242,7 @@ entities:
     - type: Transform
       pos: 23.5,19.5
       parent: 1
-- proto: DoubleBedsheetBlack
+- proto: BoxCardboard
   entities:
   - uid: 623
     components:
@@ -4250,7 +4250,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: 22.5,23.5
       parent: 1
-- proto: DoubleBedsheetIan
+- proto: BoxCardboard
   entities:
   - uid: 624
     components:
@@ -4366,7 +4366,7 @@ entities:
       parent: 1
     - type: Fixtures
       fixtures: {}
-- proto: FitnessPunchingBag
+- proto: BoxCardboard
   entities:
   - uid: 643
     components:
@@ -4378,7 +4378,7 @@ entities:
     - type: Transform
       pos: 24.5,12.5
       parent: 1
-- proto: FloorFlockZone2
+- proto: MarkerBase
   entities:
   - uid: 645
     components:
@@ -5166,7 +5166,7 @@ entities:
     - type: Transform
       pos: 15.5,25.5
       parent: 1
-- proto: MarkerBeaconActiveAnchored
+- proto: MarkerBase
   entities:
   - uid: 764
     components:
@@ -5196,7 +5196,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: 17.5,15.5
       parent: 1
-- proto: Megaphone
+- proto: BoxCardboard
   entities:
   - uid: 769
     components:
@@ -5275,28 +5275,28 @@ entities:
     - type: Transform
       pos: 14.55928,28.515379
       parent: 1
-- proto: PokerChip100
+- proto: SpaceCash100
   entities:
   - uid: 781
     components:
     - type: Transform
       pos: 7.6006,27.71729
       parent: 1
-- proto: PokerChip5
+- proto: SpaceCash
   entities:
   - uid: 782
     components:
     - type: Transform
       pos: 7.287867,27.71729
       parent: 1
-- proto: PokerChip50
+- proto: SpaceCash
   entities:
   - uid: 783
     components:
     - type: Transform
       pos: 7.4755073,27.545416
       parent: 1
-- proto: PokerChipsBox
+- proto: BoxCardboard
   entities:
   - uid: 784
     components:
@@ -5588,7 +5588,7 @@ entities:
     - type: Transform
       pos: 17.5,9.5
       parent: 1
-- proto: SpawnPointSkeletonBartender
+- proto: SpawnPointGhostRatKing
   entities:
   - uid: 332
     components:
@@ -5703,7 +5703,7 @@ entities:
     - type: Transform
       pos: 15.5,18.5
       parent: 1
-- proto: SuitStorageExplorerSuit
+- proto: CrateGenericSteel
   entities:
   - uid: 846
     components:

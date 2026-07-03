@@ -952,7 +952,7 @@ entities:
     - type: Transform
       pos: -0.5,8.5
       parent: 1
-- proto: StatueBustDecoration
+- proto: StatueVenusRed
   entities:
   - uid: 189
     components:
@@ -1042,7 +1042,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 2.5,11.5
       parent: 1
-- proto: ThrusterShuttleEvac
+- proto: Thruster
   entities:
   - uid: 35
     components:

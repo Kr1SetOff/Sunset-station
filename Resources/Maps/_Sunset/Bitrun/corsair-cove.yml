@@ -1407,7 +1407,7 @@ entities:
     - type: Transform
       pos: 5.5,30.5
       parent: 1
-- proto: BarricadeSteel
+- proto: Grille
   entities:
   - uid: 208
     components:
@@ -2547,7 +2547,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: 3.5,34.5
       parent: 1
-- proto: CrateGolden
+- proto: CrateGenericSteel
   entities:
   - uid: 426
     components:
@@ -2611,14 +2611,14 @@ entities:
       parent: 1
     - type: Fixtures
       fixtures: {}
-- proto: DoubleBed
+- proto: Chair
   entities:
   - uid: 439
     components:
     - type: Transform
       pos: 4.5,32.5
       parent: 1
-- proto: DoubleBedsheetClown
+- proto: BoxCardboard
   entities:
   - uid: 440
     components:
@@ -4798,7 +4798,7 @@ entities:
     - type: Transform
       pos: -8.5,24.5
       parent: 1
-- proto: SpawnLandMineExplosiveRandom
+- proto: MarkerBase
   entities:
   - uid: 852
     components:
@@ -4858,7 +4858,7 @@ entities:
     - type: Transform
       pos: -4.5,29.5
       parent: 1
-- proto: SpawnPointSkeletonPirate
+- proto: SpawnPointGhostRatKing
   entities:
   - uid: 862
     components:

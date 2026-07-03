@@ -410,7 +410,7 @@ entities:
       parent: 1
     - type: Fixtures
       fixtures: {}
-- proto: SuitStorageExplorerSuit
+- proto: CrateGenericSteel
   entities:
   - uid: 34
     components:

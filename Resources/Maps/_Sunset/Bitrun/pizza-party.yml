@@ -288,7 +288,7 @@ entities:
     - type: Transform
       pos: 0.5,2.5
       parent: 1
-- proto: AirlockLawyerLocked
+- proto: AirlockServiceLocked
   entities:
   - uid: 6
     components:
@@ -1539,21 +1539,21 @@ entities:
     - type: Transform
       pos: 12.5,25.5
       parent: 1
-- proto: CardDeckBlack
+- proto: BoxCardboard
   entities:
   - uid: 247
     components:
     - type: Transform
       pos: -1.5245504,22.72346
       parent: 1
-- proto: CardDeckNanotrasen
+- proto: BoxCardboard
   entities:
   - uid: 248
     components:
     - type: Transform
       pos: -1.5245504,23.426584
       parent: 1
-- proto: CardDeckSyndicate
+- proto: BoxCardboard
   entities:
   - uid: 249
     components:
@@ -1955,7 +1955,7 @@ entities:
       parent: 1
     - type: Fixtures
       fixtures: {}
-- proto: Desktop
+- proto: BoxCardboard
   entities:
   - uid: 300
     components:
@@ -2438,7 +2438,7 @@ entities:
     - type: Transform
       pos: 1.4631635,11.712632
       parent: 1
-- proto: PokerChipsBox
+- proto: BoxCardboard
   entities:
   - uid: 366
     components:
@@ -2963,7 +2963,7 @@ entities:
     - type: Transform
       pos: 0.5,19.5
       parent: 1
-- proto: SpawnMobBearGoon
+- proto: SpawnMobBear
   entities:
   - uid: 422
     components:
@@ -5776,7 +5776,7 @@ entities:
     - type: Transform
       pos: 1.5,8.5
       parent: 1
-- proto: WeaponEarthGovLaserPistol
+- proto: WeaponPistolCHIMP
   entities:
   - uid: 897
     components:

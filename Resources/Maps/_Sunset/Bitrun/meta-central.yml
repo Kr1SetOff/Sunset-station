@@ -949,7 +949,7 @@ entities:
     - type: Transform
       pos: 9.5,37.5
       parent: 1
-- proto: AirlockCaptain
+- proto: Airlock
   entities:
   - uid: 6
     components:
@@ -1087,7 +1087,7 @@ entities:
     - type: Transform
       pos: 11.5,10.5
       parent: 1
-- proto: AirlockHeadOfPersonnel
+- proto: Airlock
   entities:
   - uid: 31
     components:
@@ -1894,7 +1894,7 @@ entities:
     - type: Transform
       pos: -8.5,31.5
       parent: 1
-- proto: BarricadeSteel
+- proto: Grille
   entities:
   - uid: 179
     components:
@@ -3887,7 +3887,7 @@ entities:
     - type: Transform
       pos: -11.006228,30.073023
       parent: 1
-- proto: CardBoxNanotrasen
+- proto: BoxCardboard
   entities:
   - uid: 571
     components:
@@ -4657,14 +4657,14 @@ entities:
     - type: Transform
       pos: -8.908265,34.876343
       parent: 1
-- proto: CaseSecurityDragunov
+- proto: BoxCardboard
   entities:
   - uid: 722
     components:
     - type: Transform
       pos: -3.5060935,25.588642
       parent: 1
-- proto: CaseSecurityMini
+- proto: BoxCardboard
   entities:
   - uid: 723
     components:
@@ -4775,7 +4775,7 @@ entities:
     - type: Transform
       pos: 10.339864,12.713047
       parent: 1
-- proto: ChemistryBottleIbuprofen
+- proto: ChemistryBottleAmbuzol
   entities:
   - uid: 740
     components:
@@ -4854,14 +4854,14 @@ entities:
     - type: Transform
       pos: -14.5,32.5
       parent: 1
-- proto: ClothingBackpackSatchelDrone
+- proto: ClothingBackpackSatchel
   entities:
   - uid: 764
     components:
     - type: Transform
       pos: -3.5,12.5
       parent: 1
-- proto: ClothingBeltCorporateJudo
+- proto: ClothingBeltJudo
   entities:
   - uid: 765
     components:
@@ -4909,7 +4909,7 @@ entities:
     - type: Transform
       pos: -13.5,14.5
       parent: 1
-- proto: ClothingEyesNightVisionGoggles
+- proto: ClothingEyesBase
   entities:
   - uid: 773
     components:
@@ -4926,7 +4926,7 @@ entities:
     - type: Transform
       pos: -1.3686779,0.77335525
       parent: 1
-- proto: ClothingEyesThermalVisionGogglesSyndie
+- proto: ClothingEyesBase
   entities:
   - uid: 743
     components:
@@ -5069,7 +5069,7 @@ entities:
     - type: Transform
       pos: 10.5,14.5
       parent: 1
-- proto: ClothingOuterSuitPickle
+- proto: ClothingOuterStorageBase
   entities:
   - uid: 792
     components:
@@ -5391,7 +5391,7 @@ entities:
           showEnts: False
           occludes: True
           ent: null
-- proto: CrateWooden
+- proto: CrateGenericSteel
   entities:
   - uid: 832
     components:
@@ -5478,7 +5478,7 @@ entities:
     - type: Transform
       pos: -20.5,6.5
       parent: 1
-- proto: DocumentPrinter
+- proto: BoxCardboard
   entities:
   - uid: 843
     components:
@@ -5648,7 +5648,7 @@ entities:
       parent: 1
     - type: Fixtures
       fixtures: {}
-- proto: FaceHuggerToys
+- proto: BoxCardboard
   entities:
   - uid: 864
     components:
@@ -7422,7 +7422,7 @@ entities:
     - type: Transform
       pos: -10.5,37.5
       parent: 1
-- proto: HoloCigar
+- proto: Cigarette
   entities:
   - uid: 748
     components:
@@ -7679,7 +7679,7 @@ entities:
     - type: Transform
       pos: -0.5,10.5
       parent: 1
-- proto: MarkerBeaconActiveAnchored
+- proto: MarkerBase
   entities:
   - uid: 1227
     components:
@@ -7760,7 +7760,7 @@ entities:
     - type: Transform
       pos: 10.5,14.5
       parent: 1
-- proto: MeleeHammer
+- proto: HammerBreachingNT
   entities:
   - uid: 1242
     components:
@@ -8729,7 +8729,7 @@ entities:
     - type: Transform
       pos: 3.5687308,25.665857
       parent: 1
-- proto: ResearchDataDisk
+- proto: BoxCardboard
   entities:
   - uid: 1409
     components:
@@ -8751,7 +8751,7 @@ entities:
     - type: Transform
       pos: 4.6686883,9.750196
       parent: 1
-- proto: ResinNest
+- proto: WallSolid
   entities:
   - uid: 1413
     components:
@@ -8763,7 +8763,7 @@ entities:
     - type: Transform
       pos: -8.5,11.5
       parent: 1
-- proto: ResinWeed
+- proto: MarkerBase
   entities:
   - uid: 1415
     components:
@@ -8789,7 +8789,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -4.5,12.5
       parent: 1
-- proto: ResinWeedNode
+- proto: MarkerBase
   entities:
   - uid: 1419
     components:
@@ -8810,7 +8810,7 @@ entities:
     - type: Transform
       pos: 5.5,9.5
       parent: 1
-- proto: RipleyChassis
+- proto: MechRipley
   entities:
   - uid: 1422
     components:
@@ -8824,7 +8824,7 @@ entities:
     - type: Transform
       pos: -11.443728,30.557398
       parent: 1
-- proto: RMCCatwalkStrata
+- proto: Grille
   entities:
   - uid: 1424
     components:
@@ -9117,7 +9117,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 19.5,23.5
       parent: 1
-- proto: SpawnLandMineExplosiveRandom
+- proto: MarkerBase
   entities:
   - uid: 1469
     components:
@@ -9440,7 +9440,7 @@ entities:
       parent: 1
     - type: Lock
       locked: False
-- proto: SurgerykitFilled
+- proto: BoxCardboard
   entities:
   - uid: 1511
     components:
@@ -10026,7 +10026,7 @@ entities:
     - type: Transform
       pos: 0.27357876,-0.06452513
       parent: 1
-- proto: UnlitMolotov
+- proto: GrenadeIncendiary
   entities:
   - uid: 1612
     components:
@@ -11787,7 +11787,7 @@ entities:
     - type: Transform
       pos: -1.5,38.5
       parent: 1
-- proto: WallResin
+- proto: WallSolid
   entities:
   - uid: 1961
     components:
@@ -12826,7 +12826,7 @@ entities:
     - type: Transform
       pos: -13.5,27.5
       parent: 1
-- proto: WeaponEarthGovLaserRifle
+- proto: WeaponEnergySniper
   entities:
   - uid: 2163
     components:
@@ -12850,7 +12850,7 @@ entities:
     - type: Transform
       pos: 16.520386,26.575895
       parent: 1
-- proto: WeaponRifleM16A4
+- proto: WeaponRifleAk
   entities:
   - uid: 831
     components:
@@ -13071,7 +13071,7 @@ entities:
     - type: Transform
       pos: -12.5,29.5
       parent: 1
-- proto: XenomorphEggBurst
+- proto: MarkerBase
   entities:
   - uid: 2204
     components:

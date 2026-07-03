@@ -1,0 +1,81 @@
+# 🌇Sunset🌇 - ported from Goobstation's fishing minigame (via Orion-Station-14).
+- type: entity
+  id: FishingRod
+  parent: BaseItem
+  name: fishing rod
+  description: It's time to go fishing!
+  components:
+  - type: Sprite
+    sprite: _Sunset/Objects/Specific/Fishing/fishing_rod.rsi
+    state: icon
+  - type: Item
+    sprite: _Sunset/Objects/Specific/Fishing/fishing_rod.rsi
+    size: Normal
+  - type: UseDelay
+    delay: 0.08
+  - type: MeleeWeapon
+    wideAnimationRotation: 45
+    attackRate: 1.0
+    damage:
+      types:
+        Piercing: 4
+  - type: FishingRod
+
+- type: entity
+  id: FishingLure
+  parent: BaseItem
+  name: fishing lure
+  description: fish come here
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    noRot: true
+    sprite: _Sunset/Objects/Specific/Fishing/fishing_lure.rsi
+    state: icon
+  - type: Item
+    sprite: _Sunset/Objects/Specific/Fishing/fishing_lure.rsi
+    size: Normal
+  - type: FishingLure
+
+- type: entity
+  id: BaseFishingSpot
+  abstract: true
+  name: suspicious waves
+  description: Something is floating here...
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: FishingSpot
+    fishList: !type:NestedSelector
+      tableId: WaterFishingLootTable
+    fishDefaultTimer: 25.0
+    fishTimerVariety: 15.0
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        layer:
+        - ItemMask
+        mask:
+        - HighImpassable
+        density: 1000
+        hard: false
+  - type: Transform
+    anchored: true
+    noRot: true
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Sprite
+    sprite: _Sunset/Objects/Specific/Fishing/fishing_spot.rsi
+    state: water
+  - type: Icon
+    sprite: _Sunset/Objects/Specific/Fishing/fishing_spot.rsi
+    state: water
+
+- type: entity
+  id: FishingSpotWater
+  parent: BaseFishingSpot

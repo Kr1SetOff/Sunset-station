@@ -1113,14 +1113,14 @@ entities:
     - type: Transform
       pos: 0.5,29.5
       parent: 1
-- proto: AugmentPowerCellSlot
+- proto: PowerCellHigh
   entities:
   - uid: 659
     components:
     - type: Transform
       pos: -2.653781,17.40514
       parent: 1
-- proto: AugmentStrength
+- proto: PowerCellHigh
   entities:
   - uid: 651
     components:
@@ -1132,7 +1132,7 @@ entities:
     - type: Transform
       pos: -2.731906,17.795765
       parent: 1
-- proto: AutodocSyndie
+- proto: OperatingTable
   entities:
   - uid: 649
     components:
@@ -1173,7 +1173,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 1.5,28.5
       parent: 1
-- proto: BenchSofaCorpLeft
+- proto: ChairOfficeDark
   entities:
   - uid: 619
     components:
@@ -1181,7 +1181,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 3.5,9.5
       parent: 1
-- proto: BenchSofaCorpMiddle
+- proto: ChairOfficeDark
   entities:
   - uid: 641
     components:
@@ -1189,7 +1189,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 3.5,8.5
       parent: 1
-- proto: BenchSofaCorpRight
+- proto: ChairOfficeDark
   entities:
   - uid: 642
     components:
@@ -2567,7 +2567,7 @@ entities:
     - type: Transform
       pos: -2.5,8.5
       parent: 1
-- proto: CardBoxSyndicate
+- proto: BoxCardboard
   entities:
   - uid: 559
     components:
@@ -2889,14 +2889,14 @@ entities:
     - type: Transform
       pos: -5.6376915,22.4312
       parent: 1
-- proto: ClothingEyesGlassesMedChem
+- proto: ClothingEyesGlasses
   entities:
   - uid: 561
     components:
     - type: Transform
       pos: -5.4011207,22.770433
       parent: 1
-- proto: ClothingHandsGlovesExplosiveShock
+- proto: ClothingHandsGlovesCombat
   entities:
   - uid: 527
     components:
@@ -2914,7 +2914,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: ClothingMaskMuzzleShock
+- proto: ClothingMaskGas
   entities:
   - uid: 653
     components:
@@ -3031,7 +3031,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -5.5,25.5
       parent: 1
-- proto: ComputerContractor
+- proto: ComputerFrame
   entities:
   - uid: 739
     components:
@@ -3068,7 +3068,7 @@ entities:
     - type: Transform
       pos: 4.5,20.5
       parent: 1
-- proto: CrateFreezerInterdyneSecure
+- proto: CrateFreezer
   entities:
   - uid: 662
     components:
@@ -3088,7 +3088,7 @@ entities:
           showEnts: False
           occludes: True
           ent: null
-- proto: CrateInterdyneSecure
+- proto: CrateSecure
   entities:
   - uid: 1230
     components:
@@ -3211,7 +3211,7 @@ entities:
     - type: Transform
       pos: -2.6197624,19.434664
       parent: 1
-- proto: FlagLizard
+- proto: BoxCardboard
   entities:
   - uid: 636
     components:
@@ -3229,14 +3229,14 @@ entities:
       parent: 1
     - type: Fixtures
       fixtures: {}
-- proto: FloraAshtreePale
+- proto: FloraTreeSnow
   entities:
   - uid: 581
     components:
     - type: Transform
       pos: 9.372097,9.261433
       parent: 1
-- proto: FloraAshYellowFlowers
+- proto: FloraTree
   entities:
   - uid: 590
     components:
@@ -3248,7 +3248,7 @@ entities:
     - type: Transform
       pos: 7.5,7.5
       parent: 1
-- proto: FloraPaleSprouts
+- proto: FloraTree
   entities:
   - uid: 583
     components:
@@ -3294,7 +3294,7 @@ entities:
     - type: Transform
       pos: 5.5097694,22.703205
       parent: 1
-- proto: FoodMeatSynth
+- proto: FoodMeatFish
   entities:
   - uid: 663
     components:
@@ -3317,7 +3317,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: FoodSnackLollypopCentcomm
+- proto: BoxCardboard
   entities:
   - uid: 1049
     components:
@@ -3334,7 +3334,7 @@ entities:
     - type: Transform
       pos: -2.6420307,-4.477495
       parent: 1
-- proto: FoodSnackLollypopWrappedSyndicate
+- proto: BoxCardboard
   entities:
   - uid: 728
     components:
@@ -4110,7 +4110,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: MagazineRifleSR50
+- proto: MagazineBoxAntiMateriel
   entities:
   - uid: 396
     components:
@@ -4124,7 +4124,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -0.6147125,0.6383587
       parent: 1
-- proto: MagazineRifleSR50AP
+- proto: MagazineBoxAntiMateriel
   entities:
   - uid: 191
     components:
@@ -4162,7 +4162,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: MagazineSMGP90
+- proto: MagazineLightRifleSP
   entities:
   - uid: 1100
     components:
@@ -4198,7 +4198,7 @@ entities:
     - type: Transform
       pos: -6.5,12.5
       parent: 1
-- proto: MedicalBiofabricator
+- proto: OperatingTable
   entities:
   - uid: 631
     components:
@@ -4212,7 +4212,7 @@ entities:
     - type: Transform
       pos: -4.5,26.5
       parent: 1
-- proto: MedkitBSOFilled
+- proto: MedkitCombat
   entities:
   - uid: 1160
     components:
@@ -4236,7 +4236,7 @@ entities:
     - type: Transform
       pos: -6.50387,15.640993
       parent: 1
-- proto: OperatingTableFilled
+- proto: OperatingTable
   entities:
   - uid: 200
     components:
@@ -4250,7 +4250,7 @@ entities:
     - type: Transform
       pos: -0.5,-8.5
       parent: 1
-- proto: ParamedHypo
+- proto: Syringe
   entities:
   - uid: 1161
     components:
@@ -4334,14 +4334,14 @@ entities:
     - type: Transform
       pos: -10.723891,20.682636
       parent: 1
-- proto: PokerChip100One
+- proto: SpaceCash100
   entities:
   - uid: 668
     components:
     - type: Transform
       pos: 4.3851633,14.376452
       parent: 1
-- proto: PokerChip25One
+- proto: SpaceCash
   entities:
   - uid: 670
     components:
@@ -4353,14 +4353,14 @@ entities:
     - type: Transform
       pos: 4.6212845,14.651772
       parent: 1
-- proto: PokerChip5Five
+- proto: SpaceCash
   entities:
   - uid: 675
     components:
     - type: Transform
       pos: 4.2474265,12.558882
       parent: 1
-- proto: PokerChipsBox
+- proto: BoxCardboard
   entities:
   - uid: 672
     components:
@@ -5244,7 +5244,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 6.5,10.5
       parent: 1
-- proto: ReinforcedSecretDoor
+- proto: WallSolid
   entities:
   - uid: 456
     components:
@@ -5259,7 +5259,7 @@ entities:
     - type: Transform
       pos: 4.544443,8.399862
       parent: 1
-- proto: RMCCatwalkStrata
+- proto: Grille
   entities:
   - uid: 442
     components:
@@ -5345,7 +5345,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: -4.5,10.5
       parent: 1
-- proto: RMCMachinePropBig1
+- proto: CrateGenericSteel
   entities:
   - uid: 450
     components:
@@ -5353,7 +5353,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -5.5,10.5
       parent: 1
-- proto: RMCMachinePropBig10
+- proto: CrateGenericSteel
   entities:
   - uid: 445
     components:
@@ -5361,7 +5361,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -6.5,10.5
       parent: 1
-- proto: RMCMachinePropBig11
+- proto: CrateGenericSteel
   entities:
   - uid: 449
     components:
@@ -5369,7 +5369,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -8.5,7.5
       parent: 1
-- proto: RMCMachinePropBig6
+- proto: CrateGenericSteel
   entities:
   - uid: 467
     components:
@@ -5377,7 +5377,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -6.5,7.5
       parent: 1
-- proto: RMCMachinePropBig7
+- proto: CrateGenericSteel
   entities:
   - uid: 441
     components:
@@ -5385,7 +5385,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -8.5,10.5
       parent: 1
-- proto: RMCMachinePropSmallVent2
+- proto: CrateGenericSteel
   entities:
   - uid: 439
     components:
@@ -5404,7 +5404,7 @@ entities:
     - type: Transform
       pos: -2.5292006,11.255283
       parent: 1
-- proto: RMCOverheadSignNeonPharmacy
+- proto: PosterContrabandClown
   entities:
   - uid: 446
     components:
@@ -6181,7 +6181,7 @@ entities:
     - type: Transform
       pos: 6.5,12.5
       parent: 1
-- proto: SpawnMobWhiteWolf
+- proto: SpawnMobBear
   entities:
   - uid: 1103
     components:
@@ -6248,7 +6248,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: SyndicateLollypopBundle
+- proto: BoxCardboard
   entities:
   - uid: 724
     components:
@@ -6271,21 +6271,21 @@ entities:
     - type: Transform
       pos: 4.5,26.5
       parent: 1
-- proto: SyringeHeroin
+- proto: Syringe
   entities:
   - uid: 760
     components:
     - type: Transform
       pos: -4.722086,15.649502
       parent: 1
-- proto: SyringeMicroplastics
+- proto: Syringe
   entities:
   - uid: 758
     components:
     - type: Transform
       pos: -4.972086,15.665127
       parent: 1
-- proto: SyringePoisonFent
+- proto: Syringe
   entities:
   - uid: 681
     components:
@@ -6640,7 +6640,7 @@ entities:
     - type: Transform
       pos: -2.5,15.5
       parent: 1
-- proto: VoiceSignaller
+- proto: BoxCardboard
   entities:
   - uid: 1220
     components:
@@ -8763,7 +8763,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: -0.5,-0.5
       parent: 1
-- proto: WeaponLightMachineGunL6CInfinite
+- proto: WeaponLightMachineGunL6C
   entities:
   - uid: 1184
     components:
@@ -8779,7 +8779,7 @@ entities:
     - type: Transform
       pos: -8.539576,17.61537
       parent: 1
-- proto: WeaponPistolAnaconda
+- proto: WeaponRevolverPython
   entities:
   - uid: 1148
     components:
@@ -8787,7 +8787,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 4.2856917,8.371282
       parent: 1
-- proto: WeaponPistolDesertEagle
+- proto: WeaponRevolverDeckard
   entities:
   - uid: 1182
     components:
@@ -8825,7 +8825,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -0.6064701,0.0379467
       parent: 1
-- proto: WeaponRifleAnnie
+- proto: WeaponRifleEstoc
   entities:
   - uid: 398
     components:
@@ -8841,7 +8841,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: WeaponRifleBurner
+- proto: WeaponRifleAk
   entities:
   - uid: 1105
     components:
@@ -8859,7 +8859,7 @@ entities:
       parent: 1
     - type: Gun
       burstCooldownModified: 0.25
-- proto: WeaponRifleM16A4
+- proto: WeaponRifleAk
   entities:
   - uid: 487
     components:
@@ -8884,7 +8884,7 @@ entities:
       parent: 1
     - type: Gun
       burstCooldownModified: 0.25
-- proto: WeaponRifleSR127
+- proto: WeaponSniperMosin
   entities:
   - uid: 338
     components:
@@ -8892,7 +8892,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -0.3396623,1.1897535
       parent: 1
-- proto: WeaponRifleWSPR
+- proto: WeaponSniperHristov
   entities:
   - uid: 1107
     components:
@@ -8917,7 +8917,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: WeaponShotgunBulldogLegallyDistinct
+- proto: WeaponShotgunBulldog
   entities:
   - uid: 1128
     components:
@@ -8940,7 +8940,7 @@ entities:
       parent: 1
     - type: Gun
       burstCooldownModified: 0.25
-- proto: WeaponSubMachineGunM7S
+- proto: WeaponSubMachineGunC20r
   entities:
   - uid: 1119
     components:
@@ -8949,7 +8949,7 @@ entities:
       parent: 1
     - type: Gun
       burstCooldownModified: 0.25
-- proto: WeaponSubMachineGunP90
+- proto: WeaponSubMachineGunWt550
   entities:
   - uid: 1133
     components:

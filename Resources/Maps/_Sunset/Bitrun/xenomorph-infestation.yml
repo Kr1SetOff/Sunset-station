@@ -544,14 +544,14 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 1.5,0.5
       parent: 1
-- proto: ClothingEyesNightVisionGoggles
+- proto: ClothingEyesBase
   entities:
   - uid: 38
     components:
     - type: Transform
       pos: -22.5,22.5
       parent: 1
-- proto: ClothingHeadHelmetBasicAlt
+- proto: ClothingHeadHelmetBasic
   entities:
   - uid: 39
     components:
@@ -701,7 +701,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: -1.5,-1.5
       parent: 1
-- proto: ResinNest
+- proto: WallSolid
   entities:
   - uid: 63
     components:
@@ -793,7 +793,7 @@ entities:
     - type: Transform
       pos: -19.5,28.5
       parent: 1
-- proto: ResinWeed
+- proto: MarkerBase
   entities:
   - uid: 81
     components:
@@ -945,7 +945,7 @@ entities:
     - type: Transform
       pos: 8.5,14.5
       parent: 1
-- proto: ResinWeedNode
+- proto: MarkerBase
   entities:
   - uid: 111
     components:
@@ -1331,7 +1331,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 2.5,-0.5
       parent: 1
-- proto: ThrusterShuttleEvac
+- proto: Thruster
   entities:
   - uid: 183
     components:
@@ -1352,7 +1352,7 @@ entities:
     - type: Transform
       pos: 2.4740682,1.5934309
       parent: 1
-- proto: UEGShield
+- proto: ClothingOuterArmorBasic
   entities:
   - uid: 186
     components:
@@ -3016,7 +3016,7 @@ entities:
     - type: Transform
       pos: -16.5,19.5
       parent: 1
-- proto: WallResin
+- proto: WallSolid
   entities:
   - uid: 518
     components:
@@ -4761,7 +4761,7 @@ entities:
     - type: Transform
       pos: 0.5,0.5
       parent: 1
-- proto: WeaponEarthGovLaserMG
+- proto: WeaponLightMachineGunL6C
   entities:
   - uid: 865
     components:
@@ -4773,14 +4773,14 @@ entities:
     - type: Transform
       pos: 0.5612507,0.1075716
       parent: 1
-- proto: WeaponPistolG22
+- proto: WeaponPistolViper
   entities:
   - uid: 867
     components:
     - type: Transform
       pos: -19.5,28.5
       parent: 1
-- proto: WeaponRifleM41
+- proto: WeaponRifleLecterXL8
   entities:
   - uid: 868
     components:
@@ -4808,7 +4808,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -2.5,1.5
       parent: 1
-- proto: XenomorphEggBurst
+- proto: MarkerBase
   entities:
   - uid: 872
     components:
