@@ -1,0 +1,187 @@
+# 🌇Sunset🌇 - Hotline Miami 2 animal-mask costume sets, built from locally-supplied sprite sheets.
+# Each set is a mask (all four) plus whichever of gloves/jacket/tank-top the source art actually
+# included per animal - not every animal has every slot. Armor values are cosmetic-tier by design
+# (these are gang costumes, not real protective gear).
+
+# --- Swan (mask + jacket) ---
+
+- type: entity
+  parent: ClothingMaskBase
+  id: ClothingMaskHotlineSwan
+  name: swan mask
+  description: A cracked plastic swan mask. Something about it feels final.
+  components:
+  - type: Sprite
+    sprite: _Sunset/Clothing/Mask/HotlineMiami/swan.rsi
+  - type: Clothing
+    sprite: _Sunset/Clothing/Mask/HotlineMiami/swan.rsi
+  - type: Item
+    sprite: _Sunset/Clothing/Mask/HotlineMiami/swan.rsi
+
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterHotlineSwan
+  name: swan gang jacket
+  description: A worn jacket favored by the swan-masked crew.
+  components:
+  - type: Sprite
+    sprite: _Sunset/Clothing/OuterClothing/HotlineMiami/swan.rsi
+  - type: Clothing
+    sprite: _Sunset/Clothing/OuterClothing/HotlineMiami/swan.rsi
+  - type: Item
+    size: Normal
+    sprite: _Sunset/Clothing/OuterClothing/HotlineMiami/swan.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+
+# --- Bear (mask + gloves + armor + tank top) ---
+
+- type: entity
+  parent: ClothingMaskBase
+  id: ClothingMaskHotlineBear
+  name: bear mask
+  description: A grinning bear mask, scuffed from use.
+  components:
+  - type: Sprite
+    sprite: _Sunset/Clothing/Mask/HotlineMiami/bear.rsi
+  - type: Clothing
+    sprite: _Sunset/Clothing/Mask/HotlineMiami/bear.rsi
+  - type: Item
+    sprite: _Sunset/Clothing/Mask/HotlineMiami/bear.rsi
+
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingHandsHotlineBear
+  name: bear gang gloves
+  description: Thick gloves, stained dark at the knuckles.
+  components:
+  - type: Sprite
+    sprite: _Sunset/Clothing/Hands/HotlineMiami/bear.rsi
+  - type: Clothing
+    sprite: _Sunset/Clothing/Hands/HotlineMiami/bear.rsi
+  - type: Item
+    sprite: _Sunset/Clothing/Hands/HotlineMiami/bear.rsi
+
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterHotlineBear
+  name: bear gang vest
+  description: An olive combat vest with a snarling bear stitched on the back.
+  components:
+  - type: Sprite
+    sprite: _Sunset/Clothing/OuterClothing/HotlineMiami/bear.rsi
+  - type: Clothing
+    sprite: _Sunset/Clothing/OuterClothing/HotlineMiami/bear.rsi
+  - type: Item
+    size: Normal
+    sprite: _Sunset/Clothing/OuterClothing/HotlineMiami/bear.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformHotlineBear
+  name: bear gang tank top
+  description: A teal tank top, faded from too many washes.
+  components:
+  - type: Sprite
+    sprite: _Sunset/Clothing/Uniforms/HotlineMiami/bear.rsi
+  - type: Clothing
+    sprite: _Sunset/Clothing/Uniforms/HotlineMiami/bear.rsi
+  - type: Item
+    sprite: _Sunset/Clothing/Uniforms/HotlineMiami/bear.rsi
+
+# --- Zebra (mask + jacket) ---
+
+- type: entity
+  parent: ClothingMaskBase
+  id: ClothingMaskHotlineZebra
+  name: zebra mask
+  description: A black-and-white striped mask. Easy to lose in a crowd.
+  components:
+  - type: Sprite
+    sprite: _Sunset/Clothing/Mask/HotlineMiami/zebra.rsi
+  - type: Clothing
+    sprite: _Sunset/Clothing/Mask/HotlineMiami/zebra.rsi
+  - type: Item
+    sprite: _Sunset/Clothing/Mask/HotlineMiami/zebra.rsi
+
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterHotlineZebra
+  name: zebra gang jacket
+  description: A loud jacket with a bowtie stitched to the collar. Somebody had a sense of humor.
+  components:
+  - type: Sprite
+    sprite: _Sunset/Clothing/OuterClothing/HotlineMiami/zebra.rsi
+  - type: Clothing
+    sprite: _Sunset/Clothing/OuterClothing/HotlineMiami/zebra.rsi
+  - type: Item
+    size: Normal
+    sprite: _Sunset/Clothing/OuterClothing/HotlineMiami/zebra.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+
+# --- Tiger (mask + tank top + brass knuckles) ---
+
+- type: entity
+  parent: ClothingMaskBase
+  id: ClothingMaskHotlineTiger
+  name: tiger mask
+  description: A snarling tiger mask with sharp orange stripes.
+  components:
+  - type: Sprite
+    sprite: _Sunset/Clothing/Mask/HotlineMiami/tiger.rsi
+  - type: Clothing
+    sprite: _Sunset/Clothing/Mask/HotlineMiami/tiger.rsi
+  - type: Item
+    sprite: _Sunset/Clothing/Mask/HotlineMiami/tiger.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformHotlineTiger
+  name: tiger gang tank top
+  description: A plain black tank top.
+  components:
+  - type: Sprite
+    sprite: _Sunset/Clothing/Uniforms/HotlineMiami/tiger.rsi
+  - type: Clothing
+    sprite: _Sunset/Clothing/Uniforms/HotlineMiami/tiger.rsi
+  - type: Item
+    sprite: _Sunset/Clothing/Uniforms/HotlineMiami/tiger.rsi
+
+- type: entity
+  parent: BaseItem
+  id: WeaponHotlineTigerKastet
+  name: tiger's knuckles
+  description: A battered set of brass knuckles. They've clearly been used before.
+  components:
+  - type: Sprite
+    sprite: _Sunset/Objects/Weapons/Melee/HotlineMiami/tiger_kastet.rsi
+    state: icon
+  - type: Item
+    size: Small
+    sprite: _Sunset/Objects/Weapons/Melee/HotlineMiami/tiger_kastet.rsi
+  - type: MeleeWeapon
+    attackRate: 1.5
+    wideAnimationRotation: -135
+    damage:
+      types:
+        Blunt: 8
+    soundHit:
+      collection: MetalThud
+  - type: Wieldable
+  - type: IncreaseDamageOnWield
+    damage:
+      types:
+        Blunt: 4
+  - type: DisarmMalus
