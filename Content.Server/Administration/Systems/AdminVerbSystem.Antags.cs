@@ -1,5 +1,6 @@
 using Content.Server._Starlight.Administration.Systems;
 using Content.Server._Starlight.GameTicking.Rules.Components;
+using Content.Server._Sunset.Spy;
 using Content.Server.Antag;
 using Content.Server.Clothing.Systems;
 using Content.Server.GameTicking;
@@ -39,6 +40,7 @@ public sealed partial class AdminVerbSystem
     private static readonly EntProtoId DefaultNukeOpRule = "LoneOpsSpawn";
     private static readonly EntProtoId DefaultRevsRule = "Revolutionary";
     private static readonly EntProtoId DefaultThiefRule = "Thief";
+    private static readonly EntProtoId DefaultSpyRule = "Spy"; // Sunset
     private static readonly EntProtoId DefaultChangelingRule = "Changeling";
     private static readonly EntProtoId ParadoxCloneRuleId = "ParadoxCloneSpawn";
     private static readonly EntProtoId DefaultWizardRule = "Wizard";
@@ -177,6 +179,23 @@ public sealed partial class AdminVerbSystem
             Message = string.Join(": ", thiefName, Loc.GetString("admin-verb-make-thief")),
         };
         args.Verbs.Add(thief);
+
+        // Sunset - Spy antag
+        var spyName = Loc.GetString("admin-verb-text-make-spy");
+        Verb spy = new()
+        {
+            Text = spyName,
+            Category = VerbCategory.Antag,
+            Icon = new SpriteSpecifier.Rsi(new ResPath("/Textures/_Sunset/Spy_Sprites/spy_uplink.rsi"), "spy_uplink1"),
+            Act = () =>
+            {
+                _antag.ForceMakeAntag<SpyRuleComponent>(targetPlayer, DefaultSpyRule);
+                _autolog.LogToDiscord(string.Join(": ", spyName, Loc.GetString("admin-verb-make-spy")), player.Name);
+            },
+            Impact = LogImpact.High,
+            Message = string.Join(": ", spyName, Loc.GetString("admin-verb-make-spy")),
+        };
+        args.Verbs.Add(spy);
 
         var changelingName = Loc.GetString("admin-verb-text-make-changeling-wip"); //SL edit, -wip as we allready have lings
         Verb changeling = new()

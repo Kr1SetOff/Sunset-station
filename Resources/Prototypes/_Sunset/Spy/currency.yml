@@ -1,0 +1,5 @@
+# 🌇Sunset🌇 - Spy Uplink's own currency, separate from Telecrystal.
+- type: currency
+  id: SpyCredit
+  displayName: store-currency-display-spy-credit
+  canWithdraw: false

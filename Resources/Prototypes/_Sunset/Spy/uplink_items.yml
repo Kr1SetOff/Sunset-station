@@ -1,0 +1,53 @@
+# 🌇Sunset🌇 - Spy Uplink and the tracker gadget, using the ported sunset-station Spy sprites.
+
+- type: storeCategory
+  id: SpyEspionage
+  name: spy-store-category-espionage
+
+- type: storeCategory
+  id: SpyGear
+  name: spy-store-category-gear
+
+- type: storeCategory
+  id: SpyMedical
+  name: spy-store-category-medical
+
+- type: entity
+  parent: BaseItem
+  id: SpyUplink
+  name: strange device
+  description: A compact device that quietly syncs with a hidden espionage supply network.
+  components:
+  - type: Sprite
+    sprite: _Sunset/Spy_Sprites/spy_uplink.rsi
+    state: spy_uplink1
+  - type: Item
+    size: Small
+  - type: Store
+    categories:
+    - SpyEspionage
+    - SpyGear
+    - SpyMedical
+    balance:
+      SpyCredit: 60
+    currencyWhitelist:
+    - SpyCredit
+  - type: UserInterface
+    interfaces:
+      enum.StoreUiKey.Key:
+        type: StoreBoundUserInterface
+        requireInputValidation: false
+  - type: ActivatableUI
+    key: enum.StoreUiKey.Key
+
+- type: entity
+  parent: BaseItem
+  id: SpyPinpointer
+  name: signal tracker
+  description: Points toward the nearest item on your steal list.
+  components:
+  - type: Sprite
+    sprite: _Sunset/Spy_Sprites/spy_tracker.rsi
+    state: bug
+  - type: Item
+    size: Small

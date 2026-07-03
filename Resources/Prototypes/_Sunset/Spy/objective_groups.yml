@@ -1,0 +1,13 @@
+# 🌇Sunset🌇 - random pool AntagRandomObjectives draws from for Spy. The escape objective is
+# granted unconditionally via AntagObjectives on the Spy game rule instead of being rolled here.
+- type: weightedRandom
+  id: SpyObjectiveGroups
+  weights:
+    SpyStealTechnologyDiskObjective: 1
+    SpyStealNukeDiskObjective: 0.5
+    SpyStealCaptainIdObjective: 1
+    SpyStealHandTeleporterObjective: 1
+    SpyStealXenoArtifactObjective: 1
+    SpyStealForensicScannerObjective: 1
+    SpyStealWantedListObjective: 1
+    SpyStealJetpackObjective: 1

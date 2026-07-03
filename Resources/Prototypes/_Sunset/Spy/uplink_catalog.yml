@@ -1,0 +1,173 @@
+# 🌇Sunset🌇 - Spy Uplink catalog. Items are existing entities re-themed as spy gear (mirrors how
+# sunset-station's own Spy catalog reused other antags' items), priced for a flat one-time SpyCredit
+# budget rather than sunset-station's accumulating contract-reward economy.
+
+- type: listing
+  id: SpyListingChameleonBackpack
+  name: spy-listing-chameleon-backpack-name
+  description: spy-listing-chameleon-backpack-desc
+  productEntity: ClothingBackpackChameleonFill
+  cost:
+    SpyCredit: 20
+  categories:
+  - SpyEspionage
+
+- type: listing
+  id: SpyListingChameleonShoes
+  name: spy-listing-chameleon-shoes-name
+  description: spy-listing-chameleon-shoes-desc
+  productEntity: ClothingShoesChameleonNoSlips
+  cost:
+    SpyCredit: 15
+  categories:
+  - SpyEspionage
+
+- type: listing
+  id: SpyListingChameleonGloves
+  name: spy-listing-chameleon-gloves-name
+  description: spy-listing-chameleon-gloves-desc
+  productEntity: ClothingHandsChameleonThief
+  cost:
+    SpyCredit: 15
+  categories:
+  - SpyEspionage
+
+- type: listing
+  id: SpyListingChameleonMask
+  name: spy-listing-chameleon-mask-name
+  description: spy-listing-chameleon-mask-desc
+  productEntity: ClothingMaskGasChameleon
+  cost:
+    SpyCredit: 12
+  categories:
+  - SpyEspionage
+
+- type: listing
+  id: SpyListingChameleonProjector
+  name: spy-listing-chameleon-projector-name
+  description: spy-listing-chameleon-projector-desc
+  productEntity: ChameleonProjector
+  cost:
+    SpyCredit: 30
+  categories:
+  - SpyEspionage
+
+- type: listing
+  id: SpyListingAgentId
+  name: spy-listing-agentid-name
+  description: spy-listing-agentid-desc
+  productEntity: AgentIDCard
+  cost:
+    SpyCredit: 20
+  categories:
+  - SpyEspionage
+
+- type: listing
+  id: SpyListingThermals
+  name: spy-listing-thermals-name
+  description: spy-listing-thermals-desc
+  productEntity: ClothingEyesGlassesThermal
+  cost:
+    SpyCredit: 25
+  categories:
+  - SpyEspionage
+
+- type: listing
+  id: SpyListingStorageImplant
+  name: spy-listing-storage-implant-name
+  description: spy-listing-storage-implant-desc
+  productEntity: StorageImplanter
+  cost:
+    SpyCredit: 30
+  categories:
+  - SpyEspionage
+
+- type: listing
+  id: SpyListingFreedomImplant
+  name: spy-listing-freedom-implant-name
+  description: spy-listing-freedom-implant-desc
+  productEntity: FreedomImplanter
+  cost:
+    SpyCredit: 22
+  categories:
+  - SpyEspionage
+
+- type: listing
+  id: SpyListingEscapeImplant
+  name: spy-listing-escape-implant-name
+  description: spy-listing-escape-implant-desc
+  productEntity: ScramImplanter
+  cost:
+    SpyCredit: 28
+  categories:
+  - SpyEspionage
+
+- type: listing
+  id: SpyListingSmokeGrenade
+  name: spy-listing-smoke-name
+  description: spy-listing-smoke-desc
+  productEntity: SmokeGrenade
+  cost:
+    SpyCredit: 10
+  categories:
+  - SpyGear
+
+- type: listing
+  id: SpyListingEmpGrenade
+  name: spy-listing-emp-name
+  description: spy-listing-emp-desc
+  productEntity: EmpGrenade
+  cost:
+    SpyCredit: 15
+  categories:
+  - SpyGear
+
+- type: listing
+  id: SpyListingSignaller
+  name: spy-listing-signaller-name
+  description: spy-listing-signaller-desc
+  productEntity: RemoteSignaller
+  cost:
+    SpyCredit: 10
+  categories:
+  - SpyGear
+
+- type: listing
+  id: SpyListingRadioJammer
+  name: spy-listing-radio-jammer-name
+  description: spy-listing-radio-jammer-desc
+  productEntity: RadioJammer
+  cost:
+    SpyCredit: 25
+  categories:
+  - SpyGear
+
+- type: listing
+  id: SpyListingThrowingKnives
+  name: spy-listing-throwing-knives-name
+  description: spy-listing-throwing-knives-desc
+  productEntity: ThrowingKnivesKit
+  cost:
+    SpyCredit: 20
+  categories:
+  - SpyGear
+
+- type: listing
+  id: SpyListingBottlePax
+  name: spy-listing-pax-name
+  description: spy-listing-pax-desc
+  productEntity: ChemistryBottlePax
+  cost:
+    SpyCredit: 12
+  categories:
+  - SpyMedical
+
+- type: listing
+  id: SpyListingCombatMedkit
+  name: spy-listing-combat-medkit-name
+  description: spy-listing-combat-medkit-desc
+  productEntity: MedkitCombatFilled
+  cost:
+    SpyCredit: 28
+  categories:
+  - SpyMedical
