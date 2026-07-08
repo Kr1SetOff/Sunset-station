@@ -62,7 +62,7 @@
   parent: ClothingShoesBootsJack
   id: ClothingShoesBootsJackTallHeels
   name: tall heels jackboots
-  description: A pair of knee-high jackboots, complete with heels. All style, all the time. 
+  description: A pair of knee-high jackboots, complete with heels. All style, all the time.
   components:
   - type: Sprite
     sprite: _Sunset/Clothing/Shoes/Boots/jackboots_heels_tall.rsi

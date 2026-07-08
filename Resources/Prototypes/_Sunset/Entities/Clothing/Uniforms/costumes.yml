@@ -63,7 +63,7 @@
     sprite: _Sunset/Clothing/Uniforms/Costume/kimono-green.rsi
   - type: Clothing
     sprite: _Sunset/Clothing/Uniforms/Costume/kimono-green.rsi
-    
+
 - type: entity
   parent: ClothingUniformSkirtBase
   id: ClothingUniformKendoHakama

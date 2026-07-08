@@ -1,7 +1,7 @@
 # standard for cap, hos and InteQ
 - type: entity
   abstract: true
-  parent: [ClothingHeadBase] 
+  parent: [ClothingHeadBase]
   id: ClothingHeadHatArmoredPlus
   components:
   - type: Armor
