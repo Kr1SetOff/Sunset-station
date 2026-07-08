@@ -7,22 +7,33 @@
     - !type:AllSelector
       children:
       - id: ClothingMaskHotlineSwan
+      - id: ClothingMaskHotlineSwan2
       - id: ClothingOuterHotlineSwan
+      - id: ClothingOuterHotlineSwan2
+      - id: ClothingHandsHotlineSwan
+      - id: ClothingUniformHotlineSwan
+      - id: WeaponSubMachineGunUzi
+      - id: MagazinePistolSubMachineGunUzi
+      - id: MagazinePistolSubMachineGunUzi
+      - id: Chainsaw
     - !type:AllSelector
       children:
       - id: ClothingMaskHotlineBear
       - id: ClothingHandsHotlineBear
       - id: ClothingOuterHotlineBear
       - id: ClothingUniformHotlineBear
+      - id: WeaponSubMachineGunSP91RC
+      - id: WeaponSubMachineGunSP91RC
     - !type:AllSelector
       children:
       - id: ClothingMaskHotlineZebra
       - id: ClothingOuterHotlineZebra
+      - id: ClothingUniformHotlineZebra
     - !type:AllSelector
       children:
       - id: ClothingMaskHotlineTiger
       - id: ClothingUniformHotlineTiger
-      - id: WeaponHotlineTigerKastet
+      - id: ClothingHandsHotlineTigerKastet
 
 - type: entity
   parent: [ CrateSyndicate, StorePresetUplink, BaseSyndicateContraband ]
@@ -35,40 +46,6 @@
       entity_storage: !type:NestedSelector
         tableId: HotlineMiamiCostumeSetTable
 
-- type: entity
-  parent: [ CrateSyndicate, StorePresetUplink, BaseSyndicateContraband ]
-  id: CrateSyndicateHotlineMiamiGear
-  name: random gear crate
-  description: Three sealed packages, one crate. Whoever grabs first grabs best - the rest lock down the instant it's opened.
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:AllSelector
-        children:
-        - !type:NestedSelector
-          tableId: HotlineMiamiGearPoolTable
-        - !type:NestedSelector
-          tableId: HotlineMiamiGearPoolTable
-        - !type:NestedSelector
-          tableId: HotlineMiamiGearPoolTable
-  - type: TakeOneItemStorage
-
-- type: entityTable
-  id: HotlineMiamiGearPoolTable
-  table: !type:GroupSelector
-    children:
-    - id: ClothingMaskHotlineSwan
-    - id: ClothingOuterHotlineSwan
-    - id: ClothingMaskHotlineBear
-    - id: ClothingHandsHotlineBear
-    - id: ClothingOuterHotlineBear
-    - id: ClothingUniformHotlineBear
-    - id: ClothingMaskHotlineZebra
-    - id: ClothingOuterHotlineZebra
-    - id: ClothingMaskHotlineTiger
-    - id: ClothingUniformHotlineTiger
-    - id: WeaponHotlineTigerKastet
-
 - type: listing
   id: UplinkCrateHotlineMiamiAnimals
   name: uplink-crate-hotline-animals-name
@@ -76,15 +53,5 @@
   productEntity: CrateSyndicateHotlineMiamiAnimals
   cost:
     Telecrystal: 10
-  categories:
-  - UplinkPointless
-
-- type: listing
-  id: UplinkCrateHotlineMiamiGear
-  name: uplink-crate-hotline-gear-name
-  description: uplink-crate-hotline-gear-desc
-  productEntity: CrateSyndicateHotlineMiamiGear
-  cost:
-    Telecrystal: 20
   categories:
   - UplinkPointless

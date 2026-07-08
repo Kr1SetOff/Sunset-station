@@ -3,12 +3,13 @@
 # included per animal - not every animal has every slot. Armor values are cosmetic-tier by design
 # (these are gang costumes, not real protective gear).
 
-# --- Swan (mask + jacket) ---
+# --- Swan (two twin brothers sharing one costume set: two masks, two jackets, shared gloves and
+# tank top - bundled together as a single crate/set per the source art's naming) ---
 
 - type: entity
   parent: ClothingMaskBase
   id: ClothingMaskHotlineSwan
-  name: swan mask
+  name: swan mask (first brother)
   description: A cracked plastic swan mask. Something about it feels final.
   components:
   - type: Sprite
@@ -19,9 +20,22 @@
     sprite: _Sunset/Clothing/Mask/HotlineMiami/swan.rsi
 
 - type: entity
+  parent: ClothingMaskBase
+  id: ClothingMaskHotlineSwan2
+  name: swan mask (second brother)
+  description: The other one's mask. Same cracked plastic, same finality.
+  components:
+  - type: Sprite
+    sprite: _Sunset/Clothing/Mask/HotlineMiami/swan2.rsi
+  - type: Clothing
+    sprite: _Sunset/Clothing/Mask/HotlineMiami/swan2.rsi
+  - type: Item
+    sprite: _Sunset/Clothing/Mask/HotlineMiami/swan2.rsi
+
+- type: entity
   parent: ClothingOuterBase
   id: ClothingOuterHotlineSwan
-  name: swan gang jacket
+  name: swan gang jacket (first brother)
   description: A worn jacket favored by the swan-masked crew.
   components:
   - type: Sprite
@@ -37,13 +51,58 @@
         Blunt: 0.95
         Slash: 0.95
 
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterHotlineSwan2
+  name: swan gang jacket (second brother)
+  description: The other one's jacket. Just as worn.
+  components:
+  - type: Sprite
+    sprite: _Sunset/Clothing/OuterClothing/HotlineMiami/swan2.rsi
+  - type: Clothing
+    sprite: _Sunset/Clothing/OuterClothing/HotlineMiami/swan2.rsi
+  - type: Item
+    size: Normal
+    sprite: _Sunset/Clothing/OuterClothing/HotlineMiami/swan2.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingHandsHotlineSwan
+  name: swan gang gloves
+  description: Plain gloves, shared by both brothers.
+  components:
+  - type: Sprite
+    sprite: _Sunset/Clothing/Hands/HotlineMiami/swan.rsi
+  - type: Clothing
+    sprite: _Sunset/Clothing/Hands/HotlineMiami/swan.rsi
+  - type: Item
+    sprite: _Sunset/Clothing/Hands/HotlineMiami/swan.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformHotlineSwan
+  name: swan gang tank top
+  description: A plain tank top worn under the jacket.
+  components:
+  - type: Sprite
+    sprite: _Sunset/Clothing/Uniforms/HotlineMiami/swan.rsi
+  - type: Clothing
+    sprite: _Sunset/Clothing/Uniforms/HotlineMiami/swan.rsi
+  - type: Item
+    sprite: _Sunset/Clothing/Uniforms/HotlineMiami/swan.rsi
+
 # --- Bear (mask + gloves + armor + tank top) ---
 
 - type: entity
   parent: ClothingMaskBase
   id: ClothingMaskHotlineBear
   name: bear mask
-  description: A grinning bear mask, scuffed from use.
+  description: A grinning bear mask, scuffed from use. Somehow, wearing it makes both your hands equally trigger-happy.
   components:
   - type: Sprite
     sprite: _Sunset/Clothing/Mask/HotlineMiami/bear.rsi
@@ -51,6 +110,7 @@
     sprite: _Sunset/Clothing/Mask/HotlineMiami/bear.rsi
   - type: Item
     sprite: _Sunset/Clothing/Mask/HotlineMiami/bear.rsi
+  - type: BearMaskGunslinger
 
 - type: entity
   parent: ClothingHandsBase
@@ -97,7 +157,8 @@
   - type: Item
     sprite: _Sunset/Clothing/Uniforms/HotlineMiami/bear.rsi
 
-# --- Zebra (mask + jacket) ---
+# --- Zebra (mask + jacket + tank top - wearing all three grants the roll ability, see
+# ZebraRollSystem/ZebraCostumePieceComponent) ---
 
 - type: entity
   parent: ClothingMaskBase
@@ -111,6 +172,7 @@
     sprite: _Sunset/Clothing/Mask/HotlineMiami/zebra.rsi
   - type: Item
     sprite: _Sunset/Clothing/Mask/HotlineMiami/zebra.rsi
+  - type: ZebraCostumePiece
 
 - type: entity
   parent: ClothingOuterBase
@@ -130,6 +192,21 @@
       coefficients:
         Blunt: 0.95
         Slash: 0.95
+  - type: ZebraCostumePiece
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformHotlineZebra
+  name: zebra gang tank top
+  description: A black-and-white striped tank top to match the mask.
+  components:
+  - type: Sprite
+    sprite: _Sunset/Clothing/Uniforms/HotlineMiami/zebra.rsi
+  - type: Clothing
+    sprite: _Sunset/Clothing/Uniforms/HotlineMiami/zebra.rsi
+  - type: Item
+    sprite: _Sunset/Clothing/Uniforms/HotlineMiami/zebra.rsi
+  - type: ZebraCostumePiece
 
 # --- Tiger (mask + tank top + brass knuckles) ---
 
@@ -160,28 +237,31 @@
     sprite: _Sunset/Clothing/Uniforms/HotlineMiami/tiger.rsi
 
 - type: entity
-  parent: BaseItem
-  id: WeaponHotlineTigerKastet
+  parent: ClothingHandsBase
+  id: ClothingHandsHotlineTigerKastet
   name: tiger's knuckles
-  description: A battered set of brass knuckles. They've clearly been used before.
+  description: A battered set of brass knuckles, worn like gloves. A light punch is just a punch - but throw your whole weight behind it and it becomes a wide, bone-breaking hook.
   components:
   - type: Sprite
-    sprite: _Sunset/Objects/Weapons/Melee/HotlineMiami/tiger_kastet.rsi
+    sprite: _Sunset/Clothing/Hands/HotlineMiami/tiger.rsi
     state: icon
+  - type: Clothing
+    sprite: _Sunset/Clothing/Hands/HotlineMiami/tiger.rsi
   - type: Item
     size: Small
-    sprite: _Sunset/Objects/Weapons/Melee/HotlineMiami/tiger_kastet.rsi
+    sprite: _Sunset/Clothing/Hands/HotlineMiami/tiger.rsi
   - type: MeleeWeapon
     attackRate: 1.5
     wideAnimationRotation: -135
+    # Base damage is the full heavy/wide-attack hit; ClickDamageModifier scales it down for the
+    # single-target light attack. Must be worn (not just held) to count as the wielder's weapon -
+    # see MeleeWeaponComponent.MustBeEquippedToUse and SharedMeleeWeaponSystem.TryGetWeapon's gloves
+    # fallback. Once the gloves (not the player's own body) resolve as the weapon, the client's RMB
+    # handling skips the AltDisarm shove and performs a heavy/wide swing instead - no code needed.
     damage:
       types:
-        Blunt: 8
+        Piercing: 35
+    clickDamageModifier: 0.3
+    mustBeEquippedToUse: true
     soundHit:
       collection: MetalThud
-  - type: Wieldable
-  - type: IncreaseDamageOnWield
-    damage:
-      types:
-        Blunt: 4
-  - type: DisarmMalus
