@@ -1,0 +1,99 @@
+# 🌇Sunset🌇 - Bitrunning domain maps (all 12) reference a bunch of prototypes that were never
+# part of the original port. Structural/utility prototypes shared across many maps live here;
+# see fish.yml/gear.yml/etc under _Sunset/Fishing for the Fishing minigame that beach-bar.yml and
+# others also need.
+
+- type: entity
+  id: InvisibleLightWarm
+  name: invisible light emitter
+  description: Emits strong warm light.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: PointLight
+    enabled: true
+    radius: 24
+    energy: 3
+    softness: 10
+    color: "#fff2b5"
+    castShadows: false
+
+# APC that provides OMNI-power (compact? uhh uhh...)
+# 🌇Sunset🌇 - dropped GravitySource: this fork's gravity generator component is a much bigger
+# visible-machine component (sprite states, power-charge visuals) that doesn't fit a compact
+# power-only utility core; simplified to just the power side.
+- type: entity
+  parent: DebugAPCRecharging
+  id: OmniControlUnit
+  name: omni-control unit
+  description: A compact all-in-one utility core that provides power.
+  suffix: Power
+  components:
+  - type: Battery
+  - type: BatterySelfRecharger
+    autoRechargeRate: 50000
+  - type: PowerNetworkBattery
+    maxSupply: 1.0e9
+    maxChargeRate: 1.0e9
+    supplyRampTolerance: 1.0e9
+    supplyRampRate: 1.0e9
+
+- type: entity
+  parent: OmniControlUnit
+  id: OmniControlUnitUnlocked
+  name: omni-control unit
+  description: A compact all-in-one utility core that provides power and local gravity.
+  suffix: Power-Gravity, Unlocked
+  components:
+  - type: AccessReader
+    access: [ ]
+
+# 🌇Sunset🌇 - dropped RustRequiresPathStage (no rust/corrosion mechanic in this fork)
+- type: entity
+  parent: BaseWall
+  id: WallBinaryIndestructible
+  name: tear in the fabric of reality
+  suffix: Indestructible
+  components:
+  - type: Sprite
+    sprite: _Sunset/Structures/Walls/binary.rsi
+    noRot: true
+    layers:
+    - state: full
+      shader: unshaded
+  - type: Icon
+    sprite: _Sunset/Structures/Walls/binary.rsi
+  - type: Destructible
+
+- type: reagent
+  parent: BaseDrink
+  id: Kvass
+  name: reagent-name-kvass
+  desc: reagent-desc-kvass
+  physicalDesc: reagent-physical-desc-bubbly
+  flavor: bread
+  color: "#381600"
+  metamorphicSprite:
+    sprite: _Sunset/Objects/Consumable/Drinks/kvass.rsi
+    state: icon
+
+- type: entity
+  parent: StorageTank
+  id: KvassTank
+  suffix: Empty
+  components:
+    - type: Sprite
+      sprite: _Sunset/Structures/Storage/kvass.rsi
+      state: kvass
+
+- type: entity
+  parent: KvassTank
+  id: KvassTankFull
+  suffix: Full
+  components:
+    - type: SolutionContainerManager
+      solutions:
+        tank:
+          reagents:
+            - ReagentId: Kvass
+              Quantity: 500

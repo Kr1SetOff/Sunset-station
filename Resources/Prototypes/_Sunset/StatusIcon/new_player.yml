@@ -1,0 +1,12 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: newPlayerIcon
+  id: NewPlayerIcon
+  icon:
+    sprite: /Textures/_Sunset/New_player/new_guy.rsi
+    state: New_member_icon
+  locationPreference: Right
+  priority: 12
+  # 🌇Sunset🌇 - render lit (affected by shadows/dynamic light) instead of the unshaded default
+  # other status icons (job icons etc.) use, so the badge isn't a flat, always-bright overlay.
+  isShaded: true

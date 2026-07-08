@@ -1,0 +1,73 @@
+# 🌇Sunset🌇 - Homelander GameRule. Same AntagSelection shape as Spy/Thief: the stat block that
+# sunset-station set directly on its standalone MobHomelander ghost-role entity is instead applied
+# to whichever crew member's existing body gets picked, via AntagSelectionDefinition.components.
+- type: entity
+  parent: BaseGameRule
+  id: Homelander
+  components:
+  - type: HomelanderRule
+  - type: AntagSelection
+    agentName: homelander-round-end-agent-name
+    selectionTime: IntraPlayerSpawn
+    definitions:
+    - prefRoles: [ Homelander ]
+      max: 1
+      playerRatio: 30
+      lateJoinAdditional: true
+      allowNonHumans: false
+      multiAntagSetting: None
+      startingGear: HomelanderGear
+      mindRoles:
+      - MindRoleHomelander
+      components:
+      - type: Homelander
+      - type: HyperHearing
+      - type: Flight
+        landingSound:
+          path: /Audio/_Sunset/Homelander/landing.ogg
+      - type: ThermalVision
+      - type: ActionGrant
+        actions:
+        - ActionHomelanderHeatVision
+      - type: Damageable
+        damageContainer: Biological
+        damageModifierSet: Homelander
+      - type: PassiveDamage
+        allowedStates:
+        - Alive
+        - Critical
+        damageCap: 0
+        damage:
+          types:
+            Blunt: -3
+            Slash: -3
+            Piercing: -3
+            Asphyxiation: -3
+            Bloodloss: -3
+      - type: MeleeWeapon
+        soundHit:
+          collection: Punch
+        angle: 30
+        animation: WeaponArcFist
+        attackRate: 1
+        damage:
+          types:
+            Blunt: 25
+            Structural: 150
+      - type: MovementSpeedModifier
+        baseWalkSpeed: 3.125
+        baseSprintSpeed: 5.625
+      - type: StaminaResistance
+        damageCoefficient: 0.3
+        worn: false
+      - type: MobThresholds
+        thresholds:
+          0: Alive
+          150: Critical
+          250: Dead
+      - type: ExplosionResistance
+        damageCoefficient: 0.25
+      briefing:
+        sound: "/Audio/Ambience/Antag/traitor_start.ogg"
+  - type: DynamicRuleCost
+    cost: 150

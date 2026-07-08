@@ -1,0 +1,23 @@
+# 🌇Sunset🌇 - markers for the "inert bag of holding" decorative loot variants (backpacks.yml,
+# duffel.yml, satchel.yml); no crafting/repair system reacts to these in this fork (or in the
+# source repo either, as far as could be found), they're just filter/whitelist tags.
+- type: Tag
+  id: InertBagOfHoldingBackpack
+
+- type: Tag
+  id: InertBagOfHoldingDuffel
+
+- type: Tag
+  id: InertBagOfHoldingSatchel
+
+- type: Tag
+  id: Katana
+
+- type: Tag
+  id: Wakizashi
+
+- type: Tag
+  id: IPCMaskWearable
+
+- type: Tag
+  id: EnergySword

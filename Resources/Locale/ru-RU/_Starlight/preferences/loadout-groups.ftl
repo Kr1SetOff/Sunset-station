@@ -138,3 +138,7 @@ loadout-group-NanotrasenCareerTrainer-eyewear = Карьерный настав�
 
 # Security
 loadout-group-warden-neck = Надзиратель, шея
+
+# Sunset - nedostayushchie perevody
+loadout-group-magistrate-head = Головной убор магистрата
+loadout-group-magistrate-gloves = Перчатки магистрата

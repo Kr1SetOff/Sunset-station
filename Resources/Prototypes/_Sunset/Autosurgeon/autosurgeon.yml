@@ -1,0 +1,69 @@
+# 🌇Sunset🌇 - ported from Goobstation/Reserve-Station, adapted to this fork's own body system:
+# real body-part/organ replacement (see AutosurgeonComponent.cs) instead of a flat stat bonus. The
+# mantis blade arms already exist in this fork as _Starlight cyberlimbs (LeftArmCyberMantisBlade /
+# RightArmCyberMantisBlade, complete with their own hand and blade weapon) - the autosurgeon just
+# swaps your real arm for one of these. The Sandevistan heart is a genuine ported organ (parent:
+# OrganHumanHeart) with the real toggleable ability (Content.Shared._Sunset.Sandevistan) - press
+# the granted action to boost move/attack speed and slow nearby mobs, at the cost of an overload
+# meter that escalates into jitter/stamina loss/damage/knockdown/forced shutdown the longer it's
+# left on. Trimmed from the source: no afterimage trail, no screen-glitch shader, and the slowfield
+# only affects mobs (no projectile/thrown-item slowdown - no equivalent ranged event to hook here).
+
+- type: entity
+  parent: [ BaseItem, BaseSyndicateContraband ]
+  id: BaseAutosurgeon
+  abstract: true
+  description: A single-use autosurgeon for upgrading yourself with cybernetic implants. Rip that station apart and make it a part of you.
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Objects/Devices/autosurgeon.rsi
+    state: icon-syndie
+  - type: Item
+    size: Normal
+    sprite: _Goobstation/Objects/Devices/autosurgeon.rsi
+  - type: Autosurgeon
+
+- type: entity
+  parent: BaseAutosurgeon
+  id: AutosurgeonRightMantisBlade
+  name: syndicate autosurgeon (right mantis blade)
+  description: A cybernetic upgrade that replaces your right arm with a bladed mantis limb.
+  components:
+  - type: Autosurgeon
+    targetPartType: Arm
+    targetSymmetry: Right
+    newPartProto: RightArmCyberMantisBlade
+
+- type: entity
+  parent: BaseAutosurgeon
+  id: AutosurgeonLeftMantisBlade
+  name: syndicate autosurgeon (left mantis blade)
+  description: A cybernetic upgrade that replaces your left arm with a bladed mantis limb.
+  components:
+  - type: Autosurgeon
+    targetPartType: Arm
+    targetSymmetry: Left
+    newPartProto: LeftArmCyberMantisBlade
+
+- type: entity
+  parent: BaseAutosurgeon
+  id: AutosurgeonStatvekaSandevistan
+  name: syndicate autosurgeon (statveka sandevistan)
+  description: A cybernetic heart implant that floods your body with combat stimulants, permanently quickening your reflexes.
+  components:
+  - type: Autosurgeon
+    targetOrganSlot: heart
+    newOrganProto: OrganHeartStatvekaSandevistan
+    successPopup: autosurgeon-success-sandevistan
+
+- type: entity
+  parent: [ OrganHumanHeart, BaseSyndicateContraband ]
+  id: OrganHeartStatvekaSandevistan
+  name: mi13 statveka sandevistan
+  description: A cybernetic heart implant that drastically improves the user's speed and reflexes. Once used by a certain mercenary.
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Objects/Misc/sandevistan.rsi
+    state: icon
+    scale: 0.5, 0.5
+  - type: SandevistanHeart

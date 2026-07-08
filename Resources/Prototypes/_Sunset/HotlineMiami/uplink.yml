@@ -1,0 +1,57 @@
+# 🌇Sunset🌇 - two novelty Syndicate uplink crates built around the Hotline Miami 2 costume sets.
+
+- type: entityTable
+  id: HotlineMiamiCostumeSetTable
+  table: !type:GroupSelector
+    children:
+    - !type:AllSelector
+      children:
+      - id: ClothingMaskHotlineSwan
+      - id: ClothingMaskHotlineSwan2
+      - id: ClothingOuterHotlineSwan
+      - id: ClothingOuterHotlineSwan2
+      - id: ClothingHandsHotlineSwan
+      - id: ClothingUniformHotlineSwan
+      - id: WeaponSubMachineGunUzi
+      - id: MagazinePistolSubMachineGunUzi
+      - id: MagazinePistolSubMachineGunUzi
+      - id: Chainsaw
+    - !type:AllSelector
+      children:
+      - id: ClothingMaskHotlineBear
+      - id: ClothingHandsHotlineBear
+      - id: ClothingOuterHotlineBear
+      - id: ClothingUniformHotlineBear
+      - id: WeaponSubMachineGunSP91RC
+      - id: WeaponSubMachineGunSP91RC
+    - !type:AllSelector
+      children:
+      - id: ClothingMaskHotlineZebra
+      - id: ClothingOuterHotlineZebra
+      - id: ClothingUniformHotlineZebra
+    - !type:AllSelector
+      children:
+      - id: ClothingMaskHotlineTiger
+      - id: ClothingUniformHotlineTiger
+      - id: ClothingHandsHotlineTigerKastet
+
+- type: entity
+  parent: [ CrateSyndicate, StorePresetUplink, BaseSyndicateContraband ]
+  id: CrateSyndicateHotlineMiamiAnimals
+  name: suspicious animals crate
+  description: Something's rustling around in here. Smells like hairspray and bad decisions.
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: HotlineMiamiCostumeSetTable
+
+- type: listing
+  id: UplinkCrateHotlineMiamiAnimals
+  name: uplink-crate-hotline-animals-name
+  description: uplink-crate-hotline-animals-desc
+  productEntity: CrateSyndicateHotlineMiamiAnimals
+  cost:
+    Telecrystal: 10
+  categories:
+  - UplinkPointless

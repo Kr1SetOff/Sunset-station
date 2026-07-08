@@ -1,0 +1,30 @@
+<!-- 🌇Sunset🌇 - "Перенос времени" tab: add-to or set-to-exact-value a player's tracked playtime
+     (Overall or any specific role tracker) straight from the admin menu, without needing to open
+     that player's Player Panel first. Works for online AND offline players by username, backed by
+     the existing playtime_addoverall/addrole/setoverall/setrole console commands. -->
+<Control
+    xmlns="https://spacestation14.io"
+    Margin="4"
+    MinSize="50 50">
+    <BoxContainer Orientation="Vertical">
+        <Label Text="{Loc playtime-tab-title}" StyleClasses="LabelBig"/>
+        <BoxContainer Orientation="Horizontal" Margin="0 4 0 0">
+            <Label Text="{Loc playtime-tab-user}" MinWidth="80"/>
+            <LineEdit Name="UsernameInput" MinWidth="150" HorizontalExpand="True" PlaceHolder="{Loc playtime-tab-user-placeholder}"/>
+        </BoxContainer>
+        <BoxContainer Orientation="Horizontal" Margin="0 2 0 0">
+            <Label Text="{Loc playtime-tab-tracker}" MinWidth="80"/>
+            <OptionButton Name="TrackerOption" MinWidth="250" HorizontalExpand="True"/>
+        </BoxContainer>
+        <BoxContainer Orientation="Horizontal" Margin="0 2 0 0">
+            <Label Text="{Loc playtime-tab-minutes}" MinWidth="80"/>
+            <LineEdit Name="MinutesInput" Text="0" MinWidth="80"/>
+        </BoxContainer>
+        <BoxContainer Orientation="Horizontal" Margin="0 6 0 0">
+            <Button Name="GetButton" Text="{Loc playtime-tab-get}"/>
+            <Button Name="AddButton" Text="{Loc playtime-tab-add}"/>
+            <Button Name="SetButton" Text="{Loc playtime-tab-set}"/>
+        </BoxContainer>
+        <Label Name="HintLabel" Text="{Loc playtime-tab-hint}" Margin="0 6 0 0"/>
+    </BoxContainer>
+</Control>

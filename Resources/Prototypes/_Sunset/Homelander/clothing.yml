@@ -1,0 +1,44 @@
+# 🌇Sunset🌇 - Homelander's personal cloak and armor suit. Sprites supplied locally
+# (D:\github govna\houmlander). Replaces the generic ClothingNeckCloakCap he used to wear and adds
+# an actual worn armor item where before all of his damage reduction was an intrinsic
+# damageModifierSet with no clothing behind it at all - see homelander.yml for how the 15
+# percentage points of reduction were split between the two.
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckHomelanderCloak
+  name: Homelander's cloak
+  description: A flowing cloak in the colors of a hero who answers to no one.
+  components:
+  - type: Sprite
+    sprite: _Sunset/Clothing/Neck/Homelander/cloak.rsi
+  - type: Clothing
+    sprite: _Sunset/Clothing/Neck/Homelander/cloak.rsi
+
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterHomelanderArmor
+  name: Homelander's armor suit
+  description: A form-fitting suit that shrugs off nearly everything short of radiation. He never takes it off.
+  components:
+  - type: Sprite
+    sprite: _Sunset/Clothing/OuterClothing/Homelander/armor.rsi
+  - type: Clothing
+    sprite: _Sunset/Clothing/OuterClothing/Homelander/armor.rsi
+  - type: Item
+    size: Normal
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Piercing: 0.85
+        Heat: 0.85
+        Shock: 0.85
+        Cold: 0.85
+        Caustic: 0.85
+        Poison: 0.85
+        Bloodloss: 0.85
+        Asphyxiation: 0.85
+        Radiation: 1.0
+  - type: SelfUnremovableClothing

@@ -1,0 +1,28 @@
+# 🌇Sunset🌇 - Spy GameRule. AntagSelection (which is also what makes Spy selectable both at round
+# start and manually through the admin Antagonist menu, since that menu just lists
+# AntagSelection-tagged game rules) + a DynamicRuleCost so it participates in the normal dynamic
+# antag budget. No AntagObjectives/AntagRandomObjectives here - the spy's objectives are the
+# contract board (see Content.Server._Sunset.Spy.SpyContracts.SpyContractSystem), accepted live
+# from the uplink rather than assigned at round start.
+- type: entity
+  parent: BaseGameRule
+  id: Spy
+  components:
+  - type: SpyRule
+  - type: AntagSelection
+    agentName: spy-round-end-agent-name
+    selectionTime: IntraPlayerSpawn
+    definitions:
+    - prefRoles: [ Spy ]
+      max: 2
+      playerRatio: 20
+      lateJoinAdditional: true
+      allowNonHumans: false
+      multiAntagSetting: NotExclusive
+      startingGear: SpyGear
+      mindRoles:
+      - MindRoleSpy
+      briefing:
+        sound: "/Audio/Ambience/Antag/traitor_start.ogg"
+  - type: DynamicRuleCost
+    cost: 80

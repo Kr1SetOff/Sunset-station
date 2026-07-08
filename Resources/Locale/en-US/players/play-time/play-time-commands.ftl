@@ -20,6 +20,23 @@ cmd-playtime_addrole-arg-role = <role>
 cmd-playtime_addrole-arg-minutes = <minutes>
 cmd-playtime_addrole-error-args = Expected exactly three arguments
 
+# - playtime_setoverall
+cmd-playtime_setoverall-desc = Sets a player's overall playtime to the specified minutes
+cmd-playtime_setoverall-help = Usage: {$command} <user name> <minutes>
+cmd-playtime_setoverall-succeed = Set overall time for {$username} to {TOSTRING($time, "dddd\\:hh\\:mm")}
+cmd-playtime_setoverall-arg-user = <user name>
+cmd-playtime_setoverall-arg-minutes = <minutes>
+cmd-playtime_setoverall-error-args = Expected exactly two arguments
+
+# - playtime_setrole
+cmd-playtime_setrole-desc = Sets a player's role playtime to the specified minutes
+cmd-playtime_setrole-help = Usage: {$command} <user name> <role> <minutes>
+cmd-playtime_setrole-succeed = Set role playtime for {$username} / \'{$role}\' to {TOSTRING($time, "dddd\\:hh\\:mm")}
+cmd-playtime_setrole-arg-user = <user name>
+cmd-playtime_setrole-arg-role = <role>
+cmd-playtime_setrole-arg-minutes = <minutes>
+cmd-playtime_setrole-error-args = Expected exactly three arguments
+
 # - playtime_getoverall
 cmd-playtime_getoverall-desc = Gets the specified minutes for a player's overall playtime
 cmd-playtime_getoverall-help = Usage: {$command} <user name>

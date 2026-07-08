@@ -1,0 +1,17 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Taken from Orion-Station-14 at https://github.com/AtaraxiaSpaceFoundation/Orion-Station-14",
+    "size": {
+        "x": 8,
+        "y": 8
+    },
+    "states": [
+        {
+            "name": "Bitrun-Avatar"
+        },
+        {
+            "name": "Bitrunner"
+        }
+    ]
+}

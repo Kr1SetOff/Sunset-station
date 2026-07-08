@@ -1,0 +1,53 @@
+# 🌇Sunset🌇 - ported from Goobstation/Reserve-Station: the Western set's "twin pistols".
+# This fork already has its own native dual-wield mechanic (Content.Shared._Starlight.Weapons.DualWield
+# - right-click either gun and pick "Enable Dual Wield" to alternate fire between both hands), so this
+# just tags into that with CanDualWieldComponent instead of porting Goobstation's separate
+# RequiresDualWield/Multishot system, which doesn't exist here and was conflicting with this fork's
+# own dual-wield pipeline (that was the cause of the network/chunk-reload crash on this set).
+
+- type: entity
+  name: Dualetta
+  parent: [ BaseWeaponPistol, BaseSyndicateContraband ]
+  id: WeaponPistolDualetta
+  description: The coolest pistol in the sector. Feels naked without its paired pistol in your other hand.
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Objects/Weapons/Guns/Pistols/Dualetta.rsi
+    layers:
+    - state: base
+      map: [ "enum.GunVisualLayers.Base" ]
+    - state: mag-0
+      map: [ "enum.GunVisualLayers.Mag" ]
+  - type: Clothing
+    sprite: _Goobstation/Objects/Weapons/Guns/Pistols/Dualetta.rsi
+  - type: ChamberMagazineAmmoProvider
+    boltClosed: null
+  - type: Gun
+    fireRate: 6
+    availableModes:
+    - SemiAuto
+    - FullAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/mateba.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazinePistolCaselessRifle
+        insertSound: /Audio/Weapons/Guns/MagIn/pistol_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
+        priority: 2
+        swap: false
+        whitelist:
+          tags:
+          - MagazinePistolCaselessRifle
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        priority: 1
+        swap: false
+        whitelist:
+          tags:
+          - CartridgeCaselessRifle
+  - type: CanDualWield
+    dualWieldInaccuracyPenalty: 10

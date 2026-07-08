@@ -1,0 +1,36 @@
+# 🌇Sunset🌇 - the Mime's real "Finger Guns" ability, matching Goob Station/Reserve-Station's
+# ActionFingerGuns: a targeted ranged attack firing a mimed bullet that can miss, instead of the
+# earlier melee-combo substitute. See SharedMartialArtsSystem.Mime.cs for the handler.
+
+- type: entity
+  parent: BaseAction
+  id: ActionMartialArtsMimeFingerGuns
+  name: Пальцы-пистолеты
+  description: Сложить пальцы пистолетом и выстрелить настоящей немой пулей - может и промазать. Требует свободную руку.
+  components:
+  - type: Action
+    useDelay: 10
+    itemIconStyle: BigAction
+    icon:
+      sprite: _Sunset/MartialArts/mime_actions.rsi
+      state: finger_guns
+  - type: TargetAction
+    checkCanAccess: false
+    repeat: true
+    range: 20
+  - type: WorldTargetAction
+    event: !type:MimeFingerGunsActionEvent
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: BaseBullet
+  id: BulletMime
+  name: немая пуля
+  description: Тихая пуля, реальная только для того, в кого она попадёт.
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 40
+  - type: MimeBullet
+    muteDuration: 20

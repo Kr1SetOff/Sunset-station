@@ -18,12 +18,14 @@ using Content.Shared.Throwing;
 using Content.Shared.Weapons.Melee;
 using Content.Shared.Weapons.Melee.Events;
 using Content.Shared.Weapons.Ranged.Events;
+using Content.Shared.Weapons.Ranged.Systems;
 using Content.Shared._Sunset.Grab.Components;
 using Content.Shared._Sunset.Grab.Events;
 using Content.Shared._Sunset.MartialArts.Components;
 using Content.Shared._Sunset.MartialArts.Events;
 using Robust.Shared.Map;
 using Robust.Shared.Network;
+using Robust.Shared.Physics.Systems;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
@@ -55,6 +57,8 @@ public sealed partial class SharedMartialArtsSystem : EntitySystem
     [Dependency] private InventorySystem _inventory = default!;
     [Dependency] private TurfSystem _turf = default!;
     [Dependency] private SharedMapSystem _mapSystem = default!;
+    [Dependency] private SharedGunSystem _gun = default!;
+    [Dependency] private SharedPhysicsSystem _physics = default!;
 
     private const float CqcUnblockRange = 8f;
 
@@ -110,7 +114,9 @@ public sealed partial class SharedMartialArtsSystem : EntitySystem
         },
         [MartialArtStyle.Mime] = new()
         {
-            ("MimeFingerGuns", new[] { ComboAttackType.Harm, ComboAttackType.Harm }, false),
+            // Finger Guns is now a real targeted ranged action (see MimeAdvancedMimeryComponent),
+            // matching Goob Station/Reserve-Station's actual mechanic, so the Harm+Harm melee combo
+            // that used to stand in for it was removed.
             ("MimeBoxTrap", new[] { ComboAttackType.Grab, ComboAttackType.Disarm }, false),
             ("MimeExaggeratedSlap", new[] { ComboAttackType.Harm, ComboAttackType.Disarm }, false),
         },
@@ -221,6 +227,7 @@ public sealed partial class SharedMartialArtsSystem : EntitySystem
             case MartialArtStyle.Mime:
                 var mimery = EnsureComp<MimeAdvancedMimeryComponent>(uid);
                 _actions.AddAction(uid, ref mimery.BlockadeAction, "ActionMartialArtsMimeInvisibleBlockade");
+                _actions.AddAction(uid, ref mimery.FingerGunsAction, "ActionMartialArtsMimeFingerGuns");
                 break;
         }
     }
@@ -249,6 +256,7 @@ public sealed partial class SharedMartialArtsSystem : EntitySystem
                 if (TryComp<MimeAdvancedMimeryComponent>(uid, out var mimery))
                 {
                     _actions.RemoveAction(mimery.BlockadeAction);
+                    _actions.RemoveAction(mimery.FingerGunsAction);
                     RemComp<MimeAdvancedMimeryComponent>(uid);
                 }
                 break;
@@ -422,7 +430,6 @@ public sealed partial class SharedMartialArtsSystem : EntitySystem
             case "JudoThrow": JudoThrow(user, target); break;
             case "JudoArmbar": JudoArmbar(user, target); break;
             case "JudoWheelThrow": JudoWheelThrow(user, target); break;
-            case "MimeFingerGuns": MimeFingerGuns(user, target); break;
             case "MimeBoxTrap": MimeBoxTrap(user, target); break;
             case "MimeExaggeratedSlap": MimeExaggeratedSlap(user, target); break;
         }

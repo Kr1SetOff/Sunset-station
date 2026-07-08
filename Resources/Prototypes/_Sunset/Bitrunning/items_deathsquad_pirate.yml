@@ -1,0 +1,151 @@
+# 🌇Sunset🌇 - the handful of Goobstation/Orion items the original Death Squad and Phoron Sabre
+# bitrunning mobs equip that this fork never ported (Death Squad content here so far was only the
+# Loadouts/hardsuit/boots half - see Deathsquad.yml gear). Textures at their original paths.
+# ExecutiveIDCard is simplified slightly: dropped JobIconNanotrasen (doesn't exist here) for the
+# generic JobIcon, and reused the existing id_swipe sound instead of porting a Goobstation-only one -
+# neither affects how the item actually plays.
+
+- type: entity
+  parent: ClothingEyesHudOmni
+  id: ClothingEyesGlassesDeathsquad
+  name: central commander shades
+  description: Pride. Hubris. Wrath. It's not a sin if you're right.
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Clothing/Eyes/Glasses/deathsquad.rsi
+  - type: Clothing
+    sprite: _Goobstation/Clothing/Eyes/Glasses/deathsquad.rsi
+  - type: FlashImmunity
+  - type: EyeProtection
+    protectionTime: 5
+  - type: IdentityBlocker
+    coverage: EYES
+  - type: ClothesThermalVision
+
+- type: entity
+  parent: [ClothingHandsGlovesCombat, BaseCentcommContraband]
+  id: ClothingHandsGlovesDeathsquad
+  name: mk-3 "redactor" power gloves
+  description: A pair of highly-advanced gauntlets capable of ripping open doors. Its retractable claws are laced with a potent neurotoxin.
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Clothing/Hands/Gloves/deathsquad.rsi
+  - type: Clothing
+    sprite: _Goobstation/Clothing/Hands/Gloves/deathsquad.rsi
+    equippedPrefix: gauntlet
+  - type: Item
+    sprite: _Goobstation/Clothing/Hands/Gloves/deathsquad.rsi
+    heldPrefix: gauntlet
+
+- type: entity
+  parent: ClothingHandsGlovesDeathsquad
+  id: ClothingHandsGlovesDeathsquadUnremovable
+  components:
+  - type: Unremoveable
+
+- type: entity
+  parent: [ClothingBeltStorageBase, ContentsExplosionResistanceBase, BaseCentcommContraband]
+  id: ClothingBeltDeathsquadWebbing
+  name: deathsquad operative chestrig
+  description: A robust and durable chestrig, containing everything you need to keep you in the fight. You probably won't need to use it.
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Clothing/Belt/deathsquadwebbing.rsi
+  - type: Clothing
+    sprite: _Goobstation/Clothing/Belt/deathsquadwebbing.rsi
+  - type: ExplosionResistance
+    damageCoefficient: 0.01
+
+- type: entity
+  parent: IDCardStandard
+  id: ExecutiveIDCard
+  name: executive access card
+  description: Nanotrasen employees are legally obligated to listen to someone with one of these. It's also capable of overriding access locks on most devices.
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Objects/Misc/executive.rsi
+    state: icon
+  - type: Clothing
+    sprite: _Goobstation/Objects/Misc/executive.rsi
+    quickEquip: true
+    slots:
+    - neck
+    - idcard
+  - type: Item
+    sprite: _Goobstation/Objects/Misc/executive.rsi
+  - type: IdCard
+  - type: Emag
+    emagType: Access
+    emagSound: /Audio/Machines/id_swipe.ogg
+  - type: Access
+    groups:
+    - AllAccess
+    tags:
+    - CentralCommand
+
+- type: entity
+  parent: [BaseMeleeWeaponEnergy, BaseCentcommContraband]
+  id: PhoronSabre
+  name: phoron sabre
+  description: The signature weapon of the dreaded deathsquads. It's mostly for show.
+  components:
+  - type: ItemToggle
+    soundFailToActivate:
+      path: /Audio/Machines/button.ogg
+      params:
+        variation: 0.250
+    soundActivate:
+      path: /Audio/Weapons/eblade1.ogg
+    soundDeactivate:
+      path: /Audio/Weapons/eblade1.ogg
+  - type: ItemToggleActiveSound
+    activeSound:
+      path: /Audio/Weapons/eblademiss.ogg
+  - type: Sprite
+    sprite: _Goobstation/Objects/Weapons/Melee/phoron_sabre.rsi
+    layers:
+    - state: p_sword
+    - state: p_sword_blade
+      color: "#b5fbfa"
+      visible: false
+      shader: unshaded
+      map: [ "blade" ]
+  - type: ItemToggleMeleeWeapon
+    activatedSoundOnHit:
+      path: /Audio/Weapons/eblade1.ogg
+      params:
+        variation: 0.250
+    activatedSoundOnHitNoDamage:
+      path: /Audio/Weapons/eblade1.ogg
+      params:
+        variation: 0.250
+        volume: -10
+    activatedSoundOnSwing:
+      path: /Audio/Weapons/eblademiss.ogg
+      params:
+        variation: 0.125
+    activatedDamage:
+      types:
+        Slash: 30
+        Heat: 35
+        Radiation: 10
+        Structural: 80
+  - type: Item
+    sprite: _Goobstation/Objects/Weapons/Melee/phoron_sabre_inhands.rsi
+  - type: Reflect
+    reflectProb: 1
+    reflects:
+      - Energy
+  - type: Tag
+    tags:
+    - EnergySword
+  - type: Sharp
+  - type: Execution
+
+- type: entity
+  parent: PhoronSabre
+  id: PhoronSabreOn
+  suffix: On
+  components:
+  - type: ItemToggle
+    activated: true

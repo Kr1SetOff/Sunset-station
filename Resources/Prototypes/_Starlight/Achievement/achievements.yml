@@ -548,3 +548,216 @@
     sprite: _Starlight/Interface/Achievements/icons.rsi
     state: heliosMedal
   requirements: []
+
+# 🌇Sunset🌇 - achievements ported from sunset-station's _Sunset/Achievements/achievements.yml,
+# re-expressed against this repo's progressType/requirements schema. See
+# Content.Server/_Starlight/Achievement/AchievementSystem.Sunset.cs for the progress hooks.
+- type: achievement
+  id: sunset_welcome_to_the_station
+  name: achievement-sunset-welcome-to-the-station-name
+  description: achievement-sunset-welcome-to-the-station-description
+  category: onboarding
+  hidden: false
+  showProgress: false
+  icon:
+    sprite: _Starlight/Interface/Achievements/icons.rsi
+    state: fishMedal
+  requirements:
+  - progressType: spawn.count
+    requiredProgress: 1
+
+- type: achievement
+  id: sunset_pgsher
+  name: achievement-sunset-pgsher-name
+  description: achievement-sunset-pgsher-description
+  category: milestones
+  hidden: false
+  showProgress: true
+  icon:
+    sprite: _Starlight/Interface/Achievements/icons.rsi
+    state: fishMedal
+  requirements:
+  - progressType: sunset.death.count
+    requiredProgress: 10
+
+- type: achievement
+  id: sunset_god
+  name: achievement-sunset-god-name
+  description: achievement-sunset-god-description
+  category: milestones
+  hidden: false
+  showProgress: true
+  icon:
+    sprite: _Starlight/Interface/Achievements/icons.rsi
+    state: fishMedal
+  requirements:
+  - progressType: sunset.revive.count
+    requiredProgress: 12
+    perRound: true
+
+- type: achievement
+  id: sunset_unfunny_clown
+  name: achievement-sunset-unfunny-clown-name
+  description: achievement-sunset-unfunny-clown-description
+  category: milestones
+  hidden: false
+  showProgress: true
+  icon:
+    sprite: _Starlight/Interface/Achievements/icons.rsi
+    state: fishMedal
+  requirements:
+  - progressType: sunset.slip.count
+    requiredProgress: 228
+
+- type: achievement
+  id: sunset_best_security_officer
+  name: achievement-sunset-best-security-officer-name
+  description: achievement-sunset-best-security-officer-description
+  category: milestones
+  hidden: false
+  showProgress: true
+  icon:
+    sprite: _Starlight/Interface/Achievements/icons.rsi
+    state: fishMedal
+  requirements:
+  - progressType: sunset.slip.job.SecurityOfficer
+    requiredProgress: 100
+    perRound: true
+
+- type: achievement
+  id: sunset_survivor
+  name: achievement-sunset-survivor-name
+  description: achievement-sunset-survivor-description
+  category: milestones
+  hidden: false
+  showProgress: false
+  icon:
+    sprite: _Starlight/Interface/Achievements/icons.rsi
+    state: fishMedal
+  requirements: []
+
+- type: achievement
+  id: sunset_rock_bottom
+  name: achievement-sunset-rock-bottom-name
+  description: achievement-sunset-rock-bottom-description
+  category: milestones
+  hidden: false
+  showProgress: false
+  icon:
+    sprite: _Starlight/Interface/Achievements/icons.rsi
+    state: fishMedal
+  requirements: []
+
+- type: achievement
+  id: sunset_carpo_lover
+  name: achievement-sunset-carpo-lover-name
+  description: achievement-sunset-carpo-lover-description
+  category: milestones
+  hidden: false
+  showProgress: false
+  icon:
+    sprite: _Starlight/Interface/Achievements/icons.rsi
+    state: fishMedal
+  requirements: []
+
+- type: achievement
+  id: sunset_dangerous_furniture
+  name: achievement-sunset-dangerous-furniture-name
+  description: achievement-sunset-dangerous-furniture-description
+  category: milestones
+  hidden: false
+  showProgress: false
+  icon:
+    sprite: _Starlight/Interface/Achievements/icons.rsi
+    state: fishMedal
+  requirements: []
+
+- type: achievement
+  id: sunset_revenge
+  name: achievement-sunset-revenge-name
+  description: achievement-sunset-revenge-description
+  category: milestones
+  hidden: false
+  showProgress: false
+  icon:
+    sprite: _Starlight/Interface/Achievements/icons.rsi
+    state: fishMedal
+  requirements: []
+
+- type: achievement
+  id: sunset_miscalculated
+  name: achievement-sunset-miscalculated-name
+  description: achievement-sunset-miscalculated-description
+  category: milestones
+  hidden: false
+  showProgress: false
+  icon:
+    sprite: _Starlight/Interface/Achievements/icons.rsi
+    state: fishMedal
+  requirements: []
+
+- type: achievement
+  id: sunset_curious
+  name: achievement-sunset-curious-name
+  description: achievement-sunset-curious-description
+  category: milestones
+  hidden: false
+  showProgress: true
+  icon:
+    sprite: _Starlight/Interface/Achievements/icons.rsi
+    state: fishMedal
+  requirements:
+  - progressType: sunset.examine.count
+    requiredProgress: 100
+    perRound: true
+
+- type: achievement
+  id: sunset_what_station
+  name: achievement-sunset-what-station-name
+  description: achievement-sunset-what-station-description
+  category: milestones
+  hidden: false
+  showProgress: true
+  icon:
+    sprite: _Starlight/Interface/Achievements/icons.rsi
+    state: fishMedal
+  requirements:
+  - progressType: sunset.space_without_suit.seconds
+    requiredProgress: 15
+    perRound: true
+
+- type: achievement
+  id: sunset_hot_stuff
+  name: achievement-sunset-hot-stuff-name
+  description: achievement-sunset-hot-stuff-description
+  category: milestones
+  hidden: false
+  showProgress: false
+  icon:
+    sprite: _Starlight/Interface/Achievements/icons.rsi
+    state: fishMedal
+  requirements: []
+
+- type: achievement
+  id: sunset_circus_captain
+  name: achievement-sunset-circus-captain-name
+  description: achievement-sunset-circus-captain-description
+  category: milestones
+  hidden: false
+  showProgress: false
+  icon:
+    sprite: _Starlight/Interface/Achievements/icons.rsi
+    state: fishMedal
+  requirements: []
+
+- type: achievement
+  id: sunset_professional
+  name: achievement-sunset-professional-name
+  description: achievement-sunset-professional-description
+  category: milestones
+  hidden: false
+  showProgress: false
+  icon:
+    sprite: _Starlight/Interface/Achievements/icons.rsi
+    state: fishMedal
+  requirements: []

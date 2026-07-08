@@ -1,0 +1,22 @@
+# 🌇Sunset🌇 - ported verbatim from Orion-Station-14's Resources/Prototypes/_White/Damage/modifier_sets.yml
+# (Resin dropped, unused by bitrunning).
+
+- type: damageModifierSet
+  id: Xenomorph
+  coefficients:
+    Blunt: 0.80
+    Slash: 0.80
+    Piercing: 0.80
+    Cold: 0
+    Heat: 1.2
+    Poison: 0
+
+- type: damageModifierSet
+  id: XenomorphDungeon
+  coefficients:
+    Blunt: 1
+    Slash: 1
+    Piercing: 1
+    Cold: 0
+    Heat: 1.5
+    Poison: 0

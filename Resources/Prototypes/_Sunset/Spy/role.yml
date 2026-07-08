@@ -1,0 +1,29 @@
+# 🌇Sunset🌇 - Spy antag, reusing the AntagSelection/MindRole/StartingGear machinery the same way
+# the base Thief antag does (see Resources/Prototypes/Roles/Antags/thief.yml). Objectives are the
+# uplink's contract board (Content.Server._Sunset.Spy.SpyContracts), not round-start StealCondition.
+
+- type: antag
+  id: Spy
+  name: roles-antag-spy-name
+  antagonist: true
+  setPreference: true
+  objective: roles-antag-spy-objective
+
+- type: entity
+  parent: BaseMindRoleAntag
+  id: MindRoleSpy
+  name: Spy Role
+  components:
+  - type: MindRole
+    antagPrototype: Spy
+    exclusiveAntag: true
+    subtype: role-subtype-spy
+  - type: SpyRole
+
+- type: startingGear
+  id: SpyGear
+  storage:
+    back:
+    - SpyUplink
+    - SpyPinpointer
+    - SpyTracker

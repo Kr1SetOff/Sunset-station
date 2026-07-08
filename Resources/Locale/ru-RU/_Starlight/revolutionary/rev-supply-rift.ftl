@@ -1,84 +1,84 @@
-rev-supply-rift-placed = Psst..! Comrades! A supply rift has been opened by comrade { $name } { $location }! The time has come! Defend it at all costs!
+rev-supply-rift-placed = Тсс..! Товарищи! Товарищ { $name } открыл разлом снабжения { $location }! Время пришло! Защищайте его любой ценой!
 rev-supply-rift-sender = Private Soviet Communications
 
 # armaments rift
-rev-supply-rift-charging = A supply rift is already in use! (Charging: { $percentage }% — Placed by comrade { $name } { $location })
-rev-supply-rift-ready = Supply rift (Ready to Deploy)
-rev-supply-rift-destroyed = A rift has been destroyed! We deemed it to be too risky to open another. Good luck to your revolution!
-rev-supply-rift-charged = (!) A shady portal that coughs up Soviet stuff. This exposes them! If it's destroyed, commies won't be able to open another! There are currently { $count } active rifts!
+rev-supply-rift-charging = Разлом снабжения уже используется! (Зарядка: { $percentage }% — открыл товарищ { $name } { $location })
+rev-supply-rift-ready = Разлом снабжения (готов к развёртыванию)
+rev-supply-rift-destroyed = Разлом уничтожен! Мы сочли слишком рискованным открывать ещё один. Удачи вашей революции!
+rev-supply-rift-charged = (!) Подозрительный портал, выплёвывающий советское снаряжение. Это их выдаёт! Если его уничтожить, коммунисты не смогут открыть новый! Сейчас активных разломов: { $count }!
 
 # Total Conversion
 whistle-name = Trench whistle
-whistle-desc = Want me to lead a final charge?
+whistle-desc = Хотите, я поведу последний штурм?
 banner-name = Revolutionary banner
-banner-desc = Dying with purpose, comrade.
-soviet-encryption-key-conversion-desc = Share your status report tovarisch.
+banner-desc = Умереть со смыслом, товарищ.
+soviet-encryption-key-conversion-desc = Поделись сводкой, товарищ.
 aps-name = Stechkin APS
-aps-desc = To a brigadier of your choosing, or yourself.
+aps-desc = Бригадиру на ваш выбор — или себе.
 lawboard-name = Commiemov AI lawboard
-lawboard-desc = The USSP is open to everyone, even the AI! Do keep in mind that you will need a way to unlock the AI upload console if you plan to use this.
+lawboard-desc = СССП открыт для всех, даже для ИИ! Учтите: чтобы этим воспользоваться, понадобится способ разблокировать консоль загрузки законов ИИ.
 
 # Telebonds
 # Weapons
 akms-weapon-name = AKMS Rifle
-akms-weapon-desc = Discontinued but a reliable assault rifle still in broad use today. Uses .30 ammo.
+akms-weapon-desc = Снят с производства, но по сей день надёжный и широко используемый автомат. Патроны .30.
 makarov-name = Makarov
-makarov-desc = Cho? Gun is gun comrade. Uses .35 auto ammo.
+makarov-desc = Чо? Пистолет есть пистолет, товарищ. Патроны .35 авто.
 finka-name = Finka (SNKVD)
-finka-desc = The knife's secret technique was...
+finka-desc = Секретная техника этого ножа была...
 mosin-name = Kardashev-Mosin
-mosin-desc = Enemies at the airlock. Uses .45 magnum ammo.
+mosin-desc = Враги у шлюза. Патроны .45 магнум.
 dp-name = DP-28 LMG
-dp-desc = From RA-TA-TA-TA with love. Uses .30 ammo.
+dp-desc = Из РА-ТА-ТА-ТА с любовью. Патроны .30.
 ppsh-name = PPSH 59 SMG
-ppsh-desc = The legendary discontinued PPSH 59. Inaccurate as hell, but delivers it. Uses .35 ammo.
+ppsh-desc = Легендарный снятый с производства ППШ 59. Дьявольски неточный, но своё доносит. Патроны .35.
 toz-name = ZOZ-106
-toz-desc = Aim at head and eyes. Uses .42 ammo, comes with extended magazine.
+toz-desc = Целься в голову и глаза. Патроны .42, в комплекте расширенный магазин.
 
 # Wearables
 soviet-eva-name = Soviet EVA Suit
-soviet-eva-desc = A rugged space suit with the hammer and sickle emblazoned on the back. Space cold resistant.
+soviet-eva-desc = Крепкий скафандр с серпом и молотом на спине. Защищает от космического холода.
 soviet-eva-helm-name = Soviet EVA Helmet
-soviet-eva-helm-desc = A sturdy EVA helmet with a red star emblazoned on the front. Glory to the workers of space!
+soviet-eva-helm-desc = Прочный EVA-шлем с красной звездой на лбу. Слава труженикам космоса!
 soviet-bandolier-name = Marine bandolier (SSF)
-soviet-bandolier-desc = The marines have surplus bandoliers that can hold ammo, knives and radio.
+soviet-bandolier-desc = У морпехов остались лишние бандольеры — вмещают боеприпасы, ножи и рацию.
 soviet-gas-mask-name = GP-32 gas mask
-soviet-gas-mask-desc = An old uncomfortable mechanical gas mask. Has eye and flash protection.
+soviet-gas-mask-desc = Старый неудобный механический противогаз. Защищает глаза и от вспышек.
 soviet-coat-name = Soviet great coat
-soviet-coat-desc = Offers minor protection from bullets, major protection from fashion.
+soviet-coat-desc = Слегка защищает от пуль, мощно — от безвкусицы.
 glasses-name = cheap sunglasses
-glasses-desc = Retrofitted to show the brainwashing parasite above them.
+glasses-desc = Доработаны, чтобы показывать паразита-промывателя мозгов над их головами.
 soviet-hardsuit-name = Marine hardsuit (SSF)
-soviet-hardsuit-desc = Old robust design, still holds up to this day.
+soviet-hardsuit-desc = Старая крепкая конструкция — держится до сих пор.
 
 # Implants
 SKB-implanter-name = SKB Demindshielder
-SKB-implanter-desc = An implant specialized in removing brainwashing parasites.
+SKB-implanter-desc = Имплант, специализирующийся на удалении паразитов-промывателей мозгов.
 
 # Deception
 soviet-encryption-key-name = Soviet encryption key
-soviet-encryption-key-desc = Features exotic woodpeckers. Priyom.
+soviet-encryption-key-desc = С экзотическими дятлами. Приём.
 
 # Shuttle
 stole-remote-signaller-name = Remote signaller
 stole-remote-signaller-desc = Boom! Links devices.
-high-power-cage-name = High-capacity power cage
-high-power-cage-desc = LSE-1200c's power ammo. Don't lose it.
+high-power-cage-name = Высокоёмкая энергокассета
+high-power-cage-desc = Боепитание LSE-1200c. Не теряйте.
 lse-400c-name = LSE-400c
-lse-400c-desc = Basic laser emplacement weapon. Requires a power cell, link and a signaleer.
+lse-400c-desc = Базовая лазерная турель. Нужны батарея, линковка и сигнальщик.
 stolen-ptk800-name = PTK-800 (NT)
-stolen-ptk800-desc = Stolen mining weaponry for breaching. Requires link and a signaleer.
+stolen-ptk800-desc = Краденое шахтёрское орудие для проломов. Нужны линковка и сигнальщик.
 lse-1200c-name = LSE-1200c
-lse-1200c-desc = A more advanced laser emplacement weapon. Requires a 'power cage', link and a signaleer.
+lse-1200c-desc = Продвинутая лазерная турель. Нужны «энергокассета», линковка и сигнальщик.
 
 # Pointless
 soviet-medals-name = Soviet sets of medals
-soviet-medals-desc = Tovarisch robust. Here you go.
+soviet-medals-desc = Товарищ робаст. Держи.
 ushanka-name = Ushanka
-ushanka-desc = Perfect for winter in Siberia, da?
+ushanka-desc = Идеальна для зимы в Сибири, да?
 sovietuniform-name = Soviet Uniform
-sovietuniform-desc = Ploughshares to Swords, Assistant to Commisar.
+sovietuniform-desc = Орала — на мечи, ассистента — в комиссары.
 zapo-name = Zaporozhian sich bundle
-zapo-desc = Cossacks- have gone to space, and have earned respect within the union.
+zapo-desc = Казаки ушли в космос — и заслужили уважение в союзе.
 vodkizine-name = Vodkizine bottle
-vodkizine-desc = The best cure for and cause of a hangover.
+vodkizine-desc = Лучшее лекарство от похмелья и его же причина.

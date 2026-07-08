@@ -1,0 +1,106 @@
+# 🌇Sunset🌇 - Spy-exclusive items ported from frostek3122-byte/sunset-station's Spy Uplink catalog.
+
+# --- Covert armor: a lighter armored vest sold to the Spy. Now genuinely covert - ChameleonClothing
+# lets the wearer disguise it as any other outerClothing item, CovertClothingComponent (this
+# fork's replacement for source's SpyOwnerOnlyClothing) stops anyone else from stripping it off via
+# the strip menu, and HideInStripMenu makes the outerwear slot look outright EMPTY to anyone else
+# opening the wearer's strip window (the replacement entity below has no sprite, so the slot button
+# renders blank). The wearer still sees it normally in their own inventory and on their sprite.
+- type: entity
+  parent: [ClothingOuterArmorBasic, BaseChameleon]
+  id: SpyArmourInvisible
+  name: covert spy armor
+  description: A lightweight reinforced vest built for stealth work rather than a firefight. Disguises itself as other outerwear.
+  suffix: Chameleon
+  components:
+  - type: Tag
+    tags: [] # ignore "WhitelistChameleon" tag
+  - type: ChameleonClothing
+    slot: [outerClothing]
+    default: ClothingOuterArmorBasic
+  - type: CovertClothing
+  - type: HideInStripMenu
+    strategy: !type:HideInStripMenuWithEntityStrategy
+      prototype: SpyCovertHiddenEntity
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.525
+        Slash: 0.525
+        Piercing: 0.525
+        Heat: 0.525
+    showArmorOnExamine: false
+  - type: ExplosionResistance
+    damageCoefficient: 0.3
+  - type: StaminaResistance
+    damageCoefficient: 0.75
+
+# Deliberately sprite-less client-side placeholder: the strip window's slot button only draws an
+# icon if the replacement entity has a SpriteComponent, so this makes the covert armor's slot look
+# empty rather than showing a "something's hidden here" marker like pockets do.
+- type: entity
+  id: SpyCovertHiddenEntity
+  categories: [ HideSpawnMenu ]
+
+# =====================================================================================
+# Ammunition for the Cobra pistol (sold in the Spy Uplink).
+# =====================================================================================
+
+- type: entity
+  id: BulletCaselessRifleSpyAP
+  name: bullet (.25 caseless AP)
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 26
+
+- type: entity
+  id: CartridgeCaselessRifleSpyAP
+  name: cartridge (.25 caseless AP)
+  parent: BaseCartridgeCaselessRifle
+  components:
+  - type: CartridgeAmmo
+    proto: BulletCaselessRifleSpyAP
+  - type: Sprite
+    layers:
+    - state: base
+      map: [ "enum.AmmoVisualLayers.Base" ]
+    - state: tip
+      map: [ "enum.AmmoVisualLayers.Tip" ]
+      color: "#4d4d4d"
+
+- type: entity
+  id: MagazinePistolCaselessRifleSpy
+  name: pistol magazine (.25 caseless)
+  parent: BaseMagazinePistolCaselessRifle
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeCaselessRifle
+    capacity: 10
+
+- type: entity
+  id: MagazinePistolCaselessRifleSpyAP
+  name: pistol magazine (.25 caseless AP)
+  parent: BaseMagazinePistolCaselessRifle
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeCaselessRifleSpyAP
+    capacity: 10
+
+# =====================================================================================
+# Functional thermal goggles: vanilla ClothingEyesGlassesThermal is just lightly-armored eyewear
+# with no actual vision function, so the Spy shop sells this child that actually grants
+# ThermalVision while worn (ClothesThermalVisionSystem adds the component to the wearer on equip;
+# ThermalVisionLateGrantSystem then hands out the toggle action, since the normal grant path only
+# fires at the wearer's own MapInit, not when the component's added mid-round).
+# =====================================================================================
+
+- type: entity
+  parent: ClothingEyesGlassesThermal
+  id: ClothingEyesGlassesThermalSpy
+  suffix: Functional
+  components:
+  - type: ClothesThermalVision

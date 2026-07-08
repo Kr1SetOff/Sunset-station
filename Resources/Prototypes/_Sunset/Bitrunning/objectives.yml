@@ -1,0 +1,24 @@
+# 🌇Sunset🌇 - dynamic per-run objective granted to a bitrunning avatar on connect (see
+# Content.Server._Sunset.Bitrunning.Objectives.BitrunningObjectiveConditionSystem and
+# QuantumServerSystem.GrantDomainObjective). Not round-start assigned like normal objectives -
+# spawned and attached to the avatar's mind the moment they enter a domain, so its title/progress
+# reflects the current run's actual goal (collect/deliver/eliminate/catch/eat/drink amount).
+- type: entity
+  id: BitrunningAvatarObjective
+  parent: BaseObjective
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Objective
+    difficulty: 1
+    issuer: objective-issuer-byteforge
+    unique: false
+    # 🌇Sunset🌇 - the objectives system reads the icon from ObjectiveComponent.Icon, not from a
+    # separate Icon component; without this the character menu logged "objective ... is missing an
+    # icon!" and never displayed the domain task.
+    icon:
+      sprite: _Sunset/Structures/Machines/quantum_server.rsi
+      state: qserver
+  - type: BitrunningObjectiveCondition
+  - type: Icon
+    sprite: _Sunset/Structures/Machines/quantum_server.rsi
+    state: qserver

@@ -1,4 +1,4 @@
-alert-level-announcement-sender = Attention! { $sender } has called { $name } alert! { $announcement }
+alert-level-announcement-sender = Внимание! { $sender } объявляет уровень угрозы { $name }! { $announcement }
 
 alert-level-omega = Омега
 alert-level-omega-announcement = Колебания Нулевого Шрама указывают на то, что эта станция вышла из фазы со своей стандартной реальностью. Надеюсь, то, что вы натворили, того стоило.

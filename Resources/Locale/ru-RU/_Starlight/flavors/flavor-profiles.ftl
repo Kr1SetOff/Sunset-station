@@ -10,3 +10,6 @@ flavor-base-greasy = жирный
 flavor-base-festive = праздничный
 flavor-complex-the-last-call = like death's cold embrace
 flavor-base-perfid = perfid
+
+# Sunset - nedostayushchie perevody
+flavor-complex-highlander = как ОСТАТЬСЯ ДОЛЖЕН ТОЛЬКО ОДИН

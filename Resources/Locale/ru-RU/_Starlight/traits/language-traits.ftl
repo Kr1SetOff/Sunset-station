@@ -62,3 +62,7 @@ trait-language-aielic-desc = Прекрасный язык куэли идеал
 
 trait-language-lagomorphian-name = Лагоморфиан
 trait-language-lagomorphian-desc = Линэксический язык, разработанный как интеграционный язык для различной вокальной структуры лагоморфов.
+
+# Sunset - nedostayushchie perevody
+trait-language-squeakish-name = Писклявый язык
+trait-language-squeakish-desc = Вы говорите на писклявом — языке Родентиа, состоящем из череды писков и щебета.

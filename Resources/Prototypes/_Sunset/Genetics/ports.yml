@@ -1,0 +1,14 @@
+# 🌇Sunset🌇 - device-link ports for the DNA modifier console/machine pair. sunset-station's own
+# machines.yml referenced these IDs without ever registering them as sinkPort/sourcePort prototypes -
+# a bug in the source that would fail to load there too. Added here, mirroring the cloning
+# pod/console port pair.
+- type: sinkPort
+  id: DnaModifierReceiver
+  name: signal-port-name-dna-modifier-receiver
+  description: signal-port-description-dna-modifier-receiver
+
+- type: sourcePort
+  id: DnaModifierSender
+  name: signal-port-name-dna-modifier-sender
+  description: signal-port-description-dna-modifier-sender
+  defaultLinks: [ DnaModifierReceiver ]

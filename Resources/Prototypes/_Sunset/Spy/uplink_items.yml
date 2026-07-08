@@ -1,0 +1,113 @@
+# 🌇Sunset🌇 - Spy Uplink, contract tracker gadget, and pinpointer, using the ported
+# sunset-station Spy sprites (spy_uplink.rsi / spy_tracker.rsi / spy_pinpointer.rsi).
+
+- type: storeCategory
+  id: SpyContracts
+  name: store-category-spy-contracts
+  priority: -1
+
+- type: storeCategory
+  id: SpyGear
+  name: store-category-spy-gear
+  priority: 0
+
+- type: storeCategory
+  id: SpyWeapons
+  name: store-category-spy-weapons
+  priority: 1
+
+- type: storeCategory
+  id: SpyEspionage
+  name: store-category-spy-espionage
+  priority: 2
+
+- type: storeCategory
+  id: SpyMedical
+  name: store-category-spy-medical
+  priority: 3
+
+- type: entity
+  parent: BaseItem
+  id: SpyUplink
+  name: strange device
+  description: A compact device that quietly syncs with a hidden espionage supply network.
+  components:
+  - type: Sprite
+    sprite: _Sunset/Spy_Sprites/spy_uplink.rsi
+    state: spy_uplink1
+  - type: Item
+    size: Small
+  - type: Store
+    categories:
+    - SpyContracts
+    - SpyGear
+    - SpyWeapons
+    - SpyEspionage
+    - SpyMedical
+    balance:
+      SpyCredit: 0
+    currencyWhitelist:
+    - SpyCredit
+  - type: SpyContracts
+  # Biocode: the spy right-clicks the uplink and installs their biocode, after which only they can
+  # open its UI/use it in hand (see Content.Server._Sunset.Biocode.BiocodeSystem). Not clothing, so
+  # the foreign-wear detonation half of the component is switched off.
+  - type: Biocode
+    detonateOnForeignWear: false
+  - type: UserInterface
+    interfaces:
+      enum.StoreUiKey.Key:
+        type: SpyUplinkBoundUserInterface
+        requireInputValidation: false
+  - type: ActivatableUI
+    key: enum.StoreUiKey.Key
+
+- type: entity
+  name: spy pinpointer
+  description: A covert tracker that points to your current contract target.
+  id: SpyPinpointer
+  parent: PinpointerBase
+  components:
+  - type: Sprite
+    sprite: _Sunset/Spy_Sprites/spy_pinpointer.rsi
+    noRot: true
+    layers:
+    - state: pinpointer_hunter
+      map: ["enum.PinpointerLayers.Base"]
+    - state: pinonalert
+      map: ["enum.PinpointerLayers.Screen"]
+      shader: unshaded
+      visible: false
+  - type: Icon
+    sprite: _Sunset/Spy_Sprites/spy_pinpointer.rsi
+    state: pinpointer_hunter
+  - type: SpyPinpointer
+  - type: Pinpointer
+    canRetarget: false
+    updateTargetName: true
+  - type: GenericVisualizer
+    visuals:
+      enum.PinpointerVisuals.IsActive:
+        enum.PinpointerLayers.Screen:
+          True: { visible: True }
+          False: { visible: False }
+      enum.PinpointerVisuals.TargetDistance:
+        enum.PinpointerLayers.Screen:
+          Unknown: { state: pinonalert }
+          Reached: { state: pinonalertdirect }
+          Close: { state: pinonclose }
+          Medium: { state: pinonmedium }
+          Far: { state: pinonfar }
+
+- type: entity
+  parent: BaseItem
+  id: SpyTracker
+  name: spy tracker
+  description: A multipurpose surveillance bug. Plant it on a target to work a contract.
+  components:
+  - type: Sprite
+    sprite: _Sunset/Spy_Sprites/spy_tracker.rsi
+    state: bug
+  - type: Item
+    size: Small
+  - type: SpyTracker

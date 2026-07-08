@@ -5,6 +5,13 @@
   children:
   - CargoBounties
   - Salvage
+  - SunsetBitrunning # 🌇Sunset🌇
+
+# 🌇Sunset🌇 - Bitrunning guide
+- type: guideEntry
+  id: SunsetBitrunning
+  name: guide-entry-sunset-bitrunning
+  text: "/ServerInfo/Guidebook/Cargo/SunsetBitrunning.xml"
 
 - type: guideEntry
   id: CargoBounties

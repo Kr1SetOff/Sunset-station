@@ -193,3 +193,6 @@ Vamp-converted-text =
     Вы были порабощены!
     Верно служите своему господину. Вы можете получить доступ к коллективному разуму с помощью «+p»
 Vamp-converted-confirm = Понятно
+
+# Sunset - nedostayushchie perevody
+roles-antag-thrall-objective = Верно служите своему господину и исполняйте его приказы.

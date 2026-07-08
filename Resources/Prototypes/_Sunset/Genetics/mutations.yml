@@ -1,0 +1,239 @@
+# Genetic mutations for the genetics system. Each lives in a structural-enzyme (SE) block and
+# expresses itself once that block reaches the tier threshold. Which block holds which gene is
+# shuffled every round (Paradise SS13 style, see GeneticsSystem.EnsureGeneLayout) - that's why no
+# mutation declares a block here.
+#
+# 🌇Sunset🌇 - four of sunset-station's mutations were dropped rather than ported: GeneVoidLungs
+# (PressureImmunity/BreathingImmunity components), GeneXrayEyes (UltraVision), GeneHulk (Hulk, a whole
+# separate subsystem) and GeneDeafness (Deaf) all depend on components/systems that don't exist in
+# this fork. Everything else ports over using components this fork already has.
+#
+# 🌇Sunset🌇 - three mutations from Paradise Station's actual current gene pool
+# (code/game/dna/mutations/mutation_powers.dm) added on top of the above: GeneFireResistance (mirrors
+# Paradise's heat_resist, the counterpart to our existing cold-only GeneCryokinesis - needed a new
+# HeatOnly flag on GeneThermalComponent/GeneThermalSystem since only ColdOnly existed before),
+# GeneChameleonSkin (mirrors stealth/chameleon, simplified to a flat visibility reduction via the
+# existing StealthComponent rather than tile-matching camouflage) and GeneMindShield (mirrors
+# psychic_resist, reusing the existing MindShieldComponent for conversion/mind-control resistance).
+# Paradise's disability/nearsighted was considered but skipped: BlurryVisionComponent is driven by
+# BlindableComponent.EyeDamage recalculation and gets silently cleared by unrelated glasses-equip
+# logic if just granted directly, so it needs proper EyeDamage integration to work reliably - out of
+# scope for a plain component-grant mutation.
+
+# ---- Powers ----
+
+- type: mutation
+  id: GeneNightEyes
+  name: mutation-night-eyes-name
+  description: mutation-night-eyes-desc
+  tier: Intermediate
+  instability: 10
+  components:
+  - type: NightVision
+
+- type: mutation
+  id: GeneIronRetina
+  name: mutation-iron-retina-name
+  description: mutation-iron-retina-desc
+  tier: Minor
+  instability: 5
+  components:
+  - type: FlashImmunity
+
+- type: mutation
+  id: GeneSureFooted
+  name: mutation-sure-footed-name
+  description: mutation-sure-footed-desc
+  tier: Minor
+  instability: 5
+  components:
+  - type: NoSlip
+
+- type: mutation
+  id: GeneShockImmunity
+  name: mutation-shock-immunity-name
+  description: mutation-shock-immunity-desc
+  tier: Intermediate
+  instability: 8
+  components:
+  - type: Insulated
+    coefficient: 0
+
+- type: mutation
+  id: GeneThermalResistance
+  name: mutation-thermal-resistance-name
+  description: mutation-thermal-resistance-desc
+  tier: Major
+  instability: 12
+  components:
+  - type: GeneThermal
+
+- type: mutation
+  id: GeneGlow
+  name: mutation-glow-name
+  description: mutation-glow-desc
+  tier: Minor
+  instability: 5
+  components:
+  - type: GeneticGlow
+
+- type: mutation
+  id: GeneFleetFooted
+  name: mutation-fleet-footed-name
+  description: mutation-fleet-footed-desc
+  tier: Intermediate
+  instability: 10
+  components:
+  - type: GeneticSpeed
+    walkModifier: 1.3
+    sprintModifier: 1.3
+
+- type: mutation
+  id: GeneRegeneration
+  name: mutation-regeneration-name
+  description: mutation-regeneration-desc
+  tier: Major
+  instability: 15
+  components:
+  # Strong, always-on regeneration. damageCap 0 means it keeps healing no matter how hurt the carrier is.
+  - type: PassiveDamage
+    allowedStates:
+    - Alive
+    - Critical
+    damageCap: 0
+    damage:
+      groups:
+        Brute: -2
+        Burn: -2
+        Airloss: -2
+        Toxin: -1
+
+- type: mutation
+  id: GeneTelekinesis
+  name: mutation-telekinesis-name
+  description: mutation-telekinesis-desc
+  tier: Major
+  instability: 20
+  actions:
+  - ActionGeneTelekinesis
+
+- type: mutation
+  id: GenePyrokinesis
+  name: mutation-pyrokinesis-name
+  description: mutation-pyrokinesis-desc
+  tier: Major
+  instability: 20
+  actions:
+  - ActionGenePyrokinesis
+
+# Passive defensive gene (no active ability): shrugs off cold and low pressure.
+- type: mutation
+  id: GeneCryokinesis
+  name: mutation-cryokinesis-name
+  description: mutation-cryokinesis-desc
+  tier: Major
+  instability: 15
+  components:
+  - type: GeneThermal
+    coldOnly: true
+
+- type: mutation
+  id: GeneGigantism
+  name: mutation-gigantism-name
+  description: mutation-gigantism-desc
+  tier: Intermediate
+  # Giants are genetically sturdier: their bulk lowers overall instability.
+  instability: -10
+  components:
+  - type: GeneticSize
+    scale: 1.5
+
+- type: mutation
+  id: GeneFireResistance
+  name: mutation-fire-resistance-name
+  description: mutation-fire-resistance-desc
+  tier: Major
+  instability: 12
+  components:
+  - type: GeneThermal
+    heatOnly: true
+
+- type: mutation
+  id: GeneChameleonSkin
+  name: mutation-chameleon-skin-name
+  description: mutation-chameleon-skin-desc
+  tier: Major
+  instability: 18
+  components:
+  - type: Stealth
+    minVisibility: -0.6
+    maxVisibility: 1
+
+- type: mutation
+  id: GeneMindShield
+  name: mutation-mind-shield-name
+  description: mutation-mind-shield-desc
+  tier: Intermediate
+  instability: 10
+  components:
+  - type: MindShield
+
+- type: mutation
+  id: GeneDwarfism
+  name: mutation-dwarfism-name
+  description: mutation-dwarfism-desc
+  tier: Minor
+  # Dwarfism strains the genome, adding instability.
+  instability: 10
+  components:
+  - type: GeneticSize
+    scale: 0.75
+
+# ---- Diseases ----
+
+- type: mutation
+  id: GeneClumsiness
+  name: mutation-clumsiness-name
+  description: mutation-clumsiness-desc
+  disease: true
+  instability: -8
+  components:
+  - type: Clumsy
+
+- type: mutation
+  id: GeneMutism
+  name: mutation-mutism-name
+  description: mutation-mutism-desc
+  disease: true
+  instability: -8
+  components:
+  - type: Muted
+
+- type: mutation
+  id: GenePacifism
+  name: mutation-pacifism-name
+  description: mutation-pacifism-desc
+  disease: true
+  instability: -10
+  components:
+  - type: Pacified
+
+- type: mutation
+  id: GeneBlindness
+  name: mutation-blindness-name
+  description: mutation-blindness-desc
+  disease: true
+  instability: -12
+  components:
+  - type: PermanentBlindness
+
+- type: mutation
+  id: GeneRadioactive
+  name: mutation-radioactive-name
+  description: mutation-radioactive-desc
+  disease: true
+  instability: -6
+  components:
+  - type: RadiationSource
+    intensity: 2
+    slope: 1

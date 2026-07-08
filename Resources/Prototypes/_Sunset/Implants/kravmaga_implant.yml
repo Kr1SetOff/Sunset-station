@@ -1,0 +1,22 @@
+# 🌇Sunset🌇 - KravMagaImplanter (from the Goobstation Implants set): Goobstation's own Krav Maga is a
+# separate, incompatible martial-arts framework, so this grants Sunset's existing CQC style instead of
+# porting a second one for a single implant (see MartialArtImplantComponent.cs).
+
+- type: entity
+  parent: BaseSubdermalImplant
+  id: KravMagaImplant
+  name: krav maga implant
+  description: This implant teaches the user close-quarters combat techniques the instant it's installed.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SubdermalImplant
+  - type: MartialArtImplant
+    style: CQC
+
+- type: entity
+  parent: BaseImplantOnlyImplanterSyndi
+  id: KravMagaImplanter
+  suffix: Krav Maga
+  components:
+  - type: Implanter
+    implant: KravMagaImplant

@@ -7,6 +7,11 @@
     <NoWarn>1998</NoWarn>
     <WarningsAsErrors>RA0032;nullable</WarningsAsErrors>
     <ServerGarbageCollection>true</ServerGarbageCollection>
+    <!-- 🌇Sunset🌇 - concurrent (background) GC already defaults to on with Server GC on normal
+    hosts, but some constrained/containerized environments auto-disable it. Pinning it explicitly
+    keeps Gen2 collections running on their own background thread instead of pausing the world,
+    regardless of host quirks. -->
+    <ConcurrentGarbageCollection>true</ConcurrentGarbageCollection>
   </PropertyGroup>
   <Import Project="../MSBuild/Content.props" />
   <ItemGroup>

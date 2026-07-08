@@ -1,0 +1,42 @@
+# Active abilities granted by genetic mutations. Each is an entity-target action whose event is handled
+# by GeneticPowerSystem (server).
+
+- type: entity
+  id: ActionGeneTelekinesis
+  parent: BaseAction
+  name: action-gene-telekinesis-name
+  description: action-gene-telekinesis-desc
+  components:
+  - type: Action
+    useDelay: 8
+    itemIconStyle: BigAction
+    icon:
+      sprite: Objects/Magic/magicactions.rsi
+      state: repulse
+  - type: TargetAction
+    range: 8
+    # Ranged power: validate by distance only, don't require the target to be physically reachable.
+    checkCanAccess: false
+  - type: EntityTargetAction
+    event: !type:GeneTelekinesisActionEvent
+    canTargetSelf: false
+
+- type: entity
+  id: ActionGenePyrokinesis
+  parent: BaseAction
+  name: action-gene-pyrokinesis-name
+  description: action-gene-pyrokinesis-desc
+  components:
+  - type: Action
+    useDelay: 12
+    itemIconStyle: BigAction
+    icon:
+      sprite: Objects/Magic/magicactions.rsi
+      state: fireball
+  - type: TargetAction
+    range: 6
+    # Ranged power: validate by distance only, don't require the target to be physically reachable.
+    checkCanAccess: false
+  - type: EntityTargetAction
+    event: !type:GenePyrokinesisActionEvent
+    canTargetSelf: false

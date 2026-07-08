@@ -451,6 +451,43 @@ public sealed partial class PlayTimeTrackingManager : ISharedPlaytimeManager, IP
         CancellationToken cancel = default)
             => TryAddTimeToTrackerByUserName(userName, PlayTimeTrackingShared.TrackerOverall, time, cancel);
 
+    // 🌇Sunset🌇 - admin "set to an exact value" support, mirrors TryAddTimeToTrackerByUserName above.
+    public async Task<TimeSpan?> TrySetTimeForTrackerByUserName(
+        string userName,
+        string tracker,
+        TimeSpan time,
+        CancellationToken cancel = default)
+    {
+        if (time < TimeSpan.Zero)
+            time = TimeSpan.Zero;
+
+        if (_player.TryGetSessionByUsername(userName, out var session))
+        {
+            FlushTracker(session);
+            var current = GetPlayTimeForTracker(session, tracker);
+            AddTimeToTracker(session, tracker, time - current);
+            QueueSendTimers(session);
+
+            return GetPlayTimeForTracker(session, tracker);
+        }
+
+        var record = await _db.GetPlayerRecordByUserName(userName, cancel);
+        if (record == null)
+            return null;
+
+        await WritePlayTimeUpdatesAsync([
+            new PlayTimeUpdate(record.UserId, tracker, time),
+        ]);
+
+        return time;
+    }
+
+    public Task<TimeSpan?> TrySetOverallPlaytimeByUserName(
+        string userName,
+        TimeSpan time,
+        CancellationToken cancel = default)
+            => TrySetTimeForTrackerByUserName(userName, PlayTimeTrackingShared.TrackerOverall, time, cancel);
+
     public async Task<Dictionary<string, TimeSpan>?> TryGetPlayTimesByUserName(
         string userName,
         CancellationToken cancel = default)

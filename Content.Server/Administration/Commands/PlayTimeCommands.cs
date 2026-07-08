@@ -278,6 +278,128 @@ public sealed partial class PlayTimeGetRoleCommand : IConsoleCommand
     }
 }
 
+// 🌇Sunset🌇 - "set to an exact value" counterparts of PlayTimeAddOverallCommand/PlayTimeAddRoleCommand
+// above, for the admin panel's playtime editor (PlayerPanelEui).
+[AdminCommand(AdminFlags.Moderator)]
+public sealed partial class PlayTimeSetOverallCommand : IConsoleCommand
+{
+    [Dependency] private IPlayerManager _playerManager = default!;
+    [Dependency] private PlayTimeTrackingManager _playTimeTracking = default!;
+
+    public string Command => "playtime_setoverall";
+    public string Description => Loc.GetString("cmd-playtime_setoverall-desc");
+    public string Help => Loc.GetString("cmd-playtime_setoverall-help", ("command", Command));
+
+    public async void Execute(IConsoleShell shell, string argStr, string[] args)
+    {
+        if (args.Length != 2)
+        {
+            shell.WriteError(Loc.GetString("cmd-playtime_setoverall-error-args"));
+            return;
+        }
+
+        if (!int.TryParse(args[1], out var minutes))
+        {
+            shell.WriteError(Loc.GetString("parse-minutes-fail", ("minutes", args[1])));
+            return;
+        }
+
+        var overall = await _playTimeTracking.TrySetOverallPlaytimeByUserName(
+            args[0],
+            TimeSpan.FromMinutes(minutes));
+
+        if (overall == null)
+        {
+            shell.WriteError(Loc.GetString("parse-player-record-fail", ("username", args[0])));
+            return;
+        }
+
+        shell.WriteLine(Loc.GetString(
+            "cmd-playtime_setoverall-succeed",
+            ("username", args[0]),
+            ("time", overall.Value)));
+    }
+
+    public CompletionResult GetCompletion(IConsoleShell shell, string[] args)
+    {
+        if (args.Length == 1)
+            return CompletionResult.FromHintOptions(CompletionHelper.SessionNames(),
+                Loc.GetString("cmd-playtime_setoverall-arg-user"));
+
+        if (args.Length == 2)
+            return CompletionResult.FromHint(Loc.GetString("cmd-playtime_setoverall-arg-minutes"));
+
+        return CompletionResult.Empty;
+    }
+}
+
+[AdminCommand(AdminFlags.Moderator)]
+public sealed partial class PlayTimeSetRoleCommand : IConsoleCommand
+{
+    [Dependency] private IPlayerManager _playerManager = default!;
+    [Dependency] private PlayTimeTrackingManager _playTimeTracking = default!;
+
+    public string Command => "playtime_setrole";
+    public string Description => Loc.GetString("cmd-playtime_setrole-desc");
+    public string Help => Loc.GetString("cmd-playtime_setrole-help", ("command", Command));
+
+    public async void Execute(IConsoleShell shell, string argStr, string[] args)
+    {
+        if (args.Length != 3)
+        {
+            shell.WriteError(Loc.GetString("cmd-playtime_setrole-error-args"));
+            return;
+        }
+
+        var userName = args[0];
+        var role = args[1];
+
+        if (!int.TryParse(args[2], out var minutes))
+        {
+            shell.WriteError(Loc.GetString("parse-minutes-fail", ("minutes", args[2])));
+            return;
+        }
+
+        var time = await _playTimeTracking.TrySetTimeForTrackerByUserName(
+            userName,
+            role,
+            TimeSpan.FromMinutes(minutes));
+
+        if (time == null)
+        {
+            shell.WriteError(Loc.GetString("parse-player-record-fail", ("username", userName)));
+            return;
+        }
+
+        shell.WriteLine(Loc.GetString("cmd-playtime_setrole-succeed",
+            ("username", userName),
+            ("role", role),
+            ("time", time.Value)));
+    }
+
+    public CompletionResult GetCompletion(IConsoleShell shell, string[] args)
+    {
+        if (args.Length == 1)
+        {
+            return CompletionResult.FromHintOptions(
+                CompletionHelper.SessionNames(players: _playerManager),
+                Loc.GetString("cmd-playtime_setrole-arg-user"));
+        }
+
+        if (args.Length == 2)
+        {
+            return CompletionResult.FromHintOptions(
+                CompletionHelper.PrototypeIDs<PlayTimeTrackerPrototype>(),
+                Loc.GetString("cmd-playtime_setrole-arg-role"));
+        }
+
+        if (args.Length == 3)
+            return CompletionResult.FromHint(Loc.GetString("cmd-playtime_setrole-arg-minutes"));
+
+        return CompletionResult.Empty;
+    }
+}
+
 /// <summary>
 /// Saves the timers for a particular player immediately
 /// </summary>

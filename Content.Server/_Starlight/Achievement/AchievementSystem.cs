@@ -134,6 +134,7 @@ public sealed partial class AchievementSystem : EntitySystem
         SubscribeLocalEvent<RoundEndTextAppendEvent>(OnRoundEndText);
         SubscribeLocalEvent<RoundRestartCleanupEvent>(OnRoundRestartCleanup);
         _playerManager.PlayerStatusChanged += OnPlayerStatusChanged;
+        InitializeSunset();
 
         foreach (var session in _playerManager.Sessions)
         {
@@ -389,6 +390,8 @@ public sealed partial class AchievementSystem : EntitySystem
         {
             _commandStaffMindsThatDied.Add(mindId);
         }
+
+        OnMobStateChangedSunset(args);
     }
 
     private void OnStartCollide(ref StartCollideEvent args)
@@ -548,6 +551,8 @@ public sealed partial class AchievementSystem : EntitySystem
             return;
         }
 
+        OnKillReportedSunset(killerSession, killerUid, ev.Entity);
+
         if (killerUid != ev.Entity
             && _recentVentCrawlExits.TryGetValue(killerUid, out var lastVentExit)
             && _timing.CurTime - lastVentExit <= VentKillWindow
@@ -628,6 +633,8 @@ public sealed partial class AchievementSystem : EntitySystem
 
     private void OnRoundEndText(RoundEndTextAppendEvent ev)
     {
+        OnRoundEndTextSunset();
+
         foreach (var session in _playerManager.Sessions)
         {
             if (!_mind.TryGetMind(session.UserId, out Entity<MindComponent>? mindEnt)

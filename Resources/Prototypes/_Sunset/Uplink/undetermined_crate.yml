@@ -1,0 +1,72 @@
+# 🌇Sunset🌇 - ported from Goobstation/Reserve-Station (CrateSyndicateUndetermined): a 20 TC uplink
+# item that shows the buyer 3 randomly-rolled gear sets (see _Sunset/SetSelector/selectable_sets.yml)
+# and lets them pick one to spawn, replacing the old CrateSyndicateHotlineMiamiGear
+# (TakeOneItemStorage-based "grab one before it locks" crate).
+
+- type: entity
+  parent: [ BaseStructureDynamic, BaseSetSelector, StorePresetUplink, BaseSyndicateContraband ]
+  id: CrateSyndicateUndetermined
+  name: undetermined Syndicate bundle crate
+  description: Contains a Syndicate gear set. Which one is yet to be determined.
+  components:
+  - type: Icon
+    sprite: Structures/Storage/Crates/syndicate.rsi
+    state: icon
+  - type: Sprite
+    noRot: true
+    sprite: Structures/Storage/Crates/syndicate.rsi
+    layers:
+    - state: icon
+  - type: SetSelector
+    possibleSets:
+    - SyndicateSpySet
+    - SyndicateHitmanSet
+    - SyndicateImplantsSet
+    - SyndicateHackerSet
+    - SyndicateDeswordSet
+    - SyndicateGrenadierSet
+    - SyndicateFluclearSet
+    - SyndicateFriendshipSet
+    - SyndicateCarpSet
+    - SyndicateWesternSet
+    - SyndicateSusSet
+    - SyndicateLawyerSet
+    - SyndicateNoRussianSet
+    - SyndicatePirateCaptainSet
+    - SyndicateEngineerSet
+    - SyndicateDoorKickerSet
+    - SyndicateTunnelClownSet
+    - SunsetMedicSet
+    - SunsetHotlineMiamiSet
+    setsToSelect: 3
+    spawnedStoragePrototype: CrateSyndicate
+    spawnedStorageContainer: entity_storage
+    openSpawnedStorage: true
+    approveSound:
+      path: /Audio/Effects/closetopen.ogg
+  - type: InteractionOutline
+  - type: Transform
+    noRot: true
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.4,-0.4,0.4,0.29"
+        density: 50
+        mask:
+        - CrateMask
+        layer:
+        - MachineLayer
+  - type: StaticPrice
+    price: 5000
+
+- type: listing
+  id: UplinkCrateUndetermined
+  name: uplink-crate-undetermined-name
+  description: uplink-crate-undetermined-desc
+  productEntity: CrateSyndicateUndetermined
+  cost:
+    Telecrystal: 20
+  categories:
+  - UplinkDisruption

@@ -9,3 +9,7 @@ character-info-ic = IC информация
 character-info-ooc = OOC информация
 character-info-objectives = Обзор
 character-info-background = Биография
+
+# Sunset - nedostayushchie perevody
+character-info-background-label = Предыстория:
+character-info-background-none = Без предыстории.

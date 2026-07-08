@@ -1,5 +1,5 @@
-station-event-nightshift-start-announcement = Good evening, crew. To reduce power consumption and stimulate the circadian rhythms of some species, all of the lights aboard the station have been dimmed for the night.
-station-event-nightshift-end-announcement = Good morning, crew. As it is now day time, all of the lights aboard the station have been restored to their former brightness.
+station-event-nightshift-start-announcement = Добрый вечер, экипаж. Для снижения энергопотребления и поддержания циркадных ритмов некоторых видов освещение станции приглушено на ночь.
+station-event-nightshift-end-announcement = Доброе утро, экипаж. Наступил день — освещение станции возвращено к прежней яркости.
 
-station-event-nightshift-disable = Disabling night lighting: Station is in a state of emergency.
-station-event-nightshift-enable = Enabling night lighting: Station is no longer in a state of emergency.
+station-event-nightshift-disable = Ночное освещение отключено: станция в состоянии чрезвычайной ситуации.
+station-event-nightshift-enable = Ночное освещение включено: чрезвычайная ситуация на станции миновала.

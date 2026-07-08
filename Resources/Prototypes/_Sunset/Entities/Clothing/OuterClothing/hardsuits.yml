@@ -1,0 +1,76 @@
+- type: entity
+  parent: [ BaseMajorContraband, ClothingOuterHardsuitSyndieElite ]
+  id: ClothingOuterHardsuitInteQElite
+  name: elite InteQ hardsuit
+  description: An upgraded version of the syndicate hardsuit that features enhanced fireproofing, pressure resist, and superior armor.
+  components:
+  - type: Sprite
+    sprite: _Sunset/Clothing/OuterClothing/Hardsuits/elite_inteq_hardsuit.rsi
+  - type: Clothing
+    sprite: _Sunset/Clothing/OuterClothing/Hardsuits/elite_inteq_hardsuit.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitInteQElite
+    slot: head
+
+- type: entity
+  parent: [ BaseMajorContraband, ClothingOuterHardsuitSyndie ]
+  id: ClothingOuterHardsuitInteQ
+  name: InteQ hardsuit
+  description: An upgraded version of the syndicate hardsuit that features enhanced fireproofing, pressure resist, and superior armor.
+  components:
+  - type: Sprite
+    sprite: _Sunset/Clothing/OuterClothing/Hardsuits/inteq_hardsuit.rsi
+  - type: Clothing
+    sprite: _Sunset/Clothing/OuterClothing/Hardsuits/inteq_hardsuit.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitInteQ
+    slot: head
+
+- type: entity
+  parent: [ BaseMajorContraband, ClothingOuterHardsuitSyndie ]
+  id: ClothingOuterHardsuitSyndicateInteQ
+  name: InteQ hardsuit
+  description: An upgraded version of the syndicate hardsuit that features enhanced fireproofing, pressure resist, and superior armor.
+  components:
+  - type: Sprite
+    sprite: _Sunset/Clothing/OuterClothing/Hardsuits/inteq_syn_hardsuit.rsi
+  - type: Clothing
+    sprite: _Sunset/Clothing/OuterClothing/Hardsuits/inteq_syn_hardsuit.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitSyndicateInteQ
+    slot: head
+
+- type: entity
+  parent: ClothingOuterHardsuitCBURN
+  id: ClothingOuterHardsuitCBURNLeader
+  name: CBURN leader hardsuit
+  description: A lightweight yet strong exosuit used for special cleanup operations.
+  components:
+  - type: Sprite
+    sprite: _Sunset/Clothing/OuterClothing/Hardsuits/cburn_leader.rsi
+  - type: Clothing
+    sprite: _Sunset/Clothing/OuterClothing/Hardsuits/cburn_leader.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetCBURNLeader
+    slot: head
+
+- type: entity
+  parent: ClothingOuterHardsuitSecurity
+  id: ClothingOuterHardsuitOTAAlliance
+  name: OTA alliance hardsuit
+  description: OTA Stormtrooper Hardsuit.
+  components:
+  - type: Sprite
+    sprite: _Sunset/Clothing/OuterClothing/Hardsuits/OTA_alliance_hardsuit.rsi
+  - type: Clothing
+    sprite: _Sunset/Clothing/OuterClothing/Hardsuits/OTA_alliance_hardsuit.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitOTAAlliance
+    slot: head
+
+- type: entity
+  parent: ClothingOuterHardsuitDeathsquad
+  id: ClothingOuterHardsuitDeathsquadUnremovable
+  suffix: Unremoveable
+  components:
+  - type: Unremoveable

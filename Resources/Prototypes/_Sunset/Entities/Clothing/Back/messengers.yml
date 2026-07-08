@@ -1,0 +1,15 @@
+# 🌇Sunset🌇 - source's messenger bag used a layered base/sling/clasp recolorable texture scheme
+# (ClothingBackpackMessengerBase) that doesn't exist in this fork; simplified to the plain
+# inteq_satchel.rsi art that was actually ported (icon/equipped/inhand states only). Also dropped
+# ClothingBackpackMessengerHoldingInert, which pointed at a NuclearFallout-fork-only texture
+# (_NF/Clothing/Back/Messenger/holding.rsi) this fork doesn't have.
+- type: entity
+  parent: ClothingBackpackSatchel
+  id: ClothingBackpackMessengerInteQ
+  name: InteQ messenger bag
+  description: A robust bag for storing extra cartridges and explosives.
+  components:
+  - type: Sprite
+    sprite: _Sunset/Clothing/Back/Satchels/inteq_satchel.rsi
+  - type: Clothing
+    sprite: _Sunset/Clothing/Back/Satchels/inteq_satchel.rsi

@@ -1,0 +1,65 @@
+# 🌇Sunset🌇 - Hierophant boss for zealot-arena, reduced from Orion/Lavaland's original. The real
+# Hierophant runs on Lavaland's bespoke "Megafauna" boss-AI framework (telegraphed box/crosses/
+# chasers/blink attacks, combat phases, auto-generated arena walls, boss music, per-player HP/anger
+# scaling) - an entire standalone subsystem this fork has no trace of and that isn't a same-session
+# port the way the xenomorph HTN reuse was. Per explicit direction, this keeps the real name,
+# sprite, and a suitably boss-tier HP/damage budget, but fights through this fork's existing HTN
+# melee AI (same as every other bitrunning enemy) instead of the Megafauna framework.
+
+- type: entity
+  parent: [ BaseMob, MobDamageable, MobCombat ]
+  id: MobHierophant
+  name: hierophant
+  description: A massive metal club that hangs in the air as though waiting. It'll make you dance to its beat.
+  components:
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.35,-0.6,0.35,0.6"
+        density: 10000
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Sprite
+    noRot: true
+    drawdepth: Mobs
+    sprite: _Lavaland/Mobs/Bosses/hierophant.rsi
+    state: hierophant
+  - type: RotationVisuals
+    defaultRotation: 0
+    horizontalRotation: 0
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Hierophant
+  - type: NoSlip
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 1.5
+    baseSprintSpeed: 1.5
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      2500: Dead
+  - type: MeleeWeapon
+    angle: 0
+    soundHit:
+      collection: MetalThud
+    damage:
+      groups:
+        Brute: 60
+  - type: NpcFactionMember
+    factions:
+    - Syndicate
+  - type: HTN
+    rootTask:
+      task: SimpleHumanoidHostileCompound
+
+- type: entity
+  parent: MobHierophant
+  id: MobHierophantBitrunning
+  suffix: Bitrunning
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BitrunningDomainEnemyObjective

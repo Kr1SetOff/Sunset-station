@@ -1,4 +1,4 @@
-# ss14-art-edit start: Lunarix ghost themes
+# ss14-art-edit start: Sunset ghost themes
 ghost-theme-rainbow-carp-name = Радужный карп
 ghost-theme-rainbow-carp-desc = Легендарный радужный карп из глубин лунного моря.
 

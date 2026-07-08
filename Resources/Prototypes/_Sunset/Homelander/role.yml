@@ -1,0 +1,29 @@
+# 🌇Sunset🌇 - Homelander antag/mind-role. sunset-station's version was a ghost-role-only spawnable
+# mob; the task asks for it to be selectable through the Antagonist menu and a GameRule too, so this
+# follows the same AntagSelection/MindRole/StartingGear shape as Spy/Thief instead.
+
+- type: antag
+  id: Homelander
+  name: roles-antag-homelander-name
+  antagonist: true
+  setPreference: true
+  objective: roles-antag-homelander-objective
+
+- type: entity
+  parent: BaseMindRoleAntag
+  id: MindRoleHomelander
+  name: Homelander Role
+  components:
+  - type: MindRole
+    antagPrototype: Homelander
+    exclusiveAntag: true
+    subtype: role-subtype-homelander
+
+- type: startingGear
+  id: HomelanderGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCapFormal
+    neck: ClothingNeckHomelanderCloak
+    outerClothing: ClothingOuterHomelanderArmor
+    gloves: ClothingHandsGlovesColorWhite
+    shoes: ClothingShoesBootsCowboyWhite

@@ -155,3 +155,53 @@ role-achievement-reward-fail-hidden = Requires a [color=yellow]hidden achievemen
 loadouts-achievement-reward-pass = Achievement reward unlocked: {$achievement}
 loadouts-achievement-reward-fail = Requires achievement reward: {$achievement}
 loadouts-achievement-reward-fail-hidden = Requires a hidden achievement reward
+
+## Sunset - ported from sunset-station
+
+achievement-sunset-welcome-to-the-station-name = Welcome to the Station
+achievement-sunset-welcome-to-the-station-description = Spawn in for the first time.
+
+achievement-sunset-pgsher-name = PGSher
+achievement-sunset-pgsher-description = Die 10 times.
+
+achievement-sunset-god-name = God
+achievement-sunset-god-description = Revive 12 people in a single round.
+
+achievement-sunset-unfunny-clown-name = Unfunny Clown
+achievement-sunset-unfunny-clown-description = Slip 228 times.
+
+achievement-sunset-best-security-officer-name = Best Security Officer
+achievement-sunset-best-security-officer-description = Slip 100 times in a single round while working as a Security Officer.
+
+achievement-sunset-survivor-name = Survivor
+achievement-sunset-survivor-description = Survive to the end of the round.
+
+achievement-sunset-rock-bottom-name = Rock Bottom
+achievement-sunset-rock-bottom-description = End the round in critical condition.
+
+achievement-sunset-carpo-lover-name = Carpo Lover
+achievement-sunset-carpo-lover-description = Kill the Shiva spider.
+
+achievement-sunset-dangerous-furniture-name = Dangerous Furniture
+achievement-sunset-dangerous-furniture-description = Kill someone while holding a folding chair.
+
+achievement-sunset-revenge-name = Revenge
+achievement-sunset-revenge-description = Have Hamlet the hamster kill someone.
+
+achievement-sunset-miscalculated-name = Miscalculated
+achievement-sunset-miscalculated-description = As a Scientist, activate an artifact node that collapses into a singularity.
+
+achievement-sunset-curious-name = Curious
+achievement-sunset-curious-description = Examine 100 things in a single round.
+
+achievement-sunset-what-station-name = What Station?
+achievement-sunset-what-station-description = Spend 15 seconds in space without a suit in a single round.
+
+achievement-sunset-hot-stuff-name = Hot Stuff
+achievement-sunset-hot-stuff-description = As an Atmospheric Technician, burn continuously for 60 seconds.
+
+achievement-sunset-circus-captain-name = Circus Captain
+achievement-sunset-circus-captain-description = As the Clown, put on the Captain's hat.
+
+achievement-sunset-professional-name = Professional
+achievement-sunset-professional-description = Complete every one of your objectives as an antagonist.

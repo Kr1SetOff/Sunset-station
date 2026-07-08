@@ -460,8 +460,10 @@ public sealed partial class ScreenSystem : VisualizerSystem<ScreenVisualsCompone
         if (CharStatePairs.TryGetValue(character.Value, out var value))
             return value;
 
-        // Or else it checks if its a normal letter or digit
-        if (char.IsLetterOrDigit(character.Value))
+        // Or else it checks if its a normal (ASCII) letter or digit - text.rsi only has states for
+        // those, so anything outside that range (e.g. Cyrillic) falls through to null/blank instead
+        // of spamming missing-state errors every frame.
+        if (character.Value is >= 'a' and <= 'z' or >= 'A' and <= 'Z' or >= '0' and <= '9')
             return character.Value.ToString().ToLower();
 
         return null;

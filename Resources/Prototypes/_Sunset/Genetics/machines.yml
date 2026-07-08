@@ -1,0 +1,148 @@
+# ---- DNA modifier machine (holds the occupant) ----
+- type: entity
+  id: DnaModifier
+  parent: BaseMachinePowered
+  name: DNA modifier
+  description: A bulky pod that bombards its occupant's genome with carefully tuned radiation.
+  components:
+  - type: DnaModifier
+  - type: DeviceList
+  - type: DeviceNetwork
+    deviceNetId: Wired
+    receiveFrequencyId: BasicDevice
+  - type: DeviceLinkSink
+    ports:
+      - DnaModifierReceiver
+  - type: Sprite
+    sprite: Structures/Machines/cloning.rsi
+    snapCardinals: true
+    layers:
+      - state: pod_0
+        map: ["base"]
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.DnaModifierVisuals.Status:
+        base:
+          Idle: { state: pod_0 }
+          Occupied: { state: pod_1 }
+          Gore: { state: pod_g }
+  - type: Physics
+    bodyType: Static
+  - type: Climbable
+    delay: 0.5
+  - type: Construction
+    graph: Machine
+    node: machine
+    containers:
+     - machine_board
+     - machine_parts
+     - dnamod-bodyContainer
+  - type: EmptyOnMachineDeconstruct
+    containers:
+      - dnamod-bodyContainer
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalGlassBreak
+      - !type:ChangeConstructionNodeBehavior
+        node: machineFrame
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Machine
+    board: DnaModifierMachineCircuitboard
+  - type: WiresPanel
+  - type: ApcPowerReceiver
+    powerLoad: 200
+  - type: StaticPrice
+    price: 1000
+  - type: ContainerContainer
+    containers:
+      machine_board: !type:Container
+      machine_parts: !type:Container
+      dnamod-bodyContainer: !type:ContainerSlot
+
+# ---- DNA modifier console (the UI computer) ----
+- type: entity
+  parent: BaseComputerAiAccess
+  id: ComputerDnaModifierConsole
+  name: DNA modifier console
+  description: A console for reading and rewriting the genome of a subject in a linked DNA modifier.
+  components:
+  - type: DnaModifierConsole
+  - type: DeviceList
+  - type: DeviceNetwork
+    deviceNetId: Wired
+  - type: Sprite
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: dna
+    - map: ["computerLayerKeys"]
+      state: generic_keys
+    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+      state: generic_panel_open
+  - type: ApcPowerReceiver
+    powerLoad: 400
+  - type: Computer
+    board: DnaModifierConsoleComputerCircuitboard
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#1f8c28"
+  - type: DeviceLinkSource
+    range: 4
+    ports:
+      - DnaModifierSender
+  - type: ActivatableUI
+    key: enum.DnaModifierConsoleUiKey.Key
+  - type: UserInterface
+    interfaces:
+        enum.DnaModifierConsoleUiKey.Key:
+          type: DnaModifierConsoleBoundUserInterface
+        enum.WiresUiKey.Key:
+          type: WiresBoundUserInterface
+  - type: Speech
+    speechVerb: Robotic
+    speechSounds: Pai
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallicStrong
+
+# ---- Circuit boards ----
+- type: entity
+  parent: BaseComputerCircuitboard
+  id: DnaModifierConsoleComputerCircuitboard
+  name: DNA modifier console computer board
+  description: A computer printed circuit board for a DNA modifier console.
+  components:
+    - type: Sprite
+      state: cpu_medical
+    - type: ComputerBoard
+      prototype: ComputerDnaModifierConsole
+
+- type: entity
+  id: DnaModifierMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: DNA modifier machine board
+  description: A machine printed circuit board for a DNA modifier.
+  components:
+    - type: Sprite
+      state: medical
+    - type: MachineBoard
+      prototype: DnaModifier
+      stackRequirements:
+        Manipulator: 4
+        Glass: 1
+        Cable: 1

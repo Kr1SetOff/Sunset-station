@@ -35,3 +35,10 @@ chem-analysis-paper-title = Химический анализ
 chem-analysis-paper-name-line = Реагент: {$reagent}
 chem-analysis-paper-description-line = Описание: {$description}
 chem-analysis-paper-notes-line = Заметки:
+
+# Sunset - nedostayushchie perevody
+reagent-dispenser-window-clear-button = Очистить
+reagent-dispenser-window-eject-container-button = ⏏
+reagent-dispenser-window-reagent-name-not-found-text = Название реагента не найдено
+reagent-dispenser-window-unknown-reagent-text = Неизвестный реагент
+reagent-dispenser-window-quantity-label-text = {$quantity}ед

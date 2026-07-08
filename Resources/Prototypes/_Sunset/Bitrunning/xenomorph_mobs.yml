@@ -1,0 +1,459 @@
+# 🌇Sunset🌇 - real Orion/_White xenomorph "Dungeon" mobs for the xenomorph-infestation domain,
+# replacing the placeholder wrappers around this fork's own simpler Xeno mobs. Faithfully ported
+# stats/sprites/AI from Orion-Station-14, but deliberately drops everything that only matters for
+# the standalone Xenomorph antagonist gamemode (ghost-role takeover, hive evolution, queen
+# promotion, larva chest-bursting, weed healing, hivemind chat) since these are plain NPC-driven
+# combat mobs here, never player-controlled - none of that code would ever run. Ability actions
+# (tail lash, hunter jump, stealth-on-walk) are also dropped: they're player-hotbar-triggered in
+# Orion and the vanilla HTN combat compounds used here never fire them autonomously, so porting
+# them would add dead weight with no gameplay effect. Combat comes entirely from each caste's own
+# MeleeWeapon damage/speed/HP stats below, exactly like every other bitrunning mob.
+
+- type: entity
+  id: XenomorphBloodstream
+  parent: MobBloodstream
+  components:
+  - type: Bloodstream
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: Blood
+        Quantity: 300
+    bleedReductionAmount: 5
+    maxBleedAmount: 0
+    bloodlossDamage:
+      types: {}
+    bloodlossHealDamage:
+      types: {}
+
+- type: entity
+  parent: [ BaseMob, MobDamageable, MobPolymorphable, MobCombat, XenomorphBloodstream, MobFlammable ]
+  id: BaseMobXenomorph
+  abstract: true
+  components:
+  - type: NpcFactionMember
+    factions:
+    - Xeno
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: xenomorph
+      Critical:
+        Base: xenomorph_unconscious
+      Dead:
+        Base: xenomorph_dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      185: Critical
+      200: Dead
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      105: 0.9
+      125: 0.7
+      150: 0.6
+  - type: Damageable
+    damageContainer: Biological
+    damageModifierSet: Xenomorph
+  - type: Stamina
+    baseCritThreshold: 500
+  - type: Bloodstream
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: FluorosulfuricAcid
+        Quantity: 250
+    bloodlossDamage:
+      types:
+        Bloodloss: 0.05
+    bloodlossHealDamage:
+      types:
+        Bloodloss: -1
+    bleedReductionAmount: 5
+  - type: MeleeWeapon
+    altDisarm: true
+    angle: 0
+    soundHit:
+      collection: AlienClaw
+    animation: WeaponArcBite
+    damage:
+      groups:
+        Brute: 25
+  - type: AtmosExposed
+  - type: Temperature
+    currentTemperature: 310.15
+    specificHeat: 42
+  - type: TemperatureDamage
+    heatDamageThreshold: 600
+    coldDamageThreshold: -150
+    coldDamage:
+      types:
+        Cold: 0.1
+    heatDamage:
+      types:
+        Heat: 1.5
+  - type: ZombieImmune
+  - type: StatusEffects
+    allowed:
+    - Stun
+    - KnockedDown
+  - type: NoSlip
+  - type: Perishable
+    molsPerSecondPerUnitMass: 0.0005
+  - type: LizardAccent
+  - type: TypingIndicator
+    proto: alien
+  - type: NameIdentifier
+    group: GenericNumber
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 3
+    baseSprintSpeed: 4.5
+  - type: Deathgasp
+
+- type: entity
+  parent: BaseMobXenomorph
+  id: BaseMobXenomorphAdult
+  abstract: true
+  components:
+  - type: Cuffable
+  - type: RotationVisuals
+    defaultRotation: 90
+    horizontalRotation: 90
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - FootstepSound
+
+- type: entity
+  id: BaseMobXenomorphDungeon
+  abstract: true
+  suffix: Dungeon
+  components:
+  - type: Damageable
+    damageModifierSet: XenomorphDungeon
+  - type: HTN
+    rootTask:
+      task: XenomorphCompound
+
+# ---- Larva ----
+
+- type: entity
+  parent: BaseMobXenomorph
+  id: BaseMobXenomorphLarva
+  name: xenomorph larva
+  description: An early stage of development characterized by small size, a worm-like body shape, and the absence of distinct limbs.
+  abstract: true
+  components:
+  - type: Sprite
+    drawdepth: SmallMobs
+    sprite: _White/Mobs/Aliens/Xenomorphs/larva.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base", "movement" ]
+      state: xenomorph
+  - type: SpriteMovement
+    movementLayers:
+      movement:
+        state: xenomorph-moving
+    noMovementLayers:
+      movement:
+        state: xenomorph
+  - type: Xenomorph
+    caste: Larva
+  - type: VentCrawler
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.2
+        density: 10
+        mask:
+        - SmallMobMask
+        layer:
+        - SmallMobLayer
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      25: Dead
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2
+    baseSprintSpeed: 5
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Weapons/Xeno/alien_claw_flesh1.ogg
+    damage:
+      types:
+        Blunt: 2
+  - type: Bloodstream
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: FluorosulfuricAcid
+        Quantity: 50
+  - type: MobPrice
+    price: 250
+
+- type: entity
+  parent: [ BaseMobXenomorphDungeon, BaseMobXenomorphLarva ]
+  id: MobXenomorphLarvaDungeon
+
+- type: entity
+  parent: MobXenomorphLarvaDungeon
+  id: MobXenomorphLarvaBitrunning
+  suffix: Bitrunning
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BitrunningDomainEnemyObjective
+
+# ---- Drone ----
+
+- type: entity
+  parent: BaseMobXenomorphAdult
+  id: BaseMobXenomorphDrone
+  name: xenomorph drone
+  description: A specialized individual designed to build and maintain a hive. Less aggressive than other xenomorph forms, but still deadly when approached.
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _White/Mobs/Aliens/Xenomorphs/drone.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: xenomorph
+  - type: Xenomorph
+    caste: Drone
+  - type: VentCrawler
+
+- type: entity
+  parent: [ BaseMobXenomorphDungeon, BaseMobXenomorphDrone ]
+  id: MobXenomorphDroneDungeon
+  components:
+  - type: MovementSpeedModifier
+    baseSprintSpeed: 4
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      105: 0.7
+      125: 0.6
+      150: 0.5
+
+- type: entity
+  parent: MobXenomorphDroneDungeon
+  id: MobXenomorphDroneBitrunning
+  suffix: Bitrunning
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BitrunningDomainEnemyObjective
+
+# ---- Hunter ----
+
+- type: entity
+  parent: BaseMobXenomorphAdult
+  id: BaseMobXenomorphHunter
+  name: xenomorph hunter
+  description: A specialized individual, an excellent predator, created to track down and destroy targets. Extremely dangerous in close combat.
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _White/Mobs/Aliens/Xenomorphs/hunter.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: xenomorph
+  - type: Xenomorph
+    caste: Hunter
+  - type: VentCrawler
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 3
+    baseSprintSpeed: 5.8
+
+- type: entity
+  parent: [ BaseMobXenomorphDungeon, BaseMobXenomorphHunter ]
+  id: MobXenomorphHunterDungeon
+  components:
+  - type: MovementSpeedModifier
+    baseSprintSpeed: 4.8
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      105: 0.7
+      125: 0.6
+      150: 0.5
+
+- type: entity
+  parent: MobXenomorphHunterDungeon
+  id: MobXenomorphHunterBitrunning
+  suffix: Bitrunning
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BitrunningDomainEnemyObjective
+
+# ---- Praetorian ----
+
+- type: entity
+  parent: BaseMobXenomorphAdult
+  id: BaseMobXenomorphPraetorian
+  name: xenomorph praetorian
+  description: An elite specimen designed to protect the Hive and the Queen, his very presence instills fear and trepidation into the enemy ranks.
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _White/Mobs/Aliens/Xenomorphs/praetorian.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: xenomorph
+      offset: 0, 0.6
+  - type: Xenomorph
+    caste: Praetorian
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.4
+        density: 300
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      360: Critical
+      375: Dead
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      225: 0.9
+      270: 0.7
+      315: 0.6
+  - type: MeleeWeapon
+    damage:
+      groups:
+        Brute: 30
+
+- type: entity
+  parent: [ BaseMobXenomorphDungeon, BaseMobXenomorphPraetorian ]
+  id: MobXenomorphPraetorianDungeon
+  components:
+  - type: MovementSpeedModifier
+    baseSprintSpeed: 3.8
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      225: 0.7
+      270: 0.6
+      315: 0.5
+
+- type: entity
+  parent: MobXenomorphPraetorianDungeon
+  id: MobXenomorphPraetorianBitrunning
+  suffix: Bitrunning
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BitrunningDomainEnemyObjective
+
+# ---- Sentinel ----
+
+- type: entity
+  parent: BaseMobXenomorphAdult
+  id: BaseMobXenomorphSentinel
+  name: xenomorph sentinel
+  description: A specialized specimen designed to hit targets at a distance. Particularly dangerous in narrow corridors and confined spaces.
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _White/Mobs/Aliens/Xenomorphs/sentinel.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: xenomorph
+  - type: Xenomorph
+    caste: Sentinel
+  - type: VentCrawler
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      225: Critical
+      240: Dead
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      150: 0.9
+      170: 0.7
+      195: 0.6
+
+- type: entity
+  parent: [ BaseMobXenomorphDungeon, BaseMobXenomorphSentinel ]
+  id: MobXenomorphSentinelDungeon
+  components:
+  - type: MovementSpeedModifier
+    baseSprintSpeed: 3.2
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      150: 0.7
+      170: 0.6
+      195: 0.5
+
+- type: entity
+  parent: MobXenomorphSentinelDungeon
+  id: MobXenomorphSentinelBitrunning
+  suffix: Bitrunning
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BitrunningDomainEnemyObjective
+
+# ---- Queen ----
+
+- type: entity
+  parent: BaseMobXenomorphAdult
+  id: BaseMobXenomorphQueen
+  name: xenomorph queen
+  description: The highest individual, the central element and mother of the Hive. The destruction of the Queen in most cases means the collapse of the Hive.
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _White/Mobs/Aliens/Xenomorphs/queen.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: xenomorph
+      offset: 0, 0.6
+  - type: Xenomorph
+    caste: Queen
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.40
+        density: 300
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      735: Critical
+      750: Dead
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      600: 0.9
+      645: 0.7
+      690: 0.6
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2
+    baseSprintSpeed: 3.2
+  - type: MeleeWeapon
+    damage:
+      groups:
+        Brute: 50
+
+- type: entity
+  parent: [ BaseMobXenomorphDungeon, BaseMobXenomorphQueen ]
+  id: MobXenomorphQueenDungeon
+  components:
+  - type: MovementSpeedModifier
+    baseSprintSpeed: 3.8
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      600: 0.7
+      645: 0.6
+      690: 0.5
+
+- type: entity
+  parent: MobXenomorphQueenDungeon
+  id: MobXenomorphQueenBitrunning
+  suffix: Bitrunning
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BitrunningDomainEnemyObjective

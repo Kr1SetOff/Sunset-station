@@ -11,3 +11,7 @@ mind-control-user-briefing =
 mind-control-prevented = A MindShield prevented the Implant!
 mind-control-prevents-mindshield = Another Implant was in the way.
 mind-control-invalid = The subject must be alive.
+
+# Sunset - nedostayushchie perevody
+roles-antag-mind-controlled-name = Под контролем разума
+roles-antag-mind-controlled-objective = Подчиняйтесь приказам вашего кукловода.

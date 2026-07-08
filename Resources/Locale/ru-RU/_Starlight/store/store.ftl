@@ -4,3 +4,6 @@ store-preset-name-soviet-uplink = Советский Uplink
 store-preset-name-revenant = Обмен Revenant
 store-preset-name-pai = Загрузка персонального ИИ
 store-preset-name-cantrips = Трюки выживания для путешественников
+
+# Sunset - nedostayushchie perevody
+store-listing-late = ОПОЗДАЛ

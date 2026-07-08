@@ -1,0 +1,55 @@
+# 🌇Sunset🌇 - Bitrunner character-setup loadout. No dedicated bitrunner clothing exists in Orion
+# either, so this dresses the role in cargo gear with a techy slant; the PDA group is what actually
+# distinguishes it (BitrunnerPDA -> BitrunnerIDCard with Bitrun access).
+
+# ---- Loadouts ----
+
+- type: loadout
+  id: BitrunnerPDA
+  equipment:
+    id: BitrunnerPDA
+
+- type: loadout
+  id: BitrunnerJumpsuit
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCargo
+
+- type: loadout
+  id: BitrunnerJumpskirt
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtCargo
+
+# ---- Groups ----
+
+- type: loadoutGroup
+  id: BitrunnerJumpsuit
+  name: loadout-group-bitrunner-jumpsuit
+  loadouts:
+  - BitrunnerJumpsuit
+  - BitrunnerJumpskirt
+
+- type: loadoutGroup
+  id: BitrunnerPDA
+  name: loadout-group-bitrunner-id
+  loadouts:
+  - BitrunnerPDA
+
+# ---- Role loadout ----
+
+- type: roleLoadout
+  id: JobBitrunner
+  groups:
+  - GroupTankHarness
+  - CargoTechnicianHead
+  - BitrunnerJumpsuit
+  - CargoTechnicianBackpack
+  - CargoTechnicianOuterClothing
+  - CargoTechnicianShoes
+  - BitrunnerPDA
+  - Glasses
+  - Survival
+  - Trinkets
+  - Scarves # Starlight
+  - Pins # Starlight
+  - Pens # Starlight
+  - GroupSpeciesBreathTool

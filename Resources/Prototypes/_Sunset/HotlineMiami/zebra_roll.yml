@@ -1,0 +1,17 @@
+# 🌇Sunset🌇 - the zebra costume's roll ability. Granted only while all three costume pieces (mask,
+# jacket, tank top) are worn at once - see ZebraRollSystem.
+
+- type: entity
+  parent: BaseAction
+  id: ActionHotlineZebraRoll
+  name: Кувырок
+  description: Уйти в кувырок на 5 секунд - в этом состоянии тебя невозможно застрелить, а любая кукла на пути падает. Работает только в полном костюме зебры.
+  components:
+  - type: Action
+    useDelay: 25
+    itemIconStyle: BigAction
+    icon:
+      sprite: _Sunset/Clothing/Mask/HotlineMiami/zebra.rsi
+      state: icon
+  - type: InstantAction
+    event: !type:ZebraRollActionEvent

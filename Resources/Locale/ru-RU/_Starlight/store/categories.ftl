@@ -18,3 +18,6 @@ store-category-cantrips-standard = Стандартные трюки
 
 # Uplinks
 store-category-cybernetics = Cybernetics
+
+# Sunset - nedostayushchie perevody
+store-category-dagd = Слава

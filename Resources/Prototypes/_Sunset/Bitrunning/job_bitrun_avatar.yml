@@ -1,0 +1,21 @@
+- type: job
+  id: BitrunAvatar
+  name: job-name-bitrun-avatar
+  description: job-description-bitrun-avatar
+  playTimeTracker: JobBitrunAvatar
+  setPreference: false
+  startingGear: CargoTechGear # TODO
+  icon: "JobIconBitrunAvatar"
+  supervisors: job-supervisors-qm
+  canBeAntag: false
+
+- type: playTimeTracker
+  id: JobBitrunAvatar
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconBitrunAvatar
+  icon:
+    sprite: /Textures/_Sunset/Interface/Misc/job_icons.rsi
+    state: Bitrun-Avatar
+  jobName: job-name-bitrun-avatar

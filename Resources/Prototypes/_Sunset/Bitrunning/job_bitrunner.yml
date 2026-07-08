@@ -1,0 +1,91 @@
+# 🌇Sunset🌇 - Bitrunner: the cargo department's virtual-domain diver. Orion-Station-14 left this
+# job as a stub (setPreference: false, cargo tech gear); this fork finishes it into a real
+# selectable role: own PDA/ID (cargo-striped, Bitrunner job icon from the ported _Sunset
+# job_icons.rsi), spawn point (SpawnPointBitrunner markers are already placed on all _Sunset maps)
+# and a proper loadout (see loadouts_bitrunner.yml).
+
+- type: job
+  id: Bitrunner
+  name: job-name-bitrunner
+  description: job-description-bitrunner
+  playTimeTracker: JobBitrunner
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Cargo
+      time: 1h
+  startingGear: BitrunnerGear
+  icon: "JobIconBitrunner"
+  supervisors: job-supervisors-qm
+  displayWeight: 1
+  access:
+  - Cargo
+  - Bitrun
+  - Maintenance
+  extendedAccess:
+  - Salvage
+  special:
+  - !type:GiveItemOnHolidaySpecial
+    holiday: BoxingDay
+    prototype: BoxCardboard
+
+- type: startingGear
+  id: BitrunnerGear
+  equipment:
+    ears: ClothingHeadsetCargo
+    belt: ClothingBeltUtilityFilled
+
+- type: accessLevel
+  id: Bitrun
+  name: id-card-access-level-bitrun
+
+- type: playTimeTracker
+  id: JobBitrunner
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconBitrunner
+  icon:
+    sprite: /Textures/_Sunset/Interface/Misc/job_icons.rsi
+    state: Bitrunner
+  jobName: job-name-bitrunner
+
+# Same PDA as cargo's, renamed and holding the bitrunner ID preset.
+- type: entity
+  parent: CargoPDA
+  id: BitrunnerPDA
+  name: bitrunner PDA
+  description: Smells of energy drinks and warm server racks.
+  components:
+  - type: Pda
+    id: BitrunnerIDCard
+
+# Cargo-striped ID with the ported Orion bitrunner card art.
+- type: entity
+  parent: IDCardStandard
+  id: BitrunnerIDCard
+  name: bitrunner ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: stripe_top
+      color: "#b18644"
+    - state: stripe_bottom
+      color: "#5b4523"
+    - sprite: _Sunset/Objects/Misc/id_cards.rsi
+      state: bitrunner
+  - type: PresetIdCard
+    job: Bitrunner
+
+- type: entity
+  id: SpawnPointBitrunner
+  parent: SpawnPointJobBase
+  name: bitrunner
+  components:
+  - type: SpawnPoint
+    job_id: Bitrunner
+  - type: Sprite
+    layers:
+      - state: green
+      - state: cargo_tech
+      - state: jobicon # Starlight

@@ -20,6 +20,7 @@ martial-arts-carp-stage-advance = Вы продвинулись на { $stage } 
 martial-arts-carp-still-training = Вы ещё не готовы к следующей ступени — продолжайте медитировать.
 martial-arts-fail-target-standing = Этот приём работает только против сбитой с ног цели.
 martial-arts-judo-belt-weapon-blocked = Пояс корпоративного дзюдо позволяет использовать только голые руки и электрошокер.
+martial-arts-mime-finger-guns-need-hand = Для этого приёма нужна свободная рука.
 
 alert-ninjutsu-sneak-ready-name = Скрытность
 alert-ninjutsu-sneak-ready-desc = Ваша следующая атака нанесёт огромный бонусный урон, пока вас не заметили.

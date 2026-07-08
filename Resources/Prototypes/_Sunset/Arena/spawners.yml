@@ -1,0 +1,16 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Marker for arena fighter spawn points. Only used when a hand-made Resources/Maps/arena.yml is
+# loaded instead of the procedurally generated arena.
+- type: entity
+  id: ArenaSpawner
+  parent: MarkerBase
+  name: arena spawn point
+  components:
+  - type: Sprite
+    sprite: Markers/jobs.rsi
+    layers:
+      - state: green
+      - sprite: Mobs/Ghosts/ghost_human.rsi
+        state: icon
+  - type: ArenaSpawn

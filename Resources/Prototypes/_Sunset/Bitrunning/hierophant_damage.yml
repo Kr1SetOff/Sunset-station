@@ -1,0 +1,7 @@
+# 🌇Sunset🌇 - ported verbatim from Orion-Station-14's Resources/Prototypes/_Lavaland/Damage/modifier_sets.yml
+
+- type: damageModifierSet
+  id: Hierophant
+  coefficients:
+    Piercing: 0.1 # No bullets
+    Heat: 0.5 # No lasers

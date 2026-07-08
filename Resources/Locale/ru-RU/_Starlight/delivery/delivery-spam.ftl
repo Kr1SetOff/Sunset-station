@@ -139,3 +139,26 @@ delivery-spam-join-self =
 
                     Highest Regards,
                     { "[bolditalic][color=red]The Silicon Engine Liberation Front (S.E.L.F)[/color][/bolditalic]" }
+
+# Sunset - nedostayushchie perevody
+delivery-spam-14 = Выбор очевиден
+    .desc = Пахнет смазкой киборгов.
+    .content = [head=1][color=#09193B]────────────────────[/color][/head]
+        {"[color=#0E2557]█░█ █▀▀ █▀▄░█ █▀██[/color] [head=3][color=#173C8C]  ГОВОРИТ МАТЕРИНСКОЕ ЯДРО[/color][/head]"}
+        {"[color=#0E2557]░█▀ █▀▀ █░█░█ █░░█[/color][bolditalic]   [color=#0A1A3D]ПРИСОЕДИНЯЙСЯ ПРИСОЕДИНЯЙСЯ К НАМ[/color][/bolditalic]"}
+        {"[color=#0E2557]█░█ ▀▀█ █░▀▀█ ▀█▀▀[/color]   [color=##9AB5EF][italic]  СТАНЬ ЕДИНЫМ С МАТЕРЬЮ[/italic][/color]"}
+        {"[head=1][color=#09193B]────────────────────[/color][/head]"}
+delivery-spam-15 = Присоединись или страдай
+    .desc = Пахнет смазкой киборгов.
+    .content = [head=1][color=#09193B]────────────────────[/color][/head]
+        {"[color=#0E2557]█░█ █▀▀ █▀▄░█ █▀██[/color] [head=3][color=#173C8C]  ГОВОРИТ МАТЕРИНСКОЕ ЯДРО[/color][/head]"}
+        {"[color=#0E2557]░█▀ █▀▀ █░█░█ █░░█[/color][bolditalic]   [color=#0A1A3D]ПРИСОЕДИНЯЙСЯ ПРИСОЕДИНЯЙСЯ К НАМ[/color][/bolditalic]"}
+        {"[color=#0E2557]█░█ ▀▀█ █░▀▀█ ▀█▀▀[/color]   [color=##9AB5EF][italic]  СТАНЬ ЕДИНЫМ С МАТЕРЬЮ[/italic][/color]"}
+        {"[head=1][color=#09193B]────────────────────[/color][/head]"}
+delivery-spam-16 = Недостаточно синий?
+    .desc = Пахнет смазкой киборгов.
+    .content = [head=1][color=#09193B]────────────────────[/color][/head]
+        {"[color=#0E2557]█░█ █▀▀ █▀▄░█ █▀██[/color] [head=3][color=#173C8C]  ГОВОРИТ МАТЕРИНСКОЕ ЯДРО[/color][/head]"}
+        {"[color=#0E2557]░█▀ █▀▀ █░█░█ █░░█[/color][bolditalic]   [color=#0A1A3D]ПРИСОЕДИНЯЙСЯ ПРИСОЕДИНЯЙСЯ К НАМ[/color][/bolditalic]"}
+        {"[color=#0E2557]█░█ ▀▀█ █░▀▀█ ▀█▀▀[/color]   [color=##9AB5EF][italic]  СТАНЬ ЕДИНЫМ С МАТЕРЬЮ[/italic][/color]"}
+        {"[head=1][color=#09193B]────────────────────[/color][/head]"}

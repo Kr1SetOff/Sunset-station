@@ -1,0 +1,77 @@
+# 🌇Sunset🌇 - Geneticist: the medbay's Paradise-style genetics researcher. Mirrors the Medical
+# Doctor job definitions (medical_doctor.yml) and reuses the geneticist assets that already ship
+# with upstream SS14 (JobIconGeneticist, the "geneticist" Markers/jobs.rsi state, the genetics
+# jumpsuit/lab coat/bags). The _Sunset maps already have a SpawnPointGeneticist placed in medbay -
+# this file is what makes that marker (and the job itself) real.
+
+- type: playTimeTracker
+  id: JobGeneticist
+
+- type: job
+  id: Geneticist
+  name: job-name-geneticist
+  description: job-description-geneticist
+  playTimeTracker: JobGeneticist
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Medical
+      time: 2.5h
+  startingGear: GeneticistGear
+  icon: "JobIconGeneticist"
+  supervisors: job-supervisors-cmo
+  displayWeight: 1
+  access:
+  - Medical
+  - Maintenance
+  extendedAccess:
+  - Chemistry
+
+- type: startingGear
+  id: GeneticistGear
+  equipment:
+    ears: ClothingHeadsetMedical
+    belt: ClothingBeltMedicalFilled
+
+# Same PDA as the medical doctor's (sprite included), just named for the geneticist and holding
+# their own ID card preset.
+- type: entity
+  parent: MedicalPDA
+  id: GeneticistPDA
+  name: geneticist PDA
+  description: Shiny, sterile, and smelling faintly of monkey.
+  components:
+  - type: Pda
+    id: GeneticistIDCard
+
+# Medical-striped ID card with the Geneticist job icon (job_icons.rsi ships a proper Geneticist
+# state, so no doctor icon stand-in needed).
+- type: entity
+  parent: IDCardStandard
+  id: GeneticistIDCard
+  name: geneticist ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: stripe_top
+      color: "#68aed6"
+    - state: stripe_bottom
+      color: "#325f7a"
+    - sprite: Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625
+      state: Geneticist
+  - type: PresetIdCard
+    job: Geneticist
+
+- type: entity
+  id: SpawnPointGeneticist
+  parent: SpawnPointJobBase
+  name: geneticist
+  components:
+  - type: SpawnPoint
+    job_id: Geneticist
+  - type: Sprite
+    layers:
+      - state: green
+      - state: geneticist
+      - state: jobicon # Starlight

@@ -30,6 +30,7 @@
   storage:
     back:
     - RubberStampMime
+    - MartialArtsManualMime # Sunset - moved from uplink to job gear
 
 - type: entity
   parent: BaseAction

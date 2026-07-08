@@ -1,0 +1,26 @@
+# 🌇Sunset🌇 - xenomorph caste registry, ported from Orion-Station-14's
+# Resources/Prototypes/_White/xenomorph_cast.yml (Maid dropped, unused by bitrunning).
+
+- type: xenomorphCaste
+  id: Larva
+  name: xenomorph-caste-larva
+
+- type: xenomorphCaste
+  id: Drone
+  name: xenomorph-caste-drone
+
+- type: xenomorphCaste
+  id: Hunter
+  name: xenomorph-caste-hunter
+
+- type: xenomorphCaste
+  id: Sentinel
+  name: xenomorph-caste-sentinel
+
+- type: xenomorphCaste
+  id: Praetorian
+  name: xenomorph-caste-praetorian
+
+- type: xenomorphCaste
+  id: Queen
+  name: xenomorph-caste-queen

@@ -19,6 +19,7 @@ namespace Content.Client.Administration.UI.Tabs
             EndRound.OnPressed += _ => _console.ExecuteCommand("endround");
             RestartRound.OnPressed += _ => _console.ExecuteCommand("restartround");
             RestartRoundNow.OnPressed += _ => _console.ExecuteCommand("restartroundnow");
+            ToggleRoleTimers.OnPressed += _ => _console.ExecuteCommand("toggleroletimers"); // 🌇Sunset🌇
         }
     }
 }
