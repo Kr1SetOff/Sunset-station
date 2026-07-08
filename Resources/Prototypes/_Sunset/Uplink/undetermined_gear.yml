@@ -14,8 +14,6 @@
   - type: Clothing
     sprite: _Goobstation/Clothing/Armor/covert_armor.rsi
   - type: Armor
-    coverage:
-    - Chest
     modifiers:
       coefficients:
         Blunt: 0.35
@@ -69,12 +67,6 @@
   description: You're right on the edge. Show 'em you got this.
   components:
   - type: Armor
-    coverage:
-    - Chest
-    - Groin
-    - Arm
-    - Leg
-    - Tail
     modifiers:
       coefficients:
         Blunt: 0.7
@@ -130,14 +122,6 @@
   - type: Clothing
     sprite: _Goobstation/Heretic/Clothing/OuterClothing/void_cloak.rsi
   - type: Armor
-    coverage:
-    - Chest
-    - Groin
-    - Arm
-    - Hand
-    - Leg
-    - Foot
-    - Tail
     modifiers:
       coefficients:
         Blunt: 0.5
@@ -198,13 +182,6 @@
   description: Let's show the head of security how we used to do things out west.
   components:
   - type: Armor
-    coverage:
-    - Chest
-    - Groin
-    - Arm
-    - Hand
-    - Leg
-    - Foot
     modifiers:
       coefficients:
         Blunt: 0.90
@@ -217,9 +194,6 @@
   description: A poncho made for real cowboys.
   components:
   - type: Armor
-    coverage:
-    - Chest
-    - Groin
     modifiers:
       coefficients:
         Blunt: 0.55

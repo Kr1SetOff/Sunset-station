@@ -14,9 +14,10 @@
   parent: MobBloodstream
   components:
   - type: Bloodstream
-    bloodReagent: Blood
-    bloodMaxVolume: 300
-    chemicalMaxVolume: 250
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: Blood
+        Quantity: 300
     bleedReductionAmount: 5
     maxBleedAmount: 0
     bloodlossDamage:
@@ -54,10 +55,12 @@
     damageContainer: Biological
     damageModifierSet: Xenomorph
   - type: Stamina
-    critThreshold: 500
+    baseCritThreshold: 500
   - type: Bloodstream
-    bloodReagent: FluorosulfuricAcid
-    bloodMaxVolume: 250
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: FluorosulfuricAcid
+        Quantity: 250
     bloodlossDamage:
       types:
         Bloodloss: 0.05
@@ -76,13 +79,14 @@
         Brute: 25
   - type: AtmosExposed
   - type: Temperature
+    currentTemperature: 310.15
+    specificHeat: 42
+  - type: TemperatureDamage
     heatDamageThreshold: 600
     coldDamageThreshold: -150
-    currentTemperature: 310.15
     coldDamage:
       types:
         Cold: 0.1
-    specificHeat: 42
     heatDamage:
       types:
         Heat: 1.5
@@ -179,7 +183,10 @@
       types:
         Blunt: 2
   - type: Bloodstream
-    bloodMaxVolume: 50
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: FluorosulfuricAcid
+        Quantity: 50
   - type: MobPrice
     price: 250
 

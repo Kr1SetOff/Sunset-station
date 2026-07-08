@@ -20,8 +20,7 @@
     protectionTime: 5
   - type: IdentityBlocker
     coverage: EYES
-  - type: ThermalVision
-    isEquipment: true
+  - type: ClothesThermalVision
 
 - type: entity
   parent: [ClothingHandsGlovesCombat, BaseCentcommContraband]
@@ -78,7 +77,6 @@
   - type: Emag
     emagType: Access
     emagSound: /Audio/Machines/id_swipe.ogg
-    successText: executive-card-success
   - type: Access
     groups:
     - AllAccess
