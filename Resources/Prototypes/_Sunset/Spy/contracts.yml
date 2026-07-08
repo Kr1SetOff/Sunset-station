@@ -1,0 +1,361 @@
+# 🌇Sunset🌇 - Spy contract board pool, ported from frostek3122-byte/sunset-station's Bounty
+# System. Contracts aren't assigned at round start - the spy accepts them live from a rotating
+# board in their uplink (see Content.Server._Sunset.Spy.SpyContracts.SpyContractSystem).
+#
+# Reward: 0 (default) means "compute from Difficulty" (Easy/Medium/Hard => 25/50/100 SpyCredit,
+# scaled further by reputation - see SpyContractSystem.GetReward). Duration: seconds the Spy
+# Tracker needs on the target. Radius: hold range for SurveillanceProximity.
+
+# =====================================================================================
+# Family 1: crew surveillance (SurveillanceProximity, job-filtered). Plant the tracker on a
+# crew member and stay within Radius of them (they can move) for Duration.
+# =====================================================================================
+
+- type: spyContract
+  id: SpyContractWatchCrew
+  contractType: SurveillanceProximity
+  difficulty: Easy
+  name: spy-contract-watch-crew-name
+  description: spy-contract-watch-crew-desc
+  duration: 30
+  radius: 4
+  targetWhitelist:
+    components:
+    - HumanoidAppearance
+
+- type: spyContract
+  id: SpyContractWatchCe
+  contractType: SurveillanceProximity
+  difficulty: Medium
+  name: spy-contract-watch-ce-name
+  description: spy-contract-watch-ce-desc
+  duration: 45
+  radius: 4
+  targetWhitelist:
+    components:
+    - HumanoidAppearance
+  targetJobs:
+  - ChiefEngineer
+
+- type: spyContract
+  id: SpyContractWatchCmo
+  contractType: SurveillanceProximity
+  difficulty: Medium
+  name: spy-contract-watch-cmo-name
+  description: spy-contract-watch-cmo-desc
+  duration: 45
+  radius: 4
+  targetWhitelist:
+    components:
+    - HumanoidAppearance
+  targetJobs:
+  - ChiefMedicalOfficer
+
+- type: spyContract
+  id: SpyContractWatchHos
+  contractType: SurveillanceProximity
+  difficulty: Hard
+  name: spy-contract-watch-hos-name
+  description: spy-contract-watch-hos-desc
+  duration: 60
+  radius: 4
+  targetWhitelist:
+    components:
+    - HumanoidAppearance
+  targetJobs:
+  - HeadOfSecurity
+
+- type: spyContract
+  id: SpyContractWatchCaptain
+  contractType: SurveillanceProximity
+  difficulty: Hard
+  name: spy-contract-watch-captain-name
+  description: spy-contract-watch-captain-desc
+  duration: 60
+  radius: 4
+  targetWhitelist:
+    components:
+    - HumanoidAppearance
+  targetJobs:
+  - Captain
+
+# =====================================================================================
+# Family 2: device surveillance (SurveillanceProximity, static targets).
+# =====================================================================================
+
+- type: spyContract
+  id: SpyContractSurveillanceTelecoms
+  contractType: Surveillance
+  difficulty: Medium
+  name: spy-contract-surveillance-telecoms-name
+  description: spy-contract-surveillance-telecoms-desc
+  duration: 45
+  targetWhitelist:
+    components:
+    - TelecomServer
+
+- type: spyContract
+  id: SpyContractWatchComms
+  contractType: SurveillanceProximity
+  difficulty: Easy
+  name: spy-contract-watch-comms-name
+  description: spy-contract-watch-comms-desc
+  duration: 30
+  radius: 3
+  targetWhitelist:
+    components:
+    - CommunicationsConsole
+
+- type: spyContract
+  id: SpyContractWatchApc
+  contractType: SurveillanceProximity
+  difficulty: Easy
+  name: spy-contract-watch-apc-name
+  description: spy-contract-watch-apc-desc
+  duration: 30
+  radius: 3
+  targetWhitelist:
+    components:
+    - Apc
+
+- type: spyContract
+  id: SpyContractWatchResearch
+  contractType: SurveillanceProximity
+  difficulty: Medium
+  name: spy-contract-watch-research-name
+  description: spy-contract-watch-research-desc
+  duration: 45
+  radius: 3
+  targetWhitelist:
+    components:
+    - ResearchServer
+
+- type: spyContract
+  id: SpyContractWatchGravity
+  contractType: SurveillanceProximity
+  difficulty: Hard
+  name: spy-contract-watch-gravity-name
+  description: spy-contract-watch-gravity-desc
+  duration: 60
+  radius: 3
+  targetWhitelist:
+    components:
+    - GravityGenerator
+
+# =====================================================================================
+# Family 2b: watch a valuable item (same target pool as thief-style steal targets).
+# =====================================================================================
+
+- type: spyContract
+  id: SpyContractWatchValuable
+  contractType: SurveillanceProximity
+  difficulty: Medium
+  name: spy-contract-watch-valuable-name
+  description: spy-contract-watch-valuable-desc
+  duration: 45
+  radius: 4
+  targetWhitelist:
+    requireAll: true
+    components:
+    - Item
+    - StealTarget
+
+# =====================================================================================
+# Family 3: device sabotage (short DoAfter + effect).
+# =====================================================================================
+
+- type: spyContract
+  id: SpyContractSabotageSmes
+  contractType: Sabotage
+  difficulty: Hard
+  name: spy-contract-sabotage-smes-name
+  description: spy-contract-sabotage-smes-desc
+  duration: 60
+  sabotageEffect: DrainBattery
+  targetWhitelist:
+    components:
+    - Smes
+
+- type: spyContract
+  id: SpyContractSabotageApc
+  contractType: Sabotage
+  difficulty: Easy
+  name: spy-contract-sabotage-apc-name
+  description: spy-contract-sabotage-apc-desc
+  duration: 30
+  sabotageEffect: DrainBattery
+  targetWhitelist:
+    components:
+    - Apc
+
+- type: spyContract
+  id: SpyContractSabotageDoor
+  contractType: Sabotage
+  difficulty: Easy
+  name: spy-contract-sabotage-door-name
+  description: spy-contract-sabotage-door-desc
+  duration: 30
+  sabotageEffect: BoltDoor
+  targetWhitelist:
+    components:
+    - DoorBolt
+
+- type: spyContract
+  id: SpyContractSabotageComms
+  contractType: Sabotage
+  difficulty: Medium
+  name: spy-contract-sabotage-comms-name
+  description: spy-contract-sabotage-comms-desc
+  duration: 45
+  sabotageEffect: EmpPulse
+  targetWhitelist:
+    components:
+    - CommunicationsConsole
+
+- type: spyContract
+  id: SpyContractSabotageGravity
+  contractType: Sabotage
+  difficulty: Hard
+  name: spy-contract-sabotage-gravity-name
+  description: spy-contract-sabotage-gravity-desc
+  duration: 60
+  sabotageEffect: EmpPulse
+  targetWhitelist:
+    components:
+    - GravityGenerator
+
+# =====================================================================================
+# Family 4: data collection (short "download" DoAfter, no damage to the target).
+# =====================================================================================
+
+- type: spyContract
+  id: SpyContractCollectId
+  contractType: CollectData
+  difficulty: Easy
+  name: spy-contract-collect-id-name
+  description: spy-contract-collect-id-desc
+  duration: 30
+  targetWhitelist:
+    components:
+    - IdCard
+
+- type: spyContract
+  id: SpyContractCollectComms
+  contractType: CollectData
+  difficulty: Medium
+  name: spy-contract-collect-comms-name
+  description: spy-contract-collect-comms-desc
+  duration: 45
+  targetWhitelist:
+    components:
+    - CommunicationsConsole
+
+- type: spyContract
+  id: SpyContractCollectResearch
+  contractType: CollectData
+  difficulty: Medium
+  name: spy-contract-collect-research-name
+  description: spy-contract-collect-research-desc
+  duration: 45
+  targetWhitelist:
+    components:
+    - ResearchServer
+
+- type: spyContract
+  id: SpyContractCollectTelecoms
+  contractType: CollectData
+  difficulty: Hard
+  name: spy-contract-collect-telecoms-name
+  description: spy-contract-collect-telecoms-desc
+  duration: 60
+  targetWhitelist:
+    components:
+    - TelecomServer
+
+- type: spyContract
+  id: SpyContractCollectValuable
+  contractType: CollectData
+  difficulty: Hard
+  name: spy-contract-collect-valuable-name
+  description: spy-contract-collect-valuable-desc
+  duration: 60
+  targetWhitelist:
+    requireAll: true
+    components:
+    - Item
+    - StealTarget
+
+# =====================================================================================
+# Family 5: assassination. Target is a specific crew member; only counts if the target dies
+# and the spy is the killer (Origin) - see SpyContractSystem.OnMobStateChanged. No tracker/timer.
+# =====================================================================================
+
+- type: spyContract
+  id: SpyContractKillCrew
+  contractType: Assassinate
+  difficulty: Medium
+  name: spy-contract-kill-crew-name
+  description: spy-contract-kill-crew-desc
+  targetWhitelist:
+    components:
+    - HumanoidAppearance
+
+- type: spyContract
+  id: SpyContractKillCe
+  contractType: Assassinate
+  difficulty: Hard
+  name: spy-contract-kill-ce-name
+  description: spy-contract-kill-ce-desc
+  targetWhitelist:
+    components:
+    - HumanoidAppearance
+  targetJobs:
+  - ChiefEngineer
+
+- type: spyContract
+  id: SpyContractKillCmo
+  contractType: Assassinate
+  difficulty: Hard
+  name: spy-contract-kill-cmo-name
+  description: spy-contract-kill-cmo-desc
+  targetWhitelist:
+    components:
+    - HumanoidAppearance
+  targetJobs:
+  - ChiefMedicalOfficer
+
+- type: spyContract
+  id: SpyContractKillHop
+  contractType: Assassinate
+  difficulty: Hard
+  name: spy-contract-kill-hop-name
+  description: spy-contract-kill-hop-desc
+  targetWhitelist:
+    components:
+    - HumanoidAppearance
+  targetJobs:
+  - HeadOfPersonnel
+
+- type: spyContract
+  id: SpyContractKillHos
+  contractType: Assassinate
+  difficulty: Hard
+  name: spy-contract-kill-hos-name
+  description: spy-contract-kill-hos-desc
+  targetWhitelist:
+    components:
+    - HumanoidAppearance
+  targetJobs:
+  - HeadOfSecurity
+
+- type: spyContract
+  id: SpyContractKillCaptain
+  contractType: Assassinate
+  difficulty: Hard
+  name: spy-contract-kill-captain-name
+  description: spy-contract-kill-captain-desc
+  targetWhitelist:
+    components:
+    - HumanoidAppearance
+  targetJobs:
+  - Captain

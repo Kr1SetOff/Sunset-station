@@ -1,14 +1,18 @@
-# 🌇Sunset🌇 - Spy Uplink catalog. Items are existing entities re-themed as spy gear (mirrors how
-# sunset-station's own Spy catalog reused other antags' items), priced for a flat one-time SpyCredit
-# budget rather than sunset-station's accumulating contract-reward economy.
+# 🌇Sunset🌇 - Spy Uplink catalog, ported wholesale from frostek3122-byte/sunset-station's Spy
+# shop (SpyEspionage/SpyWeapons/SpyGear/SpyMedical categories). Two items substituted for
+# equivalents this fork actually has (see entities.yml for SpyArmourInvisible's note); everything
+# else is the genuine item from source.
 
+# =====================================================================================
+# SpyEspionage - disguise and infiltration gear
+# =====================================================================================
 - type: listing
   id: SpyListingChameleonBackpack
   name: spy-listing-chameleon-backpack-name
   description: spy-listing-chameleon-backpack-desc
   productEntity: ClothingBackpackChameleonFill
   cost:
-    SpyCredit: 20
+    SpyCredit: 150
   categories:
   - SpyEspionage
 
@@ -18,7 +22,7 @@
   description: spy-listing-chameleon-shoes-desc
   productEntity: ClothingShoesChameleonNoSlips
   cost:
-    SpyCredit: 15
+    SpyCredit: 110
   categories:
   - SpyEspionage
 
@@ -28,7 +32,7 @@
   description: spy-listing-chameleon-gloves-desc
   productEntity: ClothingHandsChameleonThief
   cost:
-    SpyCredit: 15
+    SpyCredit: 110
   categories:
   - SpyEspionage
 
@@ -38,7 +42,7 @@
   description: spy-listing-chameleon-mask-desc
   productEntity: ClothingMaskGasChameleon
   cost:
-    SpyCredit: 12
+    SpyCredit: 90
   categories:
   - SpyEspionage
 
@@ -48,7 +52,7 @@
   description: spy-listing-chameleon-projector-desc
   productEntity: ChameleonProjector
   cost:
-    SpyCredit: 30
+    SpyCredit: 220
   categories:
   - SpyEspionage
 
@@ -58,7 +62,7 @@
   description: spy-listing-agentid-desc
   productEntity: AgentIDCard
   cost:
-    SpyCredit: 20
+    SpyCredit: 150
   categories:
   - SpyEspionage
 
@@ -66,9 +70,9 @@
   id: SpyListingThermals
   name: spy-listing-thermals-name
   description: spy-listing-thermals-desc
-  productEntity: ClothingEyesGlassesThermal
+  productEntity: ClothingEyesGlassesThermalSpy
   cost:
-    SpyCredit: 25
+    SpyCredit: 180
   categories:
   - SpyEspionage
 
@@ -78,7 +82,17 @@
   description: spy-listing-storage-implant-desc
   productEntity: StorageImplanter
   cost:
-    SpyCredit: 30
+    SpyCredit: 220
+  categories:
+  - SpyEspionage
+
+- type: listing
+  id: SpyListingDnaScrambler
+  name: spy-listing-dna-scrambler-name
+  description: spy-listing-dna-scrambler-desc
+  productEntity: DnaScramblerImplanter
+  cost:
+    SpyCredit: 150
   categories:
   - SpyEspionage
 
@@ -88,7 +102,7 @@
   description: spy-listing-freedom-implant-desc
   productEntity: FreedomImplanter
   cost:
-    SpyCredit: 22
+    SpyCredit: 160
   categories:
   - SpyEspionage
 
@@ -98,17 +112,83 @@
   description: spy-listing-escape-implant-desc
   productEntity: ScramImplanter
   cost:
-    SpyCredit: 28
+    SpyCredit: 200
   categories:
   - SpyEspionage
 
+- type: listing
+  id: SpyListingInvisibleArmour
+  name: spy-listing-invisible-armour-name
+  description: spy-listing-invisible-armour-desc
+  productEntity: SpyArmourInvisible
+  cost:
+    SpyCredit: 400
+  categories:
+  - SpyEspionage
+
+# =====================================================================================
+# SpyWeapons - stealth weapons and Cobra ammunition
+# =====================================================================================
+- type: listing
+  id: SpyListingCobra
+  name: spy-listing-cobra-name
+  description: spy-listing-cobra-desc
+  productEntity: WeaponPistolCobra
+  cost:
+    SpyCredit: 300
+  categories:
+  - SpyWeapons
+
+- type: listing
+  id: SpyListingCobraMag
+  name: spy-listing-cobra-mag-name
+  description: spy-listing-cobra-mag-desc
+  productEntity: MagazinePistolCaselessRifleSpy
+  cost:
+    SpyCredit: 60
+  categories:
+  - SpyWeapons
+
+- type: listing
+  id: SpyListingCobraMagAp
+  name: spy-listing-cobra-mag-ap-name
+  description: spy-listing-cobra-mag-ap-desc
+  productEntity: MagazinePistolCaselessRifleSpyAP
+  cost:
+    SpyCredit: 180
+  categories:
+  - SpyWeapons
+
+- type: listing
+  id: SpyListingEnergyDagger
+  name: spy-listing-energydagger-name
+  description: spy-listing-energydagger-desc
+  productEntity: EnergyDaggerBox
+  cost:
+    SpyCredit: 220
+  categories:
+  - SpyWeapons
+
+- type: listing
+  id: SpyListingThrowingKnives
+  name: spy-listing-throwing-knives-name
+  description: spy-listing-throwing-knives-desc
+  productEntity: ThrowingKnivesKit
+  cost:
+    SpyCredit: 150
+  categories:
+  - SpyWeapons
+
+# =====================================================================================
+# SpyGear - sabotage and infiltration tools
+# =====================================================================================
 - type: listing
   id: SpyListingSmokeGrenade
   name: spy-listing-smoke-name
   description: spy-listing-smoke-desc
   productEntity: SmokeGrenade
   cost:
-    SpyCredit: 10
+    SpyCredit: 80
   categories:
   - SpyGear
 
@@ -118,7 +198,7 @@
   description: spy-listing-emp-desc
   productEntity: EmpGrenade
   cost:
-    SpyCredit: 15
+    SpyCredit: 110
   categories:
   - SpyGear
 
@@ -128,7 +208,7 @@
   description: spy-listing-signaller-desc
   productEntity: RemoteSignaller
   cost:
-    SpyCredit: 10
+    SpyCredit: 80
   categories:
   - SpyGear
 
@@ -138,19 +218,52 @@
   description: spy-listing-radio-jammer-desc
   productEntity: RadioJammer
   cost:
-    SpyCredit: 25
+    SpyCredit: 180
   categories:
   - SpyGear
 
 - type: listing
-  id: SpyListingThrowingKnives
-  name: spy-listing-throwing-knives-name
-  description: spy-listing-throwing-knives-desc
-  productEntity: ThrowingKnivesKit
+  id: SpyListingAccessBreaker
+  name: spy-listing-access-breaker-name
+  description: spy-listing-access-breaker-desc
+  productEntity: AccessBreaker
   cost:
-    SpyCredit: 20
+    SpyCredit: 150
   categories:
   - SpyGear
+
+- type: listing
+  id: SpyListingJawsOfLife
+  name: spy-listing-jaws-name
+  description: spy-listing-jaws-desc
+  productEntity: SyndicateJawsOfLife
+  cost:
+    SpyCredit: 220
+  categories:
+  - SpyGear
+
+- type: listing
+  id: SpyListingPowerSink
+  name: spy-listing-powersink-name
+  description: spy-listing-powersink-desc
+  productEntity: PowerSink
+  cost:
+    SpyCredit: 260
+  categories:
+  - SpyGear
+
+# =====================================================================================
+# SpyMedical - chemistry and combat medicine
+# =====================================================================================
+- type: listing
+  id: SpyListingHypopen
+  name: spy-listing-hypopen-name
+  description: spy-listing-hypopen-desc
+  productEntity: HypopenBox
+  cost:
+    SpyCredit: 180
+  categories:
+  - SpyMedical
 
 - type: listing
   id: SpyListingBottlePax
@@ -158,7 +271,37 @@
   description: spy-listing-pax-desc
   productEntity: ChemistryBottlePax
   cost:
-    SpyCredit: 12
+    SpyCredit: 90
+  categories:
+  - SpyMedical
+
+- type: listing
+  id: SpyListingBottleNocturine
+  name: spy-listing-nocturine-name
+  description: spy-listing-nocturine-desc
+  productEntity: ChemistryBottleNocturine
+  cost:
+    SpyCredit: 140
+  categories:
+  - SpyMedical
+
+- type: listing
+  id: SpyListingBottleOmnizine
+  name: spy-listing-omnizine-name
+  description: spy-listing-omnizine-desc
+  productEntity: ChemistryBottleOmnizine
+  cost:
+    SpyCredit: 120
+  categories:
+  - SpyMedical
+
+- type: listing
+  id: SpyListingBottleMuteToxin
+  name: spy-listing-mute-toxin-name
+  description: spy-listing-mute-toxin-desc
+  productEntity: ChemistryBottleMuteToxin
+  cost:
+    SpyCredit: 130
   categories:
   - SpyMedical
 
@@ -168,6 +311,6 @@
   description: spy-listing-combat-medkit-desc
   productEntity: MedkitCombatFilled
   cost:
-    SpyCredit: 28
+    SpyCredit: 200
   categories:
   - SpyMedical

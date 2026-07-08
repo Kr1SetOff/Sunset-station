@@ -1,5 +1,6 @@
-# 🌇Sunset🌇 - Spy antag, reusing the AntagSelection/MindRole/StartingGear/StealCondition
-# machinery the same way the base Thief antag does (see Resources/Prototypes/Roles/Antags/thief.yml).
+# 🌇Sunset🌇 - Spy antag, reusing the AntagSelection/MindRole/StartingGear machinery the same way
+# the base Thief antag does (see Resources/Prototypes/Roles/Antags/thief.yml). Objectives are the
+# uplink's contract board (Content.Server._Sunset.Spy.SpyContracts), not round-start StealCondition.
 
 - type: antag
   id: Spy
@@ -25,3 +26,4 @@
     back:
     - SpyUplink
     - SpyPinpointer
+    - SpyTracker

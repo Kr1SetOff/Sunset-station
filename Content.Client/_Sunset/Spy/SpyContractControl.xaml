@@ -1,0 +1,21 @@
+<BoxContainer
+    xmlns="https://spacestation14.io"
+    xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
+    Orientation="Vertical"
+    HorizontalExpand="True"
+    Margin="4,4,4,4">
+    <PanelContainer HorizontalExpand="True">
+        <PanelContainer.PanelOverride>
+            <gfx:StyleBoxFlat BackgroundColor="#1A0000FF" BorderColor="#8B0000FF" BorderThickness="1" />
+        </PanelContainer.PanelOverride>
+        <BoxContainer Orientation="Vertical" Margin="8,6,8,6" HorizontalExpand="True">
+            <BoxContainer Orientation="Horizontal" HorizontalExpand="True">
+                <Label Name="NameLabel" Access="Public" HorizontalExpand="True" FontColorOverride="#E0A0A0FF" />
+                <Label Name="RewardLabel" Access="Public" FontColorOverride="#CC2936FF" />
+            </BoxContainer>
+            <RichTextLabel Name="DescriptionLabel" Access="Public" Margin="0,2,0,4" />
+            <Button Name="AcceptButton" Access="Public" Text="{Loc 'spy-uplink-ui-contract-accept'}"
+                    HorizontalAlignment="Right" />
+        </BoxContainer>
+    </PanelContainer>
+</BoxContainer>

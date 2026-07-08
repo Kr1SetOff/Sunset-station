@@ -1,21 +1,14 @@
-# 🌇Sunset🌇 - Spy GameRule. Same shape as the Thief gamerule (Resources/Prototypes/GameRules/
-# subgamemodes.yml): SpyRule marker + AntagRandomObjectives pulling steal objectives from
-# SpyObjectiveGroups + AntagSelection (which is also what makes Spy selectable both at round start
-# and manually through the admin Antagonist menu, since that menu just lists AntagSelection-tagged
-# game rules) + a DynamicRuleCost so it participates in the normal dynamic antag budget.
+# 🌇Sunset🌇 - Spy GameRule. AntagSelection (which is also what makes Spy selectable both at round
+# start and manually through the admin Antagonist menu, since that menu just lists
+# AntagSelection-tagged game rules) + a DynamicRuleCost so it participates in the normal dynamic
+# antag budget. No AntagObjectives/AntagRandomObjectives here - the spy's objectives are the
+# contract board (see Content.Server._Sunset.Spy.SpyContracts.SpyContractSystem), accepted live
+# from the uplink rather than assigned at round start.
 - type: entity
   parent: BaseGameRule
   id: Spy
   components:
   - type: SpyRule
-  - type: AntagObjectives
-    objectives:
-    - SpyEscapeObjective
-  - type: AntagRandomObjectives
-    sets:
-    - groups: SpyObjectiveGroups
-      maxPicks: 4
-    maxDifficulty: 4
   - type: AntagSelection
     agentName: spy-round-end-agent-name
     selectionTime: IntraPlayerSpawn
