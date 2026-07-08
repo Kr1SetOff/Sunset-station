@@ -22,11 +22,13 @@
       components:
       - type: Homelander
       - type: HyperHearing
+      - type: Flight
+        landingSound:
+          path: /Audio/_Sunset/Homelander/landing.ogg
+      - type: ThermalVision
       - type: ActionGrant
         actions:
         - ActionHomelanderHeatVision
-        - ActionHomelanderScream
-        - ActionHomelanderShockwave
       - type: Damageable
         damageContainer: Biological
         damageModifierSet: Homelander
@@ -53,8 +55,8 @@
             Blunt: 25
             Structural: 150
       - type: MovementSpeedModifier
-        baseWalkSpeed: 5
-        baseSprintSpeed: 8
+        baseWalkSpeed: 3.125
+        baseSprintSpeed: 5.625
       - type: StaminaResistance
         damageCoefficient: 0.3
         worn: false

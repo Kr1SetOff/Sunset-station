@@ -7,7 +7,7 @@ role-subtype-homelander = Homelander
 
 homelander-round-end-agent-name = Homelander
 
-homelander-role-greeting = You are Homelander, the most powerful being on this station. Heat vision, an intimidating scream, and a ground-pounding shockwave are yours to command, and almost nothing can hurt you. You answer to no one.
+homelander-role-greeting = You are Homelander, the most powerful being on this station. Twin-beam heat vision, flight, and thermal vision are yours to command, and almost nothing can hurt you. You answer to no one.
 
 homelander-hyper-hearing-whisper = [italic]You hear a distant whisper from {$name}: "{$message}"[/italic]
 

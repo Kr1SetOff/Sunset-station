@@ -1,0 +1,10 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Homelander ability action icons, Sunset-station",
+    "size": { "x": 32, "y": 32 },
+    "states": [
+    { "name": "heat_vision" },
+    { "name": "thermal_vision" }
+    ]
+}

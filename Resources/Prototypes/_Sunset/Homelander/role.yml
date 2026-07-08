@@ -23,6 +23,7 @@
   id: HomelanderGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitCapFormal
-    neck: ClothingNeckCloakCap
+    neck: ClothingNeckHomelanderCloak
+    outerClothing: ClothingOuterHomelanderArmor
     gloves: ClothingHandsGlovesColorWhite
     shoes: ClothingShoesBootsCowboyWhite

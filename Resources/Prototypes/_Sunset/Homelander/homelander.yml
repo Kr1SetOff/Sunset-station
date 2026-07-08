@@ -1,76 +1,44 @@
 # 🌇Sunset🌇 - Homelander: a near-invulnerable superhuman antagonist.
 
-# 75% damage reduction on everything; radiation only 20% (his weak point).
+# 60% intrinsic damage reduction on everything (radiation stays his weak point at 20%) - the other
+# 15 percentage points of his old 75% total now live on ClothingOuterHomelanderArmor instead (see
+# _Sunset/Homelander/clothing.yml), so losing the suit (only possible after death - it's
+# self-unremovable while alive) would actually matter.
 - type: damageModifierSet
   id: Homelander
   coefficients:
-    Blunt: 0.25
-    Slash: 0.25
-    Piercing: 0.25
-    Heat: 0.25
-    Shock: 0.25
-    Cold: 0.25
-    Caustic: 0.25
-    Poison: 0.25
-    Bloodloss: 0.25
-    Asphyxiation: 0.25
+    Blunt: 0.40
+    Slash: 0.40
+    Piercing: 0.40
+    Heat: 0.40
+    Shock: 0.40
+    Cold: 0.40
+    Caustic: 0.40
+    Poison: 0.40
+    Bloodloss: 0.40
+    Asphyxiation: 0.40
     Radiation: 0.8
 
-# Heat vision: an instant burning line in front of him (see HomelanderHeatVisionEvent for why this
-# isn't the cursor-following channelled beam sunset-station had).
+# Heat vision: starts a twin-laser channel (up to 25s) that continuously tracks the mouse cursor
+# (MouseRotatorComponent, added for the duration in HomelanderSystem.OnHeatVision) and deals damage
+# on a tick interval - see HomelanderSystem.FireLaserTick. Pressing the action again while
+# channeling toggles it off early; either way the action only goes on cooldown once the channel
+# actually ends (see HomelanderSystem.EndLaser), not at activation.
 - type: entity
   parent: BaseAction
   id: ActionHomelanderHeatVision
   name: Heat Vision
-  description: Burn a searing line in front of you.
+  description: Burn everything in your sight with twin beams from your eyes. Activate again to stop early. Lasts up to 25 seconds.
   components:
   - type: Action
-    useDelay: 8
     itemIconStyle: BigAction
-    icon:
-      sprite: Objects/Magic/magicactions.rsi
-      state: fireball
+    icon: { sprite: _Sunset/Interface/Actions/homelander.rsi, state: heat_vision }
   - type: InstantAction
     event: !type:HomelanderHeatVisionEvent
-      range: 10
-      damage:
+      duration: 25
+      lockout: 30
+      range: 15
+      eyeOffset: 0.06
+      damagePerSecond:
         types:
-          Heat: 15
-
-# Scream: knocks everyone around prone (no stun).
-- type: entity
-  parent: BaseAction
-  id: ActionHomelanderScream
-  name: Intimidating Scream
-  description: Let out a deafening scream that knocks everyone around you off their feet.
-  components:
-  - type: Action
-    useDelay: 10
-    itemIconStyle: BigAction
-    icon:
-      sprite: Changeling/changeling_abilities.rsi
-      state: shriek_resonant
-  - type: InstantAction
-    event: !type:HomelanderScreamEvent
-      range: 5
-      knockdownSeconds: 3
-
-# Shockwave: a ground-pound that shoves everyone nearby away (stands in for the flight-landing
-# shockwave sunset-station had - this fork has no Flight system).
-- type: entity
-  parent: BaseAction
-  id: ActionHomelanderShockwave
-  name: Shockwave
-  description: Slam the ground, shoving everyone nearby away and off their feet.
-  components:
-  - type: Action
-    useDelay: 12
-    itemIconStyle: BigAction
-    icon:
-      sprite: Objects/Magic/magicactions.rsi
-      state: repulse
-  - type: InstantAction
-    event: !type:HomelanderShockwaveEvent
-      range: 5
-      force: 15
-      knockdownSeconds: 2
+          Heat: 16

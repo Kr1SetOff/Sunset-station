@@ -4,52 +4,33 @@ using Content.Shared.Damage;
 namespace Content.Shared._Sunset.Homelander;
 
 /// <summary>
-/// Instant action: burns a line in front of Homelander in the direction he's facing, dealing heat
-/// damage to mobs and structural damage to walls caught in it. Simplified from sunset-station's
-/// cursor-following channelled beam (which relies on the heretic StarGaze cursor/visual system this
-/// fork doesn't have) into a single instant burst - same "heat vision" identity, no missing deps.
-/// Handled server-side by HomelanderSystem.
+/// Instant action: starts a twin-laser channel, up to Duration long. While channeling, Homelander's
+/// body continuously rotates to face the mouse cursor (MouseRotatorComponent) and HomelanderSystem
+/// fires two parallel beams - one per eye - in whatever direction he's currently facing, dealing
+/// damage on a tick interval. Pressing the action again while channeling ends it early (toggle
+/// off); otherwise it ends automatically once Duration elapses. Either way, the action's cooldown
+/// is only applied once the channel actually stops (see HomelanderSystem.EndLaser), so the button
+/// stays clickable - and therefore able to toggle off - for the whole channel.
 /// </summary>
 public sealed partial class HomelanderHeatVisionEvent : InstantActionEvent
 {
-    /// <summary>Damage applied to each mob caught in the line.</summary>
+    /// <summary>Maximum length of the twin-laser channel before it ends automatically.</summary>
     [DataField]
-    public DamageSpecifier Damage = new();
+    public TimeSpan Duration = TimeSpan.FromSeconds(25);
 
-    /// <summary>Line length, in tiles.</summary>
+    /// <summary>How long the action stays on cooldown after the channel ends.</summary>
     [DataField]
-    public float Range = 10f;
-}
+    public TimeSpan Lockout = TimeSpan.FromSeconds(30);
 
-/// <summary>
-/// Instant action: an intimidating scream that knocks nearby crew off their feet (knockdown, no
-/// stun). Handled server-side by HomelanderSystem.
-/// </summary>
-public sealed partial class HomelanderScreamEvent : InstantActionEvent
-{
-    /// <summary>Radius affected.</summary>
+    /// <summary>Damage dealt per second to whatever each beam is hitting.</summary>
     [DataField]
-    public float Range = 5f;
+    public DamageSpecifier DamagePerSecond = new();
 
-    /// <summary>How long victims stay knocked down, in seconds.</summary>
+    /// <summary>Maximum beam length, in tiles.</summary>
     [DataField]
-    public float KnockdownSeconds = 3f;
-}
+    public float Range = 15f;
 
-/// <summary>
-/// Instant action: a ground-pound shockwave that shoves everything nearby away and knocks down
-/// anyone caught in it. Replaces sunset-station's flight-landing-triggered shockwave (this fork has
-/// no Flight system) with a directly-triggerable ability instead.
-/// Handled server-side by HomelanderSystem.
-/// </summary>
-public sealed partial class HomelanderShockwaveEvent : InstantActionEvent
-{
+    /// <summary>Lateral offset of each eye from center, in tiles - controls how far apart the two beams are.</summary>
     [DataField]
-    public float Range = 5f;
-
-    [DataField]
-    public float Force = 15f;
-
-    [DataField]
-    public float KnockdownSeconds = 2f;
+    public float EyeOffset = 0.06f;
 }
