@@ -15,3 +15,8 @@ ghost-role-information-ntnc-consortium-officer-name = Морпех Корпус�
 ghost-role-information-ntnc-consortium-officer-description = Вы напрямую подчиняетесь Корпусу ВМС NanoTrasen и обязаны защищать и служить чиновникам Центрального Командования любой ценой — ничто не должно этому мешать.
 
 ghost-important-role = [bold]Now looking for candidates to play as { $rolename }[/bold]
+
+# Sunset - nedostayushchie perevody
+ghost-gui-character-editor-button = Редактор персонажа
+ghost-role-information-green-shield-officer-name = Офицер «Зелёного щита»
+ghost-role-information-green-shield-officer-description = Вы получили прямой приказ с высших уровней ЦентКома: защищать VIP-персон ЦентКома и поддерживать порядок на аванпостах Центрального командования.

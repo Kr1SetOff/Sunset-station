@@ -187,3 +187,17 @@ achievement-sunset-circus-captain-description = Будучи клоуном, н�
 
 achievement-sunset-professional-name = Профессионал
 achievement-sunset-professional-description = Выполните все свои цели в роли антагониста.
+
+# Sunset - nedostayushchie perevody
+achievement-haunted-name = Одержимый
+achievement-haunted-description = За вами одновременно следуют не менее 20 призраков.
+achievement-beyond-reasonable-doubt-name = Вне разумных сомнений
+achievement-beyond-reasonable-doubt-description = Попытайтесь поставить имплант защиты разума главе революционеров.
+achievement-viva-name = Вива!
+achievement-viva-description = Захватите станцию, будучи революционером.
+achievement-on-the-run-name = В бегах
+achievement-on-the-run-description = Выберите карту «Преступник».
+achievement-treason-name = Государственная измена
+achievement-treason-description = Вступите в Синдикат, подписав вербовочное письмо Синдиката.
+achievement-wavering-loyalty-name = Шаткая верность
+achievement-wavering-loyalty-description = Будучи членом командования, выберите карту «Преступник».

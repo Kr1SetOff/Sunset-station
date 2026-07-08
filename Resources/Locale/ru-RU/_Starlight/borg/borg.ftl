@@ -33,3 +33,9 @@ borg-type-purrfus-transponder = киборг пёррфус
 borg-type-cargo-name = Карго
 borg-type-cargo-desc = Перевозите грузы, доставляйте заказы и делайте станцию богаче!
 borg-type-cargo-transponder = грузовой киборг
+
+# Sunset - nedostayushchie perevody
+borg-module-incompatibility-xenoborg-engiweapon = Несовместимо с другими инженерными оружейными модулями ксеноборга.
+borg-module-incompatibility-xenoborg-heavyweapon = Несовместимо с другими тяжёлыми оружейными модулями ксеноборга.
+borg-module-incompatibility-xenoborg-scoutweapon = Несовместимо с другими разведывательными оружейными модулями ксеноборга.
+borg-module-incompatibility-xenoborg-stealthhypo = Несовместимо с другими гипо-модулями стелс-ксеноборга.

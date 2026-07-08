@@ -7,3 +7,6 @@ species-name-lagomorph = Лагоморф
 species-name-resomi = Резоми
 species-name-shadekin = Шейдкин
 species-name-thaven = Тавен
+
+# Sunset - nedostayushchie perevody
+species-name-rodentia = Родентиа

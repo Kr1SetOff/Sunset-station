@@ -11,3 +11,6 @@ voice-selector-filter-all = Все
 voice-selector-current-voice = Текущий голос: { $voice }
 voice-selector-preview = Прослушать голос
 voice-selector-placeholder = Поиск голоса по названию
+
+# Sunset - nedostayushchie perevody
+humanoid-profile-editor-species-loadout-select = Выбрать снаряжение вида

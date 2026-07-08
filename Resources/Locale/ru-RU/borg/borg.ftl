@@ -66,3 +66,6 @@ borg-type-medical-transponder = медицинский борг
 borg-type-service-name = Сервисник
 borg-type-service-desc = Помогите экипажу с широким спектром услуг, начиная от подачи закусок и напитков, заканчивая ботаникой и развлечениями.
 borg-type-service-transponder = сервисный борг
+
+# Sunset - nedostayushchie perevody
+borg-module-prerequisite-unfulfilled = Этому модулю для работы требуется другой модуль...

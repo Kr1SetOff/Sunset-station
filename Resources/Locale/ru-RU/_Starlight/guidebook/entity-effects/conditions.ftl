@@ -8,3 +8,10 @@ entity-condition-guidebook-blood-reagent-threshold =
                 *[other] в кровотоке содержится от { NATURALFIXED($min, 2) } ед. до { NATURALFIXED($max, 2) } ед. { $reagent }
             }
     }
+
+# Sunset - nedostayushchie perevody
+entity-condition-guidebook-has-components =
+    { $shouldhave ->
+        [true] у цели есть
+        *[false] у цели отсутствует
+    } компонент {$name}

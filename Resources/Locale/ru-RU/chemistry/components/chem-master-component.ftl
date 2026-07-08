@@ -68,3 +68,12 @@ chem-master-window-pill-label = таблетка: {$current}/{$max} ед.
 chem-master-window-reagent-selected = Выбрано {$amount} ед.
 chem-master-window-pill-canister-choose-button = Выбрать
 chem-master-window-pills-label = Таблетки:
+
+# Sunset - nedostayushchie perevody
+chem-master-output-buffer-draw = Буфер
+chem-master-output-beaker-draw = Мензурка
+chem-master-window-no-beaker-text = Мензурка не загружена
+chem-master-window-beaker-empty-text = Мензурка пуста
+chem-master-window-beaker-low-text = В мензурке недостаточно раствора
+chem-master-output-source = Источник фасовки:
+chem-master-no-source = Нет источника

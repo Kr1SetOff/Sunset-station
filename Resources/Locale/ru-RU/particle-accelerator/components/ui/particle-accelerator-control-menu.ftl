@@ -19,3 +19,7 @@ particle-accelerator-control-menu-flavor-right = v 1.6
 particle-accelerator-radio-message-on = Питание ускорителя частиц включено.
 particle-accelerator-radio-message-off = Питание ускорителя частиц отключено.
 particle-accelerator-radio-message-num = Уровень ускорителя частиц был установлен на «{ $level }».
+
+# Sunset - nedostayushchie perevody
+particle-accelerator-control-menu-on-button = Вкл
+particle-accelerator-control-menu-off-button = Выкл

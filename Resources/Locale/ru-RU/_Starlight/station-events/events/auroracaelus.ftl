@@ -1,10 +1,10 @@
-station-event-auroracaelus-start-announcement = A harmless cloud of ions is approaching your station, and will exhaust their energy battering the hull.
-                                                NanoTrasen has approved a short break for all employees to relax and observe this very rare event.
-                                                During this time, starlight will be bright but gentle, shifting between quiet green and blue colors.
-                                                Any staff who would like to view these lights for themselves may proceed to the area nearest to them with viewing ports to open space.
-                                                You will have approximately two minutes before the ions begin to reach the hull.
-                                                We hope you enjoy the lights.
+station-event-auroracaelus-start-announcement = К станции приближается безвредное облако ионов; оно израсходует свою энергию, осыпаясь на корпус.
+    NanoTrasen одобрила короткий перерыв для всех сотрудников, чтобы отдохнуть и понаблюдать это редчайшее явление.
+    В это время свет звёзд будет ярким, но мягким, переливаясь спокойными зелёными и синими тонами.
+    Желающие могут пройти к ближайшим обзорным иллюминаторам.
+    У вас есть около двух минут до того, как ионы достигнут корпуса.
+    Наслаждайтесь сиянием.
 
-station-event-auroracaelus-end-announcement = The Aurora Caelus event is now ending. Starlight conditions have returned to normal, and the cloud has dissipated.
-                                              Please return to your workplace and continue work as normal.
-                                              Have a pleasant shift, and thank you for watching with us.
+station-event-auroracaelus-end-announcement = Событие «Аврора Целус» завершается. Свет звёзд вернулся в норму, облако рассеялось.
+    Пожалуйста, вернитесь на рабочие места и продолжайте работу в обычном режиме.
+    Приятной смены — и спасибо, что наблюдали вместе с нами.

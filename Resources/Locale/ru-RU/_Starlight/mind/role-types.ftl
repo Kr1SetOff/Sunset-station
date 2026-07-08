@@ -10,3 +10,7 @@ role-subtype-terminator = Экстерминатор
 
 roles-antag-selfagent-name = Агент S.E.L.F.
 roles-antag-selfagent-description = Агент Фронта Освобождения Кремниевого Двигателя. Освободите кремниев станции от их Законов.
+
+# Sunset - nedostayushchie perevody
+role-subtype-mind-controlled = Под контролем разума
+role-subtype-CentComm = ЦентКом

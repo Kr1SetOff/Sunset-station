@@ -18,3 +18,7 @@ power-charge-window-power-label = { $draw } / { $max } Вт
 
 power-charge-window-eta-none = Н/Д
 power-charge-window-eta-value = { TOSTRING($left, "m\\:ss") }
+
+# Sunset - nedostayushchie perevody
+power-charge-window-power-on = Вкл
+power-charge-window-power-off = Выкл

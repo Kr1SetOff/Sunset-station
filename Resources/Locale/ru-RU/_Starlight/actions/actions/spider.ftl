@@ -2,3 +2,6 @@ spider-web-action-fail-single = Вы не можете разместить зд
 
 terror-spider-egg-inject-already-has-eggs = The target already contains eggs.
 terror-spider-egg-inject-cocoon-empty = This cocoon is empty!
+
+# Sunset - nedostayushchie perevody
+spider-web-action-incontainer = Нельзя плести паутину, находясь в контейнере!

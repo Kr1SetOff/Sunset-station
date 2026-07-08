@@ -356,3 +356,7 @@ ghost-role-information-wizard-desc = ТЫ ВОЛШЕБНИК! Покажи ст�
 
 ghost-role-information-emotional-support-scurret-name = Слизенёк эмоциональной поддержки
 ghost-role-information-emotional-support-scurret-description = Поддерживайте экипаж, будьте очаровательными, часто говорите "ва".
+
+# Sunset - nedostayushchie perevody
+ghost-role-information-xenoroach-name = Ксенотаракан
+ghost-role-information-xenoroach-description = Крошечный биомеханический шпионский бот, запущенный материнским кораблём ксеноборгов. Ползайте по вентиляции, проскальзывайте под дверями и передавайте увиденное Ядру материнского корабля. Вы хрупки — ваше главное оружие — малый размер.

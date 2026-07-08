@@ -28,3 +28,6 @@ store-caregory-spellbook-events = Заклинания событий
 store-category-nukie-delivery = Предложения
 
 store-category-languages = Языки
+
+# Sunset - nedostayushchie perevody
+store-second-hand-items = Секонд-хенд

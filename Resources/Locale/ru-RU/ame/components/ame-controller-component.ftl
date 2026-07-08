@@ -18,3 +18,6 @@ ame-window-power-targetsupply-label = Целевой источник питан
 ame-window-eject-button = Извлечь
 ame-window-increase-fuel-button = Увеличить
 ame-window-decrease-fuel-button = Уменьшить
+
+# Sunset - nedostayushchie perevody
+ame-window-toggle-injection-button = Переключить инжекцию

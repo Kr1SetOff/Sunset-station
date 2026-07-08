@@ -1,1 +1,1 @@
-station-event-immovable-slug-start-announcement = Low velocity unidentified object is on a collision course with the station. Impact eventually.
+station-event-immovable-slug-start-announcement = Низкоскоростной неопознанный объект находится на курсе столкновения со станцией. Удар неизбежен — рано или поздно.

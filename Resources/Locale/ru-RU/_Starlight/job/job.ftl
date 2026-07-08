@@ -45,3 +45,12 @@ role-type-tsf-aligned-color = #22a7ff
 job-rules-tsf-aligned = Вы — { role-type-tsf-aligned-name }.
                               Вы должны служить интересам Транс-Солнечной Федерации (ТСФ).
                               Помните, вы НЕ служите экипажу.
+
+# Sunset - nedostayushchie perevody
+job-name-greenshield = Офицер «Зелёного щита»
+role-type-cc-aligned-name = На стороне ЦентКома
+role-type-cc-aligned-color = #00b600
+role-type-cc-aligned-alternate-color = #439909
+job-rules-cc-aligned = Вы — {role-type-cc-aligned-name}.
+    Вы служите интересам Центрального командования, даже если они расходятся с интересами NanoTrasen или станций.
+    Помните: вы НЕ служите экипажу.

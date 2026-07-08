@@ -8,4 +8,12 @@ terror-spider-princess-briefing =
     Your target is to create a big nest and create a big population of spiders to enslave this station.
     Read more about your role in the guidebook entry.
 
-central-command-terror-spiders-announcement = Based on scans from our long-range sensors, we believe the station has fallen under the control of hostile spider forces. Most personnel have been confirmed deceased, missing, or to have abandoned the station. All remaining crew members are to stand by for further instructions.
+central-command-terror-spiders-announcement = По данным сканирования дальними сенсорами, мы полагаем, что станция перешла под контроль враждебных паучьих сил. Большая часть персонала подтверждённо погибла, пропала без вести или покинула станцию. Всем оставшимся членам экипажа — ожидать дальнейших указаний.
+
+# Sunset - nedostayushchie perevody
+terrorspiders-win = [color=crimson]Полная победа пауков ужаса![/color]
+terrorspiders-lose = [color=green]Пауки ужаса проиграли![/color]
+terrorspiders-list-start = Пауками ужаса были:
+terrorspiders-list-name-user = [color=White]{$name}[/color] ([color=gray]{$user}[/color])
+terrorspiders-gamemode-title = Пауки ужаса
+terrorspiders-gamemode-description = Пауки, явившиеся захватить станцию и превратить её в улей.

@@ -43,6 +43,7 @@ namespace Content.Shared.Localizations
             _loc.AddFunction(culture, "NATURALFIXED", FormatNaturalFixed);
             _loc.AddFunction(culture, "NATURALPERCENT", FormatNaturalPercent);
             _loc.AddFunction(culture, "PLAYTIME", FormatPlaytime);
+            _loc.AddFunction(culture, "RU-PLURAL", FormatRuPlural); // 🌇Sunset🌇 - ss14-ru locale files use this everywhere but nothing ever registered it
 
 
             /*
@@ -68,6 +69,39 @@ namespace Content.Shared.Localizations
             {
                 return (LocValueString) FormatMakePlural(args);
             }
+        }
+
+        // 🌇Sunset🌇 - Russian plural selector: RU-PLURAL($n, "игрок", "игрока", "игроков") picks the
+        // form matching $n per standard Russian declension rules (1 игрок / 2-4 игрока / 5+ игроков,
+        // with the 11-14 exception). The ss14-ru locale files call this in ~20 places but the
+        // function was never registered, so every such message printed a raw {RU-PLURAL()} error.
+        private static ILocValue FormatRuPlural(LocArgs args)
+        {
+            if (args.Args.Count < 4)
+                return new LocValueString("");
+
+            var number = args.Args[0].Value switch
+            {
+                double d => Math.Abs(d),
+                _ => double.TryParse(args.Args[0].Value?.ToString(), out var parsed) ? Math.Abs(parsed) : 0,
+            };
+
+            var one = args.Args[1].Value?.ToString() ?? "";
+            var few = args.Args[2].Value?.ToString() ?? "";
+            var many = args.Args[3].Value?.ToString() ?? "";
+
+            var n = (long) number % 100;
+            var lastDigit = n % 10;
+
+            if (n is >= 11 and <= 14)
+                return new LocValueString(many);
+
+            return lastDigit switch
+            {
+                1 => new LocValueString(one),
+                >= 2 and <= 4 => new LocValueString(few),
+                _ => new LocValueString(many),
+            };
         }
 
         private ILocValue FormatNaturalPercent(LocArgs args)
