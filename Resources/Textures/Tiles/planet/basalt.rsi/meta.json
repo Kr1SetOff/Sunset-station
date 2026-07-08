@@ -2,6 +2,7 @@
   "version": 1,
   "license": "CC-BY-SA-3.0",
   "copyright": "https://github.com/tgstation/tgstation/tree/423404b31e36c4605faacec881b324db8997b0a6",
+  "rsic": false,
   "size": {
     "x": 32,
     "y": 32
@@ -9,63 +10,23 @@
   "states": [
     {
       "name": "basalt1",
-      "frames": 4,
-      "delays": [
-        [
-          2,
-          2,
-          2,
-          2
-        ]
-      ]
+      "directions": 4
     },
     {
       "name": "basalt2",
-      "frames": 4,
-      "delays": [
-        [
-          2,
-          2,
-          2,
-          2
-        ]
-      ]
+      "directions": 4
     },
     {
       "name": "basalt3",
-      "frames": 4,
-      "delays": [
-        [
-          2,
-          2,
-          2,
-          2
-        ]
-      ]
+      "directions": 4
     },
     {
       "name": "basalt4",
-      "frames": 4,
-      "delays": [
-        [
-          2,
-          2,
-          2,
-          2
-        ]
-      ]
+      "directions": 4
     },
     {
       "name": "basalt5",
-      "frames": 4,
-      "delays": [
-        [
-          2,
-          2,
-          2,
-          2
-        ]
-      ]
+      "directions": 4
     }
   ]
 }

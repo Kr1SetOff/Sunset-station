@@ -191,14 +191,14 @@
   layers:
     - texture:
         !type:ImageParallaxTextureSource
-        path: "/Textures/Tiles/Planet/Snow/ice.png"
+        path: "/Textures/Tiles/planet/snow/ice.png"
       scrolling: "0, 0"
       tiled: true
       shader: ""
   layersLQ:
     - texture:
         !type:ImageParallaxTextureSource
-        path: "/Textures/Tiles/Planet/Snow/ice.png"
+        path: "/Textures/Tiles/planet/snow/ice.png"
       scrolling: "-0, 0"
       tiled: true
       shader: ""
