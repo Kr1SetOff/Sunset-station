@@ -1,0 +1,390 @@
+# 🌇Sunset🌇 - remaining items ported from Goobstation/Reserve-Station for the full 17-set
+# CrateSyndicateUndetermined port (see _Sunset/SetSelector/selectable_sets.yml). A few entries
+# substitute an existing equivalent item where the exact upstream one needs a subsystem this fork
+# doesn't have (noted inline).
+
+- type: entity
+  parent: [ ClothingOuterBaseMedium, AllowSuitStorageClothing, BaseCentcommContraband ]
+  id: ClothingOuterArmourInvisible
+  name: bluespace assisted armor
+  description: An armored vest that utilizes bluespace technology, bending light and becoming invisible to the naked eye when worn.
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Clothing/Armor/covert_armor.rsi
+  - type: Clothing
+    sprite: _Goobstation/Clothing/Armor/covert_armor.rsi
+  - type: Armor
+    coverage:
+    - Chest
+    modifiers:
+      coefficients:
+        Blunt: 0.35
+        Slash: 0.35
+        Piercing: 0.35
+        Heat: 0.35
+  - type: ExplosionResistance
+    damageCoefficient: 0.2
+  - type: ModifyDelayedKnockdown
+    delayDelta: 3
+    knockdownTimeDelta: -3
+  - type: StaminaResistance
+    damageCoefficient: 0.5
+  - type: StripMenuInvisible
+  - type: TemperatureProtection
+    heatingCoefficient: 0.8
+    coolingCoefficient: 0.1
+
+- type: entity
+  parent: [ BaseSyndicateContraband, ClothingOuterArmourInvisible ]
+  id: ClothingOuterArmourInvisibleSyndie
+  name: redspace assisted armor
+  description: An armored vest that utilizes redspace technology to appear invisible and not mess with your business style.
+  components:
+  - type: Sprite
+    state: icon-evil
+  - type: ExplosionResistance
+    damageCoefficient: 0.5
+  - type: ModifyDelayedKnockdown
+    delayDelta: 2
+    knockdownTimeDelta: -2
+  - type: TemperatureProtection
+    heatingCoefficient: 1
+    coolingCoefficient: 1
+
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterDavidsJacket
+  name: EMT jacket
+  description: A bright yellow signal jacket, beloved by paramedics of the end of the 21st century.
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Clothing/OuterClothing/Coats/david_jacket.rsi
+  - type: Clothing
+    sprite: _Goobstation/Clothing/OuterClothing/Coats/david_jacket.rsi
+
+- type: entity
+  parent: [ ClothingOuterDavidsJacket, BaseMajorContraband ]
+  id: ClothingOuterDavidsJacketValid
+  name: edgerunner jacket
+  description: You're right on the edge. Show 'em you got this.
+  components:
+  - type: Armor
+    coverage:
+    - Chest
+    - Groin
+    - Arm
+    - Leg
+    - Tail
+    modifiers:
+      coefficients:
+        Blunt: 0.7
+        Slash: 0.7
+        Piercing: 0.7
+        Heat: 0.8
+  - type: ModifyDelayedKnockdown
+    delayDelta: 1.5
+    knockdownTimeDelta: -1.5
+  - type: StaminaResistance
+    damageCoefficient: 0.7
+
+- type: entity
+  id: ContractorBaton
+  parent: [ Stunbaton, BaseSyndicateContraband ]
+  name: contractor baton
+  description: A compact, specialised baton assigned to Syndicate contractors. Applies light electrical shocks to targets.
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Objects/Weapons/Melee/contractor_baton.rsi
+    layers:
+    - state: icon-off
+      map: [ "enum.ToggleableVisuals.Layer" ]
+  - type: Item
+    sprite: _Goobstation/Objects/Weapons/Melee/contractor_baton.rsi
+    heldPrefix: off
+  - type: Clothing
+    sprite: _Goobstation/Objects/Weapons/Melee/contractor_baton.rsi
+    slots:
+    - Belt
+  - type: GenericVisualizer
+    visuals:
+      enum.ToggleableVisuals.Enabled:
+        enum.ToggleableVisuals.Layer:
+          True: { state: icon }
+          False: { state: icon-off }
+  - type: StaminaDamageOnHit
+    damage: 85
+  - type: StunBorgsOnHit
+  - type: TogglePreventStaminaDamage
+
+- type: entity
+  parent: [ ClothingOuterBaseMedium, ClothingOuterStorageToggleableBase, AllowSuitStorageClothing, BaseSyndicateContraband ]
+  id: ClothingOuterArmorCloakSith
+  name: dark lord cloak
+  description: What began as a simple cosplay cloak was illegally reinforced with armored plates, transforming it into a functional piece of armor. Looks like it's even capable of protecting the user from the lack of pressure in space.
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Heretic/Clothing/OuterClothing/void_cloak.rsi
+    layers:
+    - state: icon
+      map: [ "base" ]
+  - type: Clothing
+    sprite: _Goobstation/Heretic/Clothing/OuterClothing/void_cloak.rsi
+  - type: Armor
+    coverage:
+    - Chest
+    - Groin
+    - Arm
+    - Hand
+    - Leg
+    - Foot
+    - Tail
+    modifiers:
+      coefficients:
+        Blunt: 0.5
+        Slash: 0.5
+        Piercing: 0.5
+        Heat: 0.7
+  - type: ExplosionResistance
+    damageCoefficient: 0.7
+  - type: ModifyDelayedKnockdown
+    delayDelta: 3
+    knockdownTimeDelta: -3
+  - type: StaminaResistance
+    damageCoefficient: 0.5
+  - type: PressureProtection
+    lowPressureMultiplier: 1000
+
+- type: entity
+  id: ClothingBackpackSyndicateFilledGrenadier
+  parent: ClothingBackpackSyndicate
+  suffix: Grenadier bundle, filled
+  components:
+  - type: StorageFill
+    contents:
+    - id: MetalFoamGrenade
+    - id: GrenadeFlashBang
+    - id: SmokeGrenade
+    - id: EmpGrenade
+    - id: C4
+    - id: GrenadeShrapnel
+    - id: GrenadeIncendiary
+    - id: ExGrenade
+    - id: SyndieMiniBomb
+      amount: 2
+
+- type: entity
+  parent: SyndiPDA
+  id: SyndiPDANukie
+  name: syndicate PDA
+  description: Ok, time to be a productive member of- oh cool I'm a bad guy time to kill people!
+  components:
+  - type: Pda
+    id: NukieAgentIDCard
+
+- type: entity
+  parent: DehydratedSpaceCarp
+  id: DehydratedHolocarp
+  name: dehydrated holocarp
+  description: Looks like a plush toy holocarp, but just add water and it becomes a real-life holocarp!
+  components:
+  - type: Rehydratable
+    possibleSpawns:
+    - MobCarpHolo
+
+- type: entity
+  parent: [ ClothingUniformJumpsuitPirate, BaseMajorContraband ]
+  id: ClothingUniformJumpsuitWestern
+  name: authentic cowboy's jumpsuit
+  description: Let's show the head of security how we used to do things out west.
+  components:
+  - type: Armor
+    coverage:
+    - Chest
+    - Groin
+    - Arm
+    - Hand
+    - Leg
+    - Foot
+    modifiers:
+      coefficients:
+        Blunt: 0.90
+        Heat: 0.90
+
+- type: entity
+  parent: [ ClothingOuterPonchoClassic, BaseMajorContraband ]
+  id: ClothingOuterPonchoClassicRobust
+  name: authentic cowboy's poncho
+  description: A poncho made for real cowboys.
+  components:
+  - type: Armor
+    coverage:
+    - Chest
+    - Groin
+    modifiers:
+      coefficients:
+        Blunt: 0.55
+        Slash: 0.55
+        Piercing: 0.55
+        Heat: 0.7
+  - type: ExplosionResistance
+    damageCoefficient: 0.90
+  - type: ModifyDelayedKnockdown
+    delayDelta: 2
+    knockdownTimeDelta: -2
+  - type: StaminaResistance
+    damageCoefficient: 0.7
+
+- type: entity
+  parent: [ ClothingShoesMilitaryBase, BaseMajorContraband ]
+  id: ClothingShoesBootsCowboyBrownRobust
+  name: authentic brown cowboy boots
+  description: For a real cowboy.
+  components:
+  - type: Sprite
+    sprite: Clothing/Shoes/Boots/cowboybootsbrown.rsi
+  - type: Clothing
+    sprite: Clothing/Shoes/Boots/cowboybootsbrown.rsi
+  - type: ClothingSlowOnDamageModifier
+    modifier: 0.5
+
+- type: entity
+  parent: [ ClothingHeadHatCowboyBrown, BaseMajorContraband ]
+  id: ClothingHeadHatCowboyBrownRobust
+  name: authentic brown cowboy hat
+  description: "\"This station ain't big enough for the two of us.\""
+
+- type: entity
+  name: advanced combat medipen
+  parent: ChemicalMedipen
+  id: AdvancedCombatMedipen
+  description: A single-use advanced medipen containing chemicals extracted from eldritch beasts.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 40
+        reagents:
+        - ReagentId: Ichor
+          Quantity: 35
+        - ReagentId: TranexamicAcid
+          Quantity: 5
+
+- type: entity
+  name: betrayal knife
+  description: Watch your back!
+  parent: [ BaseKnife, BaseSyndicateContraband ]
+  id: BetrayalKnife
+  components:
+  - type: Sprite
+    sprite: _White/Objects/Weapons/Melee/Daggers/betrayal_knife.rsi
+    state: icon
+  - type: Item
+    size: Small
+  - type: MeleeWeapon
+    angle: 0
+    wideAnimationRotation: 180
+    attackRate: 3
+    damage:
+      types:
+        Slash: 8
+    soundHit:
+      path: /Audio/Weapons/bladeslice.ogg
+  - type: Sharp
+  - type: EmbeddableProjectile
+    sound: /Audio/Weapons/star_hit.ogg
+  - type: ThrowingAngle
+    angle: 180
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Slash: 15
+  - type: DisarmMalus
+    malus: 0.225
+
+- type: entity
+  parent: ClothingUniformJumpsuitAtmosSyndie
+  id: ClothingUniformJumpsuitAtmosSyndieAdvanced
+  suffix: Contortionistic, Inventory
+
+- type: entity
+  parent: ClothingBackpackDuffelSyndicateBundle
+  id: ClothingBackpackDuffelSyndicateStealthHardsuitBundle
+  name: cybersun stealthsuit bundle
+  description: An advanced cybersun stealth hardsuit bundle.
+  components:
+  - type: StorageFill
+    contents:
+    - id: ClothingOuterHardsuitSyndie
+    - id: ClothingMaskGasSyndicate
+    - id: ClothingHandsGlovesCombat
+    - id: DoubleEmergencyOxygenTankFilled
+    - id: DoubleEmergencyNitrogenTankFilled
+
+# Working implants - parented from BaseSubdermalImplant (the real subdermal-implant system that
+# Implanter/TriggerOnActivateImplant actually hook into), not Starlight's separate organ-slot
+# BaseImplant, which was the bug that made these do nothing on the previous pass.
+
+- type: entity
+  parent: BaseSubdermalImplant
+  id: NutrimentImplant
+  name: nutriment pump implant
+  description: This implant floods the user's body with synthesized nutriment when activated, curing hunger.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SubdermalImplant
+    implantAction: ActionActivateNutrimentImplant
+  - type: TriggerOnActivateImplant
+  - type: SatiateHungerOnTrigger
+    targetUser: true
+    hungerAmount: 60
+
+- type: entity
+  parent: BaseImplantOnlyImplanterSyndi
+  id: NutrimentImplanter
+  suffix: Nutriment Pump
+  components:
+  - type: Implanter
+    implant: NutrimentImplant
+
+- type: entity
+  parent: BaseSubdermalImplant
+  id: SmokeImplant
+  name: smoke implant
+  description: This implant releases a cloud of smoke around the user when activated.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SubdermalImplant
+    implantAction: ActionActivateSmokeImplant
+  - type: TriggerOnActivateImplant
+  - type: SmokeOnTrigger
+    targetUser: true
+    spreadAmount: 20
+    duration: 15
+
+- type: entity
+  parent: BaseImplantOnlyImplanterSyndi
+  id: SmokeImplanter
+  suffix: Smoke
+  components:
+  - type: Implanter
+    implant: SmokeImplant
+
+- type: entity
+  parent: BaseSubdermalImplant
+  id: BinaryImplant
+  name: binary decoder implant
+  description: This implant grants the user access to the Binary radio channel without a headset.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SubdermalImplant
+  - type: RadioImplant
+    radioChannels:
+    - Binary
+
+- type: entity
+  parent: BaseImplantOnlyImplanterSyndi
+  id: BinaryImplanter
+  suffix: Binary Decoder
+  components:
+  - type: Implanter
+    implant: BinaryImplant

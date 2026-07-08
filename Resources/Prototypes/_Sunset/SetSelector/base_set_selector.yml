@@ -1,0 +1,14 @@
+# 🌇Sunset🌇 - ported from Goobstation/Reserve-Station: an abstract base for entities that let a
+# player choose 1 of several randomly-rolled SelectableSet prototypes via a UI (see SetSelectorSystem).
+
+- type: entity
+  id: BaseSetSelector
+  abstract: true
+  components:
+  - type: SetSelector
+  - type: ActivatableUI
+    key: enum.SetSelectorUIKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.SetSelectorUIKey.Key:
+        type: SetSelectorBoundUserInterface

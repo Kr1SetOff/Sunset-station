@@ -31,6 +31,35 @@ public sealed partial class PacificationSystem : EntitySystem
         SubscribeLocalEvent<PacifismDangerousAttackComponent, AttemptPacifiedAttackEvent>(OnPacifiedDangerousAttack);
     }
 
+    /// <summary>
+    /// Ensures the entity is Pacified with <see cref="PacifiedComponent.DisallowAllCombat"/> set, or
+    /// removes the component entirely when disallowed. Used by systems that need to fully block combat
+    /// for a temporary state (e.g. flight) without owning PacifiedComponent themselves.
+    /// </summary>
+    public void SetFullyPacified(EntityUid uid, bool disallowAllCombat)
+    {
+        if (!disallowAllCombat)
+        {
+            RemComp<PacifiedComponent>(uid);
+            return;
+        }
+
+        var pacified = EnsureComp<PacifiedComponent>(uid);
+        if (pacified.DisallowAllCombat)
+            return;
+
+        pacified.DisallowAllCombat = true;
+        Dirty(uid, pacified);
+
+        if (TryComp<CombatModeComponent>(uid, out var combatMode))
+        {
+            _combatSystem.SetInCombatMode(uid, false, combatMode);
+            _actionsSystem.SetEnabled(combatMode.CombatToggleActionEntity, false);
+        }
+
+        _alertsSystem.ShowAlert(uid, pacified.PacifiedAlert);
+    }
+
     private bool PacifiedCanAttack(EntityUid user, EntityUid target, [NotNullWhen(false)] out string? reason)
     {
         var ev = new AttemptPacifiedAttackEvent(user);

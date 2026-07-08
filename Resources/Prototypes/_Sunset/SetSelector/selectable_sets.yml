@@ -1,0 +1,400 @@
+# 🌇Sunset🌇 - gear sets for CrateSyndicateUndetermined (see _Sunset/Uplink/undetermined_crate.yml).
+# The 17 "Syndicate*Set" entries below are a full-fidelity port of Goobstation/Reserve-Station's own
+# possibleSets list for this crate, including every item in each set - ported items live in
+# _Sunset/Uplink/undetermined_gear.yml, _Sunset/Autosurgeon, _Sunset/CustomLawboard,
+# _Sunset/Teleporter and _Sunset/Implants. A handful of entries substitute an existing equivalent
+# item where the exact upstream one needs a subsystem this fork doesn't have (mind control ->
+# reuses this fork's own MindControlImplanter, CQC manual -> reuses this fork's own martial arts
+# manual, thermal goggles -> reuses this fork's own functional thermal goggles, etc.) - noted inline.
+# SunsetMedicSet and SunsetHotlineMiamiSet are original additions on top, not part of the upstream set.
+
+- type: selectableSet
+  id: SyndicateSpySet
+  name: selectable-set-syndicate-spy-name
+  description: selectable-set-syndicate-spy-description
+  sprite:
+    sprite: Clothing/Mask/gas.rsi
+    state: icon
+  content:
+  - EncryptionKeySyndie
+  - ClothingHandsChameleonThief
+  - ClothingBackpackChameleonFill
+  - ClothingMaskGasVoiceChameleon
+  - AgentIDCard
+  - HypopenBox
+  - ChemistryBottleNocturine
+  - CameraBug
+  - StealthBox
+  - SyndicateJawsOfLife
+
+- type: selectableSet
+  id: SyndicateHitmanSet
+  name: selectable-set-syndicate-hitman-name
+  description: selectable-set-syndicate-hitman-description
+  sprite:
+    sprite: Objects/Weapons/Guns/Pistols/cobra.rsi
+    state: icon
+  content:
+  - EncryptionKeySyndie
+  - WeaponPistolCobra
+  - MagazinePistolCaselessRifle
+  - MagazinePistolCaselessRifle
+  - MagazinePistolCaselessRifle
+  - MartialArtsManualCQC # substitute for Goobstation's CQCManual - this fork has its own CQC style/manual already
+  - ClothingOuterArmourInvisibleSyndie
+  - ClothingShoesBootsJack
+  - CigPackSyndicate
+  - MedkitCombatFilled
+  - ClothingEyesGlassesSunglasses
+  - ClothingUniformJumpsuitDetectiveGrey
+  - ClothingHandsGlovesCombat
+
+- type: selectableSet
+  id: SyndicateImplantsSet
+  name: selectable-set-syndicate-implants-name
+  description: selectable-set-syndicate-implants-description
+  sprite:
+    sprite: Objects/Specific/Medical/implanter.rsi
+    state: implanter0
+  content:
+  - RadioImplanter
+  - NutrimentImplanter
+  - ScramImplanter
+  - FreedomImplanter
+  - SmokeImplanter
+  - KravMagaImplanter # grants this fork's own CQC style - see MartialArtImplantComponent.cs
+  - ClothingOuterDavidsJacketValid
+  - AutosurgeonRightMantisBlade
+  - AutosurgeonLeftMantisBlade
+  - AutosurgeonStatvekaSandevistan
+
+- type: selectableSet
+  id: SyndicateHackerSet
+  name: selectable-set-syndicate-hacker-name
+  description: selectable-set-syndicate-hacker-description
+  sprite:
+    sprite: Objects/Misc/module.rsi
+    state: std_mod
+  content:
+  - EncryptionKeySyndie
+  - SyndicateCustomLawboard
+  - AccessBreaker
+  - Emag
+  - RadioJammer
+  - ToolboxSyndicateFilled
+  - ExperimentalSyndicateTeleporter
+  - ClothingEyesGlassesOutlawGlasses
+  - BinaryImplanter
+
+- type: selectableSet
+  id: SyndicateDeswordSet
+  name: selectable-set-syndicate-desword-name
+  description: selectable-set-syndicate-desword-description
+  sprite:
+    sprite: Objects/Weapons/Melee/e_sword_double.rsi
+    state: icon
+  content:
+  - EncryptionKeySyndie
+  - EnergySwordDouble
+  - StimkitFilled
+  - ClothingShoesChameleonNoSlips
+  - ClothingOuterArmorCloakSith
+
+- type: selectableSet
+  id: SyndicateGrenadierSet
+  name: selectable-set-syndicate-grenadier-name
+  description: selectable-set-syndicate-grenadier-description
+  sprite:
+    sprite: Objects/Weapons/Grenades/syndgrenade.rsi
+    state: icon
+  content:
+  - ClothingBeltMilitaryWebbingGrenadeFilled # substitute for Goobstation's ClothingBeltMilitaryRigGrenadierFilled
+  - ClothingBackpackSyndicateFilledGrenadier
+  - ClothingOuterSuitBomb
+  - ClothingHeadHelmetBombSuit
+  - EncryptionKeySyndie
+
+- type: selectableSet
+  id: SyndicateFluclearSet
+  name: selectable-set-syndicate-fluclear-name
+  description: selectable-set-syndicate-fluclear-description
+  sprite:
+    sprite: Clothing/OuterClothing/Hardsuits/syndicate.rsi
+    state: icon
+  content:
+  - ClothingHeadsetAltSyndicate
+  - WeaponSubMachineGunC20r
+  - MagazinePistolSubMachineGunSP
+  - MagazinePistolSubMachineGunSP
+  - MagazinePistolSubMachineGunSP
+  - EnergyShield
+  - JetpackBlackFilled
+  - ClothingBackpackDuffelSyndicateHardsuitBundle
+  - ClothingUniformJumpsuitOperative
+  - SyndiPDANukie
+  - ClothingEyesGlassesThermalSpy # substitute for Goobstation's own thermal goggles - this fork has its own functional pair
+  - ClothingShoesBootsCombatFilled
+  - ClothingBeltMilitaryWebbing
+
+- type: selectableSet
+  id: SyndicateFriendshipSet
+  name: selectable-set-syndicate-friendship-name
+  description: selectable-set-syndicate-friendship-description
+  sprite:
+    sprite: _Goobstation/Objects/Weapons/Melee/contractor_baton.rsi
+    state: icon-off
+  content:
+  - EncryptionKeySyndie
+  - EncryptionKeySyndie
+  - EncryptionKeySyndie
+  - EncryptionKeySyndie
+  - EncryptionKeySyndie
+  - ContractorBaton
+  - Handcuffs
+  - MindControlImplanter # substitute for Goobstation's MindcontrolImplanter - this fork has its own (Starlight-derived) mind control implant already
+  - MindControlImplanter
+  - MindControlImplanter
+  - MindControlImplanter
+  - WeaponSniperMosin
+  - WeaponSniperMosin
+  - WeaponSniperMosin
+  - WeaponSniperMosin
+
+- type: selectableSet
+  id: SyndicateCarpSet
+  name: selectable-set-syndicate-carp-name
+  description: selectable-set-syndicate-carp-description
+  sprite:
+    sprite: Objects/Fun/Plushies/carp.rsi
+    state: carpplush
+  content:
+  - EncryptionKeySyndie
+  - MartialArtsManualSleepingCarp # substitute for Goobstation's SleepingCarpScroll - this fork already has this exact style
+  - DehydratedSpaceCarp
+  - DehydratedSpaceCarp
+  - DehydratedSpaceCarp
+  - DehydratedSpaceCarp
+  - DehydratedSpaceCarp
+  - DehydratedHolocarp
+  - DehydratedHolocarp
+  - DehydratedHolocarp
+  - DehydratedHolocarp
+  - DehydratedHolocarp
+  - ClothingOuterHardsuitCarp
+  - FireExtinguisher
+
+- type: selectableSet
+  id: SyndicateWesternSet
+  name: selectable-set-syndicate-western-name
+  description: selectable-set-syndicate-western-description
+  sprite:
+    sprite: Clothing/Head/Hats/cowboyhatbrown.rsi
+    state: icon
+  content:
+  - HoloCigarWestern
+  - EncryptionKeySyndie
+  - ClothingUniformJumpsuitWestern
+  - ClothingEyesGlassesSunglasses
+  - ClothingOuterPonchoClassicRobust
+  - ClothingShoesBootsCowboyBrownRobust
+  - ClothingHeadHatCowboyBrownRobust
+  - WeaponPistolDualetta # the actual "twin guns" gimmick - won't fire unless you're holding both
+  - WeaponPistolDualetta
+  - MagazinePistolCaselessRifle
+  - MagazinePistolCaselessRifle
+  - MagazinePistolCaselessRifle
+  - MagazinePistolCaselessRifle
+  - AdvancedCombatMedipen
+  - AdvancedCombatMedipen
+  - ClothingBeltSyndieHolster
+
+- type: selectableSet
+  id: SyndicateSusSet
+  name: selectable-set-syndicate-sus-name
+  description: selectable-set-syndicate-sus-description
+  sprite:
+    sprite: _White/Objects/Weapons/Melee/Daggers/betrayal_knife.rsi
+    state: icon
+  content:
+  - EncryptionKeySyndie
+  - BetrayalKnife
+  - WeaponEnergyCrossbow
+  - ClothingUniformJumpsuitAtmosSyndieAdvanced
+  - ClothingBackpackDuffelSyndicateStealthHardsuitBundle
+
+- type: selectableSet
+  id: SyndicateLawyerSet
+  name: selectable-set-syndicate-lawyer-name
+  description: selectable-set-syndicate-lawyer-description
+  sprite:
+    sprite: Objects/Storage/Briefcases/briefcase_brown.rsi
+    state: icon
+  content:
+  - ClothingUniformJumpsuitLawyerRed
+  - ClothingNeckLawyerbadge
+  - LawyerPDA
+  - ClothingEyesGlassesHiddenSecurity
+  - ClothingHeadsetChameleon
+  - ClothingBackpackChameleon
+  - EncryptionKeySyndie
+  - BookSpaceLaw
+  - CyberPen
+  - RubberStampLawyer
+  - RubberStampSyndicate
+  - CaneSheathFilled
+  - DnaScramblerImplanter
+  - WeaponPistolCobra
+  - MagazinePistolCaselessRifle
+  - MagazinePistolCaselessRifle
+  - MagazinePistolCaselessRifle
+  - MagazinePistolCaselessRifle
+
+- type: selectableSet
+  id: SyndicateNoRussianSet
+  name: selectable-set-syndicate-no-russian-name
+  description: selectable-set-no-russian-description
+  sprite:
+    sprite: _Starlight/Objects/Weapons/Guns/LMGs/l6.rsi
+    state: base
+  content:
+  - ClothingUniformJumpsuitLawyerBlack
+  - ClothingBeltMilitaryWebbing
+  - ClothingEyesGlassesHiddenSecurity
+  - EncryptionKeySyndie
+  - WeaponLightMachineGunL6
+
+- type: selectableSet
+  id: SyndicatePirateCaptainSet
+  name: selectable-set-syndicate-pirate-captain-name
+  description: selectable-set-syndicate-pirate-captain-description
+  sprite:
+    sprite: Objects/Weapons/Melee/cutlass.rsi
+    state: icon
+  content:
+  - ClothingUniformJumpsuitPirate
+  - ClothingHeadHatPirate
+  - ClothingNeckCloakPirateCap
+  - ClothingShoesBootsMagSyndie
+  - ClothingMaskGasExplorer
+  - ClothingOuterHardsuitPirateCap
+  - ClothingEyesEyepatch
+  - ClothingHeadsetAltFreelancer
+  - PiratePDA
+  - EncryptionKeySyndie
+  - WeaponRevolverPirate
+  - SpeedLoaderMagnumAP
+  - SpeedLoaderMagnumAP
+  - WeaponLauncherPirateCannon
+  - CannonBall
+  - CannonBall
+  - CannonBallGrapeshot
+  - CannonBallGrapeshot
+  - CannonBallGlassshot
+  - CannonBallGlassshot
+  - EnergyCutlass
+  - MicroBombImplanter
+
+- type: selectableSet
+  id: SyndicateEngineerSet
+  name: selectable-set-syndicate-engineer-name
+  description: selectable-set-syndicate-engineer-description
+  sprite:
+    sprite: Objects/Weapons/Guns/Turrets/turrets.rsi
+    state: syndie_off
+  content:
+  - ToolboxElectricalTurret
+  - ToolboxElectricalTurret
+  - ToolboxElectricalTurret
+  - ToolboxElectricalTurret
+  - ToolboxSyndicateFilled
+  - EmpGrenade
+  - EmpGrenade
+  - ExGrenade
+  - ExGrenade
+  - PowerSink
+  - AcousticGuitarInstrument
+  - ClothingHeadHatHardhatArmored
+  - ClothingOuterVestHazard
+  - ClothingUniformJumpsuitRepairmanSyndie
+  - ClothingShoesBootsWork
+  - EncryptionKeySyndie
+
+- type: selectableSet
+  id: SyndicateDoorKickerSet
+  name: selectable-set-syndicate-door-kicker-name
+  description: selectable-set-syndicate-door-kicker-description
+  sprite:
+    sprite: _Starlight/Objects/Weapons/Guns/Shotguns/cshotgun.rsi
+    state: icon
+  content:
+  - ClothingUniformJumpsuitOperative
+  - ClothingBeltMilitaryWebbing
+  - ClothingHeadHelmetSwatSyndicate
+  - ClothingOuterVestWeb
+  - ClothingEyesGlassesThermalSpy # substitute for Goobstation's own thermal goggles
+  - ClothingHandsGlovesCombat
+  - SyndiPDA
+  - SyndicateJawsOfLife
+  - WeaponShotgunCombat
+  - MagazineShotgun # substitute for Goobstation's MagazineBoxShotgunHighCaliber - matches this fork's combat shotgun's actual ammo
+  - ClothingMaskGasSyndicate
+  - EncryptionKeySyndie
+  - C4
+  - C4
+
+- type: selectableSet
+  id: SyndicateTunnelClownSet
+  name: selectable-set-syndicate-tunnel-clown-name
+  description: selectable-set-syndicate-tunnel-clown-description
+  sprite:
+    sprite: Clothing/Mask/clown.rsi
+    state: icon
+  content:
+  - EncryptionKeySyndie
+  - ClothingMaskClown
+  - ClothingUniformJumpsuitClown
+  - ClothingHandsGlovesCombat
+  - ClothingShoesClown
+  - ClothingOuterVestWeb
+  - ClothingBackpackClown
+  - ClothingEyesGlassesSunglasses
+  - ClownPDA
+  - FireAxeFlaming
+  - Stunprod
+  - Stunprod
+  - FreedomImplanter
+  - MicroBombImplanter
+  - SadTromboneImplanter
+  - Handcuffs
+  - Handcuffs
+  - BoxHoloclown
+  - CombatMedipen
+  - SyndicateBusinessCard
+  - BikeHorn
+
+# Original Sunset additions (not part of Goobstation's set), per the invitation to add extra gear
+
+- type: selectableSet
+  id: SunsetMedicSet
+  name: selectable-set-sunset-medic-name
+  description: selectable-set-sunset-medic-description
+  sprite:
+    sprite: Objects/Specific/Chemistry/bottle.rsi
+    state: bottle
+  content:
+  - CombatMedipen
+  - CombatMedipen
+  - Stimpack
+  - StimkitFilled
+  - HypopenBox
+  - ChemistryBottleNocturine
+
+- type: selectableSet
+  id: SunsetHotlineMiamiSet
+  name: selectable-set-sunset-hotline-name
+  description: selectable-set-sunset-hotline-description
+  sprite:
+    sprite: _Sunset/Clothing/Mask/HotlineMiami/swan.rsi
+    state: icon
+  tables:
+  - HotlineMiamiCostumeSetTable

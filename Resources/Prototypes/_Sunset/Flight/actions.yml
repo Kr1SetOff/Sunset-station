@@ -1,0 +1,15 @@
+# 🌇Sunset🌇 - flight toggle action, ported alongside FlightComponent (see
+# Content.Shared/_Sunset/Flight/FlightComponent.cs for the port notes).
+- type: entity
+  parent: BaseAction
+  id: ActionToggleFlight
+  name: action-name-toggle-flight
+  description: action-description-toggle-flight
+  components:
+  - type: Action
+    checkCanInteract: false
+    useDelay: 3
+    icon: { sprite: _Sunset/Interface/Actions/flight.rsi, state: flight_off }
+    iconOn: { sprite: _Sunset/Interface/Actions/flight.rsi, state: flight_on }
+  - type: InstantAction
+    event: !type:ToggleFlightEvent

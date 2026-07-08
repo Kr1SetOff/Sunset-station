@@ -1,0 +1,8 @@
+# 🌇Sunset🌇 - screen-glitch shader for the Sandevistan overload/disable effect, ported alongside
+# SandevistanGlitchComponent (see Content.Client/_Sunset/Sandevistan/SandevistanGlitchOverlay.cs).
+- type: shader
+  id: SandevistanGlitch
+  kind: source
+  path: "/Textures/_Goobstation/Shaders/sandevistan_glitch.swsl"
+  params:
+    intensity: 1.0
