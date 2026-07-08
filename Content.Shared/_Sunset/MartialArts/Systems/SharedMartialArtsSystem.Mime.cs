@@ -1,5 +1,6 @@
 using Content.Shared.Damage;
 using Content.Shared.Movement.Pulling.Components;
+using Content.Shared.Projectiles;
 using Content.Shared.Speech.Muting;
 using Content.Shared._Sunset.MartialArts.Components;
 using Content.Shared._Sunset.MartialArts.Events;
@@ -10,9 +11,13 @@ namespace Content.Shared._Sunset.MartialArts.Systems;
 
 public sealed partial class SharedMartialArtsSystem
 {
+    private const string MimeBulletProto = "BulletMime";
+
     private void InitializeMime()
     {
         SubscribeLocalEvent<MimeAdvancedMimeryComponent, MimeInvisibleBlockadeActionEvent>(OnMimeInvisibleBlockadeAction);
+        SubscribeLocalEvent<MimeAdvancedMimeryComponent, MimeFingerGunsActionEvent>(OnMimeFingerGunsAction);
+        SubscribeLocalEvent<MimeBulletComponent, ProjectileHitEvent>(OnMimeBulletHit);
     }
 
     private void OnMimeInvisibleBlockadeAction(Entity<MimeAdvancedMimeryComponent> ent, ref MimeInvisibleBlockadeActionEvent args)
@@ -22,6 +27,42 @@ public sealed partial class SharedMartialArtsSystem
 
         args.Handled = true;
         MimeInvisibleWall(ent.Owner);
+    }
+
+    /// <summary>
+    /// The real Finger Guns (matching Goob Station/Reserve-Station's ActionFingerGuns): a genuine
+    /// targeted ranged attack that fires a mimed bullet which can miss, instead of this fork's earlier
+    /// melee-combo substitute. Requires an empty hand, same as the original.
+    /// </summary>
+    private void OnMimeFingerGunsAction(Entity<MimeAdvancedMimeryComponent> ent, ref MimeFingerGunsActionEvent args)
+    {
+        if (args.Handled || _net.IsClient)
+            return;
+
+        if (!_hands.TryGetEmptyHand(ent.Owner, out _))
+        {
+            _popup.PopupClient(Loc.GetString("martial-arts-mime-finger-guns-need-hand"), ent.Owner, ent.Owner);
+            return;
+        }
+
+        args.Handled = true;
+
+        var fromMap = _transform.GetMapCoordinates(ent.Owner);
+        var toMap = _transform.ToMapCoordinates(args.Target);
+        var direction = toMap.Position - fromMap.Position;
+        if (direction.LengthSquared() < 0.01f)
+            return;
+
+        var bullet = Spawn(MimeBulletProto, fromMap);
+        var userVelocity = _physics.GetMapLinearVelocity(ent.Owner);
+        _gun.ShootProjectile(bullet, direction, userVelocity, ent.Owner, ent.Owner, 25f);
+    }
+
+    private void OnMimeBulletHit(Entity<MimeBulletComponent> ent, ref ProjectileHitEvent args)
+    {
+        EnsureComp<MutedComponent>(args.Target);
+        var tempMute = EnsureComp<TemporaryMuteComponent>(args.Target);
+        tempMute.ExpiresAt = _timing.CurTime + ent.Comp.MuteDuration;
     }
 
     /// <summary>
@@ -53,20 +94,6 @@ public sealed partial class SharedMartialArtsSystem
         Spawn("WallInvisible", _mapSystem.GridTileToLocal(gridUid, grid, tileIndex));
         Spawn("WallInvisible", _mapSystem.GridTileToLocal(gridUid, grid, tileIndex + perpendicular));
         Spawn("WallInvisible", _mapSystem.GridTileToLocal(gridUid, grid, tileIndex - perpendicular));
-    }
-
-    /// <summary>
-    /// Goob Station's "Finger Guns" - mimed bullets that deal Piercing damage and mute on hit. The real
-    /// version fires up to three separate shots that can miss; ours is a guaranteed single burst against
-    /// the already-selected combo target, so the numbers are scaled down from its 40-per-bullet/20s mute.
-    /// </summary>
-    private void MimeFingerGuns(EntityUid user, EntityUid target)
-    {
-        _damageable.TryChangeDamage(target, new DamageSpecifier { DamageDict = new() { { "Piercing", 15 } } }, origin: user);
-
-        EnsureComp<MutedComponent>(target);
-        var tempMute = EnsureComp<TemporaryMuteComponent>(target);
-        tempMute.ExpiresAt = _timing.CurTime + TimeSpan.FromSeconds(8);
     }
 
     /// <summary>

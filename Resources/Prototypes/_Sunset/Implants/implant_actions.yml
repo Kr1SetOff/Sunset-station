@@ -1,0 +1,36 @@
+# 🌇Sunset🌇 - activation actions for NutrimentImplant/SmokeImplant (see undetermined_gear.yml),
+# following the same BaseImplantAction pattern as the stock EMP/Scram implant actions.
+
+- type: entity
+  parent: BaseImplantAction
+  id: ActionActivateNutrimentImplant
+  name: Activate Nutriment Pump
+  description: Floods your body with synthesized nutriment, curing hunger.
+  components:
+  - type: LimitedCharges
+    maxCharges: 3
+  - type: Action
+    checkCanInteract: false
+    useDelay: 30
+    itemIconStyle: BigAction
+    priority: -20
+    icon:
+      sprite: Objects/Specific/Medical/implanter.rsi
+      state: implanter0
+
+- type: entity
+  parent: BaseImplantAction
+  id: ActionActivateSmokeImplant
+  name: Activate Smoke
+  description: Releases a cloud of smoke around you.
+  components:
+  - type: LimitedCharges
+    maxCharges: 2
+  - type: Action
+    checkCanInteract: false
+    useDelay: 5
+    itemIconStyle: BigAction
+    priority: -20
+    icon:
+      sprite: Objects/Weapons/Grenades/smoke.rsi
+      state: icon
