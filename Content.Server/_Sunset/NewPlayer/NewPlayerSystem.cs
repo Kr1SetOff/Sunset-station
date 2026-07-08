@@ -2,6 +2,7 @@
 
 using Content.Server.Players.PlayTimeTracking;
 using Content.Shared._Sunset.NewPlayer;
+using Content.Shared.GameTicking;
 using Robust.Server.Player;
 using Robust.Shared.Player;
 
@@ -10,8 +11,11 @@ namespace Content.Server._Sunset.NewPlayer;
 /// <summary>
 /// НОВОЕ. Считает общий налёт игрока на сервере и держит <see cref="NewPlayerComponent"/> в актуальном
 /// состоянии: ставит флаг новичка, пока налёт меньше порога, и снимает его при достижении порога.
-/// Пересчёт происходит при вселении в тело и при каждом обновлении налёта
-/// (<see cref="PlayTimeTrackingManager.SessionPlayTimeUpdated"/>), поэтому иконка и осмотр обновляются сами.
+/// Компонент навешивается на тело при каждом заспавне персонажа (<see cref="PlayerSpawnCompleteEvent"/>) -
+/// без этого иконка/осмотр никогда не появляются, т.к. компонент больше нигде не добавляется ни в
+/// прототипах, ни в другом коде. Пересчёт также происходит при вселении в тело и при каждом обновлении
+/// налёта (<see cref="PlayTimeTrackingManager.SessionPlayTimeUpdated"/>), поэтому иконка и осмотр
+/// обновляются сами по ходу раунда.
 /// </summary>
 public sealed class NewPlayerSystem : EntitySystem
 {
@@ -31,6 +35,7 @@ public sealed class NewPlayerSystem : EntitySystem
         base.Initialize();
 
         SubscribeLocalEvent<NewPlayerComponent, PlayerAttachedEvent>(OnPlayerAttached);
+        SubscribeLocalEvent<PlayerSpawnCompleteEvent>(OnPlayerSpawnComplete);
 
         _playTime.SessionPlayTimeUpdated += OnSessionPlayTimeUpdated;
     }
@@ -63,6 +68,12 @@ public sealed class NewPlayerSystem : EntitySystem
     private void OnPlayerAttached(Entity<NewPlayerComponent> ent, ref PlayerAttachedEvent args)
     {
         UpdateState(ent, args.Player);
+    }
+
+    private void OnPlayerSpawnComplete(PlayerSpawnCompleteEvent args)
+    {
+        var comp = EnsureComp<NewPlayerComponent>(args.Mob);
+        UpdateState((args.Mob, comp), args.Player);
     }
 
     private void OnSessionPlayTimeUpdated(ICommonSession session)

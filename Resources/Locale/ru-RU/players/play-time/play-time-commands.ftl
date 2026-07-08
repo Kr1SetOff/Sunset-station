@@ -20,6 +20,23 @@ cmd-playtime_addrole-arg-role = <роль>
 cmd-playtime_addrole-arg-minutes = <минуты>
 cmd-playtime_addrole-error-args = Ожидается ровно три аргумента
 
+# - playtime_setoverall
+cmd-playtime_setoverall-desc = Устанавливает общее игровое время игрока в указанные минуты
+cmd-playtime_setoverall-help = Использование: { $command } <user name> <minutes>
+cmd-playtime_setoverall-succeed = Общее игровое время { $username } установлено на { TOSTRING($time, "dddd:hh:mm") }.
+cmd-playtime_setoverall-arg-user = <имя пользователя>
+cmd-playtime_setoverall-arg-minutes = <минуты>
+cmd-playtime_setoverall-error-args = Ожидается ровно два аргумента
+
+# - playtime_setrole
+cmd-playtime_setrole-desc = Устанавливает игровое время игрока на определённой роли в указанные минуты
+cmd-playtime_setrole-help = Использование: { $command } <user name> <role> <minutes>
+cmd-playtime_setrole-succeed = Игровое время для { $username } / \'{ $role }\' установлено на { TOSTRING($time, "dddd:hh:mm") }.
+cmd-playtime_setrole-arg-user = <имя пользователя>
+cmd-playtime_setrole-arg-role = <роль>
+cmd-playtime_setrole-arg-minutes = <минуты>
+cmd-playtime_setrole-error-args = Ожидается ровно три аргумента
+
 # - playtime_getoverall
 cmd-playtime_getoverall-desc = Получить общее игровое время игрока в минутах
 cmd-playtime_getoverall-help = Использование: { $command } <user name>
