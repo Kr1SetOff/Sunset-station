@@ -1,0 +1,97 @@
+# 🌇Sunset🌇 - Geneticist loadouts: genetics-branded clothing choices in character setup, plus the
+# geneticist PDA. Shares the generic medical groups (head/mask/gloves/shoes/eyewear/survival) with
+# the doctor's role loadout.
+
+# ---- Loadouts ----
+
+- type: loadout
+  id: GeneticsJumpsuit
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitGenetics
+
+- type: loadout
+  id: GeneticsJumpskirt
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtGenetics
+
+- type: loadout
+  id: GeneticsLabCoat
+  equipment:
+    outerClothing: ClothingOuterCoatLabGene
+
+- type: loadout
+  id: GeneticsWintercoat
+  equipment:
+    outerClothing: ClothingOuterWinterMed
+
+- type: loadout
+  id: GeneticsBackpack
+  equipment:
+    back: ClothingBackpackGenetics
+
+- type: loadout
+  id: GeneticsSatchel
+  equipment:
+    back: ClothingBackpackSatchelGenetics
+
+- type: loadout
+  id: GeneticsDuffel
+  equipment:
+    back: ClothingBackpackDuffelGenetics
+
+- type: loadout
+  id: GeneticistPDA
+  equipment:
+    id: GeneticistPDA
+
+# ---- Groups ----
+
+- type: loadoutGroup
+  id: GeneticistJumpsuit
+  name: loadout-group-geneticist-jumpsuit
+  loadouts:
+  - GeneticsJumpsuit
+  - GeneticsJumpskirt
+
+- type: loadoutGroup
+  id: GeneticistBackpack
+  name: loadout-group-geneticist-backpack
+  loadouts:
+  - GeneticsBackpack
+  - GeneticsSatchel
+  - GeneticsDuffel
+
+- type: loadoutGroup
+  id: GeneticistOuterClothing
+  name: loadout-group-geneticist-outerclothing
+  loadouts:
+  - GeneticsLabCoat
+  - GeneticsWintercoat
+
+- type: loadoutGroup
+  id: GeneticistPDA
+  name: loadout-group-geneticist-id
+  loadouts:
+  - GeneticistPDA
+
+# ---- Role loadout ----
+
+- type: roleLoadout
+  id: JobGeneticist
+  groups:
+  - GroupTankHarness
+  - MedicalDoctorHead
+  - MedicalMask
+  - GeneticistJumpsuit
+  - MedicalGloves
+  - GeneticistBackpack
+  - GeneticistOuterClothing
+  - MedicalShoes
+  - GeneticistPDA
+  - MedicalEyewear
+  - SurvivalMedical
+  - Trinkets
+  - Scarves
+  - Pins
+  - Pens
+  - GroupSpeciesBreathToolMedical

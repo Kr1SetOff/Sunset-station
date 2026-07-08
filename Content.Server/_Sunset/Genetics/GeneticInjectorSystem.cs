@@ -2,10 +2,10 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
+using Content.Shared.Body.Components;
 using Content.Shared.DoAfter;
 using Content.Shared._Sunset.Genetics;
 using Content.Shared._Sunset.Genetics.Components;
-using Content.Shared.Humanoid;
 using Content.Shared.Interaction;
 using Content.Shared.Popups;
 using Robust.Shared.Prototypes;
@@ -13,7 +13,8 @@ using Robust.Shared.Prototypes;
 namespace Content.Server._Sunset.Genetics;
 
 /// <summary>
-///     Applies a stored genome subset (or a clean-SE wipe) to a humanoid when the injector is used on them.
+///     Applies a stored genome subset (or a clean-SE wipe) to any body-having creature (humanoid or
+///     animal test subject, e.g. monkeys/kobolds) when the injector is used on them.
 ///     Injection takes a do-after so it can't be applied to everyone instantly.
 /// </summary>
 public sealed class GeneticInjectorSystem : EntitySystem
@@ -36,7 +37,7 @@ public sealed class GeneticInjectorSystem : EntitySystem
         if (args.Handled || !args.CanReach || args.Target is not { } target)
             return;
 
-        if (!HasComp<HumanoidAppearanceComponent>(target))
+        if (!HasComp<BodyComponent>(target))
             return;
 
         args.Handled = true;
@@ -59,10 +60,10 @@ public sealed class GeneticInjectorSystem : EntitySystem
         if (args.Handled || args.Cancelled || args.Args.Target is not { } target)
             return;
 
-        if (!HasComp<HumanoidAppearanceComponent>(target))
+        if (!HasComp<BodyComponent>(target))
             return;
 
-        var genome = EnsureComp<GenomeComponent>(target);
+        var genome = _genetics.EnsureGenome(target);
         ApplyTo(ent.Comp, genome);
         _genetics.ApplyGenome(target, genome);
 
@@ -90,13 +91,15 @@ public sealed class GeneticInjectorSystem : EntitySystem
             return;
         }
 
-        // Gene activator: raise just this mutation's block to its activation threshold.
-        // ApplyGenome (called by the caller) then expresses it through the normal mutation path.
+        // Gene activator: raise just this mutation's block (wherever this round's shuffled gene
+        // layout put it) to its activation threshold. ApplyGenome (called by the caller) then
+        // expresses it through the normal mutation path.
         if (injector.ActivateMutation is { } mutationId &&
-            _proto.TryIndex<MutationPrototype>(mutationId, out var proto) &&
-            proto.Block > 0 && proto.Block < genome.Se.Count)
+            _proto.TryIndex<MutationPrototype>(mutationId, out var proto))
         {
-            genome.Se[proto.Block] = proto.Disease ? (int) MutationTier.Minor : (int) proto.Tier;
+            var block = _genetics.GetGeneBlock(proto);
+            if (block > 0 && block < genome.Se.Count)
+                genome.Se[block] = proto.Disease ? (int) MutationTier.Minor : (int) proto.Tier;
         }
 
         if (injector.ApplyUi)

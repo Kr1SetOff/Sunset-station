@@ -21,6 +21,13 @@ public sealed partial class GeneThermalComponent : Component
     [DataField]
     public bool ColdOnly;
 
+    /// <summary>
+    ///     When true, only heat is ignored (the cold threshold is left untouched). Used by the fire
+    ///     resistance gene, the mirror image of <see cref="ColdOnly"/>.
+    /// </summary>
+    [DataField]
+    public bool HeatOnly;
+
     [DataField]
     public float OldHeatThreshold;
 

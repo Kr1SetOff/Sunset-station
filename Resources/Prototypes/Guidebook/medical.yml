@@ -7,6 +7,13 @@
   - Chemist
   - Cloning
   - Cryogenics
+  - SunsetGenetics # 🌇Sunset🌇
+
+# 🌇Sunset🌇 - Paradise-style genetics guide
+- type: guideEntry
+  id: SunsetGenetics
+  name: guide-entry-sunset-genetics
+  text: "/ServerInfo/Guidebook/Medical/SunsetGenetics.xml"
 
 - type: guideEntry
   id: MedicalDoctor

@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
+using Content.Server.Chat.Managers;
 using Content.Server.Chat.Systems;
 using Content.Server.Explosion.EntitySystems;
 using Content.Shared.Chat;
@@ -17,7 +18,8 @@ namespace Content.Server._Sunset.Biocode;
 
 /// <summary>
 /// НОВАЯ МЕХАНИКА «Биокод» (см. <see cref="BiocodeComponent"/>).
-/// Реализует установку биокода вербом, блокировку использования предмета чужими игроками
+/// Реализует установку биокода вербом, блокировку использования предмета всеми куклами кроме
+/// куклы-владельца (отказ дублируется попапом на экране и сообщением в чат)
 /// и самоуничтожение скафандра, надетого чужаком, с обратным отсчётом в чат.
 ///
 /// Серверная система; всё исполняется в основном потоке ECS.
@@ -26,6 +28,7 @@ public sealed class BiocodeSystem : EntitySystem
 {
     [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly ChatSystem _chat = default!;
+    [Dependency] private readonly IChatManager _chatManager = default!;
     [Dependency] private readonly ExplosionSystem _explosion = default!;
     [Dependency] private readonly Robust.Shared.Audio.Systems.SharedAudioSystem _audio = default!;
 
@@ -47,6 +50,7 @@ public sealed class BiocodeSystem : EntitySystem
 
     /// <summary>
     /// Верб «Установить биокод» — доступен, пока биокод не установлен, любому игроку (с сессией).
+    /// Привязка идёт к самой кукле (EntityUid тела), а не к аккаунту.
     /// </summary>
     private void OnGetVerbs(Entity<BiocodeComponent> ent, ref GetVerbsEvent<AlternativeVerb> args)
     {
@@ -54,27 +58,26 @@ public sealed class BiocodeSystem : EntitySystem
             return;
 
         // Уже привязан — верб не показываем.
-        if (ent.Comp.OwnerUserId != null)
+        if (ent.Comp.OwnerEntity != null)
             return;
 
-        if (!TryComp<ActorComponent>(args.User, out var actor))
+        if (!HasComp<ActorComponent>(args.User))
             return;
 
         var user = args.User;
-        var session = actor.PlayerSession;
         args.Verbs.Add(new AlternativeVerb
         {
             Text = Loc.GetString("biocode-verb-install"),
-            Act = () => Install(ent, user, session),
+            Act = () => Install(ent, user),
         });
     }
 
-    private void Install(Entity<BiocodeComponent> ent, EntityUid user, ICommonSession session)
+    private void Install(Entity<BiocodeComponent> ent, EntityUid user)
     {
-        if (ent.Comp.OwnerUserId != null)
+        if (ent.Comp.OwnerEntity != null)
             return;
 
-        ent.Comp.OwnerUserId = session.UserId;
+        ent.Comp.OwnerEntity = user;
         ent.Comp.OwnerName = Name(user);
 
         _popup.PopupEntity(Loc.GetString("biocode-installed"), ent.Owner, user, PopupType.Medium);
@@ -142,7 +145,7 @@ public sealed class BiocodeSystem : EntitySystem
 
     private void OnUnequipAttempt(Entity<BiocodeComponent> ent, ref BeingUnequippedAttemptEvent args)
     {
-        if (!ent.Comp.DetonateOnForeignWear || ent.Comp.OwnerUserId == null)
+        if (!ent.Comp.DetonateOnForeignWear || ent.Comp.OwnerEntity == null)
             return;
 
         // Чужому снять нельзя — скафандр держит его.
@@ -198,22 +201,26 @@ public sealed class BiocodeSystem : EntitySystem
     // --- Вспомогательное ---
 
     /// <summary>
-    /// Чужой ли это пользователь для предмета: биокод установлен и UserId сессии не совпадает
-    /// с владельцем. Сущности без сессии (NPC) считаются чужими.
+    /// Чужая ли это кукла для предмета: биокод установлен и это не то самое тело, которое его
+    /// привязало. Кто управляет телом — не важно: биокод по РП считывает ДНК тела.
     /// </summary>
     private bool IsForeign(BiocodeComponent comp, EntityUid user)
     {
-        if (comp.OwnerUserId == null)
+        if (comp.OwnerEntity == null)
             return false;
 
-        if (TryComp<ActorComponent>(user, out var actor))
-            return actor.PlayerSession.UserId != comp.OwnerUserId.Value;
-
-        return true;
+        return user != comp.OwnerEntity.Value;
     }
 
+    /// <summary>
+    /// Отказ чужаку: попап на экране + то же сообщение строкой в чат (если это игрок).
+    /// </summary>
     private void DenyPopup(Entity<BiocodeComponent> ent, EntityUid user)
     {
-        _popup.PopupEntity(Loc.GetString("biocode-locked"), ent.Owner, user, PopupType.MediumCaution);
+        var message = Loc.GetString("biocode-locked");
+        _popup.PopupEntity(message, ent.Owner, user, PopupType.MediumCaution);
+
+        if (TryComp<ActorComponent>(user, out var actor))
+            _chatManager.DispatchServerMessage(actor.PlayerSession, message);
     }
 }

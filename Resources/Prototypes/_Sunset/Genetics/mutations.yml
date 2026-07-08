@@ -1,10 +1,24 @@
-# Genetic mutations for the genetics system. Each lives in a unique structural-enzyme (SE) block and
-# expresses itself once that block reaches the tier threshold.
+# Genetic mutations for the genetics system. Each lives in a structural-enzyme (SE) block and
+# expresses itself once that block reaches the tier threshold. Which block holds which gene is
+# shuffled every round (Paradise SS13 style, see GeneticsSystem.EnsureGeneLayout) - that's why no
+# mutation declares a block here.
 #
 # 🌇Sunset🌇 - four of sunset-station's mutations were dropped rather than ported: GeneVoidLungs
 # (PressureImmunity/BreathingImmunity components), GeneXrayEyes (UltraVision), GeneHulk (Hulk, a whole
 # separate subsystem) and GeneDeafness (Deaf) all depend on components/systems that don't exist in
 # this fork. Everything else ports over using components this fork already has.
+#
+# 🌇Sunset🌇 - three mutations from Paradise Station's actual current gene pool
+# (code/game/dna/mutations/mutation_powers.dm) added on top of the above: GeneFireResistance (mirrors
+# Paradise's heat_resist, the counterpart to our existing cold-only GeneCryokinesis - needed a new
+# HeatOnly flag on GeneThermalComponent/GeneThermalSystem since only ColdOnly existed before),
+# GeneChameleonSkin (mirrors stealth/chameleon, simplified to a flat visibility reduction via the
+# existing StealthComponent rather than tile-matching camouflage) and GeneMindShield (mirrors
+# psychic_resist, reusing the existing MindShieldComponent for conversion/mind-control resistance).
+# Paradise's disability/nearsighted was considered but skipped: BlurryVisionComponent is driven by
+# BlindableComponent.EyeDamage recalculation and gets silently cleared by unrelated glasses-equip
+# logic if just granted directly, so it needs proper EyeDamage integration to work reliably - out of
+# scope for a plain component-grant mutation.
 
 # ---- Powers ----
 
@@ -12,7 +26,6 @@
   id: GeneNightEyes
   name: mutation-night-eyes-name
   description: mutation-night-eyes-desc
-  block: 12
   tier: Intermediate
   instability: 10
   components:
@@ -22,7 +35,6 @@
   id: GeneIronRetina
   name: mutation-iron-retina-name
   description: mutation-iron-retina-desc
-  block: 23
   tier: Minor
   instability: 5
   components:
@@ -32,7 +44,6 @@
   id: GeneSureFooted
   name: mutation-sure-footed-name
   description: mutation-sure-footed-desc
-  block: 15
   tier: Minor
   instability: 5
   components:
@@ -42,7 +53,6 @@
   id: GeneShockImmunity
   name: mutation-shock-immunity-name
   description: mutation-shock-immunity-desc
-  block: 18
   tier: Intermediate
   instability: 8
   components:
@@ -53,7 +63,6 @@
   id: GeneThermalResistance
   name: mutation-thermal-resistance-name
   description: mutation-thermal-resistance-desc
-  block: 27
   tier: Major
   instability: 12
   components:
@@ -63,7 +72,6 @@
   id: GeneGlow
   name: mutation-glow-name
   description: mutation-glow-desc
-  block: 21
   tier: Minor
   instability: 5
   components:
@@ -73,7 +81,6 @@
   id: GeneFleetFooted
   name: mutation-fleet-footed-name
   description: mutation-fleet-footed-desc
-  block: 9
   tier: Intermediate
   instability: 10
   components:
@@ -85,7 +92,6 @@
   id: GeneRegeneration
   name: mutation-regeneration-name
   description: mutation-regeneration-desc
-  block: 38
   tier: Major
   instability: 15
   components:
@@ -106,7 +112,6 @@
   id: GeneTelekinesis
   name: mutation-telekinesis-name
   description: mutation-telekinesis-desc
-  block: 6
   tier: Major
   instability: 20
   actions:
@@ -116,7 +121,6 @@
   id: GenePyrokinesis
   name: mutation-pyrokinesis-name
   description: mutation-pyrokinesis-desc
-  block: 24
   tier: Major
   instability: 20
   actions:
@@ -127,7 +131,6 @@
   id: GeneCryokinesis
   name: mutation-cryokinesis-name
   description: mutation-cryokinesis-desc
-  block: 33
   tier: Major
   instability: 15
   components:
@@ -138,7 +141,6 @@
   id: GeneGigantism
   name: mutation-gigantism-name
   description: mutation-gigantism-desc
-  block: 36
   tier: Intermediate
   # Giants are genetically sturdier: their bulk lowers overall instability.
   instability: -10
@@ -147,10 +149,39 @@
     scale: 1.5
 
 - type: mutation
+  id: GeneFireResistance
+  name: mutation-fire-resistance-name
+  description: mutation-fire-resistance-desc
+  tier: Major
+  instability: 12
+  components:
+  - type: GeneThermal
+    heatOnly: true
+
+- type: mutation
+  id: GeneChameleonSkin
+  name: mutation-chameleon-skin-name
+  description: mutation-chameleon-skin-desc
+  tier: Major
+  instability: 18
+  components:
+  - type: Stealth
+    minVisibility: -0.6
+    maxVisibility: 1
+
+- type: mutation
+  id: GeneMindShield
+  name: mutation-mind-shield-name
+  description: mutation-mind-shield-desc
+  tier: Intermediate
+  instability: 10
+  components:
+  - type: MindShield
+
+- type: mutation
   id: GeneDwarfism
   name: mutation-dwarfism-name
   description: mutation-dwarfism-desc
-  block: 39
   tier: Minor
   # Dwarfism strains the genome, adding instability.
   instability: 10
@@ -164,7 +195,6 @@
   id: GeneClumsiness
   name: mutation-clumsiness-name
   description: mutation-clumsiness-desc
-  block: 34
   disease: true
   instability: -8
   components:
@@ -174,7 +204,6 @@
   id: GeneMutism
   name: mutation-mutism-name
   description: mutation-mutism-desc
-  block: 41
   disease: true
   instability: -8
   components:
@@ -184,7 +213,6 @@
   id: GenePacifism
   name: mutation-pacifism-name
   description: mutation-pacifism-desc
-  block: 48
   disease: true
   instability: -10
   components:
@@ -194,7 +222,6 @@
   id: GeneBlindness
   name: mutation-blindness-name
   description: mutation-blindness-desc
-  block: 51
   disease: true
   instability: -12
   components:
@@ -204,7 +231,6 @@
   id: GeneRadioactive
   name: mutation-radioactive-name
   description: mutation-radioactive-desc
-  block: 30
   disease: true
   instability: -6
   components:

@@ -117,21 +117,23 @@ public sealed class DnaModifierConsoleBoundUserInterfaceState : BoundUserInterfa
     }
 }
 
-/// <summary>Precisely irradiate one subblock of one block by <see cref="Delta"/> (+1 or -1).</summary>
+/// <summary>
+///     Fire a targeted radiation pulse at one subblock of one block. The outcome is random
+///     (Paradise SS13 style): the beam usually hits the aimed nibble and sets it to a random value,
+///     but can drift onto a neighbouring subblock or block - see DnaModifierSystem.Radiate.
+/// </summary>
 [Serializable, NetSerializable]
 public sealed class DnaModifierRadiateMessage : BoundUserInterfaceMessage
 {
     public readonly GenomeCategory Category;
     public readonly int Block;
     public readonly int SubBlock;
-    public readonly int Delta;
 
-    public DnaModifierRadiateMessage(GenomeCategory category, int block, int subBlock, int delta)
+    public DnaModifierRadiateMessage(GenomeCategory category, int block, int subBlock)
     {
         Category = category;
         Block = block;
         SubBlock = subBlock;
-        Delta = delta;
     }
 }
 

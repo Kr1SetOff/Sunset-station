@@ -204,6 +204,10 @@ public sealed class DnaModifierSystem : EntitySystem
 
         _containerSystem.Insert(toInsert, component.BodyContainer);
 
+        // Humanoids already have a genome from spawn; non-humanoid test subjects (monkeys, kobolds, ...)
+        // get theirs generated here, the first time they're actually scanned.
+        _genetics.EnsureGenome(toInsert);
+
         UpdateAppearance(uid, component);
 
         if (component.ConnectedConsole is { } console && TryComp<DnaModifierConsoleComponent>(console, out var consoleComp))
@@ -264,8 +268,14 @@ public sealed class DnaModifierSystem : EntitySystem
         }
     }
 
-    /// <summary>Precisely irradiate a single subblock of the occupant's genome.</summary>
-    public void Radiate(EntityUid uid, GenomeCategory category, int block, int subBlock, int delta, DnaModifierComponent? component = null)
+    /// <summary>
+    ///     Fire a targeted radiation pulse at one subblock of the occupant's genome, Paradise SS13
+    ///     style: no precise editing. The beam usually hits the aimed nibble but can drift onto a
+    ///     neighbouring subblock or block, and the resulting hex digit is random - the geneticist
+    ///     keeps pulsing (paying radiation/toxin damage to the subject each time) until the digit
+    ///     lands high enough for the gene tier they're after (>= D for major powers).
+    /// </summary>
+    public void Radiate(EntityUid uid, GenomeCategory category, int block, int subBlock, DnaModifierComponent? component = null)
     {
         if (!Resolve(uid, ref component) ||
             component.BodyContainer.ContainedEntity is not { } occupant ||
@@ -276,9 +286,16 @@ public sealed class DnaModifierSystem : EntitySystem
         if (block < 0 || block >= blocks.Count)
             return;
 
-        var current = SharedGeneticsSystem.GetSubBlock(blocks[block], subBlock);
-        var updated = Math.Clamp(current + delta, 0, 0xF);
-        blocks[block] = SharedGeneticsSystem.SetSubBlock(blocks[block], subBlock, updated);
+        subBlock = Math.Clamp(subBlock, 0, 2);
+
+        // Beam inaccuracy: sometimes the pulse lands next to where it was aimed.
+        var roll = _random.NextFloat();
+        if (roll < component.DriftSubBlockChance)
+            subBlock = Math.Clamp(subBlock + (_random.Prob(0.5f) ? 1 : -1), 0, 2);
+        else if (roll < component.DriftSubBlockChance + component.DriftBlockChance)
+            block = Math.Clamp(block + (_random.Prob(0.5f) ? 1 : -1), 0, blocks.Count - 1);
+
+        blocks[block] = SharedGeneticsSystem.SetSubBlock(blocks[block], subBlock, _random.Next(0x10));
 
         FlipExtraSubblock(blocks, component);
         Hurt(occupant, component);

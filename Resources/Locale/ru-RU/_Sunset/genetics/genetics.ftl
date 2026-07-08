@@ -1,4 +1,19 @@
+guide-entry-sunset-genetics = Генетика
+
+job-description-geneticist = Изучайте геном экипажа: облучайте подопытных в ДНК-модификаторе, открывайте мутации, чистите SE от болезней и раздавайте способности инжекторами.
+loadout-group-geneticist-jumpsuit = Комбинезон генетика
+loadout-group-geneticist-backpack = Рюкзак генетика
+loadout-group-geneticist-outerclothing = Верхняя одежда генетика
+loadout-group-geneticist-id = КПК генетика
+
 dna-modifier-console-title = Консоль ДНК-модификатора
+
+dna-modifier-console-tab-overview = Обзор
+dna-modifier-console-tab-identifiers = Идентификаторы
+dna-modifier-console-tab-structural = Структура
+dna-modifier-console-tab-discovered = Мутации
+
+dna-modifier-console-header-active-mutations = Активные мутации
 
 dna-modifier-console-occupant = Субъект: {$name}
 dna-modifier-console-no-occupant = Субъект не помещён.
@@ -9,12 +24,15 @@ dna-modifier-console-machine-far = ДНК-модификатор слишком 
 dna-modifier-console-no-occupant-status = Поместите субъекта в ДНК-модификатор.
 
 dna-modifier-console-instability = Генетическая нестабильность: {$value}
+dna-modifier-console-header-instability = Генетическая нестабильность
 dna-modifier-console-no-mutations = Нет активных мутаций.
 
 dna-modifier-console-header-discovered = Изученные мутации
 dna-modifier-console-no-discovered = Мутации ещё не изучены.
 dna-modifier-console-print-activator = Печать активатора
 dna-modifier-console-print-cooldown = Принтер перезаряжается (осталось {$seconds} с).
+
+dna-modifier-console-irradiate = Облучить
 
 dna-modifier-console-subblock = Целевой подблок:
 dna-modifier-console-subblock-high = Старший
@@ -114,3 +132,12 @@ mutation-gigantism-desc = Сверхактивный ген роста, разд
 
 mutation-dwarfism-name = Карликовость
 mutation-dwarfism-desc = Задержанный ген роста, уменьшающий носителя до крошечных размеров.
+
+mutation-fire-resistance-name = Огнестойкость
+mutation-fire-resistance-desc = Огрубевшая плоть не боится палящего жара и пламени, но холод всё ещё жалит.
+
+mutation-chameleon-skin-name = Кожа хамелеона
+mutation-chameleon-skin-desc = Кожа носителя подстраивается под окружение, из-за чего его труднее заметить.
+
+mutation-mind-shield-name = Психическая устойчивость
+mutation-mind-shield-desc = Укреплённый разум, устойчивый к вербовке, принуждению и прочему психическому вторжению.

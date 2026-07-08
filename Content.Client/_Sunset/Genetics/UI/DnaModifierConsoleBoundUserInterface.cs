@@ -24,8 +24,8 @@ public sealed class DnaModifierConsoleBoundUserInterface : BoundUserInterface
 
         _window = this.CreateWindow<DnaModifierConsoleWindow>();
 
-        _window.OnRadiate += (category, block, subBlock, delta) =>
-            SendMessage(new DnaModifierRadiateMessage(category, block, subBlock, delta));
+        _window.OnRadiate += (category, block, subBlock) =>
+            SendMessage(new DnaModifierRadiateMessage(category, block, subBlock));
         _window.OnPulse += category => SendMessage(new DnaModifierPulseMessage(category));
         _window.OnEject += () => SendMessage(new DnaModifierEjectMessage());
         _window.OnBuffer += (action, slot) => SendMessage(new DnaModifierBufferMessage(action, slot));

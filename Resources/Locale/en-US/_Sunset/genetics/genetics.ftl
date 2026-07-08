@@ -1,4 +1,19 @@
+guide-entry-sunset-genetics = Genetics
+
+job-description-geneticist = Study the crew's genome: irradiate test subjects in the DNA modifier, discover mutations, clean diseases out of the SE and hand out powers with injectors.
+loadout-group-geneticist-jumpsuit = Geneticist jumpsuit
+loadout-group-geneticist-backpack = Geneticist backpack
+loadout-group-geneticist-outerclothing = Geneticist outer clothing
+loadout-group-geneticist-id = Geneticist PDA
+
 dna-modifier-console-title = DNA Modifier Console
+
+dna-modifier-console-tab-overview = Overview
+dna-modifier-console-tab-identifiers = Identifiers
+dna-modifier-console-tab-structural = Structural
+dna-modifier-console-tab-discovered = Mutations
+
+dna-modifier-console-header-active-mutations = Active mutations
 
 dna-modifier-console-occupant = Subject: {$name}
 dna-modifier-console-no-occupant = No subject inserted.
@@ -9,12 +24,15 @@ dna-modifier-console-machine-far = The DNA modifier is too far away.
 dna-modifier-console-no-occupant-status = Insert a subject into the DNA modifier.
 
 dna-modifier-console-instability = Genetic instability: {$value}
+dna-modifier-console-header-instability = Genetic instability
 dna-modifier-console-no-mutations = No active mutations.
 
 dna-modifier-console-header-discovered = Researched mutations
 dna-modifier-console-no-discovered = No mutations researched yet.
 dna-modifier-console-print-activator = Print activator
 dna-modifier-console-print-cooldown = The printer is recharging ({$seconds}s left).
+
+dna-modifier-console-irradiate = Irradiate
 
 dna-modifier-console-subblock = Target subblock:
 dna-modifier-console-subblock-high = High
@@ -114,3 +132,12 @@ mutation-gigantism-desc = An overactive growth gene that swells the carrier to t
 
 mutation-dwarfism-name = Dwarfism
 mutation-dwarfism-desc = A stunted growth gene that shrinks the carrier to a diminutive size.
+
+mutation-fire-resistance-name = Fire Resistance
+mutation-fire-resistance-desc = Toughened flesh shrugs off searing heat and flame, though the cold still bites.
+
+mutation-chameleon-skin-name = Chameleon Skin
+mutation-chameleon-skin-desc = The carrier's skin shifts to match their surroundings, making them harder to spot.
+
+mutation-mind-shield-name = Psychic Resistance
+mutation-mind-shield-desc = A fortified mind that resists conversion, coercion, and other psychic intrusion.

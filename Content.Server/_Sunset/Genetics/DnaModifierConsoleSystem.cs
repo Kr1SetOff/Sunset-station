@@ -114,7 +114,7 @@ public sealed class DnaModifierConsoleSystem : EntitySystem
         if (!_powerReceiver.IsPowered(uid) || !component.MachineInRange || component.Machine is not { } machine)
             return;
 
-        _machine.Radiate(machine, args.Category, args.Block, args.SubBlock, args.Delta);
+        _machine.Radiate(machine, args.Category, args.Block, args.SubBlock);
     }
 
     private void OnPulse(EntityUid uid, DnaModifierConsoleComponent component, DnaModifierPulseMessage args)

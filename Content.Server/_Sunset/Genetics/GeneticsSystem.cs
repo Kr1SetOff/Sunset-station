@@ -5,6 +5,7 @@
 using System.Linq;
 using Content.Server.Humanoid;
 using Content.Shared.Actions;
+using Content.Shared.GameTicking;
 using Content.Shared._Sunset.Genetics;
 using Content.Shared._Sunset.Genetics.Components;
 using Content.Shared.Humanoid;
@@ -39,12 +40,56 @@ public sealed partial class GeneticsSystem : SharedGeneticsSystem
         "Hart", "Kessler", "Mires", "Voss", "Quill", "Renner", "Stark", "Wren",
     };
 
+    /// <summary>
+    ///     Paradise SS13-style per-round gene layout: which SE block holds which mutation is shuffled
+    ///     anew every round, so geneticists have to rediscover the positions each shift instead of
+    ///     memorizing a fixed table. Built lazily on first use, wiped at round end.
+    /// </summary>
+    private readonly Dictionary<string, int> _geneLayout = new();
+
     public override void Initialize()
     {
         base.Initialize();
 
         SubscribeLocalEvent<HumanoidAppearanceComponent, MapInitEvent>(OnHumanoidMapInit);
+        SubscribeLocalEvent<RoundRestartCleanupEvent>(OnRoundRestart);
         InitializeInstability();
+    }
+
+    private void OnRoundRestart(RoundRestartCleanupEvent ev)
+    {
+        _geneLayout.Clear();
+    }
+
+    /// <summary>
+    ///     The SE block this mutation occupies in the current round's gene layout, or -1 when it
+    ///     couldn't be placed (more mutations than usable blocks).
+    /// </summary>
+    public int GetGeneBlock(MutationPrototype proto)
+    {
+        EnsureGeneLayout();
+        return _geneLayout.GetValueOrDefault(proto.ID, -1);
+    }
+
+    private void EnsureGeneLayout()
+    {
+        if (_geneLayout.Count > 0)
+            return;
+
+        // Usable blocks are 1..54: block 0 is unused by SS13 convention and the last block is the
+        // species marker. Everything not assigned a gene is junk DNA this round.
+        var blocks = new List<int>();
+        for (var i = 1; i < GenomeComponent.BlockSpecies; i++)
+            blocks.Add(i);
+        _random.Shuffle(blocks);
+
+        var next = 0;
+        foreach (var proto in _proto.EnumeratePrototypes<MutationPrototype>().OrderBy(p => p.ID))
+        {
+            if (next >= blocks.Count)
+                break;
+            _geneLayout[proto.ID] = blocks[next++];
+        }
     }
 
     private void OnHumanoidMapInit(Entity<HumanoidAppearanceComponent> ent, ref MapInitEvent args)
@@ -54,17 +99,43 @@ public sealed partial class GeneticsSystem : SharedGeneticsSystem
             GenerateGenome(ent, genome, ent.Comp);
     }
 
-    /// <summary>Creates a fresh, randomized genome that encodes the entity's current appearance.</summary>
-    public void GenerateGenome(EntityUid uid, GenomeComponent genome, HumanoidAppearanceComponent humanoid)
+    /// <summary>
+    /// Ensures <paramref name="uid"/> has a generated genome, creating one on demand if needed. Humanoids
+    /// normally already have one from <see cref="OnHumanoidMapInit"/>; this covers non-humanoid test
+    /// subjects (monkeys, kobolds, ...) which have no such hook (MapInitEvent on BodyComponent is already
+    /// claimed by SharedBodySystem, so those get their genome lazily the first time they're actually
+    /// used - e.g. inserted into a DNA modifier - instead of eagerly at spawn).
+    /// </summary>
+    public GenomeComponent EnsureGenome(EntityUid uid)
+    {
+        var genome = EnsureComp<GenomeComponent>(uid);
+        if (!genome.Generated)
+        {
+            TryComp<HumanoidAppearanceComponent>(uid, out var humanoid);
+            GenerateGenome(uid, genome, humanoid);
+        }
+
+        return genome;
+    }
+
+    /// <summary>
+    /// Creates a fresh, randomized genome. Encodes the entity's current appearance into the UI blocks
+    /// when it's a humanoid; non-humanoid test subjects (monkeys, kobolds, ...) pass humanoid: null and
+    /// get randomized-but-unused UI blocks instead, since they have no appearance to encode.
+    /// </summary>
+    public void GenerateGenome(EntityUid uid, GenomeComponent genome, HumanoidAppearanceComponent? humanoid)
     {
         genome.Ui = NewBlocks(GenomeComponent.UiBlockCount);
         genome.Ue = NewBlocks(GenomeComponent.UeBlockCount);
         genome.Se = NewBlocks(GenomeComponent.SeBlockCount);
 
-        // Encode current appearance into the UI blocks so editing them has a visible effect.
-        EncodeColor(genome.Ui, GenomeComponent.BlockSkinR, humanoid.SkinColor);
-        EncodeColor(genome.Ui, GenomeComponent.BlockEyeR, humanoid.EyeColor);
-        genome.Ui[GenomeComponent.BlockSex] = humanoid.Sex == Sex.Female ? 0x100 : 0xC00;
+        if (humanoid != null)
+        {
+            // Encode current appearance into the UI blocks so editing them has a visible effect.
+            EncodeColor(genome.Ui, GenomeComponent.BlockSkinR, humanoid.SkinColor);
+            EncodeColor(genome.Ui, GenomeComponent.BlockEyeR, humanoid.EyeColor);
+            genome.Ui[GenomeComponent.BlockSex] = humanoid.Sex == Sex.Female ? 0x100 : 0xC00;
+        }
 
         // Randomize the identity enzymes; remember the hash so we don't rename at spawn.
         for (var i = 0; i < genome.Ue.Count; i++)
@@ -76,7 +147,8 @@ public sealed partial class GeneticsSystem : SharedGeneticsSystem
         for (var i = 1; i < genome.Se.Count; i++)
             genome.Se[i] = _random.Next(0, (int) MutationTier.Minor);
 
-        genome.Se[GenomeComponent.BlockSpecies] = 0x320; // humanoid marker (< 0x320 boundary in SS13)
+        // Species marker: 0x320 for humanoids, 0x000 for animal test subjects (SS13 convention).
+        genome.Se[GenomeComponent.BlockSpecies] = humanoid != null ? 0x320 : 0x000;
 
         genome.Generated = true;
         Dirty(uid, genome);
@@ -129,10 +201,11 @@ public sealed partial class GeneticsSystem : SharedGeneticsSystem
     {
         foreach (var proto in _proto.EnumeratePrototypes<MutationPrototype>())
         {
-            if (proto.Block <= 0 || proto.Block >= genome.Se.Count)
+            var block = GetGeneBlock(proto);
+            if (block <= 0 || block >= genome.Se.Count)
                 continue;
 
-            var shouldBeActive = IsMutationActive(genome.Se[proto.Block], proto.Tier, proto.Disease);
+            var shouldBeActive = IsMutationActive(genome.Se[block], proto.Tier, proto.Disease);
             var isActive = genome.ActiveMutations.Contains(proto.ID);
 
             if (shouldBeActive && !isActive)

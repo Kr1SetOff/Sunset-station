@@ -32,6 +32,14 @@ public sealed partial class DnaModifierComponent : Component
     [DataField]
     public float ExtraMutationChance = 0.25f;
 
+    /// <summary>Chance for a targeted radiation pulse to drift onto a neighbouring subblock instead.</summary>
+    [DataField]
+    public float DriftSubBlockChance = 0.15f;
+
+    /// <summary>Chance for a targeted radiation pulse to drift onto a neighbouring block instead.</summary>
+    [DataField]
+    public float DriftBlockChance = 0.1f;
+
     /// <summary>Toxin damage dealt to the occupant per irradiation.</summary>
     [DataField]
     public float ToxinPerPulse = 2f;

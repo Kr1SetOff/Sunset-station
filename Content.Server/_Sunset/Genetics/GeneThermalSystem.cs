@@ -35,10 +35,12 @@ public sealed class GeneThermalSystem : EntitySystem
         ent.Comp.OldColdThreshold = temp.ColdDamageThreshold;
         ent.Comp.Stored = true;
 
-        // Cryogenesis (ColdOnly) only widens the cold threshold; full thermal regulation widens both.
+        // Cryogenesis (ColdOnly) only widens the cold threshold, fire resistance (HeatOnly) only the heat
+        // one; full thermal regulation (neither flag set) widens both.
         if (!ent.Comp.ColdOnly)
             temp.HeatDamageThreshold = ImmuneHeatThreshold;
-        temp.ColdDamageThreshold = ImmuneColdThreshold;
+        if (!ent.Comp.HeatOnly)
+            temp.ColdDamageThreshold = ImmuneColdThreshold;
     }
 
     private void OnShutdown(Entity<GeneThermalComponent> ent, ref ComponentShutdown args)
@@ -48,6 +50,7 @@ public sealed class GeneThermalSystem : EntitySystem
 
         if (!ent.Comp.ColdOnly)
             temp.HeatDamageThreshold = ent.Comp.OldHeatThreshold;
-        temp.ColdDamageThreshold = ent.Comp.OldColdThreshold;
+        if (!ent.Comp.HeatOnly)
+            temp.ColdDamageThreshold = ent.Comp.OldColdThreshold;
     }
 }

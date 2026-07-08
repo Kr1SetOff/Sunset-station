@@ -24,6 +24,8 @@ public enum MutationTier
 
 /// <summary>
 ///     Defines a single genetic mutation (power or disease) that lives in a structural-enzyme block.
+///     Which block it occupies is shuffled every round (Paradise SS13 style - see
+///     GeneticsSystem.EnsureGeneLayout), so geneticists rediscover positions each shift.
 ///     When the block value reaches the activation threshold the mutation expresses itself by adding
 ///     <see cref="Components"/> and granting <see cref="Actions"/> to the carrier.
 /// </summary>
@@ -40,13 +42,6 @@ public sealed partial class MutationPrototype : IPrototype
     /// <summary>Localized description shown on the DNA console.</summary>
     [DataField]
     public LocId Description = string.Empty;
-
-    /// <summary>
-    ///     Index of the structural-enzyme (SE) block this gene occupies (1..54).
-    ///     Each mutation should use a unique block.
-    /// </summary>
-    [DataField(required: true)]
-    public int Block;
 
     /// <summary>Activation threshold for this gene. Diseases ignore this and always use <see cref="MutationTier.Minor"/>.</summary>
     [DataField]

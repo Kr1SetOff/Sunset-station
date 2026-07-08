@@ -4,35 +4,137 @@ SPDX-FileCopyrightText: 2026 sunset-station contributors
 SPDX-License-Identifier: AGPL-3.0-or-later
 -->
 <DefaultWindow xmlns="https://spacestation14.io"
+               xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
                Title="{Loc 'dna-modifier-console-title'}"
-               SetSize="520 640"
-               MinSize="460 480">
-    <BoxContainer Orientation="Vertical" VerticalExpand="True" HorizontalExpand="True" Margin="6 6 6 6">
-        <BoxContainer Orientation="Horizontal">
-            <Label Name="OccupantLabel" HorizontalExpand="True" Text="{Loc 'dna-modifier-console-no-occupant'}" />
-            <Button Name="EjectButton" Text="{Loc 'dna-modifier-console-eject'}" />
+               SetSize="680 640"
+               MinSize="600 500">
+    <!-- Medical console theme: light blue backdrop, white cards, deep medical-blue header. -->
+    <PanelContainer>
+        <PanelContainer.PanelOverride>
+            <gfx:StyleBoxFlat BackgroundColor="#D8E9F3FF" />
+        </PanelContainer.PanelOverride>
+        <BoxContainer Orientation="Vertical">
+            <!-- Always-visible patient strip -->
+            <PanelContainer Margin="6 6 6 0">
+                <PanelContainer.PanelOverride>
+                    <gfx:StyleBoxFlat BackgroundColor="#2E86ABFF" BorderColor="#1D5F7AFF" BorderThickness="0 0 0 2" />
+                </PanelContainer.PanelOverride>
+                <BoxContainer Orientation="Horizontal" Margin="10 8 10 8">
+                    <BoxContainer Orientation="Vertical" HorizontalExpand="True" VerticalAlignment="Center">
+                        <Label Name="OccupantLabel" FontColorOverride="#FFFFFF"
+                               Text="{Loc 'dna-modifier-console-no-occupant'}" />
+                        <Label Name="StatusLabel" FontColorOverride="#FFE0DC" Text="" />
+                    </BoxContainer>
+                    <Button Name="EjectButton" Text="{Loc 'dna-modifier-console-eject'}"
+                            VerticalAlignment="Center" />
+                </BoxContainer>
+            </PanelContainer>
+
+            <TabContainer Name="Tabs" VerticalExpand="True" HorizontalExpand="True" Margin="6 4 6 6">
+                <!-- Overview: instability, active mutations, buffers, edit precision -->
+                <PanelContainer>
+                    <PanelContainer.PanelOverride>
+                        <gfx:StyleBoxFlat BackgroundColor="#F4FAFDFF" BorderColor="#A8CEE2FF" BorderThickness="1" />
+                    </PanelContainer.PanelOverride>
+                    <ScrollContainer HScrollEnabled="False" VerticalExpand="True" HorizontalExpand="True">
+                        <BoxContainer Orientation="Vertical" HorizontalExpand="True" Margin="12 10 12 10">
+                            <Label Text="{Loc 'dna-modifier-console-header-instability'}" FontColorOverride="#1E7FA6" />
+                            <ProgressBar Name="InstabilityBar" MinValue="0" MaxValue="100" MinHeight="16"
+                                         Margin="0 4 0 2">
+                                <ProgressBar.BackgroundStyleBoxOverride>
+                                    <gfx:StyleBoxFlat BackgroundColor="#C7DDEBFF" />
+                                </ProgressBar.BackgroundStyleBoxOverride>
+                                <ProgressBar.ForegroundStyleBoxOverride>
+                                    <gfx:StyleBoxFlat BackgroundColor="#2E86ABFF" />
+                                </ProgressBar.ForegroundStyleBoxOverride>
+                            </ProgressBar>
+                            <Label Name="InstabilityLabel" FontColorOverride="#173B52" Text="" />
+
+                            <Control MinSize="0 10" />
+                            <Label Text="{Loc 'dna-modifier-console-header-active-mutations'}"
+                                   FontColorOverride="#1E7FA6" />
+                            <PanelContainer Margin="0 2 0 0">
+                                <PanelContainer.PanelOverride>
+                                    <gfx:StyleBoxFlat BackgroundColor="#FFFFFFFF" BorderColor="#A8CEE2FF" BorderThickness="1" />
+                                </PanelContainer.PanelOverride>
+                                <RichTextLabel Name="MutationsLabel" HorizontalExpand="True" Margin="8 6 8 6" />
+                            </PanelContainer>
+
+                            <Control MinSize="0 12" />
+                            <Label Text="{Loc 'dna-modifier-console-header-buffers'}" FontColorOverride="#1E7FA6" />
+                            <BoxContainer Name="BufferRows" Orientation="Vertical" HorizontalExpand="True"
+                                          Margin="0 2 0 0" />
+                        </BoxContainer>
+                    </ScrollContainer>
+                </PanelContainer>
+
+                <!-- Identifiers (UI): appearance blocks -->
+                <PanelContainer>
+                    <PanelContainer.PanelOverride>
+                        <gfx:StyleBoxFlat BackgroundColor="#F4FAFDFF" BorderColor="#A8CEE2FF" BorderThickness="1" />
+                    </PanelContainer.PanelOverride>
+                    <BoxContainer Orientation="Vertical" HorizontalExpand="True" VerticalExpand="True"
+                                  Margin="12 10 12 10">
+                        <BoxContainer Orientation="Horizontal">
+                            <Label Text="{Loc 'dna-modifier-console-header-identifiers'}"
+                                   FontColorOverride="#1E7FA6" HorizontalExpand="True" />
+                            <Button Name="PulseUiButton" Text="{Loc 'dna-modifier-console-pulse-ui'}" />
+                        </BoxContainer>
+                        <BoxContainer Orientation="Horizontal" Margin="0 4 0 0">
+                            <Label Text="{Loc 'dna-modifier-console-subblock'}" FontColorOverride="#173B52"
+                                   VerticalAlignment="Center" Margin="0 0 6 0" />
+                            <Button Name="UiHighButton" Text="{Loc 'dna-modifier-console-subblock-high'}" />
+                            <Button Name="UiMidButton" Text="{Loc 'dna-modifier-console-subblock-mid'}" />
+                            <Button Name="UiLowButton" Text="{Loc 'dna-modifier-console-subblock-low'}" />
+                        </BoxContainer>
+                        <Control MinSize="0 4" />
+                        <ScrollContainer VerticalExpand="True" HorizontalExpand="True" HScrollEnabled="True">
+                            <BoxContainer Name="UiBlockRows" Orientation="Vertical" HorizontalExpand="True" />
+                        </ScrollContainer>
+                    </BoxContainer>
+                </PanelContainer>
+
+                <!-- Structural (SE): mutation blocks -->
+                <PanelContainer>
+                    <PanelContainer.PanelOverride>
+                        <gfx:StyleBoxFlat BackgroundColor="#F4FAFDFF" BorderColor="#A8CEE2FF" BorderThickness="1" />
+                    </PanelContainer.PanelOverride>
+                    <BoxContainer Orientation="Vertical" HorizontalExpand="True" VerticalExpand="True"
+                                  Margin="12 10 12 10">
+                        <BoxContainer Orientation="Horizontal">
+                            <Label Text="{Loc 'dna-modifier-console-header-structural'}"
+                                   FontColorOverride="#1E7FA6" HorizontalExpand="True" />
+                            <Button Name="PulseSeButton" Text="{Loc 'dna-modifier-console-pulse-se'}" />
+                        </BoxContainer>
+                        <BoxContainer Orientation="Horizontal" Margin="0 4 0 0">
+                            <Label Text="{Loc 'dna-modifier-console-subblock'}" FontColorOverride="#173B52"
+                                   VerticalAlignment="Center" Margin="0 0 6 0" />
+                            <Button Name="SeHighButton" Text="{Loc 'dna-modifier-console-subblock-high'}" />
+                            <Button Name="SeMidButton" Text="{Loc 'dna-modifier-console-subblock-mid'}" />
+                            <Button Name="SeLowButton" Text="{Loc 'dna-modifier-console-subblock-low'}" />
+                        </BoxContainer>
+                        <Control MinSize="0 4" />
+                        <ScrollContainer VerticalExpand="True" HorizontalExpand="True" HScrollEnabled="True">
+                            <BoxContainer Name="SeBlockRows" Orientation="Vertical" HorizontalExpand="True" />
+                        </ScrollContainer>
+                    </BoxContainer>
+                </PanelContainer>
+
+                <!-- Researched mutations: activator printing -->
+                <PanelContainer>
+                    <PanelContainer.PanelOverride>
+                        <gfx:StyleBoxFlat BackgroundColor="#F4FAFDFF" BorderColor="#A8CEE2FF" BorderThickness="1" />
+                    </PanelContainer.PanelOverride>
+                    <BoxContainer Orientation="Vertical" HorizontalExpand="True" VerticalExpand="True"
+                                  Margin="12 10 12 10">
+                        <Label Text="{Loc 'dna-modifier-console-header-discovered'}" FontColorOverride="#1E7FA6" />
+                        <Control MinSize="0 4" />
+                        <ScrollContainer VerticalExpand="True" HorizontalExpand="True">
+                            <BoxContainer Name="DiscoveredContainer" Orientation="Vertical" HorizontalExpand="True" />
+                        </ScrollContainer>
+                    </BoxContainer>
+                </PanelContainer>
+            </TabContainer>
         </BoxContainer>
-        <Label Name="StatusLabel" FontColorOverride="#cf4040" Text="" />
-        <Label Name="InstabilityLabel" Text="" />
-        <RichTextLabel Name="MutationsLabel" HorizontalExpand="True" />
-        <Control MinSize="0 6" />
-        <Label Text="{Loc 'dna-modifier-console-header-discovered'}" StyleClasses="LabelKeyText" />
-        <BoxContainer Name="DiscoveredContainer" Orientation="Vertical" HorizontalExpand="True" />
-        <Control MinSize="0 6" />
-        <BoxContainer Orientation="Horizontal">
-            <Label Text="{Loc 'dna-modifier-console-subblock'}" />
-            <Button Name="HighButton" Text="{Loc 'dna-modifier-console-subblock-high'}" />
-            <Button Name="MidButton" Text="{Loc 'dna-modifier-console-subblock-mid'}" />
-            <Button Name="LowButton" Text="{Loc 'dna-modifier-console-subblock-low'}" />
-        </BoxContainer>
-        <BoxContainer Orientation="Horizontal">
-            <Button Name="PulseUiButton" Text="{Loc 'dna-modifier-console-pulse-ui'}" />
-            <Control MinSize="6 0" />
-            <Button Name="PulseSeButton" Text="{Loc 'dna-modifier-console-pulse-se'}" />
-        </BoxContainer>
-        <Control MinSize="0 6" />
-        <ScrollContainer VerticalExpand="True" HorizontalExpand="True" HScrollEnabled="True">
-            <BoxContainer Name="BlockRows" Orientation="Vertical" HorizontalExpand="True" />
-        </ScrollContainer>
-    </BoxContainer>
+    </PanelContainer>
 </DefaultWindow>
