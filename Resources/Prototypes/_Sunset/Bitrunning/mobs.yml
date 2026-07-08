@@ -1,0 +1,251 @@
+# 🌇Sunset🌇 - real Orion bitrunning domain mobs, ported faithfully instead of generic
+# substitutes. Every mob below matches its Orion counterpart's gear/faction/AI 1:1 (see
+# items_deathsquad_pirate.yml for the handful of Goobstation items these needed that this fork
+# hadn't ported yet). Assistants use this fork's existing Pirate faction id in place of Orion's
+# custom PirateFaction (never actually defined with hostile relations upstream; this one already
+# is, and is used for exactly this purpose elsewhere in this fork's salvage content).
+
+# ---- Assistants: grey civilian passengers turned hostile, gas mask + improvised melee weapon ----
+
+- type: entity
+  parent: MobCivilian
+  id: MobAssistantBat
+  name: aggressive assistant
+  description: Looks like they are not in the mood to talk.
+  components:
+  - type: Loadout
+    prototypes: [ AssistantBatGear ]
+  - type: NpcFactionMember
+    factions:
+    - Syndicate
+  - type: HTN
+    rootTask:
+      task: SimpleHumanoidHostileCompound
+
+- type: entity
+  parent: MobAssistantBat
+  id: MobAssistantAxe
+  components:
+  - type: Loadout
+    prototypes: [ AssistantAxeGear ]
+
+- type: entity
+  parent: MobAssistantBat
+  id: MobAssistantToolbox
+  components:
+  - type: Loadout
+    prototypes: [ AssistantToolboxGear ]
+
+- type: entity
+  parent: MobAssistantBat
+  id: MobAssistantSpear
+  components:
+  - type: Loadout
+    prototypes: [ AssistantSpearGear ]
+
+- type: entity
+  parent: MobAssistantBat
+  id: MobAssistantBatBitrunning
+  suffix: Bitrunning
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BitrunningDomainEnemyObjective
+
+- type: entity
+  parent: MobAssistantAxe
+  id: MobAssistantAxeBitrunning
+  suffix: Bitrunning
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BitrunningDomainEnemyObjective
+
+- type: entity
+  parent: MobAssistantToolbox
+  id: MobAssistantToolboxBitrunning
+  suffix: Bitrunning
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BitrunningDomainEnemyObjective
+
+- type: entity
+  parent: MobAssistantSpear
+  id: MobAssistantSpearBitrunning
+  suffix: Bitrunning
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BitrunningDomainEnemyObjective
+
+# ---- Pirates: EVA/cutlass/flintlock raiders ----
+
+- type: entity
+  parent: BaseMobHuman
+  id: MobPirateEvaCutlass
+  name: pirate
+  suffix: AI, EVA, EnergyCutlass
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: NpcFactionMember
+    factions:
+    - Pirate
+  - type: Loadout
+    prototypes:
+    - PirateEvaCutlassGear
+  - type: HTN
+    rootTask:
+      task: SimpleHumanoidHostileCompound
+
+- type: entity
+  parent: BaseMobHuman
+  id: MobPirateEvaLaserCarbine
+  name: pirate
+  suffix: AI, EVA, Laser Carbine
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: NpcFactionMember
+    factions:
+    - Pirate
+  - type: Loadout
+    prototypes:
+    - PirateEvaLaserCarbineGear
+  - type: HTN
+    rootTask:
+      task: SimpleRangedHostileCompound
+
+- type: entity
+  parent: BaseMobHuman
+  id: MobPirateCutlass
+  name: pirate
+  suffix: AI, EnergyCutlass
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: NpcFactionMember
+    factions:
+    - Pirate
+  - type: Loadout
+    prototypes:
+    - PirateCutlassGear
+  - type: HTN
+    rootTask:
+      task: SimpleHumanoidHostileCompound
+
+- type: entity
+  parent: BaseMobHuman
+  id: MobPirateFlintlock
+  name: pirate
+  suffix: AI, WeaponPistolFlintlock
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: NpcFactionMember
+    factions:
+    - Pirate
+  - type: Loadout
+    prototypes:
+    - PirateFlintlockGear
+  - type: HTN
+    rootTask:
+      task: SimpleRangedHostileCompound
+
+- type: entity
+  parent: MobPirateEvaCutlass
+  id: MobPirateEvaCutlassBitrunning
+  suffix: Bitrunning
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BitrunningDomainEnemyObjective
+
+- type: entity
+  parent: MobPirateEvaLaserCarbine
+  id: MobPirateEvaLaserCarbineBitrunning
+  suffix: Bitrunning
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BitrunningDomainEnemyObjective
+
+- type: entity
+  parent: MobPirateCutlass
+  id: MobPirateCutlassBitrunning
+  suffix: Bitrunning
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BitrunningDomainEnemyObjective
+
+- type: entity
+  parent: MobPirateFlintlock
+  id: MobPirateFlintlockBitrunning
+  suffix: Bitrunning
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BitrunningDomainEnemyObjective
+
+# ---- Death Squad: elite operatives with a phoron sabre or pulse rifle ----
+
+- type: entity
+  parent: BaseMobHuman
+  id: BaseMobDeathSquad
+  name: Death squad operative
+  suffix: AI
+  description: Elite special operations operative.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Loadout
+    prototypes: [ DeathSquadBaseGear ]
+  - type: BitrunningDomainEnemyObjective
+  - type: NpcFactionMember
+    factions:
+    - Syndicate
+  - type: HTN
+    rootTask:
+      task: SimpleHumanoidHostileCompound
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      190: Critical
+      200: Dead
+
+- type: entity
+  parent: BaseMobDeathSquad
+  id: MobDeathSquadPhoronSabreBitrunning
+  suffix: Bitrunning, Energy Sword
+  components:
+  - type: InnateTool
+    tools:
+    - id: PhoronSabreOn
+
+- type: entity
+  parent: BaseMobDeathSquad
+  id: MobDeathSquadPulseRifleBitrunning
+  suffix: Bitrunning, Pulse Rifle
+  components:
+  - type: InnateTool
+    tools:
+    - id: WeaponPulseRifle
+
+# ---- Placeholder: used only where Orion's real archetype needs a whole subsystem this fork
+# doesn't have yet (Lavaland Hierophant boss) or is a ghost-role antagonist with no base prototype
+# here at all (ExperimentalSoldier/Nukeops/SyndicateSoldier) - NOT a stand-in for assistants or
+# pirates, those are the real mobs above. ----
+
+- type: entity
+  parent: MobSyndicateFootsoldier
+  id: MobSyndicateFootsoldierBitrunEnemy
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BitrunningDomainEnemyObjective
+
+# ---- Reindeer: this fork's own existing mobs. Xenomorphs are now the real ported Orion "Dungeon"
+# variants (see xenomorph_mobs.yml) - the Lavaland Hierophant still needs a whole subsystem this
+# fork doesn't have (see the dedicated task) ----
+
+- type: entity
+  parent: MobReindeerBuck
+  id: MobReindeerBuckBitrunEnemy
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BitrunningDomainEnemyObjective
+
+- type: entity
+  parent: MobReindeerDoe
+  id: MobReindeerDoeBitrunEnemy
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BitrunningDomainEnemyObjective

@@ -24,6 +24,7 @@ public sealed class ByteforgeSystem : EntitySystem
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
     [Dependency] private readonly SharedPowerReceiverSystem _power = default!;
     [Dependency] private readonly SharedContainerSystem _container = default!;
+    [Dependency] private readonly SharedTransformSystem _transform = default!;
     [Dependency] private readonly StorageSystem _storage = default!;
     [Dependency] private readonly EntityStorageSystem _entityStorage = default!;
     [Dependency] private readonly EntityTableSystem _entityTable = default!;
@@ -116,6 +117,19 @@ public sealed class ByteforgeSystem : EntitySystem
         var byteforgeUid = server.LinkedByteforge!.Value;
         if (!TryComp<TransformComponent>(byteforgeUid, out var byteforgeXform))
             return false;
+
+        // 🌇Sunset🌇 - a completion reward crate is already filled with its loot; recompiling it
+        // into a fresh crate would destroy the completion prizes, so the byteforge pulls the
+        // crate itself out of the domain instead.
+        if (HasComp<BitrunningRewardCargoComponent>(cargoUid))
+        {
+            RemComp<BitrunningObjectiveCargoComponent>(cargoUid);
+            RemComp<BitrunningRewardCargoComponent>(cargoUid);
+            _transform.SetCoordinates(cargoUid, byteforgeXform.Coordinates);
+            Spawn("EffectSparks", byteforgeXform.Coordinates);
+            PulseByteforge(byteforgeUid);
+            return true;
+        }
 
         if (!_prototype.HasIndex<EntityPrototype>(server.RewardCachePrototype))
         {
@@ -219,6 +233,34 @@ public sealed class ByteforgeSystem : EntitySystem
         }
 
         return insertedAny;
+    }
+
+    /// <summary>
+    /// 🌇Sunset🌇 - packs the current domain's fixed completion prizes (completionLoot in
+    /// domains.yml) into a crate. Was defined in data but never spawned anywhere before.
+    /// </summary>
+    public void AddDomainCompletionLoot(EntityUid cargoUid, QuantumServerComponent server)
+    {
+        if (server.CurrentDomain == null || !_domains.TryGetDomain(server.CurrentDomain, out var domain) || domain == null)
+            return;
+
+        var coordinates = Transform(cargoUid).Coordinates;
+        foreach (var (protoId, amount) in domain.CompletionLoot)
+        {
+            for (var i = 0; i < amount; i++)
+            {
+                var loot = Spawn(protoId, coordinates);
+
+                if (TryComp<StorageComponent>(cargoUid, out var storage) &&
+                    _storage.Insert(cargoUid, loot, out _, storageComp: storage, playSound: false) || TryComp<EntityStorageComponent>(cargoUid, out var entityStorage) &&
+                    _entityStorage.Insert(loot, cargoUid, entityStorage))
+                {
+                    continue;
+                }
+
+                QueueDel(loot);
+            }
+        }
     }
 
     private ProtoId<EntityTablePrototype> GetDifficultyLootTable(QuantumServerComponent server)

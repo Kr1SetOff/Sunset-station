@@ -1,0 +1,15 @@
+# 🌇Sunset🌇 - ported verbatim from Orion-Station-14's Resources/Prototypes/_White/NPCs/xenomorph.yml.
+# Reuses this fork's own vanilla combat compounds - no custom operators needed.
+
+- type: htnCompound
+  id: XenomorphCompound
+  branches:
+  - tasks:
+    - !type:HTNCompoundTask
+      task: MeleeCombatCompound
+  - tasks:
+    - !type:HTNCompoundTask
+      task: EscapeCompound
+  - tasks:
+    - !type:HTNCompoundTask
+      task: IdleCompound

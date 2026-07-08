@@ -120,9 +120,10 @@ entities:
         None: 0.25
       dampingModifier: 0.25
     - type: ImplicitRoof
-    - type: FTLDrive
     - type: GridPathfinding
     - type: Gravity
+      enabled: True
+      inherent: True
       gravityShakeSound: !type:SoundPathSpecifier
         path: /Audio/Effects/alert.ogg
     - type: DecalGrid
@@ -3126,7 +3127,7 @@ entities:
           priority: 0
           component: ClothingSpeedModifier
         title: null
-- proto: ClothingEyesBase
+- proto: ClothingEyesGlasses
   entities:
   - uid: 228
     components:
@@ -3138,7 +3139,7 @@ entities:
     - type: Transform
       pos: -2.5231166,9.466598
       parent: 1
-- proto: ClothingEyesBase
+- proto: ClothingEyesGlasses
   entities:
   - uid: 805
     components:

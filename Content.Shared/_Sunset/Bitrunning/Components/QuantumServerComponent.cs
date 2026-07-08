@@ -39,10 +39,14 @@ public sealed partial class QuantumServerComponent : Component
     public EntProtoId AvatarPrototype = "MobHuman";
 
     /// <summary>
-    /// Crate that spawns in domain as reward when players reach goal.
+    /// Crate that spawns in domain as reward when players reach goal. Must have a
+    /// StorageComponent or EntityStorageComponent - ByteforgeSystem.TryFillRewardCacheWithLoot
+    /// deletes every loot item it can't insert into this entity, so a plain prop here (like the
+    /// old default, BitrunningObjectiveCacheStructure - a storage-less delivery cargo shell)
+    /// silently discards the entire reward for every non-DeliveryCacheCrate objective type.
     /// </summary>
     [DataField, AutoNetworkedField]
-    public EntProtoId CompletionRewardCachePrototype = "BitrunningObjectiveCacheStructure";
+    public EntProtoId CompletionRewardCachePrototype = "CrateBitrunSecureReward";
 
     /// <summary>
     /// Crate that spawns in byteforge delivery.

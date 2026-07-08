@@ -3,6 +3,7 @@ using System.Numerics;
 using Content.Server.Mind;
 using Content.Server.Popups;
 using Content.Server._Sunset.Bitrunning.Components;
+using Content.Server._Sunset.Bitrunning.Objectives;
 using Content.Server.Actions;
 using Content.Server.Antag.Components;
 using Content.Server.Chat.Systems;
@@ -33,10 +34,14 @@ using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Interaction;
 using Content.Shared.Interaction.Events;
 using Content.Shared.Inventory.VirtualItem;
+using Content.Shared.Mind;
 using Content.Shared.Mind.Components;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Mobs.Systems;
+using Content.Shared.NPC.Systems;
+using Content.Shared.Objectives.Components;
+using Content.Shared.Objectives.Systems;
 using Content.Shared.Parallax;
 using Content.Shared.Polymorph;
 using Content.Shared.Popups;
@@ -86,8 +91,11 @@ public sealed class QuantumServerSystem : EntitySystem
     [Dependency] private readonly DeathgaspSystem _deathgasp = default!;
     [Dependency] private readonly DoAfterSystem _doAfter = default!;
     [Dependency] private readonly QuantumConsoleSystem _console = default!;
+    [Dependency] private readonly SharedObjectivesSystem _objectives = default!;
+    [Dependency] private readonly NpcFactionSystem _npcFaction = default!;
 
     private static readonly EntProtoId ExitBlindnessStatusEffect = "StatusEffectBitrunningExitBlindness";
+    private static readonly EntProtoId DomainObjectivePrototype = "BitrunningAvatarObjective";
     private const string ServerSourcePort = "BitrunningServerSource";
 
     private static readonly TimeSpan DisconnectActionBlockDuration = TimeSpan.FromSeconds(30);
@@ -146,7 +154,9 @@ public sealed class QuantumServerSystem : EntitySystem
 
         foreach (var connection in ent.Comp.ActiveConnections.ToArray())
         {
-            DisconnectAvatar(connection, true);
+            // 🌇Sunset🌇 - server losing power is not the runner's death: no exit damage, and being
+            // cut off by a power failure shouldn't also daze them for it.
+            DisconnectAvatar(connection, false, applyExitEffects: false);
         }
     }
 
@@ -183,6 +193,12 @@ public sealed class QuantumServerSystem : EntitySystem
         var mapEntity = _map.CreateMap(out var mapId, runMapInit: true);
         EnsureComp<BitrunningDomainRuntimeComponent>(mapEntity);
         _metaData.SetEntityName(mapEntity, Loc.GetString(domain.Name));
+
+        // 🌇Sunset🌇 - domains are simulations: keep them fully lit regardless of how many lamps
+        // the map authors placed. Bright ambient light on the domain map, no darkness anywhere.
+        var mapLight = EnsureComp<MapLightComponent>(mapEntity);
+        mapLight.AmbientLightColor = Color.FromSrgb(new Color(232, 232, 232));
+        Dirty(mapEntity, mapLight);
 
         var parallax = EnsureComp<ParallaxComponent>(mapEntity);
         parallax.Parallax = HasComp<EmaggedComponent>(serverUid)
@@ -445,6 +461,62 @@ public sealed class QuantumServerSystem : EntitySystem
         return true;
     }
 
+    /// <summary>
+    /// Attaches a persistent, checkable character objective to the avatar's mind describing the
+    /// current domain run's goal, so it shows on the objectives panel instead of only a one-off
+    /// connect popup.
+    /// 🌇Sunset🌇 - always replaces any previous bitrunning objective instead of reusing it:
+    /// the old behaviour kept the stale goal text when the server booted a different domain.
+    /// Combined with the removal in <see cref="DisconnectAvatar"/>, the objective only ever
+    /// exists while the runner is actually inside a domain, and is fresh for every run.
+    /// </summary>
+    private void GrantDomainObjective(EntityUid mindId, MindComponent mind, EntityUid serverUid)
+    {
+        RemoveDomainObjectives(mindId, mind);
+
+        var objective = Spawn(DomainObjectivePrototype);
+        if (!TryComp<ObjectiveComponent>(objective, out var comp))
+        {
+            Del(objective);
+            return;
+        }
+
+        Comp<BitrunningObjectiveConditionComponent>(objective).Server = serverUid;
+
+        if (!_objectives.CanBeAssigned(objective, mindId, mind, comp))
+        {
+            Del(objective);
+            return;
+        }
+
+        var assignedEv = new ObjectiveAssignedEvent(mindId, mind);
+        RaiseLocalEvent(objective, ref assignedEv);
+        if (assignedEv.Cancelled)
+        {
+            Del(objective);
+            return;
+        }
+
+        var afterEv = new ObjectiveAfterAssignEvent(mindId, mind, comp, MetaData(objective));
+        RaiseLocalEvent(objective, ref afterEv);
+
+        _mind.AddObjective(mindId, mind, objective);
+    }
+
+    /// <summary>
+    /// 🌇Sunset🌇 - strips every bitrunning domain objective from a mind. Called when granting a
+    /// new one (so a domain switch replaces the goal instead of keeping the stale text) and on
+    /// disconnect (so the character menu only shows the task while the runner is inside a domain).
+    /// </summary>
+    private void RemoveDomainObjectives(EntityUid mindId, MindComponent mind)
+    {
+        for (var i = mind.Objectives.Count - 1; i >= 0; i--)
+        {
+            if (HasComp<BitrunningObjectiveConditionComponent>(mind.Objectives[i]))
+                _mind.TryRemoveObjective(mindId, mind, i);
+        }
+    }
+
     public bool TryConnectRunner(EntityUid serverUid, EntityUid podUid, EntityUid user)
     {
         if (!TryComp<QuantumServerComponent>(serverUid, out var server) || !TryComp<NetpodComponent>(podUid, out var pod))
@@ -471,7 +543,7 @@ public sealed class QuantumServerSystem : EntitySystem
                 return true;
 
             if (pod.Avatar is { } oldAvatar && Exists(oldAvatar))
-                DisconnectAvatar(oldAvatar, true);
+                DisconnectAvatar(oldAvatar, false, applyExitEffects: false); // 🌇Sunset🌇 - stale avatar cleanup, not a death
 
             pod.Avatar = null;
             Dirty(podUid, pod);
@@ -492,6 +564,7 @@ public sealed class QuantumServerSystem : EntitySystem
         EnsureComp<AvatarNavRelayComponent>(podUid).RelayEntity = avatar;
 
         _mind.TransferTo(mindId, avatar, mind: mind);
+        GrantDomainObjective(mindId, mind, serverUid);
         PlayLocalSound(user, pod.ConnectStasisSound);
         PlayLocalSound(avatar, pod.ConnectAvatarSound);
         TryApplyAvatarOutfit(avatar, server, pod);
@@ -547,6 +620,7 @@ public sealed class QuantumServerSystem : EntitySystem
         if (connection.Server != null && TryComp<QuantumServerComponent>(connection.Server.Value, out var server))
         {
             server.ActiveConnections.Add(avatarUid);
+            GrantDomainObjective(mindId, mind, connection.Server.Value);
             var objectivePopupText = server.ObjectiveCompleted
                 ? Loc.GetString("bitrunning-objective-completed")
                 : GetObjectiveInstructions(server);
@@ -616,7 +690,14 @@ public sealed class QuantumServerSystem : EntitySystem
         EnsureComp<SurveillanceCameraComponent>(cameraEntity);
     }
 
-    public void DisconnectAvatar(EntityUid avatarUid, bool harmful)
+    /// <summary>
+    /// 🌇Sunset🌇 - <paramref name="applyExitEffects"/> gates the brief paralyze/blindness "waking up
+    /// dazed" effect (<see cref="ApplyBitrunningExitEffects"/>). It's independent of
+    /// <paramref name="harmful"/>: a clean voluntary exit or an in-domain death should still leave
+    /// you briefly dazed, but being kicked out early by something outside your control (power loss,
+    /// the pod breaking, someone yanking your body out) shouldn't also stun you for it.
+    /// </summary>
+    public void DisconnectAvatar(EntityUid avatarUid, bool harmful, bool applyExitEffects = true)
     {
         if (!TryComp<AvatarConnectionComponent>(avatarUid, out var connection))
             return;
@@ -628,13 +709,31 @@ public sealed class QuantumServerSystem : EntitySystem
         var originalBody = connection.OriginalBody;
         var serverUid = connection.Server;
         var podUid = connection.Netpod;
+
+        // 🌇Sunset🌇 - the real body can be gone by the time we disconnect (deleted while the
+        // runner was diving). Treat it as absent instead of throwing halfway through: the
+        // exception from MindSystem.TransferTo used to leave this connection half-alive, and every
+        // power update retried the disconnect - endless error spam and a runner stuck in the
+        // domain with no way out. With no body left, the mind simply stays on the avatar and
+        // ghosts normally when the avatar is deleted below.
+        if (originalBody is { } candidateBody && TerminatingOrDeleted(candidateBody))
+            originalBody = null;
+
         var canRedirectToBitrunner = CanRedirectToBitrunnerBody(connection, originalBody);
 
         if (originalBody is { } bodyUid && podUid is { } netpodUid && TryComp<NetpodComponent>(netpodUid, out var podComp))
             PlayLocalSound(bodyUid, podComp.DisconnectSound);
 
-        if (originalBody is { } bodyToTransfer && TryResolveRunnerMind((avatarUid, connection), out var mindId))
-            _mind.TransferTo(mindId, bodyToTransfer);
+        // 🌇Sunset🌇 - the domain objective only exists while diving: leaving the domain for any
+        // reason removes it from the character menu; the next connect grants a fresh one.
+        if (TryResolveRunnerMind((avatarUid, connection), out var runnerMindId) &&
+            TryComp<MindComponent>(runnerMindId, out var runnerMind))
+        {
+            RemoveDomainObjectives(runnerMindId, runnerMind);
+
+            if (originalBody is { } bodyToTransfer)
+                _mind.TransferTo(runnerMindId, bodyToTransfer);
+        }
 
         connection.OriginalBody = null;
 
@@ -664,7 +763,8 @@ public sealed class QuantumServerSystem : EntitySystem
             _netpod.EjectOccupant(podUid.Value);
         }
 
-        ApplyBitrunningExitEffects(originalBody, serverUid);
+        if (applyExitEffects)
+            ApplyBitrunningExitEffects(originalBody, serverUid);
 
         if (serverUid != null && TryComp<QuantumServerComponent>(serverUid.Value, out var server))
         {
@@ -906,6 +1006,16 @@ public sealed class QuantumServerSystem : EntitySystem
     {
         var cache = Spawn(server.CompletionRewardCachePrototype, coordinates);
         _byteforge.TryFillRewardCacheWithLoot(cache, server);
+        // 🌇Sunset🌇 - the domain's fixed completion prizes (completionLoot in domains.yml: beach
+        // ball, plushies, gold...) were never spawned anywhere before - pack them in too.
+        _byteforge.AddDomainCompletionLoot(cache, server);
+
+        // 🌇Sunset🌇 - the crate spawns INSIDE the domain and avatars can't carry anything back
+        // out, so the loot used to be unreachable. Mark it as deliverable cargo: drag it onto the
+        // delivery marker and the byteforge pulls the crate itself out to the station.
+        EnsureComp<BitrunningObjectiveCargoComponent>(cache);
+        EnsureComp<BitrunningRewardCargoComponent>(cache);
+
         Spawn("EffectSparks", coordinates);
     }
 
@@ -1047,7 +1157,8 @@ public sealed class QuantumServerSystem : EntitySystem
 
         ev.Handled = true;
         ev.Result = true;
-        DisconnectAvatar(currentEntity.Value, true);
+        // 🌇Sunset🌇 - ghosting out of the domain is a voluntary exit, not a death.
+        DisconnectAvatar(currentEntity.Value, false);
     }
 
     private void OnAvatarTerminating(Entity<AvatarConnectionComponent> ent, ref EntityTerminatingEvent args)
@@ -1162,6 +1273,9 @@ public sealed class QuantumServerSystem : EntitySystem
     {
         var avatar = Spawn(server.AvatarPrototype, coordinates);
         EnsureComp<AntagImmuneComponent>(avatar);
+        // 🌇Sunset🌇 - domain enemies target by NpcFactionMember hostility; without a faction the
+        // avatar is invisible to GetNearbyHostiles and every hostile mob just stands there.
+        _npcFaction.AddFaction(avatar, "NanoTrasen");
         return avatar;
     }
 

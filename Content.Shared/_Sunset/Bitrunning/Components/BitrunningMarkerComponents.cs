@@ -92,6 +92,15 @@ public sealed partial class BitrunningObjectiveCargoComponent : Component;
 public sealed partial class BitrunningDeliveredObjectiveCargoComponent : Component;
 
 /// <summary>
+/// 🌇Sunset🌇 - marks an already-filled completion reward crate spawned inside a domain.
+/// Delivering it to a delivery point teleports the crate itself (loot intact) to the byteforge,
+/// instead of recompiling it into a fresh crate like ordinary objective cargo - avatars can't
+/// carry anything out of a domain, so this is the only way the completion loot reaches the station.
+/// </summary>
+[RegisterComponent]
+public sealed partial class BitrunningRewardCargoComponent : Component;
+
+/// <summary>
 /// Marks enemies that grant objective progress when killed in eliminate-target domains.
 /// </summary>
 [RegisterComponent]

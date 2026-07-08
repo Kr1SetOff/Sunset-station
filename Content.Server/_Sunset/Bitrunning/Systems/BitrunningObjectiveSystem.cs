@@ -1,6 +1,7 @@
 using System.Linq;
 using Content.Shared._Sunset.Bitrunning;
 using Content.Shared._Sunset.Bitrunning.Components;
+using Content.Shared._Sunset.Fishing.Events;
 using Content.Shared.Interaction;
 using Content.Shared.Mobs;
 using Content.Shared.Nutrition.Components;
@@ -37,8 +38,25 @@ public sealed class BitrunningObjectiveSystem : EntitySystem
         SubscribeLocalEvent<BitrunningDomainEnemyObjectiveComponent, MobStateChangedEvent>(OnEnemyStateChanged);
         SubscribeLocalEvent<BitrunningDomainEnemyObjectiveComponent, EntityTerminatingEvent>(OnEnemyTerminating);
         SubscribeLocalEvent<BitrunningDespawnOnOpenComponent, StorageAfterOpenEvent>(OnRewardCacheOpened);
-        // 🌇Sunset🌇 - no CatchFish hook: Content.Goobstation.Shared.Fishing doesn't exist in this fork.
-        // BreezeBay (the only domain using CatchFish) was retargeted to FillStomach instead.
+        // 🌇Sunset🌇 - CatchFish hook restored. An earlier port note claimed BreezeBay was
+        // retargeted away from CatchFish - it never was, so the fishing domain simply couldn't
+        // progress. The ported _Sunset Fishing minigame raises FishCaughtEvent on the fisher,
+        // exactly matching Orion's original subscription.
+        SubscribeLocalEvent<AvatarConnectionComponent, FishCaughtEvent>(OnFishCaught);
+    }
+
+    private void OnFishCaught(Entity<AvatarConnectionComponent> ent, ref FishCaughtEvent args)
+    {
+        if (!TryResolveDomainMapUid(ent.Owner, null, out var mapUid))
+            return;
+
+        if (!_server.TryGetServerByDomainMap(mapUid, out var serverUid, out var server))
+            return;
+
+        if (server.ObjectiveType != BitrunningObjectiveType.CatchFish)
+            return;
+
+        _server.AddObjectiveProgress(serverUid, 1);
     }
 
     public override void Update(float frameTime)

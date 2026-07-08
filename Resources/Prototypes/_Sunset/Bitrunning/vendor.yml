@@ -1,0 +1,108 @@
+# 🌇Sunset🌇 - Bitrunning points vendor, ported from Orion-Station-14 (which built it on DeltaV's
+# ShopVendor). All six _Sunset maps already place VendingMachineBitrunning in the bitrunning den -
+# this file is what makes that machine real: it sells snacks, gear and (most importantly) the
+# domain gear/program/mod disks for the points earned by completing virtual domains.
+#
+# The whole shop used to render empty: ClothingOuterCoatJacketLeather (below) doesn't exist as a
+# prototype in this fork, and the client populates every listing in one loop
+# (ShopVendorWindow.Populate -> IPrototypeManager.Index per listing) - one bad id threw partway
+# through and the list never got built, balance and all. Fixed to the closest equivalent this fork
+# actually has (ClothingOuterCoatBomber) and added a handful of extra survival/combat items to the
+# catalog on top of Orion's original list.
+
+- type: shopInventory
+  id: BitrunningVendorInventory
+  listings:
+  - id: FoodSnackBoritos
+    cost: 65
+  - id: DrinkSpaceMountainWindCan
+    cost: 65
+  - id: DrinkPwrGameCan
+    cost: 130
+  - id: MedkitBruteFilled
+    cost: 325
+  - id: MedkitBurnFilled
+    cost: 325
+  - id: ClothingEyesGlassesSunglasses
+    cost: 650
+  - id: ClothingOuterCoatBomber
+    cost: 650
+  - id: ClothingShoesBootsJack
+    cost: 650
+  - id: BitrunningExtensionPlayerAppearanceDisk
+    cost: 100
+  - id: BitrunningGearSimpleDisk
+    cost: 487
+  - id: BitrunningGearComplexDisk
+    cost: 812
+  - id: BitrunningGearAdvancedDisk
+    cost: 1300
+  - id: BitrunningProgramBasicDisk
+    cost: 487
+  - id: BitrunningProgramComplexDisk
+    cost: 974
+  - id: BitrunningProgramEliteDisk
+    cost: 1625
+  - id: BitrunningGearPKAModsDisk
+    cost: 487
+  - id: BitrunningGearPremiumPKAModsDisk
+    cost: 1040
+  - id: BitrunningGearCrusherModsDisk
+    cost: 487
+  - id: BitrunningGearPremiumCrusherModsDisk
+    cost: 1040
+  - id: FlashlightLantern
+    cost: 150
+  - id: RadioHandheld
+    cost: 200
+  - id: Hypospray
+    cost: 400
+  - id: MedkitCombatFilled
+    cost: 450
+  - id: MedkitAdvancedFilled
+    cost: 600
+  - id: ClothingHeadHelmetBasic
+    cost: 500
+  - id: WeaponPistolMk58
+    cost: 900
+  - id: MagazineBoxPistolSP
+    cost: 250
+  - id: WeaponEnergyGun
+    cost: 1500
+
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineBitrunning
+  name: Bitrunning Supplies Order
+  description: A supplies order vending that exchanges bitrunning points for bitrunning goods.
+  components:
+  - type: VendingMachine
+    pack: EmptyVendingMachineInventory
+    offState: off
+    normalState: normal-unshaded
+  - type: Sprite
+    sprite: _Sunset/Structures/Machines/VendingMachines/bitrun.rsi
+    noRot: true
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: PointLight
+    color: "#4f8dcf"
+    autoRot: true
+  - type: Transform
+    noRot: false
+  - type: Rotatable
+    rotateWhileAnchored: false
+    rotateWhilePulling: true
+  - type: ShopVendor
+    pack: BitrunningVendorInventory
+  - type: UserInterface
+    interfaces:
+      enum.VendingMachineUiKey.Key:
+        type: ShopVendorBoundUserInterface
+  - type: BitrunningPointsVendor

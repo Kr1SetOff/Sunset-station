@@ -32,7 +32,8 @@
 
 - type: entity
   id: BitrunningObjectiveCacheStructure
-  name: cache crate
+  name: bitrunning cache
+  description: A crate of encrypted cargo. Drag it to the delivery marker to make it vanish here and rematerialize as a reward crate at the byteforge.
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite

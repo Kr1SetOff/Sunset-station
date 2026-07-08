@@ -95,9 +95,10 @@ entities:
         None: 0.25
       dampingModifier: 0.25
     - type: ImplicitRoof
-    - type: FTLDrive
     - type: GridPathfinding
     - type: Gravity
+      enabled: True
+      inherent: True
       gravityShakeSound: !type:SoundPathSpecifier
         path: /Audio/Effects/alert.ogg
     - type: DecalGrid
@@ -4797,23 +4798,6 @@ entities:
     components:
     - type: Transform
       pos: -8.5,24.5
-      parent: 1
-- proto: MarkerBase
-  entities:
-  - uid: 852
-    components:
-    - type: Transform
-      pos: -9.5,18.5
-      parent: 1
-  - uid: 853
-    components:
-    - type: Transform
-      pos: -6.5,20.5
-      parent: 1
-  - uid: 854
-    components:
-    - type: Transform
-      pos: -6.5,15.5
       parent: 1
 - proto: SpawnMobPirateCutlassBitrunning
   entities:

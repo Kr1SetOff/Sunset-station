@@ -33,6 +33,7 @@
             # cargo
             Quartermaster: [ 1, 1 ]
             SalvageSpecialist: [ 2, 3 ]
+            Bitrunner: [ 2, 2 ]
             CargoTechnician: [ 2, 3 ]
             # engineering
             ChiefEngineer: [ 1, 1 ]
@@ -42,6 +43,7 @@
             # medical
             ChiefMedicalOfficer: [ 1, 1 ]
             MedicalDoctor: [ 2, 4 ]
+            Geneticist: [ 1, 1 ]
             MedicalIntern: [ 1, 2 ]
             Psychologist: [ 1, 1 ]
             Paramedic: [ 2, 2 ]
@@ -105,6 +107,7 @@
             # cargo
             Quartermaster: [ 1, 1 ]
             SalvageSpecialist: [ 3, 3 ]
+            Bitrunner: [ 2, 2 ]
             CargoTechnician: [ 3, 3 ]
             # engineering
             ChiefEngineer: [ 1, 1 ]
@@ -114,6 +117,7 @@
             # medical
             ChiefMedicalOfficer: [ 1, 1 ]
             MedicalDoctor: [ 3, 3 ]
+            Geneticist: [ 1, 1 ]
             MedicalIntern: [ 4, 4 ]
             Psychologist: [ 1, 1 ]
             Paramedic: [ 1, 1 ]
@@ -178,6 +182,7 @@
             # cargo
             Quartermaster: [ 1, 1 ]
             SalvageSpecialist: [ 3, 3 ]
+            Bitrunner: [ 2, 2 ]
             CargoTechnician: [ 5, 6 ]
             # engineering
             ChiefEngineer: [ 1, 1 ]
@@ -187,6 +192,7 @@
             # medical
             ChiefMedicalOfficer: [ 1, 1 ]
             MedicalDoctor: [ 5, 6 ]
+            Geneticist: [ 1, 1 ]
             MedicalIntern: [ 4, 4 ]
             Psychologist: [ 1, 1 ]
             Paramedic: [ 1, 1 ]
@@ -266,6 +272,7 @@
             ChiefMedicalOfficer: [ 1, 1 ]
             Chemist: [ 1, 1 ]
             MedicalDoctor: [ 2, 2 ]
+            Geneticist: [ 1, 1 ]
             MedicalIntern: [ 2, 2 ]
             #science
             ResearchDirector: [ 1, 1 ]
@@ -282,6 +289,7 @@
             #supply
             Quartermaster: [ 1, 1 ]
             SalvageSpecialist: [ -1, -1 ]
+            Bitrunner: [ 2, 2 ]
             CargoTechnician: [ 2, 2 ]
             #civillian
             Passenger: [ -1, -1 ]
@@ -322,6 +330,7 @@
             # medical
             ChiefMedicalOfficer: [ 1, 1 ]
             MedicalDoctor: [ 3, 3 ]
+            Geneticist: [ 1, 1 ]
             MedicalIntern: [ 2, 2 ]
             Paramedic: [ 1, 1 ]
             Chemist: [ 2, 2 ]
@@ -342,6 +351,7 @@
             # supply
             Quartermaster: [ 1, 1 ]
             SalvageSpecialist: [ 2, 2 ]
+            Bitrunner: [ 2, 2 ]
             CargoTechnician: [ 2, 2 ]
             # service
             HeadOfPersonnel: [ 1, 1 ]
@@ -402,6 +412,7 @@
             ChiefMedicalOfficer: [ 1, 1 ]
             Chemist: [ 2, 2 ]
             MedicalDoctor: [ 4, 5 ]
+            Geneticist: [ 1, 1 ]
             Paramedic: [ 2, 2 ]
             Psychologist: [ 1, 1 ]
             MedicalIntern: [ 4, 4 ]
@@ -420,6 +431,7 @@
             #supply
             Quartermaster: [ 1, 1 ]
             SalvageSpecialist: [ 3, 3 ]
+            Bitrunner: [ 2, 2 ]
             CargoTechnician: [ 4, 4 ]
             #civilian
             Passenger: [ -1, -1 ]

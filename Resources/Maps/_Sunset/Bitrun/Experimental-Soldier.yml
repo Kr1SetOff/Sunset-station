@@ -121,9 +121,10 @@ entities:
         None: 0.25
       dampingModifier: 0.25
     - type: ImplicitRoof
-    - type: FTLDrive
     - type: GridPathfinding
     - type: Gravity
+      enabled: True
+      inherent: True
       gravityShakeSound: !type:SoundPathSpecifier
         path: /Audio/Effects/alert.ogg
     - type: DecalGrid
@@ -4639,7 +4640,6 @@ entities:
     - type: Transform
       pos: -5.5,15.5
       parent: 1
-    - type: Timer
   - uid: 667
     components:
     - type: Transform
@@ -4657,7 +4657,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -8.5,14.5
       parent: 1
-    - type: Timer
   - uid: 786
     components:
     - type: Transform
@@ -5350,7 +5349,6 @@ entities:
   - uid: 450
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
       pos: -5.5,10.5
       parent: 1
 - proto: CrateGenericSteel
@@ -5358,7 +5356,6 @@ entities:
   - uid: 445
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
       pos: -6.5,10.5
       parent: 1
 - proto: CrateGenericSteel
@@ -5366,7 +5363,6 @@ entities:
   - uid: 449
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
       pos: -8.5,7.5
       parent: 1
 - proto: CrateGenericSteel
@@ -5374,7 +5370,6 @@ entities:
   - uid: 467
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
       pos: -6.5,7.5
       parent: 1
 - proto: CrateGenericSteel
@@ -5382,7 +5377,6 @@ entities:
   - uid: 441
     components:
     - type: Transform
-      rot: -1.5707963267948966 rad
       pos: -8.5,10.5
       parent: 1
 - proto: CrateGenericSteel
@@ -5390,13 +5384,11 @@ entities:
   - uid: 439
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
       pos: -9.309613,14.379097
       parent: 1
   - uid: 440
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
       pos: -6.5604506,6.7240334
       parent: 1
   - uid: 448

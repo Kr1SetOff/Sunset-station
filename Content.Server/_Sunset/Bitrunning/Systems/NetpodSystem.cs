@@ -113,10 +113,15 @@ public sealed class NetpodSystem : EntitySystem
         RefreshLinkedServer(ent);
     }
 
+    // 🌇Sunset🌇 - all forced disconnects below pass harmful: false and applyExitEffects: false.
+    // Exit damage and the brief paralyze/blindness "waking up dazed" effect should only apply to
+    // dying in the domain or a clean voluntary exit, not losing power, having the pod broken, or
+    // being yanked out early - DisconnectAvatar still escalates to harmful on its own when the
+    // avatar is actually crit/dead.
     private void OnDestroyed(Entity<NetpodComponent> ent, ref DestructionEventArgs args)
     {
         if (ent.Comp.Avatar != null)
-            _server.DisconnectAvatar(ent.Comp.Avatar.Value, true);
+            _server.DisconnectAvatar(ent.Comp.Avatar.Value, false, applyExitEffects: false);
 
         EjectOccupant(ent.Owner);
     }
@@ -124,7 +129,7 @@ public sealed class NetpodSystem : EntitySystem
     private void OnTerminating(Entity<NetpodComponent> ent, ref EntityTerminatingEvent args)
     {
         if (ent.Comp.Avatar != null)
-            _server.DisconnectAvatar(ent.Comp.Avatar.Value, true);
+            _server.DisconnectAvatar(ent.Comp.Avatar.Value, false, applyExitEffects: false);
     }
 
     private void OnPowerChanged(Entity<NetpodComponent> ent, ref PowerChangedEvent args)
@@ -133,7 +138,7 @@ public sealed class NetpodSystem : EntitySystem
             return;
 
         if (ent.Comp.Avatar != null)
-            _server.DisconnectAvatar(ent.Comp.Avatar.Value, true);
+            _server.DisconnectAvatar(ent.Comp.Avatar.Value, false, applyExitEffects: false);
 
         Timer.Spawn(TimeSpan.Zero,
             () =>
@@ -221,8 +226,10 @@ public sealed class NetpodSystem : EntitySystem
         if (ent.Comp.Avatar is not { } avatar)
             return;
 
+        // 🌇Sunset🌇 - body pulled out of the pod mid-dive: not a death, no exit damage, and being
+        // yanked out early shouldn't leave them dazed either.
         if (Exists(avatar))
-            _server.DisconnectAvatar(avatar, true);
+            _server.DisconnectAvatar(avatar, false, applyExitEffects: false);
 
         ent.Comp.Avatar = null;
         ent.Comp.Occupant = TryComp<NetpodContainerComponent>(ent.Owner, out var containerComp)

@@ -28,6 +28,8 @@ bitrunning-training-instructions-none = This domain is running without objective
 bitrunning-objective-completed = Objective completed.
 bitrunning-objective-completed-rewards = Objective completed. Server points: +{ $server }, NP: +{ $np }.
 
+objective-issuer-byteforge = [color=#4de3ff]Byteforge Systems[/color]
+
 bitrunning-disk-ui-title = Bitrunning Disk Selection
 bitrunning-disk-ui-selected = Selected: { $option }
 bitrunning-disk-popup-already-selected = Selected { $option }!
@@ -135,3 +137,9 @@ bitrunning-ui-domain-cost = § { $cost }
 bitrunning-ui-domain-cost-tooltip = Required server points to start this domain.
 
 bitrunning-avatar-disconnect-blocked = Neural link is unstable after recent damage. Disconnect available in { $seconds }s.
+
+# 🌇Sunset🌇 - bitrunner loadout
+loadout-group-bitrunner-jumpsuit = Bitrunner jumpsuit
+loadout-group-bitrunner-id = Bitrunner PDA
+
+guide-entry-sunset-bitrunning = Bitrunning

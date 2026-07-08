@@ -104,9 +104,10 @@ entities:
         None: 0.25
       dampingModifier: 0.25
     - type: ImplicitRoof
-    - type: FTLDrive
     - type: GridPathfinding
     - type: Gravity
+      enabled: True
+      inherent: True
       gravityShakeSound: !type:SoundPathSpecifier
         path: /Audio/Effects/alert.ogg
     - type: DecalGrid
@@ -4378,71 +4379,6 @@ entities:
     - type: Transform
       pos: 24.5,12.5
       parent: 1
-- proto: MarkerBase
-  entities:
-  - uid: 645
-    components:
-    - type: Transform
-      pos: 6.5,9.5
-      parent: 1
-    - type: Fixtures
-      fixtures: {}
-  - uid: 646
-    components:
-    - type: Transform
-      pos: 6.5,8.5
-      parent: 1
-    - type: Fixtures
-      fixtures: {}
-  - uid: 647
-    components:
-    - type: Transform
-      pos: 6.5,7.5
-      parent: 1
-    - type: Fixtures
-      fixtures: {}
-  - uid: 648
-    components:
-    - type: Transform
-      pos: 7.5,9.5
-      parent: 1
-    - type: Fixtures
-      fixtures: {}
-  - uid: 649
-    components:
-    - type: Transform
-      pos: 7.5,8.5
-      parent: 1
-    - type: Fixtures
-      fixtures: {}
-  - uid: 650
-    components:
-    - type: Transform
-      pos: 7.5,7.5
-      parent: 1
-    - type: Fixtures
-      fixtures: {}
-  - uid: 651
-    components:
-    - type: Transform
-      pos: 8.5,9.5
-      parent: 1
-    - type: Fixtures
-      fixtures: {}
-  - uid: 652
-    components:
-    - type: Transform
-      pos: 8.5,8.5
-      parent: 1
-    - type: Fixtures
-      fixtures: {}
-  - uid: 653
-    components:
-    - type: Transform
-      pos: 8.5,7.5
-      parent: 1
-    - type: Fixtures
-      fixtures: {}
 - proto: FloorWaterEntity
   entities:
   - uid: 654
@@ -5165,28 +5101,6 @@ entities:
     components:
     - type: Transform
       pos: 15.5,25.5
-      parent: 1
-- proto: MarkerBase
-  entities:
-  - uid: 764
-    components:
-    - type: Transform
-      pos: -3.5,6.5
-      parent: 1
-  - uid: 765
-    components:
-    - type: Transform
-      pos: -2.5,15.5
-      parent: 1
-  - uid: 766
-    components:
-    - type: Transform
-      pos: -4.5,20.5
-      parent: 1
-  - uid: 767
-    components:
-    - type: Transform
-      pos: -1.5,25.5
       parent: 1
 - proto: MedkitFilled
   entities:

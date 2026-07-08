@@ -227,6 +227,14 @@
   name: bitrunning reward crate
   description: A crate of physical rewards recompiled from a delivered bitrunning cache.
   components:
+  # 🌇Sunset🌇 - locked to the Bitrun access level: only bitrunners and the quartermaster can
+  # open the loot (bitrun_secure.rsi ships proper locked/unlocked states for LockVisuals).
+  - type: Lock
+    popupMessage: false
+    powerNeeded: true
+  - type: LockVisuals
+  - type: AccessReader
+    access: [["Bitrun"]]
   - type: Icon
     sprite: _Sunset/Structures/Storage/Crates/bitrun_secure.rsi
     state: icon
@@ -240,6 +248,9 @@
     - state: welded
       visible: false
       map: ["enum.WeldableLayers.BaseWelded"]
+    - state: locked
+      map: ["enum.LockVisualLayers.Lock"]
+      shader: unshaded
 
 # ---- Circuit boards ----
 - type: entity

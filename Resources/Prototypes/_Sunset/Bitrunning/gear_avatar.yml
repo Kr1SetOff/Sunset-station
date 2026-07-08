@@ -3,7 +3,23 @@
 - type: startingGear
   id: BitrunnerAvatarGear
   equipment:
-    id: IDCardStandard
+    # 🌇Sunset🌇 - was IDCardStandard, which is abstract in this fork and crashed
+    # QuantumServerSystem.TryApplyAvatarOutfit the moment anyone entered a netpod.
+    id: BitrunAvatarIDCard
+
+# 🌇Sunset🌇 - concrete ID card for domain avatars (Orion's own card art, animated state).
+- type: entity
+  parent: IDCardStandard
+  id: BitrunAvatarIDCard
+  name: bitrun avatar ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - sprite: _Sunset/Objects/Misc/id_cards.rsi
+      state: bitrun-avatar
+  - type: PresetIdCard
+    job: BitrunAvatar
 
 # --- Avatar Loadouts (Netpod) ---
 
