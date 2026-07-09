@@ -6,83 +6,9 @@
 # minPlayers: 0 + fallback: true -> карта доступна при любом онлайне.
 
 - type: gameMap
-  id: SSAmber
-  mapName: 'NT14-SB Амбер'
-  mapPath: /Maps/_Sunset/SSAmber.yml
-  maxRandomOffset: 0
-  randomRotation: false
-  fallback: true
-  minPlayers: 0
-  stations:
-    CorvaxAmber:
-      stationProto: StandardNanotrasenStation
-      components:
-        - type: StationNameSetup
-          mapNameTemplate: '{0} Амбер {1}'
-          nameGenerator:
-            !type:NanotrasenNameGenerator
-            prefixCreator: '14-SB'
-        - type: StationEmergencyShuttle
-          emergencyShuttlePath: /Maps/Shuttles/emergency.yml
-        - type: StationJobs
-          availableJobs:
-            # command
-            Captain: [ 1, 1 ]
-            BlueShield: [ 1, 1 ]
-            NanoTrasenRepresentative: [ 1, 1 ]
-            # cargo
-            Quartermaster: [ 1, 1 ]
-            SalvageSpecialist: [ 2, 3 ]
-            Bitrunner: [ 2, 2 ]
-            CargoTechnician: [ 2, 3 ]
-            # engineering
-            ChiefEngineer: [ 1, 1 ]
-            AtmosphericTechnician: [ 2, 2 ]
-            StationEngineer: [ 2, 4 ]
-            TechnicalAssistant: [ 1, 1 ]
-            # medical
-            ChiefMedicalOfficer: [ 1, 1 ]
-            MedicalDoctor: [ 2, 4 ]
-            Geneticist: [ 1, 1 ]
-            MedicalIntern: [ 1, 2 ]
-            Psychologist: [ 1, 1 ]
-            Paramedic: [ 2, 2 ]
-            Chemist: [ 2, 2 ]
-            Surgeon: [ 1, 1 ]
-            # science
-            ResearchDirector: [ 1, 1 ]
-            Scientist: [ 4, 4 ]
-            ResearchAssistant: [ 1, 2 ]
-            # security
-            HeadOfSecurity: [ 1, 1 ]
-            Warden: [ 1, 1 ]
-            SecurityOfficer: [ 4, 4 ]
-            SecurityCadet: [ 1, 1 ]
-            Detective: [ 1, 1 ]
-            Brigmedic: [ 1, 1 ]
-            Lawyer: [ 1, 1 ]
-            # service
-            HeadOfPersonnel: [ 1, 1 ]
-            Bartender: [ 1, 1 ]
-            Botanist: [ 2, 2 ]
-            Chaplain: [ 1, 1 ]
-            Chef: [ 1, 1 ]
-            Clown: [ 1, 1 ]
-            Janitor: [ 2, 2 ]
-            Librarian: [ 1, 1 ]
-            Mime: [ 1, 1 ]
-            Musician: [ 1, 1 ]
-            Reporter: [ 1, 1 ]
-            ServiceWorker: [ 1, 3 ]
-            Passenger: [ -1, -1 ]
-            # silicon
-            StationAi: [ 1, 1 ]
-            Borg: [ 2, 2 ]
-
-- type: gameMap
   id: SSBagel
-  mapName: 'NT14 Багель'
-  mapPath: /Maps/_Sunset/SSBagel.yml
+  mapName: 'Багель'
+  mapPath: /Maps/_Sunset/Station/SSBagel.yml
   maxRandomOffset: 0
   randomRotation: false
   fallback: true
@@ -107,7 +33,7 @@
             # cargo
             Quartermaster: [ 1, 1 ]
             SalvageSpecialist: [ 3, 3 ]
-            Bitrunner: [ 2, 2 ]
+            Bitrunner: [ 3, 3 ]
             CargoTechnician: [ 3, 3 ]
             # engineering
             ChiefEngineer: [ 1, 1 ]
@@ -117,7 +43,7 @@
             # medical
             ChiefMedicalOfficer: [ 1, 1 ]
             MedicalDoctor: [ 3, 3 ]
-            Geneticist: [ 1, 1 ]
+            Geneticist: [ 2, 2 ]
             MedicalIntern: [ 4, 4 ]
             Psychologist: [ 1, 1 ]
             Paramedic: [ 1, 1 ]
@@ -156,8 +82,8 @@
 
 - type: gameMap
   id: SSBox
-  mapName: 'NTTG Бокс'
-  mapPath: /Maps/_Sunset/SSBox.yml
+  mapName: 'Бокс'
+  mapPath: /Maps/_Sunset/Station/SSBox.yml
   maxRandomOffset: 0
   randomRotation: false
   fallback: true
@@ -182,7 +108,7 @@
             # cargo
             Quartermaster: [ 1, 1 ]
             SalvageSpecialist: [ 3, 3 ]
-            Bitrunner: [ 2, 2 ]
+            Bitrunner: [ 3, 3 ]
             CargoTechnician: [ 5, 6 ]
             # engineering
             ChiefEngineer: [ 1, 1 ]
@@ -192,7 +118,7 @@
             # medical
             ChiefMedicalOfficer: [ 1, 1 ]
             MedicalDoctor: [ 5, 6 ]
-            Geneticist: [ 1, 1 ]
+            Geneticist: [ 2, 2 ]
             MedicalIntern: [ 4, 4 ]
             Psychologist: [ 1, 1 ]
             Paramedic: [ 1, 1 ]
@@ -232,8 +158,8 @@
 
 - type: gameMap
   id: SSCluster
-  mapName: 'Cluster'
-  mapPath: /Maps/_Sunset/SSCluster.yml
+  mapName: 'Кластер'
+  mapPath: /Maps/_Sunset/Station/SSCluster.yml
   fallback: true
   minPlayers: 0
   stations:
@@ -272,7 +198,7 @@
             ChiefMedicalOfficer: [ 1, 1 ]
             Chemist: [ 1, 1 ]
             MedicalDoctor: [ 2, 2 ]
-            Geneticist: [ 1, 1 ]
+            Geneticist: [ 2, 2 ]
             MedicalIntern: [ 2, 2 ]
             #science
             ResearchDirector: [ 1, 1 ]
@@ -289,7 +215,7 @@
             #supply
             Quartermaster: [ 1, 1 ]
             SalvageSpecialist: [ -1, -1 ]
-            Bitrunner: [ 2, 2 ]
+            Bitrunner: [ 3, 3 ]
             CargoTechnician: [ 2, 2 ]
             #civillian
             Passenger: [ -1, -1 ]
@@ -299,8 +225,8 @@
 
 - type: gameMap
   id: SSPacket
-  mapName: 'NTJU Пакет'
-  mapPath: /Maps/_Sunset/SSPacket.yml
+  mapName: 'Пакет'
+  mapPath: /Maps/_Sunset/Station/SSPacket.yml
   maxRandomOffset: 0
   randomRotation: false
   fallback: true
@@ -330,7 +256,7 @@
             # medical
             ChiefMedicalOfficer: [ 1, 1 ]
             MedicalDoctor: [ 3, 3 ]
-            Geneticist: [ 1, 1 ]
+            Geneticist: [ 2, 2 ]
             MedicalIntern: [ 2, 2 ]
             Paramedic: [ 1, 1 ]
             Chemist: [ 2, 2 ]
@@ -351,7 +277,7 @@
             # supply
             Quartermaster: [ 1, 1 ]
             SalvageSpecialist: [ 2, 2 ]
-            Bitrunner: [ 2, 2 ]
+            Bitrunner: [ 3, 3 ]
             CargoTechnician: [ 2, 2 ]
             # service
             HeadOfPersonnel: [ 1, 1 ]
@@ -372,73 +298,153 @@
             Borg: [ 2, 2 ]
 
 - type: gameMap
-  id: SSloop
-  mapName: 'Loop Station'
-  mapPath: /Maps/_Sunset/SSloop.yml
+  id: SSHotel
+  mapName: 'Отель'
+  mapPath: /Maps/_Sunset/Station/SSHotel.yml
+  maxRandomOffset: 0
+  randomRotation: false
   fallback: true
   minPlayers: 0
   stations:
-    Loop:
+    CorvaxHotel:
       stationProto: StandardNanotrasenStation
       components:
         - type: StationNameSetup
-          mapNameTemplate: '{0} Loop Station {1}'
+          mapNameTemplate: '{0} Отель {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
         - type: StationEmergencyShuttle
-          emergencyShuttlePath: /Maps/Shuttles/emergency_wode.yml
+          emergencyShuttlePath: /Maps/Shuttles/emergency_hotel.yml
         - type: StationJobs
           availableJobs:
-            #command
+            # command
             Captain: [ 1, 1 ]
-            NanoTrasenRepresentative: [ 1, 1 ]
             BlueShield: [ 1, 1 ]
+            NanoTrasenRepresentative: [ 1, 1 ]
             #service
             HeadOfPersonnel: [ 1, 1 ]
             Bartender: [ 2, 2 ]
             Botanist: [ 2, 2 ]
             Chef: [ 2, 2 ]
             Janitor: [ 2, 2 ]
+            Lawyer: [ 1, 1 ]
             Chaplain: [ 1, 1 ]
-            Librarian: [ 1, 1 ]
-            ServiceWorker: [ 3, 3 ]
+            ServiceWorker: [ 2, 4 ]
             #engineering
             ChiefEngineer: [ 1, 1 ]
-            AtmosphericTechnician: [ 3, 3 ]
-            StationEngineer: [ 5, 5 ]
-            TechnicalAssistant: [ 5, 5 ]
+            AtmosphericTechnician: [ 2, 2 ]
+            StationEngineer: [ 4, 6 ]
+            TechnicalAssistant: [ 3, 5 ]
             #medical
             ChiefMedicalOfficer: [ 1, 1 ]
             Chemist: [ 2, 2 ]
-            MedicalDoctor: [ 4, 5 ]
-            Geneticist: [ 1, 1 ]
+            MedicalDoctor: [ 4, 6 ]
+            Geneticist: [ 2, 2 ]
+            MedicalIntern: [ 3, 6 ]
             Paramedic: [ 2, 2 ]
-            Psychologist: [ 1, 1 ]
-            MedicalIntern: [ 4, 4 ]
+            Surgeon: [ 2, 2 ]
             #science
             ResearchDirector: [ 1, 1 ]
-            Scientist: [ 5, 5 ]
-            ResearchAssistant: [ 4, 4 ]
+            Scientist: [ 3, 6 ]
+            ResearchAssistant: [ 3, 5 ]
+            Roboticist: [ 2, 2 ]
             #security
             HeadOfSecurity: [ 1, 1 ]
             Warden: [ 1, 1 ]
-            SecurityOfficer: [ 5, 5 ]
-            Detective: [ 1, 1 ]
-            SecurityCadet: [ 4, 4 ]
-            Lawyer: [ 2, 2 ]
+            SecurityOfficer: [ 4, 6 ]
+            SecurityCadet: [ 2, 3 ]
             Brigmedic: [ 1, 1 ]
+            Detective: [ 1, 1 ]
             #supply
             Quartermaster: [ 1, 1 ]
             SalvageSpecialist: [ 3, 3 ]
-            Bitrunner: [ 2, 2 ]
-            CargoTechnician: [ 4, 4 ]
+            Bitrunner: [ 3, 3 ]
+            CargoTechnician: [ 6, 8 ]
+            MailTech: [ 1, 2 ]
             #civilian
             Passenger: [ -1, -1 ]
             Clown: [ 1, 1 ]
             Mime: [ 1, 1 ]
-            Musician: [ 1, 1 ]
-            Reporter: [ 1, 1 ]
+            Musician: [ 2, 2 ]
+            Reporter: [ 1, 2 ]
             #silicon
             StationAi: [ 1, 1 ]
-            Borg: [ 2, 3 ]
+            Borg: [ 3, 6 ]
+
+- type: gameMap
+  id: SSFland
+  mapName: 'Фланд'
+  mapPath: /Maps/_Sunset/Station/SSFland.yml
+  maxRandomOffset: 0
+  randomRotation: false
+  fallback: true
+  minPlayers: 0
+  stations:
+    CorvaxFland:
+      stationProto: StandardNanotrasenStation
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: '{0} Фланд {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationEmergencyShuttle
+          emergencyShuttlePath: /Maps/Shuttles/emergency.yml
+        - type: StationJobs
+          availableJobs:
+            # command
+            Captain: [ 1, 1 ]
+            BlueShield: [ 1, 1 ]
+            NanoTrasenRepresentative: [ 1, 1 ]
+            #service
+            HeadOfPersonnel: [ 1, 1 ]
+            Bartender: [ 2, 2 ]
+            Botanist: [ 3, 3 ]
+            Chef: [ 2, 2 ]
+            Janitor: [ 3, 3 ]
+            Chaplain: [ 1, 1 ]
+            Librarian: [ 1, 1 ]
+            Lawyer: [ 2, 2 ]
+            ServiceWorker: [ 2, 3 ]
+            Reporter: [ 1, 2 ]
+            #engineering
+            ChiefEngineer: [ 1, 1 ]
+            AtmosphericTechnician: [ 3, 3 ]
+            StationEngineer: [ 5, 5 ]
+            TechnicalAssistant: [ 4, 4 ]
+            #medical
+            ChiefMedicalOfficer: [ 1, 1 ]
+            Chemist: [ 3, 3 ]
+            MedicalDoctor: [ 6, 6 ]
+            Geneticist: [ 2, 2 ]
+            Paramedic: [ 2, 2 ]
+            MedicalIntern: [ 4, 4 ]
+            Surgeon: [ 2, 2 ]
+            #science
+            ResearchDirector: [ 1, 1 ]
+            Scientist: [ 5, 5 ]
+            ResearchAssistant: [ 6, 6 ]
+            Roboticist: [ 1, 2 ]
+            #security
+            HeadOfSecurity: [ 1, 1 ]
+            Warden: [ 1, 1 ]
+            SecurityOfficer: [ 10, 12 ]
+            SecurityCadet: [ 5, 6 ]
+            Brigmedic: [ 2, 2 ]
+            Detective: [ 2, 2 ]
+            #supply
+            Quartermaster: [ 1, 1 ]
+            SalvageSpecialist: [ 4, 4 ]
+            Bitrunner: [ 3, 3 ]
+            CargoTechnician: [ 4, 4 ]
+            MailTech: [ 1, 2 ]
+            #civilian
+            Passenger: [ -1, -1 ]
+            Clown: [ 1, 1 ]
+            Mime: [ 1, 1 ]
+            Musician: [ 2, 2 ]
+            Performer: [ 2, 3 ]
+            #silicon
+            StationAi: [ 1, 1 ]
+            Borg: [ 3, 4 ]
