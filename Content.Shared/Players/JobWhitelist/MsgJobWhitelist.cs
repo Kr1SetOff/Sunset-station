@@ -10,6 +10,11 @@ public sealed class MsgJobWhitelist : NetMessage
 
     public HashSet<string> Whitelist = new();
 
+    // 🌇Sunset🌇 - tier 4+ (SunSetter/Ghost) sponsors bypass every role requirement/whitelist check.
+    // Sent alongside the whitelist itself so the client-side requirement UI (job priorities, antag
+    // preferences) doesn't lock/reset roles the server would actually allow for these sponsors.
+    public bool SponsorRoleBypass;
+
     public override void ReadFromBuffer(NetIncomingMessage buffer, IRobustSerializer serializer)
     {
         var count = buffer.ReadVariableInt32();
@@ -19,6 +24,8 @@ public sealed class MsgJobWhitelist : NetMessage
         {
             Whitelist.Add(buffer.ReadString());
         }
+
+        SponsorRoleBypass = buffer.ReadBoolean();
     }
 
     public override void WriteToBuffer(NetOutgoingMessage buffer, IRobustSerializer serializer)
@@ -29,5 +36,7 @@ public sealed class MsgJobWhitelist : NetMessage
         {
             buffer.Write(ban);
         }
+
+        buffer.Write(SponsorRoleBypass);
     }
 }

@@ -6,9 +6,9 @@
 - type: gameMapPool
   id: SunSetMapPool
   maps:
-  - SSAmber
   - SSBagel
   - SSBox
   - SSCluster
+  - SSFland
+  - SSHotel
   - SSPacket
-  - SSloop

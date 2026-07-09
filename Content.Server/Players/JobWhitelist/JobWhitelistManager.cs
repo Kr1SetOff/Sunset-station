@@ -66,8 +66,8 @@ public sealed partial class JobWhitelistManager : IPostInjectInit
     /// </summary>
     public bool IsAllowed(ICommonSession session, ProtoId<JobPrototype> job)
     {
-        // 🌇Sunset🌇 - tier 5 (Ghost) sponsors get every "closed"/whitelisted job unlocked.
-        if (_sunsetSponsorTiers.GetSponsorTier(session) >= 5)
+        // 🌇Sunset🌇 - tier 4+ (SunSetter/Ghost) sponsors get every "closed"/whitelisted job unlocked.
+        if (_sunsetSponsorTiers.GetSponsorTier(session) >= 4)
             return true;
 
         if (!_config.GetCVar(CCVars.GameRoleWhitelist))
@@ -109,7 +109,9 @@ public sealed partial class JobWhitelistManager : IPostInjectInit
     {
         var msg = new MsgJobWhitelist
         {
-            Whitelist = _whitelists.GetValueOrDefault(player.UserId) ?? new HashSet<string>()
+            Whitelist = _whitelists.GetValueOrDefault(player.UserId) ?? new HashSet<string>(),
+            // 🌇Sunset🌇 - tier 4+ sponsors get every role requirement/whitelist bypassed client-side too.
+            SponsorRoleBypass = _sunsetSponsorTiers.GetSponsorTier(player) >= 4,
         };
 
         _net.ServerSendMessage(msg, player.Channel);

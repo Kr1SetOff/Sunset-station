@@ -4,16 +4,15 @@
     - cosmic
   name: cosmiccult-title
   description: cosmiccult-description
-  minPlayers: 30
+  minPlayers: 15 # 🌇Sunset🌇
   showInVote: true
   rules:
     - CosmicCult
-    - SubGamemodesRuleLessThieves
-    - MeteorSwarmScheduler
+    - SunSetCalmStationEventScheduler # 🌇Sunset🌇
     - SpaceTrafficControlEventScheduler
     - BasicRoundstartVariation
-    - BasicStationEventScheduler
     - RailroadingMinor
+    - SunSetBonusAntagsRule # 🌇Sunset🌇
 
 - type: gamePreset #Runs Cosmic Cult but shows "Secret" in lobby.
   id: SecretCosmicCult

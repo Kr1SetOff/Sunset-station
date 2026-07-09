@@ -8,7 +8,7 @@ objective-issuer-unknown = Неизвестный
 
 # Shown at the end of a round of Traitor
 
-traitor-title = Предатель
+traitor-title = Предатели
 traitor-description = Среди нас есть предатели...
 traitor-not-enough-ready-players = Недостаточно игроков готовы к игре! Из { $minimumPlayers } необходимых игроков готовы { $readyPlayersCount }. Невозможно начать режим Предатель
 traitor-no-one-ready = Нет готовых игроков! Не удалось начать режим Предателя.

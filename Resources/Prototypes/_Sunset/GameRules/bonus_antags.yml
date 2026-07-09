@@ -1,0 +1,47 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# 🌇Sunset🌇 - независимые от основного режима "бонусные" роллы, которые проверяются один раз
+# при старте раунда (SubGamemodesSystem реагирует на GameRuleAddedEvent), поэтому каждый бросок
+# срабатывает ровно один раз за смену. Записи без orGroup рассчитываются независимо друг от
+# друга (см. EntitySpawnCollection.GetSpawns) - поэтому Дьявол/Ниндзя/Светлоглазый могут выпасть
+# как по одному, так и все сразу, а не взаимоисключающе.
+- type: entity
+  parent: BaseGameRule
+  id: SunSetBonusAntagsRule
+  components:
+  - type: SubGamemodes
+    rules:
+    - id: Devil
+      prob: 0.45
+    - id: NinjaSpawn
+      prob: 0.35
+    - id: Brighteye
+      prob: 0.40
+
+# С шансом 50% в режиме "Волшебник" запускаются маги-дуэлянты (отдельная арена WizardDuel)
+# вместо одиночного волшебника. orGroup с суммой вероятностей 1.0 гарантирует ровно один исход.
+- type: entity
+  parent: BaseGameRule
+  id: SunSetWizardOrDuelRule
+  components:
+  - type: SubGamemodes
+    rules:
+    - id: Wizard
+      prob: 0.5
+      orGroup: wizardVariant
+    - id: WizardDuel
+      prob: 0.5
+      orGroup: wizardVariant
+
+# Заменяет стандартные широкие SubGamemodes-примеси (вампиры/визарды/ксеноборги/silicon
+# liberation) режимов на основе Traitor - оставляет только воров и шпионов, как и просили.
+- type: entity
+  parent: BaseGameRule
+  id: SunSetTraitorExtrasRule
+  components:
+  - type: SubGamemodes
+    rules:
+    - id: Thief
+      prob: 0.5
+    - id: Spy
+      prob: 0.35

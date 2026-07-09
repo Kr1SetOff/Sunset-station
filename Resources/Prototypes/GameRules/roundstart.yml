@@ -170,7 +170,7 @@
   id: Nukeops
   components:
   - type: GameRule
-    minPlayers: 20
+    minPlayers: 15 # 🌇Sunset🌇
     # Starlight Start
     denyGameRules:
     - AbductorsSpawn
@@ -280,7 +280,7 @@
   id: Traitor
   components:
   - type: GameRule
-    minPlayers: 0 # Starlight-edit
+    minPlayers: 5 # 🌇Sunset🌇
     delay:
       min: 240
       max: 420
@@ -435,7 +435,7 @@
   id: Wizard
   components:
   - type: GameRule
-    minPlayers: 40 # Starlight. So a Wizard can actually spawn on Beta.
+    minPlayers: 15 # 🌇Sunset🌇
   - type: AntagSelection
     agentName: wizard-round-end-name
     selectionTime: PrePlayerSpawn
@@ -478,7 +478,7 @@
   parent: BaseGameRule
   components:
   - type: GameRule
-    minPlayers: 20
+    minPlayers: 10 # 🌇Sunset🌇
     delay:
       min: 600
       max: 900

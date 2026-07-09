@@ -2,7 +2,7 @@
 # и GameRule Homelander (в sunset-station это был только спавнящийся ghost-role моб).
 
 roles-antag-homelander-name = Хоумлендер
-roles-antag-homelander-objective = Вы никому не подчиняетесь. Делайте то, что счёл бы нужным бог среди насекомых, — но помните, что правила сервера всё ещё действуют.
+roles-antag-homelander-objective = Уничтожь конкурентов и подчини станцию себе. Вы никому не подчиняетесь — делайте то, что счёл бы нужным бог среди насекомых, — но помните, что правила сервера всё ещё действуют.
 role-subtype-homelander = Хоумлендер
 
 homelander-round-end-agent-name = Хоумлендер

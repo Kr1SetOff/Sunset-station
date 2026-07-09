@@ -36,7 +36,7 @@ rev-briefing = Помогите главам революции убить, ар
 
 ## General
 
-rev-title = Революционеры
+rev-title = Революция
 rev-description = Революционеры среди нас.
 
 rev-not-enough-ready-players = Недостаточно игроков чтобы запустить режим. Готово { $readyPlayersCount } игроков из { $minimumPlayers } необходимых. Невозможно запустить режим Революция.

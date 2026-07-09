@@ -8,6 +8,7 @@ using Content.Server.GameTicking.Events;
 using Content.Server.Preferences.Managers;
 using Content.Server.Station.Events;
 using Content.Shared.Starlight;
+using Content.Shared._Sunset.SponsorTier;
 using Content.Shared.CCVar;
 using Content.Shared.GameTicking;
 using Content.Shared.Mobs;
@@ -37,6 +38,7 @@ public sealed partial class PlayTimeTrackingSystem : EntitySystem
     [Dependency] private IPrototypeManager _prototypes = default!;
     [Dependency] private SharedRoleSystem _roles = default!;
     [Dependency] private PlayTimeTrackingManager _tracking = default!;
+    [Dependency] private ISunsetSponsorTierReader _sunsetSponsorTiers = default!; // 🌇Sunset🌇
 
     public override void Initialize()
     {
@@ -266,6 +268,10 @@ public sealed partial class PlayTimeTrackingSystem : EntitySystem
     /// <returns>Returns true if all requirements were met or there were no requirements.</returns>
     public bool IsAllowed(ICommonSession player, ProtoId<JobPrototype> job)
     {
+        // 🌇Sunset🌇 - tier 4+ (SunSetter/Ghost) sponsors bypass playtime/requirement gates on every role.
+        if (_sunsetSponsorTiers.GetSponsorTier(player) >= 4)
+            return true;
+
         /* Starlight start - we check this in GetPlayTimeIfEnabled
         if (!_cfg.GetCVar(CCVars.GameRoleTimers))
             return true;
@@ -307,6 +313,10 @@ public sealed partial class PlayTimeTrackingSystem : EntitySystem
     /// <returns>Returns true if all requirements were met or there were no requirements.</returns>
     public bool IsAllowed(ICommonSession player, ProtoId<AntagPrototype> antag)
     {
+        // 🌇Sunset🌇 - tier 4+ (SunSetter/Ghost) sponsors bypass playtime/requirement gates on every role.
+        if (_sunsetSponsorTiers.GetSponsorTier(player) >= 4)
+            return true;
+
         /* Starlight start - we check this in GetPlayTimeIfEnabled
         if (!_cfg.GetCVar(CCVars.GameRoleTimers))
             return true;

@@ -95,13 +95,32 @@
   name: traitorling-title
   description: traitorling-description
   showInVote: true
-  minPlayers: 50
+  minPlayers: 10 # 🌇Sunset🌇
   rules:
     - SLChangeling
     - Traitor
-    - SubGamemodesRuleNoChangelings
-    - BasicStationEventScheduler
+    - SunSetTraitorExtrasRule # 🌇Sunset🌇
+    - SunSetCalmStationEventScheduler # 🌇Sunset🌇
     - BasicRoundstartVariation
+    - SunSetBonusAntagsRule # 🌇Sunset🌇
+
+# 🌇Sunset🌇 - "Вамп-преды": вампиры + всё то же, что в Предателях (воры/шпионы).
+- type: gamePreset
+  id: VampTraitor
+  alias:
+    - vamptraitor
+    - traitorvamp
+  name: vamptraitor-title
+  description: vamptraitor-description
+  showInVote: true
+  minPlayers: 10 # 🌇Sunset🌇
+  rules:
+    - Vampire
+    - Traitor
+    - SunSetTraitorExtrasRule
+    - SunSetCalmStationEventScheduler
+    - BasicRoundstartVariation
+    - SunSetBonusAntagsRule
 
 - type: gamePreset
   id: Vamptraitorling
@@ -115,14 +134,14 @@
   name: vamptraitorling-title
   description: vamptraitorling-description
   showInVote: true
-  minPlayers: 50
+  minPlayers: 10 # 🌇Sunset🌇
   rules:
     - SLChangelingLess
     - TraitorLess
     - VampireLess
-    - SubGamemodesRuleVampTraitorLing
-    - BasicStationEventScheduler
+    - SunSetCalmStationEventScheduler # 🌇Sunset🌇
     - BasicRoundstartVariation
+    - SunSetBonusAntagsRule # 🌇Sunset🌇
 
 
 - type: gamePreset

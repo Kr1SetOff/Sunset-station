@@ -1,6 +1,6 @@
 ## COSMIC CULT ROUND, ANTAG & GAMEMODE TEXT
 
-cosmiccult-title = Космический культ
+cosmiccult-title = Космо-культисты
 cosmiccult-description = Культисты скрываются среди экипажа.
 
 roles-antag-cosmiccult-name = Космический культист
