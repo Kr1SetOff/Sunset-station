@@ -2,7 +2,7 @@
 # and the Homelander GameRule (sunset-station's version was a ghost-role-only spawnable mob).
 
 roles-antag-homelander-name = Homelander
-roles-antag-homelander-objective = You answer to no one. Do whatever you believe a god among insects would do - but remember the server rules still apply.
+roles-antag-homelander-objective = Destroy your rivals and bring the station under your control. You answer to no one - do whatever you believe a god among insects would do - but remember the server rules still apply.
 role-subtype-homelander = Homelander
 
 homelander-round-end-agent-name = Homelander
