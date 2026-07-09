@@ -39,6 +39,37 @@ public sealed partial class AntagSelectionSystem
 
     private void OnSunsetJobsAssigned(RulePlayerJobsAssignedEvent args)
     {
+        // 🌇Sunset🌇 - named sponsor role guarantees. These run before the generic tier-5 "any antag"
+        // pass below so that tier 3-5 sponsors preferentially land their named perk role (Homelander)
+        // instead of being consumed by the generic guarantee first; Spy runs second and only picks up
+        // whoever the Homelander roll didn't already turn into an antagonist. Homelander is checked
+        // first specifically because it's the more exclusive (tier 3-5 only) of the two perks. Spy
+        // starts at tier 2 (Syndicate Agent) - tier 1 (Zombie) does not get the Spy guarantee.
+        foreach (var session in args.Players)
+        {
+            if (_sunsetSponsorTiers.GetSponsorTier(session) < 3)
+                continue;
+
+            if (_role.MindIsAntagonist(session.GetMind()))
+                continue;
+
+            if (!RobustRandom.Prob(0.95f))
+                continue;
+
+            TryForceSunsetNamedAntag(session, "Homelander");
+        }
+
+        foreach (var session in args.Players)
+        {
+            if (_sunsetSponsorTiers.GetSponsorTier(session) < 2)
+                continue;
+
+            if (_role.MindIsAntagonist(session.GetMind()))
+                continue; // already an antagonist (e.g. just got Homelander above) - nothing to do.
+
+            TryForceSunsetNamedAntag(session, "Spy");
+        }
+
         var maxPerRound = _sunsetCfg.GetCVar(SunsetCCVars.SunsetTier5MaxForcedAntagsPerRound);
 
         foreach (var session in args.Players)
@@ -58,6 +89,48 @@ public sealed partial class AntagSelectionSystem
             if (TryForceSunsetTier5Antag(session))
                 _sunsetTier5ForcedThisRound++;
         }
+    }
+
+    /// <summary>
+    /// Tries to force-assign a sponsor into a specific named antag GameRule (e.g. "Spy", "Homelander"),
+    /// starting that rule first if it isn't already active this round. Bypasses the normal preference/pool
+    /// lottery the same way <see cref="TryForceSunsetTier5Antag"/> does, but targets one rule by prototype
+    /// ID instead of picking from every currently-active rule.
+    /// </summary>
+    private bool TryForceSunsetNamedAntag(ICommonSession session, string ruleId)
+    {
+        var ruleEntity = EntityUid.Invalid;
+
+        var query = QueryActiveRules();
+        while (query.MoveNext(out var uid, out _, out _, out _))
+        {
+            if (MetaData(uid).EntityPrototype?.ID != ruleId)
+                continue;
+
+            ruleEntity = uid;
+            break;
+        }
+
+        if (ruleEntity == EntityUid.Invalid && !GameTicker.StartGameRule(ruleId, out ruleEntity))
+            return false;
+
+        if (!TryComp<AntagSelectionComponent>(ruleEntity, out var antag))
+            return false;
+
+        foreach (var def in antag.Definitions)
+        {
+            if (!def.PickPlayer)
+                continue;
+
+            if (!TryMakeAntag((ruleEntity, antag), session, def, checkPref: false))
+                continue;
+
+            _adminLogger.Add(LogType.AntagSelection,
+                $"Sunset sponsor guarantee force-assigned {session} as antagonist: {ToPrettyString(ruleEntity)}");
+            return true;
+        }
+
+        return false;
     }
 
     /// <summary>

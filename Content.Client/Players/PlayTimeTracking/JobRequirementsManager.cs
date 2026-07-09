@@ -35,6 +35,7 @@ public sealed partial class JobRequirementsManager : ISharedPlaytimeManager
     private readonly List<string> _jobBans = new();
     private readonly List<string> _antagBans = new();
     private readonly List<string> _jobWhitelists = new();
+    private bool _sponsorRoleBypass; // 🌇Sunset🌇 - tier 4+ sponsors, see MsgJobWhitelist.SponsorRoleBypass
 
     // nulllink start
     private Dictionary<string, TimeSpan> _originalRoles = [];
@@ -138,6 +139,7 @@ public sealed partial class JobRequirementsManager : ISharedPlaytimeManager
             _jobWhitelists.Clear();
             _jobBans.Clear();
             _antagBans.Clear();
+            _sponsorRoleBypass = false; // 🌇Sunset🌇
         }
     }
 
@@ -177,6 +179,7 @@ public sealed partial class JobRequirementsManager : ISharedPlaytimeManager
     {
         _jobWhitelists.Clear();
         _jobWhitelists.AddRange(message.Whitelist);
+        _sponsorRoleBypass = message.SponsorRoleBypass; // 🌇Sunset🌇
         Updated?.Invoke();
     }
 
@@ -230,6 +233,13 @@ public sealed partial class JobRequirementsManager : ISharedPlaytimeManager
             return false;
         }
 
+        // 🌇Sunset🌇 - tier 4+ sponsors bypass whitelist/requirement checks (bans above still apply).
+        if (_sponsorRoleBypass)
+        {
+            reason = FormattedMessage.Empty;
+            return true;
+        }
+
         // Check whitelist requirements
         if (!CheckWhitelist(job, out reason))
             return false;
@@ -259,6 +269,13 @@ public sealed partial class JobRequirementsManager : ISharedPlaytimeManager
         {
             reason = FormattedMessage.FromUnformatted(Loc.GetString("role-ban"));
             return false;
+        }
+
+        // 🌇Sunset🌇 - tier 4+ sponsors bypass whitelist/requirement checks (bans above still apply).
+        if (_sponsorRoleBypass)
+        {
+            reason = FormattedMessage.Empty;
+            return true;
         }
 
         // Check whitelist requirements
