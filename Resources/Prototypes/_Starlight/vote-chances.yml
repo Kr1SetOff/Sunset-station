@@ -1,16 +1,16 @@
+# 🌇Sunset🌇 - куррируемый список из 11 режимов, участвующих в автоголосовании за режим
+# (см. Content.Shared._Starlight.CCVar.StarlightCCVars.RoundVotingCount = 4 показанных варианта).
 - type: roundvotingchances
   id: Basic
   chances:
-    Survival: 10
-    KesslerSyndrome: 10
-    Greenshift: 40
-    Traitor: 30
-    Nukeops: 20
-    Zombie: 10
-    Zombieteors: 5
-    Changeling: 30
-    Vampire: 30
-    Extended: 20
-    Revolutionary: 20
-    CosmicCult: 20
-    Xenoborgs: 20
+    Traitor: 20            # Предатели
+    Traitorling: 20        # Гено-преды
+    VampTraitor: 20        # Вамп-преды
+    Vamptraitorling: 20    # Комбо
+    Nukeops: 20            # Ядерные оперативники
+    Wizard: 20             # Волшебник
+    Extended: 20           # Расширенный
+    Revolutionary: 20      # Революция
+    Zombie: 20             # Зомби
+    Xenoborgs: 20          # Ксеноборги
+    CosmicCult: 20         # Космо-культисты

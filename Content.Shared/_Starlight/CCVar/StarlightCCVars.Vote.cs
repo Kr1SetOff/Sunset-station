@@ -19,10 +19,10 @@ public sealed partial class StarlightCCVars
         CVarDef.Create("vote.show_map_votes", false);
 
     public static readonly CVarDef<bool> RunMapVoteAfterRestart =
-        CVarDef.Create("vote.run_map_vote_after_restart", false);
+        CVarDef.Create("vote.run_map_vote_after_restart", true);
 
     public static readonly CVarDef<bool> RunPresetVoteAfterRestart =
-        CVarDef.Create("vote.run_preset_vote_after_restart", false);
+        CVarDef.Create("vote.run_preset_vote_after_restart", true);
 
     public static readonly CVarDef<int> VotingsDelay =
         CVarDef.Create("vote.votings_delay", 90);
@@ -31,7 +31,7 @@ public sealed partial class StarlightCCVars
         CVarDef.Create("vote.map_voting_count", 3);
 
     public static readonly CVarDef<int> RoundVotingCount =
-        CVarDef.Create("vote.round_voting_count", 3);
+        CVarDef.Create("vote.round_voting_count", 4);
 
     public static readonly CVarDef<string> MapVotingChancesPrototype =
         CVarDef.Create("vote.map_voting_chances_prototype", "");

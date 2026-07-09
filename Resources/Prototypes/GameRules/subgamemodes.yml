@@ -2,6 +2,8 @@
   parent: BaseGameRule
   id: Thief
   components:
+  - type: GameRule
+    minPlayers: 5 # 🌇Sunset🌇
   - type: ThiefRule
 #  - type: AntagObjectives # Starlight start
 #    objectives: # We won't be using this, we'll be taking it from GroupOuter instead so we can roll for Master Thief
@@ -41,6 +43,8 @@
   parent: BaseGameRule
   id: SLChangeling
   components:
+  - type: GameRule
+    minPlayers: 10 # 🌇Sunset🌇
   - type: SLChangelingRule
   - type: AntagSelection
     agentName: changeling-roundend-name
@@ -68,6 +72,8 @@
   parent: BaseGameRule
   id: Vampire
   components:
+  - type: GameRule
+    minPlayers: 10 # 🌇Sunset🌇
   - type: VampireRule
   - type: AntagObjectives
     objectives:
@@ -144,7 +150,7 @@
   - type: XenoborgsRule
   - type: RuleGrids
   - type: GameRule
-    minPlayers: 20 # Starlight - 30 -> 20
+    minPlayers: 15 # 🌇Sunset🌇
   - type: LoadMapRule
     gridPath: /Maps/_Starlight/Shuttles/mothership.yml # Starlight-edit custom shuttle grid
   - type: AntagMultipleRoleSpawner

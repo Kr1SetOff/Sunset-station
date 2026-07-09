@@ -73,7 +73,9 @@ namespace Content.Client.Voting.UI
                 //starlight start
                 //ignore preset and map
                 //not a fan of this but I cant be arsed to make a cvar for it
-                if (voteType is StandardVoteType.Preset or StandardVoteType.Map)
+                // 🌇Sunset🌇 - also ignore Restart; only Votekick should be manually callable now that
+                // map/preset votes run automatically at round end (see GameTicker.RoundEndVote.cs).
+                if (voteType is StandardVoteType.Preset or StandardVoteType.Map or StandardVoteType.Restart)
                     continue;
                 //starlight end
                 VoteTypeButton.AddItem(Loc.GetString(option.Name), (int)voteType);
