@@ -1,0 +1,61 @@
+- type: entity
+  parent: BaseItem
+  id: PhotoCamera
+  name: фотоаппарат
+  description: Скажите "сыр!" — печатает снимок на бумаге.
+  components:
+  - type: Sprite
+    sprite: _Sunset/Objects/Misc/camera.rsi
+    layers:
+    - state: camera
+  - type: Eye
+  - type: PhotoCamera
+  - type: UseDelay
+  - type: ActivatableUI
+    key: enum.PhotoCameraUiKey.Key
+    inHandsOnly: true
+  - type: UserInterface
+    interfaces:
+      enum.PhotoCameraUiKey.Key:
+        type: PhotoCameraBoundUserInterface
+  - type: MaterialStorage
+    whitelist:
+      tags:
+      - Paper
+
+- type: entity
+  parent: PhotoCamera
+  id: PhotoCameraFilled
+  suffix: Filled
+  components:
+  - type: MaterialStorage
+    whitelist:
+      tags:
+      - Paper
+    storage:
+      Paper: 1000
+
+- type: entity
+  name: фотография
+  parent: BasePaper
+  id: PhotoCard
+  description: Бумага с напечатанным на ней изображением.
+  components:
+  - type: Sprite
+    sprite: _Sunset/Objects/Misc/camera.rsi
+    layers:
+    - state: card
+  - type: ActivatableUI
+    key: enum.PhotoCardUiKey.Key
+    requiresComplex: false
+  - type: UserInterface
+    interfaces:
+      enum.PhotoCardUiKey.Key:
+        type: PhotoCardBoundUserInterface
+  - type: PhotoCard
+  - type: FaxableObject
+  - type: Tag
+    tags:
+    - Document
+    - Paper
+    - Photo

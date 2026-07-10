@@ -1070,6 +1070,9 @@
                   # SmartCorgi and petAdvanced use it for eyes slots. petAdvanced uses it for head slot.
 
 - type: Tag
+  id: Photo # PhotoCard tag
+
+- type: Tag
   id: Pickaxe # GatherableComponent whitelist on WallRock.
 
 - type: Tag

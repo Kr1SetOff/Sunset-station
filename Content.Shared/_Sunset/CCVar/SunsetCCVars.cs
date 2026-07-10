@@ -55,4 +55,14 @@ public sealed partial class SunsetCCVars
     /// </summary>
     public static readonly CVarDef<int> SunsetTier5MaxForcedAntagsPerRound =
         CVarDef.Create("sunset.boosty_discord.tier5_max_forced_per_round", 5, CVar.SERVER);
+
+    /// <summary>
+    /// Whether using the photo camera requires a minimum amount of overall playtime, to keep freshly-made
+    /// accounts from using it to smuggle arbitrary images onto the server as printed photo cards.
+    /// </summary>
+    public static readonly CVarDef<bool> PhotoPlayTimeRequire =
+        CVarDef.Create("sunset.photo.playtime_require", true, CVar.SERVERONLY);
+
+    public static readonly CVarDef<float> PhotoPlayTimeHours =
+        CVarDef.Create("sunset.photo.playtime_require_hours", 12f, CVar.SERVERONLY);
 }

@@ -78,6 +78,9 @@ namespace Content.Client.Voting.UI
                 if (voteType is StandardVoteType.Preset or StandardVoteType.Map or StandardVoteType.Restart)
                     continue;
                 //starlight end
+                // Sunset - remove "Restart round" from the vote menu entirely
+                if (voteType is StandardVoteType.Restart)
+                    continue;
                 VoteTypeButton.AddItem(Loc.GetString(option.Name), (int)voteType);
             }
 
