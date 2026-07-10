@@ -14,7 +14,7 @@
   fallback: true
   minPlayers: 0
   stations:
-    CorvaxBagel:
+    StarlightBagel:
       stationProto: StandardNanotrasenStation
       components:
         - type: StationNameSetup
@@ -89,7 +89,7 @@
   fallback: true
   minPlayers: 0
   stations:
-    CorvaxBox:
+    StarlightBox:
       stationProto: StandardNanotrasenStation
       components:
         - type: StationNameSetup
@@ -163,7 +163,7 @@
   fallback: true
   minPlayers: 0
   stations:
-    Cluster:
+    StarlightCluster:
       stationProto: StandardNanotrasenStation
       components:
         - type: StationEmergencyShuttle
@@ -232,7 +232,7 @@
   fallback: true
   minPlayers: 0
   stations:
-    CorvaxPacked:
+    StarlightPacked:
       stationProto: StandardNanotrasenStation
       components:
         - type: StationNameSetup
@@ -306,7 +306,7 @@
   fallback: true
   minPlayers: 0
   stations:
-    CorvaxHotel:
+    StarlightHotel:
       stationProto: StandardNanotrasenStation
       components:
         - type: StationNameSetup
@@ -381,7 +381,7 @@
   fallback: true
   minPlayers: 0
   stations:
-    CorvaxFland:
+    StarlightFland:
       stationProto: StandardNanotrasenStation
       components:
         - type: StationNameSetup
