@@ -63,7 +63,14 @@ public sealed partial class PhotographySystem : EntitySystem
     /// </summary>
     private void OnAfterInteract(Entity<PictureTakerComponent> ent, ref AfterInteractEvent args)
     {
-        if (args.Handled || args.Target is not { } target || !args.CanReach || target == args.User)
+        if (args.Handled || args.Target is not { } target || target == args.User)
+            return;
+
+        // Don't gate on args.CanReach - that's melee-adjacent range. A camera should be able to
+        // snap a picture of someone standing across the room, same as its Flash's own AOE range.
+        TryComp<FlashComponent>(ent.Owner, out var flashComp);
+        var range = flashComp?.Range ?? 7f;
+        if (!_examine.InRangeUnOccluded(args.User, target, range))
             return;
 
         if (!TryComp<LimitedChargesComponent>(ent.Owner, out var charges) || _charges.IsEmpty((ent.Owner, charges)))
@@ -77,7 +84,7 @@ public sealed partial class PhotographySystem : EntitySystem
 
         var flashDuration = TimeSpan.FromSeconds(2);
         var slowTo = 0.8f;
-        if (TryComp<FlashComponent>(ent.Owner, out var flashComp))
+        if (flashComp != null)
         {
             flashDuration = flashComp.AoeFlashDuration;
             slowTo = flashComp.SlowTo;

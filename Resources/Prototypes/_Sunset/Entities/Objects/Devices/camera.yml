@@ -1,8 +1,8 @@
 - type: entity
   parent: BaseItem
   id: PhotoCamera
-  name: photo camera
-  description: A simple instant camera. Point it at someone and click to snap their picture, or swing it at them to get up close and personal. Needs a film cartridge to work.
+  name: фотоаппарат
+  description: Простой моментальный фотоаппарат. Наведите его на кого-нибудь и щёлкните, чтобы сделать снимок, или ударьте им, чтобы снять с более близкого расстояния. Требует картридж с плёнкой для работы.
   components:
   - type: PictureTaker
     photographs: !type:GroupSelector
@@ -49,7 +49,7 @@
   abstract: true
   parent: BasePaper
   id: SunsetBasePhotograph
-  name: photograph
+  name: фотография
 
 - type: entity
   parent: SunsetBasePhotograph
@@ -129,8 +129,8 @@
 - type: entity
   parent: BaseItem
   id: CameraFilmCartridge
-  name: camera film cartridge
-  description: A fresh roll of instant film. Insert it into a photo camera to reload it.
+  name: картридж с плёнкой
+  description: Свежий рулон моментальной плёнки. Вставьте в фотоаппарат, чтобы перезарядить его.
   components:
   - type: Sprite
     sprite: _Sunset/Objects/Devices/camera_film.rsi
