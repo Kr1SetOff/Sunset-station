@@ -211,9 +211,6 @@
   id: Cake # CargoBounty blacklist: BountyFruit, BountyVegetable
 
 - type: Tag
-  id: CameraFilm
-
-- type: Tag
   id: Candle # Storage whitelist: BoxCandle
 
 - type: Tag
@@ -1071,6 +1068,9 @@
 - type: Tag
   id: PetWearable # Used by hamster, kangaroo, pet, petAdvanced, SmartCorgi InventoryTemplate to whitelist mask slots.
                   # SmartCorgi and petAdvanced use it for eyes slots. petAdvanced uses it for head slot.
+
+- type: Tag
+  id: Photo # PhotoCard tag
 
 - type: Tag
   id: Pickaxe # GatherableComponent whitelist on WallRock.

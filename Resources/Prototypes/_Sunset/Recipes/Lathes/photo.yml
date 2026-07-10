@@ -1,0 +1,10 @@
+- type: latheRecipe
+  id: PhotoCamera
+  result: PhotoCamera
+  categories:
+  - Service
+  completetime: 4
+  materials:
+    Steel: 300
+    Glass: 200
+    Plastic: 100
