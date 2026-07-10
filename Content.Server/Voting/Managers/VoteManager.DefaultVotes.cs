@@ -375,13 +375,14 @@ namespace Content.Server.Voting.Managers
                 {
                     picked = (GameMapPrototype) _random.Pick(args.Winners);
                     _chatManager.DispatchServerAnnouncement(
-                        Loc.GetString("ui-vote-map-tie"));
+                        Loc.GetString("ui-vote-map-tie", ("picked", picked.MapName)));
                 }
                 else
                 {
                     picked = (GameMapPrototype) args.Winner;
+                    _chatManager.DispatchServerAnnouncement(
+                        Loc.GetString("ui-vote-map-win", ("winner", picked.MapName)));
                 }
-                _chatManager.DispatchServerAnnouncement(Loc.GetString("ui-vote-map-win"));
 
                 _adminLogger.Add(LogType.Vote, LogImpact.Medium, $"Map vote finished: {picked.MapName}");
                 var ticker = _entityManager.EntitySysManager.GetEntitySystem<GameTicker>();
