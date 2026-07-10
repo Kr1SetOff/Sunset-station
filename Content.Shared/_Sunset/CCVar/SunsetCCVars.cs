@@ -61,7 +61,7 @@ public sealed partial class SunsetCCVars
     /// accounts from using it to smuggle arbitrary images onto the server as printed photo cards.
     /// </summary>
     public static readonly CVarDef<bool> PhotoPlayTimeRequire =
-        CVarDef.Create("sunset.photo.playtime_require", true, CVar.SERVERONLY);
+        CVarDef.Create("sunset.photo.playtime_require", false, CVar.SERVERONLY);
 
     public static readonly CVarDef<float> PhotoPlayTimeHours =
         CVarDef.Create("sunset.photo.playtime_require_hours", 20f, CVar.SERVERONLY);

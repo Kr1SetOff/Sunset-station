@@ -30,7 +30,7 @@ public sealed partial class PhotoSystem : SharedPhotoSystem
     //96 KB
     const int MAX_SIZE = 1024 * 96;
 
-    private bool _photoTimeRequiredEnabled = true;
+    private bool _photoTimeRequiredEnabled = false;
     private float _photoTimeRequiredHours = 20;
 
     public override void Initialize()

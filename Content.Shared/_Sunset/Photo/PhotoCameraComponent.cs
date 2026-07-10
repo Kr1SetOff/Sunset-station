@@ -9,9 +9,9 @@ namespace Content.Shared._Sunset.Photo;
 public sealed partial class PhotoCameraComponent : Component
 {
     [DataField]
-    public Vector2 ViewBox = new Vector2(5, 5);
+    public Vector2 ViewBox = new Vector2(12, 12);
     [DataField]
-    public float MinZoom = 0.2f, MaxZoom = 1f;
+    public float MinZoom = 0.2f, MaxZoom = 2.5f;
 
     [DataField]
     public SoundSpecifier PhotoSound = new SoundPathSpecifier("/Audio/_Sunset/Effects/photo_shoot.ogg");
