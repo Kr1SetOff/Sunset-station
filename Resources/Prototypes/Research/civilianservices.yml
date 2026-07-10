@@ -57,6 +57,8 @@
   - HolopadMachineCircuitboard
   - BladeServerRackMachineCircuitboard # Moffstation - Blade Server Rack constructible
   - SurveillanceWirelessCameraHandheld # MOFFSTATION CHANGE - Adds wireless handheld camera
+  - PhotoCamera # Sunset - Photo camera
+  - CameraFilmCartridge # Sunset - Photo camera film
   radioChannels:
   - Service
 

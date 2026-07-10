@@ -1,0 +1,146 @@
+- type: entity
+  parent: BaseItem
+  id: PhotoCamera
+  name: photo camera
+  description: A simple instant camera. Point it at someone and click to snap their picture, or swing it at them to get up close and personal. Needs a film cartridge to work.
+  components:
+  - type: PictureTaker
+    photographs: !type:GroupSelector
+      children:
+      - !type:NestedSelector
+        tableId: PhotoCameraPhotographs
+  - type: Sprite
+    sprite: _Sunset/Objects/Devices/camera.rsi
+    state: icon
+  - type: Item
+    size: Normal
+  - type: Flash
+    flashOnUse: false
+    flashOnMelee: true
+    meleeStunDuration: null
+    sound: /Audio/_Sunset/Misc/camera_snap.ogg
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 0
+  - type: LimitedCharges
+    maxCharges: 6
+  - type: CameraFilmSlot
+    slotId: film_slot
+  - type: ItemSlots
+    slots:
+      film_slot:
+        name: camera-film-slot-component-slot-name
+        whitelist:
+          tags:
+          - CameraFilm
+        whitelistFailPopup: camera-film-slot-whitelist-fail
+        insertSuccessPopup: camera-film-slot-insert-success
+  - type: Clothing
+    slots:
+    - NECK
+    sprite: _Sunset/Objects/Devices/camera.rsi
+  - type: UseDelay
+  - type: StaticPrice
+    price: 100
+
+# base prototype so extra components can be added to all photographs later without touching each color variant
+- type: entity
+  abstract: true
+  parent: BasePaper
+  id: SunsetBasePhotograph
+  name: photograph
+
+- type: entity
+  parent: SunsetBasePhotograph
+  id: SunsetPhotographBlack
+  components:
+  - type: Sprite
+    sprite: _Sunset/Objects/Misc/photograph.rsi
+    layers:
+    - state: black
+
+- type: entity
+  parent: SunsetBasePhotograph
+  id: SunsetPhotographRed
+  components:
+  - type: Sprite
+    sprite: _Sunset/Objects/Misc/photograph.rsi
+    layers:
+    - state: red
+
+- type: entity
+  parent: SunsetBasePhotograph
+  id: SunsetPhotographBlue
+  components:
+  - type: Sprite
+    sprite: _Sunset/Objects/Misc/photograph.rsi
+    layers:
+    - state: blue
+
+- type: entity
+  parent: SunsetBasePhotograph
+  id: SunsetPhotographGreen
+  components:
+  - type: Sprite
+    sprite: _Sunset/Objects/Misc/photograph.rsi
+    layers:
+    - state: green
+
+- type: entity
+  parent: SunsetBasePhotograph
+  id: SunsetPhotographYellow
+  components:
+  - type: Sprite
+    sprite: _Sunset/Objects/Misc/photograph.rsi
+    layers:
+    - state: yellow
+
+- type: entity
+  parent: SunsetBasePhotograph
+  id: SunsetPhotographPurple
+  components:
+  - type: Sprite
+    sprite: _Sunset/Objects/Misc/photograph.rsi
+    layers:
+    - state: purple
+
+- type: entity
+  parent: SunsetBasePhotograph
+  id: SunsetPhotographRainbow
+  components:
+  - type: Sprite
+    sprite: _Sunset/Objects/Misc/photograph.rsi
+    layers:
+    - state: rainbow
+
+- type: entityTable
+  id: PhotoCameraPhotographs
+  table: !type:GroupSelector
+    children:
+    - id: SunsetPhotographBlack
+    - id: SunsetPhotographRed
+    - id: SunsetPhotographBlue
+    - id: SunsetPhotographGreen
+    - id: SunsetPhotographYellow
+    - id: SunsetPhotographPurple
+    - id: SunsetPhotographRainbow
+
+- type: entity
+  parent: BaseItem
+  id: CameraFilmCartridge
+  name: camera film cartridge
+  description: A fresh roll of instant film. Insert it into a photo camera to reload it.
+  components:
+  - type: Sprite
+    sprite: _Sunset/Objects/Devices/camera_film.rsi
+    state: icon
+  - type: Item
+    size: Small
+  - type: CameraFilmCartridge
+    charges: 6
+  - type: Tag
+    tags:
+    - CameraFilm
+  - type: StaticPrice
+    price: 25

@@ -211,6 +211,9 @@
   id: Cake # CargoBounty blacklist: BountyFruit, BountyVegetable
 
 - type: Tag
+  id: CameraFilm
+
+- type: Tag
   id: Candle # Storage whitelist: BoxCandle
 
 - type: Tag
