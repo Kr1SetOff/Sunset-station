@@ -25,6 +25,8 @@ public sealed partial class PlaytimeTab : Control
 
         PopulateTrackers();
 
+        TrackerOption.OnItemSelected += args => TrackerOption.SelectId(args.Id);
+
         GetButton.OnPressed += _ => RunCommand(getOverall: "playtime_getoverall", getRole: "playtime_getrole");
         AddButton.OnPressed += _ => RunCommand(getOverall: "playtime_addoverall", getRole: "playtime_addrole", needsMinutes: true);
         SetButton.OnPressed += _ => RunCommand(getOverall: "playtime_setoverall", getRole: "playtime_setrole", needsMinutes: true);
