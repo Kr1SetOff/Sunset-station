@@ -694,12 +694,8 @@ namespace Content.Server.Voting.Managers
                 if (!preset.ShowInVote)
                     continue;
 
-                if (_playerManager.PlayerCount < (preset.MinPlayers ?? int.MinValue))
-                    continue;
-
-                if (_playerManager.PlayerCount > (preset.MaxPlayers ?? int.MaxValue))
-                    continue;
-
+                // 🌇Sunset🌇 - deliberately ignore MinPlayers/MaxPlayers here so any of the curated
+                // modes can be offered (and picked) in the automatic vote regardless of population.
                 //STARLIGHT
                 //check if its on the cooldown list
                 //if the cooldown number is 0 or lower, we dont cooldown this selection anyway

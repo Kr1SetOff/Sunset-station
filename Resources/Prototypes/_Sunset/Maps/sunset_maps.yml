@@ -75,7 +75,7 @@
             Musician: [ 1, 1 ]
             Reporter: [ 1, 1 ]
             ServiceWorker: [ 2, 2 ]
-            Passenger: [ -1, -1 ]
+            Assistant: [ -1, -1 ]
             #silicon
             StationAi: [ 1, 1 ]
             Borg: [ 2, 2 ]
@@ -151,7 +151,7 @@
             Boxer: [ 1, 1 ]
             Zookeeper: [ 1, 1 ]
             Reporter: [ 1, 2 ]
-            Passenger: [ -1, -1 ]
+            Assistant: [ -1, -1 ]
             # silicon
             StationAi: [ 1, 1 ]
             Borg: [ 2, 3 ]
@@ -218,7 +218,7 @@
             Bitrunner: [ 3, 3 ]
             CargoTechnician: [ 2, 2 ]
             #civillian
-            Passenger: [ -1, -1 ]
+            Assistant: [ -1, -1 ]
             Clown: [ 1, 1 ]
             Mime: [ 1, 1 ]
             Musician: [ 1, 1 ]
@@ -292,7 +292,7 @@
             Mime: [ 1, 1 ]
             Musician: [ 1, 1 ]
             ServiceWorker: [ 2, 2 ]
-            Passenger: [ -1, -1 ]
+            Assistant: [ -1, -1 ]
             # silicon
             StationAi: [ 1, 1 ]
             Borg: [ 2, 2 ]
@@ -363,7 +363,7 @@
             CargoTechnician: [ 6, 8 ]
             MailTech: [ 1, 2 ]
             #civilian
-            Passenger: [ -1, -1 ]
+            Assistant: [ -1, -1 ]
             Clown: [ 1, 1 ]
             Mime: [ 1, 1 ]
             Musician: [ 2, 2 ]
@@ -440,7 +440,7 @@
             CargoTechnician: [ 4, 4 ]
             MailTech: [ 1, 2 ]
             #civilian
-            Passenger: [ -1, -1 ]
+            Assistant: [ -1, -1 ]
             Clown: [ 1, 1 ]
             Mime: [ 1, 1 ]
             Musician: [ 2, 2 ]
