@@ -675,6 +675,10 @@ namespace Content.Server.Voting.Managers
             DirtyCanCallVoteAll();
         }
 
+        /// <summary>
+        /// Selects game presets eligible for the round vote using configured chances and cooldowns.
+        /// </summary>
+        /// <returns>A dictionary of selected game presets and their display titles.</returns>
         private Dictionary<GamePresetPrototype, string> GetGamePresets()
         {
             var presets = new Dictionary<GamePresetPrototype, string>();

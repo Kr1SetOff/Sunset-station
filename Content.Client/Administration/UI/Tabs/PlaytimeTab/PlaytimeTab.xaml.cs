@@ -18,6 +18,9 @@ public sealed partial class PlaytimeTab : Control
 
     private readonly List<string> _trackerIds = new();
 
+    /// <summary>
+    /// Initializes the playtime management tab and wires its controls to playtime commands.
+    /// </summary>
     public PlaytimeTab()
     {
         RobustXamlLoader.Load(this);
