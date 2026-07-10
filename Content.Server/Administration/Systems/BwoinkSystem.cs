@@ -1,9 +1,11 @@
 using System.Linq;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Text.Json;
 using System.Text.Json.Nodes;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
 using Content.Server.Administration.Managers;
 using Content.Server.Afk;
@@ -377,7 +379,22 @@ namespace Content.Server.Administration.Systems
 
         private async Task<WebhookData?> GetWebhookData(string id, string token)
         {
-            var response = await _httpClient.GetAsync($"https://discord.com/api/v10/webhooks/{id}/{token}");
+            // Fail fast instead of hanging on the default 100s HttpClient timeout if Discord/the
+            // network is unreachable - this runs synchronously off a CVar change, including at startup.
+            using var cts = new CancellationTokenSource(TimeSpan.FromSeconds(10));
+
+            HttpResponseMessage response;
+            try
+            {
+                using var request = new HttpRequestMessage(HttpMethod.Get, $"https://discord.com/api/v10/webhooks/{id}/{token}");
+                request.Headers.UserAgent.Add(new ProductInfoHeaderValue("SunsetStation", "1.0"));
+                response = await _httpClient.SendAsync(request, cts.Token);
+            }
+            catch (OperationCanceledException)
+            {
+                _sawmill.Log(LogLevel.Error, "Timed out reaching Discord to validate the ahelp webhook (network/DNS issue?).");
+                return null;
+            }
 
             var content = await response.Content.ReadAsStringAsync();
             if (!response.IsSuccessStatusCode)
