@@ -3,13 +3,13 @@
 # included per animal - not every animal has every slot. Armor values are cosmetic-tier by design
 # (these are gang costumes, not real protective gear).
 
-# --- Swan (two twin brothers sharing one costume set: two masks, two jackets, shared gloves and
-# tank top - bundled together as a single crate/set per the source art's naming) ---
+# --- Swan (brother and sister sharing one costume set: two masks, two jackets, two pairs of
+# gloves, two tank tops - bundled together as a single crate/set per the source art's naming) ---
 
 - type: entity
   parent: ClothingMaskBase
   id: ClothingMaskHotlineSwan
-  name: swan mask (first brother)
+  name: swan mask (brother)
   description: A cracked plastic swan mask. Something about it feels final.
   components:
   - type: Sprite
@@ -22,8 +22,8 @@
 - type: entity
   parent: ClothingMaskBase
   id: ClothingMaskHotlineSwan2
-  name: swan mask (second brother)
-  description: The other one's mask. Same cracked plastic, same finality.
+  name: swan mask (sister)
+  description: Her mask. Same cracked plastic, same finality.
   components:
   - type: Sprite
     sprite: _Sunset/Clothing/Mask/HotlineMiami/swan2.rsi
@@ -35,7 +35,7 @@
 - type: entity
   parent: ClothingOuterBase
   id: ClothingOuterHotlineSwan
-  name: swan gang jacket (first brother)
+  name: swan gang jacket (brother)
   description: A worn jacket favored by the swan-masked crew.
   components:
   - type: Sprite
@@ -54,8 +54,8 @@
 - type: entity
   parent: ClothingOuterBase
   id: ClothingOuterHotlineSwan2
-  name: swan gang jacket (second brother)
-  description: The other one's jacket. Just as worn.
+  name: swan gang jacket (sister)
+  description: Her jacket. Just as worn.
   components:
   - type: Sprite
     sprite: _Sunset/Clothing/OuterClothing/HotlineMiami/swan2.rsi
@@ -73,8 +73,21 @@
 - type: entity
   parent: ClothingHandsBase
   id: ClothingHandsHotlineSwan
-  name: swan gang gloves
-  description: Plain gloves, shared by both brothers.
+  name: swan gang gloves (brother)
+  description: Plain gloves, worn thin at the knuckles.
+  components:
+  - type: Sprite
+    sprite: _Sunset/Clothing/Hands/HotlineMiami/swan.rsi
+  - type: Clothing
+    sprite: _Sunset/Clothing/Hands/HotlineMiami/swan.rsi
+  - type: Item
+    sprite: _Sunset/Clothing/Hands/HotlineMiami/swan.rsi
+
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingHandsHotlineSwan2
+  name: swan gang gloves (sister)
+  description: Her gloves. Just as plain.
   components:
   - type: Sprite
     sprite: _Sunset/Clothing/Hands/HotlineMiami/swan.rsi
@@ -86,8 +99,21 @@
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformHotlineSwan
-  name: swan gang tank top
+  name: swan gang tank top (brother)
   description: A plain tank top worn under the jacket.
+  components:
+  - type: Sprite
+    sprite: _Sunset/Clothing/Uniforms/HotlineMiami/swan.rsi
+  - type: Clothing
+    sprite: _Sunset/Clothing/Uniforms/HotlineMiami/swan.rsi
+  - type: Item
+    sprite: _Sunset/Clothing/Uniforms/HotlineMiami/swan.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformHotlineSwan2
+  name: swan gang tank top (sister)
+  description: Her tank top, just as plain.
   components:
   - type: Sprite
     sprite: _Sunset/Clothing/Uniforms/HotlineMiami/swan.rsi
