@@ -73,7 +73,7 @@ public sealed partial class BanManager : IBanManager, IPostInjectInit
     private string _serverName = string.Empty;
     private string _webhookUrl = string.Empty;
     private WebhookData? _webhookData;
-    private string _webhookName = "STARLIGHT Punishments";
+    private string _webhookName = "SUNSET Наказания";
     private string _webhookAvatarUrl = "https://i.imgur.com/whiqrpC.png";
 
     private readonly Dictionary<ICommonSession, List<ServerRoleBanDef>> _cachedRoleBans = new();

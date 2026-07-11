@@ -1,83 +1,83 @@
 server-ban-string-infinity = Навсегда
 server-ban-no-name = Не найден. ({ $hwid })
 server-time-ban =
-    Temporary ban on { $mins } { $mins ->
-        [one] minute
-        [few] minutes
-        *[other] minutes
+    Временный бан на { $mins } { $mins ->
+        [one] минуту
+        [few] минуты
+       *[other] минут
     }.
 server-perma-ban = Перманентный бан
 server-role-ban =
-    Temporary job-ban on { $mins } { $mins ->
-        [one] minute
-        [few] minutes
-        *[other] minutes
+    Временный бан на роль на { $mins } { $mins ->
+        [one] минуту
+        [few] минуты
+       *[other] минут
     }.
 server-perma-role-ban = Перманентный бан на роль
 server-time-ban-string =
-    > **Offender**
-    > **Login:** ``{ $targetName }``
+    > **Нарушитель**
+    > **Логин:** ``{ $targetName }``
     > **Discord:** { $targetLink }
 
-    > **Administrator**
-    > **Login:** ``{ $adminName }``
+    > **Администратор**
+    > **Логин:** ``{ $adminName }``
     > **Discord:** { $adminLink }
 
-    > **Time**
-    > **Extended:** { $TimeNow }
-    > **Expires:** { $expiresString }
+    > **Время**
+    > **Выдан:** { $TimeNow }
+    > **Истекает:** { $expiresString }
 
-    > **Reason:** { $reason }
+    > **Причина:** { $reason }
 
-    > **Severity Level:** { $severity }
+    > **Уровень тяжести:** { $severity }
 server-ban-footer = { $server } | Раунд: #{ $round }
 server-perma-ban-string =
-    > **Offender**
-    > **Login:** ``{ $targetName }``
+    > **Нарушитель**
+    > **Логин:** ``{ $targetName }``
     > **Discord:** { $targetLink }
 
-    > **Administrator**
-    > **Login:** ``{ $adminName }``
+    > **Администратор**
+    > **Логин:** ``{ $adminName }``
     > **Discord:** { $adminLink }
 
-    > **Time**
-    > **Extended:** { $TimeNow }
+    > **Время**
+    > **Выдан:** { $TimeNow }
 
-    > **Reason:** { $reason }
+    > **Причина:** { $reason }
 
-    > **Severity Level:** { $severity }
+    > **Уровень тяжести:** { $severity }
 server-role-ban-string =
-    > **Offender**
-    > **Login:** ``{ $targetName }``
+    > **Нарушитель**
+    > **Логин:** ``{ $targetName }``
     > **Discord:** { $targetLink }
 
-    > **Administrator**
-    > **Login:** ``{ $adminName }``
+    > **Администратор**
+    > **Логин:** ``{ $adminName }``
     > **Discord:** { $adminLink }
 
-    > **Time**
-    > **Extended:** { $TimeNow }
-    > **Expires:** { $expiresString }
+    > **Время**
+    > **Выдан:** { $TimeNow }
+    > **Истекает:** { $expiresString }
 
-    > **Roles:** { $roles }
+    > **Роли:** { $roles }
 
-    > **Reason:** { $reason }
+    > **Причина:** { $reason }
 
-    > **Severity Level:** { $severity }
+    > **Уровень тяжести:** { $severity }
 server-perma-role-ban-string =
-    > **Offender**
-    > **Login:** ``{ $targetName }``
+    > **Нарушитель**
+    > **Логин:** ``{ $targetName }``
     > **Discord:** ``{ $targetLink }``
 
-    > **Administrator**
-    > **Login:** ``{ $adminName }``
+    > **Администратор**
+    > **Логин:** ``{ $adminName }``
     > **Discord:** { $adminLink }
 
-    > **Time**
-    > **Extended:** { $TimeNow }
+    > **Время**
+    > **Выдан:** { $TimeNow }
 
-    > **Roles:** { $roles }
+    > **Роли:** { $roles }
 
-    > **Reason:** { $reason }
+    > **Причина:** { $reason }
 
-    > **Severity Level:** { $severity }
+    > **Уровень тяжести:** { $severity }

@@ -394,6 +394,39 @@ public abstract partial class SharedRoleSystem : EntitySystem
     }
 
     /// <summary>
+    /// Finds and removes every antagonist mind role currently on this mind (Traitor, Spy, Homelander, etc.),
+    /// regardless of which specific antag role it is. Used by admins to revoke antagonist status entirely.
+    /// </summary>
+    /// <param name="mind">The mind to strip antagonist roles from.</param>
+    /// <returns>True if at least one antagonist role was found and removed.</returns>
+    public bool MindTryRemoveAllAntagRoles(Entity<MindComponent?> mind)
+    {
+        if (!Resolve(mind.Owner, ref mind.Comp))
+            return false;
+
+        var original = "'antagonist'";
+        var deleteName = original;
+        var delete = new List<EntityUid>();
+
+        foreach (var role in mind.Comp.MindRoleContainer.ContainedEntities)
+        {
+            if (!TryComp<MindRoleComponent>(role, out var roleComp))
+            {
+                Log.Error($"Encountered mind role entity {ToPrettyString(role)} without a {nameof(MindRoleComponent)}");
+                continue;
+            }
+
+            if (!roleComp.Antag)
+                continue;
+
+            delete.Add(role);
+            deleteName = RemoveRoleLogNameGeneration(deleteName, MetaData(role).EntityName, original);
+        }
+
+        return MindRemoveRoleDo(mind, delete, deleteName);
+    }
+
+    /// <summary>
     /// Performs the actual role entity deletion.
     /// </summary>
     private bool MindRemoveRoleDo(Entity<MindComponent?> mind, List<EntityUid> delete, string? logName = "")
