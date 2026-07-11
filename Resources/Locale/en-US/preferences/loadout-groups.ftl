@@ -2,6 +2,7 @@
 loadout-group-species-restriction = This item is not available for your current species.
 
 # Miscellaneous
+loadout-group-sponsor = Sponsor perks # 🌇Sunset🌇
 loadout-group-trinkets = Trinkets
 loadout-group-jobtrinkets = Job trinkets
 loadout-group-glasses = Glasses
