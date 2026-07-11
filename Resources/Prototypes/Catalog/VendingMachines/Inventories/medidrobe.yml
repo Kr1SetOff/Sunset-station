@@ -48,6 +48,10 @@
     ClothingShoesColorWhite: 2
     ClothingShoesBootsWinterMed: 2
   contrabandInventory:
+    # 🌇Sunset🌇
+    ClothingEyesAdvancedMedVisor: 2
+    ClothingEyesNightVisionMedicalGoggles: 2
+    ClothingHeadHatsParamedicBeret: 2
     ClothingUniformJumpskirtOfLife: 1
     ClothingUniformJumpsuitOfLife: 1 # Starlight
     ClothingHeadNurseHatOfLife: 1 # Starlight

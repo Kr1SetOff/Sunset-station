@@ -24,6 +24,104 @@
     ToyFigurineNukieCommander: 1
     ClothingUniformJumpskirtTacticalMaid: 5
     ClothingHandsTacticalMaidGloves: 5
+    # 🌇Sunset🌇 - InteQ mercenary company gear
+    ClothingBackpackInteQ: 2
+    ClothingBackpackDuffelInteQ: 2
+    ClothingBackpackDuffelInteQAmmo: 2
+    ClothingBackpackDuffelInteQMedical: 2
+    ClothingBackpackMessengerInteQ: 2
+    ClothingBeltInteQWebbing: 2
+    ClothingBeltInteQDropPouch: 2
+    ClothingBeltInteQShieldBelt: 1
+    ClothingHeadsetInteQ: 2
+    ClothingHeadsetAltInteQ: 2
+    ClothingEyesGogglessInteQ: 2
+    ClothingHandsGlovesInteQInfiltrator: 2
+    ClothingHeadHelmetEVAInteQ: 2
+    ClothingHeadHelmetHardsuitInteQElite: 1
+    ClothingHeadHelmetHardsuitInteQ: 2
+    ClothingHeadHelmetHardsuitSyndicateInteQ: 2
+    ClothingHeadInteQBeret: 2
+    ClothingHeadInteQHonorableBeret: 1
+    ClothingHeadHatInteQMAA: 1
+    ClothingHeadHatInteQTacticalMaidHeadband: 2
+    ClothingHeadHelmetSwatInteQ: 2
+    ClothingHeadHelmetInteQDarkTemplar: 1
+    ClothingHeadHelmetInteQDarkTemplarAlt: 1
+    ClothingHeadHelmetInteQInfiltrator: 2
+    ClothingHeadHelmetInteQIronTombstone: 1
+    ClothingHeadHatInteQSoft: 2
+    ClothingMaskInteQInfiltrator: 2
+    ClothingNeckCloakInteQ: 2
+    ClothingOuterArmorInteQDarkTemplar: 1
+    ClothingOuterArmorInteQDarkTemplarAlt: 1
+    ClothingOuterArmorInteQInfiltrator: 2
+    ClothingOuterArmorInteQIronTombstone: 1
+    ClothingOuterCoatInteQBattle: 2
+    ClothingOuterCoatInteQHonorableBattle: 1
+    ClothingOuterCoatInteQMedical: 2
+    ClothingOuterWinterInteQ: 2
+    ClothingOuterHoodieInteQ: 2
+    ClothingOuterHardsuitInteQElite: 1
+    ClothingOuterHardsuitInteQ: 1
+    ClothingOuterHardsuitSyndicateInteQ: 1
+    ClothingOuterEVASuitInteQ: 2
+    ClothingShoesBootsInteQInfiltrator: 2
+    ClothingUniformJumpskirtInteQFormalDress: 2
+    ClothingUniformJumpskirtInteQOperative: 2
+    ClothingUniformJumpskirtInteQMedical: 2
+    ClothingUniformJumpskirtInteQTacticalMaid: 2
+    ClothingUniformJumpsuitInteQFormal: 2
+    ClothingUniformJumpsuitInteQOperative: 2
+    ClothingUniformJumpsuitInteQHonorable: 1
+    ClothingUniformJumpsuitInteQMedical: 2
+    # 🌇Sunset🌇 - Alliance/OTA/CBURN rival mercenary outfits
+    ClothingHeadHelmetHardsuitOTAAlliance: 1
+    ClothingOuterHardsuitOTAAlliance: 1
+    ClothingHandsGlovesAllianceAssassin: 1
+    ClothingHeadHelmetAllianceAssassin: 1
+    ClothingOuterArmorAllianceAssassin: 1
+    ClothingShoesBootsAllianceAssassin: 1
+    ClothingUniformJumpsuitAllianceAssassin: 1
+    ClothingHeadHelmetCBURNLeader: 1
+    ClothingOuterHardsuitCBURNLeader: 1
+    # 🌇Sunset🌇 - Syndicate rank cloaks and misc rival hardware
+    ClothingNeckCloakSyndicateAdmiral: 1
+    ClothingNeckCloakSyndicateOfficer: 1
+    ClothingHeadHelmetAltyn: 1
+    ClothingHeadHelmetXenonauten: 1
+    ClothingOuterArmorXenonautenLight: 1
+    ClothingOuterArmorXenonautenMedium: 1
+    ClothingOuterArmorXenonautenHeavy: 1
+    ClothingShoesBootsJackToeless: 2
+    ClothingShoesBootsJackTall: 2
+    ClothingShoesBootsJackTallHeels: 2
+    # 🌇Sunset🌇 - UEG (rival government) military/police surplus
+    ClothingHeadHelmetUEGBallistic: 2
+    ClothingHeadHelmetUEGRiot: 2
+    ClothingHeadHatUEGBeret: 2
+    ClothingHeadHatUEGOfficerCap: 2
+    ClothingHeadHatUEGCap: 2
+    ClothingHeadHatUEGNavyCap: 2
+    ClothingOuterArmorUEGVestLight: 2
+    ClothingOuterArmorUEGVestMedical: 2
+    ClothingOuterArmorUEGTacticalVest: 2
+    ClothingUniformJumpskirtUEGOffice: 2
+    ClothingUniformJumpskirtUEGOfficer: 2
+    ClothingUniformJumpskirtUEGFormal: 2
+    ClothingUniformJumpskirtUEGNavyOfficer: 2
+    ClothingUniformJumpskirtUEGGrey: 2
+    ClothingUniformJumpsuitUEGTurtleneck: 2
+    ClothingUniformJumpsuitUEGOfficer: 2
+    ClothingUniformJumpsuitUEGOfficerAlt: 2
+    ClothingUniformJumpsuitUEGNavy: 2
+    ClothingUniformJumpsuitUEGNavyOfficer: 2
+    ClothingUniformJumpsuitUEGInspector: 2
+    ClothingUniformJumpsuitUEGWhite: 2
+    ClothingUniformJumpsuitUEGGrey: 2
+    ClothingUniformJumpsuitUEGGreen: 2
+    ClothingUniformJumpsuitUEGSpecial: 2
+    ClothingUniformJumpsuitUEGFormal: 2
   emaggedInventory:
     ClothingOuterCoatSyndieCapArmored: 1
     ClothingOuterWinterSyndieCapArmored: 1
