@@ -20,6 +20,9 @@
   - yips.
   - yips?
   - yips!
+  # 🌇Sunset🌇
+  - тявкает
+  - тявк
 
 - type: emote
   id: Mew
@@ -43,6 +46,8 @@
     - mews.
     - mews!
     - mews?
+    # 🌇Sunset🌇
+    - мяу
 
 - type: emote
   id: Hisses
@@ -70,6 +75,9 @@
   - hisses.
   - hisses!
   - hisses?
+  # 🌇Sunset🌇
+  - шипит
+  - шипение
 
 - type: emote
   id: Meow
@@ -97,6 +105,8 @@
     - meowing.
     - meowing!
     - meowing?
+    # 🌇Sunset🌇
+    - мяукает
 
 - type: emote
   id: Purr
@@ -124,6 +134,9 @@
     - purring.
     - purring?
     - purring!
+    # 🌇Sunset🌇
+    - мурчит
+    - мурлычет
 
 - type: emote
   id: Trill
@@ -389,6 +402,9 @@
     - flaps its wings
     - flaps its wings.
     - flaps its wings!
+    # 🌇Sunset🌇
+    - машет крыльями
+    - взмах крыльев
 
 - type: emote
   id: Bubble
@@ -408,6 +424,9 @@
   - bubbles.
   - bubbles!
   - bubbles?
+  # 🌇Sunset🌇
+  - булькает
+  - бульканье
 
 - type: emote
   id: Pop
@@ -427,6 +446,8 @@
   - pops.
   - pops!
   - pops?
+  # 🌇Sunset🌇
+  - лопается
 
 - type: emote
   id: Squee
@@ -473,6 +494,9 @@
   - snorts.
   - snorts?
   - snorts!
+  # 🌇Sunset🌇
+  - фыркает
+  - фырканье
 
 - type: emote
   id: LagomorphSnore
@@ -496,6 +520,9 @@
   - snores.
   - snores?
   - snores!
+  # 🌇Sunset🌇
+  - храпит
+  - храп
 
 - type: emote
   id: LagomorphSneeze
@@ -519,6 +546,9 @@
   - sneezes.
   - sneezes?
   - sneezes!
+  # 🌇Sunset🌇
+  - чихает
+  - чих
 
 - type: emote
   id: LagomorphStomp
@@ -542,6 +572,9 @@
   - stomps.
   - stomps?
   - stomps!
+  # 🌇Sunset🌇
+  - топает
+  - топ
 
 - type: emote
   id: ThavenGlub
