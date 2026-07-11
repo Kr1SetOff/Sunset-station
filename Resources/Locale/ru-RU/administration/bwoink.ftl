@@ -33,3 +33,7 @@ bwoink-system-player-banned = был забанен по причине: { $banR
 
 bwoink-message-admin-only = (Видно только админам)
 bwoink-message-silent = (Без звука)
+
+bwoink-relay-runlevel-prelobby = Началось лобби ожидания раунда
+bwoink-relay-runlevel-round = Раунд начался
+bwoink-relay-runlevel-postround = Раунд завершён
