@@ -620,7 +620,37 @@ namespace Content.Server.GameTicking
                     ("hours", Math.Truncate(duration.TotalHours)),
                     ("minutes", duration.Minutes),
                     ("seconds", duration.Seconds));
-                var payload = new WebhookPayload { Content = content };
+
+                var gamemodeTitle = CurrentPreset != null ? Loc.GetString(CurrentPreset.ModeTitle) : string.Empty;
+                var mapName = _gameMapManager.GetSelectedMap()?.MapName ?? Loc.GetString("discord-round-notifications-unknown-map");
+                var playerInfo = _replayRoundPlayerInfo ?? Array.Empty<RoundEndMessageEvent.RoundEndPlayerInfo>();
+
+                var antags = playerInfo.Where(p => p.Antag).ToArray();
+                var antagList = antags.Length == 0
+                    ? Loc.GetString("discord-round-notifications-end-no-antags")
+                    : string.Join('\n', antags.Select(p => $"**{p.Role}** — {p.PlayerICName ?? p.PlayerOOCName}"));
+
+                if (antagList.Length > 1000)
+                    antagList = antagList[..1000] + "…";
+
+                var payload = new WebhookPayload
+                {
+                    Embeds = new List<WebhookEmbed>
+                    {
+                        new()
+                        {
+                            Title = content,
+                            Color = 5793266, // Discord blurple
+                            Fields = new List<WebhookEmbedField>
+                            {
+                                new() { Name = Loc.GetString("discord-round-notifications-end-gamemode"), Value = gamemodeTitle, Inline = true },
+                                new() { Name = Loc.GetString("discord-round-notifications-end-map"), Value = mapName, Inline = true },
+                                new() { Name = Loc.GetString("discord-round-notifications-end-players"), Value = playerInfo.Length.ToString(), Inline = true },
+                                new() { Name = Loc.GetString("discord-round-notifications-end-antags"), Value = antagList, Inline = false },
+                            },
+                        },
+                    },
+                };
 
                 await _discord.CreateMessage(_webhookIdentifier.Value, payload);
 
