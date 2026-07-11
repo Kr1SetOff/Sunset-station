@@ -1,0 +1,26 @@
+<DefaultWindow xmlns="https://spacestation14.io"
+               Title="{Loc custom-emotes-window-title}"
+               MinSize="420 480">
+    <BoxContainer Orientation="Vertical" Margin="10 4 10 10">
+        <Label Text="{Loc custom-emotes-window-explanation}" Margin="0 0 0 8" />
+
+        <ScrollContainer HorizontalExpand="True" VerticalExpand="True" MinSize="0 220">
+            <BoxContainer Name="EntriesContainer" Orientation="Vertical" />
+        </ScrollContainer>
+
+        <Label Name="EmptyLabel" Text="{Loc custom-emotes-window-empty}" HorizontalAlignment="Center" Margin="0 8 0 0" />
+
+        <Control MinSize="0 8" />
+
+        <Label Text="{Loc custom-emotes-window-name-label}" />
+        <LineEdit Name="NameEdit" PlaceHolder="{Loc custom-emotes-window-name-placeholder}" />
+
+        <Label Text="{Loc custom-emotes-window-text-label}" Margin="0 6 0 0" />
+        <LineEdit Name="EmoteTextEdit" PlaceHolder="{Loc custom-emotes-window-text-placeholder}" />
+
+        <BoxContainer Orientation="Horizontal" Margin="0 8 0 0" HorizontalAlignment="Right">
+            <Button Name="CancelEditButton" Text="{Loc custom-emotes-window-cancel-edit}" Visible="False" Margin="0 0 6 0" />
+            <Button Name="SaveButton" Text="{Loc custom-emotes-window-save}" />
+        </BoxContainer>
+    </BoxContainer>
+</DefaultWindow>
