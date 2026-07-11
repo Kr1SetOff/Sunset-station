@@ -216,6 +216,30 @@ public sealed partial class AdminVerbSystem
         };
         args.Verbs.Add(homelander);
 
+        // Sunset - remove antagonist role(s), regardless of which antag it is. Logged the same way as
+        // granting an antag role, so it's clear from the admin logs / Discord log who de-antagged whom.
+        if (_mindSystem.TryGetMind(args.Target, out var targetMindId, out _) &&
+            _role.MindIsAntagonist(targetMindId))
+        {
+            var removeAntagName = Loc.GetString("admin-verb-text-remove-antag");
+            Verb removeAntag = new()
+            {
+                Text = removeAntagName,
+                Category = VerbCategory.Antag,
+                Icon = new SpriteSpecifier.Texture(new ResPath("/Textures/Interface/VerbIcons/close.svg.192dpi.png")),
+                Act = () =>
+                {
+                    if (_mindSystem.TryGetMind(args.Target, out var mindId, out var mind))
+                        _role.MindTryRemoveAllAntagRoles((mindId, mind));
+
+                    _autolog.LogToDiscord(string.Join(": ", removeAntagName, Loc.GetString("admin-verb-remove-antag")), player.Name);
+                },
+                Impact = LogImpact.High,
+                Message = string.Join(": ", removeAntagName, Loc.GetString("admin-verb-remove-antag")),
+            };
+            args.Verbs.Add(removeAntag);
+        }
+
         var changelingName = Loc.GetString("admin-verb-text-make-changeling-wip"); //SL edit, -wip as we allready have lings
         Verb changeling = new()
         {

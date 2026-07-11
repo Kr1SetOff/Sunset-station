@@ -12,6 +12,7 @@ admin-verb-make-vampire = Make the target into a vampire.
 admin-verb-make-wizard = Make the target into a Wizard.
 admin-verb-make-space-ninja = Make the target into a Space Ninja.
 admin-verb-make-changeling = Make the target into a Changeling.
+admin-verb-remove-antag = Remove all antagonist roles from the target.
 
 
 admin-verb-text-make-traitor = Make Traitor
@@ -26,5 +27,6 @@ admin-verb-text-make-paradox-clone = Create Paradox Clone
 admin-verb-text-make-changeling-wip = Make Changeling (Upstream, WIP)
 admin-verb-text-make-wizard = Make Wizard
 admin-verb-text-make-space-ninja = Make Ninja
+admin-verb-text-remove-antag = Remove Antagonist
 
 admin-overlay-antag-classic = ANTAG

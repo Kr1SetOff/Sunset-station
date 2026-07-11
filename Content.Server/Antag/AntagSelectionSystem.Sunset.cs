@@ -39,26 +39,11 @@ public sealed partial class AntagSelectionSystem
 
     private void OnSunsetJobsAssigned(RulePlayerJobsAssignedEvent args)
     {
-        // 🌇Sunset🌇 - named sponsor role guarantees. These run before the generic tier-5 "any antag"
-        // pass below so that tier 3-5 sponsors preferentially land their named perk role (Homelander)
-        // instead of being consumed by the generic guarantee first; Spy runs second and only picks up
-        // whoever the Homelander roll didn't already turn into an antagonist. Homelander is checked
-        // first specifically because it's the more exclusive (tier 3-5 only) of the two perks. Spy
-        // starts at tier 2 (Syndicate Agent) - tier 1 (Zombie) does not get the Spy guarantee.
-        foreach (var session in args.Players)
-        {
-            if (_sunsetSponsorTiers.GetSponsorTier(session) < 3)
-                continue;
-
-            if (_role.MindIsAntagonist(session.GetMind()))
-                continue;
-
-            if (!RobustRandom.Prob(0.95f))
-                continue;
-
-            TryForceSunsetNamedAntag(session, "Homelander");
-        }
-
+        // 🌇Sunset🌇 - named sponsor role guarantee for Spy. Homelander is intentionally NOT offered
+        // here (and is excluded from the generic tier-5 sweep below, see TryForceSunsetTier5Antag) -
+        // it must never be handed out automatically, only via an admin explicitly force-making someone
+        // Homelander (see AdminVerbSystem.Antags.cs) or manually starting the Homelander GameRule.
+        // Spy starts at tier 2 (Syndicate Agent) - tier 1 (Zombie) does not get the Spy guarantee.
         foreach (var session in args.Players)
         {
             if (_sunsetSponsorTiers.GetSponsorTier(session) < 2)
@@ -137,6 +122,8 @@ public sealed partial class AntagSelectionSystem
     /// Tries to force-assign a tier-5 sponsor into any currently-active, player-pickable antag definition,
     /// bypassing the normal preference/pool lottery (but not the underlying eligibility checks in
     /// <see cref="TryMakeAntag"/>, e.g. whitelist/blacklist/already-antag exclusions still apply).
+    /// Homelander is excluded even if its GameRule happens to be active (e.g. an admin started it) -
+    /// that role must only ever be handed out by explicit admin action, never by this generic sweep.
     /// </summary>
     private bool TryForceSunsetTier5Antag(ICommonSession session)
     {
@@ -145,6 +132,9 @@ public sealed partial class AntagSelectionSystem
         var query = QueryActiveRules();
         while (query.MoveNext(out var uid, out _, out var antag, out _))
         {
+            if (MetaData(uid).EntityPrototype?.ID == "Homelander")
+                continue;
+
             foreach (var def in antag.Definitions)
             {
                 if (def.PickPlayer)
