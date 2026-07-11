@@ -2,19 +2,23 @@
 
 hotline-zebra-roll-start = Пули проходят сквозь тебя - самое время бежать!
 
-# --- Лебеди (два брата, один набор) ---
-ent-ClothingMaskHotlineSwan = маска лебедя (первый брат)
+# --- Лебеди (брат и сестра, один набор) ---
+ent-ClothingMaskHotlineSwan = маска лебедя (брат)
     .desc = Треснувшая пластиковая маска лебедя. В ней есть что-то зловещее.
-ent-ClothingMaskHotlineSwan2 = маска лебедя (второй брат)
-    .desc = Маска второго брата. Тот же треснувший пластик, та же обречённость.
-ent-ClothingOuterHotlineSwan = куртка банды лебедя (первый брат)
+ent-ClothingMaskHotlineSwan2 = маска лебедя (сестра)
+    .desc = Её маска. Тот же треснувший пластик, та же обречённость.
+ent-ClothingOuterHotlineSwan = куртка банды лебедя (брат)
     .desc = Потрёпанная куртка, которую предпочитает банда в масках лебедя.
-ent-ClothingOuterHotlineSwan2 = куртка банды лебедя (второй брат)
-    .desc = Куртка второго брата. Такая же потрёпанная.
-ent-ClothingHandsHotlineSwan = перчатки банды лебедя
-    .desc = Простые перчатки, общие для обоих братьев.
-ent-ClothingUniformHotlineSwan = майка банды лебедя
+ent-ClothingOuterHotlineSwan2 = куртка банды лебедя (сестра)
+    .desc = Её куртка. Такая же потрёпанная.
+ent-ClothingHandsHotlineSwan = перчатки банды лебедя (брат)
+    .desc = Простые перчатки, потёртые на костяшках.
+ent-ClothingHandsHotlineSwan2 = перчатки банды лебедя (сестра)
+    .desc = Её перчатки, точно такие же простые.
+ent-ClothingUniformHotlineSwan = майка банды лебедя (брат)
     .desc = Простая майка, которую носят под курткой.
+ent-ClothingUniformHotlineSwan2 = майка банды лебедя (сестра)
+    .desc = Её майка, такая же простая.
 
 # --- Медведь ---
 ent-ClothingMaskHotlineBear = маска медведя

@@ -246,6 +246,13 @@
     interactionPrototypes:
     - Pet
     - Boop
+    # 🌇Sunset🌇
+    - KickButt
+    - Slap
+    - HighFive
+    - Hug
+    - Handshake
+    - Tickle
   # Starlight End
   - type: CosmicCenserTarget # Stellar - Cosmic Cult
 

@@ -115,6 +115,16 @@
         HorizontalExpand="True"
         AppendStyleClass="{x:Static style:StyleClass.ButtonSquare}"
         />
+  <!-- 🌇Sunset🌇 -->
+  <ui:MenuButton
+        Name="CustomEmotesButton"
+        Access="Internal"
+        Icon="{xe:Tex '/Textures/Interface/pencil.png'}"
+        ToolTip="{Loc 'game-hud-open-custom-emotes-menu-button-tooltip'}"
+        MinSize="42 64"
+        HorizontalExpand="True"
+        AppendStyleClass="{x:Static style:StyleClass.ButtonSquare}"
+        />
   <ui:MenuButton
         Name="AchievementButton"
         Access="Internal"

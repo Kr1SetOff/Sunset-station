@@ -3,6 +3,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Content.Server._Sunset.Discord;
 using Content.Server.Database;
+using Content.Server.Players.JobWhitelist;
 using Content.Shared._Sunset.CCVar;
 using Content.Shared._Sunset.SponsorTier;
 using Robust.Server.Player;
@@ -27,6 +28,7 @@ public sealed partial class SunsetSponsorTierService : IPostInjectInit, ISunsetS
     [Dependency] private IConfigurationManager _cfg = default!;
     [Dependency] private SunsetSponsorRoleLookup _roleLookup = default!;
     [Dependency] private ILogManager _logManager = default!;
+    [Dependency] private JobWhitelistManager _jobWhitelistManager = default!;
 
     private readonly Dictionary<NetUserId, int> _tiers = new();
     private readonly Dictionary<NetUserId, bool> _linked = new();
@@ -100,10 +102,13 @@ public sealed partial class SunsetSponsorTierService : IPostInjectInit, ISunsetS
         var tier = await _roleLookup.ResolveTierAsync(discordUserId);
         await _db.SetSunsetDiscordLink(player.UserId, discordUserId.ToString(), tier);
 
-        if (_player.TryGetSessionById(player, out _))
+        if (_player.TryGetSessionById(player, out var session))
         {
             _tiers[player] = tier;
             _linked[player] = true;
+            // Push the new tier down immediately - without this, the client keeps seeing tier 0
+            // (and anything gated on it stays locked) until their next reconnect.
+            _jobWhitelistManager.SendJobWhitelist(session);
         }
 
         _sawmill.Info($"Linked player {player} to Discord user {discordUserId}, resolved tier {tier}.");
@@ -123,8 +128,11 @@ public sealed partial class SunsetSponsorTierService : IPostInjectInit, ISunsetS
         var tier = await _roleLookup.ResolveTierAsync(discordUserId);
         await _db.UpdateSunsetSponsorTier(player.UserId, tier);
 
-        if (_player.TryGetSessionById(player, out _))
+        if (_player.TryGetSessionById(player, out var session))
+        {
             _tiers[player] = tier;
+            _jobWhitelistManager.SendJobWhitelist(session);
+        }
 
         return tier;
     }

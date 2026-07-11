@@ -36,6 +36,7 @@
     eyes: ClothingEyesGlassesCentComm
     ears: ClothingHeadsetCentCom
     mask: ClothingMaskGasGSO
+    head: ClothingHeadHelmetHardsuitGreenshield
     belt: ClothingBeltGreenshieldFilled
     gloves: ClothingHandsGlovesCombat
     suitstorage: WeaponSubMachineGunWt550

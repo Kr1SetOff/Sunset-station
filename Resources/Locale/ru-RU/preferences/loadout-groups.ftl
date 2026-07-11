@@ -2,6 +2,7 @@
 loadout-group-species-restriction = Этот предмет недоступен для вашего текущего вида.
 
 # Miscellaneous
+loadout-group-sponsor = Спонсорка # 🌇Sunset🌇
 loadout-group-trinkets = Побрякушки
 loadout-group-jobtrinkets = Безделушки должности
 loadout-group-glasses = Очки

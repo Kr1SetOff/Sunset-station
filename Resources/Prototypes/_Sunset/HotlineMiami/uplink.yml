@@ -11,7 +11,9 @@
       - id: ClothingOuterHotlineSwan
       - id: ClothingOuterHotlineSwan2
       - id: ClothingHandsHotlineSwan
+      - id: ClothingHandsHotlineSwan2
       - id: ClothingUniformHotlineSwan
+      - id: ClothingUniformHotlineSwan2
       - id: WeaponSubMachineGunUzi
       - id: MagazinePistolSubMachineGunUzi
       - id: MagazinePistolSubMachineGunUzi

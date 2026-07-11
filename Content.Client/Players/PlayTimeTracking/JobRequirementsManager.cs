@@ -37,6 +37,11 @@ public sealed partial class JobRequirementsManager : ISharedPlaytimeManager
     private readonly List<string> _jobWhitelists = new();
     private bool _sponsorRoleBypass; // 🌇Sunset🌇 - tier 4+ sponsors, see MsgJobWhitelist.SponsorRoleBypass
 
+    // 🌇Sunset🌇 - the player's actual resolved sponsor tier (0-5), synced alongside the whitelist so
+    // client-side gating (e.g. loadout requirements) doesn't always see tier 0 - see
+    // ClientSunsetSponsorTierReader.
+    public int SponsorTier { get; private set; }
+
     // nulllink start
     private Dictionary<string, TimeSpan> _originalRoles = [];
     private readonly Dictionary<string, TimeSpan> _mergedRoles = [];
@@ -140,6 +145,7 @@ public sealed partial class JobRequirementsManager : ISharedPlaytimeManager
             _jobBans.Clear();
             _antagBans.Clear();
             _sponsorRoleBypass = false; // 🌇Sunset🌇
+            SponsorTier = 0; // 🌇Sunset🌇
         }
     }
 
@@ -180,6 +186,7 @@ public sealed partial class JobRequirementsManager : ISharedPlaytimeManager
         _jobWhitelists.Clear();
         _jobWhitelists.AddRange(message.Whitelist);
         _sponsorRoleBypass = message.SponsorRoleBypass; // 🌇Sunset🌇
+        SponsorTier = message.SponsorTier; // 🌇Sunset🌇
         Updated?.Invoke();
     }
 

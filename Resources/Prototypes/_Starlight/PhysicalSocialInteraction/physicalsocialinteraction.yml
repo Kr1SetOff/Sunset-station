@@ -11,3 +11,49 @@
   verbName: boop-verb
   interactString: booping-success
   messagePerceivedByOthers: booping-success
+
+# 🌇Sunset🌇 Start: targeted emote panel
+- type: physicalSocialInteraction
+  id: KickButt
+  verbName: kick-butt-verb
+  interactString: kicking-butt-success
+  messagePerceivedByOthers: kicking-butt-success-others
+  interactSound:
+    path: /Audio/Effects/hit_kick.ogg
+
+- type: physicalSocialInteraction
+  id: Slap
+  verbName: slap-verb
+  interactString: slapping-success
+  messagePerceivedByOthers: slapping-success-others
+  interactSound:
+    path: /Audio/Effects/Footsteps/meatslap.ogg
+
+- type: physicalSocialInteraction
+  id: HighFive
+  verbName: highfive-verb
+  interactString: highfive-success
+  messagePerceivedByOthers: highfive-success-others
+  interactSound: !type:SoundCollectionSpecifier
+    collection: Claps
+
+- type: physicalSocialInteraction
+  id: Hug
+  verbName: hug-verb
+  interactString: hug-success
+  messagePerceivedByOthers: hug-success-others
+
+- type: physicalSocialInteraction
+  id: Handshake
+  verbName: handshake-verb
+  interactString: handshake-success
+  messagePerceivedByOthers: handshake-success-others
+
+- type: physicalSocialInteraction
+  id: Tickle
+  verbName: tickle-verb
+  interactString: tickle-success
+  messagePerceivedByOthers: tickle-success-others
+  interactSound:
+    path: /Audio/Items/Toys/sitcom_laugh.ogg
+# 🌇Sunset🌇 End

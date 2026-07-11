@@ -30,6 +30,15 @@
     - yells
     - yelled
     - yelling
+    # 🌇Sunset🌇
+    - кричит
+    - крик
+    - кричать
+    - закричал
+    - вопит
+    - вопль
+    - визжит
+    - визг
 
 - type: emote
   id: Laugh
@@ -60,6 +69,14 @@
     - chortle
     - chortles
     - chortling
+    # 🌇Sunset🌇
+    - смеётся
+    - смех
+    - смеяться
+    - засмеялся
+    - хихикает
+    - хихиканье
+    - ржёт
 
 - type: emote
   id: Honk
@@ -78,6 +95,10 @@
     - honks
     - honked
     - honking
+    # 🌇Sunset🌇
+    - гудит
+    - гудок
+    - бибикает
 
 - type: emote
   id: Sigh
@@ -96,6 +117,10 @@
     - sigh
     - sighs
     - sighed
+    # 🌇Sunset🌇
+    - вздыхает
+    - вздох
+    - вздохнул
 
 - type: emote
   id: Whistle
@@ -114,6 +139,10 @@
     - whistle
     - whistles
     - whistleblowing
+    # 🌇Sunset🌇
+    - свистит
+    - свист
+    - свистнул
 
 - type: emote
   id: Crying
@@ -134,6 +163,11 @@
     - sob
     - sobs
     - sobbing
+    # 🌇Sunset🌇
+    - плачет
+    - плач
+    - рыдает
+    - рыдание
 
 - type: emote
   id: Squish
@@ -153,6 +187,9 @@
     - squish
     - squishing
     - squishes
+    # 🌇Sunset🌇
+    - хлюпает
+    - хлюп
 
 - type: emote
   id: Chitter
@@ -172,6 +209,9 @@
    - chitter
    - chitters
    - chittered
+   # 🌇Sunset🌇
+   - стрекочет
+   - стрёкот
 
 - type: emote
   id: Squeak
@@ -191,6 +231,9 @@
    - squeak
    - squeaks
    - squeaked
+   # 🌇Sunset🌇
+   - пищит
+   - писк
 
 - type: emote
   id: Click
@@ -209,6 +252,9 @@
   chatTriggers:
    - click
    - clicks
+   # 🌇Sunset🌇
+   - щёлкает
+   - щелчок
 
 # Vulpkanin
 - type: emote
@@ -228,6 +274,9 @@
   - barks
   - barked
   - barking
+  # 🌇Sunset🌇
+  - лает
+  - лай
 
 - type: emote
   id: Snarl
@@ -246,6 +295,9 @@
   - snarls
   - snarled
   - snarling
+  # 🌇Sunset🌇
+  - огрызается
+  - оскал
 
 - type: emote
   id: Whine
@@ -264,6 +316,9 @@
   - whines
   - whined
   - whining
+  # 🌇Sunset🌇
+  - скулит
+  - скуление
 
 - type: emote
   id: Howl
@@ -282,6 +337,9 @@
   - howls
   - howling
   - howled
+  # 🌇Sunset🌇
+  - воет
+  - вой
 
 - type: emote
   id: Growl
@@ -300,6 +358,9 @@
   - growls
   - growled
   - growling
+  # 🌇Sunset🌇
+  - рычит
+  - рычание
 
 # hand emotes
 - type: emote
@@ -319,6 +380,10 @@
     - claps
     - clapping
     - clapped
+    # 🌇Sunset🌇
+    - хлопает
+    - хлопки
+    - аплодирует
 
 - type: emote
   id: ClapSingle
@@ -339,6 +404,9 @@
     - claps her hands together
     - claps his hands together
     - claps its hands together
+    # 🌇Sunset🌇
+    - хлопок
+    - хлопнул в ладоши
 
 - type: emote
   id: Snap
@@ -366,6 +434,9 @@
     - snaps its fingers
     - snapping fingers
     - snapped fingers
+    # 🌇Sunset🌇
+    - щёлкает пальцами
+    - щелчок пальцами
 
 - type: emote
   id: Thump
@@ -392,6 +463,9 @@
     - thumps her tail
     - thumps his tail
     - thumps its tail
+    # 🌇Sunset🌇
+    - стучит хвостом
+    - стук хвостом
 
 - type: emote
   id: Salute
@@ -408,6 +482,9 @@
   chatTriggers:
     - salute
     - salutes
+    # 🌇Sunset🌇
+    - салютует
+    - отдаёт честь
 
 - type: emote
   id: Gasp
@@ -420,6 +497,9 @@
    - gasp
    - gasps
    - gasped
+   # 🌇Sunset🌇
+   - задыхается
+   - ахает
 
 - type: emote
   id: DefaultDeathgasp
@@ -461,6 +541,9 @@
     - buzz
     - buzzed
     - buzzes
+    # 🌇Sunset🌇
+    - жужжит
+    - жужжание
 
 - type: emote
   id: Weh
@@ -496,6 +579,9 @@
     - chirps
     - chirped
     - chirping
+    # 🌇Sunset🌇
+    - чирикает
+    - чириканье
 
 # Machine Emotes
 - type: emote
@@ -515,6 +601,9 @@
     - beeps
     - beeped
     - beeping
+    # 🌇Sunset🌇
+    - бипает
+    - бип
 
 - type: emote
   id: Chime
@@ -533,6 +622,9 @@
     - chimes
     - chimed
     - chiming
+    # 🌇Sunset🌇
+    - звенит
+    - звон
 
 - type: emote
   id: Buzz-Two
@@ -557,6 +649,9 @@
     - buzzes twice
     - buzzing twice
     - buzzed twice
+    # 🌇Sunset🌇
+    - жужжит дважды
+    - двойное жужжание
 
 - type: emote
   id: Ping
@@ -575,3 +670,6 @@
     - pings
     - pinged
     - pinging
+    # 🌇Sunset🌇
+    - пингует
+    - пинг

@@ -27,6 +27,10 @@
     - cough!
     - coughs!
     - coughed!
+    # 🌇Sunset🌇
+    - кашляет
+    - кашель
+    - закашлялся
 
 - type: emote
   id: CatMeow
@@ -68,6 +72,9 @@
   chatTriggers:
     - yawn
     - yawns
+    # 🌇Sunset🌇
+    - зевает
+    - зевок
 
 - type: emote
   id: Snore

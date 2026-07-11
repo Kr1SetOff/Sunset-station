@@ -120,6 +120,40 @@
     ClothingUnderSocksYellow: 2
     # DO NOT ADD MORE, USE UNIFORM DYING
   contrabandInventory:
+    # 🌇Sunset🌇 - kendo/Japanese-themed novelty
+    ClothingHeadHelmetKendoMen: 1
+    ClothingUniformGi: 2
+    ClothingUniformKendoHakama: 2
+    ClothingUniformKimonoBlue: 2
+    ClothingUniformKimonoPink: 2
+    ClothingUniformKimonoPurple: 2
+    ClothingUniformKimonoSky: 2
+    ClothingUniformKimonoGreen: 2
+    ClothingBackpackNinja: 1
+    ClothingBeltKatanaSheath: 1
+    # 🌇Sunset🌇 - misc novelty cloaks
+    ClothingNeckCloakFluffyPink: 1
+    ClothingNeckCloakHellDiverBlack: 1
+    ClothingNeckCloakHellDiverBrown: 1
+    ClothingNeckCloakHellDiverWhite: 1
+    ClothingNeckGothicCloak: 2
+    ClothingNeckDarkGreyCloak: 2
+    ClothingNeckMantleElderLizards: 1
+    ClothingHeadHatTinfoil: 2
+    ClothingMaskGasEmerald: 1
+    ClothingUniformJumpskirtRoll: 2
+    # 🌇Sunset🌇 - gang/pop-culture novelty jumpsuits
+    ClothingUniformJumpsuitGreaserCult: 1
+    ClothingUniformJumpsuitGreaserJulie: 1
+    ClothingUniformJumpsuitGreaserSnakes: 1
+    ClothingUniformJumpsuitGreaserSpider: 1
+    ClothingUniformJumpsuitDoom: 1
+    ClothingUniformJumpsuitJoe: 2
+    ClothingUniformJumpsuitMegaMan: 1
+    ClothingUniformJumpsuitMegaManX: 1
+    ClothingUniformJumpsuitRotten: 1
+    ClothingUniformJumpsuitSneaking: 2
+    ClothingUniformJumpsuitStil: 2
     ClothingMaskNeckGaiter: 2
     ClothingUniformJumpsuitTacticool: 1
     ClothingUniformJumpskirtTacticool: 1
