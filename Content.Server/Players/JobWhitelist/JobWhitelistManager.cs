@@ -107,11 +107,13 @@ public sealed partial class JobWhitelistManager : IPostInjectInit
 
     public void SendJobWhitelist(ICommonSession player)
     {
+        var tier = _sunsetSponsorTiers.GetSponsorTier(player);
         var msg = new MsgJobWhitelist
         {
             Whitelist = _whitelists.GetValueOrDefault(player.UserId) ?? new HashSet<string>(),
             // 🌇Sunset🌇 - tier 4+ sponsors get every role requirement/whitelist bypassed client-side too.
-            SponsorRoleBypass = _sunsetSponsorTiers.GetSponsorTier(player) >= 4,
+            SponsorRoleBypass = tier >= 4,
+            SponsorTier = tier,
         };
 
         _net.ServerSendMessage(msg, player.Channel);

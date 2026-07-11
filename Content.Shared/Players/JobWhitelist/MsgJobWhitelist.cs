@@ -15,6 +15,11 @@ public sealed class MsgJobWhitelist : NetMessage
     // preferences) doesn't lock/reset roles the server would actually allow for these sponsors.
     public bool SponsorRoleBypass;
 
+    // 🌇Sunset🌇 - the actual resolved tier (0-5), so client-side gating (e.g. loadout items requiring
+    // a minimum tier) can unlock correctly instead of always seeing tier 0 - see
+    // ClientSunsetSponsorTierReader.
+    public int SponsorTier;
+
     public override void ReadFromBuffer(NetIncomingMessage buffer, IRobustSerializer serializer)
     {
         var count = buffer.ReadVariableInt32();
@@ -26,6 +31,7 @@ public sealed class MsgJobWhitelist : NetMessage
         }
 
         SponsorRoleBypass = buffer.ReadBoolean();
+        SponsorTier = buffer.ReadVariableInt32();
     }
 
     public override void WriteToBuffer(NetOutgoingMessage buffer, IRobustSerializer serializer)
@@ -38,5 +44,6 @@ public sealed class MsgJobWhitelist : NetMessage
         }
 
         buffer.Write(SponsorRoleBypass);
+        buffer.WriteVariableInt32(SponsorTier);
     }
 }

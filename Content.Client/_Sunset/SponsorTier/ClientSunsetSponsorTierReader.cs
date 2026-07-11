@@ -1,28 +1,31 @@
 using System.Threading.Tasks;
+using Content.Client.Players.PlayTimeTracking;
 using Content.Shared._Sunset.SponsorTier;
+using Robust.Shared.IoC;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
 
 namespace Content.Client._Sunset.SponsorTier;
 
 /// <summary>
-/// The client has no access to sponsor tier data - it's resolved server-side from the Discord-linked DB
-/// row and never sent down. This stub exists purely so Shared code that depends on
-/// <see cref="ISunsetSponsorTierReader"/> (e.g. SponsorTierRequirement.GetRequirementDescription, used by
-/// the ghost theme picker to render a tooltip) can be constructed on the client without an
-/// unregistered-dependency crash. Actual access gating still happens server-side.
+/// The client only knows the local player's own tier, synced down via MsgJobWhitelist.SponsorTier
+/// (see JobRequirementsManager) - it has no visibility into other sessions' tiers, since those are
+/// never sent down. Good enough for gating the local player's own UI (e.g. loadout requirements);
+/// actual access control is still enforced server-side regardless of what this returns.
 /// </summary>
 public sealed class ClientSunsetSponsorTierReader : ISunsetSponsorTierReader
 {
-    public int GetSponsorTier(NetUserId userId) => 0;
+    [Dependency] private JobRequirementsManager _jobRequirements = default!;
 
-    public int GetSponsorTier(ICommonSession session) => 0;
+    public int GetSponsorTier(NetUserId userId) => _jobRequirements.SponsorTier;
+
+    public int GetSponsorTier(ICommonSession session) => _jobRequirements.SponsorTier;
 
     public bool TryGetSponsorTier(ICommonSession session, out int tier)
     {
-        tier = 0;
-        return false;
+        tier = _jobRequirements.SponsorTier;
+        return tier > 0;
     }
 
-    public Task<int> GetSponsorTierAsync(NetUserId userId) => Task.FromResult(0);
+    public Task<int> GetSponsorTierAsync(NetUserId userId) => Task.FromResult(_jobRequirements.SponsorTier);
 }
