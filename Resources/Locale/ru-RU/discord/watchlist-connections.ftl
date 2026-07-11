@@ -1,14 +1,17 @@
 discord-watchlist-connection-header =
     { $players ->
-        [one] { $players } player on a watchlist has
-        *[other] { $players } players on a watchlist have
-    } connected to { $serverName }
+        [one] К серверу { $serverName } подключился { $players } игрок из списка наблюдения
+        [few] К серверу { $serverName } подключились { $players } игрока из списка наблюдения
+        [many] К серверу { $serverName } подключились { $players } игроков из списка наблюдения
+       *[other] К серверу { $serverName } подключились { $players } игроков из списка наблюдения
+    }
 
-discord-watchlist-connection-entry = - { $playerName } with message "{ $message }"{ $expiry ->
+discord-watchlist-connection-entry = - { $playerName } с сообщением «{ $message }»{ $expiry ->
     [0] { "" }
-    *[other] { " " }(expires <t:{ $expiry }:R>)
+   *[other] { " " }(истекает <t:{ $expiry }:R>)
 }{ $otherWatchlists ->
     [0] { "" }
-    [one] { " " }and { $otherWatchlists } other watchlist
-    *[other] { " " }and { $otherWatchlists } other watchlists
+    [one] { " " }и ещё { $otherWatchlists } список наблюдения
+    [few] { " " }и ещё { $otherWatchlists } списка наблюдения
+   *[other] { " " }и ещё { $otherWatchlists } списков наблюдения
 }
