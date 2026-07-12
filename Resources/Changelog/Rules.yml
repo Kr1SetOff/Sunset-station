@@ -23,4 +23,22 @@
   id: 3
   time: '2026-01-06T04:38:55.0000000+00:00'
   url: https://github.com/space-wizards/space-station-14/pull/42264
+- author: ClubYT
+  changes:
+  - message: Rewrote all server rules (0 through 16) into more natural, clearer Russian.
+    type: Tweak
+  - message: Rule 0 now explicitly covers both adequate in-game conduct and a ban on toxicity in LOOC/OOC chat.
+    type: Tweak
+  - message: Rule 5's "Going Loud" now reads "Громкая игра".
+    type: Tweak
+  - message: Rule 7's sabotage example now specifies critical power lines and critical equipment.
+    type: Tweak
+  - message: Rule 13's cadet exception now states cadets are still accountable for their role, but held to a lower standard while they're still learning.
+    type: Tweak
+  - message: Rule 15 now requires Russian as the server's common language instead of English.
+    type: Tweak
+  - message: Renamed self-antag/metafriend/metagrudge/metacomms terminology to само-антагонизм/мета-кооп/мета-инфа across the rules and glossary, and dropped the metagrudge concept entirely.
+    type: Tweak
+  id: 4
+  time: '2026-07-12T00:00:00.000000+00:00'
 Order: 1
