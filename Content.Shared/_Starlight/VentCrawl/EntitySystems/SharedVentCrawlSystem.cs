@@ -171,6 +171,15 @@ public sealed partial class SharedVentCrawlSystem : EntitySystem
         var query = EntityQueryEnumerator<VentCrawlHolderComponent>();
         while (query.MoveNext(out var uid, out var holder))
         {
+            // The tube we just came from is only kept around transiently (see EnterTube); if it gets
+            // deleted after we've already moved on, clear the dangling reference so the networking
+            // code doesn't keep trying (and failing) to resolve it every tick.
+            if (holder.PreviousTube != null && (!Exists(holder.PreviousTube.Value) || Terminating(holder.PreviousTube.Value)))
+            {
+                holder.PreviousTube = null;
+                Dirty(uid, holder);
+            }
+
             if (holder.CurrentTube == null)
                 continue;
 
