@@ -81,3 +81,10 @@
   name: chat-emote-name-snore
   category: Vocal
   chatMessages: ["chat-emote-msg-snore"]
+
+# 🌇Sunset🌇 - used by the GeneHiccuping genetics disease
+- type: emote
+  id: Hiccup
+  name: chat-emote-name-hiccup
+  category: Vocal
+  chatMessages: ["chat-emote-msg-hiccup"]

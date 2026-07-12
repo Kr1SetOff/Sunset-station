@@ -1,5 +1,5 @@
-# Active abilities granted by genetic mutations. Each is an entity-target action whose event is handled
-# by GeneticPowerSystem (server).
+# Active abilities granted by genetic mutations. Each is an entity- or world-target action whose event is
+# handled by GeneticPowerSystem (server).
 
 - type: entity
   id: ActionGeneTelekinesis
@@ -40,3 +40,24 @@
   - type: EntityTargetAction
     event: !type:GenePyrokinesisActionEvent
     canTargetSelf: false
+
+- type: entity
+  id: ActionGeneBlink
+  parent: BaseAction
+  name: action-gene-blink-name
+  description: action-gene-blink-desc
+  components:
+  - type: Action
+    useDelay: 20
+    itemIconStyle: BigAction
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Magic/blink.ogg
+    icon:
+      sprite: Objects/Magic/magicactions.rsi
+      state: blink
+  - type: TargetAction
+    range: 6
+    # The event handler itself validates line-of-sight; this only limits which tiles are selectable.
+    checkCanAccess: false
+  - type: WorldTargetAction
+    event: !type:GeneBlinkActionEvent
