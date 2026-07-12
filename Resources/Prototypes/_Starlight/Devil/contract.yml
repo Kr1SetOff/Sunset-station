@@ -20,8 +20,9 @@
     - type: InfernalContract
     - type: ParsablePaper
       requiredPatterns:
-      # Must have verbatim clause warning signator
-      - "(?<=I understand that there is no way to retrieve these sacrifices. If I offer my soul, \\[bold\\]I understand that upon my demise my soul will fall into the fires of hell. My body will not be able to be resurrected, cloned, or brought back to life in any way.\\[/bold\\]).*"
+      # 🌇Sunset🌇 - must have verbatim clause warning signator (kept in sync with the Russian
+      # infernal-contract-base template in Locale/ru-RU/_Starlight/paper/infernal-contract.ftl)
+      - "(?<=Я понимаю, что вернуть эти жертвы будет невозможно. Если я предлагаю свою душу, \\[bold\\]я понимаю, что после моей кончины моя душа падёт в пламя ада. Моё тело нельзя будет воскресить, клонировать или каким-либо иным способом вернуть к жизни.\\[/bold\\]).*"
       requestedValuePatterns:
-        sacrifices: (?i)i offer the following:\s*((?:\n\s*[•\-\.\+]\s*.+)+)
-        benefits: (?i)in exchange for:\s*((?:\n\s*[•\-\.\+]\s*.+)+)
+        sacrifices: (?i)я предлагаю следующее:\s*((?:\n\s*[•\-\.\+]\s*.+)+)
+        benefits: (?i)в обмен на:\s*((?:\n\s*[•\-\.\+]\s*.+)+)

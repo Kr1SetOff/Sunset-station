@@ -141,3 +141,36 @@ mutation-chameleon-skin-desc = Кожа носителя подстраивае�
 
 mutation-mind-shield-name = Психическая устойчивость
 mutation-mind-shield-desc = Укреплённый разум, устойчивый к вербовке, принуждению и прочему психическому вторжению.
+
+action-gene-blink-name = Мгновенный скачок
+action-gene-blink-desc = Мгновенно переместитесь в выбранную точку в пределах видимости.
+
+mutation-hulk-name = Богатырская сила
+mutation-hulk-desc = Перестроенные мышцы и разросшиеся кисти наделяют носителя невероятной силой удара, но в перчатки эти руки уже не влезают.
+
+mutation-blink-name = Мгновенный скачок
+mutation-blink-desc = Носитель может мгновенно переместиться в выбранную точку в пределах видимости.
+
+mutation-coughing-name = Хронический кашель
+mutation-coughing-desc = Дефектный дыхательный ген, время от времени заставляющий носителя закашливаться.
+
+mutation-sneezing-name = Чихание
+mutation-sneezing-desc = Дефектный ген, время от времени заставляющий носителя чихать.
+
+mutation-hiccuping-name = Икота
+mutation-hiccuping-desc = Нестабильный ген, время от времени вызывающий у носителя приступы икоты.
+
+mutation-stutter-name = Заикание
+mutation-stutter-desc = Дефектный речевой ген, заставляющий носителя запинаться и повторять слова.
+
+mutation-narcolepsy-name = Нарколепсия
+mutation-narcolepsy-desc = Нестабильный ген сна, время от времени внезапно погружающий носителя в сон.
+
+mutation-nearsightedness-name = Близорукость
+mutation-nearsightedness-desc = Дефектный оптический ген, размывающий зрение носителя, но не ослепляющий его полностью — можно скорректировать очками.
+
+mutation-baldness-name = Облысение
+mutation-baldness-desc = Дефектный волосяной ген, лишающий носителя волос на голове и лице.
+
+mutation-chunky-fingers-name = Толстые пальцы
+mutation-chunky-fingers-desc = Разросшиеся пальцы носителя больше не годятся для тонкой работы — провода, таблетки и мелкие детали ему не даются.

@@ -28,3 +28,20 @@ cd-character-records-viewer-setwanted-placeholder = Причина
 cd-character-records-viewer-security-permanent-label = Постоянные записи
 cd-character-records-viewer-security-current-shift-label = Журнал текущей смены
 cd-character-records-viewer-security-current-shift-empty = Нет записей за текущую смену.
+
+cd-character-records-viewer-title-admin = Административные записи
+
+cd-character-records-viewer-gender-male = Мужской
+cd-character-records-viewer-gender-female = Женский
+cd-character-records-viewer-gender-neuter = Нейтральный
+cd-character-records-viewer-gender-epicene = Эпикен
+
+cd-character-records-viewer-sex-male = Мужской
+cd-character-records-viewer-sex-female = Женский
+cd-character-records-viewer-sex-unsexed = Бесполый
+
+cd-character-records-viewer-workauth-yes = Да
+cd-character-records-viewer-workauth-no = Нет
+
+cd-character-records-viewer-unit-cm = см
+cd-character-records-viewer-unit-kg = кг

@@ -12,9 +12,9 @@ roles-antag-brighteye-name = Светлоглазый
 roles-antag-brighteye-description = Посетитель и вмешивающийся из «Тьмы». Вмешивается и наблюдает оттуда, куда свет не достигает.
 objective-issuer-brighteye = [color=#6c15ae]Светлоглазый[/color]
 brighteye-role-greeting =
-    You are a Bright-eye!
-    You are a Shadekin from the Dark, a creature of the shadows that is foreign and alien to this dimension.
-    Explore and exert your influence over where the light does not reach, breach the spaces between this one and the dark with your portal and learn of this world.
+    Вы — Светлоглазый!
+    Вы — шейдкин из Тьмы, порождение теней, чуждое и незнакомое этому измерению.
+    Исследуйте и распространяйте своё влияние там, куда не достигает свет; открывайте порталом проходы между этим миром и тьмой и познавайте этот мир.
 
 shadekin-portal-owner = Это ваш портал
 shadekin-portal-stability-stable = Текущее состояние: [color=forestgreen]Стабильно[/color]

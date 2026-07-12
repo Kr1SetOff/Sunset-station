@@ -11,3 +11,6 @@ public sealed partial class GeneTelekinesisActionEvent : EntityTargetActionEvent
 
 /// <summary>Pyrokinesis gene action: set the targeted entity ablaze.</summary>
 public sealed partial class GenePyrokinesisActionEvent : EntityTargetActionEvent;
+
+/// <summary>Blink gene action: teleport the user to the clicked location.</summary>
+public sealed partial class GeneBlinkActionEvent : WorldTargetActionEvent;

@@ -19,14 +19,18 @@ ghost-roles-window-title = Роли призрака
 ghost-roles-window-available-button = Доступно ({ $rolesCount })
 ghost-roles-window-join-raffle-button = Вступить в лотерею
 ghost-roles-window-raffle-in-progress-button =
-    Join raffle ({ $time } left, { $players ->
-        [one] { $players } player
-        *[other] { $players } players
+    Вступить в лотерею (осталось { $time }, { $players ->
+        [one] { $players } игрок
+        [few] { $players } игрока
+        [many] { $players } игроков
+       *[other] { $players } игрока
     })
 ghost-roles-window-leave-raffle-button =
-    Leave raffle ({ $time } left, { $players ->
-        [one] { $players } player
-        *[other] { $players } players
+    Покинуть лотерею (осталось { $time }, { $players ->
+        [one] { $players } игрок
+        [few] { $players } игрока
+        [many] { $players } игроков
+       *[other] { $players } игрока
     })
 ghost-roles-window-request-role-button = Запросить
 ghost-roles-window-request-role-button-timer = Запросить ({ $time }сек)

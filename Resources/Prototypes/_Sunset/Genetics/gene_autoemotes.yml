@@ -1,0 +1,20 @@
+# Auto-emote prototypes used by the genetics system's vocal-tic disease genes: GeneCoughing,
+# GeneSneezing and GeneHiccuping (see Content.Server._Sunset.Genetics.GeneVocalTicSystem).
+
+- type: autoEmote
+  id: GeneCoughEmote
+  emote: Cough
+  interval: 25
+  chance: 0.5
+
+- type: autoEmote
+  id: GeneSneezeEmote
+  emote: Sneeze
+  interval: 30
+  chance: 0.4
+
+- type: autoEmote
+  id: GeneHiccupEmote
+  emote: Hiccup
+  interval: 20
+  chance: 0.6

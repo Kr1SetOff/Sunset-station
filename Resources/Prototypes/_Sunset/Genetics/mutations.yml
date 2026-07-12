@@ -3,10 +3,11 @@
 # shuffled every round (Paradise SS13 style, see GeneticsSystem.EnsureGeneLayout) - that's why no
 # mutation declares a block here.
 #
-# 🌇Sunset🌇 - four of sunset-station's mutations were dropped rather than ported: GeneVoidLungs
-# (PressureImmunity/BreathingImmunity components), GeneXrayEyes (UltraVision), GeneHulk (Hulk, a whole
-# separate subsystem) and GeneDeafness (Deaf) all depend on components/systems that don't exist in
-# this fork. Everything else ports over using components this fork already has.
+# 🌇Sunset🌇 - two of sunset-station's mutations were dropped rather than ported: GeneVoidLungs
+# (PressureImmunity/BreathingImmunity components) and GeneXrayEyes (UltraVision) depend on
+# components/systems that don't exist in this fork. GeneHulk and GeneDeafness were originally dropped
+# for the same reason, but have since been ported below with dedicated components (see the "further
+# batch" note). Everything else ports over using components this fork already has.
 #
 # 🌇Sunset🌇 - three mutations from Paradise Station's actual current gene pool
 # (code/game/dna/mutations/mutation_powers.dm) added on top of the above: GeneFireResistance (mirrors
@@ -15,10 +16,15 @@
 # GeneChameleonSkin (mirrors stealth/chameleon, simplified to a flat visibility reduction via the
 # existing StealthComponent rather than tile-matching camouflage) and GeneMindShield (mirrors
 # psychic_resist, reusing the existing MindShieldComponent for conversion/mind-control resistance).
-# Paradise's disability/nearsighted was considered but skipped: BlurryVisionComponent is driven by
-# BlindableComponent.EyeDamage recalculation and gets silently cleared by unrelated glasses-equip
-# logic if just granted directly, so it needs proper EyeDamage integration to work reliably - out of
-# scope for a plain component-grant mutation.
+#
+# 🌇Sunset🌇 - a further batch of genes ported below: GeneHulk (bonus melee damage + a blocked glove
+# slot), GeneBlink (short-range teleport action), GeneCoughing/GeneSneezing/GeneHiccuping (auto-emote
+# disease genes, each with its own marker component so several can stack without one gene's activation
+# clobbering another's AutoEmoteComponent), GeneStutter/GeneNarcolepsy (reuse the existing
+# StutteringAccent/Narcolepsy components), GeneNearsightedness (a lighter PermanentBlindness cousin
+# that blurs rather than blinds via a partial BlindableComponent.MinDamage, kept as its own component
+# so it can stack with GeneBlindness), GeneBaldness (strips hair/facial-hair markings, restored on
+# deactivation) and GeneChunkyFingers (strips ComplexInteraction, blocking fine manipulation).
 
 # ---- Powers ----
 
@@ -189,6 +195,29 @@
   - type: GeneticSize
     scale: 0.75
 
+- type: mutation
+  id: GeneHulk
+  name: mutation-hulk-name
+  description: mutation-hulk-desc
+  tier: Major
+  instability: 18
+  components:
+  - type: BonusMeleeDamage
+    bonusDamage:
+      types:
+        Blunt: 8
+  - type: GeneBlockedSlots
+    slots: GLOVES
+
+- type: mutation
+  id: GeneBlink
+  name: mutation-blink-name
+  description: mutation-blink-desc
+  tier: Major
+  instability: 20
+  actions:
+  - ActionGeneBlink
+
 # ---- Diseases ----
 
 - type: mutation
@@ -237,3 +266,80 @@
   - type: RadiationSource
     intensity: 2
     slope: 1
+
+- type: mutation
+  id: GeneCoughing
+  name: mutation-coughing-name
+  description: mutation-coughing-desc
+  disease: true
+  instability: -5
+  components:
+  - type: GeneCoughing
+
+- type: mutation
+  id: GeneSneezing
+  name: mutation-sneezing-name
+  description: mutation-sneezing-desc
+  disease: true
+  instability: -5
+  components:
+  - type: GeneSneezing
+
+- type: mutation
+  id: GeneHiccuping
+  name: mutation-hiccuping-name
+  description: mutation-hiccuping-desc
+  disease: true
+  instability: -5
+  components:
+  - type: GeneHiccuping
+
+- type: mutation
+  id: GeneStutter
+  name: mutation-stutter-name
+  description: mutation-stutter-desc
+  disease: true
+  instability: -8
+  components:
+  - type: StutteringAccent
+
+- type: mutation
+  id: GeneNarcolepsy
+  name: mutation-narcolepsy-name
+  description: mutation-narcolepsy-desc
+  disease: true
+  instability: -10
+  components:
+  - type: Narcolepsy
+    maxTimeBetweenIncidents: 600
+    minTimeBetweenIncidents: 300
+    maxDurationOfIncident: 30
+    minDurationOfIncident: 10
+
+- type: mutation
+  id: GeneNearsightedness
+  name: mutation-nearsightedness-name
+  description: mutation-nearsightedness-desc
+  disease: true
+  instability: -8
+  components:
+  - type: GeneNearsighted
+    blindness: 4
+
+- type: mutation
+  id: GeneBaldness
+  name: mutation-baldness-name
+  description: mutation-baldness-desc
+  disease: true
+  instability: -3
+  components:
+  - type: GeneBald
+
+- type: mutation
+  id: GeneChunkyFingers
+  name: mutation-chunky-fingers-name
+  description: mutation-chunky-fingers-desc
+  disease: true
+  instability: -10
+  components:
+  - type: GeneChunkyFingers

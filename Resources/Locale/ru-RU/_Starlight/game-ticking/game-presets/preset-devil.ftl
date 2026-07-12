@@ -1,13 +1,13 @@
 devil-role-briefing =
-    You are a devil, an infernal agent
-    sent from the depths of the nine hells to
-    lead the crew of this station into a life of sin.
-    Strike deals with the crewmembers, and contractually
-    gain their souls in return for fulfilling their
-    fickle material desires.
+    Вы — дьявол, посланец преисподней,
+    отправленный из глубин девяти кругов ада,
+    чтобы совратить экипаж станции на путь греха.
+    Заключайте сделки с членами экипажа и по контракту
+    забирайте их души в обмен на исполнение
+    их мимолётных материальных желаний.
 
-    Remember, the crew can use your true name against you.
+    Помните: экипаж может использовать ваше настоящее имя против вас.
 
 objective-issuer-devil = Дьявол
 
-devil-round-end-agent-name = devil
+devil-round-end-agent-name = дьявол

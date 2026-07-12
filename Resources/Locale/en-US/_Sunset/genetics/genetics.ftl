@@ -141,3 +141,36 @@ mutation-chameleon-skin-desc = The carrier's skin shifts to match their surround
 
 mutation-mind-shield-name = Psychic Resistance
 mutation-mind-shield-desc = A fortified mind that resists conversion, coercion, and other psychic intrusion.
+
+action-gene-blink-name = Blink
+action-gene-blink-desc = Instantly teleport to a targeted location within sight.
+
+mutation-hulk-name = Herculean Strength
+mutation-hulk-desc = Rebuilt muscle and swollen hands grant the carrier tremendous striking power, though their hands no longer fit into gloves.
+
+mutation-blink-name = Blink
+mutation-blink-desc = The carrier can instantly teleport to a targeted location within sight.
+
+mutation-coughing-name = Chronic Cough
+mutation-coughing-desc = A defective respiratory gene that makes the carrier cough uncontrollably from time to time.
+
+mutation-sneezing-name = Sneezing
+mutation-sneezing-desc = A defective gene that makes the carrier sneeze uncontrollably from time to time.
+
+mutation-hiccuping-name = Hiccups
+mutation-hiccuping-desc = An unstable gene that gives the carrier fits of hiccups from time to time.
+
+mutation-stutter-name = Stutter
+mutation-stutter-desc = A defective speech gene that makes the carrier stammer and repeat themselves.
+
+mutation-narcolepsy-name = Narcolepsy
+mutation-narcolepsy-desc = An unstable sleep gene that suddenly knocks the carrier out at random.
+
+mutation-nearsightedness-name = Nearsightedness
+mutation-nearsightedness-desc = A defective optic gene that blurs the carrier's vision without fully blinding them - correctable with glasses.
+
+mutation-baldness-name = Baldness
+mutation-baldness-desc = A defective hair gene that strips the carrier of the hair on their head and face.
+
+mutation-chunky-fingers-name = Chunky Fingers
+mutation-chunky-fingers-desc = The carrier's swollen fingers can no longer manage fine work - wires, pills, and small parts slip from their grasp.

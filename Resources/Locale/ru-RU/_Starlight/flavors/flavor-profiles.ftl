@@ -8,8 +8,8 @@ flavor-complex-struggle = как сырая борьба
 flavor-base-halal = халяль
 flavor-base-greasy = жирный
 flavor-base-festive = праздничный
-flavor-complex-the-last-call = like death's cold embrace
-flavor-base-perfid = perfid
+flavor-complex-the-last-call = как холодные объятия смерти
+flavor-base-perfid = вероломный
 
 # Sunset - nedostayushchie perevody
 flavor-complex-highlander = как ОСТАТЬСЯ ДОЛЖЕН ТОЛЬКО ОДИН

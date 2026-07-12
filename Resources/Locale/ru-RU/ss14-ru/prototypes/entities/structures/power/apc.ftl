@@ -1,6 +1,6 @@
-ent-BaseAPC = АПЦ
+ent-BaseAPC = ЛКП
     .desc = Терминал управления электрическими системами области.
-ent-APCFrame = каркас АПЦ
+ent-APCFrame = каркас ЛКП
     .desc = Терминал управления электрическими системами области, в котором отсутствуют электронные компоненты.
 ent-APCConstructed = { ent-BaseAPC }
     .desc = { ent-BaseAPC.desc }

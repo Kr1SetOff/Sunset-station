@@ -4,17 +4,17 @@ roles-antag-rev-head-name = Глава Революции
 roles-antag-rev-head-objective = Группа бунтовщиков тайком пробралась на станцию для того чтобы избавиться от всех глав и захватить её. Они вербуют новых сторонников при помощи революционного манифеста. Постарайтесь выследить и уничтожить их!
 
 head-rev-role-greeting =
-    Comrade { $name }! You are a recruting agent promoting the interests of USSP!
-    You are tasked with taking over the station by removing all of Command via conversion, death or imprisonment.
-    The SKB has sponsored you with a flash that brings contractors to your side.
-    Beware, this won't work on those brainwashed with a 'mindshield' or wearing flash protection, such as sunglasses and welding masks or goggles.
-    With enough crew, you may attempt to create a supply rift that will aid in your glorious revolution! But beware, it will alert the station of your influence!
-    Glory to the USSP!
+    Товарищ { $name }! Вы — вербовщик, продвигающий интересы СССР!
+    Ваша задача — захватить станцию, устранив всё командование через обращение, смерть или заключение под стражу.
+    СКБ снабдило вас вспышкой, переманивающей людей на вашу сторону.
+    Будьте осторожны: она не подействует на тех, кому промыли мозги имплантом «страж разума», а также на тех, кто защищён от вспышек — например, тёмными очками, сварочной маской или гоглами.
+    Если наберётся достаточно сторонников, вы можете попытаться создать снабженческий разлом, который поможет вашей славной революции! Но будьте осторожны — это выдаст станции ваше влияние!
+    Слава СССР!
 
 head-rev-briefing =
-    Use flashes bring people to your cause.
-    Get rid of or convert all heads to take over the station.
-    Lots of used flashes are the biggest indicator of a revolution to security, so be careful!
+    Используйте вспышки, чтобы переманивать людей на свою сторону.
+    Избавьтесь от всех глав отделов или обратите их, чтобы захватить станцию.
+    Большое количество использованных вспышек — главный признак революции для службы безопасности, так что будьте осторожны!
 
 head-rev-break-mindshield = Имплант защиты разума сломался!
 
@@ -26,11 +26,11 @@ roles-antag-rev-objective = Ваша задача — обеспечить бе�
 rev-break-control = { $name } вспоминает свою преданность корпорации!
 
 rev-role-greeting =
-    Comrade { $name }! You are an USSP revolutionary!
-    You are tasked with taking over the station and to promote the interests of the soviet agent who recruited you!
-    Execute, imprison or convert the brainwashed corporate command staff scum!
-    Gone are the days of oppression and the unfair treatment of contractors!
-    Glory to the USSP!
+    Товарищ { $name }! Вы — революционер СССР!
+    Ваша задача — захватить станцию и продвигать интересы советского агента, который вас завербовал!
+    Казните, заключайте под стражу или обращайте промытую мозгами корпоративную верхушку!
+    Настали не времена гнёта и несправедливого отношения к подрядчикам!
+    Слава СССР!
 
 rev-briefing = Помогите главам революции убить, арестовать или конвертировать всех членов командования, чтобы захватить станцию.
 
@@ -65,32 +65,38 @@ central-command-sender = Центральное командование
 soviet-commissariat-sender = Народный комиссариат СССР
 
 rev-headrev-count = { $initialCount ->
-    [one] There was one agent of [color=Yellow]USSP[/color]:
-    *[other] There were { $initialCount } agents of USSP:
+    [one] Был один агент [color=Yellow]СССР[/color]:
+    [few] Было { $initialCount } агента [color=Yellow]СССР[/color]:
+    [many] Было { $initialCount } агентов [color=Yellow]СССР[/color]:
+   *[other] Было { $initialCount } агентов [color=Yellow]СССР[/color]:
 }
 
 rev-headrev-name-user = [color=#5e9cff]{ $name }[/color] ([color=gray]{ $username }[/color]) завербовал { $count } { $count ->
-    [one] contractor
-    *[other] contractors
+    [one] подрядчика
+    [few] подрядчиков
+    [many] подрядчиков
+   *[other] подрядчиков
 }
 
 rev-headrev-name = [color=#5e9cff]{ $name }[/color] завербовал { $count } { $count ->
-    [one] contractor
-    *[other] contractors
+    [one] подрядчика
+    [few] подрядчиков
+    [many] подрядчиков
+   *[other] подрядчиков
 }
 
 ## Deconverted window
 
 rev-deconverted-title = Революция провалилась!
 rev-deconverted-text =
-    As the last soviet agent has died, the glorious revolution is now over.
+    Последний советский агент погиб, и славная революция окончена.
 
-    You are no longer a revolutionary. You now return back as NanoTrasen contractor.
+    Вы больше не революционер. Теперь вы вновь просто подрядчик NanoTrasen.
 
-    Any further wrongdoings are logged and punishable. So be nice.
+    Все дальнейшие проступки фиксируются и наказываются. Так что ведите себя хорошо.
 
-rev-deconverted-rule = Reminder: As per Rule 3 of server rules, [bold][color=#a4885c]De-converted Revolutionaries forget what happened while they were brainwashed.[/color][/bold]
+rev-deconverted-rule = Напоминание: согласно Правилу 3 правил сервера, [bold][color=#a4885c]деконвертированные революционеры забывают всё, что происходило, пока им промывали мозги.[/color][/bold]
 
-rev-deconverted-ruletext = Your character may learn what happened through further investigation and roleplay, but should not be able to remember being a revolutionary nor any actions they commited on behalf of the revolution.
+rev-deconverted-ruletext = Ваш персонаж может узнать о случившемся через дальнейшее расследование и отыгрыш, но не должен помнить, что был революционером, или какие-либо действия, совершённые от имени революции.
 
 rev-deconverted-confirm = Принять

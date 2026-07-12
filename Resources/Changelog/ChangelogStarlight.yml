@@ -2799,4 +2799,38 @@ Entries:
   id: 406123
   time: '2026-06-19T14:29:18.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/4749
+- author: ClubYT
+  changes:
+  - message: When the selected game mode fails to start due to insufficient players, the server now falls back directly to Extended instead of trying Traitor first.
+    type: Tweak
+  - message: Translated remaining English antagonist role briefings into Russian (Traitor, Changeling, Revolutionaries, Nuclear Operatives, Thief, Devil, Terminator, Wizard Duelist, Terror Spiders, Brighteye, S.E.L.F. agent, mind control implant, Blackstar mercenaries).
+    type: Fix
+  - message: Translated the character info panel's IC/OOC section headers and labels (previously hardcoded in English in the client UI).
+    type: Fix
+  - message: Translated general/medical/security station records - gender, sex, height/weight units, and work authorization were displaying raw English values.
+    type: Fix
+  - message: Translated the Secure Terminal button on the communications console, the antimatter engine's injection toggle button, the IFF console, the cooling unit's status text, and several other UI strings that were still in English.
+    type: Fix
+  - message: Renamed the "АПЦ" abbreviation to "ЛКП", and "РЦД"/"РУТ" to "РСУ"/"РТУ", for clarity.
+    type: Tweak
+  - message: Translated remaining English lines in ghost role rules, borg messages, and various other locale files that were flagged as incomplete translations.
+    type: Fix
+  id: 406124
+  time: '2026-07-12T00:00:00.000000+00:00'
+- author: ClubYT
+  changes:
+  - message: Thieves no longer have forced pacifism - they can now defend themselves like any other antagonist.
+    type: Tweak
+  - message: AI and borg laws generated during an ion storm event no longer show broken "{$number} {$adjective}" placeholders, and the full word list they draw from has been translated to Russian.
+    type: Fix
+  - message: Translated the last untranslated admin Smite entry (Felionoid species swap), the ghost role raffle join/leave buttons, and the Admin Help (ahelp) system's introductory and system messages.
+    type: Fix
+  - message: Rewrote the Devil antagonist's guidebook entry in natural Russian and fixed its broken markup.
+    type: Fix
+  - message: Fixed a couple of remaining "{$language}" placeholders showing up in whisper chat and in Thaven mood text.
+    type: Fix
+  - message: Added ten new genetics mutations ported from other SS13/14 codebases - Herculean Strength (Hulk), Blink, Chronic Cough, Sneezing, Hiccups, Stutter, Narcolepsy, Nearsightedness, Baldness and Chunky Fingers.
+    type: Add
+  id: 406125
+  time: '2026-07-12T00:00:00.000000+00:00'
 Order: -1

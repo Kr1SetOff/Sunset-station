@@ -305,7 +305,7 @@ public sealed partial class CharacterRecordViewer : FancyWindow
                 break;
             case RecordConsoleType.Admin:
                 RecordFilterType.Visible = true;
-                Title = "Admin records console";
+                Title = Loc.GetString("cd-character-records-viewer-title-admin");
                 RecordEntryViewType.Visible = true;
 
                 break;
@@ -376,10 +376,10 @@ public sealed partial class CharacterRecordViewer : FancyWindow
         RecordContainerName.Text = record.Name;
         RecordContainerAge.Text = record.Age.ToString();
         RecordContainerJob.Text = record.JobTitle; /* At some point in the future we might want to display the icon */
-        RecordContainerGender.Text = record.Gender.ToString();
+        RecordContainerGender.Text = Loc.GetString("cd-character-records-viewer-gender-" + record.Gender.ToString().ToLowerInvariant());
         RecordContainerSpecies.Text = record.Species;
-        RecordContainerHeight.Text = cr.Height + " " + UnitConversion.GetImperialDisplayLength(cr.Height);
-        RecordContainerWeight.Text = cr.Weight + " " + UnitConversion.GetImperialDisplayMass(cr.Weight);
+        RecordContainerHeight.Text = cr.Height + " " + Loc.GetString("cd-character-records-viewer-unit-cm") + " " + UnitConversion.GetImperialDisplayLength(cr.Height);
+        RecordContainerWeight.Text = cr.Weight + " " + Loc.GetString("cd-character-records-viewer-unit-kg") + " " + UnitConversion.GetImperialDisplayMass(cr.Weight);
         RecordContainerContactName.SetValue(cr.EmergencyContactName);
 
         RecordContainerEmployment.Visible = false;
@@ -445,7 +445,9 @@ public sealed partial class CharacterRecordViewer : FancyWindow
     private void UpdateRecordBoxEmployment(FullCharacterRecords record)
     {
         RecordContainerEmployment.Visible = true;
-        RecordContainerWorkAuth.Text = record.PRecords.HasWorkAuthorization ? "yes" : "no";
+        RecordContainerWorkAuth.Text = record.PRecords.HasWorkAuthorization
+            ? Loc.GetString("cd-character-records-viewer-workauth-yes")
+            : Loc.GetString("cd-character-records-viewer-workauth-no");
     }
 
     private void UpdateRecordBoxMedical(FullCharacterRecords record)
@@ -456,7 +458,7 @@ public sealed partial class CharacterRecordViewer : FancyWindow
         RecordContainerAllergies.SetValue(cr.Allergies);
         RecordContainerDrugAllergies.SetValue(cr.DrugAllergies);
         RecordContainerPostmortem.SetValue(cr.PostmortemInstructions);
-        RecordContainerSex.Text = record.Sex.ToString();
+        RecordContainerSex.Text = Loc.GetString("cd-character-records-viewer-sex-" + record.Sex.ToString().ToLowerInvariant());
     }
 
     private void UpdateRecordBoxSecurity(FullCharacterRecords record, (SecurityStatus, string?)? criminal, CriminalRecord? criminalRecord)

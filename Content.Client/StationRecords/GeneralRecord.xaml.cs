@@ -21,7 +21,7 @@ public sealed partial class GeneralRecord : Control
         var species = Loc.GetString(record.Species);
         Species.Text = Loc.GetString("general-station-record-console-record-species", ("species", species));
         Gender.Text = Loc.GetString("general-station-record-console-record-gender",
-            ("gender", record.Gender.ToString()));
+            ("gender", record.Gender.ToString().ToLowerInvariant()));
         Fingerprint.Text = Loc.GetString("general-station-record-console-record-fingerprint",
             ("fingerprint", record.Fingerprint ?? Loc.GetString("generic-not-available-shorthand")));
         Dna.Text = Loc.GetString("general-station-record-console-record-dna",

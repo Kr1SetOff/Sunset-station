@@ -42,8 +42,13 @@
             Blunt: -3
             Slash: -3
             Piercing: -3
+            Heat: -3
+            Shock: -3
+            Cold: -3
+            Caustic: -3
             Asphyxiation: -3
             Bloodloss: -3
+            # Radiation and Poison are deliberately excluded - his one real weak spot.
       - type: MeleeWeapon
         soundHit:
           collection: Punch

@@ -1,32 +1,31 @@
 infernal-contract-base =
    ⠀[center][sigil][/center]
 
-   ⠀[color=#fbd8ae][head=2]CONTRACT FOR WORLDLY GAIN[/head]
+   ⠀[color=#fbd8ae][head=2]ДОГОВОР О МИРСКИХ БЛАГАХ[/head]
     ───────────────────────────────────────
-   ⠀I, [signature], in sound mind, hereby declare that I willingly engage in demonic exchange with { $truename }, an agent of hell.
+   ⠀Я, [signature], в здравом уме и твёрдой памяти, настоящим заявляю, что добровольно вступаю в демоническую сделку с { $truename }, агентом ада.
 
-   ⠀I offer the following:
-    • My soul
+   ⠀Я предлагаю следующее:
+    • Моя душа
     • [form]
     • [form]
+    В вечное адское пламя, в обмен на:
+    • Самоомоложение
     • [form]
-    To the eternal fires of hell, in exchange for:
-    • Gain self rejuvenation
-    • [form]
 
-    I understand that there is no way to retrieve these sacrifices. If I offer my soul, [bold]I understand that upon my demise my soul will fall into the fires of hell. My body will not be able to be resurrected, cloned, or brought back to life in any way.[/bold] I will not be able to utter the true name of the devil, doing such will incinerate me.
+    Я понимаю, что вернуть эти жертвы будет невозможно. Если я предлагаю свою душу, [bold]я понимаю, что после моей кончины моя душа падёт в пламя ада. Моё тело нельзя будет воскресить, клонировать или каким-либо иным способом вернуть к жизни.[/bold] Я не смогу произнести истинное имя дьявола — от этого я сгорю дотла.
 
-    Signed: [signature][/color]
+    Подписано: [signature][/color]
 
-infernal-contract-examined-Valid = The contract is ready for signing.
-infernal-contract-examined-InvalidFormat = The contract is invalid, as it is missing vital smallprint.
-infernal-contract-examined-TooCostly = The contract is not a fair deal for hell, it will not be actioned.
-infernal-contract-examined-UnknownClauses = The contract contains clauses which are not permitted for mortals.
-infernal-contract-examined-Signed = The contract has been signed!
+infernal-contract-examined-Valid = Контракт готов к подписанию.
+infernal-contract-examined-InvalidFormat = Контракт недействителен — в нём не хватает важного мелкого шрифта.
+infernal-contract-examined-TooCostly = Эта сделка невыгодна аду и не будет исполнена.
+infernal-contract-examined-UnknownClauses = Контракт содержит пункты, недоступные смертным.
+infernal-contract-examined-Signed = Контракт подписан!
 
-infernal-contract-examine-cost = This contract has a cost of { $value }
+infernal-contract-examine-cost = Стоимость этого контракта: { $value }
 
-infernal-contract-popup-fail = The contract burns your hand! Something about it isn't right!
-infernal-contract-popup-fail-self = Your hand passes through the contract! This deal isn't for you to sign!
-infernal-contract-edit-fail = Your hand passes through the contract! You can't change the deal!
-infernal-contract-popup-invalid-damnations = Misspellings in contract! Check before signing: { $items }
+infernal-contract-popup-fail = Контракт обжигает вам руку! Что-то здесь не так!
+infernal-contract-popup-fail-self = Ваша рука проходит сквозь контракт! Эта сделка не для вас!
+infernal-contract-edit-fail = Ваша рука проходит сквозь контракт! Вы не можете изменить условия сделки!
+infernal-contract-popup-invalid-damnations = В контракте есть опечатки! Проверьте перед подписанием: { $items }

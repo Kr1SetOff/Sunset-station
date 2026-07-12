@@ -24,24 +24,24 @@ traitor-death-match-end-round-description-entry = ПДА { $originalName }, с {
 
 # TraitorRole
 traitor-role-greeting =
-    You are an agent sent by [color = darkred]The Syndicate[/color] on behalf of { $corporation }.
-    Your objectives and codewords are listed in the character menu. Use your uplink to buy the tools you'll need for this mission.
-    Death to NanoTrasen!
+    Вы — агент, засланный [color = darkred]Синдикатом[/color] по заказу { $corporation }.
+    Ваши цели и кодовые слова указаны в меню персонажа. Используйте аплинк, чтобы купить снаряжение для этой миссии.
+    Смерть NanoTrasen!
 traitor-role-codewords =
-    The codewords are: [color = lightgray]
+    Кодовые слова: [color = lightgray]
     { $codewords }.[/color]
-    Codewords can be used in regular conversation to identify yourself discreetly to other syndicate agents.
-    Listen for them, and keep them secret.
+    Эти слова можно вставить в обычный разговор, чтобы незаметно опознать себя перед другими агентами Синдиката.
+    Прислушивайтесь к ним и держите в секрете.
 traitor-role-uplink-code =
-    Set your ringtone to the notes [color = lightgray]{ $code }[/color] to lock or unlock your uplink.
-    Remember to lock it after, or the station's crew might find it!
+    Установите на рингтон ноты [color = lightgray]{ $code }[/color], чтобы заблокировать или разблокировать аплинк.
+    Не забудьте заблокировать его после использования — иначе экипаж станции может его найти!
 traitor-role-uplink-implant =
-    Your uplink implant has been activated, access it from your hotbar.
-    The uplink is secure unless someone removes it from your body.
+    Ваш имплант-аплинк активирован, доступ к нему — через хотбар.
+    Аплинк защищён, пока кто-то не извлечёт его из вашего тела.
 
-# don't need all the flavour text for character menu
+# весь этот художественный текст ни к чему в меню персонажа
 traitor-role-codewords-short =
-    The codewords are:
+    Кодовые слова:
     { $codewords }.
 traitor-role-uplink-code-short = Код от вашего аплинка — { $code }. Установите его в качестве рингтона ПДА для доступа к аплинку.
 traitor-role-uplink-implant-short = Ваш аплинк был имплантирован. Воспользуйтесь им из хотбара.
