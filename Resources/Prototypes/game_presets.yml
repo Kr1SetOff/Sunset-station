@@ -110,7 +110,7 @@
   name: extended-title
   showInVote: true # 🌟Starlight🌟
   description: extended-description
-  minPlayers: 15 # 🌇Sunset🌇
+  minPlayers: 10 # 🌇Sunset🌇
   rules:
   - ThiefGamerule # 🌇Sunset🌇
   - SunSetCalmStationEventScheduler # 🌇Sunset🌇
@@ -214,7 +214,7 @@
     - nukeops
   name: nukeops-title
   description: nukeops-description
-  minPlayers: 15 # 🌇Sunset🌇
+  minPlayers: 10 # 🌇Sunset🌇
   showInVote: true # 🌟Starlight🌟
   rules:
   - Nukeops
@@ -232,7 +232,7 @@
     - revolutionaries
   name: rev-title
   description: rev-description
-  minPlayers: 15 # 🌇Sunset🌇
+  minPlayers: 10 # 🌇Sunset🌇
   showInVote: true # 🌟Starlight🌟
   rules:
   # - DummyNonAntagChance 🌟Starlight🌟
@@ -248,7 +248,7 @@
   - wizard
   name: wizard-title
   description: wizard-description
-  minPlayers: 15 # 🌇Sunset🌇
+  minPlayers: 10 # 🌇Sunset🌇
   showInVote: true # 🌇Sunset🌇, теперь участвует в куррируемом голосовании
   rules:
   - SunSetWizardOrDuelRule # 🌇Sunset🌇, 50/50 одиночный волшебник или маги-дуэлянты
@@ -264,7 +264,7 @@
     - xenoborgs
   name: xenoborgs-title
   description: xenoborgs-description
-  minPlayers: 15 # 🌇Sunset🌇
+  minPlayers: 10 # 🌇Sunset🌇
   showInVote: true # 🌟Starlight🌟
   rules:
   - Xenoborgs

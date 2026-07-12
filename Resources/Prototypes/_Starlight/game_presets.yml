@@ -22,7 +22,7 @@
     - xenoborgslp
   name: xenoborgs-title
   description: xenoborgs-description
-  minPlayers: 20
+  minPlayers: 10 # 🌇Sunset🌇
   showInVote: true
   rules:
   - SubXenoborgs
