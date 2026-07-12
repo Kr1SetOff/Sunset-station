@@ -9,20 +9,20 @@ roundend-prepend-changeling-stolen = Кто-то извлёк [color=orange]{ $n
 
 changeling-gamemode-title = Генокрады
 changeling-gamemode-description =
-    The changeling hive has boarded the station, ready to take anything it desires — be it your equipment, your faces, or your lives!
+    Улей генокрадов проник на станцию и готов забрать всё, что пожелает — будь то ваше снаряжение, ваше лицо или ваша жизнь!
 
 changeling-role-greeting =
-    You are a changeling, a highly intelligent predator.
-    Your primary goal is to escape the station alive via assuming the identities of the denizens of this station.
-    You are hungry and will not make it long without sustenance...
-    Kill. Consume. Hide. Survive.
+    Вы — генокрад, высокоразумный хищник.
+    Ваша главная цель — сбежать со станции живым, принимая облик её обитателей.
+    Вы голодны и долго не продержитесь без пищи...
+    Убивайте. Поглощайте. Скрывайтесь. Выживайте.
 
 changeling-briefing =
-    You are a changeling.
-    You are able to utilize and assume the identities of those you consume to evade a grim fate.
+    Вы — генокрад.
+    Вы можете использовать и принимать облик тех, кого поглощаете, чтобы избежать мрачной участи.
 
 changeling-role-greeting-short =
-    You are a changeling who has absorbed and taken the initial form of { $name }.
+    Вы — генокрад, поглотивший и принявший изначальную форму { $name }.
 
 objective-issuer-changeling = [color=#FA2A55]Разум улья[/color]
 

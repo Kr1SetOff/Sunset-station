@@ -1,5 +1,5 @@
 ent-BaseSiliconLawboard = { ent-BaseElectronics }
-    .desc = Электронная плата, содержащая набор законов для кремниевых форм жизни.
+    .desc = Электронная плата, содержащая набор законов для боргов.
     .suffix = { ent-BaseElectronics.suffix }
 ent-NTDefaultCircuitBoard = плата законов (Стандарт NT)
     .desc = { ent-BaseSiliconLawboard.desc }

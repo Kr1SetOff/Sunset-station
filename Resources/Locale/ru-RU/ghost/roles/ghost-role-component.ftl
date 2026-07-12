@@ -4,30 +4,30 @@ ghost-role-component-default-rules = All normal rules apply unless an administra
                                      You are allowed to remember knowledge about the game in general, such as how to cook, how to use objects, etc.
                                      You are absolutely [color=red]NOT[/color] allowed to remember, say, the name, appearance, etc. of your previous character.
 ghost-role-information-nonantagonist-rules = Вы — [color=green][bold]не антагонист[/bold][/color]. Как правило, Вы не должны пытаться причинить вред станции и ее экипажу.
-                                             You don't remember any of your previous life, and you don't remember anything you learned as a ghost.
-                                             You are allowed to remember knowledge about the game in general, such as how to cook, how to use objects, etc.
-                                             You are absolutely [color=red]NOT[/color] allowed to remember, say, the name, appearance, etc. of your previous character.
+                                             Вы не помните ничего из своей прошлой жизни и ничего из того, что узнали, будучи призраком.
+                                             Вам разрешено помнить общие знания об игре — например, как готовить, как пользоваться предметами и т.д.
+                                             Вам категорически [color=red]ЗАПРЕЩЕНО[/color] помнить, например, имя, внешность и т.д. вашего предыдущего персонажа.
 ghost-role-information-freeagent-rules = Вы — [color=yellow][bold]свободный агент[/bold][/color]. Вы вольны действовать как в качестве антагониста, так и в качестве мирного.
-                                         You don't remember any of your previous life, and you don't remember anything you learned as a ghost.
-                                         You are allowed to remember knowledge about the game in general, such as how to cook, how to use objects, etc.
-                                         You are absolutely [color=red]NOT[/color] allowed to remember, say, the name, appearance, etc. of your previous character.
+                                         Вы не помните ничего из своей прошлой жизни и ничего из того, что узнали, будучи призраком.
+                                         Вам разрешено помнить общие знания об игре — например, как готовить, как пользоваться предметами и т.д.
+                                         Вам категорически [color=red]ЗАПРЕЩЕНО[/color] помнить, например, имя, внешность и т.д. вашего предыдущего персонажа.
 ghost-role-information-antagonist-rules = Вы — [color=red][bold]одинокий антагонист[/bold][/color]. Ваши намерения ясны и вредны для станции и ее экипажа.
-                                          You don't remember any of your previous life, and you don't remember anything you learned as a ghost.
-                                          You are allowed to remember knowledge about the game in general, such as how to cook, how to use objects, etc.
-                                          You are absolutely [color=red]NOT[/color] allowed to remember, say, the name, appearance, etc. of your previous character.
+                                          Вы не помните ничего из своей прошлой жизни и ничего из того, что узнали, будучи призраком.
+                                          Вам разрешено помнить общие знания об игре — например, как готовить, как пользоваться предметами и т.д.
+                                          Вам категорически [color=red]ЗАПРЕЩЕНО[/color] помнить, например, имя, внешность и т.д. вашего предыдущего персонажа.
 ghost-role-information-rules-team-antagonist = Вы — [color=red][bold]командный антагонист[/bold][/color]. Ваши намерения ясны и вредны для станции и ее экипажа.
-                                               You must [bold]work with your team[/bold] or follow reasonable directions from your team leaders.
-                                               You don't remember any of your previous life, and you don't remember anything you learned as a ghost.
-                                               You are allowed to remember knowledge about the game in general, such as how to cook, how to use objects, etc.
-                                               You are absolutely [color=red]NOT[/color] allowed to remember, say, the name, appearance, etc. of your previous character.
+                                               Вы обязаны [bold]работать со своей командой[/bold] и выполнять разумные указания её лидеров.
+                                               Вы не помните ничего из своей прошлой жизни и ничего из того, что узнали, будучи призраком.
+                                               Вам разрешено помнить общие знания об игре — например, как готовить, как пользоваться предметами и т.д.
+                                               Вам категорически [color=red]ЗАПРЕЩЕНО[/color] помнить, например, имя, внешность и т.д. вашего предыдущего персонажа.
 ghost-role-information-familiar-rules = Вы — [color=#6495ed][bold]фамильяр[/bold][/color]. Повинуйтесь тому, кто призвал Вас. Не действуйте вопреки интересам своего Господина. Вы умрете за своего Господина, если это будет необходимо.
-                                        You don't remember any of your previous life, and you don't remember anything you learned as a ghost.
-                                        You are allowed to remember knowledge about the game in general, such as how to cook, how to use objects, etc.
-                                        You are absolutely [color=red]NOT[/color] allowed to remember, say, the name, appearance, etc. of your previous character.
+                                        Вы не помните ничего из своей прошлой жизни и ничего из того, что узнали, будучи призраком.
+                                        Вам разрешено помнить общие знания об игре — например, как готовить, как пользоваться предметами и т.д.
+                                        Вам категорически [color=red]ЗАПРЕЩЕНО[/color] помнить, например, имя, внешность и т.д. вашего предыдущего персонажа.
 ghost-role-information-silicon-rules = Вы — [color=#6495ed][bold]силикон[/bold][/color]. Соблюдайте свои законы. Вы полностью свободны в своих действиях, если Ваши законы отсутствуют.
-                                       You don't remember any of your previous life, and you don't remember anything you learned as a ghost.
-                                       You are allowed to remember knowledge about the game in general, such as how to cook, how to use objects, etc.
-                                       You are absolutely [color=red]NOT[/color] allowed to remember, say, the name, appearance, etc. of your previous character.
+                                       Вы не помните ничего из своей прошлой жизни и ничего из того, что узнали, будучи призраком.
+                                       Вам разрешено помнить общие знания об игре — например, как готовить, как пользоваться предметами и т.д.
+                                       Вам категорически [color=red]ЗАПРЕЩЕНО[/color] помнить, например, имя, внешность и т.д. вашего предыдущего персонажа.
 
 ghost-role-information-mouse-name = Мышь
 ghost-role-information-mouse-description = Голодная и озорная мышь.
@@ -300,16 +300,16 @@ ghost-role-information-command-description = Вы являетесь члено�
 ghost-role-information-lost-challenge-commander-name = Командир в космическом отпуске
 ghost-role-information-lost-challenge-commander-description = Вы — член команды другого звездолета, которому был предоставлен отпуск вместе с одним из ваших грузовых техников.
 ghost-role-information-lost-challenge-commander-rules = Вы не враждебны станции. Делайте то, что должны, чтобы обеспечить свое собственное выживание.
-                                     You don't remember any of your previous life, and you don't remember anything you learned as a ghost.
-                                     You are allowed to remember knowledge about the game in general, such as how to cook, how to use objects, etc.
-                                     You are absolutely [color=red]NOT[/color] allowed to remember, say, the name, appearance, etc. of your previous character.
+                                     Вы не помните ничего из своей прошлой жизни и ничего из того, что узнали, будучи призраком.
+                                     Вам разрешено помнить общие знания об игре — например, как готовить, как пользоваться предметами и т.д.
+                                     Вам категорически [color=red]ЗАПРЕЩЕНО[/color] помнить, например, имя, внешность и т.д. вашего предыдущего персонажа.
 
 ghost-role-information-lost-challenge-cargo-technican-name = Водитель-грузчик
 ghost-role-information-lost-challenge-cargo-technican-description = Вы — техник по грузовым перевозкам, которому был предоставлен отпуск вместе с одним из ваших командиров.
 ghost-role-information-lost-challenge-cargo-technican-rules = Вы не враждебны станции, делайте то, что должны, чтобы обеспечить свое собственное выживание.
-                                     You don't remember any of your previous life, and you don't remember anything you learned as a ghost.
-                                     You are allowed to remember knowledge about the game in general, such as how to cook, how to use objects, etc.
-                                     You are absolutely [color=red]NOT[/color] allowed to remember, say, the name, appearance, etc. of your previous character.
+                                     Вы не помните ничего из своей прошлой жизни и ничего из того, что узнали, будучи призраком.
+                                     Вам разрешено помнить общие знания об игре — например, как готовить, как пользоваться предметами и т.д.
+                                     Вам категорически [color=red]ЗАПРЕЩЕНО[/color] помнить, например, имя, внешность и т.д. вашего предыдущего персонажа.
 
 ghost-role-information-disaster-victim-name = Жертва катастрофы
 ghost-role-information-disaster-victim-description = Вы были спасены в спасательной капсуле с другой станции, которую постигла ужасная участь. Возможно, Вас найдут и спасут.
@@ -343,7 +343,7 @@ ghost-role-information-tomatokiller-description = Этот маленький п
 
 ghost-role-information-gingerbread-name = Пряничный человечек
 ghost-role-information-gingerbread-description = Существо, преисполненное чистого праздничного духа.
-                                     Spread molassesy goodness and to all good cheer.
+                                     Дарите всем медовую доброту и праздничное веселье.
 
 ghost-role-information-mothership-core-name = Ядро материнского корабля
 ghost-role-information-mothership-core-desc = Вы — ядро матринского корабля ксеноборгов, помогите им размножиться, боргируя мозги, которые они вам приносят.

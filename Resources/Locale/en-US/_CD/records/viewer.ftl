@@ -28,3 +28,20 @@ cd-character-records-viewer-setwanted-placeholder = Reason
 cd-character-records-viewer-security-permanent-label = Permanent Records
 cd-character-records-viewer-security-current-shift-label = Current Shift Log
 cd-character-records-viewer-security-current-shift-empty = No current shift entries.
+
+cd-character-records-viewer-title-admin = Admin records console
+
+cd-character-records-viewer-gender-male = Male
+cd-character-records-viewer-gender-female = Female
+cd-character-records-viewer-gender-neuter = Neuter
+cd-character-records-viewer-gender-epicene = Epicene
+
+cd-character-records-viewer-sex-male = Male
+cd-character-records-viewer-sex-female = Female
+cd-character-records-viewer-sex-unsexed = Unsexed
+
+cd-character-records-viewer-workauth-yes = Yes
+cd-character-records-viewer-workauth-no = No
+
+cd-character-records-viewer-unit-cm = cm
+cd-character-records-viewer-unit-kg = kg

@@ -1,12 +1,12 @@
-terror-princess-round-end-agent-name = Terror Princess
+terror-princess-round-end-agent-name = принцесса пауков ужаса
 
-roles-antag-terror-princess-name = Terror Princess
-roles-antag-terror-princess-description = A mini-queen. Like a Queen, lays eggs over time, and never needs to feed.
+roles-antag-terror-princess-name = Принцесса пауков ужаса
+roles-antag-terror-princess-description = Мини-королева. Как и королева, со временем откладывает яйца и никогда не нуждается в пропитании.
 
 terror-spider-princess-briefing =
-    You are a Terror Pincess!
-    Your target is to create a big nest and create a big population of spiders to enslave this station.
-    Read more about your role in the guidebook entry.
+    Вы — принцесса пауков ужаса!
+    Ваша цель — создать большое гнездо и вырастить многочисленную популяцию пауков, чтобы поработить эту станцию.
+    Подробнее о вашей роли читайте в соответствующей статье путеводителя.
 
 central-command-terror-spiders-announcement = По данным сканирования дальними сенсорами, мы полагаем, что станция перешла под контроль враждебных паучьих сил. Большая часть персонала подтверждённо погибла, пропала без вести или покинула станцию. Всем оставшимся членам экипажа — ожидать дальнейших указаний.
 

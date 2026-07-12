@@ -157,7 +157,7 @@ thaven-mood-incredibly-distrusting-name = Невероятная подозри�
 thaven-mood-incredibly-distrusting-desc = Вы не доверяете никому, кроме других Тавенов, если только тот, кому вы доверяете, не поручится за постороннего.
 
 thaven-mood-perceived-dissonance-name = Мнимый диссонанс
-thaven-mood-perceived-dissonance-desc = { $language } режет ваш нежный слух, и его следует избегать любой ценой.
+thaven-mood-perceived-dissonance-desc = Режущие слух языки причиняют вам дискомфорт, и их следует избегать любой ценой.
 
 thaven-mood-germophobe-name = Мизофоб
 thaven-mood-germophobe-desc = Вы боитесь этих крошечных созданий, захватывающих каждый уголок и щель. Обязательно регулярно мойте инструменты и рабочее место с мылом, чтобы не осталось даже отпечатков.

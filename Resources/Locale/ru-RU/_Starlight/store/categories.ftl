@@ -7,7 +7,7 @@ store-category-medical-surgery = Хирургия
 store-category-enginery-main = Инженерия
 store-category-service-clown = Клоун
 store-category-security-main = Безопасность
-store-category-secret = Secret
+store-category-secret = Секрет
 
 # Changeling
 store-ling-category-combat = Ближний бой
@@ -17,7 +17,7 @@ store-ling-category-utility = Поддержка
 store-category-cantrips-standard = Стандартные трюки
 
 # Uplinks
-store-category-cybernetics = Cybernetics
+store-category-cybernetics = Кибернетика
 
 # Sunset - nedostayushchie perevody
 store-category-dagd = Слава

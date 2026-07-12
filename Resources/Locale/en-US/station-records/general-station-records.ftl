@@ -6,7 +6,7 @@ general-station-record-console-no-record-found = No record was found for the sel
 general-station-record-console-record-age = Age: {$age}
 general-station-record-console-record-title = Job: {$job}
 general-station-record-console-record-species = Species: {$species}
-general-station-record-console-record-gender = Gender: {$gender}
+general-station-record-console-record-gender = Gender: { CAPITALIZE($gender) }
 general-station-record-console-record-fingerprint = Fingerprint: {$fingerprint}
 general-station-record-console-record-dna = DNA: {$dna}
 

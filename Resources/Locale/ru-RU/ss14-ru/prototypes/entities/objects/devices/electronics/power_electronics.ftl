@@ -1,5 +1,5 @@
-ent-APCElectronics = микросхема АПЦ
-    .desc = Электронная схема, используемая при строительстве АПЦ.
+ent-APCElectronics = микросхема ЛКП
+    .desc = Электронная схема, используемая при строительстве ЛКП.
     .suffix = { ent-BaseElectronics.suffix }
 ent-WallmountSubstationElectronics = микросхема настенной подстанции
     .desc = Электронная схема, используемая для создания настенной подстанции.
