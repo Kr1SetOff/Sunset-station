@@ -2,8 +2,8 @@
 
 - type: damnation
   id: Soul
-  name: my soul
-  description: The signator forfeits their soul to you. Upon death, their soul will be sent to the depths of hell, rendering their corpse unrevivable.
+  name: моя душа
+  description: Подписант жертвует вам свою душу. После его смерти она отправится в глубины ада, а тело станет невозможно воскресить.
   cost: -10
   components:
   - type: Unrevivable
@@ -15,8 +15,8 @@
 
 - type: damnation
   id: Pacifism
-  name: give up my will to fight
-  description: The signator gives up their inner fight, becoming unable to bring harm to anything living or inanimate.
+  name: отказ от борьбы
+  description: Подписант отказывается от внутреннего стремления к борьбе и теряет способность причинять вред — живому или неживому.
   cost: -3
   components:
   - type: Pacified
@@ -24,8 +24,8 @@
 
 - type: damnation
   id: Blindness
-  name: give up my sight
-  description: The signator forfeits their ability to see.
+  name: моё зрение
+  description: Подписант лишается способности видеть.
   cost: -3
   components:
   - type: PermanentBlindness
@@ -33,8 +33,8 @@
 
 - type: damnation
   id: Time
-  name: give up my life
-  description: The signator forfeits their life, leaving them with five minutes left to live.
+  name: моя жизнь
+  description: Подписант жертвует своей жизнью — ему остаётся не более пяти минут.
   cost: -8
   reverseOnRemove: false # prevent cheesing it for points
   components:
@@ -42,8 +42,8 @@
 
 - type: damnation
   id: Credits
-  name: give up my riches
-  description: The signator forfeits 5000 credits.
+  name: мои сбережения
+  description: Подписант жертвует 5000 кредитов.
   cost: -5
   actions:
   - !type:DamnationActionDeductCredits
@@ -51,16 +51,16 @@
 
 - type: damnation
   id: Purpose
-  name: lose my purpose
-  description: The signator received a fate worse than death.
+  name: моя цель в жизни
+  description: Подписанта постигает участь хуже смерти.
   cost: -6
   components:
   - type: Cluwne
 
 - type: damnation
   id: Humanity
-  name: lose my humanity
-  description: The signator will regress into a more primitive form.
+  name: моя человечность
+  description: Подписант регрессирует в более примитивную форму.
   cost: -5
   actions:
   - !type:DamnationActionPolymorph
@@ -68,24 +68,24 @@
 
 - type: damnation
   id: Organ
-  name: give up an organ
-  description: The signator loses a random organ. This could be anything from their lungs to a kidney.
+  name: мой орган
+  description: Подписант теряет случайный орган — это может быть что угодно, от лёгких до почки.
   cost: -6
   actions:
   - !type:DamnationActionRemoveOrgan
 
 - type: damnation
   id: Terminator
-  name: become a target
-  description: The future is imperceptibly modified, putting the signator square in the sights of a vengeful actor.
+  name: стать мишенью
+  description: Будущее едва заметно меняется, и подписант оказывается на прицеле у мстительного исполнителя.
   cost: -4
   actions:
   - !type:DamnationActionTerminator
 
 - type: damnation
   id: Mute
-  name: lose my voice
-  description: Makes the signator mute
+  name: мой голос
+  description: Делает подписанта немым.
   cost: -2
   components:
   - type: Muted
@@ -94,8 +94,8 @@
 
 - type: damnation
   id: SpaceImmunity
-  name: gain immunity to space
-  description: The signator becomes immune to space, no longer bound by their fear.
+  name: иммунитет к вакууму
+  description: Подписант становится невосприимчив к вакууму космоса, более не скованный страхом перед ним.
   cost: 8
   removedComponents:
   - type: Barotrauma
@@ -114,8 +114,8 @@
 
 - type: damnation
   id: AllSeeing
-  name: gain knowledge of my surroundings
-  description: the signator can perceive through walls.
+  name: знание об окружении
+  description: Подписант обретает способность видеть сквозь стены.
   cost: 6
   components:
     - type: ThermalVision
@@ -123,8 +123,8 @@
 
 - type: damnation
   id: Magic
-  name: gain arcane powers
-  description: The signator learns some magical transport spells.
+  name: тайные силы
+  description: Подписант изучает несколько магических заклинаний перемещения.
   cost: 16
   components:
     - type: Jaunt
@@ -132,8 +132,8 @@
 
 - type: damnation
   id: Health
-  name: gain self rejuvenation
-  description: The signator gains the ability to totally restore their health, once.
+  name: самоомоложение
+  description: Подписант получает способность единожды полностью восстановить своё здоровье.
   cost: 10
   reverseOnRemove: true
   actions:
@@ -143,8 +143,8 @@
 
 - type: damnation
   id: Power
-  name: gain power over others
-  description: The signator gains a piece of armor and a blade, so that they can rend their will upon the world.
+  name: власть над другими
+  description: Подписант получает броню и клинок, чтобы подчинять мир своей воле.
   cost: 6
   actions:
   - !type:DamnationActionSpawnLoot
@@ -152,8 +152,8 @@
 
 - type: damnation
   id: Gun
-  name: receive a great equalizer
-  description: The signator receives a gun. We bought some arms futures and it didn't exactly turn out, need to get this crap off our hands.
+  name: великий уравнитель
+  description: Подписант получает оружие. Мы вложились в оружейные фьючерсы, и что-то пошло не так — нужно избавиться от этого хлама.
   cost: 10
   actions:
   - !type:DamnationActionSpawnLoot
@@ -161,16 +161,16 @@
 
 - type: damnation
   id: Electricity
-  name: gain immunity to electricity
-  description: The signator becomes.... insulated
+  name: иммунитет к электричеству
+  description: Подписант становится... изолированным.
   cost: 4
   components:
   - type: Insulated
 
 - type: damnation
   id: Noslip
-  name: gain a sure footing
-  description: The signator cannot slip anymore
+  name: твёрдая поступь
+  description: Подписант больше не поскальзывается.
   cost: 5
   components:
   - type: NoSlip
@@ -179,8 +179,8 @@
 
 - type: damnation
   id: TestFail
-  name: fail to sign
-  description: The contract will never be able to complete
+  name: провал подписания
+  description: Контракт никогда не сможет быть завершён.
   cost: -10
   actions:
   - !type:DamnationActionFail
