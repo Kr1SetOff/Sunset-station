@@ -1,0 +1,48 @@
+<controls:SponsorUplinkMenu
+    xmlns="https://spacestation14.io"
+    xmlns:controls="clr-namespace:Content.Client._Sunset.SponsorUplink"
+    xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
+    Title="{Loc 'sponsor-uplink-ui-title'}"
+    MinSize="560 620"
+    SetSize="560 620">
+    <PanelContainer>
+        <PanelContainer.PanelOverride>
+            <gfx:StyleBoxFlat BackgroundColor="#241200FF" />
+        </PanelContainer.PanelOverride>
+        <BoxContainer Orientation="Vertical">
+            <!--  Balance + withdraw header  -->
+            <PanelContainer Margin="4,4,4,0">
+                <PanelContainer.PanelOverride>
+                    <gfx:StyleBoxFlat BackgroundColor="#3D1F05FF" BorderColor="#FFD23FFF" BorderThickness="0,0,0,2" />
+                </PanelContainer.PanelOverride>
+                <BoxContainer Orientation="Horizontal" Margin="8,6,8,6">
+                    <RichTextLabel Name="BalanceInfo" Access="Public" HorizontalExpand="True" VerticalAlignment="Center" />
+                    <Button Name="WithdrawButton" Access="Public" Text="{Loc 'store-ui-default-withdraw-text'}" MinWidth="84" />
+                </BoxContainer>
+            </PanelContainer>
+
+            <!--  Category tabs  -->
+            <BoxContainer
+                Name="CategoryButtonsContainer"
+                Access="Public"
+                Orientation="Horizontal"
+                Margin="4,6,4,4"
+                HorizontalExpand="True" />
+
+            <!--  Item card grid  -->
+            <PanelContainer VerticalExpand="True" Margin="4,0,4,4">
+                <PanelContainer.PanelOverride>
+                    <gfx:StyleBoxFlat BackgroundColor="#2B1600FF" BorderColor="#A64DFFFF" BorderThickness="1" />
+                </PanelContainer.PanelOverride>
+                <ScrollContainer HScrollEnabled="False" HorizontalExpand="True" VerticalExpand="True">
+                    <GridContainer
+                        Name="ListingsGrid"
+                        Access="Public"
+                        Columns="3"
+                        HorizontalExpand="True"
+                        Margin="6,6,6,6" />
+                </ScrollContainer>
+            </PanelContainer>
+        </BoxContainer>
+    </PanelContainer>
+</controls:SponsorUplinkMenu>

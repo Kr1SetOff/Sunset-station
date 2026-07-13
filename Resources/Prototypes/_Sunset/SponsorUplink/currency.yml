@@ -1,0 +1,10 @@
+# 🌇Sunset🌇 - Sponsor Uplink's own currency ("sponsor coins"). Round-local like Telecrystal:
+# granted fresh at spawn (see SponsorUplinkSystem), not persisted between rounds. Withdrawable
+# into a stacking physical item (SponsorCoin1, see Stacks/currency.yml equivalent below) so it can
+# be handed to another player like Telecrystal.
+- type: currency
+  id: SponsorCoin
+  displayName: store-currency-display-sponsor-coin
+  cash:
+    1: SponsorCoin1
+  canWithdraw: true

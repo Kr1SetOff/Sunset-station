@@ -66,9 +66,7 @@
     TrendyTopSuit: 2
     MessyDressShirtUniformSuit: 3
     RuggedClothesUniformSuit: 2 # Starlight
-    OldWomanUniformSuit: 2
     PunkJeansUniformSuit: 2
-    TieDyeUniformSuit: 2
     VintageUniformSuit: 1
     ClothingOutercorset: 2
     ClothingOuterRedLeather: 2
@@ -93,7 +91,6 @@
     ClothingHeadHatOrangesoft: 2
     ClothingHeadHatRedsoft: 2
     # Starlight
-    ClothingHeadHatBrimHat: 3
     ClothingHeadHatFeatheredHat: 3
     # DO NOT ADD MORE, USE UNIFORM DYING
     ClothingHeadHatBlacksoft: 2
@@ -160,7 +157,6 @@
     ToyFigurineAssistant: 1
     ClothingBackpackSatchelSmugglerUnanchored: 1
     ClothingHeadHatSolidHeadband: 2
-    ClothingUniformJumpsuitTrackSuit: 2 #Starlight
     DarkTurtleneckSuit: 2 # Starlight
     TatteredClothesUniformSuit: 1 #starlight
     ClothingHeadHatTVHead: 1 #starlight

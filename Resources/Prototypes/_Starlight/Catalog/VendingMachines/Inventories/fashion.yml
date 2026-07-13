@@ -39,17 +39,6 @@
       stock: 1
 
 - type: listing
-  id: ClothingUniformJumpskirtTango
-  productEntity: ClothingUniformJumpskirtTango
-  cost:
-    NTCredit: 990
-  categories:
-    - SLFashionSkirt
-  conditions:
-    - !type:ListingLimitedStockCondition
-      stock: 1
-
-- type: listing
   id: ClothingUniformJulianneVA11HALLA
   productEntity: ClothingUniformJulianneVA11HALLA
   cost:
@@ -182,52 +171,8 @@
       stock: 1
 
 - type: listing
-  id: LilacDressUniformSuit
-  productEntity: LilacDressUniformSuit
-  cost:
-    NTCredit: 990
-  categories:
-    - SLFashionSkirt
-  conditions:
-    - !type:ListingLimitedStockCondition
-      stock: 1
-
-- type: listing
-  id: LittleBlackDressUniformSuit
-  productEntity: LittleBlackDressUniformSuit
-  cost:
-    NTCredit: 990
-  categories:
-    - SLFashionSkirt
-  conditions:
-    - !type:ListingLimitedStockCondition
-      stock: 1
-
-- type: listing
   id: SundressUniformSuit
   productEntity: SundressUniformSuit
-  cost:
-    NTCredit: 990
-  categories:
-    - SLFashionSkirt
-  conditions:
-    - !type:ListingLimitedStockCondition
-      stock: 1
-
-- type: listing
-  id: ClothingUniformElegantLadyDress
-  productEntity: ClothingUniformElegantLadyDress
-  cost:
-    NTCredit: 990
-  categories:
-    - SLFashionSkirt
-  conditions:
-    - !type:ListingLimitedStockCondition
-      stock: 1
-
-- type: listing
-  id: ClothingUniformJumpskirtPunkSkirt
-  productEntity: ClothingUniformJumpskirtPunkSkirt
   cost:
     NTCredit: 990
   categories:
@@ -282,39 +227,6 @@
       stock: 1
 
 - type: listing
-  id: ClothingUniformJumpsuitMimeSuaveWhite
-  productEntity: ClothingUniformJumpsuitMimeSuaveWhite
-  cost:
-    NTCredit: 400
-  categories:
-    - SLFashionSuit
-  conditions:
-    - !type:ListingLimitedStockCondition
-      stock: 1
-
-- type: listing
-  id: ClothingUniformJumpsuitMimeSuaveBlack
-  productEntity: ClothingUniformJumpsuitMimeSuaveBlack
-  cost:
-    NTCredit: 400
-  categories:
-    - SLFashionSuit
-  conditions:
-    - !type:ListingLimitedStockCondition
-      stock: 1
-
-- type: listing
-  id: ClothingUniformJumpsuitSuperstarCop
-  productEntity: ClothingUniformJumpsuitSuperstarCop
-  cost:
-    NTCredit: 990
-  categories:
-    - SLFashionSuit
-  conditions:
-    - !type:ListingLimitedStockCondition
-      stock: 1
-
-- type: listing
   id: ClothingUniformJumpsuitAerostatic
   productEntity: ClothingUniformJumpsuitAerostatic
   cost:
@@ -343,17 +255,6 @@
     NTCredit: 2000
   categories:
     - SLFashionSuit
-  conditions:
-    - !type:ListingLimitedStockCondition
-      stock: 1
-
-- type: listing
-  id: ClothingHeadHelmetSilverMusician
-  productEntity: ClothingHeadHelmetSilverMusician
-  cost:
-    NTCredit: 990
-  categories:
-    - SLFashionHead
   conditions:
     - !type:ListingLimitedStockCondition
       stock: 1
@@ -480,17 +381,6 @@
       stock: 1
 
 - type: listing
-  id: PlushieDarkForest
-  productEntity: PlushieDarkForest
-  cost:
-    NTCredit: 2500
-  categories:
-    - SLFashionOther
-  conditions:
-    - !type:ListingLimitedStockCondition
-      stock: 1
-
-- type: listing
   id: BoxPancakes
   icon: { sprite: _Starlight/Interface/fashion.rsi, state: pastry }
   productEntity: BoxPancakes
@@ -544,17 +434,6 @@
   productEntity: BoxCourierPAI
   cost:
     NTCredit: 1500
-  categories:
-    - SLFashionOther
-  conditions:
-    - !type:ListingLimitedStockCondition
-      stock: 1
-
-- type: listing
-  id: ClothingOuterBrimstoneDT4
-  productEntity: ClothingOuterBrimstoneDT4
-  cost:
-    NTCredit: 2000
   categories:
     - SLFashionOther
   conditions:

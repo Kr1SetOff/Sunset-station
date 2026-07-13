@@ -339,16 +339,6 @@
   - !type:BuyerAccessCondition
 
 - type: listing
-  id: VendorSalvageClothingHeadHatBeretSalvageMercGreen
-  productEntity: ClothingHeadHatBeretSalvageMercGreen
-  cost:
-    SalvageTicket: 25
-  categories:
-    - SalvageMercenaryEquipment
-  conditions:
-    - !type:BuyerAccessCondition
-
-- type: listing
   id: VendorSalvageClothingHeadHatBeretSalvageMercBrown
   productEntity: ClothingHeadHatBeretSalvageMercBrown
   cost:
@@ -417,16 +407,6 @@
   - SalvageMercenaryEquipment
   conditions:
   - !type:BuyerAccessCondition
-
-- type: listing
-  id: VendorSalvageClothingUniformJumpsuitSalvageMercGreen
-  productEntity: ClothingUniformJumpsuitSalvageMercGreen
-  cost:
-    SalvageTicket: 25
-  categories:
-    - SalvageMercenaryEquipment
-  conditions:
-    - !type:BuyerAccessCondition
 
 - type: listing
   id: VendorSalvageClothingUniformJumpsuitSalvageMercBrown
