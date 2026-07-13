@@ -21,6 +21,7 @@
   - Pens # 🌟Starlight🌟
   - ChiefMedicalOfficerJobTrinkets
   - GroupSpeciesBreathToolMedical
+  - ProtogenCybernetics # Sunset
 
 - type: roleLoadout
   id: JobMedicalDoctor
@@ -43,6 +44,7 @@
   - Pens # 🌟Starlight🌟
   - MedicalDoctorJobTrinkets
   - GroupSpeciesBreathToolMedical
+  - ProtogenCybernetics # Sunset
 
 - type: roleLoadout
   id: JobMedicalIntern
@@ -67,6 +69,7 @@
   - Pens # 🌟Starlight🌟
   - MedicalInternJobTrinkets
   - GroupSpeciesBreathToolMedical
+  - ProtogenCybernetics # Sunset
 
 - type: roleLoadout
   id: JobChemist
@@ -95,6 +98,7 @@
   - Pens # 🌟Starlight🌟
   - ChemistJobTrinkets
   - GroupSpeciesBreathToolMedical
+  - ProtogenCybernetics # Sunset
 
 - type: roleLoadout
   id: JobParamedic
@@ -117,3 +121,4 @@
   - Pens # 🌟Starlight🌟
   - ParamedicJobTrinkets
   - GroupSpeciesBreathToolMedical
+  - ProtogenCybernetics # Sunset
