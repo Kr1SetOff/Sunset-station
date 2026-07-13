@@ -8,6 +8,9 @@
   parent: BaseGameRule
   id: Spy
   components:
+  - type: GameRule
+    minPlayers: 5 # 🌇Sunset🌇 - just skip Spy on low pop, don't cancel the whole round over a 35% bonus roll
+    cancelPresetOnTooFewPlayers: false
   - type: SpyRule
   - type: AntagSelection
     agentName: spy-round-end-agent-name

@@ -23,6 +23,36 @@ public sealed partial class AntagSelectionSystem
 
     private int _sunsetTier5ForcedThisRound;
 
+    /// <summary>
+    /// Presets where "agents" (Syndicate-style traitor antagonists) actually exist - the only
+    /// presets the Spy sponsor guarantee (and the tier-5 sweep) are allowed to hand Spy out in.
+    /// Mirrors the preset list that includes SunSetTraitorExtrasRule (see
+    /// Resources/Prototypes/game_presets.yml and Resources/Prototypes/_Starlight/game_presets.yml) -
+    /// keep in sync if that list changes.
+    /// </summary>
+    private static readonly HashSet<string> SunsetSpyAgentPresets = new()
+    {
+        "Traitor",
+        "Traitorling",
+        "VampTraitor",
+    };
+
+    private const int SunsetSpyMinPlayers = 5;
+
+    /// <summary>
+    /// Whether Spy can be handed out (via either sponsor bypass below) this round at all - requires
+    /// both a preset that actually has agents (not Extended/Greenshift/etc) and enough players
+    /// connected that a spy round makes sense.
+    /// </summary>
+    private bool IsSunsetSpyAllowedThisRound(int playerCount)
+    {
+        if (playerCount < SunsetSpyMinPlayers)
+            return false;
+
+        var presetId = GameTicker.CurrentPreset?.ID;
+        return presetId != null && SunsetSpyAgentPresets.Contains(presetId);
+    }
+
     private void InitializeSunset()
     {
         // NOTE: does NOT subscribe to RulePlayerJobsAssignedEvent here - AntagSelectionSystem already
@@ -44,15 +74,23 @@ public sealed partial class AntagSelectionSystem
         // it must never be handed out automatically, only via an admin explicitly force-making someone
         // Homelander (see AdminVerbSystem.Antags.cs) or manually starting the Homelander GameRule.
         // Spy starts at tier 2 (Syndicate Agent) - tier 1 (Zombie) does not get the Spy guarantee.
-        foreach (var session in args.Players)
+        // Spy is further gated to agent-bearing presets with >= 5 players (see IsSunsetSpyAllowedThisRound) -
+        // without this, the bypass below would happily force Spy into Extended/Greenshift or a
+        // near-empty server, since StartGameRule/AddGameRule don't consult GameRuleComponent.MinPlayers.
+        var spyAllowed = IsSunsetSpyAllowedThisRound(args.Players.Length);
+
+        if (spyAllowed)
         {
-            if (_sunsetSponsorTiers.GetSponsorTier(session) < 2)
-                continue;
+            foreach (var session in args.Players)
+            {
+                if (_sunsetSponsorTiers.GetSponsorTier(session) < 2)
+                    continue;
 
-            if (_role.MindIsAntagonist(session.GetMind()))
-                continue; // already an antagonist (e.g. just got Homelander above) - nothing to do.
+                if (_role.MindIsAntagonist(session.GetMind()))
+                    continue; // already an antagonist (e.g. just got Homelander above) - nothing to do.
 
-            TryForceSunsetNamedAntag(session, "Spy");
+                TryForceSunsetNamedAntag(session, "Spy");
+            }
         }
 
         var maxPerRound = _sunsetCfg.GetCVar(SunsetCCVars.SunsetTier5MaxForcedAntagsPerRound);
@@ -71,7 +109,7 @@ public sealed partial class AntagSelectionSystem
             if (!RobustRandom.Prob(0.99f))
                 continue;
 
-            if (TryForceSunsetTier5Antag(session))
+            if (TryForceSunsetTier5Antag(session, spyAllowed))
                 _sunsetTier5ForcedThisRound++;
         }
     }
@@ -124,15 +162,23 @@ public sealed partial class AntagSelectionSystem
     /// <see cref="TryMakeAntag"/>, e.g. whitelist/blacklist/already-antag exclusions still apply).
     /// Homelander is excluded even if its GameRule happens to be active (e.g. an admin started it) -
     /// that role must only ever be handed out by explicit admin action, never by this generic sweep.
+    /// Spy is excluded unless <paramref name="spyAllowed"/> is true (agent-bearing preset + enough
+    /// players - see IsSunsetSpyAllowedThisRound), for the same reason - it could otherwise still be
+    /// active from an admin-triggered start on the wrong preset.
     /// </summary>
-    private bool TryForceSunsetTier5Antag(ICommonSession session)
+    private bool TryForceSunsetTier5Antag(ICommonSession session, bool spyAllowed)
     {
         var candidates = new List<(EntityUid Rule, AntagSelectionComponent Comp, AntagSelectionDefinition Def)>();
 
         var query = QueryActiveRules();
         while (query.MoveNext(out var uid, out _, out var antag, out _))
         {
-            if (MetaData(uid).EntityPrototype?.ID == "Homelander")
+            var protoId = MetaData(uid).EntityPrototype?.ID;
+
+            if (protoId == "Homelander")
+                continue;
+
+            if (protoId == "Spy" && !spyAllowed)
                 continue;
 
             foreach (var def in antag.Definitions)
