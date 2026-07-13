@@ -1,0 +1,70 @@
+# Sunset - Sponsor Uplink category tabs (mirrors the vanilla Syndicate uplink's tabbed layout,
+# just re-themed for cosmetics instead of weapons).
+#
+# General tabs (0-4) hold items with no job restriction - every sponsor sees these.
+# Department tabs (10+) hold items restricted to a specific department's jobs - a sponsor's
+# uplink only ever shows their OWN department tab, filtered in SponsorUplinkSystem at spawn.
+- type: storeCategory
+  id: SponsorUplinkUniforms
+  name: store-category-sponsor-uplink-uniforms
+  priority: 0
+
+- type: storeCategory
+  id: SponsorUplinkOuterwear
+  name: store-category-sponsor-uplink-outerwear
+  priority: 1
+
+- type: storeCategory
+  id: SponsorUplinkHeadwear
+  name: store-category-sponsor-uplink-headwear
+  priority: 2
+
+- type: storeCategory
+  id: SponsorUplinkAccessories
+  name: store-category-sponsor-uplink-accessories
+  priority: 3
+
+- type: storeCategory
+  id: SponsorUplinkMisc
+  name: store-category-sponsor-uplink-misc
+  priority: 4
+
+- type: storeCategory
+  id: SponsorUplinkDeptCommand
+  name: store-category-sponsor-uplink-dept-command
+  priority: 10
+
+- type: storeCategory
+  id: SponsorUplinkDeptSecurity
+  name: store-category-sponsor-uplink-dept-security
+  priority: 11
+
+- type: storeCategory
+  id: SponsorUplinkDeptCargo
+  name: store-category-sponsor-uplink-dept-cargo
+  priority: 12
+
+- type: storeCategory
+  id: SponsorUplinkDeptEngineering
+  name: store-category-sponsor-uplink-dept-engineering
+  priority: 13
+
+- type: storeCategory
+  id: SponsorUplinkDeptMedical
+  name: store-category-sponsor-uplink-dept-medical
+  priority: 14
+
+- type: storeCategory
+  id: SponsorUplinkDeptScience
+  name: store-category-sponsor-uplink-dept-science
+  priority: 15
+
+- type: storeCategory
+  id: SponsorUplinkDeptCivilian
+  name: store-category-sponsor-uplink-dept-civilian
+  priority: 16
+
+- type: storeCategory
+  id: SponsorUplinkDeptRepresentatives
+  name: store-category-sponsor-uplink-dept-representatives
+  priority: 17

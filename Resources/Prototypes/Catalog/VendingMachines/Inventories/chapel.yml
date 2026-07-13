@@ -18,10 +18,8 @@
     ClothingMaskPlague: 1
     ClothingHeadsetService: 2
     #Starlight
-    DruidRobesUniformSuit: 1
     TogaUniformSuit: 1
     ClothingOuterBurnedRobes: 1
-    ClothingKitsuneMask: 1
     ClothingNeckEyeAmulet: 1
     ClothingNeckMoonAmulet: 1
     ClothingNeckStarAmulet: 1
@@ -47,6 +45,4 @@
     ClothingShoesCult: 4
     BedsheetCult: 4
     #Starlight Start
-    ClothingShoesRatvar: 1
-    ClothingOuterCoatRatvarRobes: 1
     #Starlight End

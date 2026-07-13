@@ -1,0 +1,126 @@
+# 🌇Sunset🌇 - Sponsor Uplink: physical device auto-granted to linked Boosty sponsors (tier 2+,
+# see Content.Server._Sunset.SponsorUplink.SponsorUplinkSystem) with a fixed per-round coin balance
+# based on tier. Biocoded to the owning body at spawn so only that character can open/use it - same
+# mechanic the Spy Uplink uses (Content.Shared._Sunset.Biocode), just pre-installed instead of set
+# via the verb.
+
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: BaseSponsorUplink
+  name: sponsor uplink
+  description: A sleek device quietly linking you to a private sponsor supply network.
+  components:
+  - type: Sprite
+    sprite: _Sunset/SponsorUplink/uplink.rsi
+    state: icon
+    scale: 0.5, 0.5
+  - type: Item
+    size: Small
+  - type: Store
+    categories:
+    - SponsorUplinkUniforms
+    - SponsorUplinkOuterwear
+    - SponsorUplinkHeadwear
+    - SponsorUplinkAccessories
+    - SponsorUplinkMisc
+    - SponsorUplinkDeptCommand
+    - SponsorUplinkDeptSecurity
+    - SponsorUplinkDeptCargo
+    - SponsorUplinkDeptEngineering
+    - SponsorUplinkDeptMedical
+    - SponsorUplinkDeptScience
+    - SponsorUplinkDeptCivilian
+    - SponsorUplinkDeptRepresentatives
+    currencyWhitelist:
+    - SponsorCoin
+  - type: Biocode
+    detonateOnForeignWear: false
+  - type: UserInterface
+    interfaces:
+      enum.StoreUiKey.Key:
+        type: SponsorUplinkBoundUserInterface
+        requireInputValidation: false
+  - type: ActivatableUI
+    key: enum.StoreUiKey.Key
+
+- type: entity
+  parent: BaseSponsorUplink
+  id: SponsorUplinkTier2
+  suffix: Tier 2, 25 coins
+  components:
+  - type: Store
+    balance:
+      SponsorCoin: 25
+
+- type: entity
+  parent: BaseSponsorUplink
+  id: SponsorUplinkTier3
+  suffix: Tier 3, 50 coins
+  components:
+  - type: Store
+    balance:
+      SponsorCoin: 50
+
+- type: entity
+  parent: BaseSponsorUplink
+  id: SponsorUplinkTier4
+  suffix: Tier 4, 75 coins
+  components:
+  - type: Store
+    balance:
+      SponsorCoin: 75
+
+- type: entity
+  parent: BaseSponsorUplink
+  id: SponsorUplinkTier5
+  suffix: Tier 5, 125 coins
+  components:
+  - type: Store
+    balance:
+      SponsorCoin: 125
+
+# =====================================================================================
+# SponsorCoin - stacking, withdrawable physical currency (mirrors Telecrystal/Telecrystal1).
+# =====================================================================================
+
+- type: stack
+  id: SponsorCoin
+  name: stack-sponsor-coin
+  icon: { sprite: _Sunset/SponsorUplink/coin.rsi, state: icon }
+  spawn: SponsorCoin1
+
+- type: entity
+  name: sponsor coin
+  description: A shiny coin stamped with the station's logo. Redeemable only by sponsors, but spendable by anyone once handed over.
+  parent: BaseItem
+  id: SponsorCoin
+  suffix: 10 coins
+  components:
+  - type: Sprite
+    sprite: _Sunset/SponsorUplink/coin.rsi
+    state: icon
+    scale: 0.5, 0.5
+  - type: Item
+    sprite: _Sunset/SponsorUplink/coin.rsi
+    size: Tiny
+  - type: UserInterface
+    interfaces:
+      enum.StackCustomSplitUiKey.Key:
+        type: StackCustomSplitBoundUserInterface
+  - type: Stack
+    count: 10
+    stackType: SponsorCoin
+  - type: StaticPrice
+    price: 0
+  - type: Currency
+    price:
+      SponsorCoin: 1
+
+- type: entity
+  parent: SponsorCoin
+  id: SponsorCoin1
+  suffix: 1 coin
+  components:
+  - type: Stack
+    count: 1

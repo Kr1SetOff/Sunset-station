@@ -1,0 +1,851 @@
+# Sunset - Sponsor Uplink catalog. Converted 1:1 from the old sponsor loadout tab
+# (Resources/Prototypes/Loadouts/LoadoutGroups/sponsor_loadouts.yml, now removed) - every item that
+# used to be a free loadout pick for linked sponsors is now a purchasable uplink listing instead.
+# Items restricted to specific jobs now live in that job's department tab instead of a generic slot
+# tab (see Content.Server._Sunset.SponsorUplink.SponsorUplinkSystem for the per-player category
+# filter - a sponsor only ever sees the general tabs plus their own department's tab).
+# Protogen armor frames are excluded - those went back to being a species-gated loadout pick, see
+# Resources/Prototypes/Loadouts/LoadoutGroups/sponsor_protogen_loadouts.yml.
+# Listing IDs intentionally reuse the old loadout IDs 1:1 for traceability. No name/description
+# fields are set - ListingLocalisationHelpers falls back to the underlying entity's own name/desc,
+# which is already localized.
+
+- type: listing
+  id: SponsorClownSuit
+  productEntity: ClothingUniformJumpsuitClownis
+  cost:
+    SponsorCoin: 35
+  categories:
+  - SponsorUplinkDeptCivilian
+
+- type: listing
+  id: SponsorBlueSpaceJumpsuit
+  productEntity: ClothingUniformJumpsuitGalaxyBlue
+  cost:
+    SponsorCoin: 25
+  categories:
+  - SponsorUplinkDeptScience
+
+- type: listing
+  id: SponsorRedSpaceJumpsuit
+  productEntity: ClothingUniformJumpsuitGalaxyRed
+  cost:
+    SponsorCoin: 25
+  categories:
+  - SponsorUplinkDeptScience
+
+- type: listing
+  id: SponsorBogu
+  productEntity: ClothingOuterArmorKendoBogu
+  cost:
+    SponsorCoin: 40
+  categories:
+  - SponsorUplinkDeptSecurity
+
+- type: listing
+  id: SponsorGreaserJacket
+  productEntity: ClothingUniformJumpsuitGreaser
+  cost:
+    SponsorCoin: 25
+  categories:
+  - SponsorUplinkDeptCivilian
+
+- type: listing
+  id: SponsorProtoSuit
+  productEntity: ClothingUniformJumpsuitProto
+  cost:
+    SponsorCoin: 25
+  categories:
+  - SponsorUplinkDeptEngineering
+
+- type: listing
+  id: SponsorRedHellCloak
+  productEntity: ClothingNeckCloakHellDiverRed
+  cost:
+    SponsorCoin: 25
+  categories:
+  - SponsorUplinkDeptMedical
+
+- type: listing
+  id: SponsorTacticalMaidGloves
+  productEntity: ClothingHandsInteQTacticalMaidGloves
+  cost:
+    SponsorCoin: 30
+  categories:
+  - SponsorUplinkDeptSecurity
+
+- type: listing
+  id: SponsorVault14Jumpsuit
+  productEntity: ClothingUniformJumpsuitFallout14
+  cost:
+    SponsorCoin: 15
+  categories:
+  - SponsorUplinkUniforms
+
+- type: listing
+  id: SponsorVaultJumpsuit
+  productEntity: ClothingUniformJumpsuitFallout
+  cost:
+    SponsorCoin: 25
+  categories:
+  - SponsorUplinkDeptScience
+
+- type: listing
+  id: SponsorSecurityPistolDP
+  productEntity: WeaponPistolDP
+  cost:
+    SponsorCoin: 40
+  categories:
+  - SponsorUplinkDeptSecurity
+
+- type: listing
+  id: SponsorCamouflageJumpsuit
+  productEntity: ClothingUniformJumpsuitCamouflage
+  cost:
+    SponsorCoin: 15
+  categories:
+  - SponsorUplinkUniforms
+
+- type: listing
+  id: SponsorAviatorSuit
+  productEntity: ClothingUniformJumpsuitAviator
+  cost:
+    SponsorCoin: 25
+  categories:
+  - SponsorUplinkDeptEngineering
+
+- type: listing
+  id: SponsorBikerSuit
+  productEntity: ClothingUniformJumpsuitBiker
+  cost:
+    SponsorCoin: 15
+  categories:
+  - SponsorUplinkUniforms
+
+- type: listing
+  id: SponsorCatPawsGlovesBlack
+  productEntity: ClothingHandsGlovesCatPawsBlack
+  cost:
+    SponsorCoin: 10
+  categories:
+  - SponsorUplinkAccessories
+
+- type: listing
+  id: SponsorCatPawsGlovesBlackWhite
+  productEntity: ClothingHandsGlovesCatPawsBlackWhite
+  cost:
+    SponsorCoin: 10
+  categories:
+  - SponsorUplinkAccessories
+
+- type: listing
+  id: SponsorCatPawsGlovesBrown
+  productEntity: ClothingHandsGlovesCatPawsBrown
+  cost:
+    SponsorCoin: 10
+  categories:
+  - SponsorUplinkAccessories
+
+- type: listing
+  id: SponsorCatPawsGlovesWhite
+  productEntity: ClothingHandsGlovesCatPawsWhite
+  cost:
+    SponsorCoin: 10
+  categories:
+  - SponsorUplinkAccessories
+
+- type: listing
+  id: SponsorFloridaSuit
+  productEntity: ClothingUniformJumpsuitJacket
+  cost:
+    SponsorCoin: 25
+  categories:
+  - SponsorUplinkDeptCivilian
+
+- type: listing
+  id: SponsorGokuSuit
+  productEntity: ClothingUniformJumpsuitGoku
+  cost:
+    SponsorCoin: 15
+  categories:
+  - SponsorUplinkUniforms
+
+- type: listing
+  id: SponsorGokuSuitAlt
+  productEntity: ClothingUniformJumpsuitGokuAlt
+  cost:
+    SponsorCoin: 15
+  categories:
+  - SponsorUplinkUniforms
+
+- type: listing
+  id: SponsorTraumaTeamCoat
+  productEntity: ClothingOuterCoatTraumaTeam
+  cost:
+    SponsorCoin: 30
+  categories:
+  - SponsorUplinkDeptMedical
+
+- type: listing
+  id: SponsorCombatSatchel
+  productEntity: ClothingBackpackSatchelInteQ
+  cost:
+    SponsorCoin: 15
+  categories:
+  - SponsorUplinkAccessories
+
+- type: listing
+  id: SponsorDeliveryBag
+  productEntity: ClothingBackpackDelivery
+  cost:
+    SponsorCoin: 15
+  categories:
+  - SponsorUplinkAccessories
+
+- type: listing
+  id: SponsorFurBoots
+  productEntity: ClothingShoesBootsSalvage1208134
+  cost:
+    SponsorCoin: 10
+  categories:
+  - SponsorUplinkAccessories
+
+- type: listing
+  id: SponsorExpensiveCoatClosed
+  productEntity: ClothingOuterCoatExpensive
+  cost:
+    SponsorCoin: 30
+  categories:
+  - SponsorUplinkDeptCivilian
+
+- type: listing
+  id: SponsorExpensiveCoatOpen
+  productEntity: ClothingOuterCoatExpensiveOpened
+  cost:
+    SponsorCoin: 30
+  categories:
+  - SponsorUplinkDeptCommand
+
+- type: listing
+  id: SponsorSalvageJumpsuit
+  productEntity: ClothingUniformJumpsuitSalvageMercGreen
+  cost:
+    SponsorCoin: 35
+  categories:
+  - SponsorUplinkDeptCargo
+
+- type: listing
+  id: SponsorSalvageBeret
+  productEntity: ClothingHeadHatBeretSalvageMercGreen
+  cost:
+    SponsorCoin: 35
+  categories:
+  - SponsorUplinkDeptCargo
+
+- type: listing
+  id: SponsorHosDecadentRobe
+  productEntity: ClothingNeckHosRobe
+  cost:
+    SponsorCoin: 35
+  categories:
+  - SponsorUplinkDeptSecurity
+
+- type: listing
+  id: SponsorCardHelmet
+  productEntity: CardHelmet
+  cost:
+    SponsorCoin: 35
+  categories:
+  - SponsorUplinkDeptCivilian
+
+- type: listing
+  id: SponsorCardArmour
+  productEntity: CardArmour
+  cost:
+    SponsorCoin: 40
+  categories:
+  - SponsorUplinkDeptCivilian
+
+- type: listing
+  id: SponsorSquareDangerMask
+  productEntity: ClothingSquidTwoMask
+  cost:
+    SponsorCoin: 22
+  categories:
+  - SponsorUplinkDeptMedical
+
+- type: listing
+  id: SponsorRoundDangerMask
+  productEntity: ClothingSquidOneMask
+  cost:
+    SponsorCoin: 22
+  categories:
+  - SponsorUplinkDeptMedical
+
+- type: listing
+  id: SponsorTriangleDangerMask
+  productEntity: ClothingSquidThreeMask
+  cost:
+    SponsorCoin: 22
+  categories:
+  - SponsorUplinkDeptMedical
+
+- type: listing
+  id: SponsorCommandBeret
+  productEntity: ClothingHeadHatBeretCommand
+  cost:
+    SponsorCoin: 35
+  categories:
+  - SponsorUplinkDeptCommand
+
+- type: listing
+  id: SponsorNtRepJumpsuit
+  productEntity: ClothingUniformJumpsuitNtrep
+  cost:
+    SponsorCoin: 35
+  categories:
+  - SponsorUplinkDeptRepresentatives
+
+- type: listing
+  id: SponsorRiskJumpsuit
+  productEntity: ClothingUniformJumpsuitRisk
+  cost:
+    SponsorCoin: 25
+  categories:
+  - SponsorUplinkDeptEngineering
+
+- type: listing
+  id: SponsorBadLawyerSuit
+  productEntity: ClothingUniformJumpsuitLawyerBad
+  cost:
+    SponsorCoin: 35
+  categories:
+  - SponsorUplinkDeptCivilian
+
+- type: listing
+  id: SponsorBadLawyerSkirt
+  productEntity: ClothingUniformJumpskirtLawyerBad
+  cost:
+    SponsorCoin: 35
+  categories:
+  - SponsorUplinkDeptCivilian
+
+- type: listing
+  id: SponsorCatEars
+  productEntity: ClothingHeadHatCatEars
+  cost:
+    SponsorCoin: 15
+  categories:
+  - SponsorUplinkHeadwear
+
+- type: listing
+  id: SponsorDogEars
+  productEntity: ClothingHeadHatDogEars
+  cost:
+    SponsorCoin: 25
+  categories:
+  - SponsorUplinkDeptCivilian
+
+- type: listing
+  id: SponsorRedRegaliaHat
+  productEntity: RedRegaliaHat
+  cost:
+    SponsorCoin: 25
+  categories:
+  - SponsorUplinkDeptRepresentatives
+
+- type: listing
+  id: SponsorRedRegaliaSuit
+  productEntity: RedRegaliaSuit
+  cost:
+    SponsorCoin: 25
+  categories:
+  - SponsorUplinkDeptScience
+
+- type: listing
+  id: SponsorSledgehammer
+  productEntity: Sledgehammer
+  cost:
+    SponsorCoin: 40
+  categories:
+  - SponsorUplinkDeptEngineering
+
+- type: listing
+  id: SponsorSilverMusicianHelmet
+  productEntity: ClothingHeadHelmetSilverMusician
+  cost:
+    SponsorCoin: 25
+  categories:
+  - SponsorUplinkDeptCivilian
+
+- type: listing
+  id: SponsorStickyHand
+  productEntity: WeaponStickyHand
+  cost:
+    SponsorCoin: 30
+  categories:
+  - SponsorUplinkMisc
+
+- type: listing
+  id: SponsorLittleBlackDress
+  productEntity: LittleBlackDressUniformSuit
+  cost:
+    SponsorCoin: 25
+  categories:
+  - SponsorUplinkDeptRepresentatives
+
+- type: listing
+  id: SponsorRatvarRobes
+  productEntity: ClothingOuterCoatRatvarRobes
+  cost:
+    SponsorCoin: 20
+  categories:
+  - SponsorUplinkOuterwear
+
+- type: listing
+  id: SponsorRatvarBoots
+  productEntity: ClothingShoesRatvar
+  cost:
+    SponsorCoin: 10
+  categories:
+  - SponsorUplinkAccessories
+
+- type: listing
+  id: SponsorBunnyGangCloak
+  productEntity: ClothingOuterBunnyGang
+  cost:
+    SponsorCoin: 20
+  categories:
+  - SponsorUplinkOuterwear
+
+- type: listing
+  id: SponsorBunnyGangScarf
+  productEntity: ClothingNeckBunnyGang
+  cost:
+    SponsorCoin: 15
+  categories:
+  - SponsorUplinkAccessories
+
+- type: listing
+  id: SponsorBunnyGangHat
+  productEntity: ClothingHeadHatBunnyGang
+  cost:
+    SponsorCoin: 15
+  categories:
+  - SponsorUplinkHeadwear
+
+- type: listing
+  id: SponsorBunnyGangBackpack
+  productEntity: ClothingBackpackBunnyGang
+  cost:
+    SponsorCoin: 15
+  categories:
+  - SponsorUplinkAccessories
+
+- type: listing
+  id: SponsorKitsuneMask
+  productEntity: ClothingKitsuneMask
+  cost:
+    SponsorCoin: 22
+  categories:
+  - SponsorUplinkDeptRepresentatives
+
+- type: listing
+  id: SponsorCmoShoulderCoat
+  productEntity: ClothingNeckCmoOverShoulder
+  cost:
+    SponsorCoin: 35
+  categories:
+  - SponsorUplinkDeptMedical
+
+- type: listing
+  id: SponsorUnidentifiedMantle
+  productEntity: ClothingNeckMantleUnidentified
+  cost:
+    SponsorCoin: 25
+  categories:
+  - SponsorUplinkDeptRepresentatives
+
+- type: listing
+  id: SponsorCargoInformalJumpsuit
+  productEntity: ClothingUniformJumpsuitCargoInformal
+  cost:
+    SponsorCoin: 35
+  categories:
+  - SponsorUplinkDeptCargo
+
+- type: listing
+  id: SponsorMimeSocks
+  productEntity: ClothingUnderSocksMime
+  cost:
+    SponsorCoin: 10
+  categories:
+  - SponsorUplinkAccessories
+
+- type: listing
+  id: SponsorCoderSocks
+  productEntity: ClothingUnderSocksCoder
+  cost:
+    SponsorCoin: 20
+  categories:
+  - SponsorUplinkDeptCargo
+
+- type: listing
+  id: SponsorBeeSocks
+  productEntity: ClothingUnderSocksBee
+  cost:
+    SponsorCoin: 10
+  categories:
+  - SponsorUplinkAccessories
+
+- type: listing
+  id: SponsorCorpsmanCoatClosed
+  productEntity: ClothingOuterCoatLabCorpsman
+  cost:
+    SponsorCoin: 40
+  categories:
+  - SponsorUplinkDeptSecurity
+
+- type: listing
+  id: SponsorCorpsmanCoatOpen
+  productEntity: ClothingOuterCoatLabCorpsmanOpened
+  cost:
+    SponsorCoin: 40
+  categories:
+  - SponsorUplinkDeptSecurity
+
+- type: listing
+  id: SponsorHosFirelineCloak
+  productEntity: ClothingNeckCloakHosFireline
+  cost:
+    SponsorCoin: 35
+  categories:
+  - SponsorUplinkDeptSecurity
+
+- type: listing
+  id: SponsorOldWomanClothes
+  productEntity: OldWomanUniformSuit
+  cost:
+    SponsorCoin: 15
+  categories:
+  - SponsorUplinkUniforms
+
+- type: listing
+  id: SponsorVampireBoots
+  productEntity: ClothingUniformBootsVampir
+  cost:
+    SponsorCoin: 10
+  categories:
+  - SponsorUplinkAccessories
+
+- type: listing
+  id: SponsorVampireSuit
+  productEntity: ClothingUniformJumpsuitVampir
+  cost:
+    SponsorCoin: 15
+  categories:
+  - SponsorUplinkUniforms
+
+- type: listing
+  id: SponsorVampireCloak
+  productEntity: ClothingUniformShinelVampir
+  cost:
+    SponsorCoin: 20
+  categories:
+  - SponsorUplinkOuterwear
+
+- type: listing
+  id: SponsorDangerousUniform
+  productEntity: ClothingUniformJumpsuitSquidDangerous
+  cost:
+    SponsorCoin: 25
+  categories:
+  - SponsorUplinkDeptMedical
+
+- type: listing
+  id: SponsorTangoDress
+  productEntity: ClothingUniformJumpskirtTango
+  cost:
+    SponsorCoin: 25
+  categories:
+  - SponsorUplinkDeptCivilian
+
+- type: listing
+  id: SponsorHonkCloak
+  productEntity: ClothingNeckCloakHonk
+  cost:
+    SponsorCoin: 15
+  categories:
+  - SponsorUplinkAccessories
+
+- type: listing
+  id: SponsorHomelanderCloak
+  productEntity: ClothingNeckHomelanderCloak
+  cost:
+    SponsorCoin: 15
+  categories:
+  - SponsorUplinkAccessories
+
+- type: listing
+  id: SponsorPlushErebus
+  productEntity: PlushieEreb
+  cost:
+    SponsorCoin: 10
+  categories:
+  - SponsorUplinkMisc
+
+- type: listing
+  id: SponsorPlushSus
+  productEntity: SusPlushie
+  cost:
+    SponsorCoin: 10
+  categories:
+  - SponsorUplinkMisc
+
+- type: listing
+  id: SponsorPlushGnome
+  productEntity: GnomePlushie
+  cost:
+    SponsorCoin: 10
+  categories:
+  - SponsorUplinkMisc
+
+- type: listing
+  id: SponsorPlushGoat
+  productEntity: GoatPlushie
+  cost:
+    SponsorCoin: 10
+  categories:
+  - SponsorUplinkMisc
+
+- type: listing
+  id: SponsorWornDuster
+  productEntity: ClothingOuterCoatDuster
+  cost:
+    SponsorCoin: 30
+  categories:
+  - SponsorUplinkDeptCivilian
+
+- type: listing
+  id: SponsorWornSuit
+  productEntity: ClothingUniformJumpsuitDetective
+  cost:
+    SponsorCoin: 15
+  categories:
+  - SponsorUplinkUniforms
+
+- type: listing
+  id: SponsorWornSkirt
+  productEntity: ClothingUniformJumpskirtDetective
+  cost:
+    SponsorCoin: 15
+  categories:
+  - SponsorUplinkUniforms
+
+- type: listing
+  id: SponsorLastCoat
+  productEntity: ClothingOuterCoatSquidPrisoner
+  cost:
+    SponsorCoin: 20
+  categories:
+  - SponsorUplinkOuterwear
+
+- type: listing
+  id: SponsorPracticalSuit
+  productEntity: ClothingUniformJumpsuitLibrarian
+  cost:
+    SponsorCoin: 25
+  categories:
+  - SponsorUplinkDeptCivilian
+
+- type: listing
+  id: SponsorPracticalSkirt
+  productEntity: ClothingUniformJumpskirtLibrarian
+  cost:
+    SponsorCoin: 15
+  categories:
+  - SponsorUplinkUniforms
+
+- type: listing
+  id: SponsorSpottedClown
+  productEntity: SpottedClownUniformSuit
+  cost:
+    SponsorCoin: 25
+  categories:
+  - SponsorUplinkUniforms
+
+- type: listing
+  id: SponsorDruidRobe
+  productEntity: DruidRobesUniformSuit
+  cost:
+    SponsorCoin: 25
+  categories:
+  - SponsorUplinkDeptCivilian
+
+- type: listing
+  id: SponsorSnakeskinBoots
+  productEntity: ClothingShoesSnakeskinBoots
+  cost:
+    SponsorCoin: 10
+  categories:
+  - SponsorUplinkAccessories
+
+- type: listing
+  id: SponsorDarkPerformerBoots
+  productEntity: TP14ClothingShoesBootsDarkPerformer
+  cost:
+    SponsorCoin: 10
+  categories:
+  - SponsorUplinkAccessories
+
+- type: listing
+  id: SponsorDarkPerformerSkirt
+  productEntity: TP14ClothingUniformJumpskirtDarkPerformer
+  cost:
+    SponsorCoin: 15
+  categories:
+  - SponsorUplinkUniforms
+
+- type: listing
+  id: SponsorLilacDress
+  productEntity: LilacDressUniformSuit
+  cost:
+    SponsorCoin: 25
+  categories:
+  - SponsorUplinkDeptMedical
+
+- type: listing
+  id: SponsorSovietCoat
+  productEntity: ClothingOuterSovietCoat
+  cost:
+    SponsorCoin: 20
+  categories:
+  - SponsorUplinkOuterwear
+
+- type: listing
+  id: SponsorSovietAdmiralJumpsuit
+  productEntity: ClothingUniformJumpsuitSovietAdmiral
+  cost:
+    SponsorCoin: 35
+  categories:
+  - SponsorUplinkDeptSecurity
+
+- type: listing
+  id: SponsorMimeSuaveWhite
+  productEntity: ClothingUniformJumpsuitMimeSuaveWhite
+  cost:
+    SponsorCoin: 35
+  categories:
+  - SponsorUplinkDeptCivilian
+
+- type: listing
+  id: SponsorMimeSuaveBlack
+  productEntity: ClothingUniformJumpsuitMimeSuaveBlack
+  cost:
+    SponsorCoin: 35
+  categories:
+  - SponsorUplinkDeptCivilian
+
+- type: listing
+  id: SponsorPlushDarkForest
+  productEntity: PlushieDarkForest
+  cost:
+    SponsorCoin: 10
+  categories:
+  - SponsorUplinkMisc
+
+- type: listing
+  id: SponsorFlyCaptainUniform
+  productEntity: FlyCaptainUniformSuit
+  cost:
+    SponsorCoin: 35
+  categories:
+  - SponsorUplinkDeptCommand
+
+- type: listing
+  id: SponsorSuperstarCopUniform
+  productEntity: ClothingUniformJumpsuitSuperstarCop
+  cost:
+    SponsorCoin: 35
+  categories:
+  - SponsorUplinkDeptSecurity
+
+- type: listing
+  id: SponsorTieDyeShirt
+  productEntity: TieDyeUniformSuit
+  cost:
+    SponsorCoin: 15
+  categories:
+  - SponsorUplinkUniforms
+
+- type: listing
+  id: SponsorBlackFurCloak
+  productEntity: ClothingUniformDama0965
+  cost:
+    SponsorCoin: 15
+  categories:
+  - SponsorUplinkAccessories
+
+- type: listing
+  id: SponsorTrackSuit
+  productEntity: ClothingUniformJumpsuitTrackSuit
+  cost:
+    SponsorCoin: 25
+  categories:
+  - SponsorUplinkDeptCivilian
+
+- type: listing
+  id: SponsorCommissarCloak
+  productEntity: ClothingNeckCloakCommissar
+  cost:
+    SponsorCoin: 35
+  categories:
+  - SponsorUplinkDeptSecurity
+
+- type: listing
+  id: SponsorHoneyHat
+  productEntity: ClothingHeadHoney
+  cost:
+    SponsorCoin: 25
+  categories:
+  - SponsorUplinkDeptCivilian
+
+- type: listing
+  id: SponsorBrimHat
+  productEntity: ClothingHeadHatBrimHat
+  cost:
+    SponsorCoin: 25
+  categories:
+  - SponsorUplinkDeptCivilian
+
+- type: listing
+  id: SponsorFlamboyantOutfit
+  productEntity: FlamboyantUniformSuit
+  cost:
+    SponsorCoin: 15
+  categories:
+  - SponsorUplinkUniforms
+
+- type: listing
+  id: SponsorElegantLadyDress
+  productEntity: ClothingUniformElegantLadyDress
+  cost:
+    SponsorCoin: 15
+  categories:
+  - SponsorUplinkUniforms
+
+- type: listing
+  id: SponsorPunkSkirt
+  productEntity: ClothingUniformJumpskirtPunkSkirt
+  cost:
+    SponsorCoin: 15
+  categories:
+  - SponsorUplinkUniforms
+
+- type: listing
+  id: SponsorHellMark
+  productEntity: ClothingOuterBrimstoneDT4
+  cost:
+    SponsorCoin: 20
+  categories:
+  - SponsorUplinkOuterwear

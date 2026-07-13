@@ -21,7 +21,7 @@
   - Pens # 🌟Starlight🌟
   - ChiefMedicalOfficerJobTrinkets
   - GroupSpeciesBreathToolMedical
-  - SponsorLoadouts # 🌇Sunset🌇
+  - SponsorProtogenLoadouts # Sunset
 
 - type: roleLoadout
   id: JobMedicalDoctor
@@ -44,7 +44,7 @@
   - Pens # 🌟Starlight🌟
   - MedicalDoctorJobTrinkets
   - GroupSpeciesBreathToolMedical
-  - SponsorLoadouts # 🌇Sunset🌇
+  - SponsorProtogenLoadouts # Sunset
 
 - type: roleLoadout
   id: JobMedicalIntern
@@ -69,7 +69,7 @@
   - Pens # 🌟Starlight🌟
   - MedicalInternJobTrinkets
   - GroupSpeciesBreathToolMedical
-  - SponsorLoadouts # 🌇Sunset🌇
+  - SponsorProtogenLoadouts # Sunset
 
 - type: roleLoadout
   id: JobChemist
@@ -98,7 +98,7 @@
   - Pens # 🌟Starlight🌟
   - ChemistJobTrinkets
   - GroupSpeciesBreathToolMedical
-  - SponsorLoadouts # 🌇Sunset🌇
+  - SponsorProtogenLoadouts # Sunset
 
 - type: roleLoadout
   id: JobParamedic
@@ -121,4 +121,4 @@
   - Pens # 🌟Starlight🌟
   - ParamedicJobTrinkets
   - GroupSpeciesBreathToolMedical
-  - SponsorLoadouts # 🌇Sunset🌇
+  - SponsorProtogenLoadouts # Sunset

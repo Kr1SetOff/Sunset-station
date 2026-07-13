@@ -1,0 +1,59 @@
+<Control
+    xmlns="https://spacestation14.io"
+    xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client">
+    <PanelContainer MinSize="170 222" MaxSize="170 222" Margin="3,3,3,3">
+        <PanelContainer.PanelOverride>
+            <gfx:StyleBoxFlat BackgroundColor="#3D1F05FF" BorderColor="#A64DFFFF" BorderThickness="2" />
+        </PanelContainer.PanelOverride>
+        <BoxContainer Orientation="Vertical" Margin="8,8,8,8">
+            <Label
+                Name="ItemName"
+                HorizontalAlignment="Center"
+                HorizontalExpand="True"
+                ClipText="True"
+                FontColorOverride="#FFF3D6FF" />
+
+            <PanelContainer
+                Name="ImageFrame"
+                MinSize="64 64"
+                MaxSize="64 64"
+                HorizontalAlignment="Center"
+                Margin="0,6,0,6">
+                <PanelContainer.PanelOverride>
+                    <gfx:StyleBoxFlat BackgroundColor="#241206FF" BorderColor="#FFD23FFF" BorderThickness="1" />
+                </PanelContainer.PanelOverride>
+                <TextureRect
+                    Name="ItemTexture"
+                    Stretch="KeepAspectCentered"
+                    MinSize="56 56"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center" />
+            </PanelContainer>
+
+            <PanelContainer MinSize="0 62" MaxSize="9999 62">
+                <RichTextLabel
+                    Name="ItemDescription"
+                    HorizontalExpand="True"
+                    VerticalExpand="True"
+                    RectClipContent="True" />
+            </PanelContainer>
+
+            <BoxContainer Orientation="Horizontal" Margin="0,4,0,0">
+                <Label
+                    Name="ItemPrice"
+                    HorizontalExpand="True"
+                    VerticalAlignment="Center"
+                    FontColorOverride="#FFD23FFF" />
+                <Button
+                    Name="BuyButton"
+                    Access="Public"
+                    Text="{Loc 'sponsor-uplink-ui-buy'}"
+                    MinWidth="56">
+                    <Button.StyleBoxOverride>
+                        <gfx:StyleBoxFlat BackgroundColor="#A64DFFFF" />
+                    </Button.StyleBoxOverride>
+                </Button>
+            </BoxContainer>
+        </BoxContainer>
+    </PanelContainer>
+</Control>

@@ -16,7 +16,7 @@
   - Pins
   - LuxuryPens
   - GroupSpeciesBreathTool
-  - SponsorLoadouts # 🌇Sunset🌇
+  - SponsorProtogenLoadouts # Sunset
 
 - type: roleLoadout
   id: JobNanoTrasenRepresentative
@@ -33,7 +33,7 @@
   - NTRPens
   - Survival
   - GroupSpeciesBreathTool
-  - SponsorLoadouts # 🌇Sunset🌇
+  - SponsorProtogenLoadouts # Sunset
 
 - type: roleLoadout
   id: JobIAA
@@ -50,7 +50,7 @@
   - LawyerJobTrinkets
   - Survival
   - GroupSpeciesBreathTool
-  - SponsorLoadouts # 🌇Sunset🌇
+  - SponsorProtogenLoadouts # Sunset
 
 - type: roleLoadout
   id: JobBlueShield
@@ -71,7 +71,7 @@
   - Pens
   - SurvivalExtended
   - GroupSpeciesBreathToolSecurity
-  - SponsorLoadouts # 🌇Sunset🌇
+  - SponsorProtogenLoadouts # Sunset
 
 - type: roleLoadout
   id: JobNanotrasenCareerTrainer
@@ -87,7 +87,7 @@
   - Pens
   - Survival
   - GroupSpeciesBreathTool
-  - SponsorLoadouts # 🌇Sunset🌇
+  - SponsorProtogenLoadouts # Sunset
 
 # Cargo
 - type: roleLoadout
@@ -106,7 +106,7 @@
   - Pins
   - Pens
   - GroupSpeciesBreathTool
-  - SponsorLoadouts # 🌇Sunset🌇
+  - SponsorProtogenLoadouts # Sunset
 
 - type: roleLoadout
   id: JobMailTech
@@ -127,7 +127,7 @@
   - Pins
   - Pens
   - GroupSpeciesBreathTool
-  - SponsorLoadouts # 🌇Sunset🌇
+  - SponsorProtogenLoadouts # Sunset
 
 - type: roleLoadout
   id: JobSalvageLead
@@ -146,7 +146,7 @@
   - Pins
   - Pens
   - GroupSpeciesBreathTool
-  - SponsorLoadouts # 🌇Sunset🌇
+  - SponsorProtogenLoadouts # Sunset
 
 # Security
 - type: roleLoadout
@@ -173,7 +173,7 @@
   - Pens
   - SecurityJobTrinkets
   - GroupSpeciesBreathToolSecurity
-  - SponsorLoadouts # 🌇Sunset🌇
+  - SponsorProtogenLoadouts # Sunset
 
 - type: roleLoadout
   id: JobDutyOfficer
@@ -196,7 +196,7 @@
   - Pens
   - SecurityJobTrinkets
   - GroupSpeciesBreathToolSecurity
-  - SponsorLoadouts # 🌇Sunset🌇
+  - SponsorProtogenLoadouts # Sunset
 
 # Science
 - type: roleLoadout
@@ -216,7 +216,7 @@
   - Pins
   - Pens
   - GroupSpeciesBreathTool
-  - SponsorLoadouts # 🌇Sunset🌇
+  - SponsorProtogenLoadouts # Sunset
 
 # Medical
 - type: roleLoadout
@@ -238,7 +238,7 @@
   - Pins
   - Pens
   - GroupSpeciesBreathToolMedical
-  - SponsorLoadouts # 🌇Sunset🌇
+  - SponsorProtogenLoadouts # Sunset
 
 # Civilians
 - type: roleLoadout
@@ -257,7 +257,7 @@
   - Pens
   - PerformerJobTrinkets
   - GroupSpeciesBreathTool
-  - SponsorLoadouts # 🌇Sunset🌇
+  - SponsorProtogenLoadouts # Sunset
 
 # Wildcards
 - type: roleLoadout
@@ -274,7 +274,7 @@
   - Pens
   - ZookeeperJobTrinkets
   - GroupSpeciesBreathTool
-  - SponsorLoadouts # 🌇Sunset🌇
+  - SponsorProtogenLoadouts # Sunset
 
 - type: roleLoadout
   id: JobBoxer
@@ -291,7 +291,7 @@
   - Pens
   - BoxerJobTrinkets
   - GroupSpeciesBreathTool
-  - SponsorLoadouts # 🌇Sunset🌇
+  - SponsorProtogenLoadouts # Sunset
 
 # Antagonist Loadouts
 - type: roleLoadout

@@ -17,7 +17,6 @@
     ClothingHeadHatPwig: 2
     ClothingOuterRobesJudge: 2
     ClothingOuterPoncho: 2
-    ClothingOuterCoatDuster: 2 # DeltaV
     ClothingHeadHatSantahat: 2
     ClothingOuterSanta: 2
     ClothingHeadHatSkub: 2
@@ -63,7 +62,6 @@
     ClothingShoesBootsCowboyBlack: 1
     ClothingShoesBootsCowboyWhite: 1
     #Starlight
-    ClothingUniformJumpsuitRisk: 1
     ClothingHeadHelmetRisk: 1
     ClothingUniformJumpsuitKilt: 1 # DeltaV
     ClothingHeadHatWrestlingMaskLuchaBlue: 1 # DeltaV
@@ -74,24 +72,17 @@
     ClothingUniformJumpsuitWrestlerYellow: 1 # DeltaV
     CandyClownUniformSuit: 1
     StripedClownUniformSuit: 1
-    SpottedClownUniformSuit: 1
     ClothingShoesSpecificMoffers: 1 # DeltaV
-    DruidRobesUniformSuit: 1
-    FlamboyantUniformSuit: 3
     FlamencoUniformSuit: 2
-    FlyCaptainUniformSuit: 1
     KiltUniformSuit: 4
     MimeFrillsUniformSuit: 1
     RefereeUniformSuit: 2
     SailorUniformSuit: 2
     TogaUniformSuit: 2
-    ClothingUnderSocksMime: 1
     ClothingUnderSocksStirrup: 1
     ClothingOutercorset: 2
-    ClothingKitsuneMask: 2
     ClothingHeadHatTVHead: 1
     ClothingHeadHatFeatheredHat: 1
-    ClothingHeadHatBrimHat: 1
   contrabandInventory:
     ClothingHeadHatRichard: 1
     ToyFigurineBoxer: 1

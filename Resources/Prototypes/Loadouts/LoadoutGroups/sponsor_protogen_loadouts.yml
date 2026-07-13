@@ -1,0 +1,78 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# 🌇Sunset🌇 - Protogen armor "frames" are species-specific body parts (see
+# Resources/Prototypes/_Starlight/Entities/Clothing/OuterClothing/protogen.yml), not generic
+# cosmetics, so unlike the rest of the old "Спонсорка" tab they stay in the loadout system
+# (gated by species, same as before) instead of being sold in the Sponsor Uplink.
+- type: loadoutGroup
+  id: SponsorProtogenLoadouts
+  name: loadout-group-sponsor-protogen
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - SponsorProtogenLightBasic
+  - SponsorProtogenLightSpeed
+  - SponsorProtogenMediumBasic
+  - SponsorProtogenMediumMagic
+  - SponsorProtogenHeavyBasic
+  - SponsorProtogenHeavySpace
+
+- type: loadout
+  id: SponsorProtogenLightBasic
+  equipment:
+    outerClothing: ClothingOuterArmorProtogenLightBasic
+  effects:
+  - !type:SponsorTierLoadoutEffect
+    minTier: 1
+  - !type:SpeciesLoadoutEffect
+    species: [ Protogen ]
+
+- type: loadout
+  id: SponsorProtogenLightSpeed
+  equipment:
+    outerClothing: ClothingOuterArmorProtogenLightSpeed
+  effects:
+  - !type:SponsorTierLoadoutEffect
+    minTier: 1
+  - !type:SpeciesLoadoutEffect
+    species: [ Protogen ]
+
+- type: loadout
+  id: SponsorProtogenMediumBasic
+  equipment:
+    outerClothing: ClothingOuterArmorProtogenMediumBasic
+  effects:
+  - !type:SponsorTierLoadoutEffect
+    minTier: 1
+  - !type:SpeciesLoadoutEffect
+    species: [ Protogen ]
+
+- type: loadout
+  id: SponsorProtogenMediumMagic
+  equipment:
+    outerClothing: ClothingOuterArmorProtogenMediumMagic
+  effects:
+  - !type:SponsorTierLoadoutEffect
+    minTier: 1
+  - !type:SpeciesLoadoutEffect
+    species: [ Protogen ]
+
+- type: loadout
+  id: SponsorProtogenHeavyBasic
+  equipment:
+    outerClothing: ClothingOuterArmorProtogenHeavyBasic
+  effects:
+  - !type:SponsorTierLoadoutEffect
+    minTier: 1
+  - !type:SpeciesLoadoutEffect
+    species: [ Protogen ]
+
+- type: loadout
+  id: SponsorProtogenHeavySpace
+  equipment:
+    outerClothing: ClothingOuterArmorProtogenHeavySpace
+  effects:
+  - !type:SponsorTierLoadoutEffect
+    minTier: 1
+  - !type:SpeciesLoadoutEffect
+    species: [ Protogen ]
