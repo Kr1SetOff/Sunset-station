@@ -20,4 +20,12 @@ public sealed partial class JukeboxPrototype : IPrototype
 
     [DataField(required: true)]
     public SoundPathSpecifier Path = default!;
+
+    /// <summary>
+    /// 🌇Sunset🌇 - Which jukebox-having entities offer this song (matched against
+    /// JukeboxComponent.Category) - lets e.g. the boombox have its own playlist without also
+    /// showing up on (or being pickable from) the stationary Jukebox machine, and vice versa.
+    /// </summary>
+    [DataField]
+    public string Category = "Standard";
 }

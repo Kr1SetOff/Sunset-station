@@ -13,6 +13,7 @@
     onState: off # Indicates the presence of power, not playback
     offState: off
     selectState: select
+    category: Boombox
   - type: Item
     sprite: _Sunset/Objects/Devices/boombox.rsi
     size: Large

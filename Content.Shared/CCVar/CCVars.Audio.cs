@@ -60,6 +60,12 @@ public sealed partial class CCVars
         public static readonly CVarDef<float> InterfaceVolume =
             CVarDef.Create("audio.interface_volume", 0.50f, CVar.ARCHIVE | CVar.CLIENTONLY);
 
+        /// <summary>
+        ///     🌇Sunset🌇 - Mutes boombox playback for this client only (see BoomboxAudioComponent).
+        /// </summary>
+        public static readonly CVarDef<bool> MuteBoomboxes =
+            CVarDef.Create("audio.mute_boomboxes", false, CVar.ARCHIVE | CVar.CLIENTONLY);
+
     /// <summary>
     ///     Lobby music collection string
     /// </summary>
