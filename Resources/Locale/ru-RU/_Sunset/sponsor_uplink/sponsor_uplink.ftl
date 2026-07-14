@@ -6,6 +6,15 @@ store-category-sponsor-uplink-headwear = Головные уборы
 store-category-sponsor-uplink-accessories = Аксессуары
 store-category-sponsor-uplink-misc = Разное
 
+store-category-sponsor-uplink-dept-command = Командование
+store-category-sponsor-uplink-dept-security = Служба безопасности
+store-category-sponsor-uplink-dept-cargo = Снабжение
+store-category-sponsor-uplink-dept-engineering = Инженерный отдел
+store-category-sponsor-uplink-dept-medical = Медицинский отдел
+store-category-sponsor-uplink-dept-science = Научный отдел
+store-category-sponsor-uplink-dept-civilian = Гражданские
+store-category-sponsor-uplink-dept-representatives = Представители
+
 sponsor-uplink-ui-title = Спонсорский аплинк
 sponsor-uplink-ui-buy = Купить
 

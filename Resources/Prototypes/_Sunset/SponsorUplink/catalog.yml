@@ -11,6 +11,14 @@
 # which is already localized.
 
 - type: listing
+  id: SponsorBoombox
+  productEntity: HandledBoomBox
+  cost:
+    SponsorCoin: 30
+  categories:
+  - SponsorUplinkMisc
+
+- type: listing
   id: SponsorClownSuit
   productEntity: ClothingUniformJumpsuitClownis
   cost:
@@ -849,3 +857,203 @@
     SponsorCoin: 20
   categories:
   - SponsorUplinkOuterwear
+
+- type: listing
+  id: SponsorDoubleStunbaton
+  productEntity: DoubleStunbaton
+  cost:
+    SponsorCoin: 40
+  categories:
+  - SponsorUplinkDeptSecurity
+
+- type: listing
+  id: SponsorGoldenBeaker
+  productEntity: GoldenBeaker
+  cost:
+    SponsorCoin: 20
+  categories:
+  - SponsorUplinkDeptMedical
+
+- type: listing
+  id: SponsorCombatMedipen
+  productEntity: CombatMedipen
+  cost:
+    SponsorCoin: 30
+  categories:
+  - SponsorUplinkDeptMedical
+
+- type: listing
+  id: SponsorRoyalCaptainCloak
+  productEntity: ClothingNeckCloakRoyalCaptain
+  cost:
+    SponsorCoin: 40
+  categories:
+  - SponsorUplinkDeptCommand
+
+- type: listing
+  id: SponsorCommandCaptainJumpsuit
+  productEntity: ClothingUniformJumpsuitCommandCaptain
+  cost:
+    SponsorCoin: 35
+  categories:
+  - SponsorUplinkDeptCommand
+
+- type: listing
+  id: SponsorCaptainNobleJumpsuit
+  productEntity: ClothingUniformJumpsuitCaptainNoble
+  cost:
+    SponsorCoin: 35
+  categories:
+  - SponsorUplinkDeptCommand
+
+- type: listing
+  id: SponsorWhiteCaptainDuffel
+  productEntity: ClothingBackpackDuffelWhiteCaptain
+  cost:
+    SponsorCoin: 15
+  categories:
+  - SponsorUplinkDeptCommand
+
+- type: listing
+  id: SponsorWhiteCaptainGloves
+  productEntity: ClothingHandsGlovesCaptainWhite
+  cost:
+    SponsorCoin: 15
+  categories:
+  - SponsorUplinkDeptCommand
+
+- type: listing
+  id: SponsorWhiteCaptainBeret
+  productEntity: ClothingHeadHatBeretCaptainWhite
+  cost:
+    SponsorCoin: 20
+  categories:
+  - SponsorUplinkDeptCommand
+
+- type: listing
+  id: SponsorWhiteCaptainMantle
+  productEntity: ClothingNeckWhiteMantleCaptain
+  cost:
+    SponsorCoin: 25
+  categories:
+  - SponsorUplinkDeptCommand
+
+- type: listing
+  id: SponsorWhiteCaptainShoulderMantle
+  productEntity: ClothingNeckMantleCaptainWhiteShoulder
+  cost:
+    SponsorCoin: 25
+  categories:
+  - SponsorUplinkDeptCommand
+
+- type: listing
+  id: SponsorWhiteCaptainArmor
+  productEntity: ClothingOuterArmorCaptainCarapaceWhite
+  cost:
+    SponsorCoin: 35
+  categories:
+  - SponsorUplinkDeptCommand
+
+- type: listing
+  id: SponsorWhiteCaptainCoat
+  productEntity: ClothingOuterCoatCaptainWhite
+  cost:
+    SponsorCoin: 30
+  categories:
+  - SponsorUplinkDeptCommand
+
+- type: listing
+  id: SponsorWhiteCaptainJumpskirt
+  productEntity: ClothingUniformJumpskirtWhiteCaptain
+  cost:
+    SponsorCoin: 30
+  categories:
+  - SponsorUplinkDeptCommand
+
+- type: listing
+  id: SponsorWhiteCaptainJumpsuit
+  productEntity: ClothingUniformJumpsuitWhiteCaptain
+  cost:
+    SponsorCoin: 30
+  categories:
+  - SponsorUplinkDeptCommand
+
+- type: listing
+  id: SponsorWhiteCaptainTurtleneck
+  productEntity: ClothingUniformJumpsuitWhiteCaptainTurtleneck
+  cost:
+    SponsorCoin: 25
+  categories:
+  - SponsorUplinkDeptCommand
+
+- type: listing
+  id: SponsorCEDMantle
+  productEntity: ClothingNeckCloakCEDMantle
+  cost:
+    SponsorCoin: 35
+  categories:
+  - SponsorUplinkDeptEngineering
+
+- type: listing
+  id: SponsorCeEliteCloak
+  productEntity: ClothingNeckCloakCeElite
+  cost:
+    SponsorCoin: 40
+  categories:
+  - SponsorUplinkDeptEngineering
+
+- type: listing
+  id: SponsorQmEliteCloak
+  productEntity: ClothingNeckCloakQmElite
+  cost:
+    SponsorCoin: 40
+  categories:
+  - SponsorUplinkDeptCargo
+
+- type: listing
+  id: SponsorHosCommandJumpsuit
+  productEntity: ClothingUniformJumpsuitCommandHeadOfSecurity
+  cost:
+    SponsorCoin: 35
+  categories:
+  - SponsorUplinkDeptSecurity
+
+- type: listing
+  id: SponsorRoyalHosCloak
+  productEntity: ClothingNeckCloakRoyalHeadOfSecurity
+  cost:
+    SponsorCoin: 40
+  categories:
+  - SponsorUplinkDeptSecurity
+
+- type: listing
+  id: SponsorHosRetroCloak
+  productEntity: ClothingNeckCloakHosRetro
+  cost:
+    SponsorCoin: 30
+  categories:
+  - SponsorUplinkDeptSecurity
+
+- type: listing
+  id: SponsorHosGreyJumpsuit
+  productEntity: ClothingUniformJumpsuitHoSGrey
+  cost:
+    SponsorCoin: 25
+  categories:
+  - SponsorUplinkDeptSecurity
+
+- type: listing
+  id: SponsorHosBoatCloak
+  productEntity: ClothingNeckCloakBoatHos
+  cost:
+    SponsorCoin: 30
+  categories:
+  - SponsorUplinkDeptSecurity
+
+- type: listing
+  id: SponsorHosEliteCloak
+  productEntity: ClothingNeckCloakHosElite
+  cost:
+    SponsorCoin: 40
+  categories:
+  - SponsorUplinkDeptSecurity
