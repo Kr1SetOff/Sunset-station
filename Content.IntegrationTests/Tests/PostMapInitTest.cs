@@ -125,40 +125,21 @@ namespace Content.IntegrationTests.Tests
         {
             "Dev",
             "TestTeg",
-            //Starlight, do not accept any upstream maps into this list, we are keeping them out for package size and just general management reasons
+            // 🌇Sunset🌇 - only the CentComm outposts remain from upstream; every other Starlight
+            // station map prototype was removed (see Resources/Prototypes/_Starlight/Maps) so only
+            // our own _Sunset stations are ever selectable in map voting/rotation.
             #region Starlight
-            "StarlightBarratry",
-            "StarlightCork",
-            "StarlightKiloton",
-            "StarlightLagan",
-            "StarlightLobster",
-            "StarlightManor",
-            "StarlightLeth",
-            "StarlightMing",
-            "StarlightOrwell",
-            "StarlightPrism",
-            "StarlightStarboard",
-            "StarlightBagel",
-            "StarlightBox",
             "StarlightCentCommG24",
             "StarlightCentCommSC17",
             "StarlightCentCommGNT9",
-            "StarlightCog",
-            "StarlightElkridge",
-            "StarlightFland",
-            "StarlightHotel",
-            "StarlightOasis",
-            "StarlightPacked",
-            "StarlightReach",
-            "StarlightSaltern",
-            "StarlightSilica",
-            "StarlightCluster",
-            "StarlightStationBuilding",
-            "StarlightPlasma",
-			"StarlightSpaceMall",
-            "StarlightSepultum",
-            "StarlightBoxcars",
-            "StarlightSerpentcrest"
+            #endregion
+            #region Sunset
+            "SSBagel",
+            "SSBox",
+            "SSCluster",
+            "SSPacket",
+            "SSHotel",
+            "SSFland",
             #endregion
         };
 
