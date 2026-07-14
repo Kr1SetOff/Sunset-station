@@ -14,11 +14,15 @@ martial-arts-cqc-snap-neck = You snap { $target }'s neck!
 martial-arts-cqc-blocked = Cook's CQC only works near a kitchen.
 martial-arts-ninjutsu-takedown = { $target } is taken down by a surprise attack!
 martial-arts-ninjutsu-kill-bonus = Killing blow speed boost!
-martial-arts-carp-no-guns = The Way of the Sleeping Carp forbids the use of firearms.
+martial-arts-carp-no-guns = The Way of the Sleeping Carp forbids the use of automatic weapons.
 martial-arts-carp-mastered = You have fully mastered the Sleeping Carp technique! You can now reflect attacks.
 martial-arts-carp-stage-advance = You have advanced to stage { $stage } of Sleeping Carp mastery.
 martial-arts-carp-still-training = You aren't ready for the next stage yet - keep meditating.
 martial-arts-fail-target-standing = This move only works against a downed target.
+martial-arts-carp-kiai-name = Carp battle cry
+martial-arts-carp-kiai-1 = shouts: "Kiya!"
+martial-arts-carp-kiai-2 = shouts: "Hiya!"
+martial-arts-carp-kiai-3 = shouts: "Tuya!"
 martial-arts-judo-belt-weapon-blocked = The corporate judo belt only allows bare hands and a stun weapon.
 
 alert-ninjutsu-sneak-ready-name = Sneaking

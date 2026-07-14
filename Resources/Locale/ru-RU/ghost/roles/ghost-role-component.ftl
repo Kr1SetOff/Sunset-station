@@ -1,8 +1,8 @@
 # also used in MakeGhostRuleWindow and MakeGhostRoleCommand
-ghost-role-component-default-rules = All normal rules apply unless an administrator tells you otherwise.
-                                     You don't remember any of your previous life, and you don't remember anything you learned as a ghost.
-                                     You are allowed to remember knowledge about the game in general, such as how to cook, how to use objects, etc.
-                                     You are absolutely [color=red]NOT[/color] allowed to remember, say, the name, appearance, etc. of your previous character.
+ghost-role-component-default-rules = Действуют все обычные правила, если администратор не указал иное.
+                                     Вы не помните ничего из своей прошлой жизни и ничего из того, что узнали, будучи призраком.
+                                     Вам разрешено помнить общие знания об игре — например, как готовить, как пользоваться предметами и т.д.
+                                     Вам категорически [color=red]ЗАПРЕЩЕНО[/color] помнить, например, имя, внешность и т.д. вашего предыдущего персонажа.
 ghost-role-information-nonantagonist-rules = Вы — [color=green][bold]не антагонист[/bold][/color]. Как правило, Вы не должны пытаться причинить вред станции и ее экипажу.
                                              Вы не помните ничего из своей прошлой жизни и ничего из того, что узнали, будучи призраком.
                                              Вам разрешено помнить общие знания об игре — например, как готовить, как пользоваться предметами и т.д.

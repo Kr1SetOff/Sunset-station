@@ -7,3 +7,5 @@ ent-WeaponLauncherHydraEMP = { ent-WeaponLauncherHydraSyndicate }
 ent-WeaponLauncherHydraFilled = { ent-WeaponLauncherHydra }
     .desc = { ent-WeaponLauncherHydra.desc }
     .suffix = Заряжен
+ent-WeaponLauncherChonoLoke = Чоно Локе
+    .desc = Подозрительно убедительная копия печально известного гранатомёта «Чайна-Лейк», любовно собранная вручную компанией DONK CO. Стреляет «полностью настоящими» гранатами, сертифицированными DONK CO. Также принимает настоящие гранаты, но это, наверное, ничего.

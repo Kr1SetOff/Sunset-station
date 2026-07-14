@@ -23,6 +23,12 @@
   - Vampires
   # Starlight-end
   - Eeeps # imp
+  - TheBoys # 🌇Sunset🌇
+
+- type: guideEntry
+  id: TheBoys
+  name: guide-entry-theboys
+  text: "/ServerInfo/Guidebook/Antagonist/TheBoys.xml"
 
 - type: guideEntry
   id: Traitors

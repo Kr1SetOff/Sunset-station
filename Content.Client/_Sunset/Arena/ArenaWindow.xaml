@@ -2,19 +2,59 @@
 SPDX-License-Identifier: AGPL-3.0-or-later
 -->
 <DefaultWindow xmlns="https://spacestation14.io"
+               xmlns:ui="clr-namespace:Content.Client.UserInterface.Controls"
                Title="{Loc 'arena-window-title'}"
-               MinSize="460 280"
-               SetSize="460 280">
-    <BoxContainer Orientation="Vertical" HorizontalExpand="True" SeparationOverride="6">
-        <RichTextLabel Name="InfoLabel" VerticalExpand="True" />
-        <Label Name="StatusLabel" StyleClasses="LabelKeyText" />
+               MinSize="460 360"
+               SetSize="460 360">
+    <BoxContainer Orientation="Vertical" HorizontalExpand="True" VerticalExpand="True" SeparationOverride="4">
+        <!-- Spray-painted header flourish: skull left, mode name right, rune ticks either side. -->
         <BoxContainer Orientation="Horizontal" HorizontalExpand="True" SeparationOverride="6">
-            <OptionButton Name="ModeButton" HorizontalExpand="True" />
-            <Button Name="CreateButton" Text="{Loc 'arena-create-button'}" />
+            <TextureRect Name="SkullDecor" SetSize="20 20" Stretch="KeepAspectCentered" VerticalAlignment="Center" />
+            <TextureRect Name="RuneDecorLeft" SetSize="16 16" Stretch="KeepAspectCentered" VerticalAlignment="Center" />
+            <Label Text="{Loc 'arena-window-title'}" StyleClasses="LabelBig" HorizontalExpand="True" Align="Center" />
+            <TextureRect Name="RuneDecorRight" SetSize="16 16" Stretch="KeepAspectCentered" VerticalAlignment="Center" />
+            <TextureRect Name="AxeDecor" SetSize="20 20" Stretch="KeepAspectCentered" VerticalAlignment="Center" />
         </BoxContainer>
-        <BoxContainer Orientation="Horizontal" HorizontalExpand="True" SeparationOverride="6">
-            <Button Name="JoinButton" HorizontalExpand="True" Visible="False" />
-            <Button Name="SpectateButton" Text="{Loc 'arena-spectate-button'}" HorizontalExpand="True" Visible="False" />
-        </BoxContainer>
+        <ui:HLine />
+
+        <TabContainer Name="MasterTabContainer" VerticalExpand="True">
+            <BoxContainer Orientation="Vertical" HorizontalExpand="True" SeparationOverride="6">
+                <RichTextLabel Name="InfoLabel" VerticalExpand="True" />
+                <Label Name="StatusLabel" StyleClasses="LabelKeyText" />
+                <BoxContainer Orientation="Horizontal" HorizontalExpand="True" SeparationOverride="6">
+                    <OptionButton Name="ModeButton" HorizontalExpand="True" />
+                    <Button Name="CreateButton" Text="{Loc 'arena-create-button'}" />
+                </BoxContainer>
+                <BoxContainer Orientation="Horizontal" HorizontalExpand="True" SeparationOverride="6">
+                    <Button Name="JoinButton" HorizontalExpand="True" Visible="False" />
+                    <Button Name="SpectateButton" Text="{Loc 'arena-spectate-button'}" HorizontalExpand="True" Visible="False" />
+                </BoxContainer>
+            </BoxContainer>
+
+            <BoxContainer Orientation="Vertical" HorizontalExpand="True" VerticalExpand="True" SeparationOverride="6">
+                <BoxContainer Orientation="Horizontal" HorizontalExpand="True" SeparationOverride="4">
+                    <Button Name="LeaderboardMeleeButton" Text="{Loc 'arena-mode-melee'}" HorizontalExpand="True" ToggleMode="True" Pressed="True" />
+                    <Button Name="LeaderboardRangedButton" Text="{Loc 'arena-mode-ranged'}" HorizontalExpand="True" ToggleMode="True" />
+                    <Button Name="LeaderboardHybridButton" Text="{Loc 'arena-mode-meleeranged'}" HorizontalExpand="True" ToggleMode="True" />
+                </BoxContainer>
+
+                <BoxContainer Orientation="Horizontal" HorizontalExpand="True" SeparationOverride="4">
+                    <TextureRect Name="TrophyDecor" SetSize="18 18" Stretch="KeepAspectCentered" VerticalAlignment="Center" />
+                    <Label Text="#" MinWidth="20" />
+                    <Label Text="{Loc 'arena-leaderboard-header-name'}" HorizontalExpand="True" />
+                    <Label Text="{Loc 'arena-leaderboard-header-wins'}" MinWidth="48" Align="Right" />
+                    <Label Text="{Loc 'arena-leaderboard-header-kills'}" MinWidth="48" Align="Right" />
+                    <Label Text="{Loc 'arena-leaderboard-header-deaths'}" MinWidth="48" Align="Right" />
+                    <Label Text="{Loc 'arena-leaderboard-header-kd'}" MinWidth="48" Align="Right" />
+                </BoxContainer>
+                <ui:HLine />
+
+                <ScrollContainer HorizontalExpand="True" VerticalExpand="True" HScrollEnabled="False">
+                    <BoxContainer Name="LeaderboardList" Orientation="Vertical" HorizontalExpand="True" SeparationOverride="2" />
+                </ScrollContainer>
+
+                <Label Name="LeaderboardEmptyLabel" Text="{Loc 'arena-leaderboard-empty'}" Align="Center" Visible="False" />
+            </BoxContainer>
+        </TabContainer>
     </BoxContainer>
 </DefaultWindow>

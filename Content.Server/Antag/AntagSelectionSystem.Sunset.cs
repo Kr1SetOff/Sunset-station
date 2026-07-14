@@ -178,6 +178,14 @@ public sealed partial class AntagSelectionSystem
             if (protoId == "Homelander")
                 continue;
 
+            // TheBoys hand-picks its own fixed 6-person cast directly (see TheBoysRuleSystem) -
+            // sweeping a tier-5 sponsor into one of its definitions here would either double-assign
+            // an already-picked slot or hijack a curated narrative role for an unrelated player.
+            // Two separate GameRules (see Resources/Prototypes/_Sunset/TheBoys/game_rule.yml) run
+            // together for this mode, so both IDs need excluding.
+            if (protoId is "TheBoysHomelander" or "TheBoysTeam")
+                continue;
+
             if (protoId == "Spy" && !spyAllowed)
                 continue;
 

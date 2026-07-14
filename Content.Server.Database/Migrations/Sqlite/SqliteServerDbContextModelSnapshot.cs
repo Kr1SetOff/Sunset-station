@@ -461,6 +461,34 @@ namespace Content.Server.Database.Migrations.Sqlite
                     b.ToTable("antag", (string)null);
                 });
 
+            modelBuilder.Entity("Content.Server.Database.ArenaStats", b =>
+                {
+                    b.Property<Guid>("PlayerUserId")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("player_user_id");
+
+                    b.Property<int>("Mode")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("mode");
+
+                    b.Property<int>("Deaths")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("deaths");
+
+                    b.Property<int>("Kills")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("kills");
+
+                    b.Property<int>("Wins")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("wins");
+
+                    b.HasKey("PlayerUserId", "Mode")
+                        .HasName("PK_arena_stats");
+
+                    b.ToTable("arena_stats", (string)null);
+                });
+
             modelBuilder.Entity("Content.Server.Database.AssignedUserId", b =>
                 {
                     b.Property<int>("Id")

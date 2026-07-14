@@ -14,11 +14,15 @@ martial-arts-cqc-snap-neck = Вы ломаете шею { $target }!
 martial-arts-cqc-blocked = Поварской CQC работает только рядом с кухней.
 martial-arts-ninjutsu-takedown = { $target } повержен(а) неожиданной атакой!
 martial-arts-ninjutsu-kill-bonus = Ускорение от добивания!
-martial-arts-carp-no-guns = Путь Спящего Карпа запрещает использование огнестрельного оружия.
+martial-arts-carp-no-guns = Путь Спящего Карпа запрещает использование автоматического оружия.
 martial-arts-carp-mastered = Вы полностью освоили технику Спящего Карпа! Теперь вы можете отражать атаки.
 martial-arts-carp-stage-advance = Вы продвинулись на { $stage } ступень мастерства Спящего Карпа.
 martial-arts-carp-still-training = Вы ещё не готовы к следующей ступени — продолжайте медитировать.
 martial-arts-fail-target-standing = Этот приём работает только против сбитой с ног цели.
+martial-arts-carp-kiai-name = боевой клич Карпа
+martial-arts-carp-kiai-1 = кричит: «Кия!»
+martial-arts-carp-kiai-2 = кричит: «Хия!»
+martial-arts-carp-kiai-3 = кричит: «Туя!»
 martial-arts-judo-belt-weapon-blocked = Пояс корпоративного дзюдо позволяет использовать только голые руки и электрошокер.
 martial-arts-mime-finger-guns-need-hand = Для этого приёма нужна свободная рука.
 

@@ -1,0 +1,15 @@
+# 🌇Sunset🌇 - a combat shout ("kiai") triggered automatically when a Sleeping Carp practitioner
+# lands one of their strike techniques (see SharedMartialArtsSystem.SleepingCarp.cs). Not meant to be
+# typed by players, so it has no chatTriggers - only ever invoked in code via TryEmoteWithChat.
+- type: emote
+  id: MartialArtsCarpKiai
+  name: martial-arts-carp-kiai-name
+  category: Vocal
+  icon: Interface/Emotes/scream.png
+  whitelist:
+    components:
+    - Vocal
+  chatMessages:
+  - martial-arts-carp-kiai-1
+  - martial-arts-carp-kiai-2
+  - martial-arts-carp-kiai-3

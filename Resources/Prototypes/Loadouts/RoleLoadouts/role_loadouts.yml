@@ -17,7 +17,6 @@
   - CapPens # Starlight
   - CaptainJobTrinkets
   - GroupSpeciesBreathTool
-  - ProtogenCybernetics # Sunset
 
 - type: roleLoadout
   id: JobHeadOfPersonnel
@@ -37,7 +36,6 @@
   - HoPPens # Starlight
   - HoPJobTrinkets
   - GroupSpeciesBreathTool
-  - ProtogenCybernetics # Sunset
 
 # Silicons
 - type: roleLoadout
@@ -75,7 +73,6 @@
   - Pens # Starlight
   - AssistantJobTrinkets
   - GroupSpeciesBreathTool
-  - ProtogenCybernetics # Sunset
 
 - type: roleLoadout
   id: JobBartender
@@ -94,7 +91,6 @@
   - Pens # Starlight
   - BartenderJobTrinkets
   - GroupSpeciesBreathTool
-  - ProtogenCybernetics # Sunset
 
 - type: roleLoadout
   id: JobServiceWorker
@@ -112,7 +108,6 @@
   - Pens # Starlight
   - ServiceWorkerJobTrinkets
   - GroupSpeciesBreathTool
-  - ProtogenCybernetics # Sunset
 
 - type: roleLoadout
   id: JobChef
@@ -132,7 +127,6 @@
   - Pens # Starlight
   - ChefJobTrinkets
   - GroupSpeciesBreathTool
-  - ProtogenCybernetics # Sunset
 
 - type: roleLoadout
   id: JobLibrarian
@@ -149,7 +143,6 @@
   - LuxuryPens # Starlight
   - LibrarianJobTrinkets
   - GroupSpeciesBreathTool
-  - ProtogenCybernetics # Sunset
 
 - type: roleLoadout
   id: JobLawyer
@@ -167,7 +160,6 @@
   - LuxuryPens # Starlight
   - LawyerJobTrinkets
   - GroupSpeciesBreathTool
-  - ProtogenCybernetics # Sunset
 
 - type: roleLoadout
   id: JobChaplain
@@ -189,7 +181,6 @@
   - Pens # Starlight
   - ChaplainJobTrinkets
   - GroupSpeciesBreathTool
-  - ProtogenCybernetics # Sunset
 
 - type: roleLoadout
   id: JobJanitor
@@ -209,7 +200,6 @@
   - Pens # Starlight
   - JanitorJobTrinkets
   - GroupSpeciesBreathTool
-  - ProtogenCybernetics # Sunset
 
 - type: roleLoadout
   id: JobBotanist
@@ -228,7 +218,6 @@
   - Pens # Starlight
   - BotanistJobTrinkets
   - GroupSpeciesBreathTool
-  - ProtogenCybernetics # Sunset
 
 - type: roleLoadout
   id: JobClown
@@ -247,7 +236,6 @@
   - Pins # Starlight
   - ClownPens # Starlight
   - ClownJobTrinkets
-  - ProtogenCybernetics # Sunset
 
 - type: roleLoadout
   id: JobMime
@@ -268,7 +256,6 @@
   - Pins # Starlight
   - MimePens # Starlight
   - MimeJobTrinkets
-  - ProtogenCybernetics # Sunset
 
 - type: roleLoadout
   id: JobMusician
@@ -289,7 +276,6 @@
   - MusicianJobTrinkets
   - Instruments
   - GroupSpeciesBreathTool
-  - ProtogenCybernetics # Sunset
 
 # Cargo
 - type: roleLoadout
@@ -310,7 +296,6 @@
   - Pens # Starlight
   - QuartermasterJobTrinkets
   - GroupSpeciesBreathTool
-  - ProtogenCybernetics # Sunset
 
 - type: roleLoadout
   id: JobCargoTechnician
@@ -331,7 +316,6 @@
   - Pens # Starlight
   - CargoTechnicianJobTrinkets
   - GroupSpeciesBreathTool
-  - ProtogenCybernetics # Sunset
 
 - type: roleLoadout
   id: JobSalvageSpecialist
@@ -350,7 +334,6 @@
   - Pens # Starlight
   - SalvageSpecialistJobTrinkets
   - GroupSpeciesBreathTool
-  - ProtogenCybernetics # Sunset
 
 # Engineering
 - type: roleLoadout
@@ -371,7 +354,6 @@
   - Pens # Starlight
   - ChiefEngineerJobTrinkets
   - GroupSpeciesBreathTool
-  - ProtogenCybernetics # Sunset
 
 - type: roleLoadout
   id: JobTechnicalAssistant
@@ -388,7 +370,6 @@
   - Pens # Starlight
   - TechnicalAssistantJobTrinkets
   - GroupSpeciesBreathTool
-  - ProtogenCybernetics # Sunset
 
 - type: roleLoadout
   id: JobStationEngineer
@@ -407,7 +388,6 @@
   - Pens # Starlight
   - StationEngineerJobTrinkets
   - GroupSpeciesBreathTool
-  - ProtogenCybernetics # Sunset
 
 - type: roleLoadout
   id: JobAtmosphericTechnician
@@ -424,7 +404,6 @@
   - Pens # Starlight
   - AtmosphericTechnicianJobTrinkets
   - GroupSpeciesBreathTool
-  - ProtogenCybernetics # Sunset
 
 # Science
 - type: roleLoadout
@@ -446,7 +425,6 @@
   - Pens # Starlight
   - ResearchDirectorJobTrinkets
   - GroupSpeciesBreathTool
-  - ProtogenCybernetics # Sunset
 
 - type: roleLoadout
   id: JobScientist
@@ -468,7 +446,6 @@
   - Pens # Starlight
   - ScientistJobTrinkets
   - GroupSpeciesBreathTool
-  - ProtogenCybernetics # Sunset
 
 - type: roleLoadout
   id: JobResearchAssistant
@@ -489,7 +466,6 @@
   - Pens # Starlight
   - ResearchAssistantJobTrinkets
   - GroupSpeciesBreathTool
-  - ProtogenCybernetics # Sunset
 
 # Security
 - type: roleLoadout
@@ -513,7 +489,6 @@
   - Pens # Starlight
   - HeadofSecurityJobTrinkets
   - GroupSpeciesBreathToolSecurity
-  - ProtogenCybernetics # Sunset
 
 - type: roleLoadout
   id: JobWarden
@@ -535,7 +510,6 @@
   - Pens # Starlight
   - WardenJobTrinkets
   - GroupSpeciesBreathToolSecurity
-  - ProtogenCybernetics # Sunset
 
 - type: roleLoadout
   id: JobSecurityOfficer
@@ -560,7 +534,6 @@
   - Pens # Starlight
   - SecurityJobTrinkets
   - GroupSpeciesBreathToolSecurity
-  - ProtogenCybernetics # Sunset
 
 - type: roleLoadout
   id: JobDetective
@@ -581,7 +554,6 @@
   - Pens # Starlight
   - DetectiveJobTrinkets
   - GroupSpeciesBreathToolSecurity
-  - ProtogenCybernetics # Sunset
 
 - type: roleLoadout
   id: JobSecurityCadet
@@ -599,7 +571,6 @@
   - Pens # Starlight
   - SecurityCadetJobTrinkets
   - GroupSpeciesBreathToolSecurity
-  - ProtogenCybernetics # Sunset
 
 # Wildcards
 - type: roleLoadout
@@ -618,7 +589,6 @@
   - LuxuryPens # Starlight
   - ReporterJobTrinkets
   - GroupSpeciesBreathTool
-  - ProtogenCybernetics # Sunset
 
 - type: roleLoadout
   id: JobPsychologist
@@ -638,7 +608,6 @@
   - Pens # Starlight
   - PsychologistJobTrinkets
   - GroupSpeciesBreathTool
-  - ProtogenCybernetics # Sunset
 
 # These loadouts are used for non-crew spawns, like off-station antags and event mobs
 # They will be used without player configuration, thus they will only ever apply what is forced by MinLimit

@@ -5502,13 +5502,6 @@ entities:
     - type: Transform
       pos: 17.5,9.5
       parent: 1
-- proto: SpawnPointGhostRatKing
-  entities:
-  - uid: 332
-    components:
-    - type: Transform
-      pos: 1.5,10.5
-      parent: 1
 - proto: StairWhite
   entities:
   - uid: 827

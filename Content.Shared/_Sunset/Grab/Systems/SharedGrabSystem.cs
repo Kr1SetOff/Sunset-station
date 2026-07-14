@@ -92,6 +92,17 @@ public sealed partial class SharedGrabSystem : EntitySystem
         // Free up the "second hand" used to choke, regardless of what tore the grab down.
         if (ent.Comp.ChokeVirtualItem is { } chokeItem)
             _hands.TryDrop(ent.Owner, chokeItem);
+
+        // 🌇Sunset🌇 - single canonical "the grab just ended, for any reason" notification for other
+        // systems (e.g. martial arts combos) - GrabberComponent's own ComponentShutdown slot is
+        // already claimed by this handler, so anyone else who needs to react has to hook this event
+        // instead of subscribing to (GrabberComponent, ComponentShutdown) directly (Robust only
+        // allows one directed subscriber per component+event pair, system-wide).
+        if (ent.Comp.Grabbing is { } grabbed)
+        {
+            var endedEv = new GrabEndedEvent(grabbed);
+            RaiseLocalEvent(ent.Owner, ref endedEv);
+        }
     }
 
     private void OnGrabbableShutdown(Entity<GrabbableComponent> ent, ref ComponentShutdown args)

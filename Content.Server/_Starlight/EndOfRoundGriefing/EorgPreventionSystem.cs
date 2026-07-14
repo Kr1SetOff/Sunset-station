@@ -140,7 +140,17 @@ public sealed partial class EorgPreventionSystem : SharedEorgPreventionSystem
         foreach (var role in _role.MindGetAllRoleInfo((mindContainer.Mind.Value, mind)))
         {
             if (role.Antagonist)
+            {
+                // 🌇Sunset🌇 - Thief keeps their regular job/body rather than a special immune one
+                // (ERT/Decimus/CC, etc.), so their antag status was never actually checked here -
+                // they'd get swept up in the same peaceful-round-end pacification as any passenger.
+                // Thief objectives (steal + escape) are meant to still be finishable up to the
+                // shuttle/CentCom, so exempt them explicitly.
+                if (role.Prototype == "Thief")
+                    return true;
+
                 continue;
+            }
             if (!_proto.TryIndex<JobPrototype>(role.Prototype, out var mindJob))
                 continue;
             if (mindJob.BypassEorPacification)

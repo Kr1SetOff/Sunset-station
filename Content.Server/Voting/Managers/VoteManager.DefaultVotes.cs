@@ -693,13 +693,19 @@ namespace Content.Server.Voting.Managers
 
             var validPresets = new List<(GamePresetPrototype preset, float chance)>();
 
+            // 🌇Sunset🌇 - only offer presets that could actually run with the current online
+            // population; a mode nobody can play (too few/too many players) shouldn't be offered,
+            // let alone win, a vote.
+            var readyPlayers = _entityManager.System<GameTicker>().ReadyPlayerCount();
+
             foreach (var preset in _prototypeManager.EnumeratePrototypes<GamePresetPrototype>())
             {
                 if (!preset.ShowInVote)
                     continue;
 
-                // 🌇Sunset🌇 - deliberately ignore MinPlayers/MaxPlayers here so any of the curated
-                // modes can be offered (and picked) in the automatic vote regardless of population.
+                if (preset.MinPlayers > readyPlayers || preset.MaxPlayers < readyPlayers)
+                    continue;
+
                 //STARLIGHT
                 //check if its on the cooldown list
                 //if the cooldown number is 0 or lower, we dont cooldown this selection anyway

@@ -14,7 +14,7 @@ using Content.Shared.Tag;
 
 namespace Content.Server.Antag.Components;
 
-[RegisterComponent, Access(typeof(AntagSelectionSystem), typeof(AdminVerbSystem))]
+[RegisterComponent, Access(typeof(AntagSelectionSystem), typeof(AdminVerbSystem), typeof(Content.Server._Sunset.TheBoys.TheBoysRuleSystem))]
 public sealed partial class AntagSelectionComponent : Component
 {
     /// <summary>

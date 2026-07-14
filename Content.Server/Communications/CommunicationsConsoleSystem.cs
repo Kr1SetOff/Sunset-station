@@ -13,6 +13,7 @@ using Content.Server.Station.Systems;
 using Content.Shared._Starlight.Speech;
 using Content.Shared.Access.Components;
 using Content.Shared.Access.Systems;
+using Content.Shared._Sunset.CCVar;
 using Content.Shared.CCVar;
 using Content.Shared.Chat;
 using Content.Shared.Communications;
@@ -77,6 +78,15 @@ namespace Content.Server.Communications
             // Starlight Start: Secure Command Terminal
             SubscribeLocalEvent<CommunicationsConsoleComponent, CommunicationsConsoleOpenSecureTerminalMessage>(OnOpenSecureTerminalMessage);
             // Starlight End
+        }
+
+        /// <summary>
+        /// 🌇Sunset🌇 - the color to use for this console's announcements: its own explicit override if
+        /// it has one, otherwise the server-wide sunset.chat.announcement_color default (turquoise).
+        /// </summary>
+        public Color GetAnnouncementColor(CommunicationsConsoleComponent comp)
+        {
+            return comp.Color ?? Color.FromHex(_cfg.GetCVar(SunsetCCVars.AnnouncementColor), Color.Turquoise);
         }
 
         public override void Update(float frameTime)
@@ -355,15 +365,17 @@ namespace Content.Server.Communications
             if (comp.AnnounceSentBy)
                 msg.Text += "\n" + Loc.GetString("comms-console-announcement-sent-by") + " " + author;
 
+            var color = GetAnnouncementColor(comp);
+
             if (comp.Global)
             {
-                _chatSystem.DispatchGlobalAnnouncement(msg.Tts ?? msg.Text, title, announcementSound: comp.Sound, colorOverride: comp.Color, speaker: speaker); // Starlight
+                _chatSystem.DispatchGlobalAnnouncement(msg.Tts ?? msg.Text, title, announcementSound: comp.Sound, colorOverride: color, speaker: speaker); // Starlight
 
                 _adminLogger.Add(LogType.Chat, LogImpact.Low, $"{ToPrettyString(message.Actor):player} has sent the following global announcement: {msg}");
                 return;
             }
 
-            _chatSystem.DispatchCommunicationsConsoleAnnouncement(uid, msg.Text, title, announcementSound: comp.Sound, speaker: speaker, colorOverride: comp.Color); // 🌟Starlight🌟
+            _chatSystem.DispatchCommunicationsConsoleAnnouncement(uid, msg.Text, title, announcementSound: comp.Sound, speaker: speaker, colorOverride: color); // 🌟Starlight🌟
             //Starlight begin
             foreach (var grid in comp.AdditionalGrids)
             {
@@ -375,7 +387,7 @@ namespace Content.Server.Communications
                     return gridUid == grid;
                 });
                 // These are not recorded in replays since they are unnecessary and cause multiple to send at once in the replay, which is annoying as shit.
-                _chatSystem.DispatchFilteredAnnouncement(allPlayersOnGrid, msg.Text, announcementSound: comp.Sound, colorOverride: comp.Color, sender: title, recordToReplay: false);
+                _chatSystem.DispatchFilteredAnnouncement(allPlayersOnGrid, msg.Text, announcementSound: comp.Sound, colorOverride: color, sender: title, recordToReplay: false);
             }
             //Starlight end
 

@@ -59,6 +59,8 @@
     - type: RuleGrids
     - type: LoadMapRule
       gridPath: /Maps/_Starlight/Shuttles/SecureTerminal/ERT-Small-Engi.yml
+    - type: FTLToStationRule
+      hyperspaceTime: 300
 
 - type: entity
   parent: BaseGameRule
@@ -68,6 +70,8 @@
     - type: RuleGrids
     - type: LoadMapRule
       gridPath: /Maps/_Starlight/Shuttles/SecureTerminal/ERT-Small-Jani.yml
+    - type: FTLToStationRule
+      hyperspaceTime: 300
 
 - type: entity
   parent: BaseGameRule
@@ -77,6 +81,8 @@
     - type: RuleGrids
     - type: LoadMapRule
       gridPath: /Maps/_Starlight/Shuttles/SecureTerminal/ERT-Small-Med.yml
+    - type: FTLToStationRule
+      hyperspaceTime: 300
 
 - type: entity
   parent: BaseGameRule
@@ -86,6 +92,8 @@
     - type: RuleGrids
     - type: LoadMapRule
       gridPath: /Maps/_Starlight/Shuttles/SecureTerminal/ERT-Small-Sec.yml
+    - type: FTLToStationRule
+      hyperspaceTime: 300
 
 # Spawners
 - type: entity

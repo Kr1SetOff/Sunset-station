@@ -2,7 +2,6 @@
   id: LockerFillQuarterMaster
   table: !type:AllSelector
     children:
-    - id: ClothingNeckCloakQmElite
     - id: BoxEncryptionKeyCargo
     - id: BoxFolderQmClipboard
     - id: BoxQMCircuitboards
@@ -225,7 +224,6 @@
   id: LockerFillChiefEngineerNoHardsuit
   table: !type:AllSelector
     children:
-    - id: ClothingNeckCloakCeElite
     - id: AccessConfigurator
     - id: BoxEncryptionKeyEngineering
     - id: CigarCase
@@ -436,7 +434,6 @@
   id: LockerFillHeadOfSecurityNoHardsuit
   table: !type:AllSelector
     children:
-    - id: ClothingNeckCloakHosElite # Starlight
     - id: WeaponEnergySMG # Starlight
     # - id: WeaponEnergyMagnum # Starlight - Removed, given to det
     - id: BookSpaceLaw

@@ -61,9 +61,19 @@ public sealed partial class CryoTeleportationSystem : EntitySystem
                 || HasComp<BorgChassisComponent>(uid)
                 || mobStateComponent.CurrentState != MobState.Alive
                 || comp.ExitTime == null
-                || _timing.CurTime - comp.ExitTime - comp.TimeDelay < stationComp.TransferDelay
                 || HasComp<CryostorageContainedComponent>(uid)
                 || HasComp<UncryoableComponent>(uid))
+                continue;
+
+            // 🌇Sunset🌇 - only cryo a body once its player has either fully disconnected, or has
+            // been out of it (while still connected - e.g. ghosting) for the full NotInBodyDelay.
+            // Everything else (still attached, or detached for less than the relevant delay) is
+            // left alone.
+            var disconnected = !_playerMan.TryGetSessionById(comp.UserId, out var session)
+                || session.Status is SessionStatus.Disconnected or SessionStatus.Zombie;
+            var requiredDelay = disconnected ? stationComp.DisconnectDelay : stationComp.NotInBodyDelay;
+
+            if (_timing.CurTime - comp.ExitTime - comp.TimeDelay < requiredDelay)
                 continue;
 
             var stationGrid = _stationSystem.GetLargestGrid((comp.Station.Value, stationData));

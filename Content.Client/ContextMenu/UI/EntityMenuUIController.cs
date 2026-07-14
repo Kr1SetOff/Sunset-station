@@ -171,6 +171,14 @@ namespace Content.Client.ContextMenu.UI
             if (_combatMode.IsInCombatMode(args.Session?.AttachedEntity))
                 return false;
 
+            // 🌇Sunset🌇 - the coordinate's reference entity can go invalid between the click being
+            // queued and processed (e.g. it died/was deleted, or the player's mind was moved to a
+            // new body - both routine during things like the ghost arena's rapid spawn/despawn
+            // churn). Bail out quietly instead of logging a "convert coordinates with invalid
+            // entity" error for what's just a stale click.
+            if (!args.Coordinates.IsValid(_entityManager))
+                return false;
+
             var coords = _xform.ToMapCoordinates(args.Coordinates);
 
             if (_verbSystem.TryGetEntityMenuEntities(coords, out var entities))

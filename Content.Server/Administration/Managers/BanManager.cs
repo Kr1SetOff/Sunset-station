@@ -74,7 +74,7 @@ public sealed partial class BanManager : IBanManager, IPostInjectInit
     private string _webhookUrl = string.Empty;
     private WebhookData? _webhookData;
     private string _webhookName = "SUNSET Наказания";
-    private string _webhookAvatarUrl = "https://i.imgur.com/whiqrpC.png";
+    private string _webhookAvatarUrl = "https://raw.githubusercontent.com/Kr1SetOff/Sunset-station/main/Resources/Textures/Logo/icon/icon-128x128.png";
 
     private readonly Dictionary<ICommonSession, List<ServerRoleBanDef>> _cachedRoleBans = new();
     // Cached ban exemption flags are used to handle

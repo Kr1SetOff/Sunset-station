@@ -217,13 +217,15 @@ public sealed partial class CryostorageSystem : SharedCryostorageSystem
             return;
         }
 
-        if (!CryoSleepRejoiningEnabled || !comp.AllowReEnteringBody)
+        // 🌇Sunset🌇 - always sever the mind from the body entering cryo, regardless of rejoin
+        // config. This checks OwnedEntity rather than CurrentEntity: a player who's currently
+        // visiting a ghost (CurrentEntity = ghost, OwnedEntity = this body) would otherwise slip
+        // past the old CurrentEntity check and keep a "return to body" option into a body that's
+        // about to be removed from the round.
+        if (userId != null && Mind.TryGetMind(userId.Value, out var mind) &&
+            mind.Value.Comp.OwnedEntity == ent.Owner)
         {
-            if (userId != null && Mind.TryGetMind(userId.Value, out var mind) &&
-                HasComp<CryostorageContainedComponent>(mind.Value.Comp.CurrentEntity))
-            {
-                _ghostSystem.OnGhostAttempt(mind.Value, false);
-            }
+            _ghostSystem.OnGhostAttempt(mind.Value, false);
         }
 
         comp.AllowReEnteringBody = false;

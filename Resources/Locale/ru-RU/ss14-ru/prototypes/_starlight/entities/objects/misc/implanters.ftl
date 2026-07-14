@@ -26,3 +26,5 @@ ent-MedTakMindShieldImplanter = имплантер ментального щит
     .desc = { ent-MindShieldImplanter.desc }
 ent-MedTakDeathRattleImplanter = маяк MedTak
     .desc = { ent-BaseImplantOnlyImplanter.desc }
+ent-CommandTrackerImplanter = имплантер командного трекера
+    .desc = { ent-BaseImplantOnlyImplanter.desc }

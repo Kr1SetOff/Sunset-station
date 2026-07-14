@@ -4842,13 +4842,6 @@ entities:
     - type: Transform
       pos: -4.5,29.5
       parent: 1
-- proto: SpawnPointGhostRatKing
-  entities:
-  - uid: 862
-    components:
-    - type: Transform
-      pos: 3.5,29.5
-      parent: 1
 - proto: TableWood
   entities:
   - uid: 863

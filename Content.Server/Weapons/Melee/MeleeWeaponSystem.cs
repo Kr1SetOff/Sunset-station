@@ -52,6 +52,13 @@ public sealed partial class MeleeWeaponSystem : SharedMeleeWeaponSystem
 
         // Could also check the arc though future effort + if they're aimbotting it's not really going to make a difference.
 
+        // 🌇Sunset🌇 - the client reports targetUid from its own (possibly stale-by-a-tick) view of
+        // the world; if that entity died/was deleted between the client sending it and us
+        // processing the swing, resolving its Transform below would log a scary "can't resolve
+        // TransformComponent" error for what's just a whiffed hit on a corpse that's already gone.
+        if (Deleted(targetUid))
+            return false;
+
         // (This runs lagcomp internally and is what clickattacks use)
         if (!Interaction.InRangeUnobstructed(ignore, targetUid, range + 0.1f, overlapCheck: false))
             return false;

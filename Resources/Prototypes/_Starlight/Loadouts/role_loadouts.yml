@@ -16,7 +16,6 @@
   - Pins
   - LuxuryPens
   - GroupSpeciesBreathTool
-  - ProtogenCybernetics # Sunset
 
 - type: roleLoadout
   id: JobNanoTrasenRepresentative
@@ -33,7 +32,6 @@
   - NTRPens
   - Survival
   - GroupSpeciesBreathTool
-  - ProtogenCybernetics # Sunset
 
 - type: roleLoadout
   id: JobIAA
@@ -50,7 +48,6 @@
   - LawyerJobTrinkets
   - Survival
   - GroupSpeciesBreathTool
-  - ProtogenCybernetics # Sunset
 
 - type: roleLoadout
   id: JobBlueShield
@@ -71,7 +68,6 @@
   - Pens
   - SurvivalExtended
   - GroupSpeciesBreathToolSecurity
-  - ProtogenCybernetics # Sunset
 
 - type: roleLoadout
   id: JobNanotrasenCareerTrainer
@@ -87,7 +83,6 @@
   - Pens
   - Survival
   - GroupSpeciesBreathTool
-  - ProtogenCybernetics # Sunset
 
 # Cargo
 - type: roleLoadout
@@ -106,7 +101,6 @@
   - Pins
   - Pens
   - GroupSpeciesBreathTool
-  - ProtogenCybernetics # Sunset
 
 - type: roleLoadout
   id: JobMailTech
@@ -127,7 +121,6 @@
   - Pins
   - Pens
   - GroupSpeciesBreathTool
-  - ProtogenCybernetics # Sunset
 
 - type: roleLoadout
   id: JobSalvageLead
@@ -146,7 +139,6 @@
   - Pins
   - Pens
   - GroupSpeciesBreathTool
-  - ProtogenCybernetics # Sunset
 
 # Security
 - type: roleLoadout
@@ -173,7 +165,6 @@
   - Pens
   - SecurityJobTrinkets
   - GroupSpeciesBreathToolSecurity
-  - ProtogenCybernetics # Sunset
 
 - type: roleLoadout
   id: JobDutyOfficer
@@ -196,7 +187,6 @@
   - Pens
   - SecurityJobTrinkets
   - GroupSpeciesBreathToolSecurity
-  - ProtogenCybernetics # Sunset
 
 # Science
 - type: roleLoadout
@@ -216,7 +206,6 @@
   - Pins
   - Pens
   - GroupSpeciesBreathTool
-  - ProtogenCybernetics # Sunset
 
 # Medical
 - type: roleLoadout
@@ -238,7 +227,6 @@
   - Pins
   - Pens
   - GroupSpeciesBreathToolMedical
-  - ProtogenCybernetics # Sunset
 
 # Civilians
 - type: roleLoadout
@@ -257,7 +245,6 @@
   - Pens
   - PerformerJobTrinkets
   - GroupSpeciesBreathTool
-  - ProtogenCybernetics # Sunset
 
 # Wildcards
 - type: roleLoadout
@@ -274,7 +261,6 @@
   - Pens
   - ZookeeperJobTrinkets
   - GroupSpeciesBreathTool
-  - ProtogenCybernetics # Sunset
 
 - type: roleLoadout
   id: JobBoxer
@@ -291,7 +277,6 @@
   - Pens
   - BoxerJobTrinkets
   - GroupSpeciesBreathTool
-  - ProtogenCybernetics # Sunset
 
 # Antagonist Loadouts
 - type: roleLoadout
