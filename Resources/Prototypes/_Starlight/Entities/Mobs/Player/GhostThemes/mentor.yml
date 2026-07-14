@@ -21,5 +21,19 @@
       state: ghost-daemon
     color: "#ffffff"
   requirements:
-  - !type:DiscordRolesRequirement
-    requirement: MentorRolesReq
+  - !type:AnyRequirement
+    requirements:
+    - !type:DiscordRolesRequirement
+      requirement: MentorRolesReq
+    # 🌇Sunset🌇 - also unlockable via a manually-set admin rank (see AdminTitleRequirement's doc
+    # comment) rather than only the Discord-role-synced mentor team.
+    - !type:AdminTitleRequirement
+      titles:
+      - Host
+      - Куратор
+      - Ивент-мастер
+      - Модератор
+      - Ст.Модератор
+      - Ментор
+      - Мл.Ивент-мастер
+      - Ст.Ивент-Мастер
