@@ -22,6 +22,8 @@
   - type: IconSmooth
     mode: Diagonal
     key: walls
+    additionalKeys:
+    - windows
     base: state
   - type: Icon
     sprite: _Starlight/Structures/Walls/abductor_diagonal.rsi
@@ -82,6 +84,8 @@
     node: shuttleWall
   - type: IconSmooth
     key: walls
+    additionalKeys:
+    - windows
     base: state
   - type: Appearance
   - type: Ricochetable
@@ -103,6 +107,8 @@
     state: full
   - type: IconSmooth
     key: walls
+    additionalKeys:
+    - windows
     base: state
   - type: Appearance
   - type: Pierceable
@@ -135,6 +141,8 @@
     sprite: _Starlight/Structures/Walls/xenoborglight.rsi
   - type: IconSmooth
     key: walls
+    additionalKeys:
+    - windows
     base: xenoborglight
 
 - type: entity
