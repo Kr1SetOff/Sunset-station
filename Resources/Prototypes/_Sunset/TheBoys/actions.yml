@@ -1,0 +1,48 @@
+# 🌇Sunset🌇 - The Boys gamemode: powers granted temporarily by TheBoysPowersSystem while Butcher's/
+# Hughie's Compound V power component is active (see TheBoysButcherPowerComponent/
+# TheBoysHughiePowerComponent). Not player-obtainable any other way.
+
+# Twin-laser channel identical in shape to Homelander's own (see
+# Resources/Prototypes/_Sunset/Homelander/homelander.yml's ActionHomelanderHeatVision) but shorter
+# range/duration/damage - a temporary V high, not a lifetime of practice with it.
+- type: entity
+  parent: BaseAction
+  id: ActionTheBoysButcherLaserEyes
+  name: Laser Eyes
+  description: Burn everything in your sight with twin beams from your eyes. Activate again to stop early. Lasts up to 15 seconds.
+  components:
+  - type: Action
+    itemIconStyle: BigAction
+    icon: { sprite: _Sunset/Interface/Actions/homelander.rsi, state: heat_vision }
+  - type: InstantAction
+    event: !type:TheBoysButcherLaserEyesEvent
+      duration: 15
+      lockout: 20
+      range: 12
+      eyeOffset: 0.06
+      damagePerSecond:
+        types:
+          Heat: 12
+
+# Reuses the wizard Blink spell's own teleport logic (TeleportSpellEvent/SharedMagicSystem.
+# OnTeleportSpell) - short range, on-cast wall/LOS check, no new movement code needed.
+- type: entity
+  parent: BaseAction
+  id: ActionTheBoysHughieBlink
+  name: Teleport
+  description: Teleport to the clicked location.
+  components:
+  - type: Action
+    useDelay: 8
+    itemIconStyle: BigAction
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Magic/blink.ogg
+    icon:
+      sprite: Objects/Magic/magicactions.rsi
+      state: blink
+  - type: TargetAction
+    range: 8
+    repeat: false
+    checkCanAccess: false
+  - type: WorldTargetAction
+    event: !type:TeleportSpellEvent

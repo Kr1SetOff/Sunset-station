@@ -15,3 +15,7 @@ entity-effect-status-effect-RadiationProtection = radiation protection
 entity-effect-status-effect-Drowsiness = drowsiness
 entity-effect-status-effect-Adrenaline = adrenaline
 entity-effect-status-effect-PoliteLanguage = polite language
+
+entity-effect-status-effect-TheBoysButcherV = temporary Compound V laser eyes (Butcher)
+entity-effect-status-effect-TheBoysHughieV = temporary Compound V teleport (Hughie)
+entity-effect-status-effect-TheBoysKimikoV = temporary Compound V superpower (Kimiko)

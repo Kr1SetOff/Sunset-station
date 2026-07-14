@@ -1,0 +1,180 @@
+# 🌇Sunset🌇 - The Boys gamemode, split into two independent GameRules run together by the TheBoys
+# gamePreset (see game_presets.yml) so admins can force/track/remove either half on its own:
+# TheBoysHomelander (a single pick, identical mechanics/gear to the standalone Homelander rule) and
+# TheBoysTeam (Butcher + Frenchie/Hughie/Mother's Milk/Kimiko). Both are hand-picked by
+# TheBoysRuleSystem directly on RulePlayerJobsAssignedEvent rather than through the normal
+# preference-pool lottery - every definition below is left with empty prefRoles/fallbackRoles on
+# purpose, since nobody could plausibly have pre-opted into a preference for a brand new
+# gamemode-exclusive role. Everyone but Homelander keeps their existing job and body.
+- type: entity
+  parent: BaseGameRule
+  id: TheBoysHomelander
+  components:
+  # No minPlayers here - the TheBoys gamePreset itself already gates selection to 8+ players; a
+  # redundant per-rule minPlayers only risks one half of the split rule (see game_presets.yml) being
+  # cancelled/force-ended independently of the other if population dips right at round start.
+  - type: GameRule
+  - type: TheBoysHomelanderRule
+  # Also lets HomelanderSystem's own AfterAntagEntitySelectedEvent handler (briefing + his
+  # "seize control of the station" objective) fire for the pick below, exactly like it does on the
+  # standalone Homelander rule - that handler is subscribed on HomelanderRuleComponent (the rule
+  # entity), not HomelanderComponent (the picked player).
+  - type: HomelanderRule
+  - type: AntagSelection
+    agentName: theboys-round-end-agent-name
+    selectionTime: PostPlayerSpawn
+    definitions:
+    # Identical setup to the standalone Homelander rule (Resources/Prototypes/_Sunset/Homelander/game_rule.yml)
+    - allowNonHumans: false
+      multiAntagSetting: None
+      startingGear: HomelanderGear
+      mindRoles:
+      - MindRoleHomelander
+      components:
+      - type: Homelander
+      - type: HyperHearing
+      - type: Flight
+        landingSound:
+          path: /Audio/_Sunset/Homelander/landing.ogg
+      - type: ThermalVision
+      - type: ActionGrant
+        actions:
+        - ActionHomelanderHeatVision
+        - ActionPAIMassScanner
+      - type: UserInterface
+        interfaces:
+          enum.RadarConsoleUiKey.Key:
+            type: RadarConsoleBoundUserInterface
+            requireInputValidation: false
+      - type: RadarConsole
+        maxRange: 256
+        followEntity: true
+      # Blood is NOT set here - see the identical comment in Homelander/game_rule.yml. HomelanderSystem
+      # replaces the player's actual blood via ChangeBloodReagents once selection is done instead.
+      - type: Damageable
+        damageContainer: Biological
+        damageModifierSet: Homelander
+      - type: PassiveDamage
+        allowedStates:
+        - Alive
+        - Critical
+        damageCap: 0
+        damage:
+          types:
+            Blunt: -3
+            Slash: -3
+            Piercing: -3
+            Heat: -3
+            Shock: -3
+            Cold: -3
+            Caustic: -3
+            Asphyxiation: -3
+            Bloodloss: -3
+      - type: MeleeWeapon
+        soundHit:
+          collection: Punch
+        angle: 30
+        animation: WeaponArcFist
+        attackRate: 1
+        damage:
+          types:
+            Blunt: 25
+            Structural: 150
+      - type: MovementSpeedModifier
+        baseWalkSpeed: 3.125
+        baseSprintSpeed: 5.625
+      - type: StaminaResistance
+        damageCoefficient: 0.3
+        worn: false
+      - type: MobThresholds
+        thresholds:
+          0: Alive
+          150: Critical
+          250: Dead
+      - type: ExplosionResistance
+        damageCoefficient: 0.25
+      briefing:
+        sound: "/Audio/Ambience/Antag/traitor_start.ogg"
+
+- type: entity
+  parent: BaseGameRule
+  id: TheBoysTeam
+  components:
+  # No minPlayers here - see TheBoysHomelander's identical comment above.
+  - type: GameRule
+  - type: TheBoysTeamRule
+  - type: AntagSelection
+    agentName: theboys-round-end-agent-name
+    selectionTime: PostPlayerSpawn
+    definitions:
+    # Butcher - keeps his existing job/body. Gets a real "eliminate Homelander" objective, wired up
+    # in code (TheBoysRuleSystem) once Homelander is known.
+    - allowNonHumans: false
+      multiAntagSetting: None
+      mindRoles:
+      - MindRoleTheBoysButcher
+      components:
+      - type: TheBoysButcher
+      tags:
+      - TheBoysButcher
+      briefing:
+        sound: "/Audio/Ambience/Antag/traitor_start.ogg"
+
+    # Frenchie - keeps his existing job/body. Untagged - he never had a V-derived power of his own
+    # in the show, so CompoundV's reagent effect just poisons him like anyone else outside the team.
+    # Thieving is granted directly on his body (not gloves) as a permanent, toggleable stealthy-strip
+    # ability - matching his show characterization as the team's smooth-fingered thief; toggled via
+    # the "Stealthy" alert ThievingSystem shows automatically once the component exists.
+    - allowNonHumans: false
+      multiAntagSetting: None
+      mindRoles:
+      - MindRoleTheBoysFrenchie
+      components:
+      - type: TheBoysTeammate
+      - type: Thieving
+        stripTimeReduction: 1.5
+        stealthy: true
+      briefing:
+        sound: "/Audio/Ambience/Antag/traitor_start.ogg"
+
+    # Hughie - keeps his existing job/body.
+    - allowNonHumans: false
+      multiAntagSetting: None
+      mindRoles:
+      - MindRoleTheBoysHughie
+      components:
+      - type: TheBoysTeammate
+      tags:
+      - TheBoysHughie
+      briefing:
+        sound: "/Audio/Ambience/Antag/traitor_start.ogg"
+
+    # Mother's Milk - keeps his existing job/body. Tagged purely so TheBoysRuleSystem can identify
+    # him (not V-related - see reagents.yml, which doesn't reference this tag) to hand him his
+    # CentCom-permitted shotgun on selection (see TheBoysMothersMilkShotgun in items.yml).
+    - allowNonHumans: false
+      multiAntagSetting: None
+      mindRoles:
+      - MindRoleTheBoysMothersMilk
+      components:
+      - type: TheBoysTeammate
+      tags:
+      - TheBoysMothersMilk
+      briefing:
+        sound: "/Audio/Ambience/Antag/traitor_start.ogg"
+
+    # Kimiko - keeps her existing job/body. Permanently mute from round start (not tied to V) -
+    # she communicates through gestures/emotes only, matching her show characterization. Muted
+    # doesn't block non-vocal emotes (see Content.Server.Speech.Muting.MutingSystem.OnEmote), so
+    # gesturing still works fine.
+    - allowNonHumans: false
+      multiAntagSetting: None
+      mindRoles:
+      - MindRoleTheBoysKimiko
+      components:
+      - type: TheBoysTeammate
+      - type: Muted
+      tags:
+      - TheBoysKimiko
+      briefing:
+        sound: "/Audio/Ambience/Antag/traitor_start.ogg"

@@ -1,0 +1,44 @@
+# 🌇Sunset🌇 - Butcher's real objective, wired up in code by TheBoysRuleSystem once both Homelander
+# and Butcher have been picked (see TargetOverrideComponent/PickSpecificPerson) - not handed out via
+# the random objective pool, since there's only ever exactly one correct target.
+#
+# name/description below are literal text, NOT loc keys - entity prototype name/description are only
+# ever localized via the `ent-<PrototypeID>` / `ent-<PrototypeID>.desc` Fluent convention (see
+# HomelanderControlStationObjective's identical fix), not by treating the YAML value itself as a loc
+# key - TargetObjective.title (below) is a separate field that IS explicitly resolved via Loc.GetString
+# by TargetObjectiveSystem, which is why the title displayed correctly while the description didn't.
+- type: entity
+  parent: [ BaseObjective, BaseLivingObjective ]
+  id: TheBoysKillHomelanderObjective
+  name: Get rid of Homelander
+  description: Homelander is a threat to everyone on this station. One of you has to stop him, whatever it takes.
+  components:
+  - type: Objective
+    difficulty: 3.5
+    issuer: theboys-objective-issuer
+    icon:
+      sprite: Objects/Weapons/Guns/Pistols/viper.rsi
+      state: icon
+  - type: PickSpecificPerson
+  - type: KillPersonCondition
+    requireDead: true
+  - type: TargetObjective
+    title: theboys-objective-kill-homelander-title
+
+# 🌇Sunset🌇 - flavor/RP objective for the four rank-and-file teammates (Frenchie/Hughie/Mother's
+# Milk/Kimiko) - no mechanical win/lose condition beyond staying alive, just something that shows up
+# in their character sheet alongside the "help Butcher, but he's not your master" briefing (see
+# theboys-role-greeting-teammate) - wired up in TheBoysRuleSystem.OnMemberSelected.
+- type: entity
+  parent: BaseObjective
+  id: TheBoysHelpButcherObjective
+  name: Help Butcher's team
+  description: Butcher is your leader in the hunt for Homelander, not your master. Help him however you see fit - but if his orders cross your conscience, you're free to refuse and follow your own judgment instead.
+  components:
+  - type: Objective
+    difficulty: 1.5
+    issuer: theboys-objective-issuer
+    icon:
+      sprite: Objects/Weapons/Guns/Pistols/viper.rsi
+      state: icon
+  - type: SurviveCondition

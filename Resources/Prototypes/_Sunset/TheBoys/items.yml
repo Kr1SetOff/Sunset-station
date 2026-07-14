@@ -1,0 +1,37 @@
+# 🌇Sunset🌇 - The Boys gamemode: a joke item, spawned into Hughie's backpack (or hands, see
+# TheBoysRuleSystem.OnMemberSelected) the moment he's picked - he doesn't get a real V-derived power
+# the way Butcher/Kimiko do until he actually doses, so he gets this instead as a bit of flavor.
+- type: entity
+  parent: Paper
+  id: TheBoysHughieCoolBroPaper
+  name: crumpled note
+  description: A small note, folded and refolded many times.
+  components:
+  - type: Paper
+    content: theboys-hughie-cool-bro-paper-content
+
+# Spawned into Butcher's backpack (or hands, see TheBoysRuleSystem.OnMemberSelected) the moment
+# he's picked. Deals normal crowbar damage to everyone - except a Homelander antagonist, who takes
+# 3x (ButcherCrowbarComponent, checked in TheBoysRuleSystem.OnHomelanderAttacked).
+- type: entity
+  parent: CrowbarRed
+  id: TheBoysButcherCrowbar
+  name: Butcher's crowbar
+  description: A battered old crowbar, worn smooth from years of prying open doors that were never meant to open. It's seen a supe or two.
+  components:
+  - type: ButcherCrowbar
+
+# Spawned into Mother's Milk's backpack (or hands) the moment he's picked - a CentCom-stamped
+# permit tag (Contraband/allowedDepartments) keeps security from flagging it on sight, and
+# ScanByPass keeps it silent through checkpoint scan gates, matching his in-show role as the one
+# member of the team who can legitimately carry serious hardware.
+- type: entity
+  parent: WeaponShotgunKammerer
+  id: TheBoysMothersMilkShotgun
+  name: Mother's Milk's shotgun
+  description: A well-maintained pump shotgun with a CentCom-issued carry permit stamped into the stock. Paperwork nobody on this station is going to question too closely.
+  components:
+  - type: Contraband
+    allowedDepartments: [ CentralCommand ]
+  - type: ScanByPass
+    powered: false

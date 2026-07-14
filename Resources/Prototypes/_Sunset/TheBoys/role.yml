@@ -1,0 +1,96 @@
+# 🌇Sunset🌇 - The Boys gamemode: Butcher's team. Unlike Homelander (who gets a whole new body/
+# gear via HomelanderGear), these five keep their existing job and body - see game_rule.yml's
+# TheBoys AntagSelection, which layers marker components/tags onto whichever crew member gets
+# picked instead of replacing their equipment. Only Butcher gets a real mechanical Objective
+# (added in code by TheBoysRuleSystem, see objectives.yml); the other four just get a flavor
+# team-briefing message.
+
+- type: antag
+  id: TheBoysButcher
+  name: roles-antag-theboys-butcher-name
+  antagonist: true
+  setPreference: true
+  objective: roles-antag-theboys-butcher-objective
+
+- type: antag
+  id: TheBoysFrenchie
+  name: roles-antag-theboys-frenchie-name
+  antagonist: true
+  setPreference: true
+  objective: roles-antag-theboys-frenchie-objective
+
+- type: antag
+  id: TheBoysHughie
+  name: roles-antag-theboys-hughie-name
+  antagonist: true
+  setPreference: true
+  objective: roles-antag-theboys-hughie-objective
+
+- type: antag
+  id: TheBoysMothersMilk
+  name: roles-antag-theboys-mothersmilk-name
+  antagonist: true
+  setPreference: true
+  objective: roles-antag-theboys-mothersmilk-objective
+
+- type: antag
+  id: TheBoysKimiko
+  name: roles-antag-theboys-kimiko-name
+  antagonist: true
+  setPreference: true
+  objective: roles-antag-theboys-kimiko-objective
+
+- type: entity
+  parent: BaseMindRoleAntag
+  id: MindRoleTheBoysButcher
+  name: Butcher Role
+  components:
+  - type: MindRole
+    antagPrototype: TheBoysButcher
+    exclusiveAntag: true
+    roleType: FreeProtagonist
+    subtype: role-subtype-theboys-butcher
+
+- type: entity
+  parent: BaseMindRoleAntag
+  id: MindRoleTheBoysFrenchie
+  name: Frenchie Role
+  components:
+  - type: MindRole
+    antagPrototype: TheBoysFrenchie
+    exclusiveAntag: true
+    roleType: FreeProtagonist
+    subtype: role-subtype-theboys-frenchie
+
+- type: entity
+  parent: BaseMindRoleAntag
+  id: MindRoleTheBoysHughie
+  name: Hughie Role
+  components:
+  - type: MindRole
+    antagPrototype: TheBoysHughie
+    exclusiveAntag: true
+    roleType: FreeProtagonist
+    subtype: role-subtype-theboys-hughie
+
+- type: entity
+  parent: BaseMindRoleAntag
+  id: MindRoleTheBoysMothersMilk
+  name: Mother's Milk Role
+  components:
+  - type: MindRole
+    antagPrototype: TheBoysMothersMilk
+    exclusiveAntag: true
+    roleType: FreeProtagonist
+    subtype: role-subtype-theboys-mothersmilk
+
+- type: entity
+  parent: BaseMindRoleAntag
+  id: MindRoleTheBoysKimiko
+  name: Kimiko Role
+  components:
+  - type: MindRole
+    antagPrototype: TheBoysKimiko
+    exclusiveAntag: true
+    roleType: FreeProtagonist
+    subtype: role-subtype-theboys-kimiko

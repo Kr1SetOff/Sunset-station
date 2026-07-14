@@ -1,21 +1,27 @@
 using System.Linq;
 using System.Numerics;
 using Content.Server.Antag;
+using Content.Shared._Starlight.Medical.Body.Systems;
 using Content.Shared._Sunset.Homelander;
 using Content.Shared.Actions;
+using Content.Shared.Chemistry.Components;
+using Content.Shared.Chemistry.Reagent;
 using Content.Shared.Clothing.Components;
 using Content.Shared.Damage;
 using Content.Shared.Damage.Systems;
 using Content.Shared.Eye.Blinding.Components;
+using Content.Shared.FixedPoint;
 using Content.Shared.Humanoid;
 using Content.Shared.Inventory;
 using Content.Shared.Jittering;
+using Content.Shared.Mind;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Components;
 using Content.Shared.MouseRotator;
 using Content.Shared.Physics;
 using Content.Shared.Speech.EntitySystems;
 using Content.Shared.Standing;
+using Content.Shared.Station;
 using Content.Shared.Tag;
 using Content.Shared.Weapons.Hitscan.Events;
 using Content.Shared.Weapons.Ranged.Systems;
@@ -50,6 +56,9 @@ public sealed class HomelanderSystem : EntitySystem
     [Dependency] private readonly InventorySystem _inventory = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
+    [Dependency] private readonly SharedMindSystem _mind = default!;
+    [Dependency] private readonly SharedStationSpawningSystem _stationSpawning = default!;
+    [Dependency] private readonly SharedBloodstreamSystem _bloodstream = default!;
 
     private EntityQuery<MobStateComponent> _mobQuery;
 
@@ -111,7 +120,7 @@ public sealed class HomelanderSystem : EntitySystem
         _mobQuery = GetEntityQuery<MobStateComponent>();
         _wallDamage = new DamageSpecifier { DamageDict = new() { { "Structural", 50 } } };
 
-        SubscribeLocalEvent<HomelanderComponent, AfterAntagEntitySelectedEvent>(OnAntagSelected);
+        SubscribeLocalEvent<HomelanderRuleComponent, AfterAntagEntitySelectedEvent>(OnAntagSelected);
         SubscribeLocalEvent<HomelanderComponent, MobStateChangedEvent>(OnHomelanderMobStateChanged);
         SubscribeLocalEvent<HomelanderHeatVisionEvent>(OnHeatVision);
     }
@@ -137,18 +146,67 @@ public sealed class HomelanderSystem : EntitySystem
     /// produce a visible action). ThermalVisionComponent grants its own toggle action automatically
     /// on MapInitEvent - do NOT also list ActionToggleThermal under ActionGrant, that produces two
     /// copies of the same action.
+    ///
+    /// 🌇Sunset🌇 - subscribed on HomelanderRuleComponent (the GameRule entity), not HomelanderComponent
+    /// (the player's body): MakeAntag raises AfterAntagEntitySelectedEvent directed at the rule entity
+    /// it was called with, not at the picked player - a directed subscription on HomelanderComponent
+    /// would need the *rule* entity to have that component, which it never does, so it would silently
+    /// never fire. That's also why his damage resistance was never actually coming from here - it was
+    /// already covered by the declarative `- type: Damageable / damageModifierSetId: Homelander` in
+    /// game_rule.yml, redundantly duplicated (and dead) below - and why his round-start briefing and
+    /// "seize control of the station" objective were never actually being sent/granted.
     /// </summary>
-    private void OnAntagSelected(Entity<HomelanderComponent> ent, ref AfterAntagEntitySelectedEvent args)
+    private void OnAntagSelected(Entity<HomelanderRuleComponent> ent, ref AfterAntagEntitySelectedEvent args)
     {
+        var body = args.EntityUid;
+        if (!HasComp<HomelanderComponent>(body))
+            return;
+
         try
         {
-            _damageable.SetDamageModifierSetId(ent.Owner, ent.Comp.DamageModifierSet);
-            _antag.SendBriefing(ent.Owner, Loc.GetString("homelander-role-greeting"), null, null);
+            StripAndRedress(body);
+            ReplaceBlood(body);
+
+            _antag.SendBriefing(body, Loc.GetString("homelander-role-greeting"), null, null);
+
+            if (_mind.TryGetMind(body, out var mindId, out var mind))
+                _mind.TryAddObjective(mindId, mind, "HomelanderControlStationObjective");
         }
         catch (Exception e)
         {
-            Log.Error($"Homelander setup threw for {ToPrettyString(ent.Owner)}: {e}");
+            Log.Error($"Homelander setup threw for {ToPrettyString(body)}: {e}");
         }
+    }
+
+    /// <summary>
+    /// Fully strips whatever the picked candidate was already wearing before dressing them in
+    /// HomelanderGear. MakeAntag's own gear-equip step (AntagSelectionSystem.MakeAntag ->
+    /// LoadoutSystem.Equip) force-replaces only the slots HomelanderGear itself specifies - anything
+    /// from the player's previous job that doesn't overlap one of those slots (e.g. shoes, gloves,
+    /// belt) would otherwise stay on, mixed in with the costume.
+    /// </summary>
+    private void StripAndRedress(EntityUid body)
+    {
+        var enumerator = _inventory.GetSlotEnumerator(body);
+        while (enumerator.NextItem(out var item, out var slot))
+        {
+            if (_inventory.TryUnequip(body, slot.Name, out var removedItem, force: true))
+                QueueDel(removedItem.Value);
+        }
+
+        _stationSpawning.EquipStartingGear(body, "HomelanderGear");
+    }
+
+    /// <summary>
+    /// Actually swaps whatever blood the body's bloodstream solution currently holds for
+    /// HomelanderBlood, instead of just pointing BloodReferenceSolution at it (which would leave his
+    /// original species blood physically in the container - drawing blood with a syringe would still
+    /// give you his old blood). Must run after StripAndRedress/AddComponents so the reference solution
+    /// still reflects his real pre-swap blood, since ChangeBloodReagents uses it to find what to remove.
+    /// </summary>
+    private void ReplaceBlood(EntityUid body)
+    {
+        _bloodstream.ChangeBloodReagents(body, new Solution([new ReagentQuantity("HomelanderBlood", FixedPoint2.New(300))]));
     }
 
     /// <summary>
@@ -304,7 +362,11 @@ public sealed class HomelanderSystem : EntitySystem
         FireBeam(uid, eyeCenter.Offset(-sideOffset), direction, comp.LaserRange, comp.LaserDamagePerSecond, dt, showVisual);
     }
 
-    private void FireBeam(EntityUid uid, MapCoordinates origin, Vector2 direction, float range, DamageSpecifier damagePerSecond, float dt, bool showVisual)
+    /// <summary>
+    /// Internal (not private) so TheBoysPowersSystem can reuse this exact raycasting/damage logic for
+    /// Butcher's own laser-eyes power instead of duplicating it - see that system's OnButcherLaserEyes.
+    /// </summary>
+    internal void FireBeam(EntityUid uid, MapCoordinates origin, Vector2 direction, float range, DamageSpecifier damagePerSecond, float dt, bool showVisual)
     {
         var ray = new CollisionRay(origin.Position, direction, (int) CollisionGroup.BulletImpassable);
         var results = _physics

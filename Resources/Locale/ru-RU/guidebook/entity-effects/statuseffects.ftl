@@ -15,3 +15,7 @@ entity-effect-status-effect-RadiationProtection = защита от радиац
 entity-effect-status-effect-Drowsiness = сонливость
 entity-effect-status-effect-Adrenaline = адреналин
 entity-effect-status-effect-PoliteLanguage = polite language
+
+entity-effect-status-effect-TheBoysButcherV = временные лазерные глаза от препарата V (Бутчер)
+entity-effect-status-effect-TheBoysHughieV = временная телепортация от препарата V (Хьюи)
+entity-effect-status-effect-TheBoysKimikoV = временная суперсила от препарата V (Кимико)

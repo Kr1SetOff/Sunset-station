@@ -1,0 +1,27 @@
+# 🌇Sunset🌇 - The Boys gamemode: Compound V crafting chain. "Raw V" is any creature's blood cut
+# with ammonia, histamine and a splash of Antifreeze; combining Raw V with Homelander's own uniquely
+# -typed blood (see reagents.yml) refines it into the real thing.
+
+- type: reaction
+  id: RawCompoundV
+  reactants:
+    Blood:
+      amount: 5
+    Ammonia:
+      amount: 5
+    Histamine:
+      amount: 5
+    Antifreeze:
+      amount: 5
+  products:
+    RawCompoundV: 20
+
+- type: reaction
+  id: CompoundV
+  reactants:
+    RawCompoundV:
+      amount: 5
+    HomelanderBlood:
+      amount: 5
+  products:
+    CompoundV: 10
