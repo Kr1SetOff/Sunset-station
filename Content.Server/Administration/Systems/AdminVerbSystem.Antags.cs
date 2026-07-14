@@ -2,6 +2,8 @@ using Content.Server._Starlight.Administration.Systems;
 using Content.Server._Starlight.GameTicking.Rules.Components;
 using Content.Server._Sunset.Homelander;
 using Content.Server._Sunset.Spy;
+using Content.Server._Sunset.TheBoys.Components;
+using Content.Shared._Sunset.Homelander;
 using Content.Server.Antag;
 using Content.Server.Clothing.Systems;
 using Content.Server.GameTicking;
@@ -43,6 +45,7 @@ public sealed partial class AdminVerbSystem
     private static readonly EntProtoId DefaultThiefRule = "Thief";
     private static readonly EntProtoId DefaultSpyRule = "Spy"; // Sunset
     private static readonly EntProtoId DefaultHomelanderRule = "Homelander"; // Sunset
+    private static readonly EntProtoId DefaultTheBoysTeamRule = "TheBoysTeam"; // Sunset
     private static readonly EntProtoId DefaultChangelingRule = "Changeling";
     private static readonly EntProtoId ParadoxCloneRuleId = "ParadoxCloneSpawn";
     private static readonly EntProtoId DefaultWizardRule = "Wizard";
@@ -215,6 +218,18 @@ public sealed partial class AdminVerbSystem
             Message = string.Join(": ", homelanderName, Loc.GetString("admin-verb-make-homelander")),
         };
         args.Verbs.Add(homelander);
+
+        // Sunset - The Boys team antags (Butcher/Frenchie/Hughie/Mother's Milk/Kimiko). Manual
+        // fallback for when the automatic per-round pick (TheBoysRuleSystem.AssignTeam) doesn't have
+        // enough eligible candidates, or an admin just wants to hand-cast specific players. Reuses
+        // the same TheBoysTeam rule entity (creating it if this round isn't running TheBoys at all)
+        // and the exact same MakeAntag call the automatic path uses, so briefings/mind roles/Butcher's
+        // kill-Homelander objective all still wire up correctly via TheBoysRuleSystem.OnMemberSelected.
+        AddTheBoysTeamVerb(args, targetPlayer, player, 0, "admin-verb-text-make-theboys-butcher", "admin-verb-make-theboys-butcher");
+        AddTheBoysTeamVerb(args, targetPlayer, player, 1, "admin-verb-text-make-theboys-frenchie", "admin-verb-make-theboys-frenchie");
+        AddTheBoysTeamVerb(args, targetPlayer, player, 2, "admin-verb-text-make-theboys-hughie", "admin-verb-make-theboys-hughie");
+        AddTheBoysTeamVerb(args, targetPlayer, player, 3, "admin-verb-text-make-theboys-mothersmilk", "admin-verb-make-theboys-mothersmilk");
+        AddTheBoysTeamVerb(args, targetPlayer, player, 4, "admin-verb-text-make-theboys-kimiko", "admin-verb-make-theboys-kimiko");
 
         // Sunset - remove antagonist role(s), regardless of which antag it is. Logged the same way as
         // granting an antag role, so it's clear from the admin logs / Discord log who de-antagged whom.
@@ -424,5 +439,44 @@ public sealed partial class AdminVerbSystem
         };
         args.Verbs.Add(pirateSL);
         // STARLIGHT END
+    }
+
+    /// <summary>
+    /// Sunset - Hand-cast a specific The Boys team member (Butcher/Frenchie/Hughie/Mother's Milk/
+    /// Kimiko, picked by defIndex into TheBoysTeam's AntagSelectionDefinition list) onto targetPlayer.
+    /// Mirrors TheBoysRuleSystem.AssignTeam's own MakeAntag call, including stamping HomelanderBody
+    /// first (if a Homelander already exists this round) so Butcher's kill objective still wires up
+    /// via TheBoysRuleSystem.OnMemberSelected.
+    /// </summary>
+    private void AddTheBoysTeamVerb(GetVerbsEvent<Verb> args, ICommonSession targetPlayer, ICommonSession player, int defIndex, string textLoc, string logLoc)
+    {
+        var name = Loc.GetString(textLoc);
+        Verb verb = new()
+        {
+            Text = name,
+            Category = VerbCategory.Antag,
+            Icon = new SpriteSpecifier.Rsi(new ResPath("/Textures/Objects/Magic/magicactions.rsi"), "fireball"),
+            Act = () =>
+            {
+                var rule = _antag.ForceGetGameRuleEnt<TheBoysTeamRuleComponent>(DefaultTheBoysTeamRule);
+
+                if (defIndex >= rule.Comp.Definitions.Count)
+                    return;
+
+                var teamRule = Comp<TheBoysTeamRuleComponent>(rule.Owner);
+                if (teamRule.HomelanderBody == null)
+                {
+                    var homelanderQuery = EntityQueryEnumerator<HomelanderComponent>();
+                    if (homelanderQuery.MoveNext(out var homelanderUid, out _))
+                        teamRule.HomelanderBody = homelanderUid;
+                }
+
+                _antag.MakeAntag(rule, targetPlayer, rule.Comp.Definitions[defIndex]);
+                _autolog.LogToDiscord(string.Join(": ", name, Loc.GetString(logLoc)), player.Name);
+            },
+            Impact = LogImpact.High,
+            Message = string.Join(": ", name, Loc.GetString(logLoc)),
+        };
+        args.Verbs.Add(verb);
     }
 }

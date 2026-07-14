@@ -20,5 +20,18 @@ arena-status-queueing = Сбор бойцов: { $count } ({ $time }с)
 arena-status-fighting = Идёт бой: { $count } живых
 arena-status-cooldown = Арена перезагружается...
 
+# Sent to every other connected ghost when someone starts gathering a match.
+arena-gathering-announcement = { $creator } начинает сбор на боевую арену! Режим: { $mode }. Загляните во вкладку «Арена», чтобы присоединиться.
+
+arena-tab-fight = Бой
+arena-tab-leaderboard = Топ игроков
+
+arena-leaderboard-header-name = Игрок
+arena-leaderboard-header-wins = Победы
+arena-leaderboard-header-kills = Убийства
+arena-leaderboard-header-deaths = Смерти
+arena-leaderboard-header-kd = КД
+arena-leaderboard-empty = Пока никто ещё не сражался в этом режиме.
+
 # Name given to every temporary arena body.
 arena-fighter-name = Сорвиголова

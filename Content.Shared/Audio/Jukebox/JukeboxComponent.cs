@@ -11,8 +11,22 @@ public sealed partial class JukeboxComponent : Component
     [DataField, AutoNetworkedField]
     public ProtoId<JukeboxPrototype>? SelectedSongId;
 
+    /// <summary>
+    /// 🌇Sunset🌇 - Which JukeboxPrototype.Category this entity plays songs from - see
+    /// JukeboxPrototype.Category's doc comment.
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public string Category = "Standard";
+
     [DataField, AutoNetworkedField]
     public EntityUid? AudioStream;
+
+    /// <summary>
+    /// 🌇Sunset🌇 - player-adjustable playback volume, in the same log-scale units as
+    /// AudioParams.Volume (0 = default, negative = quieter, positive = louder).
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public float Volume;
 
     /// <summary>
     /// RSI state for the jukebox being on.
@@ -58,6 +72,15 @@ public sealed class JukeboxSelectedMessage(ProtoId<JukeboxPrototype> songId) : B
 public sealed class JukeboxSetTimeMessage(float songTime) : BoundUserInterfaceMessage
 {
     public float SongTime { get; } = songTime;
+}
+
+/// <summary>
+/// 🌇Sunset🌇
+/// </summary>
+[Serializable, NetSerializable]
+public sealed class JukeboxSetVolumeMessage(float volume) : BoundUserInterfaceMessage
+{
+    public float Volume { get; } = volume;
 }
 
 [Serializable, NetSerializable]

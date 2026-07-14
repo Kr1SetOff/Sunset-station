@@ -1,6 +1,7 @@
 using System.Threading;
 using Content.Server.Administration.Logs;
 using Content.Server.AlertLevel;
+using Content.Shared._Sunset.CCVar;
 using Content.Shared.CCVar;
 using Content.Server.Chat.Managers;
 using Content.Server.Chat.Systems;
@@ -80,6 +81,15 @@ namespace Content.Server.RoundEnd
         private void SetAutoCallTime()
         {
             AutoCallStartTime = _gameTiming.CurTime;
+        }
+
+        /// <summary>
+        /// 🌇Sunset🌇 - color for Central Command's shuttle call/recall announcements. Reads the
+        /// server-wide sunset.chat.announcement_color CVar (defaults to turquoise).
+        /// </summary>
+        private Color GetAnnouncementColor()
+        {
+            return Color.FromHex(_cfg.GetCVar(SunsetCCVars.AnnouncementColor), Color.Turquoise);
         }
 
         private void Reset()
@@ -220,7 +230,7 @@ namespace Content.Server.RoundEnd
                 Loc.GetString(name),
                 false,
                 null,
-                Color.Gold);
+                GetAnnouncementColor());
 
             _audio.PlayGlobal("/Audio/_Starlight/Announcements/callEvac.ogg", Filter.Broadcast(), true);  //🌟Starlight🌟
 
@@ -278,7 +288,7 @@ namespace Content.Server.RoundEnd
             }
 
             _chatSystem.DispatchGlobalAnnouncement(Loc.GetString("round-end-system-shuttle-recalled-announcement"),
-                Loc.GetString("round-end-system-shuttle-sender-announcement"), false, colorOverride: Color.Gold);
+                Loc.GetString("round-end-system-shuttle-sender-announcement"), false, colorOverride: GetAnnouncementColor());
 
             _audio.PlayGlobal("/Audio/_Starlight/Announcements/recallEvac.ogg", Filter.Broadcast(), true); //🌟Starlight🌟
 
@@ -361,7 +371,7 @@ namespace Content.Server.RoundEnd
                     {
                         _chatSystem.DispatchGlobalAnnouncement(Loc.GetString(textAnnounce),
                             Loc.GetString(sender),
-                            colorOverride: Color.Gold);
+                            colorOverride: GetAnnouncementColor());
                     }
                     else
                     {

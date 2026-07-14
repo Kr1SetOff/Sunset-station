@@ -20,5 +20,18 @@ arena-status-queueing = Gathering fighters: { $count } ({ $time }s)
 arena-status-fighting = Fight in progress: { $count } alive
 arena-status-cooldown = Arena resetting...
 
+# Sent to every other connected ghost when someone starts gathering a match.
+arena-gathering-announcement = { $creator } is gathering fighters for the arena! Mode: { $mode }. Check the Arena tab to join.
+
+arena-tab-fight = Fight
+arena-tab-leaderboard = Leaderboard
+
+arena-leaderboard-header-name = Player
+arena-leaderboard-header-wins = Wins
+arena-leaderboard-header-kills = Kills
+arena-leaderboard-header-deaths = Deaths
+arena-leaderboard-header-kd = K/D
+arena-leaderboard-empty = Nobody has fought in this mode yet.
+
 # Name given to every temporary arena body.
 arena-fighter-name = Сорвиголова

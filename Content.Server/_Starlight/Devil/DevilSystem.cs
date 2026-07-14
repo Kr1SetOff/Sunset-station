@@ -6,6 +6,7 @@ using Robust.Server.Audio;
 using Robust.Shared.Prototypes;
 using Content.Shared.Damage.Systems;
 using Content.Server.Humanoid;
+using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Markings;
 using Content.Shared._Starlight.Sprite;
 using Robust.Shared.Utility;
@@ -36,6 +37,7 @@ public sealed partial class DevilSystem : SharedDevilSystem
         base.Initialize();
 
         SubscribeLocalEvent<DevilComponent, ComponentStartup>(OnStartup, before: [typeof(DamageableSystem)]);
+        SubscribeLocalEvent<DevilComponent, ComponentShutdown>(OnShutdown);
         SubscribeLocalEvent<DevilComponent, SummonDemonicContractEvent>(OnSummonDemonicContract);
 
         SubscribeLocalEvent<DevilComponent, DevilSoulsDamnedCountChangedEvent>(OnDevilSoulsDamnedCountChanged);
@@ -46,9 +48,42 @@ public sealed partial class DevilSystem : SharedDevilSystem
 
     private void OnStartup(EntityUid uid, DevilComponent devilComp, ref ComponentStartup args)
     {
-        foreach (var action in devilComp.BaseActions) _actions.AddAction(uid, action);
+        foreach (var actionId in devilComp.BaseActions)
+        {
+            EntityUid? action = null;
+            _actions.AddAction(uid, ref action, actionId, uid);
+            if (action != null)
+                devilComp.ActionEntities[actionId] = action.Value;
+        }
 
         devilComp.TrueName = _randomMetadata.GetRandomFromSegments(devilComp.NameSegments, devilComp.NameFormat);
+    }
+
+    /// <summary>
+    /// Reverses everything OnStartup / OnDevilSoulsDamnedCountChanged granted: actions and the
+    /// progressive appearance changes. Runs whenever DevilComponent is removed - including when
+    /// an admin strips the Devil antag role via DevilRuleSystem's RoleRemovedEvent handler.
+    /// </summary>
+    private void OnShutdown(EntityUid uid, DevilComponent devilComp, ref ComponentShutdown args)
+    {
+        foreach (var (_, action) in devilComp.ActionEntities)
+            _actions.RemoveAction(uid, action);
+        devilComp.ActionEntities.Clear();
+
+        if (devilComp.RedEyesAppearance.Completed)
+        {
+            _humanoidAppearance.SetEyeColor(uid, devilComp.OriginalEyeColor ?? Color.Black);
+            _humanoidAppearance.SetMarkingGlowing(uid, MarkingCategories.Eyes, 0, false);
+        }
+
+        if (devilComp.EvilHaloAppearance.Completed)
+            RemComp<AppliedSpriteLayerComponent>(uid);
+
+        if (devilComp.OminousHum.Completed)
+            RemComp<AmbientSoundComponent>(uid);
+
+        if (devilComp.RedAuraAppearance.Completed)
+            RemComp<PointLightComponent>(uid);
     }
 
     #region abilities
@@ -99,6 +134,8 @@ public sealed partial class DevilSystem : SharedDevilSystem
         // if chain looks evil but this is the most sensible way I could find to do this
         if (FitsChangeCriteria(devilComp, devilComp.RedEyesAppearance))
         {
+            if (TryComp<HumanoidAppearanceComponent>(uid, out var humanoid))
+                devilComp.OriginalEyeColor = humanoid.EyeColor;
             _humanoidAppearance.SetEyeColor(uid, Color.Red);
             _humanoidAppearance.SetMarkingGlowing(uid, MarkingCategories.Eyes, 0, true);
             devilComp.RedEyesAppearance.Completed = true;
@@ -132,13 +169,19 @@ public sealed partial class DevilSystem : SharedDevilSystem
 
         if (FitsChangeCriteria(devilComp, devilComp.BidentAction))
         {
-            _actions.AddAction(uid, devilComp.SummonBidentActionProto);
+            EntityUid? action = null;
+            _actions.AddAction(uid, ref action, devilComp.SummonBidentActionProto, uid);
+            if (action != null)
+                devilComp.ActionEntities[devilComp.SummonBidentActionProto] = action.Value;
             devilComp.BidentAction.Completed = true;
         }
 
         if (FitsChangeCriteria(devilComp, devilComp.InfernalJauntAction))
         {
-            _actions.AddAction(uid, devilComp.InfernalJauntActionProto);
+            EntityUid? action = null;
+            _actions.AddAction(uid, ref action, devilComp.InfernalJauntActionProto, uid);
+            if (action != null)
+                devilComp.ActionEntities[devilComp.InfernalJauntActionProto] = action.Value;
             devilComp.InfernalJauntAction.Completed = true;
         }
     }

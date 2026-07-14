@@ -1,0 +1,129 @@
+# 🌇Sunset🌇 - The Boys gamemode chemistry chain: Homelander's own uniquely-typed blood + an
+# "early/raw" V precursor (made from any creature's blood + ammonia + histamine + antifreeze) +
+# Homelander's blood combine (see reactions.yml) into real Compound V. Taking real V - by mouth or by
+# injector, see the identical effect lists under both the Drink and Poison metabolism groups below -
+# grants Butcher, Hughie and Kimiko (the only three of the team who actually manifest V-derived
+# powers in the show) a 5-minute temporary superpower, but only once at least 15u is circulating in
+# their blood at once (see the BloodReagentCondition below) - a smaller dose does nothing at all for
+# them. Frenchie and Mother's Milk never had powers in the show, so they're untagged and just get
+# violently poisoned like anyone else outside the team, same as any dose does for non-team members.
+
+- type: reagent
+  parent: Blood
+  id: HomelanderBlood
+  name: reagent-name-homelander-blood
+  group: Biological
+  desc: reagent-desc-homelander-blood
+  flavor: metallic
+  color: "#b0122f"
+  recognizable: true
+  standsout: true
+  physicalDesc: reagent-physical-desc-ferrous
+
+- type: reagent
+  id: RawCompoundV
+  name: reagent-name-raw-compound-v
+  group: Toxins
+  desc: reagent-desc-raw-compound-v
+  flavor: bitter
+  color: "#4a1a6b"
+  physicalDesc: reagent-physical-desc-viscous
+  metabolisms:
+    Poison:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 1
+
+- type: reagent
+  id: CompoundV
+  name: reagent-name-compound-v
+  group: Toxins
+  desc: reagent-desc-compound-v
+  flavor: metallic
+  color: "#d4af37"
+  physicalDesc: reagent-physical-desc-viscous
+  metabolisms:
+    # Same effect list duplicated under Drink (oral) and Poison (injector/IV) - a syringe of real V
+    # should work exactly the same as swallowing it, not just poison the team regardless of tag.
+    Drink:
+      effects:
+      - !type:GenericStatusEffect
+        key: TheBoysButcherV
+        component: TheBoysButcherPower
+        time: 300
+        conditions:
+        - !type:TagCondition
+          tag: TheBoysButcher
+        - !type:BloodReagentCondition
+          reagent: CompoundV
+          min: 15
+      - !type:GenericStatusEffect
+        key: TheBoysHughieV
+        component: TheBoysHughiePower
+        time: 300
+        conditions:
+        - !type:TagCondition
+          tag: TheBoysHughie
+        - !type:BloodReagentCondition
+          reagent: CompoundV
+          min: 15
+      - !type:GenericStatusEffect
+        key: TheBoysKimikoV
+        component: TheBoysKimikoPower
+        time: 300
+        conditions:
+        - !type:TagCondition
+          tag: TheBoysKimiko
+        - !type:BloodReagentCondition
+          reagent: CompoundV
+          min: 15
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 15
+        conditions:
+        - !type:AnyTagCondition
+          tags: [ TheBoysButcher, TheBoysHughie, TheBoysKimiko ]
+          inverted: true
+    Poison:
+      effects:
+      - !type:GenericStatusEffect
+        key: TheBoysButcherV
+        component: TheBoysButcherPower
+        time: 300
+        conditions:
+        - !type:TagCondition
+          tag: TheBoysButcher
+        - !type:BloodReagentCondition
+          reagent: CompoundV
+          min: 15
+      - !type:GenericStatusEffect
+        key: TheBoysHughieV
+        component: TheBoysHughiePower
+        time: 300
+        conditions:
+        - !type:TagCondition
+          tag: TheBoysHughie
+        - !type:BloodReagentCondition
+          reagent: CompoundV
+          min: 15
+      - !type:GenericStatusEffect
+        key: TheBoysKimikoV
+        component: TheBoysKimikoPower
+        time: 300
+        conditions:
+        - !type:TagCondition
+          tag: TheBoysKimiko
+        - !type:BloodReagentCondition
+          reagent: CompoundV
+          min: 15
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 15
+        conditions:
+        - !type:AnyTagCondition
+          tags: [ TheBoysButcher, TheBoysHughie, TheBoysKimiko ]
+          inverted: true

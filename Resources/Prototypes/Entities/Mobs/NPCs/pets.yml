@@ -870,6 +870,8 @@
   - type: NpcFactionMember
     factions:
       - PetsNT
+  # 🌇Sunset🌇 - Shiva doesn't tolerate a rival martial artist on her station
+  - type: HatesSleepingCarp
   # 🌟Starlight🌟 start
   - type: OptionsVisualizer
     visuals:

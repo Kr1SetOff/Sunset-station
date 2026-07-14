@@ -48,6 +48,7 @@ namespace Content.Server.Database
         public DbSet<IPIntelCache> IPIntelCache { get; set; } = null!;
         // 🌇Sunset🌇
         public DbSet<SunsetDiscordLink> SunsetDiscordLinks { get; set; } = null!;
+        public DbSet<ArenaStats> ArenaStats { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -377,6 +378,10 @@ namespace Content.Server.Database
             modelBuilder.Entity<SunsetDiscordLink>()
                 .HasIndex(l => l.DiscordUserId)
                 .IsUnique();
+
+            // 🌇Sunset🌇 - one stats row per player per arena mode.
+            modelBuilder.Entity<ArenaStats>()
+                .HasKey(s => new { s.PlayerUserId, s.Mode });
 
             // Changes for modern HWID integration
             modelBuilder.Entity<Player>()
@@ -1288,6 +1293,24 @@ namespace Content.Server.Database
         public int SponsorTier { get; set; }
 
         public DateTime TierCheckedAt { get; set; }
+    }
+
+    // 🌇Sunset🌇 - per-player, per-mode ghost arena stats (see Content.Server/_Sunset/Arena). Persists
+    // forever like playtime, unlike the arena match state itself which resets every round restart.
+    [Table("arena_stats")]
+    public class ArenaStats
+    {
+        public Guid PlayerUserId { get; set; }
+
+        /// <summary>Content.Shared._Sunset.Arena.ArenaMode cast to int - kept as a plain int here so
+        /// the DB layer doesn't need to reference Content.Shared.</summary>
+        public int Mode { get; set; }
+
+        public int Kills { get; set; }
+
+        public int Deaths { get; set; }
+
+        public int Wins { get; set; }
     }
 
     /// <summary>

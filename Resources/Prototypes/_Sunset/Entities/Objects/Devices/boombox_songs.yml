@@ -1,0 +1,401 @@
+# 🌇Sunset🌇 - the boombox's own playlist (category: Boombox, see boombox.yml) - kept separate from
+# the vanilla Standard.yml catalog (category: Standard) used by the stationary Jukebox machine, so
+# removing the boombox's built-in music doesn't touch that machine's songs and vice versa.
+- type: jukebox
+  id: BoomboxFdj4
+  name: IFA Wartburg - FDJ (Freie Deutsche Jugend) 4
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/fdj-4.ogg
+
+- type: jukebox
+  id: BoomboxJealous
+  name: "9mice, Егор Крид, тёмный принц & madk1d - Jealous"
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/jealous.ogg
+
+- type: jukebox
+  id: BoomboxAizo
+  name: King Gnu - AIZO
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/aizo.ogg
+
+- type: jukebox
+  id: BoomboxGazan67
+  name: Gazan - 67
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/gazan-67.ogg
+
+- type: jukebox
+  id: BoomboxGrobMertvye
+  name: Гражданская оборона - Мёртвые
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/grob-mertvye.ogg
+
+- type: jukebox
+  id: BoomboxRaspyat
+  name: "Greyrock, Tewiq & Madk1d - Распять"
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/raspyat.ogg
+
+- type: jukebox
+  id: BoomboxKuklaKounduna
+  name: Король и Шут - Кукла колдуна
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/kukla-koulduna.ogg
+
+- type: jukebox
+  id: BoomboxLesnik
+  name: Король и Шут - Лесник
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/lesnik.ogg
+
+- type: jukebox
+  id: BoomboxMarionetki
+  name: Король и Шут - Марионетки
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/marionetki.ogg
+
+- type: jukebox
+  id: BoomboxKwikFlip
+  name: angie - Kwik Flip (YTPMV)
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/kwik-flip-ytpmv.ogg
+
+- type: jukebox
+  id: BoomboxKandangKekuatanSuper
+  name: Labirhin - Kandang Kekuatan Super
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/kandang-kekuatan-super.ogg
+
+- type: jukebox
+  id: BoomboxChsv
+  name: Lida ft. Серёга Пират - ЧСВ
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/chsv.ogg
+
+- type: jukebox
+  id: BoomboxTyCheObidelas
+  name: "madk1d & Тёмный принц - Ты че обиделась"
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/ty-che-obidelas.ogg
+
+- type: jukebox
+  id: BoomboxCallTheDoctor
+  name: PISSGOBLIN - CALL THE DOCTOR
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/call-the-doctor.ogg
+
+- type: jukebox
+  id: BoomboxTikiTikiSlowed
+  name: "QMIIR & SALIMA CHICA - TIKI TIKI (Slowed)"
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/tiki-tiki-slowed.ogg
+
+- type: jukebox
+  id: BoomboxReadyToDie
+  name: Andrew W.K. - Ready to Die
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/ready-to-die.ogg
+
+- type: jukebox
+  id: BoomboxAnimals
+  name: STOMACH BOOK - Animals
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/animals.ogg
+
+- type: jukebox
+  id: BoomboxGirlHell1999
+  name: femtanyl - GIRL HELL 1999
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/girl-hell-1999.ogg
+
+- type: jukebox
+  id: BoomboxKatamari
+  name: femtanyl - KATAMARI
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/katamari.ogg
+
+- type: jukebox
+  id: BoomboxAttackingVertical
+  name: femtanyl - ATTACKING VERTICAL
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/attacking-vertical.ogg
+
+- type: jukebox
+  id: BoomboxNastywerkkkk
+  name: "femtanyl & ISSBROKIE - NASTYWERKKKK!"
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/nastywerkkkk.ogg
+
+- type: jukebox
+  id: Boombox8Milya
+  name: "madk1d & VILLIAN - 8 миля"
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/8-milya.ogg
+
+- type: jukebox
+  id: BoomboxBespontoviyPirozhok
+  name: Гражданская оборона - Беспонтовый пирожок
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/bespontoviy-pirozhok.ogg
+
+- type: jukebox
+  id: BoomboxDalekoBezhitDoroga
+  name: Гражданская оборона - Далеко бежит дорога (Впереди веселья много)
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/daleko-bezhit-doroga.ogg
+
+- type: jukebox
+  id: BoomboxDolgayaSchastlivayaZhizn
+  name: Гражданская оборона - Долгая счастливая жизнь
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/dolgaya-schastlivaya-zhizn.ogg
+
+- type: jukebox
+  id: BoomboxProDurachka
+  name: Гражданская оборона - Про дурачка
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/pro-durachka.ogg
+
+- type: jukebox
+  id: BoomboxDtLyudi
+  name: "Дайте Танк (!) - Люди"
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/dt-lyudi.ogg
+
+- type: jukebox
+  id: BoomboxDtMalenkiy
+  name: "Дайте Танк (!) - Маленький"
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/dt-malenkiy.ogg
+
+- type: jukebox
+  id: BoomboxDtUtro
+  name: "Дайте Танк (!) - Утро"
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/dt-utro.ogg
+
+- type: jukebox
+  id: BoomboxDtYa
+  name: "Дайте Танк (!) - Я"
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/dt-ya.ogg
+
+- type: jukebox
+  id: BoomboxDtM
+  name: "Дайте Танк (!) - М"
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/dt-m.ogg
+
+- type: jukebox
+  id: BoomboxVseIdyotPoPlanu
+  name: Егор Летов - Всё идёт по плану
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/vse-idyot-po-planu.ogg
+
+- type: jukebox
+  id: BoomboxZoopark
+  name: Егор Летов - Зоопарк
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/zoopark.ogg
+
+- type: jukebox
+  id: BoomboxMoyaOborona
+  name: Егор Летов - Моя оборона
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/moya-oborona.ogg
+
+- type: jukebox
+  id: BoomboxOtryadNeZametilPoteriBoitsa
+  name: Егор Летов - Отряд не заметил потери бойца
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/otryad-ne-zametil-poteri-boitsa.ogg
+
+- type: jukebox
+  id: BoomboxSoldatamiNeRozhdayutsya
+  name: Егор Летов - Солдатами не рождаются
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/soldatami-ne-rozhdayutsya.ogg
+
+- type: jukebox
+  id: BoomboxAfganskiySindrom
+  name: Инструкция по выживанию - Афганский синдром
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/afganskiy-sindrom.ogg
+
+- type: jukebox
+  id: BoomboxZombiApokalipsis
+  name: "Серёга Пират & Qeqoqeq - Зомби Апокалипсис"
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/zombi-apokalipsis.ogg
+
+- type: jukebox
+  id: BoomboxMoyBayk
+  name: Серёга Пират - Мой Байк
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/moy-bayk.ogg
+
+- type: jukebox
+  id: BoomboxNuIChtoChtoYaVor
+  name: Серёга Пират - Ну и что, что я вор?
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/nu-i-chto-chto-ya-vor.ogg
+
+- type: jukebox
+  id: BoomboxPochemuTyEscheNeFanat
+  name: Серёга Пират - Почему ты ещё не фанат?
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/pochemu-ty-esche-ne-fanat.ogg
+
+- type: jukebox
+  id: BoomboxProstiYaNeZnayu
+  name: Серёга Пират - Прости я не знаю
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/prosti-ya-ne-znayu.ogg
+
+- type: jukebox
+  id: BoomboxYaPodnimayuGolovuVverh
+  name: Серёга Пират - Я поднимаю свою голову вверх
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/ya-podnimayu-golovu-vverh.ogg
+
+- type: jukebox
+  id: BoomboxEtoPankRok
+  name: "Серёга Пират & Слава КПСС - Это панк рок"
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/eto-pank-rok.ogg
+
+- type: jukebox
+  id: BoomboxYaSchasPodEnergosom
+  name: плм - я щас под энергосом
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/ya-schas-pod-energosom.ogg
+
+- type: jukebox
+  id: BoomboxYamadaPerfect
+  name: jon-YAKITORY feat. Hatsune Miku - Yamada Perfect
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/yamada-perfect.ogg
+
+- type: jukebox
+  id: BoomboxTrendAngelina
+  name: jon-YAKITORY feat. Hatsune Miku - Trend Angelina
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/trend-angelina.ogg
+
+- type: jukebox
+  id: BoomboxKontonBoogie
+  name: jon-YAKITORY feat. Hatsune Miku - Konton Boogie
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/konton-boogie.ogg
+
+- type: jukebox
+  id: BoomboxNicotineSlowedReverb
+  name: Cupreous ft. Dj Wesstag - Nicotine (Slowed + Reverb)
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/nicotine-slowed-reverb.ogg
+
+- type: jukebox
+  id: BoomboxDoctor
+  name: Jack Stauber's Micropop - Doctor
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/doctor.ogg
+
+- type: jukebox
+  id: BoomboxJuanMartha
+  name: La Original Banda El Limón De Salvador Lizárraga - Juan Martha
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/juan-martha.ogg
+
+- type: jukebox
+  id: BoomboxNaStol
+  name: LonelyStash & Gotlib - На стол
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/na-stol.ogg
+
+- type: jukebox
+  id: BoomboxMrCredoVor
+  name: Mr. Credo - Вор
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/mr-credo-vor.ogg
+
+- type: jukebox
+  id: BoomboxIriskiIRiski
+  name: Монеточка - Ириски и риски
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/iriski-i-riski.ogg
+
+- type: jukebox
+  id: BoomboxMeadow
+  name: Twin Tribes - Meadow
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/meadow.ogg
+
+- type: jukebox
+  id: BoomboxOtkusilaNogi
+  name: shizonyashka - откусила ноги
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/otkusila-nogi.ogg
+
+- type: jukebox
+  id: BoomboxApokalipsis
+  name: Свидетельство о смерти - Апокалипсис
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/apokalipsis.ogg

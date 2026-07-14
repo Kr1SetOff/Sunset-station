@@ -1,0 +1,10 @@
+# The Boys gamemode - Butcher's team (Frenchie, Hughie, MM, Kimiko) shows up as a distinct
+# green "Free Protagonists" role type instead of the standard red TeamAntagonist, since
+# mechanically they're closer to a Nukeops-style team antagonist but thematically they're the
+# heroes of their own story, not villains.
+
+- type: roleType
+  id: FreeProtagonist
+  name: role-type-free-protagonist-name
+  color: '#00c853'
+  symbol: "🛡"

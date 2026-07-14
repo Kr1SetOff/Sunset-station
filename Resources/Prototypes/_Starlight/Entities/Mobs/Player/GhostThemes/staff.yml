@@ -8,8 +8,22 @@
       state: abomination
     color: "#ffffff"
   requirements:
-  - !type:DiscordRolesRequirement
-    requirement: StaffRolesReq
+  - !type:AnyRequirement
+    requirements:
+    - !type:DiscordRolesRequirement
+      requirement: StaffRolesReq
+    # 🌇Sunset🌇 - also unlockable via a manually-set admin rank (see AdminTitleRequirement's doc
+    # comment) rather than only the Discord-role-synced staff team.
+    - !type:AdminTitleRequirement
+      titles: &sunsetManualAdminRanks
+      - Host
+      - Куратор
+      - Ивент-мастер
+      - Модератор
+      - Ст.Модератор
+      - Ментор
+      - Мл.Ивент-мастер
+      - Ст.Ивент-Мастер
 
 - type: ghostTheme
   id: SpaceDragonStaffTheme
@@ -22,8 +36,12 @@
       state: alive
     color: "#ffffff"
   requirements:
-  - !type:DiscordRolesRequirement
-    requirement: StaffRolesReq
+  - !type:AnyRequirement
+    requirements:
+    - !type:DiscordRolesRequirement
+      requirement: StaffRolesReq
+    - !type:AdminTitleRequirement
+      titles: *sunsetManualAdminRanks
 
 - type: ghostTheme
   id: BuffRatKingTheme
@@ -36,8 +54,12 @@
       state: ghost-buff-rat-king
     color: "#ffffff"
   requirements:
-  - !type:DiscordRolesRequirement
-    requirement: TicketsAdministratorReq
+  - !type:AnyRequirement
+    requirements:
+    - !type:DiscordRolesRequirement
+      requirement: TicketsAdministratorReq
+    - !type:AdminTitleRequirement
+      titles: *sunsetManualAdminRanks
 
 - type: ghostTheme
   id: FoxTheme
@@ -64,8 +86,12 @@
       state: ghost-lizard-plushie
     color: "#ffffff"
   requirements:
-  - !type:DiscordRolesRequirement
-    requirement: TicketsAdministratorReq
+  - !type:AnyRequirement
+    requirements:
+    - !type:DiscordRolesRequirement
+      requirement: TicketsAdministratorReq
+    - !type:AdminTitleRequirement
+      titles: *sunsetManualAdminRanks
 
 - type: ghostTheme
   id: MothroachTheme
@@ -78,8 +104,12 @@
       state: ghost-mothroach
     color: "#ffffff"
   requirements:
-  - !type:DiscordRolesRequirement
-    requirement: TicketsAdministratorReq
+  - !type:AnyRequirement
+    requirements:
+    - !type:DiscordRolesRequirement
+      requirement: TicketsAdministratorReq
+    - !type:AdminTitleRequirement
+      titles: *sunsetManualAdminRanks
 
 - type: ghostTheme
   id: ScurretTheme
@@ -92,8 +122,12 @@
       state: ghost-scurret
     color: "#ffffff"
   requirements:
-  - !type:DiscordRolesRequirement
-    requirement: TicketsAdministratorReq
+  - !type:AnyRequirement
+    requirements:
+    - !type:DiscordRolesRequirement
+      requirement: TicketsAdministratorReq
+    - !type:AdminTitleRequirement
+      titles: *sunsetManualAdminRanks
 
 - type: ghostTheme
   id: WispTheme

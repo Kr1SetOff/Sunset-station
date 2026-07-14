@@ -12,7 +12,7 @@ namespace Content.Shared._Starlight.Devil;
 public sealed partial class DevilComponent : Component
 {
     [DataField]
-    public List<ProtoId<EntityPrototype>> BaseActions = new()
+    public List<EntProtoId> BaseActions = new()
     {
         "ActionSummonDemonicContract",
         "ActionSummonDevilPen",
@@ -54,6 +54,17 @@ public sealed partial class DevilComponent : Component
     /// list of people who have been evil'd
     /// </summary>
     public List<EntityUid> DamnedSouls = new();
+
+    /// <summary>
+    /// Actions granted to the devil, tracked by prototype so they can be precisely removed
+    /// (e.g. when the antag role is stripped by an admin) instead of lingering on the body.
+    /// </summary>
+    public Dictionary<EntProtoId, EntityUid> ActionEntities = new();
+
+    /// <summary>
+    /// The devil's eye color before RedEyesAppearance was applied, so it can be restored on removal.
+    /// </summary>
+    public Color? OriginalEyeColor;
 
     // todo make actual devil names
     public List<ProtoId<LocalizedDatasetPrototype>> NameSegments = new()

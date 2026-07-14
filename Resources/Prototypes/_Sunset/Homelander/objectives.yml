@@ -1,0 +1,24 @@
+# 🌇Sunset🌇 - Homelander's real objective. Previously he only had flavor text
+# (roles-antag-homelander-objective) with no actual mechanical Objective, so nothing ever showed up
+# in his character menu or the round-end summary - see HomelanderControlStationConditionSystem for
+# the completion check (alive at round end + nobody escaped on the emergency shuttle).
+#
+# name/description below are literal text (like every vanilla objective, e.g.
+# Resources/Prototypes/Objectives/traitor.yml's EscapeShuttleObjective), NOT loc keys - entity
+# prototype name/description are only ever localized via the special `ent-<PrototypeID>` /
+# `ent-<PrototypeID>.desc` Fluent message convention (see LocalizationManager.Entity.cs.CalcEntityLoc),
+# not by treating the YAML value itself as a loc key. Using a loc key string as the literal value
+# here just displays that raw string verbatim since nothing ever resolves it.
+- type: entity
+  parent: BaseObjective
+  id: HomelanderControlStationObjective
+  name: Seize control of the station
+  description: Survive to the end of the shift, and don't let anyone escape to Central Command on the emergency shuttle.
+  components:
+  - type: Objective
+    difficulty: 3.5
+    issuer: roles-antag-homelander-name
+    icon:
+      sprite: Clothing/Head/Misc/fancycrown.rsi
+      state: icon
+  - type: HomelanderControlStationCondition

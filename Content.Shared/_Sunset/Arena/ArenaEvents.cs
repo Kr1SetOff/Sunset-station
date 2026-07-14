@@ -62,3 +62,51 @@ public sealed class ArenaStatusEvent : EntityEventArgs
         InQueue = inQueue;
     }
 }
+
+/// <summary>
+/// Client -> server. Asks for the persisted top-players leaderboard for one arena mode.
+/// </summary>
+[Serializable, NetSerializable]
+public sealed class ArenaLeaderboardRequestEvent : EntityEventArgs
+{
+    public ArenaMode Mode;
+
+    public ArenaLeaderboardRequestEvent(ArenaMode mode)
+    {
+        Mode = mode;
+    }
+}
+
+/// <summary>
+/// Server -> requester. The top players for the mode that was asked about, already sorted by wins
+/// (kills as a tiebreaker) - see IServerDbManager.GetTopArenaPlayers.
+/// </summary>
+[Serializable, NetSerializable]
+public sealed class ArenaLeaderboardResponseEvent : EntityEventArgs
+{
+    public ArenaMode Mode;
+    public List<ArenaLeaderboardEntry> Entries;
+
+    public ArenaLeaderboardResponseEvent(ArenaMode mode, List<ArenaLeaderboardEntry> entries)
+    {
+        Mode = mode;
+        Entries = entries;
+    }
+}
+
+[Serializable, NetSerializable]
+public sealed class ArenaLeaderboardEntry
+{
+    public string Name;
+    public int Kills;
+    public int Deaths;
+    public int Wins;
+
+    public ArenaLeaderboardEntry(string name, int kills, int deaths, int wins)
+    {
+        Name = name;
+        Kills = kills;
+        Deaths = deaths;
+        Wins = wins;
+    }
+}

@@ -179,16 +179,19 @@ public sealed partial class CCVars
     /// <summary>
     ///     Time in minutes after round start to auto-call the shuttle. Set to zero to disable.
     /// </summary>
+    // 🌇Sunset🌇 - 90 -> 120 (2 hours), per the requested "auto-call after a 2 hour shift" behavior.
     [CVarControl(AdminFlags.Server | AdminFlags.Mapping, min: 0, max: int.MaxValue)]
     public static readonly CVarDef<int> EmergencyShuttleAutoCallTime =
-        CVarDef.Create("shuttle.auto_call_time", 90, CVar.SERVERONLY);
+        CVarDef.Create("shuttle.auto_call_time", 120, CVar.SERVERONLY);
 
     /// <summary>
     ///     Time in minutes after the round was extended (by recalling the shuttle) to call
-    ///     the shuttle again.
+    ///     the shuttle again. This keeps repeating (call -> recall -> wait -> call again) for the
+    ///     rest of the round, every time it's recalled - see RoundEndSystem.Update.
     /// </summary>
+    // 🌇Sunset🌇 - 45 -> 30, so a recalled shuttle comes back every 30 minutes instead of 45.
     public static readonly CVarDef<int> EmergencyShuttleAutoCallExtensionTime =
-        CVarDef.Create("shuttle.auto_call_extension_time", 45, CVar.SERVERONLY);
+        CVarDef.Create("shuttle.auto_call_extension_time", 30, CVar.SERVERONLY);
 
     /// <summary>
     ///     Impulse multiplier for player interactions that move grids (other than shuttle thrusters, gyroscopes and grid collisons).

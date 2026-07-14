@@ -1,8 +1,10 @@
+using Content.Client._Sunset.Arena;
 using Content.Client.Gameplay;
 using Content.Client.Ghost;
 using Content.Client.Lobby; //🌟Starlight🌟
 using Content.Client.UserInterface.Systems.Gameplay;
 using Content.Client.UserInterface.Systems.Ghost.Widgets;
+using Content.Shared._Sunset.Arena;
 using Content.Shared.Ghost;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controllers;
@@ -10,11 +12,14 @@ using Robust.Client.UserInterface.Controllers;
 namespace Content.Client.UserInterface.Systems.Ghost;
 
 // TODO hud refactor BEFORE MERGE fix ghost gui being too far up
-public sealed partial class GhostUIController : UIController, IOnSystemChanged<GhostSystem>
+public sealed partial class GhostUIController : UIController, IOnSystemChanged<GhostSystem>, IOnSystemChanged<ArenaSystem>
 {
     [Dependency] private IEntityNetworkManager _net = default!;
 
     [UISystemDependency] private readonly GhostSystem? _system = default;
+    [UISystemDependency] private readonly ArenaSystem? _arenaSystem = default; // 🌇Sunset🌇
+
+    private ArenaWindow? _arenaWindow; // 🌇Sunset🌇
 
     private GhostGui? Gui => UIManager.GetActiveUIWidgetOrNull<GhostGui>();
 
@@ -35,6 +40,16 @@ public sealed partial class GhostUIController : UIController, IOnSystemChanged<G
     private void OnScreenUnload()
     {
         UnloadGui();
+    }
+
+    public void OnSystemLoaded(ArenaSystem system) // 🌇Sunset🌇
+    {
+        system.StatusChanged += OnArenaStatusChanged;
+    }
+
+    public void OnSystemUnloaded(ArenaSystem system) // 🌇Sunset🌇
+    {
+        system.StatusChanged -= OnArenaStatusChanged;
     }
 
     public void OnSystemLoaded(GhostSystem system)
@@ -129,10 +144,12 @@ public sealed partial class GhostUIController : UIController, IOnSystemChanged<G
         Gui.NewLifePressed += NewLifePressed; //🌟Starlight🌟
         Gui.CharacterEditorPressed += CharacterEditorPressed; //🌟Starlight🌟
         Gui.GhostThemePressed += GhostThemePressed; //🌟Starlight🌟
+        Gui.ArenaPressed += ArenaPressed; // 🌇Sunset🌇
         Gui.TargetWindow.WarpClicked += OnWarpClicked;
         Gui.TargetWindow.OnGhostnadoClicked += OnGhostnadoClicked;
 
         UpdateGui();
+        Gui.UpdateArena(GetArenaQueueCount()); // 🌇Sunset🌇
     }
 
     public void UnloadGui()
@@ -146,6 +163,7 @@ public sealed partial class GhostUIController : UIController, IOnSystemChanged<G
         Gui.NewLifePressed -= NewLifePressed; //🌟Starlight🌟
         Gui.CharacterEditorPressed -= CharacterEditorPressed; //🌟Starlight🌟
         Gui.GhostThemePressed -= GhostThemePressed; //🌟Starlight🌟
+        Gui.ArenaPressed -= ArenaPressed; // 🌇Sunset🌇
         Gui.TargetWindow.WarpClicked -= OnWarpClicked;
 
         Gui.Hide();
@@ -176,4 +194,28 @@ public sealed partial class GhostUIController : UIController, IOnSystemChanged<G
 
     private void GhostThemePressed() //🌟Starlight🌟
         => _system?.OpenGhostTheme();
+
+    // 🌇Sunset🌇 - the arena window is a plain client control driven by network events (not tied to
+    // an entity/EUI), so it can just be opened/closed directly instead of round-tripping a console
+    // command like the other ghost windows above.
+    private void ArenaPressed()
+    {
+        _arenaWindow ??= new ArenaWindow();
+
+        if (_arenaWindow.IsOpen)
+            _arenaWindow.Close();
+        else
+            _arenaWindow.OpenCentered();
+    }
+
+    private void OnArenaStatusChanged(ArenaStatusEvent status)
+    {
+        Gui?.UpdateArena(GetArenaQueueCount());
+    }
+
+    private int? GetArenaQueueCount()
+    {
+        var status = _arenaSystem?.LastStatus;
+        return status is { State: ArenaState.Queueing } ? status.Participants : null;
+    }
 }

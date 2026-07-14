@@ -196,6 +196,8 @@
         acts: [ "Destruction" ]
   - type: IconSmooth
     key: walls
+    additionalKeys:
+    - windows
     base: meat
   - type: Tag
     tags:

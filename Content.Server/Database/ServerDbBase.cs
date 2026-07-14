@@ -1973,6 +1973,42 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
 
         #endregion
 
+        // 🌇Sunset🌇
+        #region Sunset Arena Stats
+
+        public async Task AddArenaMatchResult(Guid player, int mode, int kills, int deaths, bool won)
+        {
+            await using var db = await GetDb();
+            var entry = await db.DbContext.ArenaStats
+                .SingleOrDefaultAsync(s => s.PlayerUserId == player && s.Mode == mode);
+
+            if (entry == null)
+            {
+                entry = new ArenaStats { PlayerUserId = player, Mode = mode };
+                db.DbContext.ArenaStats.Add(entry);
+            }
+
+            entry.Kills += kills;
+            entry.Deaths += deaths;
+            if (won)
+                entry.Wins += 1;
+
+            await db.DbContext.SaveChangesAsync();
+        }
+
+        public async Task<List<ArenaStats>> GetTopArenaPlayers(int mode, int count, CancellationToken cancel = default)
+        {
+            await using var db = await GetDb(cancel);
+            return await db.DbContext.ArenaStats
+                .Where(s => s.Mode == mode)
+                .OrderByDescending(s => s.Wins)
+                .ThenByDescending(s => s.Kills)
+                .Take(count)
+                .ToListAsync(cancel);
+        }
+
+        #endregion
+
         # region IPIntel
 
         public async Task<bool> UpsertIPIntelCache(DateTime time, IPAddress ip, float score)

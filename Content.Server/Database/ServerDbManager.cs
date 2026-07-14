@@ -351,6 +351,23 @@ namespace Content.Server.Database
 
         #endregion
 
+        // 🌇Sunset🌇
+        #region Sunset Arena Stats
+
+        /// <summary>
+        /// Adds the result of one arena match to a player's persisted stats for that mode (upserting
+        /// the row if this is their first match in it).
+        /// </summary>
+        Task AddArenaMatchResult(Guid player, int mode, int kills, int deaths, bool won);
+
+        /// <summary>
+        /// Top <paramref name="count"/> players for a given arena mode, ordered by wins descending
+        /// (kills descending as a tiebreaker).
+        /// </summary>
+        Task<List<ArenaStats>> GetTopArenaPlayers(int mode, int count, CancellationToken cancel = default);
+
+        #endregion
+
         #region IPintel
 
         Task<bool> UpsertIPIntelCache(DateTime time, IPAddress ip, float score);
@@ -1088,6 +1105,18 @@ namespace Content.Server.Database
         {
             DbWriteOpsMetric.Inc();
             return RunDbCommand(() => _db.RemoveSunsetDiscordLink(player));
+        }
+
+        public Task AddArenaMatchResult(Guid player, int mode, int kills, int deaths, bool won)
+        {
+            DbWriteOpsMetric.Inc();
+            return RunDbCommand(() => _db.AddArenaMatchResult(player, mode, kills, deaths, won));
+        }
+
+        public Task<List<ArenaStats>> GetTopArenaPlayers(int mode, int count, CancellationToken cancel = default)
+        {
+            DbReadOpsMetric.Inc();
+            return RunDbCommand(() => _db.GetTopArenaPlayers(mode, count, cancel));
         }
 
         public Task<bool> UpsertIPIntelCache(DateTime time, IPAddress ip, float score)

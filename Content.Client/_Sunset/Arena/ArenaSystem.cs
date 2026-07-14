@@ -16,15 +16,24 @@ public sealed class ArenaSystem : EntitySystem
     /// <summary>Raised whenever a new status arrives from the server.</summary>
     public event Action<ArenaStatusEvent>? StatusChanged;
 
+    /// <summary>Raised whenever a requested leaderboard page arrives from the server.</summary>
+    public event Action<ArenaLeaderboardResponseEvent>? LeaderboardReceived;
+
     public override void Initialize()
     {
         SubscribeNetworkEvent<ArenaStatusEvent>(OnStatus);
+        SubscribeNetworkEvent<ArenaLeaderboardResponseEvent>(OnLeaderboard); // 🌇Sunset🌇
     }
 
     private void OnStatus(ArenaStatusEvent ev)
     {
         LastStatus = ev;
         StatusChanged?.Invoke(ev);
+    }
+
+    private void OnLeaderboard(ArenaLeaderboardResponseEvent ev)
+    {
+        LeaderboardReceived?.Invoke(ev);
     }
 
     public void Create(ArenaMode mode)
@@ -40,5 +49,10 @@ public sealed class ArenaSystem : EntitySystem
     public void Spectate()
     {
         RaiseNetworkEvent(new ArenaSpectateRequestEvent());
+    }
+
+    public void RequestLeaderboard(ArenaMode mode)
+    {
+        RaiseNetworkEvent(new ArenaLeaderboardRequestEvent(mode));
     }
 }

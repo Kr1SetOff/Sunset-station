@@ -3,7 +3,7 @@
 - type: radioChannel
   id: InteQ
   name: chat-radio-inteq
-  keycode: 'h'
+  keycode: 'п'
   frequency: 1600
   color: "#4b6584"
 

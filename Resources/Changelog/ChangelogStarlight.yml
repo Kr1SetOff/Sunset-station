@@ -2801,35 +2801,35 @@ Entries:
   url: https://github.com/ss14Starlight/space-station-14/pull/4749
 - author: ClubYT
   changes:
-  - message: When the selected game mode fails to start due to insufficient players, the server now falls back directly to Extended instead of trying Traitor first.
+  - message: Если выбранный режим игры не может начаться из-за нехватки игроков, сервер теперь сразу откатывается к Extended, а не пытается сначала запустить Traitor.
     type: Tweak
-  - message: Translated remaining English antagonist role briefings into Russian (Traitor, Changeling, Revolutionaries, Nuclear Operatives, Thief, Devil, Terminator, Wizard Duelist, Terror Spiders, Brighteye, S.E.L.F. agent, mind control implant, Blackstar mercenaries).
+  - message: Переведены оставшиеся английские брифинги ролей антагонистов (предатель, чейнджлинг, революционеры, ядерные оперативники, вор, дьявол, терминатор, дуэлянт-волшебник, ужасные пауки, Светлоглаз, агент С.Е.Л.Ф., имплант контроля над разумом, наёмники Блэкстар).
     type: Fix
-  - message: Translated the character info panel's IC/OOC section headers and labels (previously hardcoded in English in the client UI).
+  - message: Переведены заголовки и подписи разделов IC/OOC в панели информации о персонаже (раньше были зашиты на английском прямо в клиентском интерфейсе).
     type: Fix
-  - message: Translated general/medical/security station records - gender, sex, height/weight units, and work authorization were displaying raw English values.
+  - message: Переведены общие/медицинские/охранные записи станции — пол, гендер, единицы роста/веса и статус допуска к работе показывались на английском.
     type: Fix
-  - message: Translated the Secure Terminal button on the communications console, the antimatter engine's injection toggle button, the IFF console, the cooling unit's status text, and several other UI strings that were still in English.
+  - message: Переведены кнопка «Защищённый терминал» на консоли связи, кнопка переключения инжекции антиматериевого двигателя, консоль IFF, текст состояния охлаждающей установки и ещё несколько строк интерфейса, остававшихся на английском.
     type: Fix
-  - message: Renamed the "АПЦ" abbreviation to "ЛКП", and "РЦД"/"РУТ" to "РСУ"/"РТУ", for clarity.
+  - message: Аббревиатура «АПЦ» переименована в «ЛКП», а «РЦД»/«РУТ» — в «РСУ»/«РТУ» для ясности.
     type: Tweak
-  - message: Translated remaining English lines in ghost role rules, borg messages, and various other locale files that were flagged as incomplete translations.
+  - message: Переведены оставшиеся английские строки в правилах ролей призраков, сообщениях боргов и других файлах локализации, отмеченных как неполный перевод.
     type: Fix
   id: 406124
   time: '2026-07-12T00:00:00.000000+00:00'
 - author: ClubYT
   changes:
-  - message: Thieves no longer have forced pacifism - they can now defend themselves like any other antagonist.
+  - message: У воров больше нет принудительного пацифизма — теперь они могут защищаться, как любой другой антагонист.
     type: Tweak
-  - message: AI and borg laws generated during an ion storm event no longer show broken "{$number} {$adjective}" placeholders, and the full word list they draw from has been translated to Russian.
+  - message: Законы ИИ и боргов, генерируемые во время ионного шторма, больше не показывают битые заглушки «{$number} {$adjective}», а весь список слов, из которого они собираются, переведён на русский.
     type: Fix
-  - message: Translated the last untranslated admin Smite entry (Felionoid species swap), the ghost role raffle join/leave buttons, and the Admin Help (ahelp) system's introductory and system messages.
+  - message: Переведены последняя непереведённая админская команда Smite (смена вида на фелиноида), кнопки входа/выхода из розыгрыша ролей призраков и вступительные/системные сообщения системы админ-помощи (ahelp).
     type: Fix
-  - message: Rewrote the Devil antagonist's guidebook entry in natural Russian and fixed its broken markup.
+  - message: Переписана статья про антагониста «Дьявол» в путеводителе на естественном русском языке, исправлена битая разметка.
     type: Fix
-  - message: Fixed a couple of remaining "{$language}" placeholders showing up in whisper chat and in Thaven mood text.
+  - message: Исправлены оставшиеся заглушки «{$language}», всплывавшие в шёпоте и в тексте настроений тэйвенов.
     type: Fix
-  - message: Added ten new genetics mutations ported from other SS13/14 codebases - Herculean Strength (Hulk), Blink, Chronic Cough, Sneezing, Hiccups, Stutter, Narcolepsy, Nearsightedness, Baldness and Chunky Fingers.
+  - message: Добавлены десять новых генетических мутаций, перенесённых из других кодовых баз SS13/14 — Геркулесова сила (Халк), Рывок, Хронический кашель, Чихание, Икота, Заикание, Нарколепсия, Близорукость, Облысение и Толстые пальцы.
     type: Add
   id: 406125
   time: '2026-07-12T00:00:00.000000+00:00'

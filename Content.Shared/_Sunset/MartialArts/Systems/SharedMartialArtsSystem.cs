@@ -1,6 +1,7 @@
 using System.Linq;
 using Content.Shared.Actions;
 using Content.Shared.Alert;
+using Content.Shared.Chat;
 using Content.Shared.CombatMode;
 using Content.Shared.Damage;
 using Content.Shared.Damage.Components;
@@ -59,6 +60,7 @@ public sealed partial class SharedMartialArtsSystem : EntitySystem
     [Dependency] private SharedMapSystem _mapSystem = default!;
     [Dependency] private SharedGunSystem _gun = default!;
     [Dependency] private SharedPhysicsSystem _physics = default!;
+    [Dependency] private SharedChatSystem _chat = default!;
 
     private const float CqcUnblockRange = 8f;
 
@@ -131,6 +133,7 @@ public sealed partial class SharedMartialArtsSystem : EntitySystem
         SubscribeLocalEvent<MartialArtsKnowledgeComponent, MeleeHitEvent>(OnMeleeHit);
         SubscribeLocalEvent<MeleeDisarmAttemptedEvent>(OnDisarmAttempted);
         SubscribeLocalEvent<MartialArtsKnowledgeComponent, GrabEscalatedEvent>(OnGrabEscalated);
+        SubscribeLocalEvent<MartialArtsKnowledgeComponent, GrabEndedEvent>(OnGrabberEnded);
 
         SubscribeLocalEvent<MartialArtsKnowledgeComponent, ComponentShutdown>(OnKnowledgeShutdown);
 
@@ -330,6 +333,27 @@ public sealed partial class SharedMartialArtsSystem : EntitySystem
         RecordAttack(ent.Owner, args.Grabbed, ComboAttackType.Grab);
     }
 
+    /// <summary>
+    /// The grab that fed a "Grab" combo input just ended (target escaped/was thrown/released) - a
+    /// multi-step combo like DragonTail (Disarm, Grab, Harm) shouldn't still be completable off a
+    /// grab that's no longer active by the time the follow-up hit lands. Only clears if that pending
+    /// combo progress actually depended on the grab; unrelated Harm/Disarm history is left alone.
+    /// Hooked via GrabEndedEvent (raised by SharedGrabSystem) rather than GrabberComponent's own
+    /// ComponentShutdown directly - that slot is already taken by SharedGrabSystem itself, and Robust
+    /// only allows one directed subscriber per component+event pair, system-wide.
+    /// </summary>
+    private void OnGrabberEnded(Entity<MartialArtsKnowledgeComponent> ent, ref GrabEndedEvent args)
+    {
+        if (!TryComp<CanPerformComboComponent>(ent.Owner, out var combo) || combo.LastAttacks.Count == 0)
+            return;
+
+        if (!combo.LastAttacks.Contains(ComboAttackType.Grab))
+            return;
+
+        combo.LastAttacks.Clear();
+        Dirty(ent.Owner, combo);
+    }
+
     private void RecordAttack(EntityUid user, EntityUid target, ComboAttackType type)
     {
         if (!TryComp<MartialArtsKnowledgeComponent>(user, out var knowledge) || knowledge.Style == MartialArtStyle.None)
@@ -450,6 +474,24 @@ public sealed partial class SharedMartialArtsSystem : EntitySystem
         var direction = _transform.GetMapCoordinates(target).Position - _transform.GetMapCoordinates(thrower).Position;
         if (direction.LengthSquared() < 0.01f)
             return;
+
+        // Server-authoritative only, same reasoning as OnGrantMartialArtOnEquip above: this combo
+        // path runs predicted on the client too (melee hits are predicted), and adding components
+        // from inside a predicted tick corrupts the client's component dictionary the next time
+        // ResetPredictedEntities replays it (DebugAssertException on meta.EntityLastModifiedTick).
+        // The client doesn't need to predict this - GrabThrownComponent/LandAtCursorComponent aren't
+        // used for anything visual, only for the server-side knockdown-on-landing logic.
+        if (!_net.IsClient)
+        {
+            // Same "knocked down on collision or landing" treatment a grab-throw gets (see
+            // SharedGrabSystem.OnBeforeThrow/OnGrabThrownCollide/OnGrabThrownLand, which already
+            // handle GrabThrownComponent generically regardless of what threw the mob) - without
+            // this, a martial arts throw just sends the target flying with no knockdown on landing.
+            var thrown = EnsureComp<GrabThrownComponent>(target);
+            thrown.Thrower = thrower;
+            thrown.SpawnTime = _timing.CurTime;
+            EnsureComp<LandAtCursorComponent>(target);
+        }
 
         _throwing.TryThrow(target, direction.Normalized(), speed, thrower);
     }

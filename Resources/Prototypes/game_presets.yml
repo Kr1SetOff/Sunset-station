@@ -293,6 +293,52 @@
   - BasicRoundstartVariation
   - SunSetBonusAntagsRule # 🌇Sunset🌇
 
+# 🌇Sunset🌇 - Homelander: a single, near-unkillable superhuman antagonist hidden among the crew.
+# The GameRule itself (Resources/Prototypes/_Sunset/Homelander/game_rule.yml) already existed and
+# was reachable via admin verb or the sponsor force-assignment sweep, but had no gamePreset entry
+# of its own, so it never showed up in forcepreset/the round-type vote. showInVote is deliberately
+# false - picking Homelander is left to admins (forcepreset), matching how it's always been used;
+# the vote-eligibility-by-player-count filter added earlier this session only applies to
+# vote-visible presets anyway.
+#
+# No SunSetBonusAntagsRule on purpose (matching TheBoys) - it rolls Devil/NinjaSpawn/Brighteye
+# independently of the main antag (see Resources/Prototypes/_Sunset/GameRules/bonus_antags.yml),
+# which would muddy this mode's "single hidden antagonist" premise. Homelander should be the only
+# threat on the station.
+- type: gamePreset
+  id: Homelander
+  alias:
+  - homelander
+  name: homelander-preset-title
+  description: homelander-preset-description
+  minPlayers: 15
+  showInVote: false
+  rules:
+  - Homelander
+  - SunSetCalmStationEventScheduler
+  - SpaceTrafficControlEventScheduler
+  - BasicRoundstartVariation
+
+# 🌇Sunset🌇 - The Boys: a curated 6-person cast (Homelander vs. Butcher's team), see
+# Resources/Prototypes/_Sunset/TheBoys/game_rule.yml. Two separate GameRules run together
+# (TheBoysHomelander/TheBoysTeam) so admins can force/track/remove either half independently instead
+# of them being one monolithic rule. No SunSetBonusAntagsRule on purpose - extra random antags would
+# muddy this mode's specific narrative structure.
+- type: gamePreset
+  id: TheBoys
+  alias:
+  - theboys
+  name: theboys-title
+  description: theboys-description
+  minPlayers: 8
+  showInVote: true
+  rules:
+  - TheBoysHomelander
+  - TheBoysTeam
+  - SunSetCalmStationEventScheduler
+  - SpaceTrafficControlEventScheduler
+  - BasicRoundstartVariation
+
 - type: gamePreset
   id: Zombieteors
   alias:

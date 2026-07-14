@@ -21,6 +21,7 @@
                 <CheckBox Name="AdminSoundsCheckBox" Text="{Loc 'ui-options-admin-sounds'}" />
                 <CheckBox Name="BwoinkSoundCheckBox" Text="{Loc 'ui-options-bwoink-sound'}" />
                 <CheckBox Name="RadioChimeMuteCheckBox" Text="{Loc 'ui-options-radio-chime-mute'}" /> <!--🌟Starlight🌟-->
+                <CheckBox Name="MuteBoomboxesCheckBox" Text="{Loc 'ui-options-mute-boomboxes'}" /> <!--🌇Sunset🌇-->
 
 
                 <Label Text="{Loc 'ui-options-tts-label'}"

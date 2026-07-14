@@ -1,21 +1,2 @@
-﻿- type: loadout
-  id: HeadofSecurityBoatCloak
-  equipment:
-    neck: ClothingNeckCloakBoatHos
-  effects:
-    - !type:JobRequirementLoadoutEffect
-      requirement:
-        !type:RoleTimeRequirement
-        role: JobHeadOfSecurity
-        time: 108000 # 30hr
-
-- type: loadout
-  id: HeadofSecurityRobe
-  equipment:
-    neck: ClothingNeckHosRobe
-  effects:
-    - !type:JobRequirementLoadoutEffect
-      requirement:
-        !type:RoleTimeRequirement
-        role: JobHeadOfSecurity
-        time: 360000 # 100hr
+# Sunset - HeadofSecurityBoatCloak and HeadofSecurityRobe were moved to the Sponsor Uplink
+# security tab; both are uplink-exclusive now and no longer available as a loadout pick.

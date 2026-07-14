@@ -1,0 +1,11 @@
+# 🌇Sunset🌇 - The Boys gamemode: DamageModifierSets swapped in by TheBoysPowersSystem while each
+# character's Compound V power is active (see Content.Shared/_Sunset/TheBoys/Components).
+
+- type: damageModifierSet
+  id: TheBoysKimikoV
+  coefficients:
+    Blunt: 0.6
+    Slash: 0.6
+    Piercing: 0.6
+    Heat: 0.8
+    Cold: 0.8

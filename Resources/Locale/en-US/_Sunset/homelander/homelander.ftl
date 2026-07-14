@@ -13,3 +13,6 @@ homelander-hyper-hearing-whisper = [italic]You hear a distant whisper from {$nam
 
 admin-verb-text-make-homelander = Make Homelander
 admin-verb-make-homelander = Turns the player into the Homelander antagonist.
+
+homelander-preset-title = Homelander
+homelander-preset-description = A single near-invulnerable superhuman antagonist is hiding among the crew. He answers to no one - the station will have to find a way to stop him.

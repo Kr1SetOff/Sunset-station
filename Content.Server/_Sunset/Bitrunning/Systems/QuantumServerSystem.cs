@@ -43,6 +43,7 @@ using Content.Shared.NPC.Systems;
 using Content.Shared.Objectives.Components;
 using Content.Shared.Objectives.Systems;
 using Content.Shared.Parallax;
+using Content.Shared._Starlight.Polymorph.Components;
 using Content.Shared.Polymorph;
 using Content.Shared.Popups;
 using Content.Shared.Power;
@@ -575,6 +576,10 @@ public sealed class QuantumServerSystem : EntitySystem
             : GetObjectiveInstructions(server);
         _popup.PopupEntity(objectivePopupText, avatar, avatar, PopupType.Large);
 
+        // 🌇Sunset🌇 - the real body just sits inert in the pod while the mind runs the domain as
+        // the avatar; it must never get swept into cryo storage by CryoTeleportationSystem while away.
+        EnsureComp<UncryoableComponent>(user);
+
         pod.Occupant = user;
         pod.Avatar = avatar;
         pod.LinkedServer = serverUid;
@@ -608,6 +613,7 @@ public sealed class QuantumServerSystem : EntitySystem
             return false;
 
         _mind.TransferTo(mindId, avatarUid, mind: mind);
+        EnsureComp<UncryoableComponent>(user); // 🌇Sunset🌇 - keep the real body out of cryo while reconnected to the domain
         _actions.AddAction(avatarUid, ref connection.DisconnectActionEntity, connection.DisconnectActionPrototype, avatarUid);
         EnsureComp<AvatarNavRelayComponent>(avatarUid).RelayEntity = pod.Owner;
         EnsureComp<AvatarNavRelayComponent>(pod.Owner).RelayEntity = avatarUid;
@@ -732,7 +738,10 @@ public sealed class QuantumServerSystem : EntitySystem
             RemoveDomainObjectives(runnerMindId, runnerMind);
 
             if (originalBody is { } bodyToTransfer)
+            {
                 _mind.TransferTo(runnerMindId, bodyToTransfer);
+                RemComp<UncryoableComponent>(bodyToTransfer); // 🌇Sunset🌇 - back in the body, cryo can apply normally again
+            }
         }
 
         connection.OriginalBody = null;
@@ -1198,6 +1207,7 @@ public sealed class QuantumServerSystem : EntitySystem
             return;
 
         _mind.TransferTo(mindId, bodyUid);
+        RemComp<UncryoableComponent>(bodyUid); // 🌇Sunset🌇 - back in the body, cryo can apply normally again
     }
 
     private void OnAvatarSuicide(Entity<AvatarConnectionComponent> ent, ref SuicideEvent args)

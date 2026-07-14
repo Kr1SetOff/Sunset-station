@@ -17,6 +17,7 @@ public sealed partial class GhostGui : UIWidget
     public event Action? NewLifePressed;   //🌟Starlight🌟
     public event Action? CharacterEditorPressed;   //🌟Starlight🌟
     public event Action? GhostThemePressed;   //🌟Starlight🌟
+    public event Action? ArenaPressed;   // 🌇Sunset🌇
 
     private int _prevNumberRoles;
 
@@ -35,6 +36,7 @@ public sealed partial class GhostGui : UIWidget
         NewLifeButton.OnPressed += _ => NewLifePressed?.Invoke(); //🌟Starlight🌟
         CharacterEditorButton.OnPressed += _ => CharacterEditorPressed?.Invoke(); //🌟Starlight🌟
         GhostThemeButton.OnPressed += _ => GhostThemePressed?.Invoke(); //🌟Starlight🌟
+        ArenaButton.OnPressed += _ => ArenaPressed?.Invoke(); // 🌇Sunset🌇
         NewLifeButton.StyleClasses.Add(StyleClass.Negative);  //🌟Starlight🌟
     }
 
@@ -61,6 +63,15 @@ public sealed partial class GhostGui : UIWidget
         }
 
         TargetWindow.Populate();
+    }
+
+    // 🌇Sunset🌇 - shows a live participant count on the button while a match is being gathered,
+    // e.g. "Арена (3)", so ghosts can tell there's something to join without opening the window.
+    public void UpdateArena(int? queueingCount)
+    {
+        ArenaButton.Text = queueingCount is { } count
+            ? Loc.GetString("ghost-gui-arena-button-active", ("count", count))
+            : Loc.GetString("ghost-gui-arena-button");
     }
 
     protected override void Dispose(bool disposing)

@@ -1,7 +1,7 @@
 vendor-hug-dispenser = раздатчик объятий
 vendor-medical-dispenser = медицинский раздатчик
 vendor-engineering-dispenser = инженерный раздатчик
-vendor-clown-dispenser = HohohonkersVend
+vendor-clown-dispenser = ХохохонкерсВенд
 vendor-security-dispenser = раздатчик безопасности
 vendor-fashion-o-mat = Fashion-o-Mat
 vendor-salvage-ticket-machine = машина билетов утилизации

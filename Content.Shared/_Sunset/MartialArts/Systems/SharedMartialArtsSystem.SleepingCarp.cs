@@ -2,6 +2,7 @@ using Content.Shared.Damage;
 using Content.Shared.Interaction.Events;
 using Content.Shared.Popups;
 using Content.Shared.Stunnable;
+using Content.Shared.Weapons.Ranged.Components;
 using Content.Shared.Weapons.Ranged.Events;
 using Content.Shared.Weapons.Reflect;
 using Content.Shared._Sunset.MartialArts.Components;
@@ -11,13 +12,20 @@ namespace Content.Shared._Sunset.MartialArts.Systems;
 
 public sealed partial class SharedMartialArtsSystem
 {
+    private const string CarpKiaiEmote = "MartialArtsCarpKiai";
+
     private void InitializeSleepingCarp()
     {
     }
 
+    /// <summary>
+    /// The Sleeping Carp only forbids automatic ("автомат"-class) weapons - anything whose
+    /// AvailableModes includes full-auto fire. Pistols, revolvers, shotguns, etc. are unaffected.
+    /// </summary>
     private void OnCarpShotAttempt(ref ShotAttemptedEvent args)
     {
-        if (TryComp<SleepingCarpMasteryComponent>(args.User, out var mastery) && mastery.Stage >= 1)
+        if (TryComp<SleepingCarpMasteryComponent>(args.User, out var mastery) && mastery.Stage >= 1
+            && (args.Used.Comp.AvailableModes & SelectiveFire.FullAuto) != 0)
         {
             args.Cancel();
             _popup.PopupClient(Loc.GetString("martial-arts-carp-no-guns"), args.User, args.User);
@@ -78,6 +86,7 @@ public sealed partial class SharedMartialArtsSystem
         Dirty(user, mastery);
 
         _damageable.TryChangeDamage(target, new DamageSpecifier { DamageDict = new() { { "Slash", damage } } }, origin: user);
+        _chat.TryEmoteWithChat(user, CarpKiaiEmote);
     }
 
     private void CarpKneeHaul(EntityUid user, EntityUid target)
@@ -90,12 +99,15 @@ public sealed partial class SharedMartialArtsSystem
 
         if (!downed)
             _stun.TryKnockdown(target, TimeSpan.FromSeconds(6), force: true);
+
+        _chat.TryEmoteWithChat(user, CarpKiaiEmote);
     }
 
     private void CarpCrashingWaves(EntityUid user, EntityUid target)
     {
         _stamina.TakeStaminaDamage(target, 25f, source: user);
         ThrowAt(user, target, 7f);
+        _chat.TryEmoteWithChat(user, CarpKiaiEmote);
     }
 
     private void AdvanceCarpMastery(EntityUid uid, SleepingCarpMasteryComponent mastery)

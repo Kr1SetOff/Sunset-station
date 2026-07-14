@@ -29,6 +29,23 @@
       - type: ActionGrant
         actions:
         - ActionHomelanderHeatVision
+        - ActionPAIMassScanner
+      - type: UserInterface
+        interfaces:
+          enum.RadarConsoleUiKey.Key:
+            type: RadarConsoleBoundUserInterface
+            requireInputValidation: false
+      - type: RadarConsole
+        maxRange: 256
+        followEntity: true
+      # Blood is NOT set here - a bare Bloodstream declaration would replace (not merge with) the
+      # player's existing BloodstreamComponent, resetting BloodReferenceSolution before
+      # HomelanderSystem's AfterAntagEntitySelectedEvent handler ever runs, which would make
+      # SharedBloodstreamSystem.ChangeBloodReagents look for HomelanderBlood in a solution container
+      # that still only has the player's original species blood, find none, and silently no-op.
+      # Instead HomelanderSystem calls ChangeBloodReagents itself once selection is done, while the
+      # reference solution still correctly points at whatever blood the player already has, so the
+      # swap actually finds and replaces it.
       - type: Damageable
         damageContainer: Biological
         damageModifierSet: Homelander

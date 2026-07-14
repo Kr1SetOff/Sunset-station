@@ -29,11 +29,13 @@ namespace Content.Server.Communications
         public LocId Title = "comms-console-announcement-title-station";
 
         /// <summary>
-        /// Announcement color
+        /// Announcement color. Null (the default) means "use the sunset.chat.announcement_color CVar" -
+        /// see CommunicationsConsoleSystem.GetAnnouncementColor. Set this explicitly only if a specific
+        /// console needs a color that differs from the server-wide default.
         /// </summary>
         [ViewVariables]
         [DataField]
-        public Color Color = Color.Gold;
+        public Color? Color;
 
         //Starlight begin - remove VV readonly
         /// <summary>

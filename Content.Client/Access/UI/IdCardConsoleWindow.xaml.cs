@@ -131,10 +131,22 @@ namespace Content.Client.Access.UI
 
         private void SetAllAccess(bool enabled)
         {
-            _pendingPressedAccessLevels.Clear(); // Starlight-edit
-            foreach (var button in _accessButtons.ButtonsList.Values)
-                if (!button.Disabled && button.Pressed != enabled)
-                    button.Pressed = enabled;
+            // 🌇Sunset🌇 - setting Button.Pressed directly (as opposed to an actual click) does not
+            // raise OnPressed, so _pendingPressedAccessLevels (what actually gets submitted) has to
+            // be updated here explicitly - it used to just get Cleared and never repopulated, so
+            // "select all" silently submitted an empty access list instead of granting everything.
+            foreach (var (id, button) in _accessButtons.ButtonsList)
+            {
+                if (button.Disabled)
+                    continue;
+
+                button.Pressed = enabled;
+
+                if (enabled)
+                    _pendingPressedAccessLevels.Add(id);
+                else
+                    _pendingPressedAccessLevels.Remove(id);
+            }
         }
 
         private void SelectJobPreset(OptionButton.ItemSelectedEventArgs args)

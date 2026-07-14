@@ -1,8 +1,9 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
-# Outfit given to every arena fighter: a blue jumpsuit and shoes.
+# Outfit given to every arena fighter: a blue jumpsuit, boots and bandana - the "Сорвиголова" look.
 - type: startingGear
   id: ArenaGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorBlue
     shoes: ClothingShoesColorBlack
+    head: ClothingHeadBandBlue

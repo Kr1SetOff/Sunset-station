@@ -27,6 +27,23 @@ public sealed partial class VampireRuleSystem : GameRuleSystem<VampireRuleCompon
 
         SubscribeLocalEvent<VampireRuleComponent, AfterAntagEntitySelectedEvent>(OnSelectAntag);
         SubscribeLocalEvent<VampireRuleComponent, ObjectivesTextPrependEvent>(OnTextPrepend);
+        SubscribeLocalEvent<RoleRemovedEvent>(OnRoleRemoved);
+    }
+
+    /// <summary>
+    /// Strips VampireComponent once no Vampire mind role remains on the mind - e.g. after an
+    /// admin uses the "Remove antag" verb. VampireSystem's own shutdown/remove handlers then
+    /// take care of removing every action and ability effect that came with it.
+    /// </summary>
+    private void OnRoleRemoved(RoleRemovedEvent args)
+    {
+        if (_role.MindHasRole<VampireRoleComponent>(args.MindId))
+            return;
+
+        if (args.Mind.OwnedEntity is not { } body)
+            return;
+
+        RemComp<VampireComponent>(body);
     }
 
     private void OnSelectAntag(EntityUid uid, VampireRuleComponent comp, ref AfterAntagEntitySelectedEvent args)

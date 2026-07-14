@@ -53,5 +53,4 @@
     ClothingHeadHatBeretSecurityMedic: 2
     ClothingHeadHatSecuritySideCap: 2
     ClothingOuterWinterSecArmoredAlt: 1
-    ClothingUniformJumpsuitCommandHeadOfSecurity: 1
-    ClothingNeckCloakRoyalHeadOfSecurity: 1
+    # Sunset - moved to the Sponsor Uplink security tab, uplink-exclusive now

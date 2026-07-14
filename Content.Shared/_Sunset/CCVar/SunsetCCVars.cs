@@ -65,4 +65,21 @@ public sealed partial class SunsetCCVars
 
     public static readonly CVarDef<float> PhotoPlayTimeHours =
         CVarDef.Create("sunset.photo.playtime_require_hours", 12f, CVar.SERVERONLY);
+
+    /// <summary>
+    /// Hex color used for station/Central Command announcements (comms console, round-end shuttle
+    /// call/recall messages) whenever nothing more specific overrides it. Defaults to turquoise,
+    /// matching Central Command's own announcement color.
+    /// </summary>
+    public static readonly CVarDef<string> AnnouncementColor =
+        CVarDef.Create("sunset.chat.announcement_color", "#40E0D0", CVar.SERVERONLY);
+
+    /// <summary>
+    /// Whether sponsor-tier OOC name/tag colors (see ChatManager.Sunset.cs) use their time-phased
+    /// "animated" variant (colors shift as real time passes, so messages sent a few seconds apart
+    /// visibly differ) instead of the flat static pattern. Server-side only: the color is baked into
+    /// the message once at send time, there's no per-client live animation of already-sent lines.
+    /// </summary>
+    public static readonly CVarDef<bool> SponsorTagAnimated =
+        CVarDef.Create("sunset.chat.sponsor_tag_animated", true, CVar.SERVERONLY);
 }

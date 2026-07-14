@@ -26,51 +26,16 @@ public sealed class StationPowerTests
 
     private static readonly string[] GameMaps =
     [
-        // Starlight-gripe - why does upstream replicate their map list here, when they already have it for other tests?
-        /* Starlight-comment start - we removed these maps from our repo to save on size
-        "Bagel",
-        "Box",
-        "Elkridge",
-        "Fland",
-        "Marathon",
-        "Oasis",
-        "Packed",
-        "Plasma",
-        "Relic",
-        "Snowball",
-        "Reach",
-        "Exo",
-        */// Starlight-comment end
-        //Starlight, do not accept any upstream maps into this list, we are keeping them out for package size and just general management reasons
-        #region Starlight
-        "StarlightBarratry",
-        "StarlightCork",
-        "StarlightKiloton",
-        "StarlightLagan",
-        "StarlightLobster",
-        "StarlightManor",
-        "StarlightLeth",
-        "StarlightMing",
-        "StarlightOrwell",
-        "StarlightPrism",
-        "StarlightStarboard",
-        "StarlightBagel",
-        "StarlightBox",
-        "StarlightCog",
-        "StarlightElkridge",
-        "StarlightFland",
-        "StarlightHotel",
-        "StarlightOasis",
-        "StarlightPacked",
-        "StarlightReach",
-        "StarlightSaltern",
-        "StarlightSilica",
-        "StarlightSpaceMall",
-        "StarlightCluster",
-        "StarlightStationBuilding",
-        "StarlightPlasma",
-        "StarlightSepultum",
-        "StarlightBoxcars"
+        // 🌇Sunset🌇 - every Starlight station map prototype was removed (see
+        // Resources/Prototypes/_Starlight/Maps) so only our own _Sunset stations are ever
+        // selectable in map voting/rotation - test those instead.
+        #region Sunset
+        "SSBagel",
+        "SSBox",
+        "SSCluster",
+        "SSPacket",
+        "SSHotel",
+        "SSFland",
         #endregion
     ];
 
@@ -256,7 +221,7 @@ public sealed class StationPowerTests
             // Starlight start
             Assert.That(estimatedDuration, Is.LessThanOrEqualTo(MaximumPowerDurationSeconds),
                 $"Initial power for {mapProtoId} lasts too long! Max allowed {MaximumPowerDurationSeconds}s " +
-                $"but estimated to last {estimatedDuration}s � remove some stored power!");
+                $"but estimated to last {estimatedDuration}s � remove some stored power!");
             Assert.That(totalStartingCharge, Is.LessThanOrEqualTo(maximumStoredPower),
                 $"Has {totalStartingCharge - maximumStoredPower} too much stored power!");
             // Starlight end

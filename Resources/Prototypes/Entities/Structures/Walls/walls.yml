@@ -78,6 +78,8 @@
   - type: IconSmooth
     mode: Diagonal
     key: walls
+    additionalKeys:
+    - windows
     base: state
   - type: Airtight
     noAirWhenFullyAirBlocked: false
@@ -133,6 +135,8 @@
         acts: [ "Destruction" ]
   - type: IconSmooth
     key: walls
+    additionalKeys:
+    - windows
     base: brick
 
 - type: entity
@@ -162,6 +166,8 @@
         acts: [ "Destruction" ]
   - type: IconSmooth
     key: walls
+    additionalKeys:
+    - windows
     base: clock
 
 - type: entity
@@ -195,6 +201,8 @@
         acts: [ "Destruction" ]
   - type: IconSmooth
     key: walls
+    additionalKeys:
+    - windows
     base: clown
   - type: Fixtures
     fixtures:
@@ -240,6 +248,8 @@
         acts: [ "Destruction" ]
   - type: IconSmooth
     key: walls
+    additionalKeys:
+    - windows
     base: meat
 
 - type: entity
@@ -266,6 +276,8 @@
         acts: [ "Destruction" ]
   - type: IconSmooth
     key: walls
+    additionalKeys:
+    - windows
     base: cult
 
 - type: entity
@@ -296,6 +308,8 @@
         acts: [ "Destruction" ]
   - type: IconSmooth
     key: walls
+    additionalKeys:
+    - windows
     base: debug
 
 - type: entity
@@ -328,6 +342,8 @@
         acts: [ "Destruction" ]
   - type: IconSmooth
     key: walls
+    additionalKeys:
+    - windows
     base: diamond
 
 - type: entity
@@ -381,6 +397,8 @@
         density: 4000
   - type: IconSmooth
     key: walls
+    additionalKeys:
+    - windows
     base: gold
 
 - type: entity
@@ -407,6 +425,8 @@
         acts: [ "Destruction" ]
   - type: IconSmooth
     key: walls
+    additionalKeys:
+    - windows
     base: ice
 
 - type: entity
@@ -449,6 +469,8 @@
         acts: ["Destruction"]
   - type: IconSmooth
     key: walls
+    additionalKeys:
+    - windows
     base: plasma
   - type: RadiationBlocker
     resistance: 5
@@ -495,6 +517,8 @@
         acts: ["Destruction"]
   - type: IconSmooth
     key: walls
+    additionalKeys:
+    - windows
     base: plastic
 
 - type: entity
@@ -511,6 +535,8 @@
       sprite: Structures/Walls/plastitanium.rsi
     - type: IconSmooth
       key: walls
+      additionalKeys:
+      - windows
       base: plastitanium
     - type: Fixtures
       fixtures:
@@ -664,6 +690,8 @@
         acts: ["Destruction"]
   - type: IconSmooth
     key: walls
+    additionalKeys:
+    - windows
     base: reinf_over
   - type: Appearance
   - type: GenericVisualizer
@@ -709,6 +737,8 @@
     node: reinforcedWallRust
   - type: IconSmooth
     key: walls
+    additionalKeys:
+    - windows
     base: reinf_over
   - type: Destructible
     thresholds:
@@ -801,6 +831,8 @@
         acts: [ "Destruction" ]
   - type: IconSmooth
     key: walls
+    additionalKeys:
+    - windows
     base: riveted
   - type: StaticPrice
     price: 150
@@ -833,6 +865,8 @@
         acts: [ "Destruction" ]
   - type: IconSmooth
     key: walls
+    additionalKeys:
+    - windows
     base: sandstone
 
 - type: entity
@@ -875,6 +909,8 @@
         acts: ["Destruction"]
   - type: IconSmooth
     key: walls
+    additionalKeys:
+    - windows
     base: silver
 
 #shuttle walls
@@ -991,6 +1027,8 @@
     node: shuttleWall
   - type: IconSmooth
     key: walls
+    additionalKeys:
+    - windows
     base: state
   - type: Appearance
   - type: GenericVisualizer
@@ -1062,6 +1100,8 @@
         acts: ["Destruction"]
   - type: IconSmooth
     key: walls
+    additionalKeys:
+    - windows
     base: solid
 
 - type: entity
@@ -1116,6 +1156,8 @@
     node: wallrust
   - type: IconSmooth
     key: walls
+    additionalKeys:
+    - windows
     base: solid
   - type: Destructible
     thresholds:
@@ -1254,6 +1296,8 @@
     sprite: Structures/Walls/xenoborg.rsi
   - type: IconSmooth
     key: walls
+    additionalKeys:
+    - windows
     base: xenoborg
 
 - type: entity
@@ -1319,6 +1363,8 @@
         density: 6000
   - type: IconSmooth
     key: walls
+    additionalKeys:
+    - windows
     base: uranium
   - type: RadiationBlocker
     resistance: 6
@@ -1438,6 +1484,8 @@
         acts: [ "Destruction" ]
   - type: IconSmooth
     key: walls
+    additionalKeys:
+    - windows
     base: necropolis
 
 - type: entity
@@ -1459,6 +1507,8 @@
         acts: [ "Destruction" ]
   - type: IconSmooth
     key: walls
+    additionalKeys:
+    - windows
     base: mining
   - type: RandomIconSmooth
     randomStates:
@@ -1533,6 +1583,8 @@
   #Starlight Start
   - type: IconSmooth
     key: walls
+    additionalKeys:
+    - windows
     base: alienvault
   #Starlight End
 
@@ -1558,6 +1610,8 @@
         acts: [ "Destruction" ]
   - type: IconSmooth
     key: walls
+    additionalKeys:
+    - windows
     base: rockvault
   #Starlight End
 
@@ -1575,6 +1629,8 @@
   #Starlight Start
   - type: IconSmooth
     key: walls
+    additionalKeys:
+    - windows
     base: sandstonevault
   #Starlight End
 

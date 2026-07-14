@@ -41,4 +41,6 @@
         Bloodloss: 0.85
         Asphyxiation: 0.85
         Radiation: 1.0
+  - type: StaminaResistance
+    damageCoefficient: 0
   - type: SelfUnremovableClothing

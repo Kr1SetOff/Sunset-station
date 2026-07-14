@@ -1,3 +1,4 @@
+using System.Linq;
 using Content.Shared.Audio.Jukebox;
 using Robust.Client.Audio;
 using Robust.Client.UserInterface;
@@ -44,6 +45,7 @@ public sealed partial class JukeboxBoundUserInterface : BoundUserInterface
         _menu.OnSongSelected += SelectSong;
 
         _menu.SetTime += SetTime;
+        _menu.OnVolumeChanged += SetVolume;
         PopulateMusic();
         Reload();
     }
@@ -57,6 +59,7 @@ public sealed partial class JukeboxBoundUserInterface : BoundUserInterface
             return;
 
         _menu.SetAudioStream(jukebox.AudioStream);
+        _menu.SetVolume(jukebox.Volume);
 
         if (_protoManager.Resolve(jukebox.SelectedSongId, out var songProto))
         {
@@ -71,7 +74,13 @@ public sealed partial class JukeboxBoundUserInterface : BoundUserInterface
 
     public void PopulateMusic()
     {
-        _menu?.Populate(_protoManager.EnumeratePrototypes<JukeboxPrototype>());
+        if (!EntMan.TryGetComponent(Owner, out JukeboxComponent? jukebox))
+            return;
+
+        // 🌇Sunset🌇 - only show songs belonging to this entity's own category (e.g. the boombox's
+        // playlist shouldn't appear on, or be pickable from, the stationary Jukebox machine).
+        _menu?.Populate(_protoManager.EnumeratePrototypes<JukeboxPrototype>()
+            .Where(song => song.Category == jukebox.Category));
     }
 
     public void SelectSong(ProtoId<JukeboxPrototype> songid)
@@ -96,6 +105,11 @@ public sealed partial class JukeboxBoundUserInterface : BoundUserInterface
         }
 
         SendMessage(new JukeboxSetTimeMessage(sentTime));
+    }
+
+    public void SetVolume(float volume)
+    {
+        SendMessage(new JukeboxSetVolumeMessage(volume));
     }
 }
 

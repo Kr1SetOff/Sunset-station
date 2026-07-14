@@ -26,6 +26,7 @@ public sealed partial class JukeboxSystem : SharedJukeboxSystem
         SubscribeLocalEvent<JukeboxComponent, JukeboxPauseMessage>(OnJukeboxPause);
         SubscribeLocalEvent<JukeboxComponent, JukeboxStopMessage>(OnJukeboxStop);
         SubscribeLocalEvent<JukeboxComponent, JukeboxSetTimeMessage>(OnJukeboxSetTime);
+        SubscribeLocalEvent<JukeboxComponent, JukeboxSetVolumeMessage>(OnJukeboxSetVolume);
         SubscribeLocalEvent<JukeboxComponent, ComponentInit>(OnComponentInit);
         SubscribeLocalEvent<JukeboxComponent, ComponentShutdown>(OnComponentShutdown);
 
@@ -56,9 +57,25 @@ public sealed partial class JukeboxSystem : SharedJukeboxSystem
                 return;
             }
 
-            component.AudioStream = Audio.PlayPvs(jukeboxProto.Path, uid, AudioParams.Default.WithMaxDistance(10f))?.Entity;
+            component.AudioStream = Audio.PlayPvs(jukeboxProto.Path, uid,
+                AudioParams.Default.WithMaxDistance(10f).WithVolume(component.Volume))?.Entity;
+
+            // 🌇Sunset🌇 - tag the stream so clients can mute it via BoomboxMuteSystem.
+            if (component.Category == "Boombox" && component.AudioStream is { } stream)
+                EnsureComp<BoomboxAudioComponent>(stream);
+
             Dirty(uid, component);
         }
+    }
+
+    /// <summary>
+    /// 🌇Sunset🌇
+    /// </summary>
+    private void OnJukeboxSetVolume(EntityUid uid, JukeboxComponent component, JukeboxSetVolumeMessage args)
+    {
+        component.Volume = Math.Clamp(args.Volume, -10f, 5f);
+        Audio.SetVolume(component.AudioStream, component.Volume);
+        Dirty(uid, component);
     }
 
     private void OnJukeboxPause(Entity<JukeboxComponent> ent, ref JukeboxPauseMessage args)
@@ -98,6 +115,12 @@ public sealed partial class JukeboxSystem : SharedJukeboxSystem
 
     private void OnJukeboxSelected(EntityUid uid, JukeboxComponent component, JukeboxSelectedMessage args)
     {
+        // 🌇Sunset🌇 - reject picks from another entity's category (e.g. a boombox-only song being
+        // selected on the stationary Jukebox machine, or vice versa) - the client UI already filters
+        // this out, but that's not something to rely on for what a player can actually select.
+        if (!_protoManager.Resolve(args.SongId, out var songProto) || songProto.Category != component.Category)
+            return;
+
         if (!Audio.IsPlaying(component.AudioStream))
         {
             component.SelectedSongId = args.SongId;

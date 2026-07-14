@@ -14,6 +14,8 @@
     noRot: true
   - type: IconSmooth
     key: walls
+    additionalKeys:
+    - windows
     mode: NoSprite
   - type: SmoothEdge
   - type: Icon
@@ -462,6 +464,8 @@
   components:
   - type: IconSmooth
     key: walls
+    additionalKeys:
+    - windows
     mode: NoSprite
   - type: Icon
     sprite: Structures/Walls/rock.rsi
@@ -822,6 +826,8 @@
         acts: ["Destruction"]
   - type: IconSmooth
     key: walls
+    additionalKeys:
+    - windows
     mode: NoSprite
   - type: Icon
     sprite: Structures/Walls/rock.rsi
