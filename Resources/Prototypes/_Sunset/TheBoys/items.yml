@@ -1,6 +1,7 @@
 # 🌇Sunset🌇 - The Boys gamemode: a joke item, spawned into Hughie's backpack (or hands, see
 # TheBoysRuleSystem.OnMemberSelected) the moment he's picked - he doesn't get a real V-derived power
 # the way Butcher/Kimiko do until he actually doses, so he gets this instead as a bit of flavor.
+# 🌇Sunset🌇 - written directly in Russian, no localization - matches TheBoysWeaponsPermit below.
 - type: entity
   parent: Paper
   id: TheBoysHughieCoolBroPaper
@@ -8,11 +9,13 @@
   description: A small note, folded and refolded many times.
   components:
   - type: Paper
-    content: theboys-hughie-cool-bro-paper-content
+    content: |
+      Хью, ты крутой бро. Не забывай об этом.
+      — Бутчер
 
 # Spawned into Butcher's backpack (or hands, see TheBoysRuleSystem.OnMemberSelected) the moment
 # he's picked. Deals normal crowbar damage to everyone - except a Homelander antagonist, who takes
-# 3x (ButcherCrowbarComponent, checked in TheBoysRuleSystem.OnHomelanderAttacked).
+# 4x (ButcherCrowbarComponent, checked in TheBoysRuleSystem.OnHomelanderAttacked).
 - type: entity
   parent: CrowbarRed
   id: TheBoysButcherCrowbar
@@ -20,6 +23,33 @@
   description: A battered old crowbar, worn smooth from years of prying open doors that were never meant to open. It's seen a supe or two.
   components:
   - type: ButcherCrowbar
+
+# Spawned into Butcher's, Frenchie's, and Mother's Milk's backpacks (or hands, see
+# TheBoysRuleSystem.OnMemberSelected) - the team's cover story for why they're all packing heat.
+# Hughie and Kimiko don't get one, since neither canonically carries a weapon of their own. Pure
+# flavor/RP paperwork, same as TheBoysHughieCoolBroPaper - it doesn't grant any mechanical Contraband
+# clearance of its own (each team member's actual weapon, e.g. TheBoysMothersMilkShotgun below,
+# carries that itself). Written directly in Russian, no localization.
+- type: entity
+  parent: Paper
+  id: TheBoysWeaponsPermit
+  name: NanoTrasen weapons carry permit
+  description: An official-looking document bearing CentCom's seal.
+  components:
+  - type: Paper
+    content: |
+      ЦЕНТРАЛЬНОЕ КОМАНДОВАНИЕ НАНОТРЕЙЗЕН
+      ОТДЕЛ СПЕЦИАЛЬНЫХ ОПЕРАЦИЙ
+
+      РАЗРЕШЕНИЕ НА НОШЕНИЕ ОРУЖИЯ
+
+      Предъявитель данного документа уполномочен носить, скрывать и применять любое оружие, признанное необходимым в ходе операций по обеспечению безопасности станции, без ограничений по типу, классу или происхождению.
+
+      Данное разрешение имеет приоритет над стандартными разрешениями экипажа на ношение оружия и распоряжениями офицеров службы безопасности. Не подвергайте сомнению решения предъявителя.
+
+      [bold]СЕКРЕТНО - ТОЛЬКО ДЛЯ ОЗНАКОМЛЕНИЯ АДРЕСАТОМ[/bold]
+
+      [СКРЕПЛЕНО ОФИЦИАЛЬНОЙ ПЕЧАТЬЮ ЦЕНТРАЛЬНОГО КОМАНДОВАНИЯ]
 
 # Spawned into Mother's Milk's backpack (or hands) the moment he's picked - a CentCom-stamped
 # permit tag (Contraband/allowedDepartments) keeps security from flagging it on sight, and

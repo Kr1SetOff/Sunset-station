@@ -123,6 +123,19 @@ public sealed class HomelanderSystem : EntitySystem
         SubscribeLocalEvent<HomelanderRuleComponent, AfterAntagEntitySelectedEvent>(OnAntagSelected);
         SubscribeLocalEvent<HomelanderComponent, MobStateChangedEvent>(OnHomelanderMobStateChanged);
         SubscribeLocalEvent<HomelanderHeatVisionEvent>(OnHeatVision);
+        SubscribeLocalEvent<HomelanderComponent, BeforeDamageChangedEvent>(OnBeforeDamageChanged);
+    }
+
+    /// <summary>
+    /// Full poison immunity - not just resistance. The Homelander damageModifierSet already zeroes
+    /// Poison out (see Resources/Prototypes/_Sunset/Homelander/homelander.yml), but reagent damage
+    /// (e.g. CompoundV/RawCompoundV, see TheBoys/reagents.yml) is dealt via HealthChange with
+    /// IgnoreResistances defaulted true, which skips damage modifier sets entirely - this hook runs
+    /// before that check, so it's the one spot that actually blocks poison regardless of source.
+    /// </summary>
+    private void OnBeforeDamageChanged(Entity<HomelanderComponent> ent, ref BeforeDamageChangedEvent args)
+    {
+        args.Damage.DamageDict.Remove("Poison");
     }
 
     /// <summary>

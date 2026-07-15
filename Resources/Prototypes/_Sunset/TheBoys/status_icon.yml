@@ -1,0 +1,17 @@
+# 🌇Sunset🌇 - The Boys gamemode: lets Butcher's team recognize each other on sight (they otherwise
+# keep their normal job/body, so there's nothing else visually marking them) - same mechanism as the
+# Revolutionary faction icon (Resources/Prototypes/StatusIcon/faction.yml): only shown to admins
+# (ShowAntagIcons) and to fellow team members (TheBoysTeammate/TheBoysButcher), never to regular crew
+# or to Homelander himself.
+- type: factionIcon
+  id: TheBoysTeamFaction
+  isShaded: true
+  priority: 11
+  showTo:
+    components:
+      - ShowAntagIcons
+      - TheBoysTeammate
+      - TheBoysButcher
+  icon:
+    sprite: /Textures/Interface/Misc/job_icons.rsi
+    state: Syndicate

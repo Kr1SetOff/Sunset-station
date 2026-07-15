@@ -1,0 +1,16 @@
+# 🌇Sunset🌇 - StatusEffectPrototype registrations for the keys used by CompoundV's GenericStatusEffect
+# entries (see reagents.yml). Without these, StatusEffectsSystem.CanApplyEffect silently fails
+# (TryIndex<StatusEffectPrototype> returns false with no log) and TheBoysButcherPower/HughiePower/
+# KimikoPower are never added, so nobody ever actually got their power - alwaysAllowed is required too,
+# since these keys aren't in any base mob's AllowedEffects whitelist.
+- type: statusEffect
+  id: TheBoysButcherV
+  alwaysAllowed: true
+
+- type: statusEffect
+  id: TheBoysHughieV
+  alwaysAllowed: true
+
+- type: statusEffect
+  id: TheBoysKimikoV
+  alwaysAllowed: true

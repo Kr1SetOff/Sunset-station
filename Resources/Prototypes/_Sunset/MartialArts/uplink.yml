@@ -17,6 +17,13 @@
     Telecrystal: 16
   categories:
   - UplinkWeaponry
+  # 🌇Sunset🌇 - not for nukeops (NukeOpsUplink also covers the LoneOps 60TC variant, which is
+  # tagged with both NukeOpsUplink and LoneOpsUplink).
+  conditions:
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - NukeOpsUplink
 
 # 🌇Sunset🌇 - Mime's glossary and Chef's CQC manual are no longer sold in the uplink; both are
 # granted directly as job starting gear instead (see MimeGear / ChefGear).

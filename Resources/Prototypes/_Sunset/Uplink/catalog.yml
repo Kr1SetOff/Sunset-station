@@ -1,0 +1,12 @@
+# 🌇Sunset🌇 - sells the SmokeImplanter entity (Resources/Prototypes/_Sunset/Uplink/undetermined_gear.yml),
+# which previously existed but was never actually purchasable from any uplink.
+- type: listing
+  id: UplinkSmokeImplanter
+  name: uplink-smoke-implanter-name
+  description: uplink-smoke-implanter-desc
+  icon: { sprite: /Textures/Objects/Weapons/Grenades/smoke.rsi, state: icon }
+  productEntity: SmokeImplanter
+  cost:
+    Telecrystal: 4
+  categories:
+    - UplinkImplants

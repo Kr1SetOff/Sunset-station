@@ -1,6 +1,7 @@
 ﻿using Content.Server.GameTicking;
 using Content.Server.Spawners.Components;
 using Content.Server.Station.Systems;
+using Content.Shared.GameTicking;
 using Content.Shared.Humanoid.Prototypes;
 using Content.Shared.Roles;
 using Prometheus;
@@ -17,9 +18,21 @@ public sealed partial class SpawnPointSystem : EntitySystem
     [Dependency] private StationSystem _stationSystem = default!;
     [Dependency] private StationSpawningSystem _stationSpawning = default!;
 
+    // 🌇Sunset🌇 - which exact coordinates have already been handed to a mob this round. Picking is
+    // still random, but biased away from a coordinate already in use when an unused alternative
+    // exists, so e.g. simultaneous round-start Assistants don't stack on the identical tile and get
+    // shoved out of the room (or clear off the grid) by the physics contact solver once they collide.
+    private readonly HashSet<EntityCoordinates> _usedSpawnPoints = new();
+
     public override void Initialize()
     {
         SubscribeLocalEvent<PlayerSpawningEvent>(OnPlayerSpawning);
+        SubscribeLocalEvent<RoundRestartCleanupEvent>(OnRoundRestart);
+    }
+
+    private void OnRoundRestart(RoundRestartCleanupEvent ev)
+    {
+        _usedSpawnPoints.Clear();
     }
 
     private void OnPlayerSpawning(PlayerSpawningEvent args)
@@ -58,6 +71,13 @@ public sealed partial class SpawnPointSystem : EntitySystem
             points = EntityQueryEnumerator<SpawnPointComponent, TransformComponent>();
             while ( points.MoveNext(out var uid, out var spawnPoint, out var xform))
             {
+                // 🌇Sunset🌇 - this fallback used to have no station filter at all, unlike the primary
+                // loop above - on a station missing job-specific spawn points it could hand a player
+                // ANY LateJoin marker anywhere in the loaded world (e.g. the Arrivals Terminal), not
+                // just ones on their own station.
+                if (args.Station != null && _stationSystem.GetOwningStation(uid, xform) != args.Station)
+                    continue;
+
                 if (spawnPoint.SpawnType == SpawnPointType.LateJoin)
                 {
                     possiblePositions.Add(xform.Coordinates);
@@ -84,7 +104,12 @@ public sealed partial class SpawnPointSystem : EntitySystem
             }
         }
 
-        var spawnLoc = _random.Pick(possiblePositions);
+        // 🌇Sunset🌇 - prefer a coordinate nobody's spawned on yet this round, if one's available,
+        // instead of every candidate independently re-rolling the same fixed pool regardless of who
+        // else already landed where.
+        var unusedPositions = possiblePositions.FindAll(pos => !_usedSpawnPoints.Contains(pos));
+        var spawnLoc = _random.Pick(unusedPositions.Count > 0 ? unusedPositions : possiblePositions);
+        _usedSpawnPoints.Add(spawnLoc);
 
         args.SpawnResult = _stationSpawning.SpawnPlayerMob(
             spawnLoc,
