@@ -191,15 +191,18 @@ public sealed partial class NullLinkPlayerManager : INullLinkPlayerManager
         if (!_playerById.TryGetValue(userId, out var playerData))
             return;
 
+        // Progress (playerData.AchievementProgress) is purely local/in-memory and has nothing to do
+        // with NullLink hydration - it used to be withheld here too while AchievementCacheHydrated
+        // was false, which meant every AddProgress-triggered send before hydration finished (or every
+        // one, if the grain lookup never succeeds) silently dropped, so players' progress counters
+        // never appeared to move. Only the unlocked-achievements set actually depends on hydration,
+        // so that's the only thing that falls back to empty here instead of blocking the whole message.
         HashSet<string> unlockedAchievements;
         lock (playerData.AchievementSyncRoot)
         {
-            if (!playerData.AchievementCacheHydrated)
-                return;
-
-            unlockedAchievements = playerData.UnlockedAchievements
-                .Select(a => a.AchievementId)
-                .ToHashSet();
+            unlockedAchievements = playerData.AchievementCacheHydrated
+                ? playerData.UnlockedAchievements.Select(a => a.AchievementId).ToHashSet()
+                : [];
         }
 
         var msg = new MsgAchievementList

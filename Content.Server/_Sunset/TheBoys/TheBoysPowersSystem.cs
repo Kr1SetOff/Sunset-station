@@ -7,9 +7,11 @@ using Content.Shared.Damage;
 using Content.Shared.Damage.Components;
 using Content.Shared.Damage.Systems;
 using Content.Shared.FixedPoint;
+using Content.Shared.GameTicking;
 using Content.Shared.Mobs;
 using Content.Shared.MouseRotator;
 using Content.Shared.Weapons.Melee;
+using Content.Shared.Weapons.Melee.Events;
 using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Map;
@@ -38,6 +40,28 @@ public sealed class TheBoysPowersSystem : EntitySystem
     private const string KimikoDamageModifierSet = "TheBoysKimikoV";
 
     private static readonly FixedPoint2 KimikoMeleeBonus = FixedPoint2.New(20);
+
+    /// <summary>
+    /// Melee damage multiplier for Butcher and Hughie while V-powered - Kimiko already gets her own
+    /// flat unarmed-punch bonus (KimikoMeleeBonus) as her canonical super strength, so she's excluded;
+    /// this instead scales whatever weapon they're actually holding, via GetMeleeDamageEvent (which
+    /// - per SharedMeleeWeaponSystem.GetDamage - is raised on both the weapon AND its wielder).
+    /// </summary>
+    private const float PoweredMeleeDamageMultiplier = 2f;
+
+    /// <summary>
+    /// Redosing V again this soon after the last dose that actually granted a power (i.e. two
+    /// ComponentStartups back to back) is punished with a small burn of Cellular damage - abusing the
+    /// serum has a real biological cost, it's not a free repeatable buff.
+    /// </summary>
+    private static readonly TimeSpan RedoseCooldown = TimeSpan.FromMinutes(1);
+
+    private static readonly DamageSpecifier RedoseAbuseDamage = new()
+    {
+        DamageDict = new() { { "Cellular", 5 } },
+    };
+
+    private readonly Dictionary<EntityUid, TimeSpan> _lastPowerGrant = new();
 
     private const string ButcherLaserEyesAction = "ActionTheBoysButcherLaserEyes";
     private const string HughieBlinkAction = "ActionTheBoysHughieBlink";
@@ -81,12 +105,36 @@ public sealed class TheBoysPowersSystem : EntitySystem
         SubscribeLocalEvent<TheBoysButcherPowerComponent, ComponentStartup>(OnButcherStartup);
         SubscribeLocalEvent<TheBoysButcherPowerComponent, ComponentShutdown>(OnButcherShutdown);
         SubscribeLocalEvent<TheBoysButcherLaserEyesEvent>(OnButcherLaserEyes);
+        SubscribeLocalEvent<TheBoysButcherPowerComponent, GetMeleeDamageEvent>(OnPoweredMeleeDamage);
 
         SubscribeLocalEvent<TheBoysHughiePowerComponent, ComponentStartup>(OnHughieStartup);
         SubscribeLocalEvent<TheBoysHughiePowerComponent, ComponentShutdown>(OnHughieShutdown);
+        SubscribeLocalEvent<TheBoysHughiePowerComponent, GetMeleeDamageEvent>(OnPoweredMeleeDamage);
 
         SubscribeLocalEvent<TheBoysKimikoPowerComponent, ComponentStartup>(OnKimikoStartup);
         SubscribeLocalEvent<TheBoysKimikoPowerComponent, ComponentShutdown>(OnKimikoShutdown);
+
+        SubscribeLocalEvent<RoundRestartCleanupEvent>(OnRoundRestart);
+    }
+
+    private void OnRoundRestart(RoundRestartCleanupEvent ev)
+    {
+        _lastPowerGrant.Clear();
+    }
+
+    /// <summary>
+    /// Burns a little Cellular damage if this power is being (re)granted less than RedoseCooldown
+    /// after the last time it was - i.e. shooting up again right after the last dose wore off, rather
+    /// than pacing themselves.
+    /// </summary>
+    private void CheckRedoseAbuse(EntityUid uid)
+    {
+        var now = _timing.CurTime;
+
+        if (_lastPowerGrant.TryGetValue(uid, out var last) && now - last < RedoseCooldown)
+            _damageable.TryChangeDamage(uid, RedoseAbuseDamage, origin: uid);
+
+        _lastPowerGrant[uid] = now;
     }
 
     private void GrantRegen(EntityUid uid)
@@ -97,8 +145,19 @@ public sealed class TheBoysPowersSystem : EntitySystem
         passive.Damage = PowerRegen;
     }
 
+    /// <summary>
+    /// Doubles whatever melee damage Butcher/Hughie deal for as long as their power is active, no
+    /// matter what weapon (or bare fists) they're using - shared by both power components since the
+    /// effect and multiplier are identical for each.
+    /// </summary>
+    private void OnPoweredMeleeDamage<T>(Entity<T> ent, ref GetMeleeDamageEvent args) where T : IComponent
+    {
+        args.Damage *= PoweredMeleeDamageMultiplier;
+    }
+
     private void OnButcherStartup(Entity<TheBoysButcherPowerComponent> ent, ref ComponentStartup args)
     {
+        CheckRedoseAbuse(ent.Owner);
         GrantRegen(ent.Owner);
 
         EntityUid? actionId = null;
@@ -226,6 +285,7 @@ public sealed class TheBoysPowersSystem : EntitySystem
 
     private void OnHughieStartup(Entity<TheBoysHughiePowerComponent> ent, ref ComponentStartup args)
     {
+        CheckRedoseAbuse(ent.Owner);
         GrantRegen(ent.Owner);
 
         EntityUid? actionId = null;
@@ -242,6 +302,8 @@ public sealed class TheBoysPowersSystem : EntitySystem
 
     private void OnKimikoStartup(Entity<TheBoysKimikoPowerComponent> ent, ref ComponentStartup args)
     {
+        CheckRedoseAbuse(ent.Owner);
+
         if (TryComp<DamageableComponent>(ent, out var damageable))
             ent.Comp.PreviousDamageModifierSet = damageable.DamageModifierSetId;
 

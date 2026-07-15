@@ -62,5 +62,7 @@ admin-verb-make-theboys-mothersmilk = Turns the player into the Mother's Milk an
 admin-verb-text-make-theboys-kimiko = Make Kimiko
 admin-verb-make-theboys-kimiko = Turns the player into the Kimiko antagonist (The Boys team).
 
-theboys-hughie-cool-bro-paper-content = Hughie, you're a cool bro. Don't forget it.
-      - Butcher
+# TheBoysHughieCoolBroPaper and TheBoysWeaponsPermit's readable text is written directly in Russian
+# in Resources/Prototypes/_Sunset/TheBoys/items.yml (Paper.content) - no localization for either.
+
+chat-radio-theboys = The Boys

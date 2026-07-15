@@ -565,6 +565,15 @@ public sealed class QuantumServerSystem : EntitySystem
         EnsureComp<AvatarNavRelayComponent>(podUid).RelayEntity = avatar;
 
         _mind.TransferTo(mindId, avatar, mind: mind);
+
+        // 🌇Sunset🌇 - the real body just sits inert in the pod while the mind runs the domain as
+        // the avatar; it must never get swept into cryo storage by CryoTeleportationSystem while
+        // away. Added immediately after the transfer above (not after the rest of this method's
+        // setup calls) - if any of those threw, the mind had already left the body but this guard
+        // would never have been applied, leaving it permanently exposed to a 15-minute cryo sweep
+        // with no way to ever retry adding it.
+        EnsureComp<UncryoableComponent>(user);
+
         GrantDomainObjective(mindId, mind, serverUid);
         PlayLocalSound(user, pod.ConnectStasisSound);
         PlayLocalSound(avatar, pod.ConnectAvatarSound);
@@ -575,10 +584,6 @@ public sealed class QuantumServerSystem : EntitySystem
             ? Loc.GetString("bitrunning-objective-completed")
             : GetObjectiveInstructions(server);
         _popup.PopupEntity(objectivePopupText, avatar, avatar, PopupType.Large);
-
-        // 🌇Sunset🌇 - the real body just sits inert in the pod while the mind runs the domain as
-        // the avatar; it must never get swept into cryo storage by CryoTeleportationSystem while away.
-        EnsureComp<UncryoableComponent>(user);
 
         pod.Occupant = user;
         pod.Avatar = avatar;

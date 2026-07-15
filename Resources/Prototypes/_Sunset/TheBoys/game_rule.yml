@@ -120,8 +120,10 @@
       briefing:
         sound: "/Audio/Ambience/Antag/traitor_start.ogg"
 
-    # Frenchie - keeps his existing job/body. Untagged - he never had a V-derived power of his own
-    # in the show, so CompoundV's reagent effect just poisons him like anyone else outside the team.
+    # Frenchie - keeps his existing job/body. No V-related tag - he never had a V-derived power of
+    # his own in the show, so CompoundV's reagent effect just poisons him like anyone else outside
+    # the team. The TheBoysFrenchie tag below is only used to identify him at role-selection time for
+    # his weapons permit (see TheBoysRuleSystem.OnMemberSelected), same as Mother's Milk's tag.
     # Thieving is granted directly on his body (not gloves) as a permanent, toggleable stealthy-strip
     # ability - matching his show characterization as the team's smooth-fingered thief; toggled via
     # the "Stealthy" alert ThievingSystem shows automatically once the component exists.
@@ -134,6 +136,8 @@
       - type: Thieving
         stripTimeReduction: 1.5
         stealthy: true
+      tags:
+      - TheBoysFrenchie
       briefing:
         sound: "/Audio/Ambience/Antag/traitor_start.ogg"
 

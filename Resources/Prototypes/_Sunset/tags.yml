@@ -27,10 +27,13 @@
 # gate "drinking V grants YOUR character's specific power" per-drinker via EntityEffect
 # TagConditions - Frenchie and Mother's Milk never had V-derived powers in the show, so their tags
 # aren't part of that gate and they just fall through to the same poison everyone outside the team
-# gets. Mother's Milk's tag is still needed though, purely to identify him at role-selection time
-# for his canon-specific gear (see TheBoysRuleSystem.OnMemberSelected).
+# gets. Frenchie's and Mother's Milk's tags are still needed though, purely to identify them at
+# role-selection time for their canon-specific gear (see TheBoysRuleSystem.OnMemberSelected).
 - type: Tag
   id: TheBoysButcher
+
+- type: Tag
+  id: TheBoysFrenchie
 
 - type: Tag
   id: TheBoysHughie

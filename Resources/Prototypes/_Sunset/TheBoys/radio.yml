@@ -1,0 +1,28 @@
+# 🌇Sunset🌇 - The Boys gamemode: a private long-range channel so Butcher's team (kept on their own
+# existing jobs/bodies, scattered across the station) can actually find and coordinate with each
+# other without broadcasting to the whole crew. "П" for Пацаны (the show's well-known Russian title).
+# Granted as a loose encryption key crystal in TheBoysRuleSystem.OnMemberSelected - insert it into
+# your existing headset's key slot like any other encryption key.
+- type: radioChannel
+  id: TheBoys
+  name: chat-radio-theboys
+  keycode: 'ж'
+  frequency: 1420
+  color: "#d4af37"
+  longRange: true
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyTheBoys
+  name: smuggled comms crystal
+  description: A crudely modified encryption key. Definitely not standard NanoTrasen issue.
+  components:
+  - type: EncryptionKey
+    channels:
+    - TheBoys
+    defaultChannel: TheBoys
+  - type: Sprite
+    layers:
+    - state: crypt_gold
+  - type: Contraband
+    allowedDepartments: [ CentralCommand ]

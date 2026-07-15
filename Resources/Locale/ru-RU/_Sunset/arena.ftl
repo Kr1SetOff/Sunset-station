@@ -35,3 +35,6 @@ arena-leaderboard-empty = Пока никто ещё не сражался в э
 
 # Name given to every temporary arena body.
 arena-fighter-name = Сорвиголова
+
+# Map-editor marker entity (Resources/Prototypes/_Sunset/Arena/spawners.yml) - where arena fighters spawn in.
+ent-ArenaSpawner = точка спавна бойца арены

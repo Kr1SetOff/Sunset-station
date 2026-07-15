@@ -54,6 +54,7 @@ public sealed class TheBoysRuleSystem : GameRuleSystem<TheBoysTeamRuleComponent>
     [Dependency] private readonly TagSystem _tag = default!;
 
     private const string HughieTag = "TheBoysHughie";
+    private const string FrenchieTag = "TheBoysFrenchie";
     private const string MothersMilkTag = "TheBoysMothersMilk";
 
     // Security and Command already run the station's actual response to threats - handing either of
@@ -68,11 +69,30 @@ public sealed class TheBoysRuleSystem : GameRuleSystem<TheBoysTeamRuleComponent>
 
         SubscribeLocalEvent<RulePlayerJobsAssignedEvent>(OnJobsAssigned);
         SubscribeLocalEvent<TheBoysTeamRuleComponent, AfterAntagEntitySelectedEvent>(OnMemberSelected);
+        SubscribeLocalEvent<TheBoysHomelanderRuleComponent, AfterAntagEntitySelectedEvent>(OnHomelanderMemberSelected);
         SubscribeLocalEvent<HomelanderComponent, AttackedEvent>(OnHomelanderAttacked);
     }
 
     /// <summary>
-    /// Butcher's crowbar (ButcherCrowbarComponent, see items.yml) deals 3x normal crowbar damage
+    /// Retroactively links any already-picked Butcher who's still missing his kill-objective, in case
+    /// he was selected (e.g. hand-cast by an admin verb) before Homelander existed this round -
+    /// TryLinkButcherObjective's own Unique-objective check makes this a safe no-op for a Butcher
+    /// who's already linked, so it's fine to just re-check everyone every time Homelander is (re)picked.
+    /// </summary>
+    private void OnHomelanderMemberSelected(Entity<TheBoysHomelanderRuleComponent> ent, ref AfterAntagEntitySelectedEvent args)
+    {
+        TheBoysTeamRuleComponent? teamRule = null;
+        var teamQuery = EntityQueryEnumerator<TheBoysTeamRuleComponent>();
+        if (teamQuery.MoveNext(out _, out var foundTeamRule))
+            teamRule = foundTeamRule;
+
+        var butcherQuery = EntityQueryEnumerator<TheBoysButcherComponent>();
+        while (butcherQuery.MoveNext(out var butcherBody, out _))
+            TryLinkButcherObjective(butcherBody, teamRule);
+    }
+
+    /// <summary>
+    /// Butcher's crowbar (ButcherCrowbarComponent, see items.yml) deals 4x normal crowbar damage
     /// against a Homelander antagonist specifically, and normal damage against everyone else -
     /// AttackedEvent is raised directed at the victim once per hit target (unlike MeleeHitEvent,
     /// which is raised once on the weapon and shared across every target of a wide swing), so this is
@@ -83,7 +103,9 @@ public sealed class TheBoysRuleSystem : GameRuleSystem<TheBoysTeamRuleComponent>
         if (!HasComp<ButcherCrowbarComponent>(args.Used) || !TryComp<MeleeWeaponComponent>(args.Used, out var melee))
             return;
 
-        args.BonusDamage += melee.Damage * 2;
+        // +3x on top of the 1x every attack already deals = 4x total (e.g. an 8-damage crowbar hits
+        // Homelander for 32).
+        args.BonusDamage += melee.Damage * 3;
     }
 
     private void OnJobsAssigned(RulePlayerJobsAssignedEvent args)
@@ -225,6 +247,35 @@ public sealed class TheBoysRuleSystem : GameRuleSystem<TheBoysTeamRuleComponent>
         _hands.TryPickupAnyHand(body, item, checkActionBlocker: false);
     }
 
+    /// <summary>
+    /// Wires up Butcher's real "eliminate Homelander" objective. Resolves the current Homelander live
+    /// via component query instead of relying solely on TheBoysTeamRuleComponent.HomelanderBody, which
+    /// used to be the only source of truth - if it was never populated (e.g. an admin hand-casting
+    /// Butcher via AdminVerbSystem's "Make TheBoys Butcher" verb before Homelander existed yet this
+    /// round), Butcher silently ended up with no objective at all, forever. This is safe and correct
+    /// to call repeatedly and from either direction (OnMemberSelected for Butcher himself, and
+    /// OnHomelanderMemberSelected retroactively once Homelander lands) - TryAddObjective's own Unique
+    /// check makes re-linking an already-linked Butcher a safe no-op.
+    /// </summary>
+    /// <returns>False only when there's no Homelander picked yet this round to link to.</returns>
+    private bool TryLinkButcherObjective(EntityUid butcherBody, TheBoysTeamRuleComponent? teamRule = null)
+    {
+        var homelanderQuery = EntityQueryEnumerator<HomelanderComponent>();
+        if (!homelanderQuery.MoveNext(out var homelanderBody, out _))
+            return false;
+
+        if (teamRule != null)
+            teamRule.HomelanderBody = homelanderBody;
+
+        if (!_mind.TryGetMind(homelanderBody, out var homelanderMind, out _) ||
+            !_mind.TryGetMind(butcherBody, out var butcherMind, out var butcherMindComp))
+            return false;
+
+        EnsureComp<TargetOverrideComponent>(butcherBody).Target = homelanderMind;
+        _mind.TryAddObjective(butcherMind, butcherMindComp, "TheBoysKillHomelanderObjective");
+        return true;
+    }
+
     private bool IsExcludedDepartment(EntityUid body)
     {
         if (!_mind.TryGetMind(body, out var mindId, out _))
@@ -252,15 +303,12 @@ public sealed class TheBoysRuleSystem : GameRuleSystem<TheBoysTeamRuleComponent>
             {
                 _antag.SendBriefing(body, Loc.GetString("theboys-role-greeting-butcher"), null, null);
 
-                if (rule.Comp.HomelanderBody is { } homelanderBody &&
-                    _mind.TryGetMind(homelanderBody, out var homelanderMind, out _) &&
-                    _mind.TryGetMind(body, out var butcherMind, out var butcherMindComp))
-                {
-                    EnsureComp<TargetOverrideComponent>(body).Target = homelanderMind;
-                    _mind.TryAddObjective(butcherMind, butcherMindComp, "TheBoysKillHomelanderObjective");
-                }
+                if (!TryLinkButcherObjective(body, rule.Comp))
+                    Log.Warning($"TheBoys: could not wire up {ToPrettyString(body)}'s kill-Homelander objective yet (no Homelander picked this round so far) - will retry once Homelander is selected.");
 
                 GiveItem(body, "TheBoysButcherCrowbar");
+                GiveItem(body, "TheBoysWeaponsPermit");
+                GiveItem(body, "EncryptionKeyTheBoys");
 
                 return;
             }
@@ -272,11 +320,19 @@ public sealed class TheBoysRuleSystem : GameRuleSystem<TheBoysTeamRuleComponent>
                 if (_mind.TryGetMind(body, out var teammateMind, out var teammateMindComp))
                     _mind.TryAddObjective(teammateMind, teammateMindComp, "TheBoysHelpButcherObjective");
 
+                GiveItem(body, "EncryptionKeyTheBoys");
+
                 if (_tag.HasTag(body, HughieTag))
                     GiveItem(body, "TheBoysHughieCoolBroPaper");
 
+                if (_tag.HasTag(body, FrenchieTag))
+                    GiveItem(body, "TheBoysWeaponsPermit");
+
                 if (_tag.HasTag(body, MothersMilkTag))
+                {
                     GiveItem(body, "TheBoysMothersMilkShotgun");
+                    GiveItem(body, "TheBoysWeaponsPermit");
+                }
             }
         }
         catch (Exception e)

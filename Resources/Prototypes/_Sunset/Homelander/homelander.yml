@@ -14,7 +14,10 @@
     Shock: 0.40
     Cold: 0.40
     Caustic: 0.40
-    Poison: 0.40
+    # Fully immune to poison, unlike every other damage type here - covers Compound V/Raw Compound V
+    # (see CompoundV/RawCompoundV in Resources/Prototypes/_Sunset/TheBoys/reagents.yml) as well as any
+    # other poison in the game; a "near-invulnerable superhuman" shouldn't be droppable by toxins.
+    Poison: 0
     Bloodloss: 0.40
     Asphyxiation: 0.40
     Radiation: 0.8
