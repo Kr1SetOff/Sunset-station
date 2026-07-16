@@ -23,6 +23,7 @@
     state: std_mod
   discipline: Experimental
   tier: 2
+  position: 2,35
   cost: 7000
   recipeUnlocks:
     - NTDefaultCircuitBoard
@@ -51,6 +52,7 @@
     state: synthetic_bluespace_crystal_3
   discipline: Experimental
   tier: 2
+  position: 2,32
   cost: 10000
   recipeUnlocks:
     - ArtificialBluespaceCrystal
@@ -64,6 +66,7 @@
     state: gorillagauntlet
   discipline: Experimental
   tier: 2
+  position: 2,36
   cost: 5000
   recipeUnlocks:
     - LeftArmCyberGorilla
@@ -84,6 +87,7 @@
     state: base
   discipline: Experimental
   tier: 4
+  position: 4,30
   cost: 30000
   recipeUnlocks:
     - DarkBreacherMachineCircuitboard

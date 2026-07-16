@@ -15,6 +15,12 @@ store-category-sponsor-uplink-dept-science = Научный отдел
 store-category-sponsor-uplink-dept-civilian = Гражданские
 store-category-sponsor-uplink-dept-representatives = Представители
 
+store-category-sponsor-uplink-head-command = Только капитан
+store-category-sponsor-uplink-head-security = Только глава службы безопасности
+store-category-sponsor-uplink-head-engineering = Только старший инженер
+store-category-sponsor-uplink-head-medical = Только старший врач
+store-category-sponsor-uplink-head-cargo = Только квартирмейстер
+
 sponsor-uplink-ui-title = Спонсорский аплинк
 sponsor-uplink-ui-buy = Купить
 

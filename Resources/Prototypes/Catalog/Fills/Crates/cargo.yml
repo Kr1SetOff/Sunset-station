@@ -143,8 +143,6 @@
     - id: ClothingOuterFlannelBlue
     - id: ClothingHeadHelmetBone
     - id: ClothingOuterSuitCarp
-    - id: ClothingHeadHatCatEars
-      prob: 0.01
     - id: ClothingHeadHatWhiteCatEars #Starlight
       prob: 0.05
     - id: ClothingHeadHatDogEars

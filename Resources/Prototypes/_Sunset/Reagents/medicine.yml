@@ -1,0 +1,205 @@
+# 🌇Sunset🌇 - experimental medicines. Recipes in _Sunset/Recipes/Reactions/sunset_chemistry.yml,
+# all listed in the "Экспериментальная химия" guidebook page.
+
+# Broad-spectrum trauma paste: decent brute+burn healing in one chem, poisons past 30u.
+- type: reagent
+  id: Mendazin
+  name: reagent-name-mendazin
+  group: Medicine
+  desc: reagent-desc-mendazin
+  physicalDesc: reagent-physical-desc-chalky
+  flavor: medicine
+  color: "#66d18c"
+  metabolisms:
+    Medicine:
+      effects:
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentCondition
+          reagent: Mendazin
+          max: 30
+        damage:
+          groups:
+            Brute: -2
+            Burn: -2
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentCondition
+          reagent: Mendazin
+          min: 30
+        damage:
+          types:
+            Poison: 2
+      - !type:Vomit
+        conditions:
+        - !type:ReagentCondition
+          reagent: Mendazin
+          min: 30
+        probability: 0.1
+
+# Synthetic blood substitute: rapidly restores blood volume and slows bleeding.
+# Overdose thins the blood instead.
+- type: reagent
+  id: Hemosynthin
+  name: reagent-name-hemosynthin
+  group: Medicine
+  desc: reagent-desc-hemosynthin
+  physicalDesc: reagent-physical-desc-cloudy
+  flavor: medicine
+  color: "#bb2222"
+  metabolisms:
+    Medicine:
+      effects:
+      - !type:ModifyBloodLevel
+        conditions:
+        - !type:ReagentCondition
+          reagent: Hemosynthin
+          max: 25
+        amount: 3
+      - !type:ModifyBleed
+        conditions:
+        - !type:ReagentCondition
+          reagent: Hemosynthin
+          max: 25
+        amount: -1
+      - !type:ModifyBleed
+        conditions:
+        - !type:ReagentCondition
+          reagent: Hemosynthin
+          min: 25
+        amount: 1
+      - !type:ModifyBloodLevel
+        conditions:
+        - !type:ReagentCondition
+          reagent: Hemosynthin
+          min: 25
+        amount: -2
+
+# Deep-lung restorative: powerful asphyxiation healing. Overdose floods the lungs.
+- type: reagent
+  id: Pulmozin
+  name: reagent-name-pulmozin
+  group: Medicine
+  desc: reagent-desc-pulmozin
+  physicalDesc: reagent-physical-desc-crisp
+  flavor: medicine
+  color: "#66aaff"
+  metabolisms:
+    Medicine:
+      effects:
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentCondition
+          reagent: Pulmozin
+          max: 25
+        damage:
+          types:
+            Asphyxiation: -6
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentCondition
+          reagent: Pulmozin
+          min: 25
+        damage:
+          types:
+            Asphyxiation: 3
+
+# Silver-infused dermal gel: excellent against every kind of burn. Overdose eats the skin.
+- type: reagent
+  id: Dermalux
+  name: reagent-name-dermalux
+  group: Medicine
+  desc: reagent-desc-dermalux
+  physicalDesc: reagent-physical-desc-cloudy
+  flavor: medicine
+  color: "#c0c0dd"
+  metabolisms:
+    Medicine:
+      effects:
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentCondition
+          reagent: Dermalux
+          max: 25
+        damage:
+          types:
+            Heat: -3
+            Cold: -1.5
+            Shock: -1.5
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentCondition
+          reagent: Dermalux
+          min: 25
+        damage:
+          types:
+            Caustic: 2
+
+# Bone-knitting stimulant: strong blunt-trauma healing. Overdose sets the nerves on edge.
+- type: reagent
+  id: Osteogen
+  name: reagent-name-osteogen
+  group: Medicine
+  desc: reagent-desc-osteogen
+  physicalDesc: reagent-physical-desc-chalky
+  flavor: medicine
+  color: "#f2ecd8"
+  metabolisms:
+    Medicine:
+      effects:
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentCondition
+          reagent: Osteogen
+          max: 20
+        damage:
+          types:
+            Blunt: -4
+      - !type:Jitter
+        conditions:
+        - !type:ReagentCondition
+          reagent: Osteogen
+          min: 20
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentCondition
+          reagent: Osteogen
+          min: 20
+        damage:
+          types:
+            Poison: 1
+
+# Aggressive chelation agent: purges poisons and radiation fast, but overdo it and it starts
+# stripping useful things out of the blood too.
+- type: reagent
+  id: Toxinol
+  name: reagent-name-toxinol
+  group: Medicine
+  desc: reagent-desc-toxinol
+  physicalDesc: reagent-physical-desc-acrid
+  flavor: medicine
+  color: "#7ccc4f"
+  metabolisms:
+    Medicine:
+      effects:
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentCondition
+          reagent: Toxinol
+          max: 25
+        damage:
+          types:
+            Poison: -3
+            Radiation: -1.5
+      - !type:Vomit
+        conditions:
+        - !type:ReagentCondition
+          reagent: Toxinol
+          min: 25
+        probability: 0.15
+      - !type:ModifyBloodLevel
+        conditions:
+        - !type:ReagentCondition
+          reagent: Toxinol
+          min: 25
+        amount: -1.5

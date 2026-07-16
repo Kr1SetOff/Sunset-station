@@ -578,6 +578,17 @@ namespace Content.Shared.Preferences
                 speciesPrototype = prototypeManager.Index(Species);
             }
 
+            // Sunset: species can be gated to sponsors; reject and fall back if the player doesn't qualify.
+            if (speciesPrototype.MinSponsorTier is { } minTier)
+            {
+                var sponsorTierReader = collection.Resolve<Content.Shared._Sunset.SponsorTier.ISunsetSponsorTierReader>();
+                if (sponsorTierReader.GetSponsorTier(session) < minTier)
+                {
+                    Species = SharedHumanoidAppearanceSystem.DefaultSpecies;
+                    speciesPrototype = prototypeManager.Index(Species);
+                }
+            }
+
             var sex = Sex switch
             {
                 Sex.Male => Sex.Male,

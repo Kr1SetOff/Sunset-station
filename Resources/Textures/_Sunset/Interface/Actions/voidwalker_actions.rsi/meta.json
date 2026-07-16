@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from tgstation at commit 156beffc6222d20bc3449a051e0a6bb71e23ab12, icons/mob/actions/actions_voidwalker.dmi",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "dash"
+    },
+    {
+      "name": "telepathy"
+    },
+    {
+      "name": "unsettle"
+    }
+  ]
+}

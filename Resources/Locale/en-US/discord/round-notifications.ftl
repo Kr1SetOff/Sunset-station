@@ -3,6 +3,7 @@ discord-round-notifications-started = {$serverIndicator} - Round #{$id} on map "
 discord-round-notifications-end = {$serverIndicator} - Round #{$id} has ended. It lasted for {$hours} hours, {$minutes} minutes, and {$seconds} seconds.
 discord-round-notifications-end-ping = {$serverIndicator} - <@&{$roleId}>, a new round will start soon!
 discord-round-notifications-unknown-map = Unknown
+discord-round-notifications-unknown-gamemode = Unknown
 discord-round-notifications-end-gamemode = Gamemode
 discord-round-notifications-end-map = Map
 discord-round-notifications-end-players = Players

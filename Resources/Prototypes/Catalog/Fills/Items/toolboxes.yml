@@ -237,7 +237,6 @@
       - !type:GroupSelector # ~1/115
         weight: 0.175
         children:
-        - id: ClothingHeadHatCatEars
         - id: ClothingHeadHatFancyCrown
         - id: ClothingHeadHatChameleon
 

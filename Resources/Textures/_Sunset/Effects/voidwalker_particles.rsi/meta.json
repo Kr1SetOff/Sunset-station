@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from tgstation at commit 156beffc6222d20bc3449a051e0a6bb71e23ab12, icons/effects/particles/voidwalker.dmi",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "void_1"
+    },
+    {
+      "name": "void_2"
+    },
+    {
+      "name": "kidnap_1"
+    },
+    {
+      "name": "kidnap_2"
+    },
+    {
+      "name": "kidnap_3"
+    }
+  ]
+}

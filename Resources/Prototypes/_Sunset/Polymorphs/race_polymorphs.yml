@@ -1,0 +1,211 @@
+# 🌇Sunset🌇 - permanent race polymorphs used by the Darwinium reagent family
+# (Resources/Prototypes/_Sunset/Reagents/darwinium.yml). Name and inventory carry over;
+# damage does not (the transformation rebuilds the body).
+
+- type: polymorph
+  id: SunsetRacePolymorphHuman
+  configuration:
+    entity: MobHuman
+    forced: true
+    transferName: true
+    transferDamage: false
+    inventory: Transfer
+    revertOnCrit: false
+    revertOnDeath: false
+    allowRepeatedMorphs: true
+    ignoreAllowRepeatedMorphs: true
+
+- type: polymorph
+  id: SunsetRacePolymorphDwarf
+  configuration:
+    entity: MobDwarf
+    forced: true
+    transferName: true
+    transferDamage: false
+    inventory: Transfer
+    revertOnCrit: false
+    revertOnDeath: false
+    allowRepeatedMorphs: true
+    ignoreAllowRepeatedMorphs: true
+
+- type: polymorph
+  id: SunsetRacePolymorphElf
+  configuration:
+    entity: MobElf
+    forced: true
+    transferName: true
+    transferDamage: false
+    inventory: Transfer
+    revertOnCrit: false
+    revertOnDeath: false
+    allowRepeatedMorphs: true
+    ignoreAllowRepeatedMorphs: true
+
+- type: polymorph
+  id: SunsetRacePolymorphArachnid
+  configuration:
+    entity: MobArachnid
+    forced: true
+    transferName: true
+    transferDamage: false
+    inventory: Transfer
+    revertOnCrit: false
+    revertOnDeath: false
+    allowRepeatedMorphs: true
+    ignoreAllowRepeatedMorphs: true
+
+- type: polymorph
+  id: SunsetRacePolymorphAvali
+  configuration:
+    entity: MobAvali
+    forced: true
+    transferName: true
+    transferDamage: false
+    inventory: Transfer
+    revertOnCrit: false
+    revertOnDeath: false
+    allowRepeatedMorphs: true
+    ignoreAllowRepeatedMorphs: true
+
+- type: polymorph
+  id: SunsetRacePolymorphCyclorite
+  configuration:
+    entity: MobCyclorite
+    forced: true
+    transferName: true
+    transferDamage: false
+    inventory: Transfer
+    revertOnCrit: false
+    revertOnDeath: false
+    allowRepeatedMorphs: true
+    ignoreAllowRepeatedMorphs: true
+
+- type: polymorph
+  id: SunsetRacePolymorphDiona
+  configuration:
+    entity: MobDiona
+    forced: true
+    transferName: true
+    transferDamage: false
+    inventory: Transfer
+    revertOnCrit: false
+    revertOnDeath: false
+    allowRepeatedMorphs: true
+    ignoreAllowRepeatedMorphs: true
+
+- type: polymorph
+  id: SunsetRacePolymorphFelenid
+  configuration:
+    entity: MobFelenid
+    forced: true
+    transferName: true
+    transferDamage: false
+    inventory: Transfer
+    revertOnCrit: false
+    revertOnDeath: false
+    allowRepeatedMorphs: true
+    ignoreAllowRepeatedMorphs: true
+
+- type: polymorph
+  id: SunsetRacePolymorphReptilian
+  configuration:
+    entity: MobReptilian
+    forced: true
+    transferName: true
+    transferDamage: false
+    inventory: Transfer
+    revertOnCrit: false
+    revertOnDeath: false
+    allowRepeatedMorphs: true
+    ignoreAllowRepeatedMorphs: true
+
+- type: polymorph
+  id: SunsetRacePolymorphMoth
+  configuration:
+    entity: MobMoth
+    forced: true
+    transferName: true
+    transferDamage: false
+    inventory: Transfer
+    revertOnCrit: false
+    revertOnDeath: false
+    allowRepeatedMorphs: true
+    ignoreAllowRepeatedMorphs: true
+
+- type: polymorph
+  id: SunsetRacePolymorphVox
+  configuration:
+    entity: MobVox
+    forced: true
+    transferName: true
+    transferDamage: false
+    inventory: Transfer
+    revertOnCrit: false
+    revertOnDeath: false
+    allowRepeatedMorphs: true
+    ignoreAllowRepeatedMorphs: true
+
+- type: polymorph
+  id: SunsetRacePolymorphVulpkanin
+  configuration:
+    entity: MobVulpkanin
+    forced: true
+    transferName: true
+    transferDamage: false
+    inventory: Transfer
+    revertOnCrit: false
+    revertOnDeath: false
+    allowRepeatedMorphs: true
+    ignoreAllowRepeatedMorphs: true
+
+- type: polymorph
+  id: SunsetRacePolymorphSlimePerson
+  configuration:
+    entity: MobSlimePerson
+    forced: true
+    transferName: true
+    transferDamage: false
+    inventory: Transfer
+    revertOnCrit: false
+    revertOnDeath: false
+    allowRepeatedMorphs: true
+    ignoreAllowRepeatedMorphs: true
+
+- type: polymorph
+  id: SunsetRacePolymorphLagomorph
+  configuration:
+    entity: MobLagomorph
+    forced: true
+    transferName: true
+    transferDamage: false
+    inventory: Transfer
+    revertOnCrit: false
+    revertOnDeath: false
+    allowRepeatedMorphs: true
+    ignoreAllowRepeatedMorphs: true
+
+- type: polymorph
+  id: SunsetRacePolymorphResomi
+  configuration:
+    entity: MobResomi
+    forced: true
+    transferName: true
+    transferDamage: false
+    inventory: Transfer
+    revertOnCrit: false
+    revertOnDeath: false
+    allowRepeatedMorphs: true
+    ignoreAllowRepeatedMorphs: true
+
+- type: polymorph
+  id: SunsetRacePolymorphRodentia
+  configuration:
+    entity: MobRodentia
+    forced: true
+    transferName: true
+    transferDamage: false
+    inventory: Transfer
+    revertOnCrit: false
+    revertOnDeath: false
+    allowRepeatedMorphs: true
+    ignoreAllowRepeatedMorphs: true

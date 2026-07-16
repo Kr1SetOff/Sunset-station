@@ -1,4 +1,5 @@
-﻿using Content.Shared.Radio;
+﻿using System.Numerics;
+using Content.Shared.Radio;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
@@ -46,6 +47,14 @@ public sealed partial class TechnologyPrototype : IPrototype
     /// </summary>
     [DataField]
     public bool Hidden;
+
+    /// <summary>
+    /// 🌇Sunset🌇 - grid coordinate used to lay this technology out on the branching tech tree
+    /// console (see Content.Client._Sunset.Research). X is conventionally the tier column, Y is a
+    /// per-discipline lane; unset (0,0) is fine for Hidden technologies, which are never drawn.
+    /// </summary>
+    [DataField]
+    public Vector2 Position;
 
     /// <summary>
     /// How much research is needed to unlock.

@@ -2,16 +2,19 @@ using Content.Client.Administration.Managers;
 using Content.Client.Gameplay;
 using Content.Client.Lobby;
 using Content.Client.RoundEnd;
+using Content.Client._Sunset.RoundEnd;
 using Content.Shared.Starlight.NewLife;
 using Content.Shared.GameTicking;
 using Content.Shared.GameWindow;
 using Content.Shared.Roles;
 using JetBrains.Annotations;
 using Robust.Client.Graphics;
+using Robust.Client.ResourceManagement;
 using Robust.Client.State;
 using Robust.Client.UserInterface;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Audio;
+using Robust.Shared.Random;
 using Content.Shared.GameTicking.Prototypes;
 
 namespace Content.Client.GameTicking.Managers
@@ -23,6 +26,9 @@ namespace Content.Client.GameTicking.Managers
         [Dependency] private IClientAdminManager _admin = default!;
         [Dependency] private IClyde _clyde = default!;
         [Dependency] private IUserInterfaceManager _userInterfaceManager = default!;
+        [Dependency] private IPrototypeManager _prototypeManager = default!; // Sunset
+        [Dependency] private IResourceCache _resourceCache = default!; // Sunset
+        [Dependency] private IRobustRandom _random = default!; // Sunset
 
         private Dictionary<NetEntity, Dictionary<ProtoId<JobPrototype>, int?>>  _jobsAvailable = new();
         private Dictionary<NetEntity, string> _stationNames = new();
@@ -157,7 +163,14 @@ namespace Content.Client.GameTicking.Managers
             // Force an update in the event of this song being the same as the last.
             RestartSound = message.RestartSound;
 
-            _userInterfaceManager.GetUIController<RoundEndSummaryUIController>().OpenRoundEndSummaryWindow(message);
+            // Sunset: play the credits roll first, then open the usual summary window once it's done.
+            var credits = new RoundEndCreditsControl(message, EntityManager, _prototypeManager, _resourceCache, _random);
+            credits.Finished += () =>
+            {
+                _userInterfaceManager.PopupRoot.RemoveChild(credits);
+                _userInterfaceManager.GetUIController<RoundEndSummaryUIController>().OpenRoundEndSummaryWindow(message);
+            };
+            _userInterfaceManager.PopupRoot.AddChild(credits);
         }
     }
 }

@@ -73,13 +73,4 @@ public sealed partial class SunsetCCVars
     /// </summary>
     public static readonly CVarDef<string> AnnouncementColor =
         CVarDef.Create("sunset.chat.announcement_color", "#40E0D0", CVar.SERVERONLY);
-
-    /// <summary>
-    /// Whether sponsor-tier OOC name/tag colors (see ChatManager.Sunset.cs) use their time-phased
-    /// "animated" variant (colors shift as real time passes, so messages sent a few seconds apart
-    /// visibly differ) instead of the flat static pattern. Server-side only: the color is baked into
-    /// the message once at send time, there's no per-client live animation of already-sent lines.
-    /// </summary>
-    public static readonly CVarDef<bool> SponsorTagAnimated =
-        CVarDef.Create("sunset.chat.sponsor_tag_animated", true, CVar.SERVERONLY);
 }

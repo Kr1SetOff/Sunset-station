@@ -1,0 +1,10 @@
+chat-emote-name-sunset-jump = Jump
+chat-emote-msg-sunset-jump = jumps!
+chat-emote-name-sunset-spin = Spin
+chat-emote-msg-sunset-spin = spins around like a top!
+chat-emote-name-sunset-dance = Dance
+chat-emote-msg-sunset-dance = dances, bouncing on their head!
+chat-emote-name-sunset-flip = Flip
+chat-emote-msg-sunset-flip = does a flip!
+chat-emote-name-sunset-double-flip = Double Flip
+chat-emote-msg-sunset-double-flip = does a double flip!

@@ -1,0 +1,111 @@
+# 🌇Sunset🌇 - Voidwalker's action bar. See Content.Server._Sunset.Voidwalker.VoidwalkerSystem and
+# Content.Shared._Sunset.Voidwalker.VoidwalkerActionEvents.
+
+# Reuses the wizard Blink spell's teleport logic (TeleportSpellEvent/SharedMagicSystem.OnTeleportSpell) -
+# same as TheBoys' Hughie teleport (ActionTheBoysHughieBlink) - short range, on-cast LOS check.
+- type: entity
+  parent: BaseAction
+  id: ActionVoidwalkerDash
+  name: Cosmic Dash
+  description: Dash a short distance through the void.
+  components:
+  - type: Action
+    useDelay: 8
+    itemIconStyle: BigAction
+    icon:
+      sprite: _Sunset/Interface/Actions/voidwalker_actions.rsi
+      state: dash
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Magic/blink.ogg
+  - type: TargetAction
+    range: 8
+    repeat: false
+    checkCanAccess: false
+  - type: WorldTargetAction
+    event: !type:TeleportSpellEvent
+
+- type: entity
+  parent: BaseAction
+  id: ActionVoidwalkerUnsettle
+  name: Unsettle
+  description: Stare directly at someone until they notice you, stunning and revealing you to them.
+  components:
+  - type: Action
+    useDelay: 12
+    itemIconStyle: BigAction
+    icon:
+      sprite: _Sunset/Interface/Actions/voidwalker_actions.rsi
+      state: unsettle
+  - type: TargetAction
+    range: 9
+    checkCanAccess: false
+  - type: EntityTargetAction
+    whitelist:
+      components:
+      - MobState
+    event: !type:VoidwalkerUnsettleActionEvent
+
+- type: entity
+  parent: BaseAction
+  id: ActionVoidwalkerTelepathy
+  name: Cosmic Transmit
+  description: Send an unsettling telepathic message to a target.
+  components:
+  - type: Action
+    useDelay: 6
+    itemIconStyle: BigAction
+    icon:
+      sprite: _Sunset/Interface/Actions/voidwalker_actions.rsi
+      state: telepathy
+  - type: TargetAction
+    range: 20
+    checkCanAccess: false
+  - type: EntityTargetAction
+    whitelist:
+      components:
+      - MobState
+    event: !type:VoidwalkerTelepathyActionEvent
+
+- type: entity
+  parent: BaseAction
+  id: ActionVoidwalkerKidnap
+  name: Kidnap
+  description: Channel on an incapacitated target while in space, cursing them with the void.
+  components:
+  - type: Action
+    useDelay: 2
+    itemIconStyle: BigAction
+    icon:
+      sprite: _Sunset/Effects/voidwalker_particles.rsi
+      state: kidnap_1
+  - type: TargetAction
+    range: 2
+    checkCanAccess: false
+  - type: EntityTargetAction
+    whitelist:
+      components:
+      - MobState
+    event: !type:VoidwalkerKidnapActionEvent
+
+# New ability, not a tg port - see VoidwalkerGlassifyActionEvent's doc comment for why. Targets a
+# wall/window (checked server-side via AirtightComponent + a solid static physics body) and disables
+# its collision for a while so the Voidwalker - and anyone it's pulling - can walk through it.
+- type: entity
+  parent: BaseAction
+  id: ActionVoidwalkerGlassify
+  name: Glassify
+  description: Temporarily turn a nearby wall to passable glass - you and anyone you're pulling can walk right through it.
+  components:
+  - type: Action
+    useDelay: 16
+    itemIconStyle: BigAction
+    icon:
+      sprite: _Sunset/Effects/voidwalker_particles.rsi
+      state: void_1
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Effects/window_shatter2.ogg
+  - type: TargetAction
+    range: 4
+    checkCanAccess: false
+  - type: WorldTargetAction
+    event: !type:VoidwalkerGlassifyActionEvent

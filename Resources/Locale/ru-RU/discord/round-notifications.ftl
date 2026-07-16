@@ -3,6 +3,7 @@ discord-round-notifications-started = Раунд #{ $id } на карте «{ $m
 discord-round-notifications-end = Раунд #{ $id } закончился. Он длился { $hours } ч., { $minutes } мин., и { $seconds } сек.
 discord-round-notifications-end-ping = <@&{ $roleId }>, сервер скоро перезагрузится!
 discord-round-notifications-unknown-map = Неизвестно
+discord-round-notifications-unknown-gamemode = Неизвестно
 discord-round-notifications-end-gamemode = Режим
 discord-round-notifications-end-map = Карта
 discord-round-notifications-end-players = Игроков

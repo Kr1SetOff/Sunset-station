@@ -8,6 +8,7 @@
     state: fab-idle
   discipline: Experimental
   tier: 1
+  position: 1,33
   cost: 5000
   recipeUnlocks:
   - ProximitySensor
@@ -20,6 +21,7 @@
     state: icon
   discipline: Experimental
   tier: 1
+  position: 1,32
   cost: 5000
   recipeUnlocks:
   - AnomalyScanner
@@ -37,6 +39,7 @@
     state: display
   discipline: Experimental
   tier: 1
+  position: 1,34
   cost: 5000
   recipeUnlocks:
   - NodeScanner
@@ -51,6 +54,7 @@
     state: display
   discipline: Experimental
   tier: 1
+  position: 1,30
   cost: 5000
   recipeUnlocks:
   - TechDiskComputerCircuitboard
@@ -63,6 +67,7 @@
     state: icon
   discipline: Experimental
   tier: 1
+  position: 1,35
   cost: 7500
   recipeUnlocks:
   - ClothingShoesBootsMagSci
@@ -76,6 +81,7 @@
     state: icon
   discipline: Experimental
   tier: 1
+  position: 1,31
   cost: 10000
   recipeUnlocks:
   - WeaponGauntletGorilla
@@ -88,6 +94,7 @@
     state: exosuit_beacon
   discipline: Experimental
   tier: 1
+  position: 1,36
   cost: 5000
   recipeUnlocks:
   - MechEquipmentBorgBeacon
@@ -102,6 +109,7 @@
     state: icon
   discipline: Experimental
   tier: 2
+  position: 2,30
   cost: 5000
   recipeUnlocks:
   - ArtifactCrusherMachineCircuitboard
@@ -114,6 +122,7 @@
     state: base
   discipline: Experimental
   tier: 2
+  position: 2,31
   cost: 10000
   recipeUnlocks:
   - WeaponPistolCHIMP
@@ -130,6 +139,7 @@
     state: base
   discipline: Experimental
   tier: 2
+  position: 2,33
   cost: 7500
   recipeUnlocks:
   - WeaponParticleDecelerator
@@ -145,6 +155,7 @@
     state: base
   discipline: Experimental
   tier: 2
+  position: 2,34
   cost: 10000
   recipeUnlocks:
     - WeaponForceGun
@@ -160,6 +171,7 @@
     state: icon
   discipline: Experimental
   tier: 3
+  position: 3,31
   cost: 10000
   recipeUnlocks:
   - DeviceQuantumSpinInverter
@@ -172,6 +184,7 @@
     state: icon
   discipline: Experimental
   tier: 3
+  position: 3,30
   cost: 10000
   recipeUnlocks:
   - DeviceDesynchronizer

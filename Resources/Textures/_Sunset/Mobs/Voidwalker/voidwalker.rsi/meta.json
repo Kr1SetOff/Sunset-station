@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken and re-sliced from tgstation at commit 156beffc6222d20bc3449a051e0a6bb71e23ab12, icons/mob/simple/voidwalker.dmi",
+  "size": {
+    "x": 32,
+    "y": 48
+  },
+  "states": [
+    {
+      "name": "voidwalker",
+      "directions": 4
+    },
+    {
+      "name": "voidwalker_stealthed",
+      "directions": 4
+    }
+  ]
+}

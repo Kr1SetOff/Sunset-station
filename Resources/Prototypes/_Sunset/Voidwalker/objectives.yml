@@ -1,0 +1,16 @@
+# 🌇Sunset🌇 - tg's actual voidwalker objective, ported faithfully: pure flavor text ("show them
+# the beauty of the void...") whose completion check is nothing more than staying alive - tg's
+# check_completion() only verifies the owner isn't dead. Assigned in
+# VoidwalkerSpawnRuleSystem.OnVoidwalkerMindAdded so every spawn path gets it.
+- type: entity
+  parent: BaseSurviveObjective
+  id: VoidwalkerObjective
+  name: Show them the truth
+  description: Show them the beauty of the void. Drag them into the cosmic abyss, then impart the truth of the void unto them.
+  components:
+  - type: Objective
+    difficulty: 1.5
+    issuer: objective-issuer-voidwalker
+    icon:
+      sprite: _Sunset/Objects/Weapons/voidwalker_items.rsi
+      state: cosmic_skull_charged

@@ -27,6 +27,8 @@ using Robust.Shared.Random;
 using Robust.Shared.Utility;
 using System.Text.RegularExpressions;
 using Content.Server._Starlight.BugReports; // Starlight
+using Content.Server.Administration.Managers;
+using Content.Shared._Sunset.SponsorTier;
 
 namespace Content.Server.GameTicking
 {
@@ -36,6 +38,7 @@ namespace Content.Server.GameTicking
         [Dependency] private RoleSystem _role = default!;
         [Dependency] private ITaskManager _taskManager = default!;
         [Dependency] private IBugReportManager _bugManager = default!; // Starlight
+        [Dependency] private ISunsetSponsorTierReader _sponsorTierReader = default!; // Sunset
 
         private static readonly Counter RoundNumberMetric = Metrics.CreateCounter(
             "ss14_round_number",
@@ -580,7 +583,8 @@ namespace Content.Server.GameTicking
                     JobPrototypes = roles.Where(role => !role.Antagonist).Select(role => role.Prototype).ToArray(),
                     AntagPrototypes = roles.Where(role => role.Antagonist).Select(role => role.Prototype).ToArray(),
                     Observer = observer,
-                    Connected = connected
+                    Connected = connected,
+                    SponsorTier = userId != null ? _sponsorTierReader.GetSponsorTier(userId.Value) : 0 // Sunset
                 };
                 listOfPlayerInfo.Add(playerEndRoundInfo);
             }
@@ -588,6 +592,22 @@ namespace Content.Server.GameTicking
             // This ordering mechanism isn't great (no ordering of minds) but functions
             var listOfPlayerInfoFinal = listOfPlayerInfo.OrderBy(pi => pi.PlayerOOCName).ToArray();
             var sound = RoundEndSoundCollection == null ? null : _audio.ResolveSound(new SoundCollectionSpecifier(RoundEndSoundCollection));
+
+            // Sunset: active, non-stealth admins for the round-end credits sequence.
+            var adminInfoList = new List<RoundEndMessageEvent.RoundEndAdminInfo>();
+            foreach (var adminSession in _adminManager.ActiveAdmins)
+            {
+                var adminData = _adminManager.GetAdminData(adminSession);
+                if (adminData == null || adminData.Stealth)
+                    continue;
+
+                adminInfoList.Add(new RoundEndMessageEvent.RoundEndAdminInfo
+                {
+                    Ckey = adminSession.Name,
+                    Rank = adminData.Title,
+                    PlayerNetEntity = GetNetEntity(adminSession.AttachedEntity)
+                });
+            }
 
             var roundEndMessageEvent = new RoundEndMessageEvent(
                 gamemodeTitle,
@@ -597,7 +617,10 @@ namespace Content.Server.GameTicking
                 listOfPlayerInfoFinal.Length,
                 listOfPlayerInfoFinal,
                 sound
-            );
+            )
+            {
+                AllAdminsEndInfo = adminInfoList.ToArray() // Sunset
+            };
             RaiseNetworkEvent(roundEndMessageEvent);
             RaiseLocalEvent(roundEndMessageEvent);
 
@@ -622,13 +645,22 @@ namespace Content.Server.GameTicking
                     ("seconds", duration.Seconds));
 
                 var gamemodeTitle = CurrentPreset != null ? Loc.GetString(CurrentPreset.ModeTitle) : string.Empty;
+                if (string.IsNullOrWhiteSpace(gamemodeTitle))
+                    gamemodeTitle = Loc.GetString("discord-round-notifications-unknown-gamemode");
+
                 var mapName = _gameMapManager.GetSelectedMap()?.MapName ?? Loc.GetString("discord-round-notifications-unknown-map");
+                if (string.IsNullOrWhiteSpace(mapName))
+                    mapName = Loc.GetString("discord-round-notifications-unknown-map");
+
                 var playerInfo = _replayRoundPlayerInfo ?? Array.Empty<RoundEndMessageEvent.RoundEndPlayerInfo>();
 
                 var antags = playerInfo.Where(p => p.Antag).ToArray();
                 var antagList = antags.Length == 0
                     ? Loc.GetString("discord-round-notifications-end-no-antags")
                     : string.Join('\n', antags.Select(p => $"**{p.Role}** — {p.PlayerICName ?? p.PlayerOOCName}"));
+
+                if (string.IsNullOrWhiteSpace(antagList))
+                    antagList = Loc.GetString("discord-round-notifications-end-no-antags");
 
                 if (antagList.Length > 1000)
                     antagList = antagList[..1000] + "…";

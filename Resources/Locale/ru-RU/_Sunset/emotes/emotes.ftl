@@ -1,0 +1,10 @@
+chat-emote-name-sunset-jump = Прыгнуть
+chat-emote-msg-sunset-jump = прыгает!
+chat-emote-name-sunset-spin = Кружиться
+chat-emote-msg-sunset-spin = кружится вокруг своей оси, как юла!
+chat-emote-name-sunset-dance = Танцевать
+chat-emote-msg-sunset-dance = танцует, прыгая на голове!
+chat-emote-name-sunset-flip = Сальто
+chat-emote-msg-sunset-flip = делает сальто!
+chat-emote-name-sunset-double-flip = Двойное сальто
+chat-emote-msg-sunset-double-flip = делает двойное сальто!

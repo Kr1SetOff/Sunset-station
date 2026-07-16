@@ -2,13 +2,6 @@
 # the vanilla Standard.yml catalog (category: Standard) used by the stationary Jukebox machine, so
 # removing the boombox's built-in music doesn't touch that machine's songs and vice versa.
 - type: jukebox
-  id: BoomboxFdj4
-  name: IFA Wartburg - FDJ (Freie Deutsche Jugend) 4
-  category: Boombox
-  path:
-    path: /Audio/_Sunset/Boombox/fdj-4.ogg
-
-- type: jukebox
   id: BoomboxJealous
   name: "9mice, Егор Крид, тёмный принц & madk1d - Jealous"
   category: Boombox
@@ -191,13 +184,6 @@
     path: /Audio/_Sunset/Boombox/dt-lyudi.ogg
 
 - type: jukebox
-  id: BoomboxDtMalenkiy
-  name: "Дайте Танк (!) - Маленький"
-  category: Boombox
-  path:
-    path: /Audio/_Sunset/Boombox/dt-malenkiy.ogg
-
-- type: jukebox
   id: BoomboxDtUtro
   name: "Дайте Танк (!) - Утро"
   category: Boombox
@@ -366,13 +352,6 @@
     path: /Audio/_Sunset/Boombox/na-stol.ogg
 
 - type: jukebox
-  id: BoomboxMrCredoVor
-  name: Mr. Credo - Вор
-  category: Boombox
-  path:
-    path: /Audio/_Sunset/Boombox/mr-credo-vor.ogg
-
-- type: jukebox
   id: BoomboxIriskiIRiski
   name: Монеточка - Ириски и риски
   category: Boombox
@@ -399,3 +378,66 @@
   category: Boombox
   path:
     path: /Audio/_Sunset/Boombox/apokalipsis.ogg
+
+- type: jukebox
+  id: BoomboxCrackedEmpire
+  name: AstraNova - CRACKED EMPIRE
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/cracked-empire.ogg
+
+- type: jukebox
+  id: BoomboxFriendsNoMore
+  name: "AstraNova - Friends No More (Round 2) [Outcome Memories OST]"
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/friends-no-more.ogg
+
+- type: jukebox
+  id: BoomboxCutieMewMewMagic
+  name: БАМБУК - Cutie Mew Mew Magic (На русском)
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/cutie-mew-mew-magic.ogg
+
+- type: jukebox
+  id: BoomboxUnslept
+  name: Miraidempa 未来電波基地 - Unslept
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/unslept.ogg
+
+- type: jukebox
+  id: BoomboxTheSolStillBurns
+  name: "Неизвестен - The Sol Still Burns [Outcome Memories OST]"
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/the-sol-still-burns.ogg
+
+- type: jukebox
+  id: BoomboxFeelTheFury
+  name: "ThatGuyRamon - Feel The Fury (feat. MrGoodbarz, Martin T.) [Outcome Memories OST]"
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/feel-the-fury.ogg
+
+- type: jukebox
+  id: BoomboxElProblema
+  name: "MORGENSHTERN & Тимати - El Problema"
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/el-problema.ogg
+
+- type: jukebox
+  id: BoomboxShikisaiDenki
+  name: muship - 色彩電気
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/shikisai-denki.ogg
+
+- type: jukebox
+  id: BoomboxZhyShi
+  name: Литвин - Жы Ши
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/zhy-shi.ogg

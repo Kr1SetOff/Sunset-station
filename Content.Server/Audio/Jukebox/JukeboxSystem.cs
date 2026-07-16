@@ -27,6 +27,7 @@ public sealed partial class JukeboxSystem : SharedJukeboxSystem
         SubscribeLocalEvent<JukeboxComponent, JukeboxStopMessage>(OnJukeboxStop);
         SubscribeLocalEvent<JukeboxComponent, JukeboxSetTimeMessage>(OnJukeboxSetTime);
         SubscribeLocalEvent<JukeboxComponent, JukeboxSetVolumeMessage>(OnJukeboxSetVolume);
+        SubscribeLocalEvent<JukeboxComponent, JukeboxSetLoopMessage>(OnJukeboxSetLoop);
         SubscribeLocalEvent<JukeboxComponent, ComponentInit>(OnComponentInit);
         SubscribeLocalEvent<JukeboxComponent, ComponentShutdown>(OnComponentShutdown);
 
@@ -49,23 +50,32 @@ public sealed partial class JukeboxSystem : SharedJukeboxSystem
         }
         else
         {
-            component.AudioStream = Audio.Stop(component.AudioStream);
-
-            if (string.IsNullOrEmpty(component.SelectedSongId) ||
-                !_protoManager.Resolve(component.SelectedSongId, out var jukeboxProto))
-            {
-                return;
-            }
-
-            component.AudioStream = Audio.PlayPvs(jukeboxProto.Path, uid,
-                AudioParams.Default.WithMaxDistance(10f).WithVolume(component.Volume))?.Entity;
-
-            // 🌇Sunset🌇 - tag the stream so clients can mute it via BoomboxMuteSystem.
-            if (component.Category == "Boombox" && component.AudioStream is { } stream)
-                EnsureComp<BoomboxAudioComponent>(stream);
-
-            Dirty(uid, component);
+            PlaySelectedSong(uid, component);
         }
+    }
+
+    /// <summary>
+    /// 🌇Sunset🌇 - (re)starts the selected song from the beginning. Shared by the explicit Play
+    /// button (via OnJukeboxPlay) and the automatic loop restart in Update().
+    /// </summary>
+    private void PlaySelectedSong(EntityUid uid, JukeboxComponent component)
+    {
+        component.AudioStream = Audio.Stop(component.AudioStream);
+
+        if (string.IsNullOrEmpty(component.SelectedSongId) ||
+            !_protoManager.Resolve(component.SelectedSongId, out var jukeboxProto))
+        {
+            return;
+        }
+
+        component.AudioStream = Audio.PlayPvs(jukeboxProto.Path, uid,
+            AudioParams.Default.WithMaxDistance(10f).WithVolume(component.Volume))?.Entity;
+
+        // 🌇Sunset🌇 - tag the stream so clients can mute it via BoomboxMuteSystem.
+        if (component.Category == "Boombox" && component.AudioStream is { } stream)
+            EnsureComp<BoomboxAudioComponent>(stream);
+
+        Dirty(uid, component);
     }
 
     /// <summary>
@@ -75,6 +85,15 @@ public sealed partial class JukeboxSystem : SharedJukeboxSystem
     {
         component.Volume = Math.Clamp(args.Volume, -10f, 5f);
         Audio.SetVolume(component.AudioStream, component.Volume);
+        Dirty(uid, component);
+    }
+
+    /// <summary>
+    /// 🌇Sunset🌇
+    /// </summary>
+    private void OnJukeboxSetLoop(EntityUid uid, JukeboxComponent component, JukeboxSetLoopMessage args)
+    {
+        component.Loop = args.Loop;
         Dirty(uid, component);
     }
 
@@ -149,6 +168,14 @@ public sealed partial class JukeboxSystem : SharedJukeboxSystem
 
                     TryUpdateVisualState(uid, comp);
                 }
+            }
+
+            // 🌇Sunset🌇 - if looping, automatically restart the selected song once its stream
+            // finishes on its own (as opposed to being stopped/paused by a player action).
+            if (comp.Loop && comp.AudioStream != null && !Exists(comp.AudioStream.Value) &&
+                !string.IsNullOrEmpty(comp.SelectedSongId))
+            {
+                PlaySelectedSong(uid, comp);
             }
         }
     }

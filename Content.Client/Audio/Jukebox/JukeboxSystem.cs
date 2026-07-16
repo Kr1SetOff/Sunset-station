@@ -1,6 +1,8 @@
+using Content.Client._Sunset.Boombox;
 using Content.Shared.Audio.Jukebox;
 using Robust.Client.Animations;
 using Robust.Client.GameObjects;
+using Robust.Client.UserInterface;
 using Robust.Shared.Prototypes;
 
 namespace Content.Client.Audio.Jukebox;
@@ -39,19 +41,38 @@ public sealed partial class JukeboxSystem : SharedJukeboxSystem
 
         while (query.MoveNext(out var uid, out _, out var ui))
         {
-            if (!_uiSystem.TryGetOpenUi<JukeboxBoundUserInterface>((uid, ui), JukeboxUiKey.Key, out var bui))
+            if (!_uiSystem.TryGetOpenUi((uid, ui), JukeboxUiKey.Key, out var bui))
                 continue;
 
-            bui.PopulateMusic();
+            // 🌇Sunset🌇 - the boombox uses its own BoomboxBoundUserInterface (distinct themed menu)
+            // under the same UI key, so both concrete BUI types need to be handled here.
+            switch (bui)
+            {
+                case JukeboxBoundUserInterface jukeboxBui:
+                    jukeboxBui.PopulateMusic();
+                    break;
+                case BoomboxBoundUserInterface boomboxBui:
+                    boomboxBui.PopulateMusic();
+                    break;
+            }
         }
     }
 
     private void OnJukeboxAfterState(Entity<JukeboxComponent> ent, ref AfterAutoHandleStateEvent args)
     {
-        if (!_uiSystem.TryGetOpenUi<JukeboxBoundUserInterface>(ent.Owner, JukeboxUiKey.Key, out var bui))
+        if (!_uiSystem.TryGetOpenUi(ent.Owner, JukeboxUiKey.Key, out var bui))
             return;
 
-        bui.Reload();
+        // 🌇Sunset🌇 - see OnProtoReload above for why this isn't a single generic lookup.
+        switch (bui)
+        {
+            case JukeboxBoundUserInterface jukeboxBui:
+                jukeboxBui.Reload();
+                break;
+            case BoomboxBoundUserInterface boomboxBui:
+                boomboxBui.Reload();
+                break;
+        }
     }
 
     private void OnAnimationCompleted(EntityUid uid, JukeboxComponent component, AnimationCompletedEvent args)

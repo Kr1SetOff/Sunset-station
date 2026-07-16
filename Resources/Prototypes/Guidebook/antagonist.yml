@@ -24,11 +24,17 @@
   # Starlight-end
   - Eeeps # imp
   - TheBoys # 🌇Sunset🌇
+  - Voidwalker # 🌇Sunset🌇
 
 - type: guideEntry
   id: TheBoys
   name: guide-entry-theboys
   text: "/ServerInfo/Guidebook/Antagonist/TheBoys.xml"
+
+- type: guideEntry
+  id: Voidwalker
+  name: guide-entry-voidwalker
+  text: "/ServerInfo/Guidebook/Antagonist/Voidwalker.xml"
 
 - type: guideEntry
   id: Traitors

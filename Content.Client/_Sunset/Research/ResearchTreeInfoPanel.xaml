@@ -1,0 +1,27 @@
+<Control xmlns="https://spacestation14.io"
+         xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client">
+    <BoxContainer Orientation="Vertical" Margin="10">
+        <BoxContainer Orientation="Horizontal" Margin="0 0 0 6">
+            <TextureRect Name="TechnologyTexture" TextureScale="3 3" VerticalAlignment="Center" Margin="0 0 8 0" />
+            <BoxContainer Orientation="Vertical" VerticalAlignment="Center">
+                <Label Name="TechnologyNameLabel" StyleClasses="LabelHeading" />
+                <BoxContainer Orientation="Horizontal">
+                    <TextureRect Name="DisciplineTexture" TextureScale="1.5 1.5" VerticalAlignment="Center" Margin="0 0 4 0" />
+                    <RichTextLabel Name="TierLabel" VerticalAlignment="Center" />
+                </BoxContainer>
+            </BoxContainer>
+        </BoxContainer>
+
+        <RichTextLabel Name="TechnologyCostLabel" Margin="0 0 0 8" />
+
+        <Label Text="{Loc 'research-console-prereqs-list-start'}" StyleClasses="LabelSubText" />
+        <Label Name="NoPrereqLabel" Text="{Loc 'research-tree-no-prereqs'}" />
+        <BoxContainer Name="PrereqsContainer" Orientation="Vertical" Margin="0 0 0 8">
+            <BoxContainer Name="RequiredTechContainer" Access="Public" Orientation="Vertical" />
+        </BoxContainer>
+
+        <RichTextLabel Name="UnlocksLabel" Margin="0 0 0 8" />
+
+        <Button Name="ResearchButton" Access="Public" Text="{Loc 'research-tree-buy-button'}" HorizontalExpand="True" />
+    </BoxContainer>
+</Control>

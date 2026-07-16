@@ -8,6 +8,8 @@ using Content.Server.Antag;
 using Content.Server.Clothing.Systems;
 using Content.Server.GameTicking;
 using Content.Server.GameTicking.Rules.Components;
+using Content.Server._Sunset.Voidwalker;
+using Content.Server.Polymorph.Systems;
 using Content.Server.Speech.Components; // Starlight
 using Content.Server._Starlight.GameTicking.Rules.Components; // Starlight
 using Content.Server.Zombies;
@@ -16,6 +18,7 @@ using Content.Shared.Administration;
 using Content.Shared.Database;
 using Content.Shared.Humanoid;
 using Content.Shared.Mind.Components;
+using Content.Shared.Polymorph;
 using Content.Shared.Roles;
 using Content.Shared.Roles.Components;
 using Content.Shared.Verbs;
@@ -37,6 +40,7 @@ public sealed partial class AdminVerbSystem
     [Dependency] private GameTicker _gameTicker = default!;
     [Dependency] private OutfitSystem _outfit = default!;
     [Dependency] private AutoDiscordLogSystem _autolog = default!; //Starlight
+    [Dependency] private VoidwalkerSpawnRuleSystem _voidwalkerSpawn = default!; // Sunset
 
     private static readonly EntProtoId DefaultTraitorRule = "Traitor";
     private static readonly EntProtoId DefaultInitialInfectedRule = "Zombie";
@@ -55,6 +59,7 @@ public sealed partial class AdminVerbSystem
     private static readonly EntProtoId DefaultDevilRule = "Devil"; // starlight
     private static readonly EntProtoId DefaultBrighteyeRule = "Brighteye"; //Starlight
 	private static readonly EntProtoId DefaultSELFRule = "SiliconLiberation"; //Starlight
+    private static readonly ProtoId<PolymorphPrototype> VoidwalkerPolymorphId = "VoidwalkerPolymorph"; // Sunset
 
     // All antag verbs have names so invokeverb works.
     private void AddAntagVerbs(GetVerbsEvent<Verb> args)
@@ -119,6 +124,27 @@ public sealed partial class AdminVerbSystem
             Message = string.Join(": ", zombieName, Loc.GetString("admin-verb-make-zombie")),
         };
         args.Verbs.Add(zombie);
+
+        // Sunset - Voidwalker. A body-swap polymorph, not a mind-role antag - Voidwalker has its own
+        // dedicated body/sprite/stats (see VoidwalkerPolymorph), so it works like Make Zombie above
+        // rather than the ForceMakeAntag verbs, which just tag the target's existing body.
+        var voidwalkerName = Loc.GetString("admin-verb-text-make-voidwalker");
+        Verb voidwalker = new()
+        {
+            Text = voidwalkerName,
+            Category = VerbCategory.Antag,
+            Icon = new SpriteSpecifier.Rsi(new ResPath("/Textures/_Sunset/Mobs/Voidwalker/voidwalker.rsi"), "voidwalker"),
+            Act = () =>
+            {
+                if (_polymorphSystem.PolymorphEntity(args.Target, VoidwalkerPolymorphId) is { } newVoidwalker)
+                    _voidwalkerSpawn.PlaceInSpaceNearStation(newVoidwalker);
+
+                _autolog.LogToDiscord(string.Join(": ", voidwalkerName, Loc.GetString("admin-verb-make-voidwalker")), player.Name);
+            },
+            Impact = LogImpact.High,
+            Message = string.Join(": ", voidwalkerName, Loc.GetString("admin-verb-make-voidwalker")),
+        };
+        args.Verbs.Add(voidwalker);
 
         var nukeOpName = Loc.GetString("admin-verb-text-make-nuclear-operative");
         Verb nukeOp = new()

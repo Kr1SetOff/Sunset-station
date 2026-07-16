@@ -172,7 +172,6 @@
     - id: ClothingMaskGoldenCursed
     - id: ClothingHeadHatFancyCrown
     - id: GoldenBikeHorn
-    - id: ClothingHeadHatCatEars
     - id: GoldenPersonalAI
     - id: TreasureCoinDiamond
       amount: !type:RangeNumberSelector

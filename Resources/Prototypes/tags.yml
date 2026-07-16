@@ -1533,6 +1533,9 @@
              # .cs: SharedNavMapSystem, ElectrocutionSystem, RevenantSystem, NoWindowsInTile
 
 - type: Tag
+  id: Grille # Sunset: tagged entity is a grille. Used by VoidwalkerSystem.OnGlassify to recognize grilles alongside walls/windows.
+
+- type: Tag
   id: Wine # CargoBounty: BountyWine
 
 - type: Tag

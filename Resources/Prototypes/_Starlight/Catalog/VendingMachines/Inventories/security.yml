@@ -1,16 +1,4 @@
 - type: listing
-  id: VendorDoubleStunbaton
-  productEntity: DoubleStunbaton
-  cost:
-    NTCredit: 556
-  categories:
-  - SLSecurity
-  conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 2
-  - !type:BuyerAccessCondition
-
-- type: listing
   id: VendorPurpleStunbaton
   productEntity: PurpleStunbaton
   cost:

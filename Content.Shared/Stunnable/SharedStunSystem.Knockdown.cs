@@ -10,13 +10,11 @@ using Content.Shared.Gravity;
 using Content.Shared.Hands;
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Input;
-using Content.Shared.Item;
 using Content.Shared.Movement.Events;
 using Content.Shared.Movement.Systems;
 using Content.Shared.Popups;
 using Content.Shared.Rejuvenate;
 using Content.Shared.Standing;
-using Content.Shared.Weapons.Melee.Events;
 using Content.Shared.Weapons.Ranged.Events;
 using Content.Shared.Weapons.Ranged.Systems;
 using Robust.Shared.Audio;
@@ -39,13 +37,10 @@ public abstract partial class SharedStunSystem
     [Dependency] private EntityLookupSystem _entityLookup = default!;
     [Dependency] private SharedGunSystem _gunSystem = default!; // 🌟Starlight🌟
     [Dependency] private SharedHandsSystem _hands = default!;
-    [Dependency] private SharedItemSystem _item = default!; // 🌟Starlight🌟
     [Dependency] private SharedPopupSystem _popup = default!;
     [Dependency] private SharedPhysicsSystem _physics = default!;
     [Dependency] private StandingStateSystem _standingState = default!;
     [Dependency] private IConfigurationManager _cfgManager = default!;
-
-    private static readonly ProtoId<ItemSizePrototype> MaxItemSize = "Small";
 
     public static readonly ProtoId<AlertPrototype> KnockdownAlert = "Knockdown";
 
@@ -63,7 +58,6 @@ public abstract partial class SharedStunSystem
         SubscribeLocalEvent<KnockedDownComponent, BuckleAttemptEvent>(OnBuckleAttempt);
         SubscribeLocalEvent<KnockedDownComponent, StandAttemptEvent>(OnStandAttempt);
         SubscribeLocalEvent<KnockedDownComponent, ShotAttemptedEvent>(OnShootAttempt); // 🌟Starlight🌟
-        SubscribeLocalEvent<KnockedDownComponent, AttemptMeleeEvent>(OnMeleeAttempt); // 🌟Starlight🌟
 
         // Updating movement and friction
         SubscribeLocalEvent<KnockedDownComponent, RefreshMovementSpeedModifiersEvent>(OnRefreshKnockedSpeed);
@@ -612,19 +606,8 @@ public abstract partial class SharedStunSystem
         }
     }
 
-    // 🌟Starlight🌟
-    private void OnMeleeAttempt(Entity<KnockedDownComponent> entity, ref AttemptMeleeEvent args)
-    {
-        // If the weapon is wearable or is our own fists, then we can use it while knocked down
-        if (args.Weapon == args.User)
-            return;
-
-        if (TryComp<ItemComponent>(args.Weapon, out var item) && _item.GetSizePrototype(item.Size) <= _item.GetSizePrototype(MaxItemSize))
-            return;
-
-        args.Cancelled = true;
-        _popup.PopupClient(Loc.GetString("knockdown-component-melee-fail"), entity, entity, PopupType.MediumCaution);
-    }
+    // Melee (light/heavy/disarm) is intentionally left unrestricted while knocked down - only ranged
+    // weapons are blocked (see OnShootAttempt above). Lying down should still let you fight and cut.
 
     #endregion
 

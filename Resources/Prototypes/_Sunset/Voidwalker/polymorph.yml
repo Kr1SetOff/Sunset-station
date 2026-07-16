@@ -1,0 +1,15 @@
+# 🌇Sunset🌇 - admin "Make Voidwalker" verb (Content.Server/Administration/Systems/AdminVerbSystem.Antags.cs)
+# permanently swaps the target's body for MobVoidwalker, carrying their mind over - same mechanism
+# as any other polymorph, not a mind-role antag (Voidwalker has its own body/sprite/stats, so a
+# ForceMakeAntag-style role tag on their existing body wouldn't make sense).
+- type: polymorph
+  id: VoidwalkerPolymorph
+  configuration:
+    entity: MobVoidwalker
+    forced: true
+    duration: null
+    revertOnCrit: false
+    revertOnDeath: false
+    transferDamage: false
+    transferName: false
+    polymorphPopup: voidwalker-polymorph-popup

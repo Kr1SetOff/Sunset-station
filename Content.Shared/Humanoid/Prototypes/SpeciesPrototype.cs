@@ -216,6 +216,14 @@ public sealed partial class SpeciesPrototype : IPrototype
     [DataField]
     public ProtoId<RoleLoadoutPrototype>? Loadout = null;
 
+    /// <summary>
+    /// Sunset: if set, this species can only be selected by players whose sponsor tier is
+    /// at least this value. Null means no restriction. Enforced client-side (chargen dropdown)
+    /// and shared-side (HumanoidCharacterProfile.EnsureValid) to prevent bypass.
+    /// </summary>
+    [DataField]
+    public int? MinSponsorTier = null;
+
 }
 
 public enum SpeciesNaming : byte

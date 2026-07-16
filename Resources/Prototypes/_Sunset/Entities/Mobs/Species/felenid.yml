@@ -1,0 +1,64 @@
+# Anything Felenid specific goes here. Felenid reuses Human's body/organs entirely
+# (see the Body component below) - the only differences are appearance markings, scale,
+# and being small enough to be carried/stashed in a bag.
+- type: entity
+  save: false
+  id: BaseSpeciesPickupableFelenid
+  abstract: true
+  components:
+  - type: Item
+    size: Huge
+    allowDirectHandPickup: false # we do this to disallow directly picking them up from the ground
+    shape:
+    - 0, 0, 5, 5
+  - type: RestrictNestingItem
+    doAfter: 3.0
+  - type: MultiHandedItem
+  - type: CanEscapeInventory
+    baseResistTime: 4
+  - type: VisualPickupable
+    offsetFront: 0.0, -0.15
+    offsetBack: 0.0, 0.05
+  - type: PickupableSpeedRelay
+
+- type: entity
+  parent: [BaseMobSpeciesOrganic, BaseSpeciesPickupableFelenid, BaseInventoryFemaleJumpsuit]
+  id: BaseMobFelenid
+  name: Urist McHands
+  abstract: true
+  components:
+  - type: LanguageKnowledge
+    speaks:
+    - GalacticCommon
+    - SolCommon
+    understands:
+    - GalacticCommon
+    - SolCommon
+  - type: Absorbable
+  - type: Hunger
+  - type: Icon
+    sprite: Mobs/Species/Human/parts.rsi
+    state: full
+  - type: Thirst
+  - type: Butcherable
+    butcheringType: Spike
+    spawned:
+    - id: FoodMeatHuman
+      amount: 5
+  - type: HumanoidAppearance
+    species: Felenid
+    hideLayersOnEquip:
+    - Hair
+    - Snout
+  - type: Wagging
+  - type: Body
+    prototype: Human
+    requiredLegs: 2
+
+- type: entity
+  parent: [BaseSpeciesDummy, BaseInventoryFemaleJumpsuit]
+  id: AppearanceFelenid
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: HumanoidAppearance
+    species: Felenid

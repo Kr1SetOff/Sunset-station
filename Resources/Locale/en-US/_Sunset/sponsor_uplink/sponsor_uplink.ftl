@@ -15,6 +15,12 @@ store-category-sponsor-uplink-dept-science = Science
 store-category-sponsor-uplink-dept-civilian = Civilian
 store-category-sponsor-uplink-dept-representatives = Representatives
 
+store-category-sponsor-uplink-head-command = Captain Only
+store-category-sponsor-uplink-head-security = Head of Security Only
+store-category-sponsor-uplink-head-engineering = Chief Engineer Only
+store-category-sponsor-uplink-head-medical = Chief Medical Officer Only
+store-category-sponsor-uplink-head-cargo = Quartermaster Only
+
 sponsor-uplink-ui-title = Sponsor Uplink
 sponsor-uplink-ui-buy = Buy
 
