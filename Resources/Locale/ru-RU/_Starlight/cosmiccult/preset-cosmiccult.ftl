@@ -121,7 +121,7 @@ cosmiccult-rift-beginabsorb = Разлом начинает сливаться �
 cosmiccult-rift-beginpurge = Ваше освящение начинает изгонять пагубный разлом...
 
 cosmiccult-rift-absorb = { $NAME } поглощает разлом, и пагубный свет наделяет его тело силой!
-cosmiccult-rift-purge = { $NAME } изгоняет пагубный разлом из реальности!
+cosmiccult-rift-purge = Пагубный разлом изгнан из реальности!
 
 
 ## CHANTRY

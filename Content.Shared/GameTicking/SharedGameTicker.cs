@@ -176,10 +176,12 @@ namespace Content.Shared.GameTicking
 
             public string Role;
 
-            [DataField, NonSerialized]
+            // Sunset: was NonSerialized (never sent to the client) - the round-end credits
+            // sequence needs these client-side to group players by department/antag type.
+            [DataField]
             public string[] JobPrototypes;
 
-            [DataField, NonSerialized]
+            [DataField]
             public string[] AntagPrototypes;
 
             public NetEntity? PlayerNetEntity;
@@ -191,7 +193,35 @@ namespace Content.Shared.GameTicking
             public bool Observer;
 
             public bool Connected;
+
+            /// <summary>
+            /// Sunset: resolved sponsor tier (0 = none), used to group the round-end credits sequence by tier.
+            /// </summary>
+            [DataField]
+            public int SponsorTier;
         }
+
+        /// <summary>
+        /// Sunset: an admin's identity for the round-end credits sequence.
+        /// </summary>
+        [Serializable, NetSerializable, DataDefinition]
+        public partial struct RoundEndAdminInfo
+        {
+            [DataField]
+            public string Ckey;
+
+            [DataField]
+            public string? Rank;
+
+            [DataField]
+            public NetEntity? PlayerNetEntity;
+        }
+
+        /// <summary>
+        /// Sunset: active, non-stealth admins at round end. Populated separately from AllPlayersEndInfo
+        /// since an admin isn't necessarily a "player" with a mind/round-end role.
+        /// </summary>
+        public RoundEndAdminInfo[] AllAdminsEndInfo { get; set; } = Array.Empty<RoundEndAdminInfo>();
 
         public string GamemodeTitle { get; }
         public string RoundEndText { get; }

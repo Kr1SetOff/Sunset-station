@@ -8,6 +8,7 @@
     state: scalpel
   discipline: Biochemical
   tier: 1
+  position: 1,63
   cost: 4000
   recipeUnlocks:
   - BoneSetter
@@ -29,6 +30,7 @@
     state: beaker
   discipline: Biochemical
   tier: 1
+  position: 1,61
   cost: 5000
   recipeUnlocks:
   - GoldenJug
@@ -44,6 +46,7 @@
     state: mender
   discipline: Biochemical
   tier: 2
+  position: 2,60
   cost: 6000
   recipeUnlocks:
     - AutoMenderBrute
@@ -59,6 +62,7 @@
     state: icon
   discipline: Biochemical
   tier: 1
+  position: 1,62
   cost: 4000
   recipeUnlocks:
   - LeftArmCyber
@@ -82,6 +86,7 @@
     state: liver
   discipline: Biochemical
   tier: 1
+  position: 1,60
   cost: 4000
   recipeUnlocks:
   - BudgetCyberEyes
@@ -104,6 +109,7 @@
     state: advanced
   discipline: Biochemical
   tier: 2
+  position: 2,65
   cost: 7000
   recipeUnlocks:
   - Drill
@@ -125,6 +131,7 @@
     state: eye_implant_janitor
   discipline: Biochemical
   tier: 2
+  position: 2,62
   cost: 10000
   recipeUnlocks:
   - EyeImplantWelding
@@ -156,6 +163,7 @@
     state: icon
   discipline: Biochemical
   tier: 2
+  position: 2,61
   cost: 7500
   recipeUnlocks:
   - StasisBedMachineCircuitboard
@@ -174,6 +182,7 @@
     state: borg
   discipline: Biochemical
   tier: 2
+  position: 2,63
   cost: 5000
   recipeUnlocks:
   - BorgModuleAdvancedTopical
@@ -187,6 +196,7 @@
     state: autoinjector
   discipline: Biochemical
   tier: 2
+  position: 2,64
   cost: 5000
   recipeUnlocks:
   - LeftArmCyberReaper
@@ -208,6 +218,7 @@
     state: eyes_night
   discipline: Biochemical
   tier: 3
+  position: 3,62
   cost: 7680
   recipeUnlocks:
     - CyberEyeNightVision
@@ -226,6 +237,7 @@
     state: beakerbluespace
   discipline: Biochemical
   tier: 3
+  position: 3,60
   cost: 10000
   recipeUnlocks:
   - BluespaceBeaker
@@ -244,6 +256,7 @@
     state: syringe_gun
   discipline: Biochemical
   tier: 3
+  position: 3,63
   cost: 15000
   recipeUnlocks:
   - LauncherSyringe
@@ -259,6 +272,7 @@
     state: pod_0
   discipline: Biochemical
   tier: 3
+  position: 3,61
   cost: 25000
   recipeUnlocks:
   - CloningConsoleComputerCircuitboard

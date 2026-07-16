@@ -68,3 +68,32 @@
   id: SponsorUplinkDeptRepresentatives
   name: store-category-sponsor-uplink-dept-representatives
   priority: 17
+
+# Head-only tabs (20+) hold items reusing a department tab's job pool but restricted, on top of
+# that, to the one head-of-staff job for that department - e.g. Captain within Command, so a
+# HeadOfPersonnel (also Command) doesn't see Captain-exclusive listings. Granted in
+# SponsorUplinkSystem alongside (not instead of) the department tab.
+- type: storeCategory
+  id: SponsorUplinkHeadCommand
+  name: store-category-sponsor-uplink-head-command
+  priority: 20
+
+- type: storeCategory
+  id: SponsorUplinkHeadSecurity
+  name: store-category-sponsor-uplink-head-security
+  priority: 21
+
+- type: storeCategory
+  id: SponsorUplinkHeadEngineering
+  name: store-category-sponsor-uplink-head-engineering
+  priority: 22
+
+- type: storeCategory
+  id: SponsorUplinkHeadMedical
+  name: store-category-sponsor-uplink-head-medical
+  priority: 23
+
+- type: storeCategory
+  id: SponsorUplinkHeadCargo
+  name: store-category-sponsor-uplink-head-cargo
+  priority: 24

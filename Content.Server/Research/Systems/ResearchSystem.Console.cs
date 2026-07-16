@@ -97,19 +97,44 @@ public sealed partial class ResearchSystem
         if (!Resolve(uid, ref component, ref clientComponent, false))
             return;
 
-        ResearchConsoleBoundInterfaceState state;
+        // 🌇Sunset🌇 - branching tech tree: compute every technology's availability against the
+        // connected server's database (Researched/Available/PrereqsMet/Unavailable), reusing
+        // IsTechnologyAvailable so discipline support + tier gating still apply exactly as before -
+        // this only changes how the client draws things, not what's actually researchable.
+        var researches = new Dictionary<string, ResearchAvailability>();
+        var points = 0;
 
-        if (TryGetClientServer(uid, out _, out var serverComponent, clientComponent))
+        if (TryGetClientServer(uid, out var serverUid, out var serverComponent, clientComponent) &&
+            TryComp<TechnologyDatabaseComponent>(serverUid, out var database))
         {
-            var points = clientComponent.ConnectedToServer ? serverComponent.Points : 0;
-            state = new ResearchConsoleBoundInterfaceState(points);
+            points = clientComponent.ConnectedToServer ? serverComponent.Points : 0;
+            var disciplineTiers = GetDisciplineTiers(database);
+
+            foreach (var tech in PrototypeManager.EnumeratePrototypes<TechnologyPrototype>())
+            {
+                if (database.UnlockedTechnologies.Contains(tech.ID))
+                {
+                    researches[tech.ID] = ResearchAvailability.Researched;
+                }
+                else if (!IsTechnologyAvailable(database, tech, disciplineTiers))
+                {
+                    researches[tech.ID] = ResearchAvailability.Unavailable;
+                }
+                else
+                {
+                    researches[tech.ID] = serverComponent.Points >= tech.Cost
+                        ? ResearchAvailability.Available
+                        : ResearchAvailability.PrereqsMet;
+                }
+            }
         }
         else
         {
-            state = new ResearchConsoleBoundInterfaceState(default);
+            foreach (var tech in PrototypeManager.EnumeratePrototypes<TechnologyPrototype>())
+                researches[tech.ID] = ResearchAvailability.Unavailable;
         }
 
-        _uiSystem.SetUiState(uid, ResearchConsoleUiKey.Key, state);
+        _uiSystem.SetUiState(uid, ResearchConsoleUiKey.Key, new ResearchConsoleBoundInterfaceState(points, researches));
     }
 
     private void OnPointsChanged(EntityUid uid, ResearchConsoleComponent component, ref ResearchServerPointsChangedEvent args)

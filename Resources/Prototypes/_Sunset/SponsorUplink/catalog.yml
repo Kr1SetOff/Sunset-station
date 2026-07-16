@@ -19,6 +19,14 @@
   - SponsorUplinkMisc
 
 - type: listing
+  id: SponsorPhotoCamera
+  productEntity: PhotoCameraFilled
+  cost:
+    SponsorCoin: 20
+  categories:
+  - SponsorUplinkMisc
+
+- type: listing
   id: SponsorClownSuit
   productEntity: ClothingUniformJumpsuitClownis
   cost:
@@ -256,7 +264,7 @@
   cost:
     SponsorCoin: 35
   categories:
-  - SponsorUplinkDeptSecurity
+  - SponsorUplinkHeadSecurity
 
 - type: listing
   id: SponsorCardHelmet
@@ -464,7 +472,7 @@
   cost:
     SponsorCoin: 35
   categories:
-  - SponsorUplinkDeptMedical
+  - SponsorUplinkHeadMedical
 
 - type: listing
   id: SponsorUnidentifiedMantle
@@ -528,7 +536,7 @@
   cost:
     SponsorCoin: 35
   categories:
-  - SponsorUplinkDeptSecurity
+  - SponsorUplinkHeadSecurity
 
 - type: listing
   id: SponsorOldWomanClothes
@@ -768,7 +776,7 @@
   cost:
     SponsorCoin: 35
   categories:
-  - SponsorUplinkDeptCommand
+  - SponsorUplinkHeadCommand
 
 - type: listing
   id: SponsorSuperstarCopUniform
@@ -888,7 +896,7 @@
   cost:
     SponsorCoin: 40
   categories:
-  - SponsorUplinkDeptCommand
+  - SponsorUplinkHeadCommand
 
 - type: listing
   id: SponsorCommandCaptainJumpsuit
@@ -896,7 +904,7 @@
   cost:
     SponsorCoin: 35
   categories:
-  - SponsorUplinkDeptCommand
+  - SponsorUplinkHeadCommand
 
 - type: listing
   id: SponsorCaptainNobleJumpsuit
@@ -904,7 +912,7 @@
   cost:
     SponsorCoin: 35
   categories:
-  - SponsorUplinkDeptCommand
+  - SponsorUplinkHeadCommand
 
 - type: listing
   id: SponsorWhiteCaptainDuffel
@@ -912,7 +920,7 @@
   cost:
     SponsorCoin: 15
   categories:
-  - SponsorUplinkDeptCommand
+  - SponsorUplinkHeadCommand
 
 - type: listing
   id: SponsorWhiteCaptainGloves
@@ -920,7 +928,7 @@
   cost:
     SponsorCoin: 15
   categories:
-  - SponsorUplinkDeptCommand
+  - SponsorUplinkHeadCommand
 
 - type: listing
   id: SponsorWhiteCaptainBeret
@@ -928,7 +936,7 @@
   cost:
     SponsorCoin: 20
   categories:
-  - SponsorUplinkDeptCommand
+  - SponsorUplinkHeadCommand
 
 - type: listing
   id: SponsorWhiteCaptainMantle
@@ -936,7 +944,7 @@
   cost:
     SponsorCoin: 25
   categories:
-  - SponsorUplinkDeptCommand
+  - SponsorUplinkHeadCommand
 
 - type: listing
   id: SponsorWhiteCaptainShoulderMantle
@@ -944,7 +952,7 @@
   cost:
     SponsorCoin: 25
   categories:
-  - SponsorUplinkDeptCommand
+  - SponsorUplinkHeadCommand
 
 - type: listing
   id: SponsorWhiteCaptainArmor
@@ -952,7 +960,7 @@
   cost:
     SponsorCoin: 35
   categories:
-  - SponsorUplinkDeptCommand
+  - SponsorUplinkHeadCommand
 
 - type: listing
   id: SponsorWhiteCaptainCoat
@@ -960,7 +968,7 @@
   cost:
     SponsorCoin: 30
   categories:
-  - SponsorUplinkDeptCommand
+  - SponsorUplinkHeadCommand
 
 - type: listing
   id: SponsorWhiteCaptainJumpskirt
@@ -968,7 +976,7 @@
   cost:
     SponsorCoin: 30
   categories:
-  - SponsorUplinkDeptCommand
+  - SponsorUplinkHeadCommand
 
 - type: listing
   id: SponsorWhiteCaptainJumpsuit
@@ -976,7 +984,7 @@
   cost:
     SponsorCoin: 30
   categories:
-  - SponsorUplinkDeptCommand
+  - SponsorUplinkHeadCommand
 
 - type: listing
   id: SponsorWhiteCaptainTurtleneck
@@ -984,7 +992,7 @@
   cost:
     SponsorCoin: 25
   categories:
-  - SponsorUplinkDeptCommand
+  - SponsorUplinkHeadCommand
 
 - type: listing
   id: SponsorCEDMantle
@@ -1000,7 +1008,7 @@
   cost:
     SponsorCoin: 40
   categories:
-  - SponsorUplinkDeptEngineering
+  - SponsorUplinkHeadEngineering
 
 - type: listing
   id: SponsorQmEliteCloak
@@ -1008,7 +1016,7 @@
   cost:
     SponsorCoin: 40
   categories:
-  - SponsorUplinkDeptCargo
+  - SponsorUplinkHeadCargo
 
 - type: listing
   id: SponsorHosCommandJumpsuit
@@ -1016,7 +1024,7 @@
   cost:
     SponsorCoin: 35
   categories:
-  - SponsorUplinkDeptSecurity
+  - SponsorUplinkHeadSecurity
 
 - type: listing
   id: SponsorRoyalHosCloak
@@ -1024,7 +1032,7 @@
   cost:
     SponsorCoin: 40
   categories:
-  - SponsorUplinkDeptSecurity
+  - SponsorUplinkHeadSecurity
 
 - type: listing
   id: SponsorHosRetroCloak
@@ -1032,7 +1040,7 @@
   cost:
     SponsorCoin: 30
   categories:
-  - SponsorUplinkDeptSecurity
+  - SponsorUplinkHeadSecurity
 
 - type: listing
   id: SponsorHosGreyJumpsuit
@@ -1040,7 +1048,7 @@
   cost:
     SponsorCoin: 25
   categories:
-  - SponsorUplinkDeptSecurity
+  - SponsorUplinkHeadSecurity
 
 - type: listing
   id: SponsorHosBoatCloak
@@ -1048,7 +1056,7 @@
   cost:
     SponsorCoin: 30
   categories:
-  - SponsorUplinkDeptSecurity
+  - SponsorUplinkHeadSecurity
 
 - type: listing
   id: SponsorHosEliteCloak
@@ -1056,4 +1064,4 @@
   cost:
     SponsorCoin: 40
   categories:
-  - SponsorUplinkDeptSecurity
+  - SponsorUplinkHeadSecurity

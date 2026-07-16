@@ -1,0 +1,172 @@
+# 🌇Sunset🌇 - Voidwalker ghost role, ported (scoped down - see VoidwalkerComponent's doc comment for
+# what's simplified) from tg/station's /mob/living/basic/voidwalker. Spawn it in (entity spawn panel
+# or admin verb) and any ghost can take it over via the ghost role menu, same as any other ghost role.
+
+- type: entity
+  name: voidwalker
+  id: MobVoidwalker
+  parent: [ BaseMob, MobDamageable, MobPolymorphable ]
+  description: A glass-like entity from the void between stars. You probably shouldn't stare.
+  components:
+  - type: Voidwalker
+  - type: GhostRole
+    makeSentient: true
+    allowSpeech: false
+    allowMovement: true
+    name: ghost-role-information-voidwalker-name
+    description: ghost-role-information-voidwalker-description
+    rules: ghost-role-information-voidwalker-rules
+    mindRoles:
+    - MindRoleVoidwalker
+    # Sunset: multiple ghosts can request it, then a raffle (fair random pick after a countdown,
+    # not first-click) decides who actually gets it - same system as any other raffled ghost role.
+    raffle:
+      settings: default
+      decider: default
+  - type: GhostTakeoverAvailable
+  - type: Sprite
+    drawdepth: Mobs
+    noRot: true
+    sprite: _Sunset/Mobs/Voidwalker/voidwalker.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: voidwalker
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: voidwalker
+      Dead:
+        Base: voidwalker_stealthed
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 3.5
+    baseSprintSpeed: 4.5
+  # Sunset: native to the void - moves freely in zero-g instead of being helplessly stuck like a
+  # normal crew member would be without a jetpack/mag-boots.
+  - type: CanMoveInAir
+  - type: MovementAlwaysTouching
+  - type: Physics
+    bodyType: KinematicController
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 80
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: MobState
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      150: Dead
+  - type: Deathgasp
+  - type: CombatMode
+  - type: MeleeWeapon
+    hidden: true
+    soundHit:
+      path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
+    angle: 0
+    animation: WeaponArcClaw
+    damage:
+      types:
+        Structural: 15
+        Blunt: 12
+  - type: NpcFactionMember
+    factions:
+    - SimpleHostile
+  - type: Hands
+  - type: ComplexInteraction
+  # Sunset: Hands alone doesn't create any hand slots - they only get populated by hand-type limbs
+  # attaching from a Body, same as MobMonkey (also a non-human "basic" mob with working hands).
+  - type: Body
+    prototype: Primate
+    requiredLegs: 1
+  - type: Puller
+    needsHands: false
+  - type: PointLight
+    radius: 1.5
+    energy: 1.5
+    color: "#a64dff"
+  - type: Actions
+  - type: ActionGrant
+    actions:
+    - ActionVoidwalkerDash
+    - ActionVoidwalkerUnsettle
+    - ActionVoidwalkerTelepathy
+    - ActionVoidwalkerKidnap
+    - ActionVoidwalkerGlassify
+  - type: Tag
+    tags:
+    - CannotSuicide
+  - type: Speech
+    speechVerb: SmallMob
+  - type: NoSlip
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepHull
+
+# 🌇Sunset🌇 - raffled ghost-role spawn point dropped in open space by the VoidwalkerSpawn game rule
+# (same two-hop pattern as SpawnPointGhostDragon/SpawnPointGhostSpaceNinja): ghosts join the raffle
+# on THIS marker, and the winner immediately spawns as the actual MobVoidwalker at its position.
+- type: entity
+  categories: [ HideSpawnMenu, Spawner ]
+  parent: BaseAntagSpawner
+  id: SpawnPointGhostVoidwalker
+  components:
+  - type: GhostRole
+    name: ghost-role-information-voidwalker-name
+    description: ghost-role-information-voidwalker-description
+    rules: ghost-role-information-voidwalker-rules
+    important: true
+    mindRoles:
+    - MindRoleVoidwalker
+    raffle:
+      settings: default
+  - type: Sprite
+    sprite: _Sunset/Mobs/Voidwalker/voidwalker.rsi
+    layers:
+    - state: voidwalker
+
+# Sunset: implanted into a Kidnap victim's torso cavity slot - a plain BaseItem + Organ is all it
+# takes to be a valid target for the existing generic "Extract Item" cavity surgery, so it's
+# surgically removable with zero new surgery steps. See VoidwalkerSystem.OnKidnapDoAfter/Update.
+- type: entity
+  name: void tumor
+  id: OrganVoidTumor
+  parent: BaseItem
+  description: A cold, pulsing growth that shouldn't exist inside a living body.
+  components:
+  - type: Sprite
+    sprite: _Sunset/Effects/voidwalker_particles.rsi
+    state: void_2
+  - type: Organ
+  - type: Item
+    size: Tiny
+  - type: VoidTumor
+  - type: PointLight
+    radius: 1
+    energy: 0.75
+    color: "#642a94"
+
+- type: entity
+  name: cosmic skull
+  id: VoidwalkerCosmicSkull
+  parent: BaseItem
+  description: You can see and feel the surrounding space pulsing through it...
+  components:
+  - type: Sprite
+    sprite: _Sunset/Objects/Weapons/voidwalker_items.rsi
+    layers:
+    - state: cosmic_skull_charged
+  - type: Item
+    size: Normal
+  - type: PointLight
+    radius: 3
+    energy: 1.5
+    color: "#cc00cc"
+  - type: Tag
+    tags:
+    - Trash

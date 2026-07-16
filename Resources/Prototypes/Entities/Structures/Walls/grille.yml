@@ -85,6 +85,9 @@
             True: { visible: True }
             False: { visible: False }
     - type: AnimationPlayer
+    - type: Tag
+      tags:
+      - Grille
 
 - type: entity
   id: ClockworkGrille
@@ -186,6 +189,7 @@
   - type: Tag
     tags:
     - Diagonal
+    - Grille
   - type: Fixtures
     fixtures:
       fix1:
@@ -224,6 +228,7 @@
   - type: Tag
     tags:
     - Diagonal
+    - Grille
   - type: Fixtures
     fixtures:
       fix1:

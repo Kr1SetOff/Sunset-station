@@ -1,0 +1,58 @@
+<Document>
+  # Экспериментальная химия
+
+  Особые реагенты, разработанные (или украденные) лабораториями Sunset. Рецепты см. в карточках ниже.
+
+  ## Медицина
+
+  <GuideReagentEmbed Reagent="Mendazin"/>
+  <GuideReagentEmbed Reagent="Hemosynthin"/>
+  <GuideReagentEmbed Reagent="Pulmozin"/>
+  <GuideReagentEmbed Reagent="Dermalux"/>
+  <GuideReagentEmbed Reagent="Osteogen"/>
+  <GuideReagentEmbed Reagent="Toxinol"/>
+  <GuideReagentEmbed Reagent="Necrostat"/>
+
+  ## Утилитарные и весёлые
+
+  <GuideReagentEmbed Reagent="Velocitin"/>
+  <GuideReagentEmbed Reagent="Frostin"/>
+  <GuideReagentEmbed Reagent="Pyrosin"/>
+  <GuideReagentEmbed Reagent="Gigglin"/>
+  <GuideReagentEmbed Reagent="Vitaflora"/>
+
+  ## Блюспейс
+
+  Блюспейс-жидкость добывается измельчением ядра блюспейс-аномалии в блендере.
+
+  <GuideReagentEmbed Reagent="BluespaceLiquid"/>
+  <GuideReagentEmbed Reagent="BluespaceDistorter"/>
+
+  ## Запалм
+
+  Тяжёлая зажигательная химия. Держите огнетушитель под рукой.
+
+  <GuideReagentEmbed Reagent="Pyrosol"/>
+  <GuideReagentEmbed Reagent="Zapalm"/>
+
+  ## Семейство дарвиниума
+
+  Расовые сыворотки: 15 ед. в организме навсегда перестраивают существо в соответствующую расу — работает и на обезьянах с кобольдами. Все сыворотки, кроме самого дарвиниума, варятся из дарвиниума с добавкой, ассоциирующейся с расой.
+
+  <GuideReagentEmbed Reagent="Darwinium"/>
+  <GuideReagentEmbed Reagent="Dvorfinium"/>
+  <GuideReagentEmbed Reagent="Aielitinium"/>
+  <GuideReagentEmbed Reagent="Arachnidium"/>
+  <GuideReagentEmbed Reagent="Avalium"/>
+  <GuideReagentEmbed Reagent="Cycloritinium"/>
+  <GuideReagentEmbed Reagent="Drevenium"/>
+  <GuideReagentEmbed Reagent="Felinium"/>
+  <GuideReagentEmbed Reagent="Unatium"/>
+  <GuideReagentEmbed Reagent="Mothium"/>
+  <GuideReagentEmbed Reagent="Voxium"/>
+  <GuideReagentEmbed Reagent="Vulpanium"/>
+  <GuideReagentEmbed Reagent="Slimium"/>
+  <GuideReagentEmbed Reagent="Lagomorphium"/>
+  <GuideReagentEmbed Reagent="Resomium"/>
+  <GuideReagentEmbed Reagent="Rodentium"/>
+</Document>

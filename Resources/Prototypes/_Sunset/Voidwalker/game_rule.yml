@@ -1,0 +1,30 @@
+# 🌇Sunset🌇 - Voidwalker midround antag, wired exactly like DragonSpawn/NinjaSpawn: the rule drops
+# a raffled ghost-role spawn point (SpawnPointGhostVoidwalker) out in open space near the station,
+# ghosts enter the raffle from the ghost-role menu, and the winner instantly spawns as the
+# Voidwalker at that spot with the antag mind role attached. Rolls randomly midround via
+# ModerateAntagEventsTable (Resources/Prototypes/GameRules/events.yml) or manually via
+# "addgamerule VoidwalkerSpawn".
+- type: entity
+  parent: BaseGameRule
+  id: VoidwalkerSpawn
+  components:
+  - type: StationEvent
+    globalAnnouncement: false
+    weight: 2.5
+    earliestStart: 45
+    reoccurrenceDelay: 45
+    minimumPlayers: 30
+    duration: null
+  - type: SpaceSpawnRule
+    spawnDistance: 20
+  - type: AntagSpawner
+    prototype: MobVoidwalker
+  - type: AntagSelection
+    agentName: voidwalker-round-end-agent-name
+    definitions:
+    - spawnerPrototype: SpawnPointGhostVoidwalker
+      min: 1
+      max: 1
+      pickPlayer: false
+      mindRoles:
+      - MindRoleVoidwalker

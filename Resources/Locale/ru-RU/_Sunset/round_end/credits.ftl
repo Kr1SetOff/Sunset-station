@@ -1,0 +1,20 @@
+round-end-credits-sponsor-tier = Спонсоры — уровень { $tier }
+round-end-credits-ghosts = Призраки
+round-end-credits-admins = Администрация
+
+round-end-credits-joke-1 = Съел донат прямо с пола
+round-end-credits-joke-2 = Уверен, что дверь была открыта
+round-end-credits-joke-3 = Технически всё ещё жив
+round-end-credits-joke-4 = Однажды победит в вентиляции
+round-end-credits-joke-5 = Клоун ни в чём не виноват
+round-end-credits-joke-6 = Забыл, зачем зашёл в атмосферику
+round-end-credits-joke-7 = Считает синдикат тимой
+round-end-credits-joke-8 = Пронёс банан через ОБ
+round-end-credits-joke-9 = Спалился на камеру с самого начала
+round-end-credits-joke-10 = Официально признан кожаным мешком
+round-end-credits-joke-11 = До сих пор ищет капитанский диск
+round-end-credits-joke-12 = Взорвал станцию не специально
+round-end-credits-joke-13 = Верит, что робастнее всех на станции
+round-end-credits-joke-14 = Разговаривал с ИИ по душам
+round-end-credits-joke-15 = Опять забыл кислородный баллон
+round-end-credits-joke-16 = Легенда столовой номер один

@@ -1,0 +1,65 @@
+# 🌇Sunset🌇 - animated emotes: the chat trigger fires a normal emote, the server stamps it onto
+# AnimatedEmotesComponent (Content.Server/_Sunset/Emotes), and clients play a sprite animation
+# (Content.Client/_Sunset/Emotes). Granted to all playable species via BaseMobSpecies.
+- type: emote
+  id: SunsetEmoteJump
+  name: chat-emote-name-sunset-jump
+  chatMessages: ["chat-emote-msg-sunset-jump"]
+  whitelist:
+    components:
+    - AnimatedEmotes
+  chatTriggers:
+  - прыгает
+  - подпрыгивает
+  - прыгает.
+  - подпрыгивает.
+
+- type: emote
+  id: SunsetEmoteSpin
+  name: chat-emote-name-sunset-spin
+  chatMessages: ["chat-emote-msg-sunset-spin"]
+  whitelist:
+    components:
+    - AnimatedEmotes
+  chatTriggers:
+  - кружится
+  - крутится
+  - кружится.
+  - крутится.
+
+- type: emote
+  id: SunsetEmoteDance
+  name: chat-emote-name-sunset-dance
+  chatMessages: ["chat-emote-msg-sunset-dance"]
+  whitelist:
+    components:
+    - AnimatedEmotes
+  chatTriggers:
+  - танцует
+  - танцует.
+
+- type: emote
+  id: SunsetEmoteFlip
+  name: chat-emote-name-sunset-flip
+  chatMessages: ["chat-emote-msg-sunset-flip"]
+  whitelist:
+    components:
+    - AnimatedEmotes
+  chatTriggers:
+  - делает сальто
+  - сальто
+  - делает сальто.
+  - сальто.
+
+- type: emote
+  id: SunsetEmoteDoubleFlip
+  name: chat-emote-name-sunset-double-flip
+  chatMessages: ["chat-emote-msg-sunset-double-flip"]
+  whitelist:
+    components:
+    - AnimatedEmotes
+  chatTriggers:
+  - делает двойное сальто
+  - двойное сальто
+  - делает двойное сальто.
+  - двойное сальто.

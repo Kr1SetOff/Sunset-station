@@ -1,0 +1,15 @@
+<LayoutContainer xmlns="https://spacestation14.io"
+                 xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
+                 xmlns:research="clr-namespace:Content.Client._Sunset.Research"
+                 Margin="5"
+                 HorizontalExpand="False">
+    <BoxContainer Orientation="Vertical" SetSize="76 76">
+        <PanelContainer VerticalExpand="True" HorizontalExpand="True" Name="Panel">
+            <PanelContainer.PanelOverride>
+                <gfx:StyleBoxFlat BackgroundColor="#141F2F" BorderColor="#4972A1" BorderThickness="2" />
+            </PanelContainer.PanelOverride>
+            <research:ResearchTreeNodeButton Name="NodeButton" Access="Public" ModulateSelfOverride="#00000000" HorizontalExpand="True" VerticalExpand="True" />
+            <TextureRect Name="IconTexture" TextureScale="2 2" Stretch="KeepAspectCentered" />
+        </PanelContainer>
+    </BoxContainer>
+</LayoutContainer>

@@ -18,14 +18,14 @@
     sprite: _Sunset/Objects/Devices/boombox.rsi
     size: Large
     shape:
-    - 0,0,3,2
+    - 0,0,2,3
   - type: Appearance
   - type: ActivatableUI
     key: enum.JukeboxUiKey.Key
   - type: UserInterface
     interfaces:
         enum.JukeboxUiKey.Key:
-          type: JukeboxBoundUserInterface
+          type: BoomboxBoundUserInterface
   - type: Damageable
     damageContainer: StructuralInorganic
     damageModifierSet: Metallic

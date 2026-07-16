@@ -13,6 +13,7 @@
   - type: StationTracker
   - type: Railroadable
   - type: SurgeryTarget
+  - type: AnimatedEmotes # 🌇Sunset🌇 - jump/spin/dance/flip chat emotes
   - type: LanguageKnowledge
     speaks:
     - GalacticCommon

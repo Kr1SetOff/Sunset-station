@@ -8,6 +8,7 @@
     state: icon
   discipline: Arsenal
   tier: 1
+  position: 1,19
   cost: 5000
   recipeUnlocks:
   - WeaponProtoKineticAccelerator
@@ -29,6 +30,7 @@
     state: incendiarydisplay
   discipline: Arsenal
   tier: 1
+  position: 1,16
   cost: 10000
   recipeUnlocks:
   - BoxShotgunIncendiary
@@ -56,6 +58,7 @@
     state: icon
   discipline: Arsenal
   tier: 1
+  position: 1,22
   cost: 7500
   recipeUnlocks:
   - WeaponLaserCarbine
@@ -72,6 +75,7 @@
     state: beanbag
   discipline: Arsenal
   tier: 1
+  position: 1,18
   cost: 5000
   recipeUnlocks:
   - MagazineShotgunBeanbag
@@ -100,6 +104,7 @@
     state: uranium
   discipline: Arsenal
   tier: 1
+  position: 1,21
   cost: 7500
   recipeUnlocks:
   - MagazineRifleUranium
@@ -126,6 +131,7 @@
     state: icon
   discipline: Arsenal
   tier: 1
+  position: 1,15
   cost: 8000
   recipeUnlocks:
   - Truncheon
@@ -143,6 +149,7 @@
     state: payload-explosive-armed
   discipline: Arsenal
   tier: 1
+  position: 1,17
   cost: 10000
   recipeUnlocks:
   - SignallerAdvanced
@@ -165,6 +172,7 @@
     state: icon
   discipline: Arsenal
   tier: 1
+  position: 1,20
   cost: 5000
   recipeUnlocks:
   - ClothingBackpackElectropack
@@ -181,6 +189,7 @@
     state: icon
   discipline: Arsenal
   tier: 2
+  position: 2,17
   cost: 10000
   recipeUnlocks:
   - WeaponLaserCannon
@@ -197,6 +206,7 @@
     state: icon
   discipline: Arsenal
   tier: 2
+  position: 2,25
   cost: 10000
   recipeUnlocks:
   - WeaponXrayCannon
@@ -212,6 +222,7 @@
     state: display
   discipline: Arsenal
   tier: 2
+  position: 2,22
   cost: 7500
   recipeUnlocks:
   - PKAUpgradeDamage
@@ -232,6 +243,7 @@
     state: full
   discipline: Arsenal
   tier: 2
+  position: 2,16
   cost: 8000 # Starlight
   recipeUnlocks:
   - PowerCageRechargerCircuitboard
@@ -260,6 +272,7 @@
     state: icon
   discipline: Arsenal
   tier: 2
+  position: 2,18
   cost: 10000
   recipeUnlocks:
   - ClothingBackpackHarmpack
@@ -274,6 +287,7 @@
     state: icon
   discipline: Arsenal
   tier: 3
+  position: 3,19
   cost: 15000
   recipeUnlocks:
   - WeaponAdvancedLaser
@@ -291,6 +305,7 @@
     state: icon
   discipline: Arsenal
   tier: 3
+  position: 3,20
   cost: 15000
   recipeUnlocks:
   - WeaponLaserSvalinn
@@ -307,6 +322,7 @@
     state: icon
   discipline: Arsenal
   tier: 3
+  position: 3,15
   cost: 15000
   recipeUnlocks:
   - GrenadeEMP

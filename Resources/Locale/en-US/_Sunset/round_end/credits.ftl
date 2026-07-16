@@ -1,0 +1,20 @@
+round-end-credits-sponsor-tier = Sponsors — Tier { $tier }
+round-end-credits-ghosts = Ghosts
+round-end-credits-admins = Administration
+
+round-end-credits-joke-1 = Ate a donut straight off the floor
+round-end-credits-joke-2 = Swore the door was open
+round-end-credits-joke-3 = Technically still alive
+round-end-credits-joke-4 = Will win a maint fight someday
+round-end-credits-joke-5 = The clown did nothing wrong
+round-end-credits-joke-6 = Forgot why they went to atmospherics
+round-end-credits-joke-7 = Thinks the syndicate is a friend group
+round-end-credits-joke-8 = Smuggled a banana past security
+round-end-credits-joke-9 = Got caught on camera immediately
+round-end-credits-joke-10 = Officially certified meatbag
+round-end-credits-joke-11 = Still looking for the captain's disk
+round-end-credits-joke-12 = Did not mean to blow up the station
+round-end-credits-joke-13 = Believes they are the most robust crewmember
+round-end-credits-joke-14 = Had a heart-to-heart with the AI
+round-end-credits-joke-15 = Forgot the oxygen tank again
+round-end-credits-joke-16 = Cafeteria legend number one

@@ -1,0 +1,6 @@
+# 🌇Sunset🌇 - guidebook page for all Sunset experimental reagents; registered as a child of the
+# vanilla "Chemicals" entry (see Resources/Prototypes/Guidebook/chemicals.yml).
+- type: guideEntry
+  id: SunsetChemicals
+  name: guide-entry-sunset-chemicals
+  text: "/ServerInfo/_Sunset/Guidebook/SunsetChemicals.xml"

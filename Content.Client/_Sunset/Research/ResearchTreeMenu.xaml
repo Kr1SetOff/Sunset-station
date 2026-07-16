@@ -1,0 +1,43 @@
+<controls:ResearchTreeMenu
+    xmlns="https://spacestation14.io"
+    xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
+    xmlns:controls="clr-namespace:Content.Client._Sunset.Research"
+    Title="{Loc 'research-console-menu-title'}"
+    MinSize="1150 720"
+    SetSize="1400 860">
+    <BoxContainer Orientation="Vertical" HorizontalExpand="True" VerticalExpand="True">
+        <BoxContainer Orientation="Horizontal" HorizontalExpand="True" VerticalExpand="False" MinHeight="60" Margin="10">
+            <BoxContainer Orientation="Vertical" VerticalExpand="True" HorizontalExpand="True">
+                <RichTextLabel Name="ResearchAmountLabel" />
+                <RichTextLabel Name="MainDisciplineLabel" />
+                <Control VerticalExpand="True" />
+                <BoxContainer Name="TierDisplayContainer" Orientation="Horizontal" HorizontalExpand="True" VerticalAlignment="Bottom" />
+            </BoxContainer>
+            <BoxContainer Orientation="Vertical" VerticalExpand="True" HorizontalAlignment="Right">
+                <Button Name="ServerButton" Text="{Loc 'research-console-menu-server-selection-button'}" MinHeight="40" />
+            </BoxContainer>
+        </BoxContainer>
+        <BoxContainer Orientation="Horizontal" HorizontalExpand="True" VerticalExpand="True">
+            <BoxContainer Orientation="Vertical" VerticalExpand="True" HorizontalExpand="True" SizeFlagsStretchRatio="3" Margin="0 0 0 10">
+                <PanelContainer VerticalExpand="True" HorizontalExpand="True">
+                    <PanelContainer.PanelOverride>
+                        <gfx:StyleBoxFlat BackgroundColor="#0A0C12FF" BorderColor="#4972A1" BorderThickness="1" />
+                    </PanelContainer.PanelOverride>
+                    <controls:ResearchTreeCanvas Name="DragContainer" HorizontalExpand="True" VerticalExpand="True" MouseFilter="Pass" RectClipContent="True" />
+                    <Button Name="RecenterButton" Text="{Loc 'research-tree-recenter-button'}" MinHeight="36" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="6 -6" />
+                </PanelContainer>
+            </BoxContainer>
+            <!-- 🌇Sunset🌇 fix: without HorizontalExpand the stretch ratio is ignored and this whole
+                 column collapses to ~0px (ScrollContainer measures zero), which made the details
+                 panel invisible - "clicking a tech does nothing". MinWidth is belt-and-braces. -->
+            <PanelContainer SizeFlagsStretchRatio="1" HorizontalExpand="True" MinWidth="340">
+                <PanelContainer.PanelOverride>
+                    <gfx:StyleBoxFlat BackgroundColor="#1B1B1EFF" />
+                </PanelContainer.PanelOverride>
+                <ScrollContainer HorizontalExpand="True" VerticalExpand="True">
+                    <BoxContainer Name="InfoContainer" Orientation="Vertical" HorizontalExpand="True" />
+                </ScrollContainer>
+            </PanelContainer>
+        </BoxContainer>
+    </BoxContainer>
+</controls:ResearchTreeMenu>

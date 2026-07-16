@@ -1,0 +1,17 @@
+# 🌇Sunset🌇 - Voidwalker antag identity, mirroring Dragon's setup: a proper antag prototype +
+# mind role so the round-end summary/credits group it as a real antagonist instead of a generic
+# ghost-role free agent.
+- type: antag
+  id: Voidwalker
+  name: roles-antag-voidwalker-name
+  antagonist: true
+  objective: roles-antag-voidwalker-objective
+
+- type: entity
+  parent: BaseMindRoleAntag
+  id: MindRoleVoidwalker
+  name: Voidwalker Role
+  components:
+  - type: MindRole
+    antagPrototype: Voidwalker
+    exclusiveAntag: true

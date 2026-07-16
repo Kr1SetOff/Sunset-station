@@ -120,6 +120,21 @@ public sealed class SponsorUplinkSystem : EntitySystem
         ["Roboticist"] = "SponsorUplinkDeptScience",
     };
 
+    /// <summary>
+    /// Job id -> head-only tab, for the department tabs that also carry listings flavored for one
+    /// specific head of staff (Captain-only cloaks, HoS-only jumpsuits, etc). Granted on top of the
+    /// department tab above, and only to that exact job - a HeadOfPersonnel is Command too, but
+    /// shouldn't see Captain-exclusive items, so it's deliberately not listed here.
+    /// </summary>
+    private static readonly Dictionary<string, ProtoId<StoreCategoryPrototype>> JobHeadCategory = new()
+    {
+        ["Captain"] = "SponsorUplinkHeadCommand",
+        ["HeadOfSecurity"] = "SponsorUplinkHeadSecurity",
+        ["ChiefEngineer"] = "SponsorUplinkHeadEngineering",
+        ["ChiefMedicalOfficer"] = "SponsorUplinkHeadMedical",
+        ["Quartermaster"] = "SponsorUplinkHeadCargo",
+    };
+
     public override void Initialize()
     {
         base.Initialize();
@@ -149,6 +164,8 @@ public sealed class SponsorUplinkSystem : EntitySystem
             store.Categories = new HashSet<ProtoId<StoreCategoryPrototype>>(GeneralCategories);
             if (args.JobId != null && JobDepartmentCategory.TryGetValue(args.JobId, out var deptCategory))
                 store.Categories.Add(deptCategory);
+            if (args.JobId != null && JobHeadCategory.TryGetValue(args.JobId, out var headCategory))
+                store.Categories.Add(headCategory);
         }
 
         InsertIntoInventory(args.Mob, uplink);

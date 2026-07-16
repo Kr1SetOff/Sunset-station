@@ -1,0 +1,63 @@
+<controls:BoomboxMenu
+    xmlns="https://spacestation14.io"
+    xmlns:controls="clr-namespace:Content.Client._Sunset.Boombox"
+    xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
+    Title="{Loc 'boombox-menu-title'}"
+    MinSize="420 580"
+    SetSize="420 580">
+    <PanelContainer>
+        <PanelContainer.PanelOverride>
+            <gfx:StyleBoxFlat BackgroundColor="#12141FFF" />
+        </PanelContainer.PanelOverride>
+        <BoxContainer Orientation="Vertical">
+            <!--  Search bar  -->
+            <PanelContainer Margin="4,4,4,0">
+                <PanelContainer.PanelOverride>
+                    <gfx:StyleBoxFlat BackgroundColor="#1B1030FF" BorderColor="#FF2D95FF" BorderThickness="0,0,0,2" />
+                </PanelContainer.PanelOverride>
+                <BoxContainer Orientation="Horizontal" Margin="8,6,8,6">
+                    <LineEdit Name="SearchBox" Access="Public" HorizontalExpand="True"
+                              PlaceHolder="{Loc 'boombox-menu-search-placeholder'}" />
+                </BoxContainer>
+            </PanelContainer>
+
+            <Label Name="TrackCountLabel" Access="Public" Margin="8,4,8,2" FontColorOverride="#8FA3B8FF" />
+
+            <!--  Track list  -->
+            <PanelContainer Margin="4,0,4,4" VerticalExpand="True" SizeFlagsStretchRatio="8">
+                <PanelContainer.PanelOverride>
+                    <gfx:StyleBoxFlat BackgroundColor="#181B2AFF" BorderColor="#00E5FFFF" BorderThickness="1" />
+                </PanelContainer.PanelOverride>
+                <ItemList Name="MusicList" Access="Public" SelectMode="Button" Margin="3,3,3,3"
+                          HorizontalExpand="True" VerticalExpand="True" />
+            </PanelContainer>
+
+            <!--  Now playing  -->
+            <PanelContainer Margin="4,0,4,4">
+                <PanelContainer.PanelOverride>
+                    <gfx:StyleBoxFlat BackgroundColor="#1B1030FF" BorderColor="#FF2D95FF" BorderThickness="1" />
+                </PanelContainer.PanelOverride>
+                <BoxContainer Orientation="Vertical" Margin="8,6,8,6">
+                    <Label Name="SongSelected" Text="{Loc 'boombox-menu-nowplaying'}" FontColorOverride="#8FA3B8FF" />
+                    <Label Name="SongName" Text="---" FontColorOverride="#E8FBFFFF" />
+                    <Slider Name="PlaybackSlider" HorizontalExpand="True" />
+                    <Label Name="DurationLabel" Text="00:00 / 00:00" HorizontalAlignment="Right" FontColorOverride="#8FA3B8FF" />
+                </BoxContainer>
+            </PanelContainer>
+
+            <!--  Volume  -->
+            <BoxContainer Orientation="Horizontal" HorizontalExpand="True" Margin="8,0,8,4">
+                <Label Name="VolumeLabel" Text="{Loc 'jukebox-menu-volume'}" />
+                <Slider Name="VolumeSlider" HorizontalExpand="True" MinValue="-10" MaxValue="5" Value="0" />
+            </BoxContainer>
+
+            <!--  Transport controls  -->
+            <BoxContainer Orientation="Horizontal" HorizontalExpand="True" Margin="8,0,8,8">
+                <Button Name="PlayButton" Text="{Loc 'jukebox-menu-buttonplay'}" HorizontalExpand="True" />
+                <Button Name="StopButton" Text="{Loc 'jukebox-menu-buttonstop'}" HorizontalExpand="True" />
+                <Button Name="RepeatButton" Access="Public" ToggleMode="True"
+                        Text="{Loc 'boombox-menu-repeat-off'}" HorizontalExpand="True" />
+            </BoxContainer>
+        </BoxContainer>
+    </PanelContainer>
+</controls:BoomboxMenu>

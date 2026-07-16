@@ -8,6 +8,7 @@
     state: seedextractor
   discipline: CivilianServices
   tier: 1
+  position: 1,49
   cost: 5000
   recipeUnlocks:
   - SeedExtractorMachineCircuitboard
@@ -25,6 +26,7 @@
     state: base-open
   discipline: CivilianServices
   tier: 1
+  position: 1,48
   cost: 7500
   recipeUnlocks:
   - HamtrHarness
@@ -45,6 +47,7 @@
     state: cameracase
   discipline: CivilianServices
   tier: 1
+  position: 1,46
   cost: 5000
   recipeUnlocks:
   - SurveillanceCameraRouterCircuitboard
@@ -69,6 +72,7 @@
     state: television
   discipline: CivilianServices
   tier: 1
+  position: 1,45
   cost: 7500
   recipeUnlocks:
     - ComputerTelevisionCircuitboard
@@ -87,6 +91,7 @@
     state: display
   discipline: CivilianServices
   tier: 1
+  position: 1,50
   cost: 7500
   recipeUnlocks:
   - FatExtractorMachineCircuitboard
@@ -107,6 +112,7 @@
     state: astroice
   discipline: CivilianServices
   tier: 2
+  position: 2,48
   cost: 5000
   recipeUnlocks:
   - FauxTileAstroGrass
@@ -160,6 +166,7 @@
     state: advmop
   discipline: CivilianServices
   tier: 2
+  position: 2,45
   cost: 10000
   recipeUnlocks:
   - AdvMopItem
@@ -177,6 +184,7 @@
     state: base
   discipline: CivilianServices
   tier: 2
+  position: 2,49
   cost: 7500
   recipeUnlocks:
   - HonkerHarness
@@ -199,6 +207,7 @@
     state: mecha_bananamrtr
   discipline: CivilianServices
   tier: 2
+  position: 2,50
   cost: 6000
   recipeUnlocks:
   - MechEquipmentHonkerBananaMortar
@@ -216,6 +225,7 @@
     state: icon
   discipline: CivilianServices
   tier: 2
+  position: 2,46
   cost: 10000
   recipeUnlocks:
   - WeaponSprayNozzle
@@ -231,6 +241,7 @@
     state: display
   discipline: CivilianServices
   tier: 2
+  position: 2,47
   cost: 15000
   recipeUnlocks:
   - CargoTelepadMachineCircuitboard
@@ -247,6 +258,7 @@
     state: icon
   discipline: CivilianServices
   tier: 2
+  position: 2,51
   cost: 4000
   recipeUnlocks:
   - PushHorn
@@ -262,6 +274,7 @@
     state: icon
   discipline: CivilianServices
   tier: 3
+  position: 3,45
   cost: 10000
   recipeUnlocks:
   # Starlight edit start - Replace speed boots with speed legs

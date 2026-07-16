@@ -37,6 +37,10 @@
   description: An official-looking document bearing CentCom's seal.
   components:
   - type: Paper
+    stampState: paper_stamp-centcom
+    stampedBy:
+    - stampedName: stamp-component-stamped-name-centcom
+      stampedColor: "#006600"
     content: |
       ЦЕНТРАЛЬНОЕ КОМАНДОВАНИЕ НАНОТРЕЙЗЕН
       ОТДЕЛ СПЕЦИАЛЬНЫХ ОПЕРАЦИЙ

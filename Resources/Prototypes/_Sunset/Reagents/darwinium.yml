@@ -1,0 +1,426 @@
+# 🌇Sunset🌇 - the Darwinium family: hold 15u+ in your body and you're permanently rebuilt into
+# the matching species (works on monkeys/kobolds too - the classic "uplift the lab monkey" chem).
+# Every non-human variant is brewed FROM Darwinium plus something associated with that race.
+# Polymorph configs in Resources/Prototypes/_Sunset/Polymorphs/race_polymorphs.yml.
+
+- type: reagent
+  id: Darwinium
+  name: reagent-name-darwinium
+  group: Special
+  desc: reagent-desc-darwinium
+  physicalDesc: reagent-physical-desc-chalky
+  flavor: medicine
+  color: "#c17736"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:Polymorph
+        prototype: SunsetRacePolymorphHuman
+        conditions:
+        - !type:ReagentCondition
+          reagent: Darwinium
+          min: 15
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentCondition
+          reagent: Darwinium
+          min: 30
+        damage:
+          types:
+            Poison: 3
+      - !type:Vomit
+        conditions:
+        - !type:ReagentCondition
+          reagent: Darwinium
+          min: 30
+        probability: 0.15
+
+- type: reagent
+  id: Dvorfinium
+  name: reagent-name-dvorfinium
+  group: Special
+  desc: reagent-desc-dvorfinium
+  physicalDesc: reagent-physical-desc-chalky
+  flavor: medicine
+  color: "#b88a4f"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:Polymorph
+        prototype: SunsetRacePolymorphDwarf
+        conditions:
+        - !type:ReagentCondition
+          reagent: Dvorfinium
+          min: 15
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentCondition
+          reagent: Dvorfinium
+          min: 30
+        damage:
+          types:
+            Poison: 3
+
+- type: reagent
+  id: Aielitinium
+  name: reagent-name-aielitinium
+  group: Special
+  desc: reagent-desc-aielitinium
+  physicalDesc: reagent-physical-desc-chalky
+  flavor: medicine
+  color: "#a8d977"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:Polymorph
+        prototype: SunsetRacePolymorphElf
+        conditions:
+        - !type:ReagentCondition
+          reagent: Aielitinium
+          min: 15
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentCondition
+          reagent: Aielitinium
+          min: 30
+        damage:
+          types:
+            Poison: 3
+
+- type: reagent
+  id: Arachnidium
+  name: reagent-name-arachnidium
+  group: Special
+  desc: reagent-desc-arachnidium
+  physicalDesc: reagent-physical-desc-chalky
+  flavor: medicine
+  color: "#5c4a72"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:Polymorph
+        prototype: SunsetRacePolymorphArachnid
+        conditions:
+        - !type:ReagentCondition
+          reagent: Arachnidium
+          min: 15
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentCondition
+          reagent: Arachnidium
+          min: 30
+        damage:
+          types:
+            Poison: 3
+
+- type: reagent
+  id: Avalium
+  name: reagent-name-avalium
+  group: Special
+  desc: reagent-desc-avalium
+  physicalDesc: reagent-physical-desc-chalky
+  flavor: medicine
+  color: "#7fd4e8"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:Polymorph
+        prototype: SunsetRacePolymorphAvali
+        conditions:
+        - !type:ReagentCondition
+          reagent: Avalium
+          min: 15
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentCondition
+          reagent: Avalium
+          min: 30
+        damage:
+          types:
+            Poison: 3
+
+- type: reagent
+  id: Cycloritinium
+  name: reagent-name-cycloritinium
+  group: Special
+  desc: reagent-desc-cycloritinium
+  physicalDesc: reagent-physical-desc-chalky
+  flavor: medicine
+  color: "#8f8f8f"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:Polymorph
+        prototype: SunsetRacePolymorphCyclorite
+        conditions:
+        - !type:ReagentCondition
+          reagent: Cycloritinium
+          min: 15
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentCondition
+          reagent: Cycloritinium
+          min: 30
+        damage:
+          types:
+            Poison: 3
+
+- type: reagent
+  id: Drevenium
+  name: reagent-name-drevenium
+  group: Special
+  desc: reagent-desc-drevenium
+  physicalDesc: reagent-physical-desc-chalky
+  flavor: medicine
+  color: "#4a7a3a"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:Polymorph
+        prototype: SunsetRacePolymorphDiona
+        conditions:
+        - !type:ReagentCondition
+          reagent: Drevenium
+          min: 15
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentCondition
+          reagent: Drevenium
+          min: 30
+        damage:
+          types:
+            Poison: 3
+
+- type: reagent
+  id: Felinium
+  name: reagent-name-felinium
+  group: Special
+  desc: reagent-desc-felinium
+  physicalDesc: reagent-physical-desc-chalky
+  flavor: medicine
+  color: "#e8c17f"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:Polymorph
+        prototype: SunsetRacePolymorphFelenid
+        conditions:
+        - !type:ReagentCondition
+          reagent: Felinium
+          min: 15
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentCondition
+          reagent: Felinium
+          min: 30
+        damage:
+          types:
+            Poison: 3
+
+- type: reagent
+  id: Unatium
+  name: reagent-name-unatium
+  group: Special
+  desc: reagent-desc-unatium
+  physicalDesc: reagent-physical-desc-chalky
+  flavor: medicine
+  color: "#6a9946"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:Polymorph
+        prototype: SunsetRacePolymorphReptilian
+        conditions:
+        - !type:ReagentCondition
+          reagent: Unatium
+          min: 15
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentCondition
+          reagent: Unatium
+          min: 30
+        damage:
+          types:
+            Poison: 3
+
+- type: reagent
+  id: Mothium
+  name: reagent-name-mothium
+  group: Special
+  desc: reagent-desc-mothium
+  physicalDesc: reagent-physical-desc-chalky
+  flavor: medicine
+  color: "#d9cfa3"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:Polymorph
+        prototype: SunsetRacePolymorphMoth
+        conditions:
+        - !type:ReagentCondition
+          reagent: Mothium
+          min: 15
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentCondition
+          reagent: Mothium
+          min: 30
+        damage:
+          types:
+            Poison: 3
+
+- type: reagent
+  id: Voxium
+  name: reagent-name-voxium
+  group: Special
+  desc: reagent-desc-voxium
+  physicalDesc: reagent-physical-desc-chalky
+  flavor: medicine
+  color: "#87b06e"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:Polymorph
+        prototype: SunsetRacePolymorphVox
+        conditions:
+        - !type:ReagentCondition
+          reagent: Voxium
+          min: 15
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentCondition
+          reagent: Voxium
+          min: 30
+        damage:
+          types:
+            Poison: 3
+
+- type: reagent
+  id: Vulpanium
+  name: reagent-name-vulpanium
+  group: Special
+  desc: reagent-desc-vulpanium
+  physicalDesc: reagent-physical-desc-chalky
+  flavor: medicine
+  color: "#ad7d4e"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:Polymorph
+        prototype: SunsetRacePolymorphVulpkanin
+        conditions:
+        - !type:ReagentCondition
+          reagent: Vulpanium
+          min: 15
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentCondition
+          reagent: Vulpanium
+          min: 30
+        damage:
+          types:
+            Poison: 3
+
+- type: reagent
+  id: Slimium
+  name: reagent-name-slimium
+  group: Special
+  desc: reagent-desc-slimium
+  physicalDesc: reagent-physical-desc-bubbling
+  flavor: medicine
+  color: "#6ec3dd"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:Polymorph
+        prototype: SunsetRacePolymorphSlimePerson
+        conditions:
+        - !type:ReagentCondition
+          reagent: Slimium
+          min: 15
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentCondition
+          reagent: Slimium
+          min: 30
+        damage:
+          types:
+            Poison: 3
+
+- type: reagent
+  id: Lagomorphium
+  name: reagent-name-lagomorphium
+  group: Special
+  desc: reagent-desc-lagomorphium
+  physicalDesc: reagent-physical-desc-chalky
+  flavor: medicine
+  color: "#e0e0e0"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:Polymorph
+        prototype: SunsetRacePolymorphLagomorph
+        conditions:
+        - !type:ReagentCondition
+          reagent: Lagomorphium
+          min: 15
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentCondition
+          reagent: Lagomorphium
+          min: 30
+        damage:
+          types:
+            Poison: 3
+
+- type: reagent
+  id: Resomium
+  name: reagent-name-resomium
+  group: Special
+  desc: reagent-desc-resomium
+  physicalDesc: reagent-physical-desc-chalky
+  flavor: medicine
+  color: "#9fc4e0"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:Polymorph
+        prototype: SunsetRacePolymorphResomi
+        conditions:
+        - !type:ReagentCondition
+          reagent: Resomium
+          min: 15
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentCondition
+          reagent: Resomium
+          min: 30
+        damage:
+          types:
+            Poison: 3
+
+- type: reagent
+  id: Rodentium
+  name: reagent-name-rodentium
+  group: Special
+  desc: reagent-desc-rodentium
+  physicalDesc: reagent-physical-desc-chalky
+  flavor: medicine
+  color: "#b5a08c"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:Polymorph
+        prototype: SunsetRacePolymorphRodentia
+        conditions:
+        - !type:ReagentCondition
+          reagent: Rodentium
+          min: 15
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentCondition
+          reagent: Rodentium
+          min: 30
+        damage:
+          types:
+            Poison: 3

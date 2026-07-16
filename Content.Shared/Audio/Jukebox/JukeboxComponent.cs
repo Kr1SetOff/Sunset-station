@@ -29,6 +29,13 @@ public sealed partial class JukeboxComponent : Component
     public float Volume;
 
     /// <summary>
+    /// 🌇Sunset🌇 - if true, the selected song automatically restarts from the beginning once its
+    /// stream finishes on its own (as opposed to being stopped/paused by a player action).
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public bool Loop;
+
+    /// <summary>
     /// RSI state for the jukebox being on.
     /// </summary>
     [DataField]
@@ -81,6 +88,15 @@ public sealed class JukeboxSetTimeMessage(float songTime) : BoundUserInterfaceMe
 public sealed class JukeboxSetVolumeMessage(float volume) : BoundUserInterfaceMessage
 {
     public float Volume { get; } = volume;
+}
+
+/// <summary>
+/// 🌇Sunset🌇
+/// </summary>
+[Serializable, NetSerializable]
+public sealed class JukeboxSetLoopMessage(bool loop) : BoundUserInterfaceMessage
+{
+    public bool Loop { get; } = loop;
 }
 
 [Serializable, NetSerializable]

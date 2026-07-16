@@ -21,12 +21,7 @@ revenant-soul-yield-high = Душа { $target } сильнее обычного!
 revenant-soul-yield-average = Душа { $target } ничем не примечательна.
 revenant-soul-yield-low = Душа { $target } слабее обычного.
 
-revenant-soul-begin-harvest = { CAPITALIZE($target) } внезапно приподнимается в воздух, а { $gender ->
-    [male] его кожа становится пепельно-серой
-    [female] её кожа становится пепельно-серой
-    [epicene] их кожа становится пепельно-серой
-    *[other] его кожа становится пепельно-серой
-}.
+revenant-soul-begin-harvest = { CAPITALIZE($target) } внезапно приподнимается в воздух, а тело покрывается пепельно-серым оттенком.
 revenant-soul-finish-harvest = { CAPITALIZE($target) } падает на землю!
 
 # UI

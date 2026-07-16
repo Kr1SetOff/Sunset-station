@@ -370,17 +370,6 @@
       stock: 1
 
 - type: listing
-  id: ClothingUniformDama0965
-  productEntity: ClothingUniformDama0965
-  cost:
-    NTCredit: 2500
-  categories:
-    - SLFashionOther
-  conditions:
-    - !type:ListingLimitedStockCondition
-      stock: 1
-
-- type: listing
   id: BoxPancakes
   icon: { sprite: _Starlight/Interface/fashion.rsi, state: pastry }
   productEntity: BoxPancakes

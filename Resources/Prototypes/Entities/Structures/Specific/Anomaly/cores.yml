@@ -128,6 +128,16 @@
     energy: 3.5
     color: "#00ccff"
     castShadows: false
+  # 🌇Sunset🌇 - grindable into bluespace liquid, the base of the bluespace chem chain
+  # (see Resources/Prototypes/_Sunset/Reagents/unique.yml).
+  - type: Extractable
+    grindableSolutionName: core
+  - type: SolutionContainerManager
+    solutions:
+      core:
+        reagents:
+        - ReagentId: BluespaceLiquid
+          Quantity: 25
 
 - type: entity
   parent: BaseAnomalyCore

@@ -1,0 +1,370 @@
+# 🌇Sunset🌇 - reactions for all Sunset experimental chems. Note the race-transform recipes are
+# deliberately non-overlapping (single-additive ones use 3u of their additive) so mixing one race's
+# recipe can never accidentally satisfy another's reactant set.
+
+# --- bluespace chain ---
+
+- type: reaction
+  id: SunsetBluespaceDistorter
+  minTemp: 500
+  reactants:
+    BluespaceLiquid:
+      amount: 5
+    Cognizine:
+      amount: 2
+    UnstableMutagen:
+      amount: 2
+    Plasma:
+      amount: 5
+  products:
+    BluespaceDistorter: 3
+
+# --- zapalm chain ---
+
+- type: reaction
+  id: SunsetPyrosol
+  minTemp: 400
+  reactants:
+    CapsaicinOil:
+      amount: 2
+    Phosphorus:
+      amount: 1
+    Plasma:
+      amount: 1
+  products:
+    Pyrosol: 2
+
+- type: reaction
+  id: SunsetZapalm
+  minTemp: 500
+  reactants:
+    Napalm:
+      amount: 2
+    Pyrosol:
+      amount: 2
+    Iron:
+      amount: 1
+  products:
+    Zapalm: 2
+
+# --- darwinium family ---
+
+- type: reaction
+  id: SunsetDarwinium
+  reactants:
+    Cognizine:
+      amount: 1
+    UnstableMutagen:
+      amount: 1
+    Blood:
+      amount: 2
+  products:
+    Darwinium: 2
+
+- type: reaction
+  id: SunsetDvorfinium
+  reactants:
+    Darwinium:
+      amount: 2
+    Ale:
+      amount: 1
+  products:
+    Dvorfinium: 3
+
+- type: reaction
+  id: SunsetAielitinium
+  reactants:
+    Darwinium:
+      amount: 2
+    Aloe:
+      amount: 1
+    Milk:
+      amount: 1
+  products:
+    Aielitinium: 3
+
+- type: reaction
+  id: SunsetArachnidium
+  reactants:
+    Darwinium:
+      amount: 2
+    Blood:
+      amount: 2
+  products:
+    Arachnidium: 3
+
+- type: reaction
+  id: SunsetAvalium
+  reactants:
+    Darwinium:
+      amount: 2
+    TableSalt:
+      amount: 1
+    Nitrogen:
+      amount: 1
+  products:
+    Avalium: 3
+
+- type: reaction
+  id: SunsetCycloritinium
+  reactants:
+    Darwinium:
+      amount: 2
+    Silicon:
+      amount: 1
+  products:
+    Cycloritinium: 3
+
+- type: reaction
+  id: SunsetDrevenium
+  reactants:
+    Darwinium:
+      amount: 2
+    Aloe:
+      amount: 1
+    Water:
+      amount: 1
+  products:
+    Drevenium: 3
+
+- type: reaction
+  id: SunsetFelinium
+  reactants:
+    Darwinium:
+      amount: 2
+    Milk:
+      amount: 3
+  products:
+    Felinium: 3
+
+- type: reaction
+  id: SunsetUnatium
+  reactants:
+    Darwinium:
+      amount: 2
+    UncookedAnimalProteins:
+      amount: 3
+  products:
+    Unatium: 3
+
+- type: reaction
+  id: SunsetMothium
+  reactants:
+    Darwinium:
+      amount: 2
+    Phosphorus:
+      amount: 1
+  products:
+    Mothium: 3
+
+- type: reaction
+  id: SunsetVoxium
+  reactants:
+    Darwinium:
+      amount: 2
+    Nitrogen:
+      amount: 3
+  products:
+    Voxium: 3
+
+- type: reaction
+  id: SunsetVulpanium
+  reactants:
+    Darwinium:
+      amount: 2
+    UncookedAnimalProteins:
+      amount: 1
+    Milk:
+      amount: 1
+  products:
+    Vulpanium: 3
+
+- type: reaction
+  id: SunsetSlimium
+  reactants:
+    Darwinium:
+      amount: 2
+    Water:
+      amount: 1
+    Plasma:
+      amount: 1
+  products:
+    Slimium: 3
+
+- type: reaction
+  id: SunsetLagomorphium
+  reactants:
+    Darwinium:
+      amount: 2
+    JuiceCarrot:
+      amount: 1
+  products:
+    Lagomorphium: 3
+
+- type: reaction
+  id: SunsetResomium
+  reactants:
+    Darwinium:
+      amount: 2
+    Egg:
+      amount: 1
+  products:
+    Resomium: 3
+
+- type: reaction
+  id: SunsetRodentium
+  reactants:
+    Darwinium:
+      amount: 2
+    Flour:
+      amount: 1
+  products:
+    Rodentium: 3
+
+# --- medicine ---
+
+- type: reaction
+  id: SunsetMendazin
+  reactants:
+    Bicaridine:
+      amount: 1
+    Dermaline:
+      amount: 1
+    Aloe:
+      amount: 1
+  products:
+    Mendazin: 3
+
+- type: reaction
+  id: SunsetHemosynthin
+  reactants:
+    Iron:
+      amount: 1
+    Blood:
+      amount: 2
+    Milk:
+      amount: 1
+  products:
+    Hemosynthin: 3
+
+- type: reaction
+  id: SunsetPulmozin
+  minTemp: 370
+  reactants:
+    Dexalin:
+      amount: 2
+    Plasma:
+      amount: 1
+    Nitrogen:
+      amount: 1
+  products:
+    Pulmozin: 3
+
+- type: reaction
+  id: SunsetDermalux
+  reactants:
+    Dermaline:
+      amount: 2
+    Silver:
+      amount: 1
+    Aloe:
+      amount: 1
+  products:
+    Dermalux: 3
+
+- type: reaction
+  id: SunsetOsteogen
+  reactants:
+    Milk:
+      amount: 2
+    Silicon:
+      amount: 1
+    Bicaridine:
+      amount: 1
+  products:
+    Osteogen: 3
+
+- type: reaction
+  id: SunsetToxinol
+  reactants:
+    Dylovene:
+      amount: 2
+    Aloe:
+      amount: 1
+    Water:
+      amount: 1
+  products:
+    Toxinol: 3
+
+# --- utility/fun ---
+
+- type: reaction
+  id: SunsetVelocitin
+  reactants:
+    Epinephrine:
+      amount: 2
+    CapsaicinOil:
+      amount: 1
+    Iron:
+      amount: 1
+  products:
+    Velocitin: 3
+
+- type: reaction
+  id: SunsetFrostin
+  reactants:
+    Water:
+      amount: 2
+    Nitrogen:
+      amount: 2
+    TableSalt:
+      amount: 1
+  products:
+    Frostin: 3
+
+- type: reaction
+  id: SunsetPyrosin
+  reactants:
+    CapsaicinOil:
+      amount: 1
+    Phosphorus:
+      amount: 2
+    Water:
+      amount: 1
+  products:
+    Pyrosin: 3
+
+- type: reaction
+  id: SunsetGigglin
+  minTemp: 350
+  reactants:
+    Ale:
+      amount: 2
+    Milk:
+      amount: 2
+  products:
+    Gigglin: 3
+
+- type: reaction
+  id: SunsetVitaflora
+  reactants:
+    Aloe:
+      amount: 1
+    Milk:
+      amount: 1
+    Flour:
+      amount: 1
+  products:
+    Vitaflora: 3
+
+- type: reaction
+  id: SunsetNecrostat
+  reactants:
+    Cryoxadone:
+      amount: 1
+    TableSalt:
+      amount: 1
+    Water:
+      amount: 2
+  products:
+    Necrostat: 3

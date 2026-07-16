@@ -6,6 +6,7 @@
     state: wrench
   discipline: CivilianServices
   tier: 1
+  position: 1,47
   cost: 5000
   recipeUnlocks:
     - LeftArmCyberPersephone

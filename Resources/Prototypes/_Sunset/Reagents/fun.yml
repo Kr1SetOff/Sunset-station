@@ -1,0 +1,147 @@
+# 🌇Sunset🌇 - mechanically interesting utility/fun chems. Recipes in
+# _Sunset/Recipes/Reactions/sunset_chemistry.yml, listed in the guidebook page.
+
+# Combat pick-me-up: keeps oxygen and blood pressure up under fire. Crash hits hard past 20u.
+- type: reagent
+  id: Velocitin
+  name: reagent-name-velocitin
+  group: Medicine
+  desc: reagent-desc-velocitin
+  physicalDesc: reagent-physical-desc-crisp
+  flavor: medicine
+  color: "#ffcc33"
+  metabolisms:
+    Medicine:
+      effects:
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentCondition
+          reagent: Velocitin
+          max: 20
+        damage:
+          types:
+            Asphyxiation: -2
+            Bloodloss: -1
+      - !type:Jitter
+        probability: 0.3
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentCondition
+          reagent: Velocitin
+          min: 20
+        damage:
+          types:
+            Poison: 2
+      - !type:Vomit
+        conditions:
+        - !type:ReagentCondition
+          reagent: Velocitin
+          min: 20
+        probability: 0.15
+
+# Rapid coolant: dumps body heat fast - the antidote to being on fire. Overdose = hypothermia.
+- type: reagent
+  id: Frostin
+  name: reagent-name-frostin
+  group: Medicine
+  desc: reagent-desc-frostin
+  physicalDesc: reagent-physical-desc-crisp
+  flavor: medicine
+  color: "#a8e0ff"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:AdjustTemperature
+        amount: -15000
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentCondition
+          reagent: Frostin
+          min: 25
+        damage:
+          types:
+            Cold: 2
+
+# Slow-burn heater: warms the body up - handy after spacing or Frostin accidents. At 10u+
+# it lights you on fire.
+- type: reagent
+  id: Pyrosin
+  name: reagent-name-pyrosin
+  group: Pyrotechnic
+  desc: reagent-desc-pyrosin
+  physicalDesc: reagent-physical-desc-acrid
+  flavor: medicine
+  color: "#ff8833"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:AdjustTemperature
+        amount: 12000
+      - !type:Ignite
+        conditions:
+        - !type:ReagentCondition
+          reagent: Pyrosin
+          min: 10
+
+# Laughing tonic: the drinker giggles uncontrollably and gets slightly tipsy. Harmless. Mostly.
+- type: reagent
+  id: Gigglin
+  name: reagent-name-gigglin
+  group: Fun
+  desc: reagent-desc-gigglin
+  physicalDesc: reagent-physical-desc-bubbling
+  flavor: medicine
+  color: "#ffa8d5"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:Emote
+        emote: Laugh
+        probability: 0.3
+      - !type:Drunk
+        boozePower: 1
+
+# Concentrated ration paste: one sip fills the stomach and quenches thirst. Gorging causes nausea.
+- type: reagent
+  id: Vitaflora
+  name: reagent-name-vitaflora
+  group: Foods
+  desc: reagent-desc-vitaflora
+  physicalDesc: reagent-physical-desc-chalky
+  flavor: medicine
+  color: "#8fce6a"
+  metabolisms:
+    Food:
+      effects:
+      - !type:SatiateHunger
+        factor: 3
+      - !type:SatiateThirst
+        factor: 3
+      - !type:Vomit
+        conditions:
+        - !type:ReagentCondition
+          reagent: Vitaflora
+          min: 30
+        probability: 0.2
+
+# Cryo-stable preservative: dramatically slows body rot - buys time for far-gone patients.
+- type: reagent
+  id: Necrostat
+  name: reagent-name-necrostat
+  group: Medicine
+  desc: reagent-desc-necrostat
+  physicalDesc: reagent-physical-desc-cloudy
+  flavor: medicine
+  color: "#8899aa"
+  metabolisms:
+    Medicine:
+      effects:
+      - !type:ReduceRotting
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentCondition
+          reagent: Necrostat
+          min: 25
+        damage:
+          types:
+            Cold: 1

@@ -1,7 +1,7 @@
 - type: species
   id: Felionoid
   name: species-name-felionoid
-  roundStart: true
+  roundStart: false # Sunset: retired in favor of Felenid; kept non-selectable rather than deleted to avoid breaking existing characters/Protogen hybrid/etc.
   prototype: MobFelionoid
   sprites: MobFelionoidSprites
   markingLimits: MobFelionoidMarkingLimits

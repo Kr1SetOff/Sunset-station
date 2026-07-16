@@ -6,13 +6,13 @@ particle-accelerator-control-menu-alarm-control-1 = [bold][color=red]СИЛА Ч
 particle-accelerator-control-menu-alarm-control-2 = [bold][color=red]НЕИСПРАВНОСТЬ ОГРАНИЧИТЕЛЯ[/bold][/color]
 particle-accelerator-control-menu-scan-parts-button = Сканировать части
 particle-accelerator-control-menu-check-containment-field-warning = Перед началом работы убедитесь, что защитное поле активно
-particle-accelerator-control-menu-status-label = Статус: { $status }
+particle-accelerator-control-menu-status-label = Статус:
 particle-accelerator-control-menu-status-unknown = [font="Monospace"][color=red]Неизвестный[/color][/bold]
 particle-accelerator-control-menu-status-operational = Работает
 particle-accelerator-control-menu-status-incomplete = Не завершено
-particle-accelerator-control-menu-draw = Мощность: { $watts }/{ $lastReceive }
+particle-accelerator-control-menu-draw = Мощность:
 particle-accelerator-control-menu-draw-value = [font="Monospace"]{ $watts }/{ $lastReceive }[/font]
-particle-accelerator-control-menu-draw-not-available = Мощность: Н/Д
+particle-accelerator-control-menu-draw-not-available = Н/Д
 particle-accelerator-control-menu-flavor-left = Пожалуйста, держите клоуна подальше от этой консоли!
 particle-accelerator-control-menu-flavor-right = v 1.6
 
