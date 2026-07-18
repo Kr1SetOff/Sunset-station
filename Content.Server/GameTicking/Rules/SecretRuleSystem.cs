@@ -34,7 +34,8 @@ public sealed partial class SecretRuleSystem : GameRuleSystem<SecretRuleComponen
     protected override void Added(EntityUid uid, SecretRuleComponent component, GameRuleComponent gameRule, GameRuleAddedEvent args)
     {
         base.Added(uid, component, gameRule, args);
-        var weights = _configurationManager.GetCVar(CCVars.SecretWeightPrototype);
+        // 🌇Sunset🌇 - a per-rule override (e.g. the "Secret (Low-Pop)" preset) wins over the CVar.
+        var weights = component.WeightsOverride ?? new ProtoId<WeightedRandomPrototype>(_configurationManager.GetCVar(CCVars.SecretWeightPrototype));
 
         if (!TryPickPreset(weights, out var preset))
         {

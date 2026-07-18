@@ -8,6 +8,7 @@
   - type: AntagLoadProfileRule
   - type: GameRule
     minPlayers: 35
+    cancelPresetOnTooFewPlayers: false # 🌇Sunset🌇 - internally sub-rolled 50/50 by SunSetWizardOrDuelRule inside the Wizard preset; must not veto the round when the other 50% branch (single Wizard) would have been fine at low pop
   - type: AntagObjectives
     objectives:
     - WizardDuelistMeetObjective

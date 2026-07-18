@@ -29,6 +29,7 @@ public sealed partial class HealthAnalyzerControl : BoxContainer
     private readonly SpriteSystem _spriteSystem;
     private readonly IPrototypeManager _prototypes;
     private readonly IResourceCache _cache;
+    private readonly Content.Client._Sunset.Medical.BodyDiagramPanel _bodyDiagram; // 🌇Sunset🌇
 
     // Starlight-start: Printable health reports.
     public event Action? PrintReportPressed;
@@ -50,6 +51,10 @@ public sealed partial class HealthAnalyzerControl : BoxContainer
         _cache = dependencies.Resolve<IResourceCache>();
 
         PrintReportButton.OnPressed += _ => PrintReportPressed?.Invoke(); // Starlight-edit: Printable health reports.
+
+        // 🌇Sunset🌇 - per-body-part diagram, shown when the target has a full body.
+        _bodyDiagram = new Content.Client._Sunset.Medical.BodyDiagramPanel(_entityManager, _cache);
+        BodyDiagramContainer.AddChild(_bodyDiagram);
     }
 
     public void Populate(HealthAnalyzerUiState state)
@@ -154,6 +159,11 @@ public sealed partial class HealthAnalyzerControl : BoxContainer
         DrawMetabolizingChemicals(state.MetabolizingReagents); // Metabolizing Chemicals Section
         // Starlight end
         DrawDiagnosticGroups(sortedGroups, damagePerType);
+
+        // 🌇Sunset🌇 - per-body-part breakdown: body scanner consoles only, not the hand-held analyzer.
+        var showDiagram = state.IsBodyScanner && (state.ScanMode ?? false) && _bodyDiagram.Populate(target.Value);
+        BodyDiagramDivider.Visible = showDiagram;
+        BodyDiagramContainer.Visible = showDiagram;
     }
     // Starlight-start: Draw Damage Groups in a two column grid in their own boxes.
     private void DrawDiagnosticGroups(

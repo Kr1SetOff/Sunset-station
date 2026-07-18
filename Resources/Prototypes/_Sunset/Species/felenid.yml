@@ -10,6 +10,9 @@
   markingLimits: MobFelenidMarkingLimits
   dollPrototype: AppearanceFelenid
   skinColoration: HumanToned
+  # Felenids are reskinned humans - let them use every Human-restricted marking (hair, scars,
+  # tattoos, gauze, noses, undergarments...) on top of their own felinoid ears/tails.
+  markingsAlias: Human
   customName: true
   # DefaultWidth*DefaultHeight drives the actual on-screen X-scale (see HumanoidAppearanceSystem),
   # so Width is kept at 1 and Height carries the ~0.75x shrink to avoid squashing the sprite.

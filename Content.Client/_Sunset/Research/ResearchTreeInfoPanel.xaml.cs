@@ -49,7 +49,11 @@ public sealed partial class ResearchTreeInfoPanel : Control
             ResearchAvailability.Unavailable => Color.Crimson,
             _ => (Color?) null,
         };
-        TechnologyCostLabel.SetMessage(Loc.GetString("research-console-cost", ("amount", proto.Cost)), defaultColor: costColor);
+        // The loc string contains [color] markup - the string overload of SetMessage treats it as
+        // plain text and shows the raw tags, so parse it into a FormattedMessage first.
+        var costMsg = new Robust.Shared.Utility.FormattedMessage();
+        costMsg.AddMarkupOrThrow(Loc.GetString("research-console-cost", ("amount", proto.Cost)));
+        TechnologyCostLabel.SetMessage(costMsg, defaultColor: costColor);
 
         NoPrereqLabel.Visible = proto.TechnologyPrerequisites.Count == 0;
         PrereqsContainer.Visible = !NoPrereqLabel.Visible;

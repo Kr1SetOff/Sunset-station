@@ -1,0 +1,34 @@
+# 🌇Sunset🌇 - Malfunctioning AI game rule. Reachable two ways:
+#  1. Admin-granted (AdminVerbSystem.Antags.cs - ForceMakeAntag<MalfAiRuleComponent>), which directly
+#     assigns the target and skips pool selection entirely.
+#  2. Automatic: bonus-rolled by SunSetBonusAntagsRule (GameRules/bonus_antags.yml) alongside
+#     Devil/Ninja/Brighteye. min/max are both 1, so AntagSelectionSystem.API's headcount clamp always
+#     targets exactly one - playerRatio is irrelevant here and left at a nominal value.
+# The Whitelist restricts candidates to entities with StationAiHeldComponent (i.e. someone actually
+# playing the Station AI job right now) - law zero only means anything on a real AI, and
+# AntagSelectionSystem.IsEntityValid's non-humanoid/no-hands rejection has a matching carve-out for
+# this component so a real AI can pass the pool filter at all. If no one's playing AI, the roll just
+# silently finds no candidate - minPlayers 0 + cancelPresetOnTooFewPlayers false means that never
+# blocks or cancels the round either way.
+- type: entity
+  parent: BaseGameRule
+  id: MalfAi
+  components:
+  - type: GameRule
+    minPlayers: 0
+    cancelPresetOnTooFewPlayers: false
+  - type: MalfAiRule
+  - type: AntagSelection
+    agentName: malf-ai-round-end-agent-name
+    definitions:
+    - prefRoles: [ MalfAi ]
+      min: 1
+      max: 1
+      playerRatio: 100
+      allowNonHumans: true
+      multiAntagSetting: None
+      whitelist:
+        components:
+        - StationAiHeld
+      mindRoles:
+      - MindRoleMalfAi

@@ -1,0 +1,151 @@
+# 🌇Sunset🌇 - blood worm action bar. Events in Content.Shared._Sunset.BloodWorm, handlers in
+# Content.Server._Sunset.BloodWorm.BloodWormSystem. Icons come straight from tg's
+# actions_blood_worm.dmi (already converted to RSI).
+
+- type: entity
+  parent: BaseAction
+  id: ActionBloodWormLeech
+  name: Leech Blood
+  description: Latch onto a creature with your teeth and drain its blood. Blood fuels your growth and knits your wounds.
+  components:
+  - type: Action
+    useDelay: 5
+    itemIconStyle: BigAction
+    icon:
+      sprite: _Sunset/Interface/Actions/actions_blood_worm.rsi
+      state: leech_blood
+  - type: TargetAction
+    range: 1.5
+  - type: EntityTargetAction
+    canTargetSelf: false
+    whitelist:
+      components:
+      - Bloodstream
+    event: !type:BloodWormLeechEvent
+
+- type: entity
+  parent: BaseAction
+  id: ActionBloodWormMatureHatchling
+  name: Mature
+  description: Cocoon up and grow into a juvenile blood worm. Requires 500 units of consumed blood.
+  components:
+  - type: Action
+    itemIconStyle: BigAction
+    icon:
+      sprite: _Sunset/Interface/Actions/actions_blood_worm.rsi
+      state: mature_hatchling
+  - type: InstantAction
+    event: !type:BloodWormMatureEvent
+
+- type: entity
+  parent: BaseAction
+  id: ActionBloodWormMatureJuvenile
+  name: Mature
+  description: Cocoon up and grow into an adult blood worm. Requires 1500 units of consumed blood in total.
+  components:
+  - type: Action
+    itemIconStyle: BigAction
+    icon:
+      sprite: _Sunset/Interface/Actions/actions_blood_worm.rsi
+      state: mature_juvenile
+  - type: InstantAction
+    event: !type:BloodWormMatureEvent
+
+- type: entity
+  parent: BaseAction
+  id: ActionBloodWormSpit
+  name: Spit Blood
+  description: Spit corrosive blood at your target in exchange for your own health.
+  components:
+  - type: Action
+    useDelay: 4
+    itemIconStyle: BigAction
+    icon:
+      sprite: _Sunset/Interface/Actions/actions_blood_worm.rsi
+      state: spit_blood
+  - type: TargetAction
+    range: 10
+    checkCanAccess: false
+  - type: WorldTargetAction
+    event: !type:BloodWormSpitEvent
+
+- type: entity
+  parent: BaseAction
+  id: ActionBloodWormInvade
+  name: Invade Corpse
+  description: Crawl into a humanoid corpse with blood still in its veins and puppet it as your host.
+  components:
+  - type: Action
+    useDelay: 5
+    itemIconStyle: BigAction
+    icon:
+      sprite: _Sunset/Interface/Actions/actions_blood_worm.rsi
+      state: invade_corpse
+  - type: TargetAction
+    range: 1.5
+  - type: EntityTargetAction
+    canTargetSelf: false
+    whitelist:
+      components:
+      - HumanoidAppearance
+    event: !type:BloodWormInvadeEvent
+
+- type: entity
+  parent: BaseAction
+  id: ActionBloodWormLeaveHost
+  name: Leave Host
+  description: Abandon your host body. It will not survive your departure.
+  components:
+  - type: Action
+    itemIconStyle: BigAction
+    icon:
+      sprite: _Sunset/Interface/Actions/actions_blood_worm.rsi
+      state: leave_host
+  - type: InstantAction
+    event: !type:BloodWormLeaveHostEvent
+
+- type: entity
+  parent: BaseAction
+  id: ActionBloodWormInject
+  name: Inject Blood
+  description: Inject your blood into the damaged tissues of your host, healing them in exchange for your own health.
+  components:
+  - type: Action
+    useDelay: 30
+    itemIconStyle: BigAction
+    icon:
+      sprite: _Sunset/Interface/Actions/actions_blood_worm.rsi
+      state: inject_blood
+  - type: InstantAction
+    event: !type:BloodWormInjectEvent
+
+- type: entity
+  parent: BaseAction
+  id: ActionBloodWormReviveHost
+  name: Revive Host
+  description: Restart the blood circulation of your host, bringing them back to life.
+  components:
+  - type: Action
+    checkCanInteract: false # the puppeted body is MobState.Dead while this is usable
+    useDelay: 30
+    itemIconStyle: BigAction
+    icon:
+      sprite: _Sunset/Interface/Actions/actions_blood_worm.rsi
+      state: revive_host
+  - type: InstantAction
+    event: !type:BloodWormReviveHostEvent
+
+- type: entity
+  parent: BaseAction
+  id: ActionBloodWormReproduce
+  name: Reproduce
+  description: Lay an egg cocoon that hatches into a new blood worm. Costs 500 units of consumed blood.
+  components:
+  - type: Action
+    useDelay: 30
+    itemIconStyle: BigAction
+    icon:
+      sprite: _Sunset/Interface/Actions/actions_blood_worm.rsi
+      state: reproduce
+  - type: InstantAction
+    event: !type:BloodWormReproduceEvent

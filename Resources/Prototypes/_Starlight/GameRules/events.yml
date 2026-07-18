@@ -140,6 +140,7 @@
     - type: RuleGrids
     - type: GameRule
       minPlayers: 20
+      cancelPresetOnTooFewPlayers: false # 🌇Sunset🌇 - bonus-rolled independently of the main mode (40% chance via SunSetBonusAntagsRule); must not veto the whole round start on a small server
     - type: BrighteyeRule
     - type: SubRule
       table: !type:GroupSelector

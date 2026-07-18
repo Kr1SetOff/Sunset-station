@@ -1,0 +1,97 @@
+# 🌇Sunset🌇 - Malfunctioning AI module store: the CPU currency, the two tg-style module categories
+# (destructive / utility) and the module listings. Costs mirror tgstation's malf_ai_modules.dm.
+
+- type: currency
+  id: MalfCpu
+  displayName: store-currency-display-malf-cpu
+  canWithdraw: false
+
+- type: storeCategory
+  id: MalfAiDestructive
+  name: store-category-malf-destructive
+
+- type: storeCategory
+  id: MalfAiUtility
+  name: store-category-malf-utility
+
+# --- Destructive ---
+
+# tg: 130 CPU, one purchase, gated behind 10 hacked APCs (enforced server-side on activation).
+- type: listing
+  id: MalfAiModuleDoomsday
+  name: malf-ai-module-doomsday-name
+  description: malf-ai-module-doomsday-desc
+  icon: { sprite: Objects/Devices/nuke.rsi, state: nuclearbomb_timing }
+  productAction: ActionMalfAiDoomsday
+  cost:
+    MalfCpu: 130
+  categories:
+  - MalfAiDestructive
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+# tg: 30 CPU - close and bolt every airlock on the station for 90 seconds.
+- type: listing
+  id: MalfAiModuleLockdown
+  name: malf-ai-module-lockdown-name
+  description: malf-ai-module-lockdown-desc
+  icon: { sprite: Interface/Actions/actions_ai.rsi, state: bolt_door }
+  productAction: ActionMalfAiLockdown
+  cost:
+    MalfCpu: 30
+  categories:
+  - MalfAiDestructive
+
+# tg: 20 CPU, two uses - overheat a machine into a small explosion.
+- type: listing
+  id: MalfAiModuleOverloadMachine
+  name: malf-ai-module-overload-name
+  description: malf-ai-module-overload-desc
+  icon: { sprite: Interface/Actions/actions_ai.rsi, state: door_overcharge_on }
+  productAction: ActionMalfAiOverloadMachine
+  cost:
+    MalfCpu: 20
+  categories:
+  - MalfAiDestructive
+
+# tg: 15 CPU, three uses - blow a chunk of the station's lighting.
+- type: listing
+  id: MalfAiModuleBlackout
+  name: malf-ai-module-blackout-name
+  description: malf-ai-module-blackout-desc
+  icon: { sprite: Objects/Power/light_tube.rsi, state: broken }
+  productAction: ActionMalfAiBlackout
+  cost:
+    MalfCpu: 15
+  categories:
+  - MalfAiDestructive
+
+# tg: 25 CPU, one purchase - detonate every RCD on the station.
+- type: listing
+  id: MalfAiModuleDestroyRcds
+  name: malf-ai-module-destroy-rcds-name
+  description: malf-ai-module-destroy-rcds-desc
+  icon: { sprite: Objects/Tools/rcd.rsi, state: icon }
+  productAction: ActionMalfAiDestroyRcds
+  cost:
+    MalfCpu: 25
+  categories:
+  - MalfAiDestructive
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+# --- Utility ---
+
+# tg: 20 CPU ("Targeted Safeties Override") - remotely emag a device, three uses per purchase.
+- type: listing
+  id: MalfAiModuleOverrideSafeties
+  name: malf-ai-module-safeties-name
+  description: malf-ai-module-safeties-desc
+  icon: { sprite: Objects/Tools/emag.rsi, state: icon }
+  productAction: ActionMalfAiOverrideSafeties
+  cost:
+    MalfCpu: 20
+  categories:
+  - MalfAiUtility

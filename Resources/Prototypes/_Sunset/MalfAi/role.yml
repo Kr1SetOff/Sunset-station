@@ -1,0 +1,20 @@
+# 🌇Sunset🌇 - Malfunctioning AI antagonist (the SS13 "malf"), admin-granted via the antag menu.
+# See Content.Server._Sunset.MalfAi.
+
+- type: antag
+  id: MalfAi
+  name: roles-antag-malf-ai-name
+  antagonist: true
+  setPreference: false # admin-only antag - never rolled at round start, so no lobby preference.
+  objective: roles-antag-malf-ai-objective
+
+- type: entity
+  parent: BaseMindRoleAntag
+  id: MindRoleMalfAi
+  name: Malfunctioning AI Role
+  components:
+  - type: MindRole
+    antagPrototype: MalfAi
+    exclusiveAntag: true
+    subtype: role-subtype-malf-ai
+  - type: MalfAiRole

@@ -4,6 +4,7 @@
 
 # Роль / антаг
 roles-antag-spy-name = Шпион
+guide-entry-spy = Шпион
 roles-antag-spy-objective = Принимайте контракты от куратора, выполняйте их и выживите.
 role-subtype-spy = Шпион
 spy-round-end-agent-name = шпион

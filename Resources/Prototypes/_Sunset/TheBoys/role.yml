@@ -5,12 +5,17 @@
 # (added in code by TheBoysRuleSystem, see objectives.yml); the other four just get a flavor
 # team-briefing message.
 
+# 🌇Sunset🌇 - playtime requirements: curated narrative roles that carry a whole gamemode -
+# 20h for the team, 30h for Butcher (the leader with the actual kill objective).
 - type: antag
   id: TheBoysButcher
   name: roles-antag-theboys-butcher-name
   antagonist: true
   setPreference: true
   objective: roles-antag-theboys-butcher-objective
+  requirements:
+  - !type:OverallPlaytimeRequirement
+    time: 30h
 
 - type: antag
   id: TheBoysFrenchie
@@ -18,6 +23,9 @@
   antagonist: true
   setPreference: true
   objective: roles-antag-theboys-frenchie-objective
+  requirements:
+  - !type:OverallPlaytimeRequirement
+    time: 20h
 
 - type: antag
   id: TheBoysHughie
@@ -25,6 +33,9 @@
   antagonist: true
   setPreference: true
   objective: roles-antag-theboys-hughie-objective
+  requirements:
+  - !type:OverallPlaytimeRequirement
+    time: 20h
 
 - type: antag
   id: TheBoysMothersMilk
@@ -32,6 +43,9 @@
   antagonist: true
   setPreference: true
   objective: roles-antag-theboys-mothersmilk-objective
+  requirements:
+  - !type:OverallPlaytimeRequirement
+    time: 20h
 
 - type: antag
   id: TheBoysKimiko
@@ -39,6 +53,9 @@
   antagonist: true
   setPreference: true
   objective: roles-antag-theboys-kimiko-objective
+  requirements:
+  - !type:OverallPlaytimeRequirement
+    time: 20h
 
 - type: entity
   parent: BaseMindRoleAntag

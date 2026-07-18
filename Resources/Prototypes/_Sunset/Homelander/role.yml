@@ -8,6 +8,11 @@
   antagonist: true
   setPreference: true
   objective: roles-antag-homelander-objective
+  # 🌇Sunset🌇 - a station-wide power fantasy that can single-handedly decide the round: reserved
+  # for genuinely experienced players.
+  requirements:
+  - !type:OverallPlaytimeRequirement
+    time: 40h
 
 - type: entity
   parent: BaseMindRoleAntag

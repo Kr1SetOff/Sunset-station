@@ -1,0 +1,4 @@
+- files: ["enter_blood.ogg", "exit_blood.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Taken from tgstation (sound/effects/magic)"
+  source: "https://github.com/tgstation/tgstation"

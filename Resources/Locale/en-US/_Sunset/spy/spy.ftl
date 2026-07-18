@@ -4,6 +4,7 @@
 
 # Role / antag
 roles-antag-spy-name = Spy
+guide-entry-spy = Spy
 roles-antag-spy-objective = Accept contracts from your handler, complete them, and survive.
 role-subtype-spy = Spy
 spy-round-end-agent-name = spy

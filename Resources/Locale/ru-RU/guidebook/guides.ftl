@@ -69,6 +69,7 @@ guide-entry-bartender = Бармен
 guide-entry-chef = Шеф
 guide-entry-medical = Медицина
 guide-entry-medicaldoctor = Доктор
+guide-entry-surgery = Хирургия
 guide-entry-chemist = Химик
 guide-entry-brute = Продвинутое лечение механических повреждений
 guide-entry-botanicals = Ботаника

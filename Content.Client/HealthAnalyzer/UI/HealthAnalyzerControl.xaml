@@ -73,6 +73,15 @@
         Orientation="Vertical">
     </BoxContainer>
 
+    <!-- 🌇Sunset🌇 - per-body-part breakdown (populated in code, see BodyDiagramPanel) -->
+    <PanelContainer Name="BodyDiagramDivider" Visible="False" StyleClasses="LowDivider" />
+    <BoxContainer
+        Name="BodyDiagramContainer"
+        Visible="False"
+        Margin="0 5 0 5"
+        Orientation="Vertical">
+    </BoxContainer>
+
     <!-- Starlight begin - metabolizing chems section of ui -->
     <PanelContainer Name="ChemicalsDivider" Visible="False" StyleClasses="LowDivider" />
 

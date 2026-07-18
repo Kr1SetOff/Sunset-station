@@ -42,7 +42,7 @@
     - purrfus
     - service
     - cargo
- #   - security Currently admeme only
+    - security # 🌇Sunset🌇 - selectable by borg players; gated by its 10h Security DepartmentTimeRequirement (see _Starlight/borg_types.yml)
   # Starlight-end
 
 - type: entity

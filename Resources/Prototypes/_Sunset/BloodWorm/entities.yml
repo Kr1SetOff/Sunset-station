@@ -1,0 +1,377 @@
+# 🌇Sunset🌇 - blood worm mobs and structures, ported from tg/station
+# (code/modules/antagonists/blood_worm). Three growth stages with tg's health/damage numbers,
+# an egg cocoon that hatches new ghost-role worms, and a raffled spawn point for admins/events.
+
+- type: entity
+  id: BaseMobBloodWorm
+  parent: [ BaseMob, MobDamageable, MobPolymorphable ]
+  abstract: true
+  components:
+  - type: GhostRole
+    makeSentient: true
+    allowSpeech: true
+    allowMovement: true
+    name: ghost-role-information-blood-worm-name
+    description: ghost-role-information-blood-worm-description
+    rules: ghost-role-information-blood-worm-rules
+    mindRoles:
+    - MindRoleBloodWorm
+    # Sunset: per-role sponsor odds - tier 2 gets +50%, higher tiers a bit more
+    # (see GhostRoleRaffles/deciders.yml).
+    raffle:
+      settings: default
+      decider: sunsetBloodWormRaffle
+  - type: GhostTakeoverAvailable
+  - type: MobState
+  - type: Deathgasp
+  - type: CombatMode
+  - type: Damageable
+    damageContainer: Biological
+    damageModifierSet: SunsetBloodWorm
+  - type: NpcFactionMember
+    factions:
+    - SimpleHostile
+  - type: Physics
+    bodyType: KinematicController
+  - type: MovementAlwaysTouching
+  - type: Speech
+    speechVerb: SmallMob
+  - type: Actions
+  - type: Alerts
+  - type: Puller
+    needsHands: false
+  - type: Tag
+    tags:
+    - CannotSuicide
+  - type: NoSlip
+  - type: PointLight
+    radius: 1.2
+    energy: 0.8
+    color: "#aa1111"
+
+# tg: 80 HP, tiny, ventcrawler, bite 12-14, the fast sneaky stage.
+- type: entity
+  name: hatchling blood worm
+  id: MobBloodWormHatchling
+  parent: BaseMobBloodWorm
+  description: A freshly hatched blood worm. It looks hungry and weak, requiring blood to grow further.
+  components:
+  - type: BloodWorm
+    matureThreshold: 500
+    nextStage: MobBloodWormJuvenile
+    cocoonPrototype: BloodWormCocoonMedium
+    leechAmount: 50
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _Sunset/Mobs/BloodWorm/blood_worm_32x32.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: hatchling
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: hatchling
+      Dead:
+        Base: hatchling-dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      80: Dead
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 3.8
+    baseSprintSpeed: 4.6
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.2
+        density: 40
+        mask:
+        - SmallMobMask
+        layer:
+        - SmallMobLayer
+  - type: MeleeWeapon
+    hidden: true
+    soundHit:
+      path: /Audio/Effects/bite.ogg
+    angle: 0
+    animation: WeaponArcBite
+    damage:
+      types:
+        Slash: 8
+        Piercing: 5
+        Structural: 5
+  - type: VentCrawler
+  - type: ActionGrant
+    actions:
+    - ActionBloodWormLeech
+    - ActionBloodWormInvade
+    - ActionBloodWormMatureHatchling
+
+# tg: 120 HP, small, bite 18-22, gains the corrosive spit.
+- type: entity
+  name: juvenile blood worm
+  id: MobBloodWormJuvenile
+  parent: BaseMobBloodWorm
+  description: A mid-sized blood worm. It looks bloodthirsty and has numerous long and extremely sharp teeth.
+  components:
+  - type: BloodWorm
+    matureThreshold: 1500
+    nextStage: MobBloodWormAdult
+    cocoonPrototype: BloodWormCocoonLarge
+    leechAmount: 65
+    spitProjectile: ProjectileBloodWormSpit
+    spitHealthCost: 8
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _Sunset/Mobs/BloodWorm/blood_worm_32x32.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: juvenile
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: juvenile
+      Dead:
+        Base: juvenile-dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      120: Dead
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 3.2
+    baseSprintSpeed: 4.0
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.3
+        density: 80
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: MeleeWeapon
+    hidden: true
+    soundHit:
+      path: /Audio/Effects/bite.ogg
+    angle: 0
+    animation: WeaponArcBite
+    damage:
+      types:
+        Slash: 13
+        Piercing: 7
+        Structural: 15
+  - type: ActionGrant
+    actions:
+    - ActionBloodWormLeech
+    - ActionBloodWormInvade
+    - ActionBloodWormSpit
+    - ActionBloodWormMatureJuvenile
+  # tg: juveniles lose ventcrawling but can shoulder through unsecured doors on contact - opens any
+  # airlock it doesn't need an access card for (see SharedDoorSystem.HasAccess); doors that actually
+  # require access still deny it, same as any other accessless simple mob.
+  - type: Tag
+    tags:
+    - CannotSuicide
+    - DoorBumpOpener
+
+# tg: 180 HP, human-sized, gore 25-30 with heavy armor pen, breaks airlocks, reproduces.
+- type: entity
+  name: adult blood worm
+  id: MobBloodWormAdult
+  parent: BaseMobBloodWorm
+  description: A monstrosity of a blood worm. It'd probably be better to put your head in an industrial shredder rather than its maw.
+  components:
+  - type: BloodWorm
+    leechAmount: 80
+    spitProjectile: ProjectileBloodWormSpit
+    spitHealthCost: 8
+    eggPrototype: BloodWormEggCocoon
+    reproduceCost: 500
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _Sunset/Mobs/BloodWorm/blood_worm_32x48.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: adult
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: adult
+      Dead:
+        Base: adult-dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      180: Dead
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2.8
+    baseSprintSpeed: 3.6
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.4
+        density: 120
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: MeleeWeapon
+    hidden: true
+    soundHit:
+      path: /Audio/Effects/bite.ogg
+    angle: 0
+    animation: WeaponArcBite
+    damage:
+      types:
+        Slash: 17
+        Piercing: 9
+        Structural: 30
+  - type: ActionGrant
+    actions:
+    - ActionBloodWormLeech
+    - ActionBloodWormInvade
+    - ActionBloodWormSpit
+    - ActionBloodWormReproduce
+  # tg: adults regularly bash straight through airlocks - same accessless bump-open as the juvenile.
+  - type: Tag
+    tags:
+    - CannotSuicide
+    - DoorBumpOpener
+
+# Cocoon a worm hides inside of while maturing (see BloodWormCocoonComponent / BloodWormSystem's
+# OnMatureDoAfter+HatchCocoon) - the worm is a contained child of this entity the whole time, not a
+# separate decoration. Destructible so the crew can kill a maturing worm by smashing its cocoon.
+- type: entity
+  name: blood worm cocoon
+  id: BloodWormCocoonMedium
+  parent: BaseStructure
+  description: A pulsating cocoon of hardened blood. Something is growing inside.
+  components:
+  - type: Sprite
+    drawdepth: Objects
+    sprite: _Sunset/Mobs/BloodWorm/blood_worm_32x32.rsi
+    state: cocoon-medium
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 60
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+
+- type: entity
+  parent: BloodWormCocoonMedium
+  id: BloodWormCocoonLarge
+  components:
+  - type: Sprite
+    drawdepth: Objects
+    sprite: _Sunset/Mobs/BloodWorm/blood_worm_32x32.rsi
+    state: cocoon-large
+
+# Egg cocoon laid by the adult's Reproduce: a raffled ghost role that hatches into a hatchling.
+- type: entity
+  name: blood worm egg cocoon
+  id: BloodWormEggCocoon
+  parent: BaseStructure
+  description: A small cocoon of hardened blood. Something wriggles hungrily inside.
+  components:
+  - type: Sprite
+    drawdepth: Objects
+    sprite: _Sunset/Mobs/BloodWorm/blood_worm_32x32.rsi
+    state: cocoon-small
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 40
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: GhostRole
+    makeSentient: true
+    name: ghost-role-information-blood-worm-name
+    description: ghost-role-information-blood-worm-description
+    rules: ghost-role-information-blood-worm-rules
+    mindRoles:
+    - MindRoleBloodWorm
+    raffle:
+      settings: default
+      decider: sunsetBloodWormRaffle
+  - type: GhostRoleMobSpawner
+    prototype: MobBloodWormHatchling
+
+# Standalone raffled spawn point for admins (spawn menu / "spawn SpawnPointGhostBloodWorm"), same
+# self-contained pattern as SpawnPointGhostRatKing: the marker itself raffles the ghost role and
+# spawns the hatchling - no game rule needed.
+- type: entity
+  parent: MarkerBase
+  id: SpawnPointGhostBloodWorm
+  name: ghost role spawn point
+  suffix: blood worm
+  components:
+  - type: GhostRole
+    name: ghost-role-information-blood-worm-name
+    description: ghost-role-information-blood-worm-description
+    rules: ghost-role-information-blood-worm-rules
+    important: true
+    mindRoles:
+    - MindRoleBloodWorm
+    raffle:
+      settings: default
+      decider: sunsetBloodWormRaffle
+  - type: GhostRoleMobSpawner
+    prototype: MobBloodWormHatchling
+  - type: Sprite
+    sprite: _Sunset/Mobs/BloodWorm/blood_worm_32x32.rsi
+    layers:
+    - state: hatchling
+
+# Rule-bound spawner used by the BloodWormSpawn game rule (see game_rule.yml) - the rule's
+# AntagSpawner supplies the mob, so this one is a plain BaseAntagSpawner like the dragon's.
+- type: entity
+  categories: [ HideSpawnMenu, Spawner ]
+  parent: BaseAntagSpawner
+  id: SpawnPointGhostBloodWormRule
+  components:
+  - type: GhostRole
+    name: ghost-role-information-blood-worm-name
+    description: ghost-role-information-blood-worm-description
+    rules: ghost-role-information-blood-worm-rules
+    important: true
+    raffle:
+      settings: default
+      decider: sunsetBloodWormRaffle
+  - type: Sprite
+    sprite: _Sunset/Mobs/BloodWorm/blood_worm_32x32.rsi
+    layers:
+    - state: hatchling
+
+# Corrosive blood glob projectile.
+- type: entity
+  id: ProjectileBloodWormSpit
+  name: corrosive blood
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  description: A glob of corrosive blood.
+  components:
+  - type: Sprite
+    sprite: _Sunset/Interface/Actions/actions_blood_worm.rsi
+    layers:
+    - state: projectile
+  - type: Projectile
+    impactEffect: BulletImpactEffect
+    damage:
+      types:
+        Caustic: 10
+        Slash: 4

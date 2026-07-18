@@ -36,20 +36,24 @@ public static class SunsetAntagWeighting
         switch (tier)
         {
             case 1:
-                return MatchesAny(def, Tier1Roles) ? 2 : 0;
+                return MatchesAny(def, Tier1Roles) ? 4 : 0;
             case 2:
-                return MatchesAny(def, Tier2Roles) ? 3 : 0;
+                return MatchesAny(def, Tier2Roles) ? 6 : 0;
             case 3:
                 // "all ghost-role-spawned antagonists" is structural (any def with a spawner fallback),
                 // plus the explicitly requested named roles.
-                return MatchesAny(def, Tier3ExplicitRoles) || def.SpawnerPrototype != null ? 4 : 0;
+                return MatchesAny(def, Tier3ExplicitRoles) || def.SpawnerPrototype != null ? 8 : 0;
             case 4:
                 // Broader (every antag role) but shallower per-role than tier 3's curated boost, and never a guarantee.
-                return 3;
+                return 6;
             default:
                 return 0;
         }
     }
+
+    // NOTE: ghost-role raffle weighting lives on SunsetSponsorAntagGhostRoleRaffleDecider's
+    // ExtraWeightByTier DataField (see Resources/Prototypes/GhostRoleRaffles/deciders.yml) - it's
+    // data-driven so individual roles (e.g. the blood worm) can declare their own odds.
 
     private static bool MatchesAny(AntagSelectionDefinition def, HashSet<string> roles)
     {

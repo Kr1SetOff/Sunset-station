@@ -1,0 +1,39 @@
+# 🌇Sunset🌇 - Blood worm midround spawn rule. Start manually with "addgamerule BloodWormSpawn"
+# (or via the admin game rules panel); it's also registered in SunSetCalmCustomAntagEventsTable
+# (Resources/Prototypes/_Sunset/GameRules/events.yml), a small table the curated presets' calm
+# scheduler actually consults, so it can roll naturally like DragonSpawn/NinjaSpawn there instead
+# of only in the stock ModerateAntagEventsTable that the curated presets deliberately exclude.
+# A raffled ghost-role spawner appears next to a random vent (VentSpawnRule) - the worm crawls out
+# of the ducts, tg-style - and the winner spawns as a hatchling with the antag mind role.
+#
+# insertInVent is explicitly false: VentSpawnRule's default behavior CONTAINER-INSERTS the spawned
+# entity into the vent's internal crawl-tube (meant for ambient critters that slowly emerge on their
+# own). For a ghost-role antagonist that a player just claimed and expects to immediately control,
+# that left them sealed inside a pipe network with no clear way out - which read as "spawned in
+# nullspace" and caused bizarre behavior when admins tried to teleport to the entity. With this off,
+# VentSpawnRule still only picks a location next to an actual vent (AntagSelectLocationEvent) but
+# places the entity there normally on the grid instead of inside the pipe.
+- type: entity
+  parent: BaseGameRule
+  id: BloodWormSpawn
+  components:
+  - type: StationEvent
+    globalAnnouncement: false
+    weight: 3
+    earliestStart: 45
+    reoccurrenceDelay: 60
+    minimumPlayers: 6 # 🌇Sunset🌇 - was 25
+    duration: null
+  - type: VentSpawnRule
+    insertInVent: false
+  - type: AntagSpawner
+    prototype: MobBloodWormHatchling
+  - type: AntagSelection
+    agentName: blood-worm-round-end-agent-name
+    definitions:
+    - spawnerPrototype: SpawnPointGhostBloodWormRule
+      min: 1
+      max: 1
+      pickPlayer: false
+      mindRoles:
+      - MindRoleBloodWorm

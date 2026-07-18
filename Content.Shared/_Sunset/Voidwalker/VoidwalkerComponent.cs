@@ -50,6 +50,14 @@ public sealed partial class VoidwalkerComponent : Component
     public TimeSpan VoidedDuration = TimeSpan.FromMinutes(3);
 
     /// <summary>
+    /// Sunset: how long the implanted void tumor takes to fully consume the victim if it's never
+    /// cut out. Deliberately much longer than the Voided curse itself, so the crew has a realistic
+    /// window to get the victim onto a surgery table.
+    /// </summary>
+    [DataField]
+    public TimeSpan TumorDuration = TimeSpan.FromMinutes(6);
+
+    /// <summary>
     /// Entity spawned on death (see tg's "cosmic skull" loot).
     /// </summary>
     [DataField]

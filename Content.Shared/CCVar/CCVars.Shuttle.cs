@@ -189,9 +189,10 @@ public sealed partial class CCVars
     ///     the shuttle again. This keeps repeating (call -> recall -> wait -> call again) for the
     ///     rest of the round, every time it's recalled - see RoundEndSystem.Update.
     /// </summary>
-    // 🌇Sunset🌇 - 45 -> 30, so a recalled shuttle comes back every 30 minutes instead of 45.
+    // 🌇Sunset🌇 - 45 -> 30 -> 10, so once the 2-hour auto-call has fired once, a recalled shuttle
+    // comes back every 10 minutes instead of 45/30.
     public static readonly CVarDef<int> EmergencyShuttleAutoCallExtensionTime =
-        CVarDef.Create("shuttle.auto_call_extension_time", 30, CVar.SERVERONLY);
+        CVarDef.Create("shuttle.auto_call_extension_time", 10, CVar.SERVERONLY);
 
     /// <summary>
     ///     Impulse multiplier for player interactions that move grids (other than shuttle thrusters, gyroscopes and grid collisons).

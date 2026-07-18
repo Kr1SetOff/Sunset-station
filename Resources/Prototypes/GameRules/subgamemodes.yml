@@ -4,6 +4,7 @@
   components:
   - type: GameRule
     minPlayers: 5 # 🌇Sunset🌇
+    cancelPresetOnTooFewPlayers: false # 🌇Sunset🌇 - sub-rolled into other modes, just skip it
   - type: ThiefRule
 #  - type: AntagObjectives # Starlight start
 #    objectives: # We won't be using this, we'll be taking it from GroupOuter instead so we can roll for Master Thief
@@ -44,6 +45,7 @@
   components:
   - type: GameRule
     minPlayers: 10 # 🌇Sunset🌇
+    cancelPresetOnTooFewPlayers: false # 🌇Sunset🌇 - sub-rolled into other modes, just skip it
   - type: SLChangelingRule
   - type: AntagSelection
     agentName: changeling-roundend-name
@@ -73,6 +75,7 @@
   components:
   - type: GameRule
     minPlayers: 10 # 🌇Sunset🌇
+    cancelPresetOnTooFewPlayers: false # 🌇Sunset🌇 - also sub-rolled as VampireLess into other modes, just skip it
   - type: VampireRule
   - type: AntagObjectives
     objectives:
