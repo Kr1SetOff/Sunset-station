@@ -55,6 +55,7 @@
     - id: DragonSpawn
     - id: NinjaSpawn
     - id: VoidwalkerSpawn # 🌇Sunset🌇
+    - id: BloodWormSpawn # 🌇Sunset🌇
     - id: ParadoxCloneSpawn
     - id: SleeperAgents
  #   - id: ZombieOutbreak starlight - no more midround zeds

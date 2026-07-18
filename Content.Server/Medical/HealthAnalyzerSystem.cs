@@ -20,6 +20,7 @@ using Content.Shared.MedicalScanner;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Paper; // Starlight-edit
 using Content.Shared.Popups;
+using Content.Shared.Starlight.Medical.Surgery.Effects.Step; // 🌇Sunset🌇 - BodyScannerComponent
 using Content.Shared.PowerCell;
 using Content.Shared.Temperature.Components;
 using Content.Shared.Traits.Assorted;
@@ -257,6 +258,9 @@ public sealed partial class HealthAnalyzerSystem : EntitySystem
             && _timing.CurTime >= analyzerComp.PrintReadyAt;
         // Starlight-end
         uiState.ScanMode = scanMode;
+        // 🌇Sunset🌇 - only the body scanner console (linked to an operating table) gets the
+        // per-body-part diagnostic breakdown; the hand-held analyzer and cryo pod stay plain text.
+        uiState.IsBodyScanner = HasComp<BodyScannerComponent>(healthAnalyzer);
 
         // Starlight-start: Talking health analyzer
         if (TryComp<HealthAnalyzerComponent>(healthAnalyzer, out var healthComp)

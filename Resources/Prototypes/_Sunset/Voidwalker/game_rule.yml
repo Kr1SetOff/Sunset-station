@@ -2,8 +2,11 @@
 # a raffled ghost-role spawn point (SpawnPointGhostVoidwalker) out in open space near the station,
 # ghosts enter the raffle from the ghost-role menu, and the winner instantly spawns as the
 # Voidwalker at that spot with the antag mind role attached. Rolls randomly midround via
-# ModerateAntagEventsTable (Resources/Prototypes/GameRules/events.yml) or manually via
-# "addgamerule VoidwalkerSpawn".
+# SunSetCalmCustomAntagEventsTable (Resources/Prototypes/_Sunset/GameRules/events.yml) - a small
+# table the curated presets' calm scheduler actually consults, unlike the stock
+# ModerateAntagEventsTable which they deliberately exclude - or manually via
+# "addgamerule VoidwalkerSpawn". minimumPlayers tuned down from 30 so it can appear on a 5-10 pop
+# server instead of being effectively admin-only.
 - type: entity
   parent: BaseGameRule
   id: VoidwalkerSpawn
@@ -13,7 +16,7 @@
     weight: 2.5
     earliestStart: 45
     reoccurrenceDelay: 45
-    minimumPlayers: 30
+    minimumPlayers: 6 # 🌇Sunset🌇 - was 30
     duration: null
   - type: SpaceSpawnRule
     spawnDistance: 20

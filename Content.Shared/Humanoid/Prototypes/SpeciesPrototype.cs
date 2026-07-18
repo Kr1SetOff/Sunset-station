@@ -224,6 +224,14 @@ public sealed partial class SpeciesPrototype : IPrototype
     [DataField]
     public int? MinSponsorTier = null;
 
+    /// <summary>
+    /// Sunset: when filtering markings by species, ALSO accept markings restricted to this species.
+    /// Lets a reskin species (e.g. Felenid) use everything its base species (Human) can, without
+    /// touching every marking prototype's speciesRestriction list. See MarkingManager.SpeciesAllowed.
+    /// </summary>
+    [DataField]
+    public ProtoId<SpeciesPrototype>? MarkingsAlias = null;
+
 }
 
 public enum SpeciesNaming : byte

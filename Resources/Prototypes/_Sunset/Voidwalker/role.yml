@@ -6,6 +6,12 @@
   name: roles-antag-voidwalker-name
   antagonist: true
   objective: roles-antag-voidwalker-objective
+  # 🌇Sunset🌇 - checked by the ghost-role raffle through MindRoleVoidwalker (GhostRoleSystem
+  # collects antag prototypes off the role's mindRoles and raises IsRoleAllowedEvent). Same tier
+  # as the dragon: a midround solo antag needs some game knowledge but isn't top-shelf power.
+  requirements:
+  - !type:OverallPlaytimeRequirement
+    time: 15h
 
 - type: entity
   parent: BaseMindRoleAntag

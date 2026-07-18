@@ -102,11 +102,9 @@ public sealed partial class SurgerySystem : SharedSurgerySystem
             _ui.IsUiOpen(user, SurgeryUIKey.Key, user) ||
             !HasComp<SurgeryTargetComponent>(args.Target)) return;
 
-        if (user == args.Target)
-        {
-            _popup.PopupEntity("You can't perform surgery on yourself!", user, user);
-            return;
-        }
+        // 🌇Sunset🌇 - self-surgery is allowed: the "no operating on yourself" popup was removed.
+        // You still need to be lying down (IsSurgeryValid -> IsLyingDown), so patching yourself up
+        // mid-fight stays impractical - lie on a table/floor first.
 
         args.Handled = true;
         _ui.OpenUi(args.Target.Value, SurgeryUIKey.Key, user);

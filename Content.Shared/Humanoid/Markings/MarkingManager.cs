@@ -49,6 +49,24 @@ namespace Content.Shared.Humanoid.Markings
         }
 
         /// <summary>
+        /// 🌇Sunset🌇 - species check with alias support: a marking is allowed if it has no species
+        /// restriction, lists the species itself, or lists the species' MarkingsAlias (so reskin
+        /// species like Felenid get everything Human can use while keeping their own markings).
+        /// </summary>
+        private static bool SpeciesAllowed(MarkingPrototype marking, string species, IPrototypeManager prototypeManager)
+        {
+            if (marking.SpeciesRestrictions == null)
+                return true;
+
+            if (marking.SpeciesRestrictions.Contains(species))
+                return true;
+
+            return prototypeManager.TryIndex<SpeciesPrototype>(species, out var speciesProto)
+                   && speciesProto.MarkingsAlias is { } alias
+                   && marking.SpeciesRestrictions.Contains(alias.Id);
+        }
+
+        /// <summary>
         ///     Markings by category and species.
         /// </summary>
         /// <param name="category"></param>
@@ -72,7 +90,7 @@ namespace Content.Shared.Humanoid.Markings
                     continue;
                 }
 
-                if (marking.SpeciesRestrictions != null && !marking.SpeciesRestrictions.Contains(species))
+                if (!SpeciesAllowed(marking, species, _prototypeManager)) // 🌇Sunset🌇 - alias-aware
                 {
                     continue;
                 }
@@ -135,7 +153,7 @@ namespace Content.Shared.Humanoid.Markings
                     continue;
                 }
 
-                if (marking.SpeciesRestrictions != null && !marking.SpeciesRestrictions.Contains(species))
+                if (!SpeciesAllowed(marking, species, _prototypeManager)) // 🌇Sunset🌇 - alias-aware
                 {
                     continue;
                 }
@@ -172,7 +190,7 @@ namespace Content.Shared.Humanoid.Markings
             }
 
             if (proto.MarkingCategory != category ||
-                proto.SpeciesRestrictions != null && !proto.SpeciesRestrictions.Contains(species) ||
+                !SpeciesAllowed(proto, species, _prototypeManager) || // 🌇Sunset🌇 - alias-aware
                 proto.SexRestriction != null && proto.SexRestriction != sex)
             {
                 return false;
@@ -210,8 +228,7 @@ namespace Content.Shared.Humanoid.Markings
                 return false;
             }
 
-            if (prototype.SpeciesRestrictions != null
-                && !prototype.SpeciesRestrictions.Contains(species))
+            if (!SpeciesAllowed(prototype, species, prototypeManager)) // 🌇Sunset🌇 - alias-aware
             {
                 return false;
             }
@@ -236,8 +253,7 @@ namespace Content.Shared.Humanoid.Markings
                 return false;
             }
 
-            if (prototype.SpeciesRestrictions != null &&
-                !prototype.SpeciesRestrictions.Contains(species))
+            if (!SpeciesAllowed(prototype, species, prototypeManager)) // 🌇Sunset🌇 - alias-aware
             {
                 return false;
             }

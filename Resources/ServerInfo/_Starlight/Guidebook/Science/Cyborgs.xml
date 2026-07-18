@@ -31,7 +31,9 @@
     <GuideEntityEmbed Entity="BorgChassisMedical" Caption="Medical"/>
 	<GuideEntityEmbed Entity="BorgChassisPurrfus" Caption="Purrfus"/>
 	<GuideEntityEmbed Entity="BorgChassisCargo" Caption="Cargo"/>
+	<GuideEntityEmbed Entity="BorgChassisSecurity" Caption="Security"/>
   </Box>
+  [italic]Шасси службы безопасности требует минимум 10 часов, отыгранных в отделе Службы Безопасности.[/italic] # 🌇Sunset🌇
   <Box>
     [italic]Примеры различных типов киборгов[/italic]
   </Box>

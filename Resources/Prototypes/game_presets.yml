@@ -162,6 +162,21 @@
     - Secret
     - RailroadingMinor # 🌟Starlight🌟
 
+# 🌇Sunset🌇 - low-pop-tuned counterpart of Secret, rolling from the SecretLP weight table instead
+# of whichever pool game.secret_weight_prototype points at (see SecretLowPop in GameRules/roundstart.yml).
+- type: gamePreset
+  id: SecretLowPop
+  alias:
+    - secretlp
+    - secretlowpop
+  name: secret-lowpop-title
+  showInVote: true
+  minPlayers: 4
+  description: secret-lowpop-description
+  rules:
+    - SecretLowPop
+    - RailroadingMinor # 🌟Starlight🌟
+
 - type: gamePreset
   id: Sandbox
   alias:
@@ -214,7 +229,7 @@
     - nukeops
   name: nukeops-title
   description: nukeops-description
-  minPlayers: 10 # 🌇Sunset🌇
+  minPlayers: 6 # 🌇Sunset🌇 - matches Nukeops rule's GameRule.minPlayers
   showInVote: true # 🌟Starlight🌟
   rules:
   - Nukeops
@@ -232,7 +247,7 @@
     - revolutionaries
   name: rev-title
   description: rev-description
-  minPlayers: 10 # 🌇Sunset🌇
+  minPlayers: 8 # 🌇Sunset🌇 - matches Revolutionary rule's GameRule.minPlayers
   showInVote: true # 🌟Starlight🌟
   rules:
   # - DummyNonAntagChance 🌟Starlight🌟
@@ -248,7 +263,7 @@
   - wizard
   name: wizard-title
   description: wizard-description
-  minPlayers: 10 # 🌇Sunset🌇
+  minPlayers: 6 # 🌇Sunset🌇 - matches Wizard rule's GameRule.minPlayers (WizardDuel's own 50% branch stays high-pop-only, see SunSetWizardOrDuelRule)
   showInVote: true # 🌇Sunset🌇, теперь участвует в куррируемом голосовании
   rules:
   - SunSetWizardOrDuelRule # 🌇Sunset🌇, 50/50 одиночный волшебник или маги-дуэлянты
@@ -264,7 +279,7 @@
     - xenoborgs
   name: xenoborgs-title
   description: xenoborgs-description
-  minPlayers: 10 # 🌇Sunset🌇
+  minPlayers: 15 # 🌇Sunset🌇 - kept as a rare high-pop event; matches Xenoborgs rule's GameRule.minPlayers so it's not falsely offered below that (see SubXenoborgs for the low-pop-friendly variant)
   showInVote: true # 🌟Starlight🌟
   rules:
   - Xenoborgs
@@ -284,7 +299,7 @@
   - zomber
   name: zombie-title
   description: zombie-description
-  minPlayers: 10 # 🌇Sunset🌇
+  minPlayers: 6 # 🌇Sunset🌇 - matches Zombie rule's GameRule.minPlayers
   showInVote: true # 🌟Starlight🌟
   rules:
   - Zombie

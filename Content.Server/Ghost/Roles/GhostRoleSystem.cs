@@ -253,7 +253,9 @@ public sealed partial class GhostRoleSystem : EntitySystem
             }
 
             var foundWinner = false;
-            var deciderPrototype = _prototype.Index(ghostRole.RaffleConfig.Decider);
+            // 🌇Sunset🌇 - antagonist ghost roles get the sponsor-weighted decider instead of whatever
+            // the prototype configured - see GhostRoleSystem.Sunset.cs.
+            var deciderPrototype = _prototype.Index(GetSunsetRaffleDecider(ghostRole, ghostRole.RaffleConfig.Decider));
 
             // use the ghost role's chosen winner picker to find a winner
             deciderPrototype.Decider.PickWinner(

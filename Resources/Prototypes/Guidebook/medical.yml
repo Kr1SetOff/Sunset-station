@@ -4,6 +4,7 @@
   text: "/ServerInfo/Guidebook/Medical/Medical.xml"
   children:
   - MedicalDoctor
+  - Surgery # 🌇Sunset🌇
   - Chemist
   - Cloning
   - Cryogenics
@@ -19,6 +20,12 @@
   id: MedicalDoctor
   name: guide-entry-medicaldoctor
   text: "/ServerInfo/Guidebook/Medical/MedicalDoctor.xml"
+
+# 🌇Sunset🌇 - self-surgery + per-body-part diagnostics
+- type: guideEntry
+  id: Surgery
+  name: guide-entry-surgery
+  text: "/ServerInfo/Guidebook/Medical/Surgery.xml"
 
 - type: guideEntry
   id: Cloning

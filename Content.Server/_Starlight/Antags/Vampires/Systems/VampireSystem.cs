@@ -100,6 +100,7 @@ public sealed partial class VampireSystem : EntitySystem
         SubscribeLocalEvent<VampireActionUseAttemptEvent>(OnVampireActionUseAttempt);
         InitializeAbilities();
         InitializeObjectives();
+        InitializeSunsetBiteVerb(); // 🌇Sunset🌇 - RMB "Drink blood" verb (see VampireSystem.Sunset.cs)
     }
 
     private void OnVampireActionUseAttempt(ref VampireActionUseAttemptEvent args)

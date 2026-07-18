@@ -1,7 +1,10 @@
 ## Base actions
 
 alerts-vampire-blood-name = Blood Drunk
-alerts-vampire-blood-desc = Shows how much blood you've drunk. Extend your fangs and left-click a target to drink.
+alerts-vampire-blood-desc = Shows how much blood you've drunk. Extend your fangs and left-click a target (out of combat mode), or pick "Drink blood" from the right-click menu.
+
+# 🌇Sunset🌇 - RMB drink verb (see VampireSystem.Sunset.cs)
+vampire-verb-drink = Drink blood
 
 alerts-vampire-fed-name = Blood Fullness
 alerts-vampire-fed-desc = Your current blood fullness. Drink blood to stay fed.

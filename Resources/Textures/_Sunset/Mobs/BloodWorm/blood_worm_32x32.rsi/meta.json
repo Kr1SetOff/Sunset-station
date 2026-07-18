@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from tgstation at commit https://github.com/tgstation/tgstation/blob/156beffc6222d20bc3449a051e0a6bb71e23ab12/icons/mob/nonhuman-player/blood_worm_32x32.dmi",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "hatchling",
+      "directions": 4
+    },
+    {
+      "name": "hatchling-dead"
+    },
+    {
+      "name": "juvenile",
+      "directions": 4
+    },
+    {
+      "name": "juvenile-dead"
+    },
+    {
+      "name": "cocoon-small"
+    },
+    {
+      "name": "cocoon-medium"
+    },
+    {
+      "name": "cocoon-large"
+    },
+    {
+      "name": "invade-juvenile",
+      "delays": [
+        [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "name": "leave-juvenile",
+      "delays": [
+        [
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "name": "invade-hatchling",
+      "delays": [
+        [
+          2,
+          2,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "name": "leave-hatchling",
+      "delays": [
+        [
+          2,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "name": "invade-adult",
+      "delays": [
+        [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      ]
+    }
+  ]
+}

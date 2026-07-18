@@ -170,7 +170,7 @@
   id: Nukeops
   components:
   - type: GameRule
-    minPlayers: 15 # 🌇Sunset🌇
+    minPlayers: 6 # 🌇Sunset🌇 - tuned for a 5-10 pop server
     # Starlight Start
     denyGameRules:
     - AbductorsSpawn
@@ -367,7 +367,7 @@
   parent: BaseGameRule
   components:
   - type: GameRule
-    minPlayers: 15
+    minPlayers: 8 # 🌇Sunset🌇 - tuned for a 5-10 pop server
   - type: RevolutionaryRule
   - type: SpecialLobbyContent
     music: "/Audio/_Starlight/Lobby/Liberation.ogg"
@@ -414,6 +414,17 @@
   components:
   - type: SecretRule
 
+# 🌇Sunset🌇 - identical to Secret, but always rolls from the SecretLP weight table (see
+# Resources/Prototypes/secret_weights.yml) instead of whatever game.secret_weight_prototype is set
+# to server-wide. Gives players an explicit low-pop-tuned option in the round-start vote alongside
+# the default Secret, rather than the choice being invisible/server-config-only.
+- type: entity
+  id: SecretLowPop
+  parent: BaseGameRule
+  components:
+  - type: SecretRule
+    weightsOverride: SecretLP
+
 - type: entity
   abstract: true
   parent: BaseGameRule
@@ -435,7 +446,7 @@
   id: Wizard
   components:
   - type: GameRule
-    minPlayers: 15 # 🌇Sunset🌇
+    minPlayers: 6 # 🌇Sunset🌇 - tuned for a 5-10 pop server
   - type: AntagSelection
     agentName: wizard-round-end-name
     selectionTime: PrePlayerSpawn
@@ -478,7 +489,7 @@
   parent: BaseGameRule
   components:
   - type: GameRule
-    minPlayers: 10 # 🌇Sunset🌇
+    minPlayers: 6 # 🌇Sunset🌇 - tuned for a 5-10 pop server
     delay:
       min: 600
       max: 900

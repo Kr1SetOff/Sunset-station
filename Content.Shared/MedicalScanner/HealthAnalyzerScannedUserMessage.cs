@@ -39,6 +39,13 @@ public struct HealthAnalyzerUiState
     public bool? Unrevivable;
     public List<(string ReagentId, FixedPoint2 Quantity)>? MetabolizingReagents; // Starlight - list of metabolizing reagents inside scanned user
 
+    /// <summary>
+    /// 🌇Sunset🌇 - true when the analyzer sending this state is a body scanner console (linked to
+    /// an operating table), as opposed to the hand-held health analyzer or a cryo pod. Only body
+    /// scanners show the per-body-part diagnostic breakdown - see HealthAnalyzerControl.Populate.
+    /// </summary>
+    public bool IsBodyScanner;
+
     public HealthAnalyzerUiState() {}
 
     public HealthAnalyzerUiState(NetEntity? targetEntity, float temperature, float bloodLevel, bool? canPrint, bool? scanMode, bool? bleeding, bool? unrevivable, List<(string ReagentId, FixedPoint2 Quantity)>? metabolizingReagents = null) // Starlight - added metabolizingReagents parameter

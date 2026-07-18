@@ -46,6 +46,7 @@ using Robust.Shared.Physics.Systems;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Physics;
 using Content.Shared.Hands.Components;
+using Content.Shared.Silicons.StationAi; // 🌇Sunset🌇
 // Starlight End
 
 namespace Content.Server.Antag;
@@ -704,7 +705,9 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
 
         // Starlight-begin
         // If non-humanoid, check for hands.  We don't want Hamlet as a traitor if he can't really manipulate tools.
-        if (def.AllowNonHumans && !HasComp<HumanoidAppearanceComponent>(entity) && !HasComp<HandsComponent>(entity))
+        // 🌇Sunset🌇 - except the station AI, which is legitimately handless but a valid antag target
+        // (e.g. Malf AI) - the definition's own Whitelist is what actually restricts who can be picked.
+        if (def.AllowNonHumans && !HasComp<HumanoidAppearanceComponent>(entity) && !HasComp<HandsComponent>(entity) && !HasComp<StationAiHeldComponent>(entity))
             return false;
         // Starlight-end
 

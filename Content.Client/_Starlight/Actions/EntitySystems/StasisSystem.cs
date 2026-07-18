@@ -28,9 +28,20 @@ public sealed partial class StasisSystem : SharedStasisSystem
         SubscribeNetworkEvent<StasisAnimationEvent>(OnStasisAnimation);
     }
 
+    // 🌇Sunset🌇 - these "periodic" consistency sweeps used to run every single frame, doing three
+    // full component scans + unconditional sprite recolors at render framerate. Twice a second is
+    // plenty for what is purely drift-correction bookkeeping.
+    private TimeSpan _nextPeriodicSweep;
+    private static readonly TimeSpan PeriodicSweepInterval = TimeSpan.FromSeconds(0.5);
+
     public override void Update(float frameTime)
     {
         base.Update(frameTime);
+
+        if (_timing.CurTime < _nextPeriodicSweep)
+            return;
+
+        _nextPeriodicSweep = _timing.CurTime + PeriodicSweepInterval;
 
         // Periodic cleanup of orphaned effects
         CleanupOrphanedEffects();

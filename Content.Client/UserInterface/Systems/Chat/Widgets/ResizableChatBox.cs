@@ -39,6 +39,12 @@ public sealed partial class ResizableChatBox : ChatBox
             base.EnteredTree();
 
             _clyde.OnWindowResized += ClydeOnOnWindowResized;
+
+            // Sunset: normalize our margins shortly after being (re)added to a screen. Without
+            // this, switching to the Default HUD only ever clamps on a scale/window-resize event,
+            // and a clamp that runs against a not-yet-arranged Rect could leave the chat parked
+            // off-screen (see ClampSize).
+            ClampAfterDelay();
         }
 
         protected override void ExitedTree()
@@ -197,8 +203,21 @@ public sealed partial class ResizableChatBox : ChatBox
             if (Parent == null)
                 return;
 
-            // var top = Rect.Top;
-            var right = Rect.Right;
+            // Sunset: the parent (screen) may not have been arranged yet - e.g. the UIScaleChanged
+            // that fires while entering the tree at a non-default UI scale. Retry once layout data
+            // exists instead of computing margins from garbage.
+            if (Parent.Size.X < 1)
+            {
+                ClampAfterDelay();
+                return;
+            }
+
+            // Sunset: our anchor preset pins the right edge 10 px from the parent's right, so derive
+            // it from the parent instead of trusting Rect.Right. A stale zero Rect here used to
+            // produce a POSITIVE left margin relative to the top-right anchor, flinging the whole
+            // chat box off-screen to the right - the "chat stops working on Default HUD at 75% UI
+            // scale" bug.
+            var right = Parent.Size.X - 10f;
             var left = desiredLeft ?? Rect.Left;
             var bottom = desiredBottom ?? Rect.Bottom;
 

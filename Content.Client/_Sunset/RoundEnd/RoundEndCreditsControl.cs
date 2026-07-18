@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
+using System.Text;
 using Content.Shared.Dataset;
 using Content.Shared.GameTicking;
 using Content.Shared.Roles;
@@ -30,10 +31,16 @@ public sealed class RoundEndCreditsControl : Control
     private readonly IPrototypeManager _prototypeManager;
     private readonly IRobustRandom _random;
 
-    private const float ScrollSpeed = 65f; // pixels/second
+    private const float ScrollSpeed = 65f; // baseline pixels/second for short credit rolls
     private const float FinalFadeOutDuration = 1.5f;
 
-    private readonly LayoutContainer _viewport;
+    /// <summary>
+    /// Cap on how long the whole roll may take: long player lists scroll faster instead of
+    /// dragging on (and short ones keep the baseline speed).
+    /// </summary>
+    private const float MaxRollDuration = 75f;
+
+    private readonly CreditsScrollView _viewport;
     private readonly BoxContainer _creditsContent;
 
     private float _elapsed;
@@ -68,7 +75,11 @@ public sealed class RoundEndCreditsControl : Control
             PanelOverride = new StyleBoxFlat { BackgroundColor = new Color(0f, 0f, 0f, 0.96f) },
         }.WithWide());
 
-        _viewport = new LayoutContainer { RectClipContent = true };
+        // CreditsScrollView measures the credits column with INFINITE available height. Putting the
+        // column in a plain LayoutContainer measures it against the viewport height instead, which
+        // silently squashes everything past ~one screen of content into an overlapping pile at the
+        // end of the roll on high-pop rounds.
+        _viewport = new CreditsScrollView { RectClipContent = true };
         LayoutContainer.SetAnchorPreset(_viewport, LayoutContainer.LayoutPreset.Wide);
         AddChild(_viewport);
 
@@ -78,9 +89,37 @@ public sealed class RoundEndCreditsControl : Control
             HorizontalExpand = true,
         };
         _viewport.AddChild(_creditsContent);
-        LayoutContainer.SetAnchorPreset(_creditsContent, LayoutContainer.LayoutPreset.TopWide);
 
         BuildContent(message, resourceCache);
+    }
+
+    /// <summary>
+    /// Single-child container that measures its child with unbounded height and arranges it at
+    /// <see cref="ScrollOffset"/> - a minimal marquee viewport for the credits column.
+    /// </summary>
+    private sealed class CreditsScrollView : Control
+    {
+        public float ScrollOffset;
+
+        protected override Vector2 MeasureOverride(Vector2 availableSize)
+        {
+            foreach (var child in Children)
+            {
+                child.Measure(new Vector2(availableSize.X, float.PositiveInfinity));
+            }
+
+            return availableSize;
+        }
+
+        protected override Vector2 ArrangeOverride(Vector2 finalSize)
+        {
+            foreach (var child in Children)
+            {
+                child.Arrange(new UIBox2(0, ScrollOffset, finalSize.X, ScrollOffset + child.DesiredSize.Y));
+            }
+
+            return finalSize;
+        }
     }
 
     protected override void FrameUpdate(FrameEventArgs args)
@@ -99,13 +138,21 @@ public sealed class RoundEndCreditsControl : Control
         _elapsed += args.DeltaSeconds;
 
         var viewportHeight = Height > 0 ? Height : 720f;
-        var topY = viewportHeight - ScrollSpeed * _elapsed;
-        LayoutContainer.SetMarginTop(_creditsContent, topY);
 
-        // Once the whole document (whatever its height turns out to be) has scrolled past the top
-        // of the screen, start the final fade. Height is re-measured every frame so this doesn't
-        // depend on layout having settled by the time the animation starts.
-        var contentHeight = _creditsContent.Height;
+        // DesiredSize comes from the unbounded measure in CreditsScrollView, so this is the REAL
+        // full document height even when it's many screens tall.
+        var contentHeight = _creditsContent.DesiredSize.Y;
+
+        // Dynamic speed: short rolls keep the baseline pace, long high-pop rolls speed up so the
+        // whole document still fits in MaxRollDuration.
+        var totalDistance = viewportHeight + contentHeight;
+        var speed = MathF.Max(ScrollSpeed, totalDistance / MaxRollDuration);
+
+        var topY = viewportHeight - speed * _elapsed;
+        _viewport.ScrollOffset = topY;
+        _viewport.InvalidateArrange();
+
+        // Once the whole document has scrolled past the top of the screen, start the final fade.
         if (contentHeight > 0 && topY + contentHeight < 0)
         {
             _finishing = true;
@@ -304,12 +351,11 @@ public sealed class RoundEndCreditsControl : Control
         {
             box.AddChild(new Label
             {
-                Text = joke,
+                Text = WrapToWidth(joke, JokeWrapWidth),
                 FontOverride = _jokeFont,
                 FontColorOverride = Color.Gray,
                 HorizontalAlignment = HAlignment.Center,
                 Align = Label.AlignMode.Center,
-                MaxWidth = 140,
             });
         }
 
@@ -363,6 +409,65 @@ public sealed class RoundEndCreditsControl : Control
             return null;
 
         return Loc.GetString(_random.Pick(dataset.Values));
+    }
+
+    private const float JokeWrapWidth = 140;
+
+    /// <summary>
+    /// Label can't word-wrap on its own - constraining it with MaxWidth just makes overlong lines
+    /// draw straight over the neighbouring cards in the credits grid. Pre-wraps the text with
+    /// explicit newlines (measured with the same font the label renders with, in virtual pixels)
+    /// so long jokes grow downward instead.
+    /// </summary>
+    private string WrapToWidth(string text, float maxWidth)
+    {
+        var result = new StringBuilder();
+        var spaceWidth = MeasureRunWidth(" ");
+        var firstLine = true;
+
+        foreach (var inputLine in text.Split('\n'))
+        {
+            if (!firstLine)
+                result.Append('\n');
+            firstLine = false;
+
+            var lineWidth = 0f;
+            var firstWord = true;
+
+            foreach (var word in inputLine.Split(' ', StringSplitOptions.RemoveEmptyEntries))
+            {
+                var wordWidth = MeasureRunWidth(word);
+
+                // A single word wider than the limit gets its own line and expands the card
+                // instead of being broken mid-word.
+                if (!firstWord && lineWidth + spaceWidth + wordWidth > maxWidth)
+                {
+                    result.Append('\n');
+                    lineWidth = 0f;
+                    firstWord = true;
+                }
+
+                if (!firstWord)
+                {
+                    result.Append(' ');
+                    lineWidth += spaceWidth;
+                }
+
+                result.Append(word);
+                lineWidth += wordWidth;
+                firstWord = false;
+            }
+        }
+
+        return result.ToString();
+    }
+
+    private float MeasureRunWidth(string run)
+    {
+        var width = 0f;
+        foreach (var rune in run.EnumerateRunes())
+            width += _jokeFont.GetCharMetrics(rune, 1f)?.Advance ?? 0;
+        return width;
     }
 }
 

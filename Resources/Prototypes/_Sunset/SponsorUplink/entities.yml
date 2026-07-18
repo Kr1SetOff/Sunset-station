@@ -47,29 +47,29 @@
 - type: entity
   parent: BaseSponsorUplink
   id: SponsorUplinkTier2
-  suffix: Tier 2, 25 coins
+  suffix: Tier 2, 30 coins
   components:
   - type: Store
     balance:
-      SponsorCoin: 25
+      SponsorCoin: 30
 
 - type: entity
   parent: BaseSponsorUplink
   id: SponsorUplinkTier3
-  suffix: Tier 3, 50 coins
+  suffix: Tier 3, 60 coins
   components:
   - type: Store
     balance:
-      SponsorCoin: 50
+      SponsorCoin: 60
 
 - type: entity
   parent: BaseSponsorUplink
   id: SponsorUplinkTier4
-  suffix: Tier 4, 75 coins
+  suffix: Tier 4, 90 coins
   components:
   - type: Store
     balance:
-      SponsorCoin: 75
+      SponsorCoin: 90
 
 - type: entity
   parent: BaseSponsorUplink

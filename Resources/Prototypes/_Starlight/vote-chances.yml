@@ -1,5 +1,8 @@
-# 🌇Sunset🌇 - куррируемый список из 11 режимов, участвующих в автоголосовании за режим
+# 🌇Sunset🌇 - куррируемый список режимов, участвующих в автоголосовании за режим
 # (см. Content.Shared._Starlight.CCVar.StarlightCCVars.RoundVotingCount = 4 показанных варианта).
+# Secret/SecretLowPop раньше вообще не попадали в это голосование (были showInVote:true, но не
+# участвовали в самом чансовом отборе) - добавлены явно, вместе с SecretLowPop, которая всегда
+# берёт события из таблицы SecretLP независимо от серверного CVar game.secret_weight_prototype.
 - type: roundvotingchances
   id: Basic
   chances:
@@ -14,3 +17,6 @@
     Zombie: 20             # Зомби
     Xenoborgs: 20          # Ксеноборги
     CosmicCult: 20         # Космо-культисты
+    Secret: 20              # Секрет
+    SecretLowPop: 20        # Секрет (низкий онлайн)
+    TheBoys: 10              # 🌇Sunset🌇 - Пацаны: тоже нигде не участвовал в голосовании, хотя showInVote было true

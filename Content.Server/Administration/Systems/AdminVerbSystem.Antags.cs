@@ -8,6 +8,7 @@ using Content.Server.Antag;
 using Content.Server.Clothing.Systems;
 using Content.Server.GameTicking;
 using Content.Server.GameTicking.Rules.Components;
+using Content.Server._Sunset.MalfAi;
 using Content.Server._Sunset.Voidwalker;
 using Content.Server.Polymorph.Systems;
 using Content.Server.Speech.Components; // Starlight
@@ -19,6 +20,7 @@ using Content.Shared.Database;
 using Content.Shared.Humanoid;
 using Content.Shared.Mind.Components;
 using Content.Shared.Polymorph;
+using Content.Shared.Silicons.StationAi;
 using Content.Shared.Roles;
 using Content.Shared.Roles.Components;
 using Content.Shared.Verbs;
@@ -55,6 +57,7 @@ public sealed partial class AdminVerbSystem
     private static readonly EntProtoId DefaultWizardRule = "Wizard";
     private static readonly EntProtoId DefaultNinjaRule = "NinjaSpawn";
     private static readonly ProtoId<StartingGearPrototype> PirateGearId = "PirateGear";
+    private static readonly EntProtoId DefaultMalfAiRule = "MalfAi"; // Sunset
     private static readonly EntProtoId DefaultVampireRule = "Vampire"; //Starlight
     private static readonly EntProtoId DefaultDevilRule = "Devil"; // starlight
     private static readonly EntProtoId DefaultBrighteyeRule = "Brighteye"; //Starlight
@@ -279,6 +282,28 @@ public sealed partial class AdminVerbSystem
                 Message = string.Join(": ", removeAntagName, Loc.GetString("admin-verb-remove-antag")),
             };
             args.Verbs.Add(removeAntag);
+        }
+
+        // Sunset - Malfunctioning AI. Only offered for entities that actually are a station AI
+        // (the brain held inside a core) - handing malf modules to a walking crewmember would
+        // do nothing but confuse everyone.
+        if (HasComp<StationAiHeldComponent>(args.Target))
+        {
+            var malfAiName = Loc.GetString("admin-verb-text-make-malf-ai");
+            Verb malfAi = new()
+            {
+                Text = malfAiName,
+                Category = VerbCategory.Antag,
+                Icon = new SpriteSpecifier.Texture(new ResPath("/Textures/Interface/Actions/malfunction.png")),
+                Act = () =>
+                {
+                    _antag.ForceMakeAntag<MalfAiRuleComponent>(targetPlayer, DefaultMalfAiRule);
+                    _autolog.LogToDiscord(string.Join(": ", malfAiName, Loc.GetString("admin-verb-make-malf-ai")), player.Name);
+                },
+                Impact = LogImpact.High,
+                Message = string.Join(": ", malfAiName, Loc.GetString("admin-verb-make-malf-ai")),
+            };
+            args.Verbs.Add(malfAi);
         }
 
         var changelingName = Loc.GetString("admin-verb-text-make-changeling-wip"); //SL edit, -wip as we allready have lings

@@ -21,6 +21,7 @@ using Content.Shared.Movement.Pulling.Components;
 using Content.Shared.Movement.Pulling.Events;
 using Content.Shared.Movement.Pulling.Systems;
 using Content.Shared.Popups;
+using Content.Shared.Rejuvenate;
 using Content.Shared.Random.Helpers;
 using Content.Shared.Speech.Muting;
 using Content.Shared.Station.Components;
@@ -239,12 +240,8 @@ public sealed class VoidwalkerSystem : SharedVoidwalkerSystem
         if (args.Handled || !TryComp<MobStateComponent>(args.Target, out var mobState))
             return;
 
-        if (_mobState.IsDead(args.Target, mobState))
-        {
-            _popup.PopupClient(Loc.GetString("voidwalker-kidnap-dead"), ent, ent);
-            return;
-        }
-
+        // Sunset: dead victims are fair game too - the void restores them (see OnKidnapDoAfter's
+        // full heal), so a kidnap doubles as a twisted resurrection.
         if (!_mobState.IsIncapacitated(args.Target, mobState))
         {
             _popup.PopupClient(Loc.GetString("voidwalker-kidnap-conscious"), ent, ent);
@@ -273,7 +270,10 @@ public sealed class VoidwalkerSystem : SharedVoidwalkerSystem
 
         var doAfterArgs = new DoAfterArgs(EntityManager, ent, ent.Comp.KidnapTime, new VoidwalkerKidnapDoAfterEvent(), ent, args.Target)
         {
-            BreakOnMove = true,
+            // Movement doesn't interrupt the kidnap - both the voidwalker and the (drifting,
+            // dragged) target float freely in space. The default 1.5-tile DistanceThreshold still
+            // applies, so the channel only breaks if they actually separate.
+            BreakOnMove = false,
             NeedHand = false,
             RequireCanInteract = false,
         };
@@ -286,14 +286,16 @@ public sealed class VoidwalkerSystem : SharedVoidwalkerSystem
         if (args.Cancelled || args.Args.Target is not { } target)
             return;
 
+        // Sunset: the void fully restores its prize - crit or outright dead, the victim comes back
+        // whole (raised BEFORE the curse components go on, so the rejuvenate can't clear them).
+        RaiseLocalEvent(target, new RejuvenateEvent());
+
         EnsureComp<MutedComponent>(target);
         EnsureComp<PacifiedComponent>(target);
 
         var voided = EnsureComp<VoidedComponent>(target);
         voided.EndTime = _timing.CurTime + ent.Comp.VoidedDuration;
         Dirty(target, voided);
-
-        _damageable.TryChangeDamage(target, new DamageSpecifier { DamageDict = { { "Blunt", -30 }, { "Asphyxiation", -100 } } }, true);
 
         // Sunset: whoever's holding the victim (usually the Voidwalker itself, having dragged them
         // through a Glassify opening) needs to let go before the teleport, or the pull joint just
@@ -310,7 +312,9 @@ public sealed class VoidwalkerSystem : SharedVoidwalkerSystem
         }
 
         EnableSuitSensors(target);
-        ImplantVoidTumor(target, voided.EndTime);
+        // Sunset: the tumor grows on its own, slower clock (TumorDuration) - it used to match the
+        // 3-minute curse, which left almost no time to actually get surgery.
+        ImplantVoidTumor(target, _timing.CurTime + ent.Comp.TumorDuration);
 
         _popup.PopupEntity(Loc.GetString("voidwalker-kidnap-success-self"), target, target, PopupType.LargeCaution);
         _popup.PopupEntity(Loc.GetString("voidwalker-kidnap-success-voidwalker"), ent, ent, PopupType.Medium);

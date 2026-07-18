@@ -1,0 +1,29 @@
+# 🌇Sunset🌇 - blood worm's lifetime-consumed-blood counter. Reuses the vampire's digit-counter
+# sprite sheet (it's a generic 4-digit background+glyphs asset, not vampire-specific art) and the
+# same alertViewEntity/UpdateAlertSpriteEvent technique - see Content.Client._Sunset.BloodWorm.BloodWormSystem.
+
+- type: alert
+  id: BloodWormBlood
+  icons:
+  - sprite: _Starlight/Interface/Alerts/blood_counter.rsi
+    state: background
+  alertViewEntity: AlertBloodWormBloodSpriteView
+  name: alerts-blood-worm-blood-name
+  description: alerts-blood-worm-blood-desc
+
+- type: entity
+  id: AlertBloodWormBloodSpriteView
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Starlight/Interface/Alerts/blood_counter.rsi
+    layers:
+    - map: [ "enum.AlertVisualLayers.Base" ]
+    - map: [ "enum.BloodWormVisualLayers.Digit1" ]
+      offset: -0.45, 0
+    - map: [ "enum.BloodWormVisualLayers.Digit2" ]
+      offset: -0.25, 0
+    - map: [ "enum.BloodWormVisualLayers.Digit3" ]
+      offset: -0.05, 0
+    - map: [ "enum.BloodWormVisualLayers.Digit4" ]
+      offset: 0.15, 0

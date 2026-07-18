@@ -25,6 +25,30 @@
   - Eeeps # imp
   - TheBoys # 🌇Sunset🌇
   - Voidwalker # 🌇Sunset🌇
+  - MalfAi # 🌇Sunset🌇
+  - BloodWorm # 🌇Sunset🌇
+  - Spy # 🌇Sunset🌇
+  - Homelander # 🌇Sunset🌇
+
+- type: guideEntry
+  id: MalfAi
+  name: guide-entry-malf-ai
+  text: "/ServerInfo/Guidebook/Antagonist/MalfAi.xml"
+
+- type: guideEntry
+  id: BloodWorm
+  name: guide-entry-blood-worm
+  text: "/ServerInfo/Guidebook/Antagonist/BloodWorm.xml"
+
+- type: guideEntry
+  id: Spy
+  name: guide-entry-spy
+  text: "/ServerInfo/Guidebook/Antagonist/Spy.xml"
+
+- type: guideEntry
+  id: Homelander
+  name: guide-entry-homelander
+  text: "/ServerInfo/Guidebook/Antagonist/Homelander.xml"
 
 - type: guideEntry
   id: TheBoys

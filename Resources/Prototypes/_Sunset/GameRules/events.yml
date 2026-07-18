@@ -1,5 +1,16 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
+# 🌇Sunset🌇 - только наши собственные midround-антагонисты (Кровяной червь, Ходящий в пустоте) -
+# намеренно НЕ используем полный ModerateAntagEventsTable, чтобы случайные события по-прежнему не
+# выдавали ВАНИЛЬНЫЕ роли антагонистов (Dragon/Ninja/Revenant/Wizard/LoneOps/Abductors и т.п.) в
+# куррируемых режимах, но при этом Червь и Ходящий всё равно могли выпасть на обычном онлайне 5-10.
+- type: entityTable
+  id: SunSetCalmCustomAntagEventsTable
+  table: !type:AllSelector
+    children:
+      - id: BloodWormSpawn
+      - id: VoidwalkerSpawn
+
 # 🌇Sunset🌇 - те же таблицы, что и в BasicGameRulesTable, но без BasicAntagEventsTable /
 # ModerateAntagEventsTable (там события, дающие роли антагонистов - Dragon/Ninja/Revenant/
 # Wizard/ZombieOutbreak/LoneOps/Abductors и т.п.). Используется вместо BasicStationEventScheduler
@@ -17,6 +28,8 @@
         tableId: CalmPestEventsTable
       - !type:NestedSelector
         tableId: SpicyPestEventsTable
+      - !type:NestedSelector
+        tableId: SunSetCalmCustomAntagEventsTable
 
 - type: entity
   id: SunSetCalmStationEventScheduler

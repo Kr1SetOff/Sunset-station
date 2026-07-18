@@ -338,16 +338,39 @@ public sealed partial class PaperSystem : EntitySystem
         args.Verbs.Add(verb);
     }
 
+    /// <summary>
+    /// 🌇Sunset🌇 - whether the string contains any Cyrillic characters (basic + supplement blocks).
+    /// </summary>
+    private static bool HasCyrillic(string text)
+    {
+        foreach (var c in text)
+        {
+            if (c >= 'Ѐ' && c <= 'ԯ')
+                return true;
+        }
+
+        return false;
+    }
+
     // Umbra: Actual signature code.
     public bool TrySign(Entity<PaperComponent> paper, EntityUid signer)
     {
+        var signerName = Name(signer);
+
+        // 🌇Sunset🌇 - the Starlight Signature.ttf scrawl has no Cyrillic glyphs, so Russian names
+        // rendered as tofu/fallback. Names with Cyrillic use Marck Script (OFL, full Cyrillic
+        // cursive) instead - an equally "handwritten" look; Latin names keep the original scrawl.
+        var font = HasCyrillic(signerName)
+            ? "/Fonts/_Sunset/MarckScript/MarckScript-Regular.ttf"
+            : "/Fonts/_Starlight/Signature.ttf";
+
         // Generate display information.
         StampDisplayInfo info = new StampDisplayInfo
         {
-            StampedName = Name(signer),
+            StampedName = signerName,
             StampedColor = Color.FromHex("#333333"),
             Type = StampType.Signature,
-            Font = "/Fonts/_Starlight/Signature.ttf" // 🌟Starlight🌟
+            Font = font // 🌟Starlight🌟 / 🌇Sunset🌇 - see above
         };
 
         // STARLIGHT START

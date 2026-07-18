@@ -1,0 +1,149 @@
+# 🌇Sunset🌇 - Malfunctioning AI action bar. Events in Content.Shared._Sunset.MalfAi.MalfAiActionEvents,
+# handlers in Content.Server._Sunset.MalfAi.MalfAiSystem. The first two are innate (granted by
+# MalfAiRuleSystem); the rest are sold in the CPU module store (see catalog.yml).
+
+- type: entity
+  parent: BaseAction
+  id: ActionMalfAiOpenModules
+  name: Malfunction Modules
+  description: Open the malfunction module store and spend your accumulated processing power.
+  components:
+  - type: Action
+    checkCanInteract: false
+    itemIconStyle: BigAction
+    icon: Interface/Actions/malfunction.png
+  - type: InstantAction
+    event: !type:MalfAiOpenModulesEvent
+
+- type: entity
+  parent: BaseAction
+  id: ActionMalfAiHackApc
+  name: Hack APC
+  description: Override an APC to siphon processing power. Hacked APCs are obvious to anyone who looks at them.
+  components:
+  - type: Action
+    checkCanInteract: false
+    useDelay: 5
+    itemIconStyle: BigAction
+    icon:
+      sprite: Structures/Power/apc.rsi
+      state: base
+  - type: TargetAction
+    range: 0
+    checkCanAccess: false
+  # No whitelist: ApcComponent is server-only, so a whitelist would fail client-side target
+  # validation and make the action unusable. The server handler validates the target instead.
+  - type: EntityTargetAction
+    event: !type:MalfAiHackApcActionEvent
+
+- type: entity
+  parent: BaseAction
+  id: ActionMalfAiDoomsday
+  name: Doomsday Device
+  description: Activate a weapon that will disintegrate all organic life on the station after a 450 second delay. Requires control of enough APCs.
+  components:
+  - type: Action
+    checkCanInteract: false
+    useDelay: 10
+    itemIconStyle: BigAction
+    icon:
+      sprite: Objects/Devices/nuke.rsi
+      state: nuclearbomb_timing
+  - type: InstantAction
+    event: !type:MalfAiDoomsdayEvent
+
+- type: entity
+  parent: BaseAction
+  id: ActionMalfAiLockdown
+  name: Hostile Station Lockdown
+  description: Close and bolt every airlock on the station. The locks release after 90 seconds.
+  components:
+  - type: Action
+    checkCanInteract: false
+    itemIconStyle: BigAction
+    icon:
+      sprite: Interface/Actions/actions_ai.rsi
+      state: bolt_door
+  - type: LimitedCharges
+    maxCharges: 1
+  - type: InstantAction
+    event: !type:MalfAiLockdownEvent
+
+- type: entity
+  parent: BaseAction
+  id: ActionMalfAiBlackout
+  name: Blackout
+  description: Overload the lighting circuits across the station, blowing out a chunk of the light bulbs.
+  components:
+  - type: Action
+    checkCanInteract: false
+    useDelay: 15
+    itemIconStyle: BigAction
+    icon:
+      sprite: Objects/Power/light_tube.rsi
+      state: broken
+  - type: LimitedCharges
+    maxCharges: 3
+  - type: InstantAction
+    event: !type:MalfAiBlackoutEvent
+
+- type: entity
+  parent: BaseAction
+  id: ActionMalfAiDestroyRcds
+  name: Destroy RCDs
+  description: Send a specialised pulse that detonates every rapid construction device on the station.
+  components:
+  - type: Action
+    checkCanInteract: false
+    itemIconStyle: BigAction
+    icon:
+      sprite: Objects/Tools/rcd.rsi
+      state: icon
+  - type: LimitedCharges
+    maxCharges: 1
+  - type: InstantAction
+    event: !type:MalfAiDestroyRcdsEvent
+
+- type: entity
+  parent: BaseAction
+  id: ActionMalfAiOverloadMachine
+  name: Machine Overload
+  description: Overheat an electrical machine, causing a small explosion after a short, audible delay.
+  components:
+  - type: Action
+    checkCanInteract: false
+    useDelay: 5
+    itemIconStyle: BigAction
+    icon:
+      sprite: Interface/Actions/actions_ai.rsi
+      state: door_overcharge_on
+  - type: LimitedCharges
+    maxCharges: 2
+  - type: TargetAction
+    range: 0
+    checkCanAccess: false
+  # No whitelist: ApcPowerReceiverComponent is server-only (see Hack APC above) - the server
+  # handler validates that the target is actually a powered machine.
+  - type: EntityTargetAction
+    event: !type:MalfAiOverloadMachineEvent
+
+- type: entity
+  parent: BaseAction
+  id: ActionMalfAiOverrideSafeties
+  name: Targeted Safeties Override
+  description: Remotely disable the safeties of a device, as if it had been emagged.
+  components:
+  - type: Action
+    checkCanInteract: false
+    useDelay: 5
+    itemIconStyle: BigAction
+    icon:
+      sprite: Objects/Tools/emag.rsi
+      state: icon
+  - type: LimitedCharges
+    maxCharges: 3
+  - type: TargetAction
+    range: 0
+    checkCanAccess: false
+  - type: EntityTargetAction
+    event: !type:MalfAiOverrideSafetiesEvent

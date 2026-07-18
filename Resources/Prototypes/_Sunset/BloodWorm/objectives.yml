@@ -1,0 +1,118 @@
+# 🌇Sunset🌇 - blood worm objectives. Granted directly in code (BloodWormSystem.OnMindAdded) rather
+# than through the round-start AntagSelection/AntagRandomObjectives pipeline, since blood worms are
+# spawned via several different paths (game rule, standalone marker, direct spawn, egg hatching) and
+# only one of those actually runs through AntagSelectionSystem.
+
+# --- Real, mechanical objectives (always granted) ---
+
+- type: entity
+  parent: BaseObjective
+  id: BloodWormKillObjective
+  name: objective-condition-blood-worm-kill-title
+  description: objective-condition-blood-worm-kill-description
+  components:
+  - type: Objective
+    issuer: objective-issuer-blood-worm
+    difficulty: 1.5
+    icon:
+      sprite: Objects/Weapons/Melee/combat_knife.rsi
+      state: icon
+  - type: TargetObjective
+    title: objective-condition-blood-worm-kill-title
+  - type: PickRandomPerson
+    filters:
+    - !type:TargetObjectiveMindFilter
+      blacklist:
+        components:
+        - KillPersonCondition
+  - type: KillPersonCondition
+
+- type: entity
+  parent: BaseObjective
+  id: BloodWormConsumeObjective
+  name: objective-condition-blood-worm-consume-title
+  description: objective-condition-blood-worm-consume-description
+  components:
+  - type: Objective
+    issuer: objective-issuer-blood-worm
+    difficulty: 1.5
+    icon:
+      sprite: _Sunset/Interface/Actions/actions_blood_worm.rsi
+      state: leech_blood
+  - type: BloodWormConsumeCondition
+    amount: 800
+
+- type: entity
+  parent: BaseSurviveObjective
+  id: BloodWormSurviveObjective
+  name: objective-condition-blood-worm-survive-title
+  description: objective-condition-blood-worm-survive-description
+  components:
+  - type: Objective
+    issuer: objective-issuer-blood-worm
+    difficulty: 1
+    icon:
+      sprite: _Sunset/Mobs/BloodWorm/blood_worm_32x32.rsi
+      state: hatchling
+
+# --- Flavor-only roleplay objectives (one picked at random, see BloodWormSystem.OnMindAdded) ---
+
+- type: entity
+  parent: [ BaseObjective, BaseFreeObjective ]
+  id: BloodWormRpObjectiveSilent
+  name: objective-condition-blood-worm-rp-silent-title
+  description: objective-condition-blood-worm-rp-silent-description
+  components:
+  - type: Objective
+    difficulty: 1 # required but not used
+    issuer: objective-issuer-blood-worm
+
+- type: entity
+  parent: [ BaseObjective, BaseFreeObjective ]
+  id: BloodWormRpObjectiveNest
+  name: objective-condition-blood-worm-rp-nest-title
+  description: objective-condition-blood-worm-rp-nest-description
+  components:
+  - type: Objective
+    difficulty: 1 # required but not used
+    issuer: objective-issuer-blood-worm
+
+- type: entity
+  parent: [ BaseObjective, BaseFreeObjective ]
+  id: BloodWormRpObjectiveTaunt
+  name: objective-condition-blood-worm-rp-taunt-title
+  description: objective-condition-blood-worm-rp-taunt-description
+  components:
+  - type: Objective
+    difficulty: 1 # required but not used
+    issuer: objective-issuer-blood-worm
+
+- type: entity
+  parent: [ BaseObjective, BaseFreeObjective ]
+  id: BloodWormRpObjectiveMimic
+  name: objective-condition-blood-worm-rp-mimic-title
+  description: objective-condition-blood-worm-rp-mimic-description
+  components:
+  - type: Objective
+    difficulty: 1 # required but not used
+    issuer: objective-issuer-blood-worm
+
+- type: entity
+  parent: [ BaseObjective, BaseFreeObjective ]
+  id: BloodWormRpObjectiveSpare
+  name: objective-condition-blood-worm-rp-spare-title
+  description: objective-condition-blood-worm-rp-spare-description
+  components:
+  - type: Objective
+    difficulty: 1 # required but not used
+    issuer: objective-issuer-blood-worm
+
+- type: entity
+  parent: [ BaseObjective, BaseFreeObjective ]
+  id: BloodWormRpObjectiveBloodline
+  name: objective-condition-blood-worm-rp-bloodline-title
+  description: objective-condition-blood-worm-rp-bloodline-description
+  components:
+  - type: Objective
+    difficulty: 1 # required but not used
+    issuer: objective-issuer-blood-worm

@@ -1,3 +1,18 @@
 ﻿- type: ghostRoleRaffleDecider
   id: default
   decider: !type:RngGhostRoleRaffleDecider {}
+
+# 🌇Sunset🌇 - sponsor-weighted decider, auto-selected for antagonist ghost roles (see GhostRoleSystem.Sunset.cs)
+- type: ghostRoleRaffleDecider
+  id: sunsetSponsorAntag
+  decider: !type:SunsetSponsorAntagGhostRoleRaffleDecider {}
+
+# 🌇Sunset🌇 - blood worm raffle: sponsor boost starts at tier 2, and tier 2 gets exactly +50%
+# relative to a non-sponsor. Tier 5's 99% instant win still applies (decider default).
+- type: ghostRoleRaffleDecider
+  id: sunsetBloodWormRaffle
+  decider: !type:SunsetSponsorAntagGhostRoleRaffleDecider
+    extraWeightByTier:
+      2: 0.5
+      3: 1.0
+      4: 1.5

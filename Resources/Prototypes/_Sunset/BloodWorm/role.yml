@@ -1,0 +1,25 @@
+# 🌇Sunset🌇 - blood worm antagonist role. Obtained via ghost-role raffle (spawn point, egg
+# cocoons) - see entities.yml.
+
+- type: antag
+  id: BloodWorm
+  name: roles-antag-blood-worm-name
+  antagonist: true
+  setPreference: false # ghost-role only - the raffle checks requirements via MindRoleBloodWorm.
+  objective: roles-antag-blood-worm-objective
+  # Checked by the ghost-role raffle (GhostRoleSystem collects antag prototypes off mindRoles and
+  # raises IsRoleAllowedEvent). Same tier as the Voidwalker: a midround creature antag.
+  requirements:
+  - !type:OverallPlaytimeRequirement
+    time: 15h
+
+- type: entity
+  parent: BaseMindRoleAntag
+  id: MindRoleBloodWorm
+  name: Blood Worm Role
+  components:
+  - type: MindRole
+    antagPrototype: BloodWorm
+    exclusiveAntag: true
+    subtype: role-subtype-blood-worm
+  - type: BloodWormRole
