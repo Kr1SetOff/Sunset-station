@@ -695,15 +695,16 @@ namespace Content.Server.Voting.Managers
 
             // 🌇Sunset🌇 - only offer presets that could actually run with the current online
             // population; a mode nobody can play (too few/too many players) shouldn't be offered,
-            // let alone win, a vote.
-            var readyPlayers = _entityManager.System<GameTicker>().ReadyPlayerCount();
+            // let alone win, a vote. Uses total connected players rather than ready players, since
+            // the vote happens while people are still joining/readying up in the lobby.
+            var onlinePlayers = _playerManager.PlayerCount;
 
             foreach (var preset in _prototypeManager.EnumeratePrototypes<GamePresetPrototype>())
             {
                 if (!preset.ShowInVote)
                     continue;
 
-                if (preset.MinPlayers > readyPlayers || preset.MaxPlayers < readyPlayers)
+                if (preset.MinPlayers > onlinePlayers || preset.MaxPlayers < onlinePlayers)
                     continue;
 
                 //STARLIGHT

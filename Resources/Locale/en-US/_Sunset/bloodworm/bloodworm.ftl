@@ -80,6 +80,29 @@ objective-condition-blood-worm-rp-spare-description = Let at least one helpless 
 objective-condition-blood-worm-rp-bloodline-title = Bloodline
 objective-condition-blood-worm-rp-bloodline-description = Give one of your children (from a laid egg) a name.
 
+## Objective entity names/descriptions.
+## Robust doesn't resolve name:/description: from objectives.yml as a Loc ID on its own - only via
+## ent-<id> (see LocalizationManager.CalcEntityLoc) or an explicit Loc.GetString call from code (as
+## for the Kill objective via TargetObjectiveSystem and Consume via BloodWormConsumeConditionSystem).
+## Without this, players would see the raw Loc ID instead of the translated text.
+
+ent-BloodWormKillObjective =
+    .desc = { objective-condition-blood-worm-kill-description }
+ent-BloodWormSurviveObjective = { objective-condition-blood-worm-survive-title }
+    .desc = { objective-condition-blood-worm-survive-description }
+ent-BloodWormRpObjectiveSilent = { objective-condition-blood-worm-rp-silent-title }
+    .desc = { objective-condition-blood-worm-rp-silent-description }
+ent-BloodWormRpObjectiveNest = { objective-condition-blood-worm-rp-nest-title }
+    .desc = { objective-condition-blood-worm-rp-nest-description }
+ent-BloodWormRpObjectiveTaunt = { objective-condition-blood-worm-rp-taunt-title }
+    .desc = { objective-condition-blood-worm-rp-taunt-description }
+ent-BloodWormRpObjectiveMimic = { objective-condition-blood-worm-rp-mimic-title }
+    .desc = { objective-condition-blood-worm-rp-mimic-description }
+ent-BloodWormRpObjectiveSpare = { objective-condition-blood-worm-rp-spare-title }
+    .desc = { objective-condition-blood-worm-rp-spare-description }
+ent-BloodWormRpObjectiveBloodline = { objective-condition-blood-worm-rp-bloodline-title }
+    .desc = { objective-condition-blood-worm-rp-bloodline-description }
+
 ## Feedback
 
 blood-worm-no-blood = There is no blood in this body.
