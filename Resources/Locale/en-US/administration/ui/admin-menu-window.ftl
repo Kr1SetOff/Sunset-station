@@ -11,3 +11,4 @@ admin-menu-baby-jail-tab = Baby Jail
 admin-menu-players-tab = Players
 admin-menu-objects-tab = Objects
 admin-menu-playtime-tab = Playtime Transfer
+admin-menu-fake-player-count-tab = Players+

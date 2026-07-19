@@ -8,11 +8,13 @@ public sealed partial class ScottishAccentSystem : EntitySystem
 {
     [Dependency] private ReplacementAccentSystem _replacement = default!;
 
-    [GeneratedRegex(@"ing\b", RegexOptions.IgnoreCase)]
-    private static partial Regex RegexIng();
+    // 🌇Sunset🌇 - "-ing"/"and" are English grammar-specific, no-ops on Cyrillic. Replaced with
+    // equivalent contracted colloquial Russian, distinct from Southern's set.
+    [GeneratedRegex(@"\bэто\b", RegexOptions.IgnoreCase)]
+    private static partial Regex RegexEto();
 
-    [GeneratedRegex(@"\band\b", RegexOptions.IgnoreCase)]
-    private static partial Regex RegexAnd();
+    [GeneratedRegex(@"\bсейчас\b", RegexOptions.IgnoreCase)]
+    private static partial Regex RegexSeychas();
 
     public override void Initialize()
     {
@@ -24,8 +26,8 @@ public sealed partial class ScottishAccentSystem : EntitySystem
     {
         args.Message = _replacement.ApplyReplacements(args.Message, "scottish");
 
-        args.Message.Text = RegexIng().Replace(args.Message.Text, m => PreserveCase(m.Value, "in'"));
-        args.Message.Text = RegexAnd().Replace(args.Message.Text, m => PreserveCase(m.Value, "an'"));
+        args.Message.Text = RegexEto().Replace(args.Message.Text, m => PreserveCase(m.Value, "эт"));
+        args.Message.Text = RegexSeychas().Replace(args.Message.Text, m => PreserveCase(m.Value, "щас"));
     }
 
     private static string PreserveCase(string original, string replacement)

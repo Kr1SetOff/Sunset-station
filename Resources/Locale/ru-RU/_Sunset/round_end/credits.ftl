@@ -1,6 +1,7 @@
 round-end-credits-sponsor-tier = Спонсоры — уровень { $tier }
 round-end-credits-ghosts = Призраки
 round-end-credits-admins = Администрация
+round-end-credits-skip-hint = Удерживайте ЛКМ, чтобы ускорить
 
 round-end-credits-joke-1 = Съел донат прямо с пола
 round-end-credits-joke-2 = Уверен, что дверь была открыта

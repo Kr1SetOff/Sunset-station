@@ -8,11 +8,17 @@
   antagonist: true
   setPreference: true
   objective: roles-antag-spy-objective
+  playTimeTracker: AntagSpy
   # 🌇Sunset🌇 - a Spy juggles contracts, an uplink and social engineering: slightly more than
   # the base Traitor's 12h so newcomers meet the regular antags first.
   requirements:
   - !type:OverallPlaytimeRequirement
     time: 15h
+
+# 🌇Sunset🌇 - without this, hours played as Spy were never tracked anywhere at all.
+- type: playTimeTracker
+  id: AntagSpy
+  name: roles-antag-spy-name
 
 - type: entity
   parent: BaseMindRoleAntag

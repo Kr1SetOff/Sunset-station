@@ -302,3 +302,17 @@
     stampState: "paper_stamp-wizard"
   - type: Sprite
     state: stamp-wizard
+
+- type: entity
+  name: greytide rubber stamp
+  parent: RubberStampBase
+  id: RubberStampGreytide
+  description: A crude, unofficial rubber stamp. Marks any document as officially Greytide-approved.
+  categories: [ DoNotMap ]
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-greytide
+    stampedColor: "#5b5b5b"
+    stampState: "paper_stamp-greytide"
+  - type: Sprite
+    state: stamp-greytide

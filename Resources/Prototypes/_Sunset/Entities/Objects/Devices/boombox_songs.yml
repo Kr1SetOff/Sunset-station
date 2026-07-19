@@ -441,3 +441,10 @@
   category: Boombox
   path:
     path: /Audio/_Sunset/Boombox/zhy-shi.ogg
+
+- type: jukebox
+  id: BoomboxFire
+  name: The Crazy World of Arthur Brown - Fire
+  category: Boombox
+  path:
+    path: /Audio/_Sunset/Boombox/fire.ogg

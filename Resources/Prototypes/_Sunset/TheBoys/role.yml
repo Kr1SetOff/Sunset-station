@@ -13,6 +13,7 @@
   antagonist: true
   setPreference: true
   objective: roles-antag-theboys-butcher-objective
+  playTimeTracker: AntagTheBoysButcher
   requirements:
   - !type:OverallPlaytimeRequirement
     time: 30h
@@ -23,6 +24,7 @@
   antagonist: true
   setPreference: true
   objective: roles-antag-theboys-frenchie-objective
+  playTimeTracker: AntagTheBoysFrenchie
   requirements:
   - !type:OverallPlaytimeRequirement
     time: 20h
@@ -33,6 +35,7 @@
   antagonist: true
   setPreference: true
   objective: roles-antag-theboys-hughie-objective
+  playTimeTracker: AntagTheBoysHughie
   requirements:
   - !type:OverallPlaytimeRequirement
     time: 20h
@@ -43,6 +46,7 @@
   antagonist: true
   setPreference: true
   objective: roles-antag-theboys-mothersmilk-objective
+  playTimeTracker: AntagTheBoysMothersMilk
   requirements:
   - !type:OverallPlaytimeRequirement
     time: 20h
@@ -53,9 +57,31 @@
   antagonist: true
   setPreference: true
   objective: roles-antag-theboys-kimiko-objective
+  playTimeTracker: AntagTheBoysKimiko
   requirements:
   - !type:OverallPlaytimeRequirement
     time: 20h
+
+# 🌇Sunset🌇 - without these, hours played as any of The Boys were never tracked anywhere at all.
+- type: playTimeTracker
+  id: AntagTheBoysButcher
+  name: roles-antag-theboys-butcher-name
+
+- type: playTimeTracker
+  id: AntagTheBoysFrenchie
+  name: roles-antag-theboys-frenchie-name
+
+- type: playTimeTracker
+  id: AntagTheBoysHughie
+  name: roles-antag-theboys-hughie-name
+
+- type: playTimeTracker
+  id: AntagTheBoysMothersMilk
+  name: roles-antag-theboys-mothersmilk-name
+
+- type: playTimeTracker
+  id: AntagTheBoysKimiko
+  name: roles-antag-theboys-kimiko-name
 
 - type: entity
   parent: BaseMindRoleAntag

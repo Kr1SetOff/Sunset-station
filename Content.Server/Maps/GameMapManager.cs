@@ -144,6 +144,19 @@ public sealed partial class GameMapManager : IGameMapManager
         if (!TryLookupMap(gameMap, out var map) || !IsMapEligible(map))
             return false;
         _selectedMap = map;
+
+        // 🌇Sunset🌇 - GetSelectedMap() prefers _configSelectedMap (set by the "setgamemap" admin
+        // override / game.map CVar) over _selectedMap unconditionally. Without clearing it here, a
+        // single past "setgamemap" call permanently pins the map and every future map vote silently
+        // has no effect (TrySelectMapIfEligible still succeeds, but GetSelectedMap() keeps returning
+        // the stale forced map) until someone remembers to run "setgamemap" with an empty argument.
+        // A completed map vote should always win over a leftover admin override.
+        if (_configSelectedMap != null)
+        {
+            _configSelectedMap = null;
+            _configurationManager.SetCVar(CCVars.GameMap, string.Empty);
+        }
+
         return true;
     }
 

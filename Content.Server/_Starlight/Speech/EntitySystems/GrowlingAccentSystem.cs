@@ -18,18 +18,20 @@ public sealed partial class GrowlingAccentSystem : EntitySystem
     {
         var message = args.Message.Text;
 
-        // r => rrr
-        message = Regexr().Replace(message, _random.Pick(new List<string> { "rr", "rrr" })
+        // 🌇Sunset🌇 - matched Latin r, a no-op on Cyrillic. Cyrillic "р" is already a trilled
+        // "rolled" r, making it an even better fit for an exaggerated growl than Latin r was.
+        // р => ррр
+        message = Regexr().Replace(message, _random.Pick(new List<string> { "рр", "ррр" })
 );
-        // R => RRR
-        message = RegexR().Replace(message, _random.Pick(new List<string> { "RR", "RRR" })
+        // Р => РРР
+        message = RegexR().Replace(message, _random.Pick(new List<string> { "РР", "РРР" })
 );
 
         args.Message.Text = message;
     }
 
-    [GeneratedRegex("r+")]
+    [GeneratedRegex("р+")]
     private static partial Regex Regexr();
-    [GeneratedRegex("R+")]
+    [GeneratedRegex("Р+")]
     private static partial Regex RegexR();
 }

@@ -15,3 +15,6 @@ trait-scottish-accent-desc = You speak like ye aboot ta go ta the Loch!
 
 trait-polite-accent-name = Polite Accent
 trait-polite-accent-desc = You speak without using all of the crass language that others do!
+
+trait-autism-accent-name = Brainrot Accent
+trait-autism-accent-desc = Whatever you try to say comes out as the same handful of dumb phrases. Ehhhhh.

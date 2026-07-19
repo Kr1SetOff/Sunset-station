@@ -7,11 +7,17 @@
   antagonist: true
   setPreference: false # ghost-role only - the raffle checks requirements via MindRoleBloodWorm.
   objective: roles-antag-blood-worm-objective
+  playTimeTracker: AntagBloodWorm
   # Checked by the ghost-role raffle (GhostRoleSystem collects antag prototypes off mindRoles and
   # raises IsRoleAllowedEvent). Same tier as the Voidwalker: a midround creature antag.
   requirements:
   - !type:OverallPlaytimeRequirement
     time: 15h
+
+# 🌇Sunset🌇 - without this, hours played as Blood Worm were never tracked anywhere at all.
+- type: playTimeTracker
+  id: AntagBloodWorm
+  name: roles-antag-blood-worm-name
 
 - type: entity
   parent: BaseMindRoleAntag

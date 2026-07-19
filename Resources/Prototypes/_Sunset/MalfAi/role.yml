@@ -7,6 +7,12 @@
   antagonist: true
   setPreference: false # admin-only antag - never rolled at round start, so no lobby preference.
   objective: roles-antag-malf-ai-objective
+  playTimeTracker: AntagMalfAi
+
+# 🌇Sunset🌇 - without this, hours played as Malf AI were never tracked anywhere at all.
+- type: playTimeTracker
+  id: AntagMalfAi
+  name: roles-antag-malf-ai-name
 
 - type: entity
   parent: BaseMindRoleAntag

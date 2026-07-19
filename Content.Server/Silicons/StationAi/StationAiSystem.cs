@@ -123,6 +123,8 @@ public sealed partial class StationAiSystem : SharedStationAiSystem
         SubscribeLocalEvent<FollowerComponent, StoppedFollowingEntityEvent>(OnFollowerStoppedFollowing); // Starlight
         SubscribeNetworkEvent<StationAiWarpRequestEvent>(OnStationAiWarpRequest); // Starlight
         SubscribeNetworkEvent<StationAiWarpToTargetEvent>(OnStationAiWarpToTarget); // Starlight
+
+        InitializeArrivals(); // 🌇Sunset🌇
     }
 
     // Starlight Start: AI warping

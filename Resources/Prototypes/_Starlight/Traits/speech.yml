@@ -188,3 +188,17 @@
     - !type:AddCompsEffect
       components:
         - type: ScottishAccent
+
+# 🌇Sunset🌇 - everything you say gets replaced with a random dumb phrase, big enough of a
+# roleplay handicap that it grants a point back like DamagedThroat does.
+- type: trait
+  id: AutismAccent
+  name: trait-autism-accent-name
+  description: trait-autism-accent-desc
+  category: SpeechTraits
+  cost: -1
+  effects:
+    - !type:AddCompsEffect
+      components:
+        - type: ReplacementAccent
+          accent: autism

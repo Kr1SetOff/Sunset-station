@@ -1,6 +1,7 @@
 round-end-credits-sponsor-tier = Sponsors — Tier { $tier }
 round-end-credits-ghosts = Ghosts
 round-end-credits-admins = Administration
+round-end-credits-skip-hint = Hold click to speed up
 
 round-end-credits-joke-1 = Ate a donut straight off the floor
 round-end-credits-joke-2 = Swore the door was open

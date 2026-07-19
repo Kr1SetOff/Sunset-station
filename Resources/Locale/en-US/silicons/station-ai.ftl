@@ -13,6 +13,10 @@ station-ai-core-critical-power = Your AI core is critically low on power. Extern
 station-ai-ghost-role-name = Station AI
 station-ai-ghost-role-description = Serve the station crew as its ever watchful AI.
 
+# 🌇Sunset🌇 - automatic arrival announcement
+stationai-arrival-announcement = Attention! Welcoming a new crew member: { $name }. Sector: { $job }. Welcome aboard.
+stationai-arrival-announcement-unknown-job = unspecified sector
+
 # Radial actions
 ai-open = Open actions
 ai-close = Close actions

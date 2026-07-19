@@ -85,7 +85,7 @@
   forcedLoadout: BitrunnerAvatarSecurityOfficerMODGear
   isModular: true
   completionLoot:
-    ClothingNeckFellForItAward: 1
+    ClothingNeckGoldmedal: 1
   mapPath: /Maps/_Sunset/Bitrun/meta-central.yml
   objectiveTypePool:
   - DeliveryCacheCrate
@@ -107,7 +107,7 @@
   serverRewardPoints: 4
   bitrunningRewardPoints: 250
   completionLoot:
-    PlushieAbductor: 1
+    AbductorPlushie: 1
   isModular: true
   mapPath: /Maps/_Sunset/Bitrun/abductor-ship.yml
   objectiveType: DeliveryCacheCrate
@@ -185,7 +185,7 @@
   bitrunningRewardPoints: 900
   isModular: true
   completionLoot:
-    FoodSnackLollypopWrappedMysteryEvil: 3
+    FoodSnackSwirlLollipop: 3
     BalloonSyn: 1
   mapPath: /Maps/_Sunset/Bitrun/Special-squad.yml
   objectiveTypePool:

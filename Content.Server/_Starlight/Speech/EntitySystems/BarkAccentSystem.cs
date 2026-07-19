@@ -10,16 +10,17 @@ public sealed partial class BarkAccentSystem : EntitySystem
 {
     [Dependency] private IRobustRandom _random = default!;
 
+    // 🌇Sunset🌇 - was English-only literals and an l->r Latin swap, both no-ops on Cyrillic.
     private static readonly IReadOnlyList<string> _barks = new List<string>{
-        " Woof!", " WOOF", " wof-wof"
+        " Гав!", " ГАВ!", " тяв-тяв"
     }.AsReadOnly();
 
     private static readonly IReadOnlyDictionary<string, string> _specialWords = new Dictionary<string, string>()
     {
-        { "ah", "arf" },
-        { "Ah", "Arf" },
-        { "oh", "oof" },
-        { "Oh", "Oof" },
+        { "ах", "гав" },
+        { "Ах", "Гав" },
+        { "ой", "тяв" },
+        { "Ой", "Тяв" },
     };
 
     public override void Initialize()
@@ -36,11 +37,12 @@ public sealed partial class BarkAccentSystem : EntitySystem
             message.Tts = (message.Tts ?? message.Text).Replace(word, repl);
         }
 
+        // с -> ш mimics breathy dog panting, replacing the original's Latin l->r swap.
         message.Text = message.Text.Replace("!", _random.Pick(_barks))
-            .Replace("l", "r")
-            .Replace("L", "R");
+            .Replace("с", "ш")
+            .Replace("С", "Ш");
 
-        message.Tts = (message.Tts ?? message.Text).Replace("!", " Woof!");
+        message.Tts = (message.Tts ?? message.Text).Replace("!", " Гав!");
 
         return message;
     }

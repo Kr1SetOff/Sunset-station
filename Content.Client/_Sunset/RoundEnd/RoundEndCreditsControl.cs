@@ -10,6 +10,7 @@ using Robust.Client.Graphics;
 using Robust.Client.ResourceManagement;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controls;
+using Robust.Shared.Input;
 using Robust.Shared.Maths;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
@@ -34,6 +35,9 @@ public sealed class RoundEndCreditsControl : Control
     private const float ScrollSpeed = 65f; // baseline pixels/second for short credit rolls
     private const float FinalFadeOutDuration = 1.5f;
 
+    /// <summary>How much holding the fast-forward input multiplies scroll speed by.</summary>
+    private const float FastForwardMultiplier = 6f;
+
     /// <summary>
     /// Cap on how long the whole roll may take: long player lists scroll faster instead of
     /// dragging on (and short ones keep the baseline speed).
@@ -46,6 +50,7 @@ public sealed class RoundEndCreditsControl : Control
     private float _elapsed;
     private bool _finishing;
     private float _finishingElapsed;
+    private bool _fastForward;
 
     private readonly VectorFont _headerFont;
     private readonly VectorFont _nameFont;
@@ -90,7 +95,40 @@ public sealed class RoundEndCreditsControl : Control
         };
         _viewport.AddChild(_creditsContent);
 
+        var hint = new Label
+        {
+            Text = Loc.GetString("round-end-credits-skip-hint"),
+            FontColorOverride = new Color(1f, 1f, 1f, 0.5f),
+            HorizontalAlignment = HAlignment.Right,
+            VerticalAlignment = VAlignment.Bottom,
+            Margin = new Thickness(0, 0, 16, 12),
+        };
+        LayoutContainer.SetAnchorPreset(hint, LayoutContainer.LayoutPreset.BottomRight);
+        AddChild(hint);
+
         BuildContent(message, resourceCache);
+    }
+
+    protected override void KeyBindDown(GUIBoundKeyEventArgs args)
+    {
+        base.KeyBindDown(args);
+
+        if (args.Function != EngineKeyFunctions.UIClick && args.Function != EngineKeyFunctions.Use)
+            return;
+
+        _fastForward = true;
+        args.Handle();
+    }
+
+    protected override void KeyBindUp(GUIBoundKeyEventArgs args)
+    {
+        base.KeyBindUp(args);
+
+        if (args.Function != EngineKeyFunctions.UIClick && args.Function != EngineKeyFunctions.Use)
+            return;
+
+        _fastForward = false;
+        args.Handle();
     }
 
     /// <summary>
@@ -126,16 +164,18 @@ public sealed class RoundEndCreditsControl : Control
     {
         base.FrameUpdate(args);
 
+        var deltaSeconds = args.DeltaSeconds * (_fastForward ? FastForwardMultiplier : 1f);
+
         if (_finishing)
         {
-            _finishingElapsed += args.DeltaSeconds;
+            _finishingElapsed += deltaSeconds;
             Modulate = new Color(1, 1, 1, Math.Clamp(1f - _finishingElapsed / FinalFadeOutDuration, 0f, 1f));
             if (_finishingElapsed >= FinalFadeOutDuration)
                 Finished?.Invoke();
             return;
         }
 
-        _elapsed += args.DeltaSeconds;
+        _elapsed += deltaSeconds;
 
         var viewportHeight = Height > 0 ? Height : 720f;
 

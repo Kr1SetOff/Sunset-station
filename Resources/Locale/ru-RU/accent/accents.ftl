@@ -132,6 +132,22 @@ accent-words-tomato-3 = Матет?
 accent-words-tomato-4 = Матест!
 accent-words-tomato-5 = Вота...
 
+# Autism 🌇Sunset🌇
+accent-words-autism-1 = Сиииикс сееевен!
+accent-words-autism-2 = Газан!!
+accent-words-autism-3 = Бр бр Патапим...
+accent-words-autism-4 = Барелино Капучино!
+accent-words-autism-5 = Моя мать шлюха.
+accent-words-autism-6 = Ыыыыы...
+accent-words-autism-7 = Аааааа!
+accent-words-autism-8 = Ауф.
+accent-words-autism-9 = Ага.
+accent-words-autism-10 = Угу, ага.
+accent-words-autism-11 = Бож...
+accent-words-autism-12 = Чееел.
+accent-words-autism-13 = Ыаыаыа!
+accent-words-autism-14 = Я дурак.
+
 # Scurret
 accent-words-scurret-1 = Ва!
 accent-words-scurret-2 = Ва?

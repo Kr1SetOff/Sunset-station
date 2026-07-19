@@ -12,9 +12,10 @@ public sealed partial class SkeletonAccentSystem : EntitySystem
     [Dependency] private IRobustRandom _random = default!;
     [Dependency] private ReplacementAccentSystem _replacement = default!;
 
-    [GeneratedRegex(@"(?<!\w)[^aeiou]one", RegexOptions.IgnoreCase)]
-    private static partial Regex BoneRegex();
-
+    // 🌇Sunset🌇 - the original "-one"->"bone" pun regex was English-spelling specific (it doesn't
+    // even produce clean puns in English half the time - "phone" -> "pbone"). There's no clean
+    // Cyrillic equivalent that wouldn't risk mangling unrelated words, so it's dropped; the "skeleton"
+    // ReplacementAccent dictionary already carries proper Russian bone puns on its own.
     public override void Initialize()
     {
         base.Initialize();
@@ -23,10 +24,6 @@ public sealed partial class SkeletonAccentSystem : EntitySystem
 
     public SpeechMessage Accentuate(SpeechMessage message, SkeletonAccentComponent component)
     {
-        // bone replacements
-        message.Text = BoneRegex().Replace(message.Text, "bone");
-        message.Tts = BoneRegex().Replace(message.Tts ?? message.Text, "bone");
-
         // apply word replacements
         message = _replacement.ApplyReplacements(message, "skeleton");
 

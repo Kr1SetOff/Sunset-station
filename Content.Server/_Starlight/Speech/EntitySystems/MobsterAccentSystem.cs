@@ -10,19 +10,19 @@ namespace Content.Server._Starlight.Speech.EntitySystems;
 
 public sealed partial class MobsterAccentSystem : EntitySystem
 {
-    [GeneratedRegex(@"(?<=\w\w)(in)g(?!\w)", RegexOptions.IgnoreCase)]
-    private static partial Regex RegexIng();
-
-    [GeneratedRegex(@"(?<=\w)o[Rr](?=\w)")]
+    // 🌇Sunset🌇 - "-ing"/"or"/"ar" are English-spelling specific, no-ops on Cyrillic. Replaced with
+    // dropping mid-word "р" after о/а - a mumbled, non-rhotic swallowed-r effect (the same idea as
+    // "or"->"uh"/"ar"->"ah" losing the r sound) that fits a gangster mumble in Russian too.
+    [GeneratedRegex(@"(?<=\w)ор(?=\w)")]
     private static partial Regex RegexLowerOr();
 
-    [GeneratedRegex(@"(?<=\w)O[Rr](?=\w)")]
+    [GeneratedRegex(@"(?<=\w)ОР(?=\w)")]
     private static partial Regex RegexUpperOr();
 
-    [GeneratedRegex(@"(?<=\w)a[Rr](?=\w)")]
+    [GeneratedRegex(@"(?<=\w)ар(?=\w)")]
     private static partial Regex RegexLowerAr();
 
-    [GeneratedRegex(@"(?<=\w)A[Rr](?=\w)")]
+    [GeneratedRegex(@"(?<=\w)АР(?=\w)")]
     private static partial Regex RegexUpperAr();
 
     [GeneratedRegex(@"^(\S+)")]
@@ -47,21 +47,18 @@ public sealed partial class MobsterAccentSystem : EntitySystem
     {
         message = _replacement.ApplyReplacements(message, "mobster");
 
-        // thinking -> thinkin'
-        message.Text = RegexIng().Replace(message.Text, "$1'");
+        // ор -> о and ар -> а (dropped mid-word р)
+        message.Text = RegexLowerOr().Replace(message.Text, "о");
+        message.Tts = RegexLowerOr().Replace(message.Tts ?? message.Text, "о");
 
-        // or -> uh and ar -> ah
-        message.Text = RegexLowerOr().Replace(message.Text, "uh");
-        message.Tts = RegexLowerOr().Replace(message.Tts ?? message.Text, "uh");
+        message.Text = RegexUpperOr().Replace(message.Text, "О");
+        message.Tts = RegexUpperOr().Replace(message.Tts ?? message.Text, "О");
 
-        message.Text = RegexUpperOr().Replace(message.Text, "UH");
-        message.Tts = RegexUpperOr().Replace(message.Tts ?? message.Text, "UH");
+        message.Text = RegexLowerAr().Replace(message.Text, "а");
+        message.Tts = RegexLowerAr().Replace(message.Tts ?? message.Text, "а");
 
-        message.Text = RegexLowerAr().Replace(message.Text, "ah");
-        message.Tts = RegexLowerAr().Replace(message.Tts ?? message.Text, "ah");
-
-        message.Text = RegexUpperAr().Replace(message.Text, "AH");
-        message.Tts = RegexUpperAr().Replace(message.Tts ?? message.Text, "AH");
+        message.Text = RegexUpperAr().Replace(message.Text, "А");
+        message.Tts = RegexUpperAr().Replace(message.Tts ?? message.Text, "А");
 
         // Prefix
         if (_random.Prob(0.15f))

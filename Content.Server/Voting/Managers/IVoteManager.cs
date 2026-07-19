@@ -44,6 +44,15 @@ namespace Content.Server.Voting.Managers
         bool CanCallVote(ICommonSession initiator, StandardVoteType? voteType = null);
 
         /// <summary>
+        /// 🌇Sunset🌇 - like <see cref="CanCallVote"/>'s cooldown/already-active checks, but usable by
+        /// automatic server-triggered votes (e.g. the round-end map/preset vote) which have no
+        /// initiating player session to check. Prevents duplicate votes from stacking if the
+        /// automatic trigger ever fires more than once while a vote of that type is still active or
+        /// on its post-creation cooldown.
+        /// </summary>
+        bool IsStandardVoteActiveOrOnCooldown(StandardVoteType voteType);
+
+        /// <summary>
         /// Initiate a standard vote such as restart round, that can be initiated by players.
         /// </summary>
         /// <param name="initiator">

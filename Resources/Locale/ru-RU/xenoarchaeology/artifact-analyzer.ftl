@@ -7,7 +7,7 @@ analysis-console-info-no-artifact = Артефакт не найден! Поме
 analysis-console-info-ready = Все системы запущены. Сканирование готово.
 
 analysis-console-no-node = Выберите узел для просмотра
-analysis-console-info-id = ID_ОБЪЕКТА: { $id }
+analysis-console-info-id = [font="Monospace" size=11]ID:[/font]
 analysis-console-info-id-value = [font="Monospace" size=11][color=yellow]{ $id }[/color][/font]
 analysis-console-info-class = [font="Monospace" size=11]Класс:[/font]
 analysis-console-info-class-value = [font="Monospace" size=11]{ $class }[/font]
@@ -19,12 +19,12 @@ analysis-console-info-locked-value = [font="Monospace" size=11][color={ $state -
 }[/color][/font]
 analysis-console-info-durability = [font="Monospace" size=11]Прочность:[/font]
 analysis-console-info-durability-value = [font="Monospace" size=11][color={ $color }]{ $current }/{ $max }[/color][/font]
-analysis-console-info-effect = РЕАКЦИЯ: { $effect }
+analysis-console-info-effect = [font="Monospace" size=11]Реакция:[/font]
 analysis-console-info-effect-value = [font="Monospace" size=11][color=gray]{ $state ->
     [true] { $info }
     *[false] Разблокируйте узлы для получения информации
 }[/color][/font]
-analysis-console-info-trigger = СТИМУЛЯТОР: { $trigger }
+analysis-console-info-trigger = [font="Monospace" size=11]Стимулятор:[/font]
 analysis-console-info-triggered-value = [font="Monospace" size=11][color=gray]{ $triggers }[/color][/font]
 analysis-console-info-scanner = Сканирование...
 analysis-console-info-scanner-paused = Пауза.

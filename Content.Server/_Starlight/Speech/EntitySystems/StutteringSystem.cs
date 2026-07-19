@@ -13,7 +13,9 @@ public sealed partial class StutteringSystem : SharedStutteringSystem
     [Dependency] private IRobustRandom _random = default!;
 
     // Regex of characters to stutter.
-    [GeneratedRegex(@"[b-df-hj-np-tv-wxyz]", RegexOptions.IgnoreCase | RegexOptions.Compiled, "en-US")]
+    // 🌇Sunset🌇 - the original Latin consonant class + "en-US" culture matched zero Cyrillic
+    // characters, so a Russian-speaking character never actually stuttered. Cyrillic consonants.
+    [GeneratedRegex(@"[бвгджзйклмнпрстфхцчшщ]", RegexOptions.IgnoreCase | RegexOptions.Compiled)]
     private static partial Regex Stutter();
 
     public override void Initialize()
