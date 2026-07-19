@@ -7,18 +7,19 @@ namespace Content.Server._Starlight.Speech.EntitySystems;
 
 public sealed class OwOAccentSystem : EntitySystem
 {
+    // 🌇Sunset🌇 - the original was an English word dictionary + Latin r/l->w swap, both no-ops on
+    // Cyrillic text.
     private static readonly IReadOnlyDictionary<string, string> _specialWords = new Dictionary<string, string>()
     {
-        { "you", "wu" },
-        { "are", "r" },
-        { "hello", "mew" },
-        { "love", "luv" },
-        { "please", "plez" },
-        { "food", "noms" },
-        { "cute", "koot" },
-        { "now", "meow" },
-        { "look", "lookee" },
-        { "little", "lil" },
+        { "ты", "тывы" },
+        { "привет", "мяу" },
+        { "любовь", "любофф" },
+        { "пожалуйста", "пожаааалста" },
+        { "еда", "нямка" },
+        { "милый", "кьют" },
+        { "сейчас", "мяусчас" },
+        { "смотри", "смотвики" },
+        { "маленький", "малюсь" },
     };
 
     public override void Initialize()
@@ -34,9 +35,11 @@ public sealed class OwOAccentSystem : EntitySystem
             message.Text = message.Text.Replace(word, repl);
             message.Tts = (message.Tts ?? message.Text).Replace(word, repl);
         }
+        // р/л -> в is the Russian analogue of the English r/l -> w "baby talk" mispronunciation
+        // (rhotacism substituting в for р is a real, recognizable childish-speech pattern).
         message.Text = message.Text
-            .Replace("r", "w").Replace("R", "W")
-            .Replace("l", "w").Replace("L", "W");
+            .Replace("р", "в").Replace("Р", "В")
+            .Replace("л", "в").Replace("Л", "В");
 
         return message;
     }

@@ -1,284 +1,284 @@
-accent-chav-replaced-1 = believe
-accent-chav-replacement-1 = Adam and Eve
+accent-chav-replaced-1 = верю
+accent-chav-replacement-1 = богом клянусь
 
-accent-chav-replaced-2 = arse
-accent-chav-replacement-2 = bottle
+accent-chav-replaced-2 = задница
+accent-chav-replacement-2 = жопа
 
-accent-chav-replaced-3 = neck
-accent-chav-replacement-3 = Gregory
+accent-chav-replaced-3 = шея
+accent-chav-replacement-3 = холка
 
-accent-chav-replaced-4 = necks
-accent-chav-replacement-4 = Gregories
+accent-chav-replaced-4 = шеи
+accent-chav-replacement-4 = холки
 
-accent-chav-replaced-5 = fart
-accent-chav-replacement-5 = raspberry
+accent-chav-replaced-5 = пукнуть
+accent-chav-replacement-5 = пёрнуть
 
-accent-chav-replaced-6 = hat
-accent-chav-replacement-6 = titfer
+accent-chav-replaced-6 = шапка
+accent-chav-replacement-6 = кепка
 
-accent-chav-replaced-7 = wife
-accent-chav-replacement-7 = trouble
+accent-chav-replaced-7 = жена
+accent-chav-replacement-7 = баба
 
-accent-chav-replaced-8 = sweetheart
-accent-chav-replacement-8 = treacle
+accent-chav-replaced-8 = дорогая
+accent-chav-replacement-8 = зая
 
-accent-chav-replaced-9 = dear
-accent-chav-replacement-9 = treacle
+accent-chav-replaced-9 = милый
+accent-chav-replacement-9 = зая
 
-accent-chav-replaced-10 = honey
-accent-chav-replacement-10 = treacle
+accent-chav-replaced-10 = солнышко
+accent-chav-replacement-10 = зая
 
-accent-chav-replaced-11 = stairs
-accent-chav-replacement-11 = apples and pears
+accent-chav-replaced-11 = лестница
+accent-chav-replacement-11 = лесенка
 
-accent-chav-replaced-12 = pizza
-accent-chav-replacement-12 = Mona Lisa
+accent-chav-replaced-12 = пицца
+accent-chav-replacement-12 = пицота
 
-accent-chav-replaced-13 = balls
-accent-chav-replacement-13 = cobblers
+accent-chav-replaced-13 = яйца
+accent-chav-replacement-13 = шары
 
-accent-chav-replaced-14 = bruh
-accent-chav-replacement-14 = bruv
+accent-chav-replaced-14 = чувак
+accent-chav-replacement-14 = чел
 
-accent-chav-replaced-15 = bro
-accent-chav-replacement-15 = bruv
+accent-chav-replaced-15 = братан
+accent-chav-replacement-15 = браток
 
-accent-chav-replaced-16 = brother
-accent-chav-replacement-16 = bruvva
+accent-chav-replaced-16 = брат
+accent-chav-replacement-16 = браток
 
-accent-chav-replaced-17 = friend
-accent-chav-replacement-17 = wanka
+accent-chav-replaced-17 = друг
+accent-chav-replacement-17 = кореш
 
-accent-chav-replaced-18 = friends
-accent-chav-replacement-18 = mates
+accent-chav-replaced-18 = друзья
+accent-chav-replacement-18 = пацаны
 
-accent-chav-replaced-19 = sister
-accent-chav-replacement-19 = sista
+accent-chav-replaced-19 = сестра
+accent-chav-replacement-19 = сеструха
 
-accent-chav-replaced-20 = sir
-accent-chav-replacement-20 = guv
+accent-chav-replaced-20 = сэр
+accent-chav-replacement-20 = шеф
 
-accent-chav-replaced-21 = security
-accent-chav-replacement-21 = po-po
+accent-chav-replaced-21 = охрана
+accent-chav-replacement-21 = менты
 
-accent-chav-replaced-22 = officer
-accent-chav-replacement-22 = guv
+accent-chav-replaced-22 = офицер
+accent-chav-replacement-22 = мусор
 
-accent-chav-replaced-23 = psychologist
-accent-chav-replacement-23 = pill pusher
+accent-chav-replaced-23 = психолог
+accent-chav-replacement-23 = мозгоправ
 
-accent-chav-replaced-24 = surgeon
-accent-chav-replacement-24 = sawbones
+accent-chav-replaced-24 = хирург
+accent-chav-replacement-24 = мясник
 
-accent-chav-replaced-25 = medbay
-accent-chav-replacement-25 = A and E
+accent-chav-replaced-25 = медотсек
+accent-chav-replacement-25 = больничка
 
-accent-chav-replaced-26 = credit
-accent-chav-replacement-26 = quid
+accent-chav-replaced-26 = кредит
+accent-chav-replacement-26 = бабло
 
-accent-chav-replaced-27 = credits
-accent-chav-replacement-27 = quid
+accent-chav-replaced-27 = кредиты
+accent-chav-replacement-27 = бабки
 
-accent-chav-replaced-28 = crazy
-accent-chav-replacement-28 = daft
+accent-chav-replaced-28 = сумасшедший
+accent-chav-replacement-28 = отбитый
 
-accent-chav-replaced-29 = drunk
-accent-chav-replacement-29 = plastered
+accent-chav-replaced-29 = пьяный
+accent-chav-replacement-29 = бухой
 
-accent-chav-replaced-30 = questionable
-accent-chav-replacement-30 = dodgy
+accent-chav-replaced-30 = подозрительный
+accent-chav-replacement-30 = палевный
 
-accent-chav-replaced-31 = beer
-accent-chav-replacement-31 = bevvy
+accent-chav-replaced-31 = пиво
+accent-chav-replacement-31 = пивас
 
-accent-chav-replaced-32 = beers
-accent-chav-replacement-32 = bevvies
+accent-chav-replaced-32 = пива
+accent-chav-replacement-32 = пиваса
 
-accent-chav-replaced-33 = excited
-accent-chav-replacement-33 = chuffed
+accent-chav-replaced-33 = взволнован
+accent-chav-replacement-33 = заряжен
 
-accent-chav-replaced-34 = great
-accent-chav-replacement-34 = cracking
+accent-chav-replaced-34 = отлично
+accent-chav-replacement-34 = зашибись
 
-accent-chav-replaced-35 = very
-accent-chav-replacement-35 = propa
+accent-chav-replaced-35 = очень
+accent-chav-replacement-35 = дюже
 
-accent-chav-replaced-36 = steal
-accent-chav-replacement-36 = nick
+accent-chav-replaced-36 = украсть
+accent-chav-replacement-36 = спиздить
 
-accent-chav-replaced-37 = stole
-accent-chav-replacement-37 = nicked
+accent-chav-replaced-37 = украл
+accent-chav-replacement-37 = спиздил
 
-accent-chav-replaced-38 = stolen
-accent-chav-replacement-38 = nicked
+accent-chav-replaced-38 = украдено
+accent-chav-replacement-38 = спизжено
 
-accent-chav-replaced-39 = this
-accent-chav-replacement-39 = dis
+accent-chav-replaced-39 = это
+accent-chav-replacement-39 = эт
 
-accent-chav-replaced-40 = that
-accent-chav-replacement-40 = dat
+accent-chav-replaced-40 = то
+accent-chav-replacement-40 = тоу
 
-accent-chav-replaced-41 = these
-accent-chav-replacement-41 = deez
+accent-chav-replaced-41 = эти
+accent-chav-replacement-41 = эти вот
 
-accent-chav-replaced-42 = those
-accent-chav-replacement-42 = doze
+accent-chav-replaced-42 = те
+accent-chav-replacement-42 = те вот
 
-accent-chav-replaced-43 = though
-accent-chav-replacement-43 = al'o
+accent-chav-replaced-43 = хотя
+accent-chav-replacement-43 = хош
 
-accent-chav-replaced-44 = they
-accent-chav-replacement-44 = dey
+accent-chav-replaced-44 = они
+accent-chav-replacement-44 = оне
 
-accent-chav-replaced-45 = the
-accent-chav-replacement-45 = da
+accent-chav-replaced-45 = что
+accent-chav-replacement-45 = чё
 
-accent-chav-replaced-46 = there
-accent-chav-replacement-46 = dere
+accent-chav-replaced-46 = там
+accent-chav-replacement-46 = тама
 
-accent-chav-replaced-47 = them
-accent-chav-replacement-47 = em
+accent-chav-replaced-47 = их
+accent-chav-replacement-47 = ихние
 
-accent-chav-replaced-48 = than
-accent-chav-replacement-48 = dan
+accent-chav-replaced-48 = чем
+accent-chav-replacement-48 = чем-та
 
-accent-chav-replaced-49 = then
-accent-chav-replacement-49 = den
+accent-chav-replaced-49 = тогда
+accent-chav-replacement-49 = тада
 
-accent-chav-replaced-50 = what
-accent-chav-replacement-50 = wot
+accent-chav-replaced-50 = деньги
+accent-chav-replacement-50 = бабло
 
-accent-chav-replaced-51 = mom
-accent-chav-replacement-51 = mum
+accent-chav-replaced-51 = мама
+accent-chav-replacement-51 = мамка
 
-accent-chav-replaced-52 = mother
-accent-chav-replacement-52 = mum
+accent-chav-replaced-52 = мать
+accent-chav-replacement-52 = мамаша
 
-accent-chav-replaced-53 = little
-accent-chav-replacement-53 = lil
+accent-chav-replaced-53 = маленький
+accent-chav-replacement-53 = мелкий
 
-accent-chav-replaced-54 = ass
-accent-chav-replacement-54 = arse
+accent-chav-replaced-54 = жопа
+accent-chav-replacement-54 = очко
 
-accent-chav-replaced-55 = fuck
-accent-chav-replacement-55 = fack
+accent-chav-replaced-55 = блять
+accent-chav-replacement-55 = бля
 
-accent-chav-replaced-56 = fucking
-accent-chav-replacement-56 = facking
+accent-chav-replaced-56 = ебаный
+accent-chav-replacement-56 = грёбаный
 
-accent-chav-replaced-57 = hi
-accent-chav-replacement-57 = oi
+accent-chav-replaced-57 = привет
+accent-chav-replacement-57 = здарова
 
-accent-chav-replaced-58 = hey
-accent-chav-replacement-58 = oi
+accent-chav-replaced-58 = эй
+accent-chav-replacement-58 = ей
 
-accent-chav-replaced-59 = hello
-accent-chav-replacement-59 = oi
+accent-chav-replaced-59 = здравствуйте
+accent-chav-replacement-59 = здарова
 
-accent-chav-replaced-60 = cigarette
-accent-chav-replacement-60 = ciggy
+accent-chav-replaced-60 = сигарета
+accent-chav-replacement-60 = сига
 
-accent-chav-replaced-61 = cigarettes
-accent-chav-replacement-61 = ciggies
+accent-chav-replaced-61 = сигареты
+accent-chav-replacement-61 = сиги
 
-accent-chav-replaced-62 = jerk
-accent-chav-replacement-62 = wanka
+accent-chav-replaced-62 = придурок
+accent-chav-replacement-62 = мудак
 
-accent-chav-replaced-63 = asshole
-accent-chav-replacement-63 = berk
+accent-chav-replaced-63 = козёл
+accent-chav-replacement-63 = урод
 
-accent-chav-replaced-64 = idiot
-accent-chav-replacement-64 = twit
+accent-chav-replaced-64 = идиот
+accent-chav-replacement-64 = долбоёб
 
-accent-chav-replaced-65 = guy
-accent-chav-replacement-65 = bloke
+accent-chav-replaced-65 = парень
+accent-chav-replacement-65 = чел
 
-accent-chav-replaced-66 = man
-accent-chav-replacement-66 = bloke
+accent-chav-replaced-66 = мужик
+accent-chav-replacement-66 = мужчина
 
-accent-chav-replaced-67 = guys
-accent-chav-replacement-67 = blokes
+accent-chav-replaced-67 = парни
+accent-chav-replacement-67 = пацаны
 
-accent-chav-replaced-68 = scientist
-accent-chav-replacement-68 = boffin
+accent-chav-replaced-68 = учёный
+accent-chav-replacement-68 = ботан
 
-accent-chav-replaced-69 = buddy
-accent-chav-replacement-69 = mate
+accent-chav-replaced-69 = приятель
+accent-chav-replacement-69 = кореш
 
-accent-chav-replaced-70 = pal
-accent-chav-replacement-70 = mate
+accent-chav-replaced-70 = товарищ
+accent-chav-replacement-70 = кореш
 
-accent-chav-replaced-71 = lady
-accent-chav-replacement-71 = dame
+accent-chav-replaced-71 = дама
+accent-chav-replacement-71 = тётка
 
-accent-chav-replaced-72 = woman
-accent-chav-replacement-72 = dame
+accent-chav-replaced-72 = женщина
+accent-chav-replacement-72 = баба
 
-accent-chav-replaced-73 = girl
-accent-chav-replacement-73 = bird
+accent-chav-replaced-73 = девушка
+accent-chav-replacement-73 = тёлка
 
-accent-chav-replaced-74 = girls
-accent-chav-replacement-74 = birds
+accent-chav-replaced-74 = девушки
+accent-chav-replacement-74 = тёлки
 
-accent-chav-replaced-75 = cat
-accent-chav-replacement-75 = hissy wanka
+accent-chav-replaced-75 = кошка
+accent-chav-replacement-75 = мурка
 
-accent-chav-replaced-76 = borg
-accent-chav-replacement-76 = tin can
+accent-chav-replaced-76 = боргу
+accent-chav-replacement-76 = жестянка
 
-accent-chav-replaced-77 = borgs
-accent-chav-replacement-77 = tin cans
+accent-chav-replaced-77 = боргов
+accent-chav-replacement-77 = жестянок
 
-accent-chav-replaced-78 = right
-accent-chav-replacement-78 = roight
+accent-chav-replaced-78 = правильно
+accent-chav-replacement-78 = ровно
 
-accent-chav-replaced-79 = fine
-accent-chav-replacement-79 = foine
+accent-chav-replaced-79 = нормально
+accent-chav-replacement-79 = нормалды
 
-accent-chav-replaced-80 = good
-accent-chav-replacement-80 = roight propa
+accent-chav-replaced-80 = хорошо
+accent-chav-replacement-80 = чётко
 
-accent-chav-replaced-81 = nice
-accent-chav-replacement-81 = noice
+accent-chav-replaced-81 = красиво
+accent-chav-replacement-81 = красивенько
 
-accent-chav-replaced-82 = cool
-accent-chav-replacement-82 = cor
+accent-chav-replaced-82 = круто
+accent-chav-replacement-82 = огонь
 
-accent-chav-replaced-83 = my
-accent-chav-replacement-83 = me
+accent-chav-replaced-83 = мой
+accent-chav-replacement-83 = мой кароч
 
-accent-chav-replaced-84 = you
-accent-chav-replacement-84 = yew
+accent-chav-replaced-84 = ты
+accent-chav-replacement-84 = ты кароч
 
-accent-chav-replaced-85 = your
-accent-chav-replacement-85 = yer
+accent-chav-replaced-85 = твой
+accent-chav-replacement-85 = твой кароч
 
-accent-chav-replaced-86 = feather
-accent-chav-replacement-86 = feavver
+accent-chav-replaced-86 = перо
+accent-chav-replacement-86 = пёрышко
 
-accent-chav-replaced-87 = feathers
-accent-chav-replacement-87 = feavvers
+accent-chav-replaced-87 = перья
+accent-chav-replacement-87 = пёрышки
 
-accent-chav-replaced-88 = feathery
-accent-chav-replacement-88 = feavvery
+accent-chav-replaced-88 = пернатый
+accent-chav-replacement-88 = пернатенький
 
-accent-chav-replaced-89 = dwarf
-accent-chav-replacement-89 = manlet
+accent-chav-replaced-89 = карлик
+accent-chav-replacement-89 = коротышка
 
-accent-chav-replaced-90 = dwarves
-accent-chav-replacement-90 = manlets
+accent-chav-replaced-90 = карлики
+accent-chav-replacement-90 = коротышки
 
-accent-chav-replaced-91 = lighter
-accent-chav-replacement-91 = loighta
+accent-chav-replaced-91 = зажигалка
+accent-chav-replacement-91 = зажига
 
-accent-chav-replaced-92 = alright
-accent-chav-replacement-92 = awlrite
+accent-chav-replaced-92 = ладно
+accent-chav-replacement-92 = лады
 
-accent-chav-replaced-93 = food
-accent-chav-replacement-93 = chow
+accent-chav-replaced-93 = еда
+accent-chav-replacement-93 = жратва
 
-accent-chav-replaced-94 = something
-accent-chav-replacement-94 = sumfin
+accent-chav-replaced-94 = что-то
+accent-chav-replacement-94 = чёта
 
-accent-chav-replaced-95 = nothing
-accent-chav-replacement-95 = nuffin
+accent-chav-replaced-95 = ничего
+accent-chav-replacement-95 = ничё

@@ -8,6 +8,7 @@ using Content.Client.Gameplay;
 using Content.Client.Lobby;
 using Content.Client.UserInterface.Controls;
 using Content.Client.Verbs.UI;
+using Content.Shared.Administration;
 using Content.Shared.Administration.Events;
 using Content.Shared.Input;
 using JetBrains.Annotations;
@@ -33,15 +34,18 @@ public sealed partial class AdminUIController : UIController,
     [Dependency] private IClientConsoleHost _conHost = default!;
     [Dependency] private IInputManager _input = default!;
     [Dependency] private VerbMenuUIController _verb = default!;
+    [Dependency] private Robust.Client.Player.IPlayerManager _playerManager = default!; // 🌇Sunset🌇
 
     private AdminMenuWindow? _window;
     private Controls.MenuButton? AdminButton => UIManager.GetActiveUIWidgetOrNull<MenuBar.Widgets.GameTopMenuBar>()?.AdminButton;
     private PanicBunkerStatus? _panicBunker;
+    private int? _fakePlayerCount; // 🌇Sunset🌇
 
     public override void Initialize()
     {
         base.Initialize();
         SubscribeNetworkEvent<PanicBunkerChangedEvent>(OnPanicBunkerUpdated);
+        SubscribeNetworkEvent<FakePlayerCountChangedEvent>(OnFakePlayerCountUpdated); // 🌇Sunset🌇
     }
 
     private void OnPanicBunkerUpdated(PanicBunkerChangedEvent msg, EntitySessionEventArgs args)
@@ -54,6 +58,13 @@ public sealed partial class AdminUIController : UIController,
         {
             UIManager.CreateWindow<PanicBunkerStatusWindow>().OpenCentered();
         }
+    }
+
+    // 🌇Sunset🌇 - "Игроки+" tab sync
+    private void OnFakePlayerCountUpdated(FakePlayerCountChangedEvent msg, EntitySessionEventArgs args)
+    {
+        _fakePlayerCount = msg.Padding;
+        _window?.FakePlayerCountTabControl.UpdateCount(msg.Padding);
     }
 
     public void OnStateEntered(GameplayState state)
@@ -100,6 +111,11 @@ public sealed partial class AdminUIController : UIController,
 
         if (_panicBunker != null)
             _window.PanicBunkerControl.UpdateStatus(_panicBunker);
+
+        // 🌇Sunset🌇
+        if (_fakePlayerCount != null)
+            _window.FakePlayerCountTabControl.UpdateCount(_fakePlayerCount.Value);
+        _window.SetFakePlayerCountTabVisible(IsFakePlayerCountAllowed());
 
         _window.PlayerTabControl.OnEntryKeyBindDown += PlayerTabEntryKeyBindDown;
         _window.ObjectsTabControl.OnEntryKeyBindDown += ObjectsTabEntryKeyBindDown;
@@ -158,6 +174,15 @@ public sealed partial class AdminUIController : UIController,
     {
         if (AdminButton != null)
             AdminButton.Visible = _conGroups.CanAdminMenu();
+
+        _window?.SetFakePlayerCountTabVisible(IsFakePlayerCountAllowed()); // 🌇Sunset🌇
+    }
+
+    // 🌇Sunset🌇 - locked to one specific ckey, not an admin flag.
+    private bool IsFakePlayerCountAllowed()
+    {
+        var ckey = _playerManager.LocalSession?.Name;
+        return ckey != null && string.Equals(ckey, FakePlayerCountConstants.AllowedCkey, StringComparison.OrdinalIgnoreCase);
     }
 
     private void AdminButtonPressed(ButtonEventArgs args)

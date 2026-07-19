@@ -184,6 +184,25 @@
   - accent-words-tomato-4
   - accent-words-tomato-5
 
+# 🌇Sunset🌇
+- type: accent
+  id: autism
+  fullReplacements:
+  - accent-words-autism-1
+  - accent-words-autism-2
+  - accent-words-autism-3
+  - accent-words-autism-4
+  - accent-words-autism-5
+  - accent-words-autism-6
+  - accent-words-autism-7
+  - accent-words-autism-8
+  - accent-words-autism-9
+  - accent-words-autism-10
+  - accent-words-autism-11
+  - accent-words-autism-12
+  - accent-words-autism-13
+  - accent-words-autism-14
+
 - type: accent
   id: scurret
   fullReplacements:

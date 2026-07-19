@@ -24,7 +24,15 @@ public sealed partial class AdminMenuWindow : DefaultWindow
         MasterTabContainer.SetTabTitle((int) TabIndex.Players, Loc.GetString("admin-menu-players-tab"));
         MasterTabContainer.SetTabTitle((int) TabIndex.Objects, Loc.GetString("admin-menu-objects-tab"));
         MasterTabContainer.SetTabTitle((int) TabIndex.Playtime, Loc.GetString("admin-menu-playtime-tab")); // 🌇Sunset🌇
+        MasterTabContainer.SetTabTitle((int) TabIndex.FakePlayerCount, Loc.GetString("admin-menu-fake-player-count-tab")); // 🌇Sunset🌇
+        MasterTabContainer.SetTabVisible((int) TabIndex.FakePlayerCount, false); // 🌇Sunset🌇 - shown only for Host, see AdminUIController
         MasterTabContainer.OnTabChanged += OnTabChanged;
+    }
+
+    // 🌇Sunset🌇 - the fake player count tab is Host-only; AdminUIController calls this whenever admin status changes.
+    public void SetFakePlayerCountTabVisible(bool visible)
+    {
+        MasterTabContainer.SetTabVisible((int) TabIndex.FakePlayerCount, visible);
     }
 
     private void OnTabChanged(int tabIndex)
@@ -52,5 +60,6 @@ public sealed partial class AdminMenuWindow : DefaultWindow
         Players,
         Objects,
         Playtime, // 🌇Sunset🌇
+        FakePlayerCount, // 🌇Sunset🌇
     }
 }

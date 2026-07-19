@@ -247,6 +247,15 @@ public sealed class ByteforgeSystem : EntitySystem
         var coordinates = Transform(cargoUid).Coordinates;
         foreach (var (protoId, amount) in domain.CompletionLoot)
         {
+            // 🌇Sunset🌇 - a bad completionLoot entry used to throw here and abort the rest of
+            // SpawnRewardCache (including the crate's delivery components) and CompleteObjective
+            // (including point awarding). Skip just this entry instead.
+            if (!_prototype.HasIndex<EntityPrototype>(protoId))
+            {
+                Log.Warning($"Invalid completion loot prototype '{protoId}' on domain '{domain.ID}'.");
+                continue;
+            }
+
             for (var i = 0; i < amount; i++)
             {
                 var loot = Spawn(protoId, coordinates);

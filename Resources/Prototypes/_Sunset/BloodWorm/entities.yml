@@ -170,9 +170,12 @@
     - ActionBloodWormInvade
     - ActionBloodWormSpit
     - ActionBloodWormMatureJuvenile
-  # tg: juveniles lose ventcrawling but can shoulder through unsecured doors on contact - opens any
-  # airlock it doesn't need an access card for (see SharedDoorSystem.HasAccess); doors that actually
-  # require access still deny it, same as any other accessless simple mob.
+  - type: VentCrawler
+  # Juveniles can shoulder through unsecured doors on contact, and force powered/bolted airlocks
+  # open the same way zombies and terror spiders do (see PryingComponent/PryingSystem).
+  - type: Prying
+    pryPowered: true
+    force: true
   - type: Tag
     tags:
     - CannotSuicide
@@ -238,7 +241,13 @@
     - ActionBloodWormInvade
     - ActionBloodWormSpit
     - ActionBloodWormReproduce
-  # tg: adults regularly bash straight through airlocks - same accessless bump-open as the juvenile.
+  - type: VentCrawler
+  # tg: adults regularly bash straight through airlocks - full pry-open like zombies/terror spiders,
+  # not just the accessless bump-open.
+  - type: Prying
+    pryPowered: true
+    force: true
+    speedModifier: 1.25
   - type: Tag
     tags:
     - CannotSuicide

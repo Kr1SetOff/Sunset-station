@@ -69,14 +69,16 @@ public sealed partial class SlurredSystem : SharedSlurredSystem
         {
             if (_random.Prob(scale / 3f))
             {
+                // 🌇Sunset🌇 - the original only recognized Latin o/s/a/u/c, a no-op on Cyrillic
+                // text. Analogous Russian drunk-slur vowel/consonant mangling.
                 var lower = char.ToLowerInvariant(character);
                 var newString = lower switch
                 {
-                    'o' => "u",
-                    's' => "ch",
-                    'a' => "ah",
-                    'u' => "oo",
-                    'c' => "k",
+                    'о' => "а",
+                    'с' => "ш",
+                    'а' => "аа",
+                    'у' => "оо",
+                    'к' => "х",
                     _ => $"{character}",
                 };
 

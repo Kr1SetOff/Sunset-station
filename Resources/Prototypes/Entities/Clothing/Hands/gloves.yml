@@ -207,7 +207,7 @@
   parent: ClothingHandsButcherable
   id: ClothingHandsGlovesRobohands
   name: robohands gloves
-  description: Beep boop borp!
+  description: Beep boop borp! These gloves will protect the wearer from electric shocks.
   components:
   - type: Sprite
     sprite: Clothing/Hands/Gloves/robohands.rsi
@@ -217,6 +217,7 @@
     fiberMaterial: fibers-leather
     fiberColor: fibers-black
   - type: FingerprintMask
+  - type: Insulated
 
 - type: entity
   parent: [ClothingHandsBase, BaseToggleClothing, BaseHighlyIllegalContraband]

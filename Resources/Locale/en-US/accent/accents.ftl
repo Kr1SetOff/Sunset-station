@@ -132,6 +132,22 @@ accent-words-tomato-3 = Mastet?
 accent-words-tomato-4 = Reaty!
 accent-words-tomato-5 = Water...
 
+# Autism 🌇Sunset🌇
+accent-words-autism-1 = Siiiix seeeven!
+accent-words-autism-2 = Gyat!!
+accent-words-autism-3 = Brr brr Patapim...
+accent-words-autism-4 = Ballerina Cappuccina!
+accent-words-autism-5 = Ohio rizz.
+accent-words-autism-6 = Ehhhhh...
+accent-words-autism-7 = Aaaaah!
+accent-words-autism-8 = Auf.
+accent-words-autism-9 = Yeah.
+accent-words-autism-10 = Uh-huh, yeah.
+accent-words-autism-11 = Bruh...
+accent-words-autism-12 = Duuude.
+accent-words-autism-13 = Ehehehe!
+accent-words-autism-14 = I'm dumb.
+
 # Scurret
 accent-words-scurret-1 = Wa!
 accent-words-scurret-2 = Wa?

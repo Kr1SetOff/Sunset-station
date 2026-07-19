@@ -8,7 +8,9 @@ namespace Content.Server._Starlight.Speech.EntitySystems;
 
 public sealed partial class ParrotAccentSystem : EntitySystem
 {
-    [GeneratedRegex("[^A-Za-z0-9 -]")]
+    // 🌇Sunset🌇 - the original Latin-only class silently emptied Cyrillic messages, meaning the
+    // "repeat your longest word" squawk variant could never trigger on Russian speech at all.
+    [GeneratedRegex("[^A-Za-zА-Яа-яЁё0-9 -]")]
     private static partial Regex WordCleanupRegex();
 
     [Dependency] private IRobustRandom _random = default!;

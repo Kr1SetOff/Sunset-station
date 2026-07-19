@@ -657,7 +657,7 @@ namespace Content.Server.GameTicking
                 var antags = playerInfo.Where(p => p.Antag).ToArray();
                 var antagList = antags.Length == 0
                     ? Loc.GetString("discord-round-notifications-end-no-antags")
-                    : string.Join('\n', antags.Select(p => $"**{p.Role}** — {p.PlayerICName ?? p.PlayerOOCName}"));
+                    : string.Join('\n', antags.Select(p => $"**{Loc.GetString(p.Role)}** — {p.PlayerICName ?? p.PlayerOOCName}"));
 
                 if (string.IsNullOrWhiteSpace(antagList))
                     antagList = Loc.GetString("discord-round-notifications-end-no-antags");

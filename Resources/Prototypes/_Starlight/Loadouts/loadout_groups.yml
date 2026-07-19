@@ -1126,6 +1126,7 @@
   minLimit: 0
   loadouts:
   - LizardPlushieAssistant
+  - RubberStampGreytideLoadout
 
 - type: loadoutGroup
   id: CaptainEyewear

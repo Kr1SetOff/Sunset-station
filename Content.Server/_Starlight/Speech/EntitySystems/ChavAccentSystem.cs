@@ -17,9 +17,15 @@ public sealed partial class ChavAccentSystem : EntitySystem
     {
         args.Message = _replacement.ApplyReplacements(args.Message, "chav");
 
+        // 🌇Sunset🌇 - "th"->"ff" was an English-only spelling gag (Cockney "faf/muvva"), which is a
+        // silent no-op on Cyrillic text. Swapped for the equivalent common reduced-speech
+        // contractions in colloquial Russian.
         args.Message.Text = args.Message.Text
-            .Replace("th", "ff")
-            .Replace("Th", "Ff")
-            .Replace("TH", "FF");
+            .Replace("вообще", "ваще")
+            .Replace("Вообще", "Ваще")
+            .Replace("конечно", "канеш")
+            .Replace("Конечно", "Канеш")
+            .Replace("сейчас", "щас")
+            .Replace("Сейчас", "Щас");
     }
 }

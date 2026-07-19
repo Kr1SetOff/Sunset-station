@@ -1,4 +1,5 @@
-﻿using Content.Server.Chat.Managers;
+﻿using System.Threading.Tasks;
+using Content.Server.Chat.Managers;
 using Content.Shared.CCVar;
 using Content.Shared.Chat;
 using NetCord;
@@ -11,6 +12,7 @@ namespace Content.Server.Discord.DiscordLink;
 public sealed partial class DiscordChatLink : IPostInjectInit
 {
     [Dependency] private DiscordLink _discordLink = default!;
+    [Dependency] private DiscordWebhook _discordWebhook = default!;
     [Dependency] private IConfigurationManager _configurationManager = default!;
     [Dependency] private IChatManager _chatManager = default!;
     [Dependency] private ITaskManager _taskManager = default!;
@@ -20,6 +22,7 @@ public sealed partial class DiscordChatLink : IPostInjectInit
 
     private ulong? _oocChannelId;
     private ulong? _adminChannelId;
+    private WebhookIdentifier? _adminChatWebhookId;
 
     public void Initialize()
     {
@@ -31,6 +34,7 @@ public sealed partial class DiscordChatLink : IPostInjectInit
 
         _configurationManager.OnValueChanged(CCVars.OocDiscordChannelId, OnOocChannelIdChanged, true);
         _configurationManager.OnValueChanged(CCVars.AdminChatDiscordChannelId, OnAdminChannelIdChanged, true);
+        _configurationManager.OnValueChanged(CCVars.AdminChatDiscordWebhook, OnAdminChatWebhookChanged, true);
     }
 
     public void Shutdown()
@@ -39,6 +43,7 @@ public sealed partial class DiscordChatLink : IPostInjectInit
 
         _configurationManager.UnsubValueChanged(CCVars.OocDiscordChannelId, OnOocChannelIdChanged);
         _configurationManager.UnsubValueChanged(CCVars.AdminChatDiscordChannelId, OnAdminChannelIdChanged);
+        _configurationManager.UnsubValueChanged(CCVars.AdminChatDiscordWebhook, OnAdminChatWebhookChanged);
     }
 
     #if DEBUG
@@ -71,6 +76,16 @@ public sealed partial class DiscordChatLink : IPostInjectInit
         _adminChannelId = ulong.Parse(channelId);
     }
 
+    private void OnAdminChatWebhookChanged(string url)
+    {
+        _adminChatWebhookId = null;
+
+        if (string.IsNullOrWhiteSpace(url))
+            return;
+
+        _discordWebhook.GetWebhook(url, data => _adminChatWebhookId = data.ToIdentifier());
+    }
+
     private void OnMessageReceived(Message message)
     {
         if (message.Author.IsBot)
@@ -90,6 +105,12 @@ public sealed partial class DiscordChatLink : IPostInjectInit
 
     public async void SendMessage(string message, string author, ChatChannel channel)
     {
+        // @ and < are both problematic for discord due to pinging. / is sanitized solely to kneecap links to murder embeds via blunt force
+        message = message.Replace("@", "\\@").Replace("<", "\\<").Replace("/", "\\/");
+
+        if (channel == ChatChannel.AdminChat)
+            await SendAdminChatWebhookMessage(message, author);
+
         var channelId = channel switch
         {
             ChatChannel.OOC => _oocChannelId,
@@ -99,12 +120,9 @@ public sealed partial class DiscordChatLink : IPostInjectInit
 
         if (channelId == null)
         {
-            // Configuration not set up. Ignore.
+            // Bot channel relay not set up. The webhook relay above (if configured) has already run. Ignore.
             return;
         }
-
-        // @ and < are both problematic for discord due to pinging. / is sanitized solely to kneecap links to murder embeds via blunt force
-        message = message.Replace("@", "\\@").Replace("<", "\\<").Replace("/", "\\/");
 
         try
         {
@@ -113,6 +131,26 @@ public sealed partial class DiscordChatLink : IPostInjectInit
         catch (Exception e)
         {
             _sawmill.Error($"Error while sending Discord message: {e}");
+        }
+    }
+
+    // Sunset: separate one-way webhook relay for admin chat, kept independent from the bot-based
+    // channel relay above so admin chat and ahelp can be routed to different Discord channels without
+    // needing the full bot (token/guild id) configured.
+    private async Task SendAdminChatWebhookMessage(string message, string author)
+    {
+        if (_adminChatWebhookId is not { } identifier)
+            return;
+
+        var payload = new WebhookPayload { Content = $"**{author}**: {message}" };
+
+        try
+        {
+            await _discordWebhook.CreateMessage(identifier, payload);
+        }
+        catch (Exception e)
+        {
+            _sawmill.Error($"Error while sending admin chat webhook message: {e}");
         }
     }
 

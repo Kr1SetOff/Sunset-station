@@ -60,10 +60,22 @@ public sealed partial class RoundEndVoteSystem : EntitySystem
         if (_gameTicker.RunLevel != GameRunLevel.PreRoundLobby)
             return;
 
-        if (_cfg.GetCVar(StarlightCCVars.RunMapVoteAfterRestart))
+        // 🌇Sunset🌇 - unlike the player-facing "createvote" command, CreateStandardVote() here is
+        // called with no initiator session, so it never goes through CanCallVote()'s "don't stack a
+        // vote of this type on top of one that's already active/on cooldown" check. If this method
+        // ever runs more than once for the same lobby (e.g. RoundEndSystemChangedEvent firing again
+        // before the round actually restarts), it used to just create another vote on top of the
+        // existing one every time - hence votes piling up more and more across rounds.
+        if (_cfg.GetCVar(StarlightCCVars.RunMapVoteAfterRestart) &&
+            !_voteManager.IsStandardVoteActiveOrOnCooldown(StandardVoteType.Map))
+        {
             _voteManager.CreateStandardVote(null, StandardVoteType.Map);
+        }
 
-        if (_cfg.GetCVar(StarlightCCVars.RunPresetVoteAfterRestart))
+        if (_cfg.GetCVar(StarlightCCVars.RunPresetVoteAfterRestart) &&
+            !_voteManager.IsStandardVoteActiveOrOnCooldown(StandardVoteType.Preset))
+        {
             _voteManager.CreateStandardVote(null, StandardVoteType.Preset);
+        }
     }
 }

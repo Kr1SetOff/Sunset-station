@@ -28,7 +28,7 @@ public sealed class GeneticPowerSystem : EntitySystem
     [Dependency] private readonly SharedInteractionSystem _interaction = default!;
 
     /// <summary>How hard the telekinesis gene throws its target.</summary>
-    private const float TelekinesisThrowSpeed = 15f;
+    private const float TelekinesisThrowSpeed = 6f;
 
     /// <summary>How far (in tiles) the telekinesis gene throws its target.</summary>
     private const float TelekinesisThrowDistance = 8f;
@@ -66,8 +66,8 @@ public sealed class GeneticPowerSystem : EntitySystem
         if (direction.LengthSquared() < 0.01f)
             direction = new Vector2(0, 1);
 
-        // Knock them down so the toss reads clearly and the power has bite.
-        _stun.TryKnockdown(args.Target, TelekinesisKnockdown, refresh: true);
+        // Knock them down so the toss reads clearly, but don't scatter their held items.
+        _stun.TryKnockdown(args.Target, TelekinesisKnockdown, refresh: true, drop: false);
         _throwing.TryThrow(args.Target, direction.Normalized() * TelekinesisThrowDistance, TelekinesisThrowSpeed, ent.Owner);
 
         args.Handled = true;

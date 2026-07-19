@@ -59,6 +59,18 @@
       - PlushieLizardJobAssistant
 
 - type: loadout
+  id: RubberStampGreytideLoadout
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobAssistant
+      time: 24h # earned by veteran greytiders
+  storage:
+    back:
+      - RubberStampGreytide
+
+- type: loadout
   id: LizardPlushieBartender
   effects:
   - !type:JobRequirementLoadoutEffect

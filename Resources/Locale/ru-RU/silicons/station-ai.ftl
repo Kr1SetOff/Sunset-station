@@ -13,6 +13,10 @@ station-ai-core-critical-power = Ваше ядро ИИ имеет критич�
 station-ai-ghost-role-name = ИИ станции
 station-ai-ghost-role-description = Служите экипажу станции в качестве её неусыпного цифрового хранителя.
 
+# 🌇Sunset🌇 - automatic arrival announcement
+stationai-arrival-announcement = Внимание! Приветствую нового члена экипажа: { $name }. Сектор: { $job }. Добро пожаловать на станцию.
+stationai-arrival-announcement-unknown-job = неопределённый сектор
+
 # Radial actions
 ai-open = Открыть меню действий
 ai-close = Закрыть меню действий

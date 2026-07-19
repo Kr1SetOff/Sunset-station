@@ -11,3 +11,4 @@ admin-menu-baby-jail-tab = Детсад
 admin-menu-players-tab = Игроки
 admin-menu-objects-tab = Объекты
 admin-menu-playtime-tab = Перенос времени
+admin-menu-fake-player-count-tab = Игроки+

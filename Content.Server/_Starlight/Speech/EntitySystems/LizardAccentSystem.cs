@@ -6,20 +6,26 @@ namespace Content.Server._Starlight.Speech.EntitySystems;
 
 public sealed partial class LizardAccentSystem : EntitySystem
 {
-    [GeneratedRegex("s+")]
+    // 🌇Sunset🌇 - the original matched Latin s/x, which never occur in Cyrillic text and made this
+    // accent a complete no-op on Russian speech. с/ш are Russian's hissing sibilants, so elongating
+    // them reproduces the same "snake hiss" effect.
+    [GeneratedRegex("с+")]
     private static partial Regex RegexLowerS();
 
-    [GeneratedRegex("S+")]
+    [GeneratedRegex("С+")]
     private static partial Regex RegexUpperS();
 
-    [GeneratedRegex(@"(\w)x")]
-    private static partial Regex RegexInternalX();
+    [GeneratedRegex("ш+")]
+    private static partial Regex RegexLowerSh();
 
-    [GeneratedRegex(@"\bx([\-|r|R]|\b)")]
-    private static partial Regex RegexLowerEndX();
+    [GeneratedRegex("Ш+")]
+    private static partial Regex RegexUpperSh();
 
-    [GeneratedRegex(@"\bX([\-|r|R]|\b)")]
-    private static partial Regex RegexUpperEndX();
+    [GeneratedRegex("щ+")]
+    private static partial Regex RegexLowerShch();
+
+    [GeneratedRegex("Щ+")]
+    private static partial Regex RegexUpperShch();
 
     public override void Initialize()
     {
@@ -29,15 +35,17 @@ public sealed partial class LizardAccentSystem : EntitySystem
 
     private void OnAccent(EntityUid uid, LizardAccentComponent component, AccentGetEvent args)
     {
-        // hissss
-        args.Message.Text = RegexLowerS().Replace(args.Message.Text, "sss");
-        // hiSSS
-        args.Message.Text = RegexUpperS().Replace(args.Message.Text, "SSS");
-        // ekssit
-        args.Message.Text = RegexInternalX().Replace(args.Message.Text, "$1kss");
-        // ecks
-        args.Message.Text = RegexLowerEndX().Replace(args.Message.Text, "ecks$1");
-        // eckS
-        args.Message.Text = RegexUpperEndX().Replace(args.Message.Text, "ECKS$1");
+        // сссс
+        args.Message.Text = RegexLowerS().Replace(args.Message.Text, "ссс");
+        // ССС
+        args.Message.Text = RegexUpperS().Replace(args.Message.Text, "ССС");
+        // шшшш
+        args.Message.Text = RegexLowerSh().Replace(args.Message.Text, "шшш");
+        // ШШШ
+        args.Message.Text = RegexUpperSh().Replace(args.Message.Text, "ШШШ");
+        // щщщ
+        args.Message.Text = RegexLowerShch().Replace(args.Message.Text, "щщщ");
+        // ЩЩЩ
+        args.Message.Text = RegexUpperShch().Replace(args.Message.Text, "ЩЩЩ");
     }
 }

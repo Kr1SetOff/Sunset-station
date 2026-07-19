@@ -70,6 +70,10 @@ public sealed partial class AdminSystem : EntitySystem
     private readonly HashSet<NetUserId> _roundActivePlayers = new();
     public readonly PanicBunkerStatus PanicBunker = new();
 
+    // 🌇Sunset🌇 - Host-configurable padding added to the reported player count in the server status
+    // JSON (see GameTicker.StatusShell.cs), purely cosmetic and in-memory only (resets on restart).
+    public int FakePlayerCountPadding { get; private set; }
+
     public override void Initialize()
     {
         base.Initialize();
@@ -174,7 +178,37 @@ public sealed partial class AdminSystem : EntitySystem
         }
 
         SendFullPlayerList(obj.Player);
+
+        // 🌇Sunset🌇 - sync the current fake player count if the one allowed ckey just got admin'd.
+        if (string.Equals(obj.Player.Name, FakePlayerCountConstants.AllowedCkey, StringComparison.OrdinalIgnoreCase))
+            RaiseNetworkEvent(new FakePlayerCountChangedEvent(FakePlayerCountPadding), obj.Player.Channel);
     }
+
+    // 🌇Sunset🌇 start - "Игроки+" admin menu tab backend, locked to one specific ckey (not a flag)
+    /// <summary>
+    ///     Adds <paramref name="delta"/> to the fake player count padding, clamped so it can never go below zero.
+    ///     Negative deltas subtract.
+    /// </summary>
+    public void AdjustFakePlayerCount(int delta)
+    {
+        FakePlayerCountPadding = Math.Max(0, FakePlayerCountPadding + delta);
+        SendFakePlayerCountAll();
+    }
+
+    public void ResetFakePlayerCount()
+    {
+        FakePlayerCountPadding = 0;
+        SendFakePlayerCountAll();
+    }
+
+    private void SendFakePlayerCountAll()
+    {
+        if (!_playerManager.TryGetSessionByUsername(FakePlayerCountConstants.AllowedCkey, out var session))
+            return;
+
+        RaiseNetworkEvent(new FakePlayerCountChangedEvent(FakePlayerCountPadding), session.Channel);
+    }
+    // 🌇Sunset🌇 end
 
     private void OnPlayerDetached(PlayerDetachedEvent ev)
     {

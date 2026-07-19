@@ -18,6 +18,17 @@ public sealed partial class PlaytimeTab : Control
 
     private readonly List<string> _trackerIds = new();
 
+    // 🌇Sunset🌇 - the underlying playtime_* console commands only take a raw minute count, so the
+    // unit picker just converts to minutes client-side before building the command. Months use a
+    // flat 30-day approximation, same as most admin tooling that doesn't need calendar precision.
+    private static readonly (string Loc, int Minutes)[] Units =
+    {
+        ("playtime-tab-unit-minutes", 1),
+        ("playtime-tab-unit-hours", 60),
+        ("playtime-tab-unit-days", 60 * 24),
+        ("playtime-tab-unit-months", 60 * 24 * 30),
+    };
+
     /// <summary>
     /// Initializes the playtime management tab and wires its controls to playtime commands.
     /// </summary>
@@ -27,12 +38,24 @@ public sealed partial class PlaytimeTab : Control
         IoCManager.InjectDependencies(this);
 
         PopulateTrackers();
+        PopulateUnits();
 
         TrackerOption.OnItemSelected += args => TrackerOption.SelectId(args.Id);
+        UnitOption.OnItemSelected += args => UnitOption.SelectId(args.Id);
 
         GetButton.OnPressed += _ => RunCommand(getOverall: "playtime_getoverall", getRole: "playtime_getrole");
         AddButton.OnPressed += _ => RunCommand(getOverall: "playtime_addoverall", getRole: "playtime_addrole", needsMinutes: true);
         SetButton.OnPressed += _ => RunCommand(getOverall: "playtime_setoverall", getRole: "playtime_setrole", needsMinutes: true);
+    }
+
+    private void PopulateUnits()
+    {
+        for (var i = 0; i < Units.Length; i++)
+        {
+            UnitOption.AddItem(Loc.GetString(Units[i].Loc), i);
+        }
+
+        UnitOption.SelectId(0);
     }
 
     // 🌇Sunset🌇 - list every registered playtime tracker instead of making admins type the id from
@@ -52,6 +75,11 @@ public sealed partial class PlaytimeTab : Control
         {
             if (jobNameByTracker.TryGetValue(tracker.ID, out var jobName))
                 entries.Add((tracker.ID, $"{jobName} ({tracker.ID})"));
+            // 🌇Sunset🌇 - non-job trackers (mostly antags) can declare their own localized name via
+            // the playTimeTracker prototype's `name:` field; fall back to it instead of the bare id
+            // so the dropdown doesn't just show raw tracker ids like "AntagVampire".
+            else if (tracker.Name.Id != "generic-unknown")
+                entries.Add((tracker.ID, $"{tracker.LocalizedName} ({tracker.ID})"));
             else
                 entries.Add((tracker.ID, tracker.ID));
         }
@@ -99,8 +127,12 @@ public sealed partial class PlaytimeTab : Control
             return;
         }
 
-        if (!int.TryParse(MinutesInput.Text, out var minutes))
+        if (!int.TryParse(MinutesInput.Text, out var amount))
             return;
+
+        var unitId = UnitOption.SelectedId;
+        var multiplier = unitId >= 0 && unitId < Units.Length ? Units[unitId].Minutes : 1;
+        var minutes = amount * multiplier;
 
         _console.ExecuteCommand(isOverall
             ? $"{getOverall} \"{username}\" {minutes}"

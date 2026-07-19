@@ -238,8 +238,14 @@ namespace Content.Server.Entry
 
         protected override void Dispose(bool disposing)
         {
+            // 🌇Sunset🌇 - CCVars.DestinationFile gates the one-shot "autogen data dump" mode (see
+            // Init()/PostInit() above), which returns before _playTimeTracking/_dbManager are even
+            // initialized. This condition was inverted: it must skip shutdown in THAT case, not
+            // require it - as written, every normal server (where dest is empty) never flushed
+            // pending playtime or closed the DB connection on shutdown, silently losing any playtime
+            // accumulated since the last periodic auto-save on every restart.
             var dest = _cfg.GetCVar(CCVars.DestinationFile);
-            if (!string.IsNullOrEmpty(dest))
+            if (string.IsNullOrEmpty(dest))
             {
                 _playTimeTracking.Shutdown();
                 _dbManager.Shutdown();

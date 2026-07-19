@@ -1,0 +1,24 @@
+<!-- 🌇Sunset🌇 - "Игроки+" tab: lets a Host pad the player count shown in the launcher/status
+     without touching the real player count, RobustToolbox, or the database. -->
+<Control
+    xmlns="https://spacestation14.io"
+    Margin="4"
+    MinSize="50 50">
+    <BoxContainer Orientation="Vertical">
+        <Label Text="{Loc fake-player-count-tab-title}" StyleClasses="LabelBig" />
+        <BoxContainer Orientation="Horizontal" Margin="0 4 0 0">
+            <Label Text="{Loc fake-player-count-tab-current}" MinWidth="150" />
+            <Label Name="CurrentValueLabel" Text="0" />
+        </BoxContainer>
+        <BoxContainer Orientation="Horizontal" Margin="0 4 0 0">
+            <Label Text="{Loc fake-player-count-tab-amount}" MinWidth="150" />
+            <LineEdit Name="AmountInput" Text="0" MinWidth="80" />
+        </BoxContainer>
+        <BoxContainer Orientation="Horizontal" Margin="0 6 0 0">
+            <Button Name="AddButton" Text="{Loc fake-player-count-tab-add}" HorizontalExpand="True" />
+            <Button Name="SubtractButton" Text="{Loc fake-player-count-tab-subtract}" HorizontalExpand="True" />
+            <Button Name="ResetButton" Text="{Loc fake-player-count-tab-reset}" HorizontalExpand="True" />
+        </BoxContainer>
+        <Label Name="HintLabel" Text="{Loc fake-player-count-tab-hint}" Margin="0 6 0 0" />
+    </BoxContainer>
+</Control>

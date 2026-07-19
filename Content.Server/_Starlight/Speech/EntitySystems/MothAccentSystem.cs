@@ -6,7 +6,8 @@ namespace Content.Server._Starlight.Speech.EntitySystems;
 
 public sealed partial class MothAccentSystem : EntitySystem
 {
-    [GeneratedRegex("z{1,3}", RegexOptions.IgnoreCase)]
+    // 🌇Sunset🌇 - matched Latin z, a no-op on Cyrillic. з is Russian's buzzing consonant.
+    [GeneratedRegex("з{1,3}", RegexOptions.IgnoreCase)]
     private static partial Regex RegexBuzz();
 
     public override void Initialize()
@@ -16,7 +17,7 @@ public sealed partial class MothAccentSystem : EntitySystem
     }
 
     private void OnAccent(EntityUid uid, MothAccentComponent component, AccentGetEvent args) =>
-        // buzzz - extend z sounds
+        // жжжз - extend з sounds
         args.Message.Text = RegexBuzz().Replace(args.Message.Text, m =>
-            char.IsUpper(m.Value[0]) ? "ZZZ" : "zzz");
+            char.IsUpper(m.Value[0]) ? "ЗЗЗ" : "ззз");
 }

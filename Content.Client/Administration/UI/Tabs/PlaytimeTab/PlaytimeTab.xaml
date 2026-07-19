@@ -17,8 +17,9 @@
             <OptionButton Name="TrackerOption" MinWidth="250" HorizontalExpand="True"/>
         </BoxContainer>
         <BoxContainer Orientation="Horizontal" Margin="0 2 0 0">
-            <Label Text="{Loc playtime-tab-minutes}" MinWidth="80"/>
-            <LineEdit Name="MinutesInput" Text="0" MinWidth="80"/>
+            <Label Text="{Loc playtime-tab-amount}" MinWidth="80"/>
+            <LineEdit Name="MinutesInput" Text="0" MinWidth="80" Margin="0 0 4 0"/>
+            <OptionButton Name="UnitOption" MinWidth="100"/>
         </BoxContainer>
         <BoxContainer Orientation="Horizontal" Margin="0 6 0 0">
             <Button Name="GetButton" Text="{Loc playtime-tab-get}"/>

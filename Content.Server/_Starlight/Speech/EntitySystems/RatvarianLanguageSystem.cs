@@ -14,37 +14,28 @@ public sealed partial class RatvarianLanguageSystem : SharedRatvarianLanguageSys
 
     private static readonly ProtoId<StatusEffectPrototype> _ratvarianKey = "RatvarianLanguage";
 
-    // This is the word of Ratvar and those who speak it shall abide by His rules:
+    // 🌇Sunset🌇 - the original rules (and the ROT13 letter cipher) were English-morpheme/ASCII
+    // specific and a total no-op on Cyrillic text. Reworked with the same "constructed ancient
+    // language" feel using Russian's own common function words/clusters and a ROT16 Cyrillic
+    // cipher (а-я spans exactly 32 code points, so 32/2=16 keeps the rotation self-inverse):
     /*
-     * Any time the word "of" occurs, it's linked to the previous word by a hyphen: "I am-of Ratvar"
-     * Any time "th", followed by any two letters occurs, you add a grave (`) between those two letters: "Thi`s"
-     * In the same vein, any time "ti" followed by one letter occurs, you add a grave (`) between "i" and the letter: "Ti`me"
-     * Wherever "te" or "et" appear and there is another letter next to the "e", add a hyphen between "e" and the letter: "M-etal/Greate-r"
-     * Where "gua" appears, add a hyphen between "gu" and "a": "Gu-ard"
-     * Where the word "and" appears it's linked to all surrounding words by hyphens: "Sword-and-shield"
-     * Where the word "to" appears, it's linked to the following word by a hyphen: "to-use"
-     * Where the word "my" appears, it's linked to the following word by a hyphen: "my-light"
-     * Any Ratvarian proper noun is not translated: Ratvar, Nezbere, Sevtug, Nzcrentr and Inath-neq
-        * This only applies if they're being used as a proper noun: armorer/Nezbere
+     * Any time the word "и" (and) occurs, it's linked to its neighbours by hyphens: "меч-и-щит"
+     * Any time the word "от" occurs, it's linked to the following word by a hyphen: "от-этого"
+     * Any time the word "то" occurs, it's linked to the following word by a hyphen: "то-время"
+     * Any time the word "мой/моя/моё/мои" occurs, it's linked to the following word by a hyphen
+     * Wherever the cluster "ст" is followed by a vowel, a grave is inserted after it: "с`тол"
+     * Ratvarian proper nouns are not translated: Ратвар, Незбере, Севтук, Нзкрентр, Инат-нек
      */
 
-    [GeneratedRegex(@"ti\B", RegexOptions.IgnoreCase | RegexOptions.Compiled, "en-US")]
-    private static partial Regex TIPattern();
-    [GeneratedRegex(@"\b(\s)(and)(\s)", RegexOptions.IgnoreCase | RegexOptions.Compiled, "en-US")]
-    private static partial Regex ANDPattern();
-    [GeneratedRegex(@"(gu)(a)", RegexOptions.IgnoreCase | RegexOptions.Compiled, "en-US")]
-    private static partial Regex GUAPattern();
-    [GeneratedRegex(@"(\s)(of)")]
-    private static partial Regex OFPattern();
-    [GeneratedRegex(@"te\B", RegexOptions.Compiled)]
-    private static partial Regex TEPattern();
-    [GeneratedRegex(@"\Bet", RegexOptions.Compiled)]
-    private static partial Regex ETPattern();
-    [GeneratedRegex(@"th\w\B", RegexOptions.IgnoreCase | RegexOptions.Compiled, "en-US")]
-    private static partial Regex THPattern();
-    [GeneratedRegex(@"(to|my)\s", RegexOptions.IgnoreCase | RegexOptions.Compiled, "en-US")]
-    private static partial Regex TOMYPattern();
-    [GeneratedRegex(@"(ratvar)|(nezbere)|(sevtuq)|(nzcrentr)|(inath-neq)", RegexOptions.IgnoreCase | RegexOptions.Compiled, "en-US")]
+    [GeneratedRegex(@"ст(?=[аеёиоуыэюя])", RegexOptions.IgnoreCase | RegexOptions.Compiled)]
+    private static partial Regex STPattern();
+    [GeneratedRegex(@"\b(\s)(и)(\s)", RegexOptions.IgnoreCase | RegexOptions.Compiled)]
+    private static partial Regex IPattern();
+    [GeneratedRegex(@"(от|то)\s", RegexOptions.IgnoreCase | RegexOptions.Compiled)]
+    private static partial Regex OTTOPattern();
+    [GeneratedRegex(@"(мо[йяёи])\s", RegexOptions.IgnoreCase | RegexOptions.Compiled)]
+    private static partial Regex MOYPattern();
+    [GeneratedRegex(@"(ратвар)|(незбере)|(севтук)|(нзкрентр)|(инат-нек)", RegexOptions.IgnoreCase | RegexOptions.Compiled)]
     private static partial Regex ProperNouns();
 
     public override void Initialize() =>
@@ -68,14 +59,10 @@ public sealed partial class RatvarianLanguageSystem : SharedRatvarianLanguageSys
         var finalMessage = new StringBuilder();
         var newWord = new StringBuilder();
 
-        ruleTranslation = THPattern().Replace(ruleTranslation, "$&`");
-        ruleTranslation = TEPattern().Replace(ruleTranslation, "$&-");
-        ruleTranslation = ETPattern().Replace(ruleTranslation, "-$&");
-        ruleTranslation = OFPattern().Replace(ruleTranslation, "-$2");
-        ruleTranslation = TIPattern().Replace(ruleTranslation, "$&`");
-        ruleTranslation = GUAPattern().Replace(ruleTranslation, "$1-$2");
-        ruleTranslation = ANDPattern().Replace(ruleTranslation, "-$2-");
-        ruleTranslation = TOMYPattern().Replace(ruleTranslation, "$1-");
+        ruleTranslation = STPattern().Replace(ruleTranslation, "$&`");
+        ruleTranslation = OTTOPattern().Replace(ruleTranslation, "$1-");
+        ruleTranslation = MOYPattern().Replace(ruleTranslation, "$1-");
+        ruleTranslation = IPattern().Replace(ruleTranslation, "-$2-");
 
         var temp = ruleTranslation.Split(' ');
 
@@ -92,23 +79,17 @@ public sealed partial class RatvarianLanguageSystem : SharedRatvarianLanguageSys
                 {
                     var letter = word[i];
 
-                    if (letter is >= (char)97 and <= (char)122)
+                    if (letter is >= 'а' and <= 'я') // а-я
                     {
-                        var letterRot = letter + 13;
-
-                        if (letterRot > 122)
-                            letterRot -= 26;
-
-                        newWord.Append((char) letterRot);
+                        var idx = letter - 'а';
+                        var rotIdx = (idx + 16) % 32;
+                        newWord.Append((char) ('а' + rotIdx));
                     }
-                    else if (letter is >= (char)65 and <= (char)90)
+                    else if (letter is >= 'А' and <= 'Я') // А-Я
                     {
-                        var letterRot = letter + 13;
-
-                        if (letterRot > 90)
-                            letterRot -= 26;
-
-                        newWord.Append((char) letterRot);
+                        var idx = letter - 'А';
+                        var rotIdx = (idx + 16) % 32;
+                        newWord.Append((char) ('А' + rotIdx));
                     }
                     else
                     {

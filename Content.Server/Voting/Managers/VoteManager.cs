@@ -375,6 +375,17 @@ namespace Content.Server.Voting.Managers
             return CanCallVote(initiator, voteType, out _, out _);
         }
 
+        // 🌇Sunset🌇 - see IVoteManager.IsStandardVoteActiveOrOnCooldown for why this exists.
+        // Deliberately does NOT check "_votes.Count != 0" like CanCallVote does for players - the
+        // round-end trigger legitimately creates a map vote and a preset vote back to back, and that
+        // blanket check would make the second one always refuse because the first is still active.
+        // vote.same_type_timeout (default 240s) comfortably outlasts vote.timermap/timerpreset
+        // (default 90s), so this alone reliably covers "already active" as well as "on cooldown".
+        public bool IsStandardVoteActiveOrOnCooldown(StandardVoteType voteType)
+        {
+            return _standardVoteTimeout.ContainsKey(voteType);
+        }
+
         private void EndVote(VoteReg v)
         {
             if (v.Finished)

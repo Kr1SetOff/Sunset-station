@@ -9,14 +9,16 @@ public sealed partial class SouthernAccentSystem : EntitySystem
 {
     [Dependency] private ReplacementAccentSystem _replacement = default!;
 
-    [GeneratedRegex(@"ing\b", RegexOptions.IgnoreCase)]
-    private static partial Regex RegexIng();
+    // 🌇Sunset🌇 - "-ing"/"and"/"d've" are English grammar-specific, no-ops on Cyrillic. Replaced
+    // with the equivalent drawled/dropped-letter contractions in colloquial Russian.
+    [GeneratedRegex(@"\bчто\b", RegexOptions.IgnoreCase)]
+    private static partial Regex RegexChto();
 
-    [GeneratedRegex(@"\band\b", RegexOptions.IgnoreCase)]
-    private static partial Regex RegexAnd();
+    [GeneratedRegex(@"\bтебя\b", RegexOptions.IgnoreCase)]
+    private static partial Regex RegexTebya();
 
-    [GeneratedRegex(@"d've\b", RegexOptions.IgnoreCase)]
-    private static partial Regex RegexDve();
+    [GeneratedRegex(@"\bговорю\b", RegexOptions.IgnoreCase)]
+    private static partial Regex RegexGovoryu();
 
     public override void Initialize()
     {
@@ -28,9 +30,9 @@ public sealed partial class SouthernAccentSystem : EntitySystem
     {
         args.Message = _replacement.ApplyReplacements(args.Message, "southern");
 
-        args.Message.Text = RegexIng().Replace(args.Message.Text, m => PreserveCase(m.Value, "in'"));
-        args.Message.Text = RegexAnd().Replace(args.Message.Text, m => PreserveCase(m.Value, "an'"));
-        args.Message.Text = RegexDve().Replace(args.Message.Text, m => PreserveCase(m.Value, "da"));
+        args.Message.Text = RegexChto().Replace(args.Message.Text, m => PreserveCase(m.Value, "чё"));
+        args.Message.Text = RegexTebya().Replace(args.Message.Text, m => PreserveCase(m.Value, "тя"));
+        args.Message.Text = RegexGovoryu().Replace(args.Message.Text, m => PreserveCase(m.Value, "грю"));
     }
 
     private static string PreserveCase(string original, string replacement)
