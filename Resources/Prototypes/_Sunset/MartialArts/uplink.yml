@@ -25,5 +25,21 @@
       tags:
       - NukeOpsUplink
 
-# 🌇Sunset🌇 - Mime's glossary and Chef's CQC manual are no longer sold in the uplink; both are
-# granted directly as job starting gear instead (see MimeGear / ChefGear).
+- type: listing
+  id: UplinkMartialArtsMime
+  name: uplink-martial-arts-mime-name
+  description: uplink-martial-arts-mime-desc
+  productEntity: MartialArtsManualMime
+  cost:
+    Telecrystal: 10
+  categories:
+  - UplinkJob
+  conditions:
+  - !type:BuyerJobCondition
+    whitelist:
+    - Mime
+    - HeadOfPersonnel
+    - Captain
+
+# 🌇Sunset🌇 - Chef's CQC manual is no longer sold in the uplink; it is granted directly as job
+# starting gear instead (see ChefGear). Mime's glossary was moved back to the uplink (Job tab).

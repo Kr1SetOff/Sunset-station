@@ -80,6 +80,29 @@ objective-condition-blood-worm-rp-spare-description = Отпустите хот�
 objective-condition-blood-worm-rp-bloodline-title = Кровная линия
 objective-condition-blood-worm-rp-bloodline-description = Дайте кому-то из своих детёнышей (из отложенного яйца) имя.
 
+## Названия и описания целей-сущностей.
+## Robust не резолвит name:/description: из objectives.yml как Loc ID сам по себе — только через
+## ent-<id> (см. LocalizationManager.CalcEntityLoc) или явный вызов Loc.GetString из кода (как для
+## цели "Убить" через TargetObjectiveSystem и "Выпить крови" через BloodWormConsumeConditionSystem).
+## Без этого игрок видел бы сырой Loc ID вместо перевода.
+
+ent-BloodWormKillObjective =
+    .desc = { objective-condition-blood-worm-kill-description }
+ent-BloodWormSurviveObjective = { objective-condition-blood-worm-survive-title }
+    .desc = { objective-condition-blood-worm-survive-description }
+ent-BloodWormRpObjectiveSilent = { objective-condition-blood-worm-rp-silent-title }
+    .desc = { objective-condition-blood-worm-rp-silent-description }
+ent-BloodWormRpObjectiveNest = { objective-condition-blood-worm-rp-nest-title }
+    .desc = { objective-condition-blood-worm-rp-nest-description }
+ent-BloodWormRpObjectiveTaunt = { objective-condition-blood-worm-rp-taunt-title }
+    .desc = { objective-condition-blood-worm-rp-taunt-description }
+ent-BloodWormRpObjectiveMimic = { objective-condition-blood-worm-rp-mimic-title }
+    .desc = { objective-condition-blood-worm-rp-mimic-description }
+ent-BloodWormRpObjectiveSpare = { objective-condition-blood-worm-rp-spare-title }
+    .desc = { objective-condition-blood-worm-rp-spare-description }
+ent-BloodWormRpObjectiveBloodline = { objective-condition-blood-worm-rp-bloodline-title }
+    .desc = { objective-condition-blood-worm-rp-bloodline-description }
+
 ## Сообщения
 
 blood-worm-no-blood = В этом теле нет крови.
