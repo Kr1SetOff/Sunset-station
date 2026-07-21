@@ -353,24 +353,14 @@ tts-voice-name-1021 = VoCoder
 tts-voice-name-1022 = WardBot
 tts-voice-name-1023 = CHiP
 
-# 🌇Sunset🌇 - голоса персонажей игр (воркер D:\github govna\TTS, индексы 3000+)
-tts-voice-name-sunset-geralt = Геральт
-tts-voice-name-sunset-arthas = Артас
-tts-voice-name-sunset-illidan = Иллидан
+# 🌇Sunset🌇 - голоса персонажей игр (воркер D:\github govna\TTS, индексы 3000+;
+# подключены только те, для кого реально стоит RVC-модель - см. Resources/Prototypes/_Sunset/TTS/voices.yml)
 tts-voice-name-sunset-kratos = Кратос
-tts-voice-name-sunset-postal = Чувак (Postal)
-tts-voice-name-sunset-yennefer = Йеннифэр
-tts-voice-name-sunset-ciri = Цири
-tts-voice-name-sunset-triss = Трисс
+tts-voice-name-sunset-meepo = Мипо
 tts-voice-name-sunset-lara = Лара Крофт
-tts-voice-name-sunset-ellie = Элли
+tts-voice-name-sunset-nora = Нора
 tts-voice-name-sunset-gman = Г-Мэн
-tts-voice-name-sunset-kelthuzad = Кел'Тузад
-tts-voice-name-sunset-sheogorath = Шеогорат
-tts-voice-name-sunset-gollum = Голлум
-tts-voice-name-sunset-narrator = Рассказчик
 tts-voice-name-sunset-glados = ГЛаДОС
-tts-voice-name-sunset-wheatley = Уитли
+tts-voice-name-sunset-sidorovich = Сидорович
 tts-voice-name-sunset-claptrap = Клэптрэп
 tts-voice-name-sunset-hk47 = HK-47
-tts-voice-name-sunset-legion = Легион

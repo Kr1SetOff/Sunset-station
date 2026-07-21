@@ -353,24 +353,14 @@ tts-voice-name-1021 = VoCoder
 tts-voice-name-1022 = WardBot
 tts-voice-name-1023 = CHiP
 
-# 🌇Sunset🌇 - game character voices (worker D:\github govna\TTS, indices 3000+)
-tts-voice-name-sunset-geralt = Geralt
-tts-voice-name-sunset-arthas = Arthas
-tts-voice-name-sunset-illidan = Illidan
+# 🌇Sunset🌇 - game character voices (worker D:\github govna\TTS, indices 3000+;
+# only characters with an actual RVC model wired up - see Resources/Prototypes/_Sunset/TTS/voices.yml)
 tts-voice-name-sunset-kratos = Kratos
-tts-voice-name-sunset-postal = The Dude (Postal)
-tts-voice-name-sunset-yennefer = Yennefer
-tts-voice-name-sunset-ciri = Ciri
-tts-voice-name-sunset-triss = Triss
+tts-voice-name-sunset-meepo = Meepo
 tts-voice-name-sunset-lara = Lara Croft
-tts-voice-name-sunset-ellie = Ellie
+tts-voice-name-sunset-nora = Nora
 tts-voice-name-sunset-gman = G-Man
-tts-voice-name-sunset-kelthuzad = Kel'Thuzad
-tts-voice-name-sunset-sheogorath = Sheogorath
-tts-voice-name-sunset-gollum = Gollum
-tts-voice-name-sunset-narrator = The Narrator
 tts-voice-name-sunset-glados = GLaDOS
-tts-voice-name-sunset-wheatley = Wheatley
+tts-voice-name-sunset-sidorovich = Sidorovich
 tts-voice-name-sunset-claptrap = Claptrap
 tts-voice-name-sunset-hk47 = HK-47
-tts-voice-name-sunset-legion = Legion
