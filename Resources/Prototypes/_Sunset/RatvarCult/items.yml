@@ -27,6 +27,10 @@
       params:
         volume: -4
   - type: DamageOtherOnHit
+    damage:
+      types:
+        Piercing: 17
+        Shock: 6
   - type: EmbeddableProjectile
     offset: -0.15,0.0
   - type: ThrowingAngle
