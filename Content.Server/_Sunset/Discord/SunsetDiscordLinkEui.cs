@@ -14,11 +14,13 @@ public sealed class SunsetDiscordLinkEui : BaseEui
 {
     private readonly SunsetDiscordOAuth _oauth;
     private readonly SunsetSponsorTierService _tierService;
+    private readonly bool _mandatory;
 
-    public SunsetDiscordLinkEui()
+    public SunsetDiscordLinkEui(bool mandatory = false)
     {
         _oauth = IoCManager.Resolve<SunsetDiscordOAuth>();
         _tierService = IoCManager.Resolve<SunsetSponsorTierService>();
+        _mandatory = mandatory;
     }
 
     public override SunsetDiscordLinkEuiState GetNewState() => new()
@@ -26,6 +28,7 @@ public sealed class SunsetDiscordLinkEui : BaseEui
         Url = _oauth.GetAuthUrl(Player.UserId),
         IsLinked = _tierService.IsLinked(Player),
         Tier = _tierService.GetSponsorTier(Player),
+        Mandatory = _mandatory,
     };
 
     public override void HandleMessage(EuiMessageBase msg)

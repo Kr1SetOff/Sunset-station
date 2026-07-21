@@ -30,4 +30,10 @@ public enum MartialArtStyle : byte
     /// gestures, and the occasional silent scream. Not part of Goob Station's upstream style roster.
     /// </summary>
     Mime,
+
+    /// <summary>
+    /// Krav Maga (ported from Goob Station / mini-station-goob) - action-primed strikes instead of
+    /// combos: Leg Sweep, Neck Chop and Lung Punch, each applied by the next unarmed hit.
+    /// </summary>
+    KravMaga,
 }

@@ -353,12 +353,14 @@ tts-voice-name-1021 = VoCoder
 tts-voice-name-1022 = WardBot
 tts-voice-name-1023 = CHiP
 
-tts-voice-name-3003 = Kratos
-tts-voice-name-3004 = Meepo
-tts-voice-name-3008 = Lara Croft
-tts-voice-name-3009 = Nora
-tts-voice-name-3010 = G-Man
-tts-voice-name-3015 = GLaDOS
-tts-voice-name-3016 = Sidorovich
-tts-voice-name-3017 = Claptrap
-tts-voice-name-3018 = HK-47
+# 🌇Sunset🌇 - game character voices (worker D:\github govna\TTS, indices 3000+;
+# only characters with an actual RVC model wired up - see Resources/Prototypes/_Sunset/TTS/voices.yml)
+tts-voice-name-sunset-kratos = Kratos
+tts-voice-name-sunset-meepo = Meepo
+tts-voice-name-sunset-lara = Lara Croft
+tts-voice-name-sunset-nora = Nora
+tts-voice-name-sunset-gman = G-Man
+tts-voice-name-sunset-glados = GLaDOS
+tts-voice-name-sunset-sidorovich = Sidorovich
+tts-voice-name-sunset-claptrap = Claptrap
+tts-voice-name-sunset-hk47 = HK-47

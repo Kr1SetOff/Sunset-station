@@ -112,6 +112,12 @@ namespace Content.Client.Entry
 
             _logManager.GetSawmill("system.joint").Level = LogLevel.Info; // 🌇Sunset🌇 - silence noisy pull-joint debug spam client-side too
 
+            // 🌇Sunset🌇 - default VSync off: with it on, the render loop is hard-capped at the
+            // monitor's refresh rate (60 FPS for most players) no matter how fast the game runs.
+            // Players who explicitly enabled VSync in the options keep their saved choice - this
+            // only changes the default for configs that never touched it.
+            _configManager.OverrideDefault(CVars.DisplayVSync, false);
+
             // Do not add to these, they are legacy.
             _componentFactory.RegisterClass<SharedAmeControllerComponent>();
             // Do not add to the above, they are legacy

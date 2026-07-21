@@ -26,6 +26,8 @@
       - id: ClothingHeadHatSkub
       - id: ClothingHeadHatCone
       - id: ClothingNeckBling
+      - id: RubberStampGreytide
+        weight: 0.5
       - id: ClothingHeadHelmetCosmonaut
       - id: ClothingHeadHelmetBasic
       - id: ClothingShoeSlippersDuck

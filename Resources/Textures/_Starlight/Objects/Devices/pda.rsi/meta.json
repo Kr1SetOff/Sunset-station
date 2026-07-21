@@ -204,6 +204,75 @@
           1.0
         ]
       ]
+    },
+    {
+      "name": "pda-ntr"
+    },
+    {
+      "name": "pda-careertrainer"
+    },
+    {
+      "name": "pda-centcomoperator"
+    },
+    {
+      "name": "pda-blackstar"
+    },
+    {
+      "name": "pda-centcom"
+    },
+    {
+      "name": "pda-ert"
+    },
+    {
+      "name": "pda-chemistry"
+    },
+    {
+      "name": "pda-deathsquad"
+    },
+    {
+      "name": "pda-brigmedic"
+    },
+    {
+      "name": "pda-wizard"
+    },
+    {
+      "name": "pda-syndi"
+    },
+    {
+      "name": "pda-syndi-operative"
+    },
+    {
+      "name": "pda-syndi-corpsman"
+    },
+    {
+      "name": "pda-syndi-commander"
+    },
+    {
+      "name": "pda-navalofficer"
+    },
+    {
+      "name": "pda-ntnccs"
+    },
+    {
+      "name": "pda-medtakpilot"
+    },
+    {
+      "name": "pda-medtaksecurity"
+    },
+    {
+      "name": "pda-medtakteamlead"
+    },
+    {
+      "name": "pda-medtakdispatcher"
+    },
+    {
+      "name": "light_overlay_wide"
+    },
+    {
+      "name": "id_overlay_wide"
+    },
+    {
+      "name": "pda-pirate"
     }
   ]
 }

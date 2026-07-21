@@ -353,12 +353,14 @@ tts-voice-name-1021 = VoCoder
 tts-voice-name-1022 = WardBot
 tts-voice-name-1023 = CHiP
 
-tts-voice-name-3003 = Кратос
-tts-voice-name-3004 = Мипо
-tts-voice-name-3008 = Лара Крофт
-tts-voice-name-3009 = Нора
-tts-voice-name-3010 = Г-Мэн
-tts-voice-name-3015 = ГЛаДОС
-tts-voice-name-3016 = Сидорович
-tts-voice-name-3017 = Клэптрэп
-tts-voice-name-3018 = HK-47
+# 🌇Sunset🌇 - голоса персонажей игр (воркер D:\github govna\TTS, индексы 3000+;
+# подключены только те, для кого реально стоит RVC-модель - см. Resources/Prototypes/_Sunset/TTS/voices.yml)
+tts-voice-name-sunset-kratos = Кратос
+tts-voice-name-sunset-meepo = Мипо
+tts-voice-name-sunset-lara = Лара Крофт
+tts-voice-name-sunset-nora = Нора
+tts-voice-name-sunset-gman = Г-Мэн
+tts-voice-name-sunset-glados = ГЛаДОС
+tts-voice-name-sunset-sidorovich = Сидорович
+tts-voice-name-sunset-claptrap = Клэптрэп
+tts-voice-name-sunset-hk47 = HK-47

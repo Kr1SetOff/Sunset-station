@@ -89,6 +89,7 @@ loadout-group-salvage-specialist-jumpsuit = Специалист утилиза�
 loadout-group-salvage-lead-jumpsuit = Ведущий утилизатор, комбинезон
 loadout-group-mining-specialist-jumpsuit = Специалист по добыче, комбинезон
 loadout-group-salvagelead-id = Ведущий утилизатор, удостоверение
+loadout-group-salvage-lead-pka-upgrades = Ведущий утилизатор, улучшения ПКУ (до двух)
 loadout-group-mining-id = Специалист по добыче, удостоверение
 loadout-group-salvage-id = Специалист утилизации, удостоверение
 loadout-group-salvage-lead-mantle = Ведущий утилизатор, мантия

@@ -125,3 +125,9 @@ blood-worm-inject-not-enough-health = У вас недостаточно здо�
 blood-worm-revive-not-dead = Носитель ещё жив — оживлять некого.
 blood-worm-revive-not-enough-health = У вас недостаточно здоровья, чтобы перезапустить кровообращение носителя.
 blood-worm-revive-success = Кровь снова течёт по венам носителя — он возвращается к жизни!
+
+ent-SpawnPointGhostBloodWorm = точка спавна призрачной роли
+    .desc = Точка появления призрачной роли.
+    .suffix = кровяной червь
+ent-MindRoleBloodWorm = роль кровяного червя
+    .desc = { "" }

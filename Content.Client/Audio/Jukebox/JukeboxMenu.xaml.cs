@@ -36,6 +36,13 @@ public sealed partial class JukeboxMenu : FancyWindow
 
     private float _lockTimer;
 
+    // Cache of the last resolved track length, keyed by file - GetAudioLength() re-decodes/loads the
+    // resource from ResourceCache every call, and FrameUpdate polls it every rendered frame, so
+    // without caching a single unloadable file (bad encode, missing file) would throw dozens of
+    // times a second for as long as the window is open.
+    private string? _cachedLengthFile;
+    private TimeSpan _cachedLength;
+
     public JukeboxMenu()
     {
         RobustXamlLoader.Load(this);
@@ -141,7 +148,7 @@ public sealed partial class JukeboxMenu : FancyWindow
 
         if (_entManager.TryGetComponent(_audio, out AudioComponent? audio))
         {
-            DurationLabel.Text = $@"{TimeSpan.FromSeconds(audio.PlaybackPosition):mm\:ss} / {_audioSystem.GetAudioLength(audio.FileName):mm\:ss}";
+            DurationLabel.Text = $@"{TimeSpan.FromSeconds(audio.PlaybackPosition):mm\:ss} / {GetCachedAudioLength(audio.FileName):mm\:ss}";
         }
         else
         {
@@ -161,6 +168,26 @@ public sealed partial class JukeboxMenu : FancyWindow
         }
 
         SetPlayPauseButton(_audioSystem.IsPlaying(_audio, audio));
+    }
+
+    private TimeSpan GetCachedAudioLength(string fileName)
+    {
+        if (fileName == _cachedLengthFile)
+            return _cachedLength;
+
+        _cachedLengthFile = fileName;
+        _cachedLength = TimeSpan.Zero;
+
+        try
+        {
+            _cachedLength = _audioSystem.GetAudioLength(fileName);
+        }
+        catch (Exception e)
+        {
+            Logger.Error($"Failed to get audio length for jukebox playback file '{fileName}': {e}");
+        }
+
+        return _cachedLength;
     }
 
     public void SetSelectedSongText(string? text)

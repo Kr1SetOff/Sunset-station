@@ -6,6 +6,7 @@
   components:
   - type: Sprite
     sprite: _Sunset/Objects/Devices/boombox.rsi
+    scale: 0.75, 0.75
     layers:
     - state: "off"
       map: ["enum.JukeboxVisualLayers.Base"]
@@ -18,7 +19,7 @@
     sprite: _Sunset/Objects/Devices/boombox.rsi
     size: Large
     shape:
-    - 0,0,2,3
+    - 0,0,1,2
   - type: Appearance
   - type: ActivatableUI
     key: enum.JukeboxUiKey.Key

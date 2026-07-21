@@ -5,6 +5,8 @@
   parent: BaseGameRule
   id: Homelander
   components:
+  - type: GameRule
+    minPlayers: 10
   - type: HomelanderRule
   - type: AntagSelection
     agentName: homelander-round-end-agent-name

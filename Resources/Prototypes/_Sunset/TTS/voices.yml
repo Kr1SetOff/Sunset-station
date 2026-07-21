@@ -1,0 +1,82 @@
+# 🌇Sunset🌇 - character TTS voices (Russian), served by the standalone TTS worker
+# (D:\github govna\TTS on the host; see its README). The `voice:` index maps to an entry in the
+# worker's voices.json - indices 3000+ are reserved for Sunset so they never collide with the
+# Starlight voice set (which tops out around 1023, with 2001 used for announcements).
+#
+# Only characters with an actual RVC model installed on the worker are listed here - showing a
+# named character that just falls back to a generic Silero voice would be misleading, so add the
+# prototype only after wiring the model into voices.json (see that file's own comment).
+
+- type: voice
+  id: sunsetKratos
+  voice: 3003
+  name: tts-voice-name-sunset-kratos
+  sex: Male
+  silicon: false
+  copyright: "Character voice likeness: Kratos (God of War, RU VO)"
+
+- type: voice
+  id: sunsetMeepo
+  voice: 3004
+  name: tts-voice-name-sunset-meepo
+  sex: Male
+  silicon: false
+  copyright: "Character voice likeness: Meepo (Dota 2, RU VO)"
+
+- type: voice
+  id: sunsetLara
+  voice: 3008
+  name: tts-voice-name-sunset-lara
+  sex: Female
+  silicon: false
+  copyright: "Character voice likeness: Lara Croft (Tomb Raider, RU VO)"
+
+- type: voice
+  id: sunsetNora
+  voice: 3009
+  name: tts-voice-name-sunset-nora
+  sex: Female
+  silicon: false
+  copyright: "Character voice likeness: NORA (Atomic Heart, RU VO)"
+
+- type: voice
+  id: sunsetGman
+  voice: 3010
+  name: tts-voice-name-sunset-gman
+  sex: Unsexed
+  silicon: false
+  copyright: "Character voice likeness: G-Man (Half-Life 2, RU VO)"
+
+- type: voice
+  id: sunsetSidorovich
+  voice: 3016
+  name: tts-voice-name-sunset-sidorovich
+  sex: Male
+  silicon: false
+  copyright: "Character voice likeness: Sidorovich (S.T.A.L.K.E.R., RU VO)"
+
+# ── Роботизированные (для боргов/ИИ) ────────────────────────────────────────
+
+- type: voice
+  id: sunsetGlados
+  voice: 3015
+  name: tts-voice-name-sunset-glados
+  sex: Unsexed
+  silicon: true
+  copyright: "Character voice likeness: GLaDOS (Portal 2, RU VO)"
+
+- type: voice
+  id: sunsetClaptrap
+  voice: 3017
+  name: tts-voice-name-sunset-claptrap
+  sex: Unsexed
+  silicon: true
+  copyright: "Character voice likeness: Claptrap (Borderlands, RU VO)"
+
+- type: voice
+  id: sunsetHk47
+  voice: 3018
+  name: tts-voice-name-sunset-hk47
+  sex: Unsexed
+  silicon: true
+  copyright: "Character voice likeness: HK-47 (KotOR)"

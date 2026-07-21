@@ -1,0 +1,13 @@
+# 🌇Sunset🌇 - lets the Station AI player customize the automatic arrival greeting.
+- type: entity
+  id: ActionAICustomizeGreeting
+  name: Настроить приветствие
+  description: Задаёт текст, которым вы автоматически встречаете прибывающих членов экипажа.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Action
+    icon:
+      sprite: Interface/Actions/actions_ai.rsi
+      state: state_laws
+  - type: InstantAction
+    event: !type:StationAiCustomGreetingActionEvent
