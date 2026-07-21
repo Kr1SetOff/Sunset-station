@@ -352,3 +352,13 @@ tts-voice-name-1020 = Speekinspel
 tts-voice-name-1021 = VoCoder
 tts-voice-name-1022 = WardBot
 tts-voice-name-1023 = CHiP
+
+tts-voice-name-3003 = Kratos
+tts-voice-name-3004 = Meepo
+tts-voice-name-3008 = Lara Croft
+tts-voice-name-3009 = Nora
+tts-voice-name-3010 = G-Man
+tts-voice-name-3015 = GLaDOS
+tts-voice-name-3016 = Sidorovich
+tts-voice-name-3017 = Claptrap
+tts-voice-name-3018 = HK-47

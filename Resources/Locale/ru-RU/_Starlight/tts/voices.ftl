@@ -352,3 +352,13 @@ tts-voice-name-1020 = Speekinspel
 tts-voice-name-1021 = VoCoder
 tts-voice-name-1022 = WardBot
 tts-voice-name-1023 = CHiP
+
+tts-voice-name-3003 = Кратос
+tts-voice-name-3004 = Мипо
+tts-voice-name-3008 = Лара Крофт
+tts-voice-name-3009 = Нора
+tts-voice-name-3010 = Г-Мэн
+tts-voice-name-3015 = ГЛаДОС
+tts-voice-name-3016 = Сидорович
+tts-voice-name-3017 = Клэптрэп
+tts-voice-name-3018 = HK-47
