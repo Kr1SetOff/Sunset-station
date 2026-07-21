@@ -1,0 +1,33 @@
+# 🌇Sunset🌇 - Ratvar cult GameRule: a hidden team of clockwork cultists among the crew, armed
+# with tg/station's cult gear. Objectives come from AntagObjectives; agent listing/round-end
+# reporting rides the standard AntagSelection flow.
+
+- type: entity
+  parent: BaseGameRule
+  id: RatvarCult
+  components:
+  - type: GameRule
+    minPlayers: 10
+  - type: AntagObjectives
+    objectives:
+    - RatvarCultSacrificeObjective
+    - RatvarCultSurviveObjective
+  - type: AntagSelection
+    agentName: ratvar-cult-round-end-agent-name
+    definitions:
+    - prefRoles: [ RatvarCultist ]
+      min: 2
+      max: 4
+      playerRatio: 10
+      lateJoinAdditional: true
+      allowNonHumans: true
+      multiAntagSetting: None
+      startingGear: RatvarCultistGear
+      mindRoles:
+      - MindRoleRatvarCultist
+      briefing:
+        text: ratvar-cultist-role-greeting
+        color: "#BE8700"
+        sound: "/Audio/_Sunset/RatvarCult/invoke_general.ogg"
+  - type: DynamicRuleCost
+    cost: 100

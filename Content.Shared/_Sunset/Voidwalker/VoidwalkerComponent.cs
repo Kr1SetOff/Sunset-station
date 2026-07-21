@@ -17,6 +17,31 @@ namespace Content.Shared._Sunset.Voidwalker;
 public sealed partial class VoidwalkerComponent : Component
 {
     /// <summary>
+    /// Healing (negative damage) applied every <see cref="SpaceRegenInterval"/> while floating in
+    /// open space (no grid under the mob) - the void restores its own.
+    /// </summary>
+    [DataField]
+    public Content.Shared.Damage.DamageSpecifier SpaceRegen = new()
+    {
+        DamageDict = new()
+        {
+            { "Blunt", -4 },
+            { "Slash", -4 },
+            { "Piercing", -4 },
+            { "Heat", -3 },
+            { "Cold", -3 },
+            { "Shock", -3 },
+            { "Caustic", -2 },
+            { "Radiation", -2 },
+        },
+    };
+
+    [DataField]
+    public TimeSpan SpaceRegenInterval = TimeSpan.FromSeconds(1);
+
+    public TimeSpan NextSpaceRegenTime;
+
+    /// <summary>
     /// Alpha applied while floating in open space (no grid under the mob) - near-invisible.
     /// </summary>
     [DataField, AutoNetworkedField]

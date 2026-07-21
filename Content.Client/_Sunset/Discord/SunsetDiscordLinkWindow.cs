@@ -12,7 +12,9 @@ public sealed class SunsetDiscordLinkWindow : DefaultWindow
     private readonly Button _linkButton;
     private readonly Button _refreshButton;
     private readonly Label _statusLabel;
+    private readonly Label _mandatoryLabel;
     private string _url = "";
+    private bool _blockClose;
 
     public event Action? OnRefreshRequested;
 
@@ -39,6 +41,15 @@ public sealed class SunsetDiscordLinkWindow : DefaultWindow
             HorizontalAlignment = Control.HAlignment.Center,
         };
         box.AddChild(_statusLabel);
+
+        _mandatoryLabel = new Label
+        {
+            Text = Loc.GetString("sunset-discord-link-mandatory-note"),
+            Margin = new Thickness(0, 4, 0, 0),
+            HorizontalAlignment = Control.HAlignment.Center,
+            Visible = false,
+        };
+        box.AddChild(_mandatoryLabel);
 
         var buttons = new BoxContainer
         {
@@ -73,6 +84,29 @@ public sealed class SunsetDiscordLinkWindow : DefaultWindow
         _statusLabel.Text = state.IsLinked
             ? Loc.GetString("sunset-discord-link-status-linked", ("tier", TierName(state.Tier)))
             : Loc.GetString("sunset-discord-link-status-unlinked");
+
+        _blockClose = state.Mandatory && !state.IsLinked;
+        _mandatoryLabel.Visible = _blockClose;
+    }
+
+    /// <summary>
+    /// In mandatory mode the window refuses to close (X button, Escape) until the account is linked.
+    /// </summary>
+    public override void Close()
+    {
+        if (_blockClose)
+            return;
+
+        base.Close();
+    }
+
+    /// <summary>
+    /// Server-initiated close (EUI shut down) - bypasses the mandatory-mode block.
+    /// </summary>
+    public void ForceClose()
+    {
+        _blockClose = false;
+        base.Close();
     }
 
     private static string TierName(int tier) => tier switch

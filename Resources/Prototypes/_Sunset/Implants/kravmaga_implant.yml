@@ -1,6 +1,6 @@
-# 🌇Sunset🌇 - KravMagaImplanter (from the Goobstation Implants set): Goobstation's own Krav Maga is a
-# separate, incompatible martial-arts framework, so this grants Sunset's existing CQC style instead of
-# porting a second one for a single implant (see MartialArtImplantComponent.cs).
+# 🌇Sunset🌇 - KravMagaImplanter (from the Goobstation Implants set): grants the actual Krav Maga
+# style ported from mini-station-goob (Leg Sweep / Neck Chop / Lung Punch primed strikes) - see
+# SharedMartialArtsSystem.KravMaga.cs.
 
 - type: entity
   parent: BaseSubdermalImplant
@@ -11,7 +11,7 @@
   components:
   - type: SubdermalImplant
   - type: MartialArtImplant
-    style: CQC
+    style: KravMaga
 
 - type: entity
   parent: BaseImplantOnlyImplanterSyndi

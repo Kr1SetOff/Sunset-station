@@ -20,6 +20,12 @@ public sealed class SunsetDiscordLinkEuiState : EuiStateBase
     /// The currently resolved sponsor tier, 0 (None) through 5 (Ghost).
     /// </summary>
     public int Tier { get; set; }
+
+    /// <summary>
+    /// True when the server requires a linked Discord account to play - the window cannot be
+    /// dismissed until <see cref="IsLinked"/> becomes true.
+    /// </summary>
+    public bool Mandatory { get; set; }
 }
 
 /// <summary>

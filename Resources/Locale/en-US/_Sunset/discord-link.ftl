@@ -11,3 +11,4 @@ sunset-sponsor-tier-name-2 = Syndicate Agent
 sunset-sponsor-tier-name-3 = Vampire
 sunset-sponsor-tier-name-4 = SunSetter
 sunset-sponsor-tier-name-5 = Ghost
+sunset-discord-link-mandatory-note = Linking a Discord account is required to play on this server.

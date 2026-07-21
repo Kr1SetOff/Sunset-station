@@ -106,6 +106,8 @@ namespace Content.Server.Entry
         // Forces eager construction of the Discord-link callback handler (and transitively, the sponsor
         // tier service + OAuth/role-lookup helpers it depends on) so their PostInject() hooks run at startup.
         [Dependency] private SunsetDiscordCallbackHandler _sunsetDiscordCallback = default!;
+        [Dependency] private SunsetMandatoryDiscordLinkManager _sunsetMandatoryDiscordLink = default!;
+        [Dependency] private SunsetDiscordTimersCommand _sunsetDiscordTimers = default!;
 #endregion Sunset
 
         public override void PreInit()

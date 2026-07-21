@@ -36,6 +36,10 @@ public sealed partial class VampireDrainBeamSystem : EntitySystem
     {
         base.Update(frameTime);
 
+        // No beams - nothing to do; skip the per-frame allocation below on the common path.
+        if (_activeBeamVisuals.Count == 0)
+            return;
+
         // Update all active beam visuals every frame for smooth following
         var toRemove = new List<(BeamKind, EntityUid, EntityUid)>();
 

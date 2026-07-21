@@ -28,9 +28,11 @@ public sealed partial class TTSSystem : EntitySystem
 
     private readonly List<string> _sampleText =
     [
-        "Can someone bring me a pair of insulating gloves, please?",
-        "Security, the clown has stolen the captain's ID!",
-        "The singularity has reached the arrivals area!",
+        // Sunset: Russian preview lines - this is a RU server and the worker speaks Russian.
+        "Кто-нибудь, принесите мне пару изолированных перчаток, пожалуйста!",
+        "Служба безопасности, клоун украл карту капитана!",
+        "Сингулярность вырвалась и уже в зоне прибытия!",
+        "Заказал ящик пиццы, заберите на карго.",
     ];
 
     private const int DefaultAnnounceVoice = 2001;
@@ -235,11 +237,14 @@ public sealed partial class TTSSystem : EntitySystem
     {
         text = TagStripperRegex().Replace(text, "");
         text = CharFilter().Replace(text, "");
-        text = NumberConverter.NumberPattern().Replace(text, match => NumberConverter.Convert(match.Value));
+        // Sunset: numbers are passed through as digits - the RU TTS worker expands them into
+        // Russian words (num2words); the built-in NumberConverter only knows English.
         return text;
     }
 
-    [GeneratedRegex(@"[^a-zA-Z0-9,.\-?! ]")]
+    // Sunset: allow Cyrillic - the upstream filter stripped it, turning every Russian phrase
+    // into an empty TTS request.
+    [GeneratedRegex(@"[^a-zA-Zа-яА-ЯёЁ0-9,.\-?! ]")]
     private static partial Regex CharFilter();
 
     [GeneratedRegex(@"\[[^\]]*\]")]
