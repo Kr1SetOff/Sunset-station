@@ -50,3 +50,19 @@ guide-entry-martial-arts-capoeira = Capoeira
 guide-entry-martial-arts-kungfu-dragon = Kung Fu Dragon
 guide-entry-martial-arts-corporate-judo = Corporate Judo
 guide-entry-martial-arts-mime = Pantomime
+
+# Krav Maga (ported from mini-station-goob)
+martial-arts-style-krav-maga = krav maga
+martial-arts-krav-maga-ready = You ready your next move: { $move }!
+martial-arts-krav-maga-leg-sweep = leg sweep
+martial-arts-krav-maga-neck-chop = neck chop
+martial-arts-krav-maga-lung-punch = lung punch
+martial-arts-krav-maga-sweep-hit = The leg sweep knocks { $target } down!
+martial-arts-krav-maga-chop-hit = The neck chop silences { $target }!
+martial-arts-krav-maga-punch-hit = The lung punch blocks { $target }'s breathing!
+ent-ActionKravMagaLegSweep = Leg Sweep
+    .desc = Sweeps the legs out from under a target to knock them down for a few seconds.
+ent-ActionKravMagaNeckChop = Neck Chop
+    .desc = A hard chop to the throat deals damage and silences the target for twenty seconds.
+ent-ActionKravMagaLungPunch = Lung Punch
+    .desc = Deals 40 stamina damage and blocks the target's breathing for ten seconds.

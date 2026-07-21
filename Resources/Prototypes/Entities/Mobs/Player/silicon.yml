@@ -43,6 +43,7 @@
     - ActionAIViewLaws
     - ActionAIShunt # Starlight AI Shunt ability
     - ActionAIWarp # Starlight
+    - ActionAICustomizeGreeting # 🌇Sunset🌇 - customizable arrival greeting
   - type: UserInterface
     interfaces:
       enum.RadarConsoleUiKey.Key:

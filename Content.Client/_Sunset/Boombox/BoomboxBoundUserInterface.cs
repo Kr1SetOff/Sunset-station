@@ -70,7 +70,19 @@ public sealed partial class BoomboxBoundUserInterface : BoundUserInterface
 
         if (_protoManager.Resolve(jukebox.SelectedSongId, out var songProto))
         {
-            var length = EntMan.System<AudioSystem>().GetAudioLength(songProto.Path.Path.ToString());
+            // A corrupt/unloadable audio file must not blow up Reload() - this runs every time the
+            // server resends jukebox state, and an uncaught exception here gets treated as a broken
+            // entity state, force-deleting the boombox locally and triggering repeated PVS resyncs.
+            var length = TimeSpan.Zero;
+            try
+            {
+                length = EntMan.System<AudioSystem>().GetAudioLength(songProto.Path.Path.ToString());
+            }
+            catch (Exception e)
+            {
+                Logger.Error($"Failed to get audio length for boombox song '{songProto.ID}' ({songProto.Path.Path}): {e}");
+            }
+
             _menu.SetSelectedSong(songProto.Name, (float) length.TotalSeconds);
         }
         else

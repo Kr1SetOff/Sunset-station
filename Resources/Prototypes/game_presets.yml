@@ -326,7 +326,7 @@
   - homelander
   name: homelander-preset-title
   description: homelander-preset-description
-  minPlayers: 15
+  minPlayers: 10
   showInVote: false
   rules:
   - Homelander
@@ -350,6 +350,23 @@
   rules:
   - TheBoysHomelander
   - TheBoysTeam
+  - SunSetCalmStationEventScheduler
+  - SpaceTrafficControlEventScheduler
+  - BasicRoundstartVariation
+
+# 🌇Sunset🌇 - Ratvar cult (clockwork cult, scoped-down port from tg/station): a hidden team of
+# 2-4 clockwork cultists among the crew, see Resources/Prototypes/_Sunset/RatvarCult/.
+- type: gamePreset
+  id: RatvarCult
+  alias:
+  - ratvarcult
+  - clockcult
+  name: ratvar-cult-title
+  description: ratvar-cult-description
+  minPlayers: 10
+  showInVote: true
+  rules:
+  - RatvarCult
   - SunSetCalmStationEventScheduler
   - SpaceTrafficControlEventScheduler
   - BasicRoundstartVariation

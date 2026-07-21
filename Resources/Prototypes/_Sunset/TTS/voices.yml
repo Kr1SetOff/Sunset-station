@@ -1,0 +1,175 @@
+# 🌇Sunset🌇 - 20 character TTS voices (Russian), served by the standalone TTS worker
+# (D:\github govna\TTS on the host; see its README). The `voice:` index maps to an entry in the
+# worker's voices.json - indices 3000+ are reserved for Sunset so they never collide with the
+# Starlight voice set (which tops out around 1023, with 2001 used for announcements).
+#
+# Character likeness voices are produced via RVC models the server owner installs on the worker;
+# until a model is installed, the worker falls back to the configured base Silero speaker.
+
+# ── Мужские (3000-3004) ─────────────────────────────────────────────────────
+
+- type: voice
+  id: sunsetGeralt
+  voice: 3000
+  name: tts-voice-name-sunset-geralt
+  sex: Male
+  silicon: false
+  copyright: "Character voice likeness: Geralt (The Witcher 3, RU VO)"
+
+- type: voice
+  id: sunsetArthas
+  voice: 3001
+  name: tts-voice-name-sunset-arthas
+  sex: Male
+  silicon: false
+  copyright: "Character voice likeness: Arthas (Warcraft III, RU VO)"
+
+- type: voice
+  id: sunsetIllidan
+  voice: 3002
+  name: tts-voice-name-sunset-illidan
+  sex: Male
+  silicon: false
+  copyright: "Character voice likeness: Illidan (Warcraft III, RU VO)"
+
+- type: voice
+  id: sunsetKratos
+  voice: 3003
+  name: tts-voice-name-sunset-kratos
+  sex: Male
+  silicon: false
+  copyright: "Character voice likeness: Kratos (God of War, RU VO)"
+
+- type: voice
+  id: sunsetPostalDude
+  voice: 3004
+  name: tts-voice-name-sunset-postal
+  sex: Male
+  silicon: false
+  copyright: "Character voice likeness: The Dude (Postal 2, RU VO)"
+
+# ── Женские (3005-3009) ─────────────────────────────────────────────────────
+
+- type: voice
+  id: sunsetYennefer
+  voice: 3005
+  name: tts-voice-name-sunset-yennefer
+  sex: Female
+  silicon: false
+  copyright: "Character voice likeness: Yennefer (The Witcher 3, RU VO)"
+
+- type: voice
+  id: sunsetCiri
+  voice: 3006
+  name: tts-voice-name-sunset-ciri
+  sex: Female
+  silicon: false
+  copyright: "Character voice likeness: Ciri (The Witcher 3, RU VO)"
+
+- type: voice
+  id: sunsetTriss
+  voice: 3007
+  name: tts-voice-name-sunset-triss
+  sex: Female
+  silicon: false
+  copyright: "Character voice likeness: Triss (The Witcher 3, RU VO)"
+
+- type: voice
+  id: sunsetLara
+  voice: 3008
+  name: tts-voice-name-sunset-lara
+  sex: Female
+  silicon: false
+  copyright: "Character voice likeness: Lara Croft (Tomb Raider, RU VO)"
+
+- type: voice
+  id: sunsetEllie
+  voice: 3009
+  name: tts-voice-name-sunset-ellie
+  sex: Female
+  silicon: false
+  copyright: "Character voice likeness: Ellie (The Last of Us, RU VO)"
+
+# ── Они/оно (3010-3014, доступны любому полу) ──────────────────────────────
+
+- type: voice
+  id: sunsetGman
+  voice: 3010
+  name: tts-voice-name-sunset-gman
+  sex: Unsexed
+  silicon: false
+  copyright: "Character voice likeness: G-Man (Half-Life 2, RU VO)"
+
+- type: voice
+  id: sunsetKelthuzad
+  voice: 3011
+  name: tts-voice-name-sunset-kelthuzad
+  sex: Unsexed
+  silicon: false
+  copyright: "Character voice likeness: Kel'Thuzad (Warcraft III, RU VO)"
+
+- type: voice
+  id: sunsetSheogorath
+  voice: 3012
+  name: tts-voice-name-sunset-sheogorath
+  sex: Unsexed
+  silicon: false
+  copyright: "Character voice likeness: Sheogorath (TES V Skyrim, RU VO)"
+
+- type: voice
+  id: sunsetGollum
+  voice: 3013
+  name: tts-voice-name-sunset-gollum
+  sex: Unsexed
+  silicon: false
+  copyright: "Character voice likeness: Gollum (Middle-earth games, RU VO)"
+
+- type: voice
+  id: sunsetNarrator
+  voice: 3014
+  name: tts-voice-name-sunset-narrator
+  sex: Unsexed
+  silicon: false
+  copyright: "Character voice likeness: The Narrator (The Stanley Parable, RU fan VO)"
+
+# ── Роботизированные (3015-3019, для боргов/ИИ) ────────────────────────────
+
+- type: voice
+  id: sunsetGlados
+  voice: 3015
+  name: tts-voice-name-sunset-glados
+  sex: Unsexed
+  silicon: true
+  copyright: "Character voice likeness: GLaDOS (Portal 2, RU VO)"
+
+- type: voice
+  id: sunsetWheatley
+  voice: 3016
+  name: tts-voice-name-sunset-wheatley
+  sex: Unsexed
+  silicon: true
+  copyright: "Character voice likeness: Wheatley (Portal 2, RU VO)"
+
+- type: voice
+  id: sunsetClaptrap
+  voice: 3017
+  name: tts-voice-name-sunset-claptrap
+  sex: Unsexed
+  silicon: true
+  copyright: "Character voice likeness: Claptrap (Borderlands, RU VO)"
+
+- type: voice
+  id: sunsetHk47
+  voice: 3018
+  name: tts-voice-name-sunset-hk47
+  sex: Unsexed
+  silicon: true
+  copyright: "Character voice likeness: HK-47 (KotOR)"
+
+- type: voice
+  id: sunsetLegion
+  voice: 3019
+  name: tts-voice-name-sunset-legion
+  sex: Unsexed
+  silicon: true
+  copyright: "Character voice likeness: Legion (Mass Effect)"

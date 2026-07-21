@@ -49,3 +49,22 @@
       proto: VeteranSalvageLead
   equipment:
     id: VeteranSalvageLeadPDA
+
+# PKA upgrades
+- type: loadout
+  id: SalvageLeadPKAUpgradeDamage
+  storage:
+    back:
+    - PKAUpgradeDamage
+
+- type: loadout
+  id: SalvageLeadPKAUpgradeRange
+  storage:
+    back:
+    - PKAUpgradeRange
+
+- type: loadout
+  id: SalvageLeadPKAUpgradeFireRate
+  storage:
+    back:
+    - PKAUpgradeFireRate

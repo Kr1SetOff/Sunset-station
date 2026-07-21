@@ -171,7 +171,7 @@ public sealed partial class BoomboxMenu : FancyWindow
 
         if (_entManager.TryGetComponent(_audio, out AudioComponent? audio))
         {
-            DurationLabel.Text = $@"{TimeSpan.FromSeconds(audio.PlaybackPosition):mm\:ss} / {_audioSystem.GetAudioLength(audio.FileName):mm\:ss}";
+            DurationLabel.Text = $@"{TimeSpan.FromSeconds(audio.PlaybackPosition):mm\:ss} / {GetCachedAudioLength(audio.FileName):mm\:ss}";
         }
         else
         {
@@ -191,6 +191,32 @@ public sealed partial class BoomboxMenu : FancyWindow
         }
 
         SetPlayPauseButton(_audioSystem.IsPlaying(_audio, audio));
+    }
+
+    // Cache of the last resolved track length, keyed by file - GetAudioLength() re-decodes the
+    // resource on every call, and FrameUpdate runs every rendered frame while this window is open,
+    // so calling it uncached is a per-frame audio decode (and a per-frame exception for a broken file).
+    private string? _cachedLengthFile;
+    private TimeSpan _cachedLength;
+
+    private TimeSpan GetCachedAudioLength(string fileName)
+    {
+        if (fileName == _cachedLengthFile)
+            return _cachedLength;
+
+        _cachedLengthFile = fileName;
+        _cachedLength = TimeSpan.Zero;
+
+        try
+        {
+            _cachedLength = _audioSystem.GetAudioLength(fileName);
+        }
+        catch (Exception e)
+        {
+            Logger.Error($"Failed to get audio length for boombox playback file '{fileName}': {e}");
+        }
+
+        return _cachedLength;
     }
 
     public void SetSelectedSongText(string? text)

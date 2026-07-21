@@ -8,6 +8,8 @@ using Content.Shared._Sunset.Voidwalker;
 using Content.Shared.Body.Systems;
 using Content.Shared.CombatMode.Pacification;
 using Content.Shared.Damage;
+using Content.Shared.Damage.Components;
+using Content.Shared.FixedPoint;
 using Content.Shared.Damage.Systems;
 using Content.Server.Electrocution;
 using Content.Shared.DoAfter;
@@ -123,6 +125,23 @@ public sealed class VoidwalkerSystem : SharedVoidwalkerSystem
         base.Update(frameTime);
 
         var now = _timing.CurTime;
+
+        // Space regeneration: the void slowly mends any voidwalker drifting off-grid.
+        var walkerQuery = EntityQueryEnumerator<VoidwalkerComponent, DamageableComponent>();
+        while (walkerQuery.MoveNext(out var walkerUid, out var walker, out var damageable))
+        {
+            if (now < walker.NextSpaceRegenTime)
+                continue;
+
+            walker.NextSpaceRegenTime = now + walker.SpaceRegenInterval;
+
+            if (Transform(walkerUid).GridUid != null
+                || _mobState.IsDead(walkerUid)
+                || damageable.TotalDamage <= FixedPoint2.Zero)
+                continue;
+
+            _damageable.TryChangeDamage(walkerUid, walker.SpaceRegen, ignoreResistances: true, interruptsDoAfters: false);
+        }
 
         var query = EntityQueryEnumerator<VoidedComponent>();
         while (query.MoveNext(out var uid, out var voided))

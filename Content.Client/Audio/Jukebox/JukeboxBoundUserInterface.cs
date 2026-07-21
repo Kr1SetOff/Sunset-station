@@ -63,7 +63,21 @@ public sealed partial class JukeboxBoundUserInterface : BoundUserInterface
 
         if (_protoManager.Resolve(jukebox.SelectedSongId, out var songProto))
         {
-            var length = EntMan.System<AudioSystem>().GetAudioLength(songProto.Path.Path.ToString());
+            // A corrupt/unloadable audio file (e.g. bad encode) must not blow up Reload() - this
+            // runs from OnJukeboxAfterState() every time the server resends jukebox state, and an
+            // uncaught exception there gets treated as a broken entity state by the engine, which
+            // force-deletes the boombox locally and requests a full PVS resync - repeatedly, since
+            // the same bad song stays selected. Worst case here is just a missing duration label.
+            var length = TimeSpan.Zero;
+            try
+            {
+                length = EntMan.System<AudioSystem>().GetAudioLength(songProto.Path.Path.ToString());
+            }
+            catch (Exception e)
+            {
+                Logger.Error($"Failed to get audio length for jukebox song '{songProto.ID}' ({songProto.Path.Path}): {e}");
+            }
+
             _menu.SetSelectedSong(songProto.Name, (float) length.TotalSeconds);
         }
         else

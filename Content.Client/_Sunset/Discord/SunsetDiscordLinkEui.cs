@@ -25,7 +25,7 @@ public sealed class SunsetDiscordLinkEui : BaseEui
     public override void Closed()
     {
         base.Closed();
-        _window.Close();
+        _window.ForceClose();
     }
 
     public override void HandleState(EuiStateBase state)

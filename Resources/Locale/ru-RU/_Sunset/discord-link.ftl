@@ -11,3 +11,4 @@ sunset-sponsor-tier-name-2 = Агент Синдиката
 sunset-sponsor-tier-name-3 = Вампир
 sunset-sponsor-tier-name-4 = СанСетер
 sunset-sponsor-tier-name-5 = Призрак
+sunset-discord-link-mandatory-note = Для игры на этом сервере необходимо привязать аккаунт Discord.

@@ -70,26 +70,26 @@ public sealed partial class NullLinkPlayerManager : INullLinkPlayerManager
     {
         if (!_actors.TryGetServerGrain(out var serverGrain))
         {
-            if (!_cfg.GetCVar(NullLinkCCVars.Enabled))
-            {
-                _sawmill.Debug($"UnlockAchievement skipped for {userId}/{achievementId}: NullLink is disabled.");
-                return false;
-            }
-
-            _sawmill.Error($"UnlockAchievement failed for {userId}/{achievementId}: server grain is unavailable.");
-            return false;
+            // No cluster - fall back to the local store so the unlock still happens
+            // and survives restarts instead of silently dropping.
+            SetCachedAchievementUnlocked(userId, achievementId, characterName);
+            SaveLocalAchievements(userId);
+            return true;
         }
 
         try
         {
             await serverGrain.UnlockAchievement(userId, achievementId, characterName);
             SetCachedAchievementUnlocked(userId, achievementId, characterName);
+            SaveLocalAchievements(userId);
             return true;
         }
         catch (Exception ex)
         {
-            _sawmill.Error($"UnlockAchievement grain call failed for {userId}/{achievementId}: {ex}");
-            return false;
+            _sawmill.Error($"UnlockAchievement grain call failed for {userId}/{achievementId}, falling back to local store: {ex}");
+            SetCachedAchievementUnlocked(userId, achievementId, characterName);
+            SaveLocalAchievements(userId);
+            return true;
         }
     }
 
@@ -97,26 +97,24 @@ public sealed partial class NullLinkPlayerManager : INullLinkPlayerManager
     {
         if (!_actors.TryGetServerGrain(out var serverGrain))
         {
-            if (!_cfg.GetCVar(NullLinkCCVars.Enabled))
-            {
-                _sawmill.Debug($"LockAchievement skipped for {userId}/{achievementId}: NullLink is disabled.");
-                return false;
-            }
-
-            _sawmill.Error($"LockAchievement failed for {userId}/{achievementId}: server grain is unavailable.");
-            return false;
+            SetCachedAchievementLocked(userId, achievementId);
+            SaveLocalAchievements(userId);
+            return true;
         }
 
         try
         {
             await serverGrain.LockAchievement(userId, achievementId);
             SetCachedAchievementLocked(userId, achievementId);
+            SaveLocalAchievements(userId);
             return true;
         }
         catch (Exception ex)
         {
-            _sawmill.Error($"LockAchievement grain call failed for {userId}/{achievementId}: {ex}");
-            return false;
+            _sawmill.Error($"LockAchievement grain call failed for {userId}/{achievementId}, falling back to local store: {ex}");
+            SetCachedAchievementLocked(userId, achievementId);
+            SaveLocalAchievements(userId);
+            return true;
         }
     }
 

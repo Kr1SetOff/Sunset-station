@@ -1,6 +1,7 @@
 using Content.Server.Administration.Logs;
 using Content.Server.Atmos.EntitySystems;
 using Content.Server.Body.Components;
+using Content.Shared._Sunset.MartialArts.Components;
 using Content.Server.Chat.Systems;
 using Content.Shared.Alert;
 using Content.Shared.Atmos;
@@ -87,7 +88,8 @@ public sealed partial class RespiratorSystem : EntitySystem
 
             if (!(_mobState.IsIncapacitated(uid) // cannot breathe in crit.
                 || HasComp<HeldBreathComponent>(uid) // Starlight Edit - hold your breath
-                || HasComp<WrappedComponent>(uid))) // Starlight Edit - cannot breathe while wrapped in a web
+                || HasComp<WrappedComponent>(uid) // Starlight Edit - cannot breathe while wrapped in a web
+                || HasComp<BreathingBlockedComponent>(uid))) // Sunset - Krav Maga lung punch blocks breathing
             {
                 switch (respirator.Status)
                 {

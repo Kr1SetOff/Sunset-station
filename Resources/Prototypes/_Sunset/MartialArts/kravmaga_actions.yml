@@ -1,0 +1,53 @@
+# Krav Maga techniques, ported from Goob Station (mini-station-goob). Each action primes the
+# named technique; the practitioner's next unarmed strike applies it.
+
+- type: entity
+  id: ActionKravMagaLegSweep
+  name: Подсечка
+  description: Выбивает ноги из-под цели, сбивая её с ног на несколько секунд.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Action
+    useDelay: 0.5
+    icon:
+      sprite: _Sunset/MartialArts/kravmaga.rsi
+      state: legsweep
+  - type: InstantAction
+    event: !type:KravMagaActionEvent
+  - type: KravMagaAction
+    move: LegSweep
+
+- type: entity
+  id: ActionKravMagaNeckChop
+  name: Удар по горлу
+  description: Резкий удар ребром ладони по горлу наносит урон и лишает цель голоса на двадцать секунд.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Action
+    useDelay: 0.5
+    icon:
+      sprite: _Sunset/MartialArts/kravmaga.rsi
+      state: neckchop
+  - type: InstantAction
+    event: !type:KravMagaActionEvent
+  - type: KravMagaAction
+    move: NeckChop
+    effectTime: 20
+
+- type: entity
+  id: ActionKravMagaLungPunch
+  name: Удар в лёгкие
+  description: Наносит 40 урона выносливости и перекрывает дыхание цели на десять секунд.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Action
+    useDelay: 0.5
+    icon:
+      sprite: _Sunset/MartialArts/kravmaga.rsi
+      state: lungpunch
+  - type: InstantAction
+    event: !type:KravMagaActionEvent
+  - type: KravMagaAction
+    move: LungPunch
+    staminaDamage: 40
+    effectTime: 10

@@ -669,6 +669,16 @@
   - SalvageLeadPDA
   - VeteranSalvageLeadPDA
 
+- type: loadoutGroup
+  id: SalvageLeadPKAUpgrades
+  name: loadout-group-salvage-lead-pka-upgrades
+  minLimit: 0
+  maxLimit: 2
+  loadouts:
+  - SalvageLeadPKAUpgradeDamage
+  - SalvageLeadPKAUpgradeRange
+  - SalvageLeadPKAUpgradeFireRate
+
 # Mining Specialist
 - type: loadoutGroup
   id: MiningSpecialistJumpsuit

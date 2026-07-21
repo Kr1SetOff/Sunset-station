@@ -203,6 +203,8 @@
   id: NanoTrasenRepresentativePDA
   name: NanoTrasen representative PDA
   components:
+  - type: Sprite # Sunset: dedicated resprite
+    sprite: _Starlight/Objects/Devices/pda.rsi
   - type: Pda
     id: NanoTrasenRepresentativeIDCard
     penSlot:
@@ -215,12 +217,13 @@
     appearanceDataInit:
      enum.PdaVisuals.PdaType:
        !type:String
-       pda-ntrep
+       pda-ntr
   - type: PdaBorderColor
     borderColor: "#1c1c1c"
     accentHColor: "#ffce5b"
   - type: Icon
-    state: pda-ntrep
+    sprite: _Starlight/Objects/Devices/pda.rsi
+    state: pda-ntr
 
 - type: entity
   parent: CentcomPDA
@@ -229,6 +232,14 @@
   components:
   - type: Pda
     id: CentcomIDCardOperator
+  - type: Appearance # Sunset: dedicated operator sprite
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-centcomoperator
+  - type: Icon
+    sprite: _Starlight/Objects/Devices/pda.rsi
+    state: pda-centcomoperator
 
 - type: entity
   parent: BasePDA
@@ -562,10 +573,10 @@
     appearanceDataInit:
      enum.PdaVisuals.PdaType:
        !type:String
-       pda-blueshield
+       pda-navalofficer # Sunset: dedicated resprite
   - type: Icon
     sprite: _Starlight/Objects/Devices/pda.rsi
-    state: pda-blueshield
+    state: pda-navalofficer
   - type: CartridgeLoader
     uiKey: enum.PdaUiKey.Key
     preinstalled:
@@ -624,10 +635,10 @@
     appearanceDataInit:
      enum.PdaVisuals.PdaType:
        !type:String
-       pda-ntnc-cs
+       pda-ntnccs # Sunset: dedicated resprite
   - type: Icon
     sprite: _Starlight/Objects/Devices/pda.rsi
-    state: pda-ntnc-cs
+    state: pda-ntnccs
   - type: CartridgeLoader
     uiKey: enum.PdaUiKey.Key
     preinstalled:
@@ -762,18 +773,21 @@
   id: NanoTrasenCareerTrainerPDA
   name: NanoTrasen career trainer PDA
   components:
+  - type: Sprite # Sunset: dedicated resprite
+    sprite: _Starlight/Objects/Devices/pda.rsi
   - type: Pda
     id: NanoTrasenCareerTrainerIDCard
   - type: Appearance
     appearanceDataInit:
      enum.PdaVisuals.PdaType:
        !type:String
-       pda-ntrep
+       pda-careertrainer
   - type: PdaBorderColor
     borderColor: "#1c1c1c"
     accentHColor: "#ffce5b"
   - type: Icon
-    state: pda-ntrep
+    sprite: _Starlight/Objects/Devices/pda.rsi
+    state: pda-careertrainer
   - type: CartridgeLoader
     uiKey: enum.PdaUiKey.Key
     preinstalled:
@@ -861,8 +875,18 @@
   name: Blackstar PDA
   description: Why isn't it black?
   components:
+    - type: Sprite # Sunset: dedicated resprite
+      sprite: _Starlight/Objects/Devices/pda.rsi
     - type: Pda
       id: BlackstarIDCard
+    - type: Appearance
+      appearanceDataInit:
+        enum.PdaVisuals.PdaType:
+          !type:String
+          pda-blackstar
+    - type: Icon
+      sprite: _Starlight/Objects/Devices/pda.rsi
+      state: pda-blackstar
     - type: PdaBorderColor
       borderColor: "#717059"
 
@@ -895,6 +919,14 @@
   components:
   - type: Pda
     id: MedTakPilotIDCard
+  - type: Appearance # Sunset: dedicated resprite
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-medtakpilot
+  - type: Icon
+    sprite: _Starlight/Objects/Devices/pda.rsi
+    state: pda-medtakpilot
 
 - type: entity
   parent: MedTakMedicPDA
@@ -904,6 +936,14 @@
   components:
   - type: Pda
     id: MedTakSecurityIDCard
+  - type: Appearance # Sunset: dedicated resprite
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-medtaksecurity
+  - type: Icon
+    sprite: _Starlight/Objects/Devices/pda.rsi
+    state: pda-medtaksecurity
 
 - type: entity
   parent: MedTakMedicPDA
@@ -913,6 +953,14 @@
   components:
   - type: Pda
     id: MedTakTeamLeadIDCard
+  - type: Appearance # Sunset: dedicated resprite
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-medtakteamlead
+  - type: Icon
+    sprite: _Starlight/Objects/Devices/pda.rsi
+    state: pda-medtakteamlead
 
 - type: entity
   parent: MedTakMedicPDA
@@ -922,6 +970,14 @@
   components:
   - type: Pda
     id: MedTakDispatcherIDCard
+  - type: Appearance # Sunset: dedicated resprite
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-medtakdispatcher
+  - type: Icon
+    sprite: _Starlight/Objects/Devices/pda.rsi
+    state: pda-medtakdispatcher
 
 - type: entity
   parent: ClownPDA
