@@ -14,7 +14,7 @@
         Female: UnisexCatMoth
         Unsexed: UnisexCatMoth
     - type: TextToSpeech
-      voice: ICASSP48
+      voice: asuna
     - type: Body
       prototype: CatMoth
     - type: Icon
