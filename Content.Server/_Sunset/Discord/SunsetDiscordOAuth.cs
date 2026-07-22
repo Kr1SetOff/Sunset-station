@@ -27,6 +27,16 @@ public sealed partial class SunsetDiscordOAuth : IPostInjectInit
     private ISawmill _sawmill = default!;
 
     /// <summary>
+    /// Sunset: whether client_id/redirect_uri/state_secret are all set. The join-gate
+    /// (<see cref="SunsetDiscordGateSystem"/>) checks this so servers that haven't configured Discord
+    /// OAuth (e.g. local/dev deployments) don't lock every player out at connect.
+    /// </summary>
+    public bool IsConfigured() =>
+        !string.IsNullOrEmpty(_cfg.GetCVar(SunsetCCVars.BoostyDiscordClientId)) &&
+        !string.IsNullOrEmpty(_cfg.GetCVar(SunsetCCVars.BoostyDiscordRedirectUri)) &&
+        !string.IsNullOrEmpty(_cfg.GetCVar(SunsetCCVars.BoostyDiscordStateSecret));
+
+    /// <summary>
     /// Builds the "authorize" URL to send the player's browser to. Returns an empty string if OAuth isn't configured yet.
     /// </summary>
     public string GetAuthUrl(NetUserId player)

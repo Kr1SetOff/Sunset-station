@@ -62,6 +62,14 @@ public sealed partial class SunsetDiscordCallbackHandler : IPostInjectInit
 
         var tier = await RunOnMainThread(() => _tierService.LinkAsync(player, id));
 
+        // Sunset: push the change to an already-open link window right away instead of making the
+        // player wait for the next poll tick (or a manual refresh) to see it took effect.
+        await RunOnMainThread(() =>
+        {
+            SunsetDiscordLinkEui.NotifyLinked(player);
+            return Task.FromResult(true);
+        });
+
         await Respond(context, HttpStatusCode.OK, tier > 0
             ? "Discord linked! Your sponsor tier was applied. You can close this tab."
             : "Discord linked! No active sponsor role was found on our Discord server. You can close this tab.");

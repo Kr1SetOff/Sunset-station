@@ -1,9 +1,11 @@
 sunset-discord-link-title = Привязка Discord
-sunset-discord-link-text = Привяжите свой аккаунт Discord, чтобы получить бонусы спонсора Boosty в игре. Нажмите кнопку ниже, авторизуйтесь в браузере, затем вернитесь и нажмите "Обновить статус".
+sunset-discord-link-text = Привяжите свой аккаунт Discord, чтобы получить бонусы спонсора Boosty в игре. Нажмите кнопку ниже и авторизуйтесь в браузере — окно само обновится, как только всё получится.
+sunset-discord-link-required-text = Согласно правилам сервера, перед игрой нужно привязать аккаунт Discord. Нажмите кнопку ниже и авторизуйтесь в браузере — как только привязка пройдёт, вас автоматически пустят дальше.
 sunset-discord-link-button = Открыть авторизацию Discord
 sunset-discord-link-refresh-button = Обновить статус
 sunset-discord-link-status-linked = Discord привязан. Уровень спонсорства: { $tier }
 sunset-discord-link-status-unlinked = Discord ещё не привязан.
+sunset-discord-link-required-shell = Сначала привяжите аккаунт Discord. Проверьте открывшееся окно привязки.
 
 sunset-sponsor-tier-name-0 = Нет
 sunset-sponsor-tier-name-1 = Зомби

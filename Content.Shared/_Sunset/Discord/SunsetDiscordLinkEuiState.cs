@@ -20,6 +20,12 @@ public sealed class SunsetDiscordLinkEuiState : EuiStateBase
     /// The currently resolved sponsor tier, 0 (None) through 5 (Ghost).
     /// </summary>
     public int Tier { get; set; }
+
+    /// <summary>
+    /// True when this window is a mandatory join-gate rather than a voluntary status check - the
+    /// client hides its close button while this is true and the account isn't linked yet.
+    /// </summary>
+    public bool Required { get; set; }
 }
 
 /// <summary>
