@@ -89,10 +89,14 @@ public sealed partial class PlumbingFilterWindow : DefaultWindow
         FilteredList.Clear();
         foreach (var reagentId in state.FilteredReagents)
         {
+            var reagentName = _prototypeManager.TryIndex<ReagentPrototype>(reagentId, out var reagentProto)
+                ? reagentProto.LocalizedName
+                : reagentId;
+
             FilteredList.Add(new ItemList.Item(FilteredList)
             {
                 Metadata = reagentId,
-                Text = reagentId
+                Text = reagentName
             });
         }
 
@@ -129,7 +133,7 @@ public sealed partial class PlumbingFilterWindow : DefaultWindow
             SuggestionList.Add(new ItemList.Item(SuggestionList)
             {
                 Metadata = reagent.ID,
-                Text = reagent.ID
+                Text = $"{reagent.LocalizedName} ({reagent.ID})"
             });
         }
 

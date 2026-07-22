@@ -119,10 +119,13 @@ public sealed partial class PlumbingReactorWindow : DefaultWindow
         foreach (var (reagentId, targetQuantity) in state.ReagentTargets)
         {
             var currentAmount = state.BufferContents.GetValueOrDefault(reagentId, FixedPoint2.Zero);
+            var reagentName = _prototypeManager.TryIndex<ReagentPrototype>(reagentId, out var targetProto)
+                ? targetProto.LocalizedName
+                : reagentId;
             TargetsList.Add(new ItemList.Item(TargetsList)
             {
                 Metadata = reagentId,
-                Text = $"{reagentId}: {currentAmount}u / {targetQuantity}u"
+                Text = $"{reagentName}: {currentAmount}u / {targetQuantity}u"
             });
         }
 
@@ -132,10 +135,13 @@ public sealed partial class PlumbingReactorWindow : DefaultWindow
             if (state.ReagentTargets.ContainsKey(reagentId))
                 continue;
 
+            var reagentName = _prototypeManager.TryIndex<ReagentPrototype>(reagentId, out var bufferProto)
+                ? bufferProto.LocalizedName
+                : reagentId;
             TargetsList.Add(new ItemList.Item(TargetsList)
             {
                 Metadata = reagentId,
-                Text = $"{reagentId}: {currentAmount}u / 0u"
+                Text = $"{reagentName}: {currentAmount}u / 0u"
             });
         }
 
@@ -172,7 +178,7 @@ public sealed partial class PlumbingReactorWindow : DefaultWindow
             SuggestionList.Add(new ItemList.Item(SuggestionList)
             {
                 Metadata = reagent.ID,
-                Text = reagent.ID
+                Text = $"{reagent.LocalizedName} ({reagent.ID})"
             });
         }
 

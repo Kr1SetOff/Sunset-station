@@ -49,6 +49,7 @@ plumbing-synthesizer-power-on = Connected
 plumbing-synthesizer-power-off = No Power
 plumbing-synthesizer-select-reagent = Select Reagent
 plumbing-synthesizer-none = None
+plumbing-synthesizer-reagent-entry = { $reagent } ({ $power } W/u)
 plumbing-synthesizer-buffer = Buffer Contents
 plumbing-synthesizer-buffer-empty = Empty
 

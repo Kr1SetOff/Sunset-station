@@ -49,6 +49,7 @@ plumbing-synthesizer-power-on = Подключено
 plumbing-synthesizer-power-off = Нет питания
 plumbing-synthesizer-select-reagent = Выбрать реагент
 plumbing-synthesizer-none = Нет
+plumbing-synthesizer-reagent-entry = { $reagent } ({ $power } Вт/ед.)
 plumbing-synthesizer-buffer = Содержимое буфера
 plumbing-synthesizer-buffer-empty = Пусто
 
