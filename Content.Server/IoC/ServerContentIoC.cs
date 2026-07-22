@@ -135,6 +135,7 @@ internal static class ServerContentIoC
         deps.Register<SunsetDiscordCallbackHandler>();
         deps.Register<SunsetSponsorTierService>();
         deps.Register<ISunsetSponsorTierReader, SunsetSponsorTierService>();
+        deps.Register<SunsetDiscordTimersCommand>();
         // 🌇Sunset🌇 end
     }
 }

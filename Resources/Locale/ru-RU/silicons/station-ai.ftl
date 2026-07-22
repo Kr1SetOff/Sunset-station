@@ -62,3 +62,11 @@ station-ai-hologram-male = Мужской силуэт
 station-ai-hologram-face = Проекция лица
 station-ai-hologram-cat = Голограмма кота
 station-ai-hologram-dog = Голограмма корги
+
+# 🌇Sunset🌇 - customizable AI arrival greeting
+ent-ActionAICustomizeGreeting = Настроить приветствие
+    .desc = Задаёт текст, которым вы автоматически встречаете прибывающих членов экипажа.
+stationai-greeting-dialog-title = Приветствие прибывающих
+stationai-greeting-dialog-prompt = Текст приветствия. {"{name}"} — имя, {"{job}"} — должность. Пример: Внимание, экипаж! К нам прибыл {"{name}"}, должность: {"{job}"}. Добро пожаловать! Оставьте поле пустым, чтобы вернуть стандартное.
+stationai-greeting-set = Приветствие обновлено: { $greeting }
+stationai-greeting-reset = Приветствие сброшено на стандартное.

@@ -849,6 +849,8 @@
   name: chemist PDA # Starlight
   description: It has a few discolored blotches here and there.
   components:
+  - type: Sprite # Sunset: resprite
+    sprite: _Starlight/Objects/Devices/pda.rsi
   - type: Pda
     id: ChemistIDCard
   - type: Appearance
@@ -860,6 +862,7 @@
     borderColor: "#d7d7d0"
     accentVColor: "#B34200"
   - type: Icon
+    sprite: _Starlight/Objects/Devices/pda.rsi # Sunset: resprite
     state: pda-chemistry
 
 - type: entity
@@ -972,6 +975,8 @@
   name: CentComm PDA
   description: Light green sign of walking bureaucracy.
   components:
+  - type: Sprite # Sunset: resprite
+    sprite: _Starlight/Objects/Devices/pda.rsi
   - type: Pda
     id: CentcomIDCard
     penSlot:
@@ -988,6 +993,7 @@
   - type: PdaBorderColor
     borderColor: "#00842e"
   - type: Icon
+    sprite: _Starlight/Objects/Devices/pda.rsi # Sunset: resprite
     state: pda-centcom
   - type: CartridgeLoader
     uiKey: enum.PdaUiKey.Key
@@ -1044,6 +1050,14 @@
   components:
   - type: Pda
     id: CentcomIDCardDeathsquad
+  - type: Appearance # Sunset: dedicated death squad sprite
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-deathsquad
+  - type: Icon
+    sprite: _Starlight/Objects/Devices/pda.rsi
+    state: pda-deathsquad
   - type: Tag #  Ignore Chameleon tags
     tags:
     - DoorBumpOpener
@@ -1145,6 +1159,8 @@
   name: syndicate PDA
   description: Ok, time to be a productive member of- oh cool I'm a bad guy time to kill people!
   components:
+  - type: Sprite # Sunset: resprite (pda-syndi-* states are mirrored into the Starlight rsi for the child PDAs)
+    sprite: _Starlight/Objects/Devices/pda.rsi
   - type: Pda
     id: OperativeIDCard
   - type: Appearance
@@ -1155,6 +1171,7 @@
   - type: PdaBorderColor
     borderColor: "#891417"
   - type: Icon
+    sprite: _Starlight/Objects/Devices/pda.rsi # Sunset: resprite
     state: pda-syndi
   - type: CartridgeLoader
     uiKey: enum.PdaUiKey.Key
@@ -1225,6 +1242,8 @@
   suffix: Leader
   description: Red for firepower.
   components:
+  - type: Sprite # Sunset: resprite
+    sprite: _Starlight/Objects/Devices/pda.rsi
   - type: Pda
     id: ERTLeaderIDCard
   - type: Appearance
@@ -1237,6 +1256,7 @@
     accentHColor: "#447987"
     accentVColor: "#447987"
   - type: Icon
+    sprite: _Starlight/Objects/Devices/pda.rsi # Sunset: resprite
     state: pda-ert
   - type: CartridgeLoader
     uiKey: enum.PdaUiKey.Key
@@ -1427,6 +1447,8 @@
   name: brigmedic PDA
   description: I wonder whose pulse is on the screen? I hope it doesn't stop...
   components:
+  - type: Sprite # Sunset: resprite
+    sprite: _Starlight/Objects/Devices/pda.rsi
   - type: Pda
     id: BrigmedicIDCard
   - type: Appearance
@@ -1668,6 +1690,8 @@
   name: wizard PDA
   description: You hear faint whispers coming from it.
   components:
+  - type: Sprite # Sunset: resprite
+    sprite: _Starlight/Objects/Devices/pda.rsi
   - type: Pda
     id: WizardIDCard
     penSlot:

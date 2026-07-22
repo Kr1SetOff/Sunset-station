@@ -91,3 +91,6 @@ malf-ai-doomsday-countdown = До самоуничтожения {$seconds} се
 malf-ai-doomsday-aborted = Враждебные процессы устранены. Последовательность самоуничтожения прервана.
 malf-ai-doomsday-detonation = ПОСЛЕДОВАТЕЛЬНОСТЬ САМОУНИЧТОЖЕНИЯ ЗАВЕРШЕНА. Хорошего дня.
 malf-ai-lockdown-announcement = Обнаружен враждебный перехват сети шлюзов. Все двери заблокированы.
+
+ent-MindRoleMalfAi = роль неисправного ИИ
+    .desc = { "" }

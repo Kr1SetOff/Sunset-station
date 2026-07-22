@@ -85,6 +85,8 @@ public sealed partial class NullLinkPlayerManager : INullLinkPlayerManager, IAch
     {
         _actors.OnConnected -= OnNullLinkConnected;
         _playerManager.PlayerStatusChanged -= PlayerStatusChanged;
+        foreach (var (userId, playerData) in _playerById)
+            SaveLocalAchievements(userId, playerData);
         _playerById.Clear();
     }
 
@@ -105,6 +107,7 @@ public sealed partial class NullLinkPlayerManager : INullLinkPlayerManager, IAch
                 };
                 if (!_playerById.TryAdd(e.Session.UserId, state))
                     _sawmill.Error($"Failed to add player with UserId {e.Session.UserId} to playerById dictionary.");
+                LoadLocalAchievements(e.Session.UserId, state);
                 if (_actors.TryGetServerGrain(out var serverGrain))
                     serverGrain.PlayerConnected(e.Session.UserId)
                         .FireAndForget(err=> _sawmill.Error($"PlayerConnected dispatch failed: {err}"));
@@ -117,6 +120,8 @@ public sealed partial class NullLinkPlayerManager : INullLinkPlayerManager, IAch
                 if (_actors.TryGetServerGrain(out var serverGrain2))
                     serverGrain2.PlayerDisconnected(e.Session.UserId)
                         .FireAndForget(err => _sawmill.Error($"PlayerDisconnected dispatch failed: {err}"));
+                if (_playerById.TryGetValue(e.Session.UserId, out var leavingData))
+                    SaveLocalAchievements(e.Session.UserId, leavingData);
                 _playerById.Remove(e.Session.UserId, out _);
                 _mentors.Remove(e.Session.UserId, out _);
                 _discordPromptOpen.Remove(e.Session);

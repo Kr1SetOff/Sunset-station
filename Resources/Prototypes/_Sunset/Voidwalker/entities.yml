@@ -61,7 +61,7 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      150: Dead
+      250: Dead
   - type: Deathgasp
   - type: CombatMode
   - type: MeleeWeapon

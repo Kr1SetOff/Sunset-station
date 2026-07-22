@@ -148,6 +148,7 @@ public sealed partial class SharedMartialArtsSystem : EntitySystem
         InitializeKungFuDragon();
         InitializeCorporateJudo();
         InitializeMime();
+        InitializeKravMaga();
     }
 
     private void OnShotAttempted(ref ShotAttemptedEvent args)
@@ -232,6 +233,9 @@ public sealed partial class SharedMartialArtsSystem : EntitySystem
                 _actions.AddAction(uid, ref mimery.BlockadeAction, "ActionMartialArtsMimeInvisibleBlockade");
                 _actions.AddAction(uid, ref mimery.FingerGunsAction, "ActionMartialArtsMimeFingerGuns");
                 break;
+            case MartialArtStyle.KravMaga:
+                GrantKravMaga(uid);
+                break;
         }
     }
 
@@ -262,6 +266,9 @@ public sealed partial class SharedMartialArtsSystem : EntitySystem
                     _actions.RemoveAction(mimery.FingerGunsAction);
                     RemComp<MimeAdvancedMimeryComponent>(uid);
                 }
+                break;
+            case MartialArtStyle.KravMaga:
+                RevokeKravMaga(uid);
                 break;
         }
     }
@@ -299,6 +306,7 @@ public sealed partial class SharedMartialArtsSystem : EntitySystem
         MartialArtStyle.KungFuDragon => Loc.GetString("martial-arts-style-kungfu-dragon"),
         MartialArtStyle.CorporateJudo => Loc.GetString("martial-arts-style-corporate-judo"),
         MartialArtStyle.Mime => Loc.GetString("martial-arts-style-mime"),
+        MartialArtStyle.KravMaga => Loc.GetString("martial-arts-style-krav-maga"),
         _ => string.Empty,
     };
 
@@ -350,7 +358,10 @@ public sealed partial class SharedMartialArtsSystem : EntitySystem
         if (!combo.LastAttacks.Contains(ComboAttackType.Grab))
             return;
 
-        combo.LastAttacks.Clear();
+        // Only the grab inputs themselves are invalidated by the target escaping - the rest of the
+        // recorded sequence (Harm/Disarm history) stays, so the practitioner doesn't lose the whole
+        // combo to a wriggling target.
+        combo.LastAttacks.RemoveAll(attack => attack == ComboAttackType.Grab);
         Dirty(ent.Owner, combo);
     }
 
@@ -524,6 +535,15 @@ public sealed partial class SharedMartialArtsSystem : EntitySystem
 
             RemComp<TemporaryMuteComponent>(uid);
             RemComp<Content.Shared.Speech.Muting.MutedComponent>(uid);
+        }
+
+        var breathQuery = EntityQueryEnumerator<BreathingBlockedComponent>();
+        while (breathQuery.MoveNext(out var uid, out var blocked))
+        {
+            if (curTime < blocked.ExpiresAt)
+                continue;
+
+            RemComp<BreathingBlockedComponent>(uid);
         }
     }
 }

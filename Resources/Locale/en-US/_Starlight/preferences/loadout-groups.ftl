@@ -89,6 +89,7 @@ loadout-group-salvage-specialist-jumpsuit = Salvage Specialist jumpsuit
 loadout-group-salvage-lead-jumpsuit = Salvage Lead jumpsuit
 loadout-group-mining-specialist-jumpsuit = Mining Specialist jumpsuit
 loadout-group-salvagelead-id = Salvage Lead ID
+loadout-group-salvage-lead-pka-upgrades = Salvage Lead PKA upgrades (pick up to two)
 loadout-group-mining-id = Mining Specialist ID
 loadout-group-salvage-id = Salvage Specialist ID
 loadout-group-salvage-lead-mantle = Salvage Lead mantle

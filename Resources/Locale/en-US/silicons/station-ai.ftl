@@ -62,3 +62,11 @@ station-ai-hologram-male = Male appearance
 station-ai-hologram-face = Disembodied head
 station-ai-hologram-cat = Cat form
 station-ai-hologram-dog = Corgi form
+
+# 🌇Sunset🌇 - customizable AI arrival greeting
+ent-ActionAICustomizeGreeting = Customize Greeting
+    .desc = Sets the text you automatically greet arriving crew members with.
+stationai-greeting-dialog-title = Arrival greeting
+stationai-greeting-dialog-prompt = Greeting text. {"{name}"} - name, {"{job}"} - job. Example: Attention crew! {"{name}"} has arrived, job: {"{job}"}. Welcome aboard! Leave empty to restore the default.
+stationai-greeting-set = Greeting updated: { $greeting }
+stationai-greeting-reset = Greeting reset to default.

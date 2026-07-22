@@ -68,3 +68,8 @@ voidwalker-spawn-direction-north = севере
 voidwalker-spawn-direction-south = юге
 voidwalker-spawn-direction-east = востоке
 voidwalker-spawn-direction-west = западе
+
+ent-OrganVoidTumor = опухоль пустоты
+    .desc = Холодный пульсирующий нарост, которому не место в живом теле.
+ent-MindRoleVoidwalker = роль ходящего в пустоте
+    .desc = { "" }

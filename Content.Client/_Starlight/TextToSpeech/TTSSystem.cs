@@ -174,7 +174,7 @@ public sealed partial class TextToSpeechSystem : EntitySystem
             if (audioBytes.Length < 10 || (sourceUid != null && sourceUid.Value.Id == 0))
                 return null;
 
-            var silencePadding = 1f;
+            var silencePadding = 0f;
             var @params = audioParams ?? AudioParams.Default;
             var audioStream = _audioManager.LoadAudioOggVorbis(new MemoryStream(audioBytes));
 
@@ -210,11 +210,15 @@ public sealed partial class TextToSpeechSystem : EntitySystem
         return null;
     }
 
+    // Reused across frames - Update runs every rendered frame and allocating a fresh list each
+    // time is measurable garbage over a long round, even when no TTS is playing.
+    private readonly List<(EntityUid eid, AudioComponent audio, TTSAudioStreamComponent tts)> _toPlay = new();
+
     public override void Update(float frameTime)
     {
         base.Update(frameTime);
 
-        var toPlay = new List<(EntityUid eid, AudioComponent audio, TTSAudioStreamComponent tts)>();
+        _toPlay.Clear();
         var query = EntityQueryEnumerator<TTSAudioStreamComponent, TimedDespawnComponent, AudioComponent>();
 
         while (query.MoveNext(out var uid, out var ttsComp, out var despawnComponent, out var audio))
@@ -224,10 +228,10 @@ public sealed partial class TextToSpeechSystem : EntitySystem
             var timeRemaining = despawnComponent.Lifetime - SharedAudioSystem.AudioDespawnBuffer - 1f;
 
             if (timeRemaining < 0.066f && (ttsComp.AudioLength.TotalSeconds - audio.PlaybackPosition) < 0.096f)
-                toPlay.Add((uid, audio, ttsComp));
+                _toPlay.Add((uid, audio, ttsComp));
         }
 
-        foreach (var (eid, audio, tts) in toPlay)
+        foreach (var (eid, audio, tts) in _toPlay)
         {
             if (PlayTTS(tts.Data, tts.SourceUid, tts.AudioParams, (eid, audio, tts)) is not null)
                 tts.Handled = true;

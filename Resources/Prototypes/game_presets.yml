@@ -360,7 +360,7 @@
   - homelander
   name: homelander-preset-title
   description: homelander-preset-description
-  minPlayers: 15
+  minPlayers: 10
   showInVote: false
   rules:
   - Homelander

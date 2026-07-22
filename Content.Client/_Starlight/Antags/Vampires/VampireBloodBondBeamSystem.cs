@@ -32,6 +32,10 @@ public sealed partial class VampireBloodBondBeamSystem : EntitySystem
     {
         base.Update(frameTime);
 
+        // No bonds - nothing to do; skip the per-frame allocation below on the common path.
+        if (_activeBeamVisuals.Count == 0)
+            return;
+
         var toRemove = new List<(EntityUid, EntityUid)>();
 
         foreach (var ((source, target), beamEntity) in _activeBeamVisuals)

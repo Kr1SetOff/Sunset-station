@@ -44,6 +44,14 @@
     tags:
     - CannotSuicide
   - type: NoSlip
+  - type: PassiveDamage # Sunset: worms slowly knit themselves back together while alive
+    allowedStates:
+    - Alive
+    damage:
+      groups:
+        Brute: -0.6
+      types:
+        Heat: -0.2
   - type: PointLight
     radius: 1.2
     energy: 0.8

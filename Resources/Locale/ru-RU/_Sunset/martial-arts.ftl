@@ -51,3 +51,19 @@ guide-entry-martial-arts-capoeira = Капоэйра
 guide-entry-martial-arts-kungfu-dragon = Кунг-фу Дракона
 guide-entry-martial-arts-corporate-judo = Корпоративное дзюдо
 guide-entry-martial-arts-mime = Пантомима
+
+# Krav Maga (ported from mini-station-goob)
+martial-arts-style-krav-maga = крав-мага
+martial-arts-krav-maga-ready = Вы готовите приём: { $move }!
+martial-arts-krav-maga-leg-sweep = подсечка
+martial-arts-krav-maga-neck-chop = удар по горлу
+martial-arts-krav-maga-lung-punch = удар в лёгкие
+martial-arts-krav-maga-sweep-hit = Подсечка сбивает { $target } с ног!
+martial-arts-krav-maga-chop-hit = Удар по горлу лишает { $target } голоса!
+martial-arts-krav-maga-punch-hit = Удар в лёгкие перекрывает { $target } дыхание!
+ent-ActionKravMagaLegSweep = Подсечка
+    .desc = Выбивает ноги из-под цели, сбивая её с ног на несколько секунд.
+ent-ActionKravMagaNeckChop = Удар по горлу
+    .desc = Резкий удар ребром ладони по горлу наносит урон и лишает цель голоса на двадцать секунд.
+ent-ActionKravMagaLungPunch = Удар в лёгкие
+    .desc = Наносит 40 урона выносливости и перекрывает дыхание цели на десять секунд.
