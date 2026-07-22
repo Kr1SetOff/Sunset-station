@@ -1,0 +1,103 @@
+# 🌇Sunset🌇 - purely visual "illusion" entities spawned client-side-only by
+# Content.Client.Drugs.HallucinationMobSystem while a drug's hallucination effect is active - see
+# Content.Shared.Drugs.HallucinationMobsComponent/AddHallucinationTheme. Never spawned for real, never
+# networked, never touch the server at all. No Physics/Damageable/etc - just a sprite that gets moved
+# around directly by the client system, reusing existing mob art instead of commissioning new sprites.
+
+- type: entity
+  id: BaseHallucinationMob
+  abstract: true
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    noRot: false
+
+- type: entity
+  parent: BaseHallucinationMob
+  id: HallucinationMobMeth
+  name: паранойя
+  description: Тебе показалось.
+  components:
+  - type: Sprite
+    sprite: Mobs/Aliens/Xenos/runner.rsi
+    state: running
+
+- type: entity
+  parent: BaseHallucinationMob
+  id: HallucinationMobEphedrine
+  name: мурашки
+  description: Тебе показалось.
+  components:
+  - type: Sprite
+    sprite: Mobs/Animals/cockroach.rsi
+    state: cockroach
+
+- type: entity
+  parent: BaseHallucinationMob
+  id: HallucinationMobStimulants
+  name: погоня
+  description: Тебе показалось.
+  components:
+  - type: Sprite
+    sprite: Mobs/Aliens/Xenos/ravager.rsi
+    state: running
+
+- type: entity
+  parent: BaseHallucinationMob
+  id: HallucinationMobTHC
+  name: приход
+  description: Тебе показалось.
+  components:
+  - type: Sprite
+    sprite: Mobs/Animals/mouse.rsi
+    state: mouse-moving-0
+
+- type: entity
+  parent: BaseHallucinationMob
+  id: HallucinationMobImpedrezene
+  name: гниение
+  description: Тебе показалось.
+  components:
+  - type: Sprite
+    sprite: Mobs/Aliens/flesh.rsi
+    state: golem
+
+- type: entity
+  parent: BaseHallucinationMob
+  id: HallucinationMobSpaceDrugs
+  name: улёт
+  description: Тебе показалось.
+  components:
+  - type: Sprite
+    sprite: Mobs/Aliens/Xenos/queen.rsi
+    state: running
+
+- type: entity
+  parent: BaseHallucinationMob
+  id: HallucinationMobBananadine
+  name: клоунада
+  description: Тебе показалось.
+  components:
+  - type: Sprite
+    sprite: Mobs/Aliens/cluwnebeast.rsi
+    state: cluwnebeast
+
+- type: entity
+  parent: BaseHallucinationMob
+  id: HallucinationMobHappiness
+  name: безумное веселье
+  description: Тебе показалось.
+  components:
+  - type: Sprite
+    sprite: Mobs/Demons/honkmother.rsi
+    state: honkmother
+
+- type: entity
+  parent: BaseHallucinationMob
+  id: HallucinationMobPsicodine
+  name: тихий гость
+  description: Тебе показалось.
+  components:
+  - type: Sprite
+    sprite: Mobs/Ghosts/revenant.rsi
+    state: active

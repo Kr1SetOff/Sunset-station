@@ -711,7 +711,13 @@ public sealed partial class ChatUIController : UIController
     {
         language = null;
         if (_player.LocalEntity is not { Valid: true } uid || _lang == null) return false;
-        language = _lang.GetLanguageFromPrefix(uid, ref text, out var parsed);
+        // modifyText: true - without it, text never actually loses its "+x" prefix here, which broke every
+        // single-letter language prefix (i.e. every one except the two 3-letter ones): the hardcoded
+        // text[4..] below then sliced off part of the real message instead of the "+x " prefix, and if the
+        // chatbox's active channel was Radio, SendMessage prepended ";" onto the still-unstripped text,
+        // so the server's own (correct) prefix check saw ";+x ..." instead of "+x ..." and never re-derived
+        // the language either - the "+x" just came out as literal spoken garbage.
+        language = _lang.GetLanguageFromPrefix(uid, ref text, out var parsed, modifyText: true);
         return parsed;
     }
 
@@ -758,14 +764,15 @@ public sealed partial class ChatUIController : UIController
         if (text.Length == 0)
             return (ChatSelectChannel.None, text, null, null, null); //Starlight edit
 
-        //Starlight begin - detect language prefix. don't modify text directly here and use modText for radio channel checks.
+        //Starlight begin - detect language prefix. text is already stripped of the "+x " prefix by
+        // TryGetLanguage (modifyText: true), so modText just picks up from there for the radio-channel checks.
         var modText = text;
         LanguagePrototype? language = null;
         if (TryGetLanguage(ref text, out var foundLanguage))
         {
             language = foundLanguage;
-            if(text.Length<5) return (ChatSelectChannel.None, text, null, null, foundLanguage);
-            modText = text[4..];
+            if (text.Length == 0) return (ChatSelectChannel.None, text, null, null, foundLanguage);
+            modText = text;
         }
         //Starlight end
 

@@ -1,0 +1,19 @@
+# 🌇Sunset🌇 - Servants of Ratvar constructs (Cogscarab/Marauder/Brass Golem). Hostile list is kept
+# symmetric with the "back-references" added in ../ai_factions.yml (NpcFactionSystem.IsFactionHostile
+# requires both sides to list each other) so constructs reliably fight crew/security bots without
+# also picking fights with every other antagonist faction in the game.
+- type: npcFaction
+  id: Ratvar
+  hostile:
+  - NanoTrasen
+  - NanoTrasenSilicon
+  - SimpleHostile
+  - Syndicate
+  - SyndicateSilicon
+  - PetsNT
+  - Zombie
+  - Revolutionary
+  - AllHostile
+  - Wizard
+  - Xenoborg
+  - Dragon

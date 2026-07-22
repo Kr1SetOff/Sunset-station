@@ -1,6 +1,8 @@
 using Content.Server._Starlight.Administration.Systems;
 using Content.Server._Starlight.GameTicking.Rules.Components;
+using Content.Server._Sunset.Cult;
 using Content.Server._Sunset.Homelander;
+using Content.Server._Sunset.Ratvar;
 using Content.Server._Sunset.Spy;
 using Content.Server._Sunset.TheBoys.Components;
 using Content.Shared._Sunset.Homelander;
@@ -62,6 +64,8 @@ public sealed partial class AdminVerbSystem
     private static readonly EntProtoId DefaultDevilRule = "Devil"; // starlight
     private static readonly EntProtoId DefaultBrighteyeRule = "Brighteye"; //Starlight
 	private static readonly EntProtoId DefaultSELFRule = "SiliconLiberation"; //Starlight
+    private static readonly EntProtoId DefaultRatvarCultRule = "RatvarCult"; // Sunset
+    private static readonly EntProtoId DefaultRatvarServantRule = "RatvarServantRule"; // Sunset
     private static readonly ProtoId<PolymorphPrototype> VoidwalkerPolymorphId = "VoidwalkerPolymorph"; // Sunset
 
     // All antag verbs have names so invokeverb works.
@@ -259,6 +263,37 @@ public sealed partial class AdminVerbSystem
         AddTheBoysTeamVerb(args, targetPlayer, player, 2, "admin-verb-text-make-theboys-hughie", "admin-verb-make-theboys-hughie");
         AddTheBoysTeamVerb(args, targetPlayer, player, 3, "admin-verb-text-make-theboys-mothersmilk", "admin-verb-make-theboys-mothersmilk");
         AddTheBoysTeamVerb(args, targetPlayer, player, 4, "admin-verb-text-make-theboys-kimiko", "admin-verb-make-theboys-kimiko");
+
+        // Sunset - Ratvar cult. Definitions[0] is the head cultist, Definitions[1] is a rank-and-file
+        // cultist (see Resources/Prototypes/_Sunset/Cult/roundstart.yml) - indexed the same way
+        // AddTheBoysTeamVerb picks a specific team role instead of letting AntagSelection auto-fill.
+        AddRatvarCultVerb(args, targetPlayer, player, 0,
+            "admin-verb-text-make-ratvar-cult-leader",
+            "admin-verb-make-ratvar-cult-leader",
+            "Clothing/Head/Helmets/cult.rsi");
+        AddRatvarCultVerb(args, targetPlayer, player, 1,
+            "admin-verb-text-make-ratvar-cultist",
+            "admin-verb-make-ratvar-cultist",
+            "Objects/Weapons/Melee/cult_dagger.rsi");
+
+        // Sunset - Servants of Ratvar (the real clockwork-cult antagonist, distinct from the Nar'Sie
+        // cult above). Only one AntagSelection definition exists (no leader split), so this is a plain
+        // ForceMakeAntag call like Traitor/Zombie, not the indexed-definition AddRatvarCultVerb pattern.
+        var ratvarServantName = Loc.GetString("admin-verb-text-make-ratvar-servant");
+        Verb ratvarServant = new()
+        {
+            Text = ratvarServantName,
+            Category = VerbCategory.Antag,
+            Icon = new SpriteSpecifier.Rsi(new ResPath("/Textures/_Sunset/Ratvar/clockwork_slab.rsi"), "icon"),
+            Act = () =>
+            {
+                _antag.ForceMakeAntag<RatvarServantRuleComponent>(targetPlayer, DefaultRatvarServantRule);
+                _autolog.LogToDiscord(string.Join(": ", ratvarServantName, Loc.GetString("admin-verb-make-ratvar-servant")), player.Name);
+            },
+            Impact = LogImpact.High,
+            Message = string.Join(": ", ratvarServantName, Loc.GetString("admin-verb-make-ratvar-servant")),
+        };
+        args.Verbs.Add(ratvarServant);
 
         // Sunset - remove antagonist role(s), regardless of which antag it is. Logged the same way as
         // granting an antag role, so it's clear from the admin logs / Discord log who de-antagged whom.
@@ -521,6 +556,37 @@ public sealed partial class AdminVerbSystem
                     if (homelanderQuery.MoveNext(out var homelanderUid, out _))
                         teamRule.HomelanderBody = homelanderUid;
                 }
+
+                _antag.MakeAntag(rule, targetPlayer, rule.Comp.Definitions[defIndex]);
+                _autolog.LogToDiscord(string.Join(": ", name, Loc.GetString(logLoc)), player.Name);
+            },
+            Impact = LogImpact.High,
+            Message = string.Join(": ", name, Loc.GetString(logLoc)),
+        };
+        args.Verbs.Add(verb);
+    }
+
+    /// <summary>
+    /// Sunset - hand-cast a specific Ratvar cult role (0 = head cultist, 1 = rank-and-file cultist,
+    /// indexing Definitions in Resources/Prototypes/_Sunset/Cult/roundstart.yml) onto targetPlayer.
+    /// Mirrors AddTheBoysTeamVerb: grabs (or starts) the RatvarCult rule and calls MakeAntag directly
+    /// with a specific definition instead of letting AntagSelection auto-fill the next open slot, so
+    /// admins can deliberately pick which of the two roles to hand out.
+    /// </summary>
+    private void AddRatvarCultVerb(GetVerbsEvent<Verb> args, ICommonSession targetPlayer, ICommonSession player, int defIndex, string textLoc, string logLoc, string iconRsiPath)
+    {
+        var name = Loc.GetString(textLoc);
+        Verb verb = new()
+        {
+            Text = name,
+            Category = VerbCategory.Antag,
+            Icon = new SpriteSpecifier.Rsi(new ResPath(iconRsiPath), "icon"),
+            Act = () =>
+            {
+                var rule = _antag.ForceGetGameRuleEnt<RatvarCultRuleComponent>(DefaultRatvarCultRule);
+
+                if (defIndex >= rule.Comp.Definitions.Count)
+                    return;
 
                 _antag.MakeAntag(rule, targetPlayer, rule.Comp.Definitions[defIndex]);
                 _autolog.LogToDiscord(string.Join(": ", name, Loc.GetString(logLoc)), player.Name);

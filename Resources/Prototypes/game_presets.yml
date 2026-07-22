@@ -240,6 +240,40 @@
   - SunSetBonusAntagsRule # 🌇Sunset🌇
 
 - type: gamePreset
+  id: RatvarCult
+  alias:
+    - cult
+    - ratvarcult
+    - narsiecult
+  name: ratvar-cult-title
+  description: ratvar-cult-description
+  minPlayers: 10 # 🌇Sunset🌇 - matches RatvarCult rule's GameRule.minPlayers
+  showInVote: true
+  rules:
+  - RatvarCult
+  - SunSetCalmStationEventScheduler # 🌇Sunset🌇
+  - SpaceTrafficControlEventScheduler
+  - BasicRoundstartVariation
+  - SunSetBonusAntagsRule # 🌇Sunset🌇
+
+- type: gamePreset
+  id: RatvarServants
+  alias:
+    - servants
+    - ratvarservants
+    - clockcult
+  name: ratvar-servants-title
+  description: ratvar-servants-description
+  minPlayers: 10 # 🌇Sunset🌇 - matches RatvarServantRule's GameRule.minPlayers
+  showInVote: true
+  rules:
+  - RatvarServantRule
+  - SunSetCalmStationEventScheduler # 🌇Sunset🌇
+  - SpaceTrafficControlEventScheduler
+  - BasicRoundstartVariation
+  - SunSetBonusAntagsRule # 🌇Sunset🌇
+
+- type: gamePreset
   id: Revolutionary
   alias:
     - rev
@@ -350,23 +384,6 @@
   rules:
   - TheBoysHomelander
   - TheBoysTeam
-  - SunSetCalmStationEventScheduler
-  - SpaceTrafficControlEventScheduler
-  - BasicRoundstartVariation
-
-# 🌇Sunset🌇 - Ratvar cult (clockwork cult, scoped-down port from tg/station): a hidden team of
-# 2-4 clockwork cultists among the crew, see Resources/Prototypes/_Sunset/RatvarCult/.
-- type: gamePreset
-  id: RatvarCult
-  alias:
-  - ratvarcult
-  - clockcult
-  name: ratvar-cult-title
-  description: ratvar-cult-description
-  minPlayers: 10
-  showInVote: true
-  rules:
-  - RatvarCult
   - SunSetCalmStationEventScheduler
   - SpaceTrafficControlEventScheduler
   - BasicRoundstartVariation

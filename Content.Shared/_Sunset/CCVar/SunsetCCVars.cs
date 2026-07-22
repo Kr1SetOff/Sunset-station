@@ -44,14 +44,6 @@ public sealed partial class SunsetCCVars
         CVarDef.Create("sunset.boosty_discord.tier5_role_id", "", CVar.SERVERONLY | CVar.CONFIDENTIAL);
 
     /// <summary>
-    /// When true, players must link a Discord account before playing: the link window opens on join
-    /// and cannot be dismissed until the account is linked. Has no effect while OAuth is unconfigured,
-    /// so an incomplete config can never lock everyone out.
-    /// </summary>
-    public static readonly CVarDef<bool> SunsetDiscordLinkRequired =
-        CVarDef.Create("sunset.boosty_discord.link_required", true, CVar.SERVERONLY);
-
-    /// <summary>
     /// How often (in seconds) an online player's sponsor tier is re-checked against Discord, to catch lapsed/renewed Boosty subscriptions.
     /// </summary>
     public static readonly CVarDef<int> SunsetSponsorTierRecheckIntervalSeconds =

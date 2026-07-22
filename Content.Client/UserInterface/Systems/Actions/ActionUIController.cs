@@ -246,6 +246,22 @@ public sealed partial class ActionUIController : UIController, IOnStateChanged<G
             _actionsSystem?.TriggerAction(action);
     }
 
+    /// <summary>
+    /// 🌇Sunset🌇 - activates an action entity that isn't necessarily on the hotbar (e.g. picked from a
+    /// radial menu, such as the Ratvar cult dagger's ritual wheel). Mirrors TriggerAction(int) above -
+    /// enters targeting mode for entity/world-target actions, or fires instantly otherwise.
+    /// </summary>
+    public void ActivateAction(EntityUid actionId)
+    {
+        if (_actionsSystem?.GetAction(actionId) is not {} action)
+            return;
+
+        if (EntityManager.TryGetComponent<TargetActionComponent>(action, out var target))
+            ToggleTargeting((action, action, target));
+        else
+            _actionsSystem?.TriggerAction(action);
+    }
+
     private void OnActionAdded(EntityUid actionId)
     {
         if (_actionsSystem?.GetAction(actionId) is not {} action)

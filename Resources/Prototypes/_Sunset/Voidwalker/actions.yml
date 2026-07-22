@@ -31,13 +31,13 @@
   description: Stare directly at someone until they notice you, stunning and revealing you to them.
   components:
   - type: Action
-    useDelay: 12
+    useDelay: 45
     itemIconStyle: BigAction
     icon:
       sprite: _Sunset/Interface/Actions/voidwalker_actions.rsi
       state: unsettle
   - type: TargetAction
-    range: 9
+    range: 12
     checkCanAccess: false
   - type: EntityTargetAction
     whitelist:

@@ -1,0 +1,24 @@
+# 🌇Sunset🌇 - Bitrunner airlock. Reuses the cargo airlock's sprite/wiring layout wholesale and just
+# swaps the access board for one that checks Bitrun instead of Cargo access.
+
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsBitrunner
+  suffix: Bitrunner, Locked
+  components:
+  - type: AccessReader
+    access: [["Bitrun"]]
+
+- type: entity
+  parent: AirlockCargo
+  id: AirlockBitrunner
+  suffix: Bitrunner
+
+- type: entity
+  parent: AirlockBitrunner
+  id: AirlockBitrunnerLocked
+  suffix: Bitrunner, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsBitrunner ]

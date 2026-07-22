@@ -1,0 +1,54 @@
+# 🌇Sunset🌇 - Ratvar cult objectives. Convert + Survive are handed to every cultist via
+# AntagObjectivesComponent on the RatvarCult game rule (roundstart.yml); Summon is added only to the
+# head cultist by Content.Server._Sunset.Cult.RatvarCultObjectiveSystem.OnLeaderSelected.
+
+- type: entity
+  abstract: true
+  parent: BaseObjective
+  id: BaseRatvarCultObjective
+  components:
+  - type: Objective
+    difficulty: 1.5
+    issuer: objective-issuer-ratvar-cult
+
+- type: entity
+  parent: BaseRatvarCultObjective
+  id: RatvarCultConvertObjective
+  components:
+  - type: Objective
+    icon:
+      sprite: _Sunset/Interface/Actions/ratvar_cult_actions.rsi
+      state: cult_mark
+  - type: NumberObjective
+    min: 3
+    max: 6
+    title: objective-condition-ratvar-cult-convert-title
+    description: objective-condition-ratvar-cult-convert-desc
+  - type: RatvarCultConvertCondition
+
+- type: entity
+  parent: [ BaseRatvarCultObjective, BaseSurviveObjective ]
+  id: RatvarCultSurviveObjective
+  name: objective-condition-ratvar-cult-survive-title
+  description: objective-condition-ratvar-cult-survive-desc
+  components:
+  - type: Objective
+    icon:
+      sprite: _Sunset/Interface/Actions/ratvar_cult_actions.rsi
+      state: cult_comms
+
+- type: entity
+  parent: BaseRatvarCultObjective
+  id: RatvarCultSummonObjective
+  components:
+  - type: Objective
+    difficulty: 3.5
+    icon:
+      sprite: _Sunset/Interface/Actions/ratvar_cult_actions.rsi
+      state: telerune
+  - type: NumberObjective
+    min: 1
+    max: 1
+    title: objective-condition-ratvar-cult-summon-title
+    description: objective-condition-ratvar-cult-summon-desc
+  - type: RatvarCultSummonCondition

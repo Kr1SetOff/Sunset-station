@@ -1,3 +1,3 @@
-tts-examinable-verb-text = Voice
-tts-examinable-verb-message = Examine the voice.
-tts-examine = { SUBJECT($ent) } sounds like [color=Pink]{ $voice }[/color].
+tts-examinable-verb-text = Голос
+tts-examinable-verb-message = Осмотреть голос.
+tts-examine = { CAPITALIZE(SUBJECT($ent)) } { CONJUGATE-BASIC($ent, "звучат", "звучит") } как [color=Pink]{ $voice }[/color].

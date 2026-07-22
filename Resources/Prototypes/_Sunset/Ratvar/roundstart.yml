@@ -1,0 +1,28 @@
+# 🌇Sunset🌇 - Servants of Ratvar: standalone game mode. No round-start leader split (unlike the Nar'Sie
+# cult's commander pick) since the RU wiki writeup doesn't describe one - servants coordinate as equals.
+
+- type: entity
+  parent: BaseGameRule
+  id: RatvarServantRule
+  components:
+  - type: GameRule
+    minPlayers: 10
+  - type: RatvarServantRule
+  - type: AntagSelection
+    selectionTime: PrePlayerSpawn
+    definitions:
+    - prefRoles: [ RatvarServant ]
+      min: 2
+      max: 6
+      playerRatio: 10
+      startingGear: RatvarServantGear
+      mindRoles:
+      - MindRoleRatvarServant
+      components:
+      # Actions are granted in code (RatvarServantSystem.OnServantStartup/GrantServantActions,
+      # triggered by this RatvarServant component's ComponentStartup) rather than via ActionGrant here -
+      # ActionGrant only fires on MapInit, which Altar-converted servants never get, so centralizing on
+      # ComponentStartup covers both round-start and mid-round conversions with one code path.
+      - type: RatvarServant
+  - type: DynamicRuleCost
+    cost: 200

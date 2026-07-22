@@ -106,6 +106,7 @@
   - Gorilla
   - Abductor
   - Pirate
+  - Ratvar # sunset
 
 - type: npcFaction
   id: SyndicateSilicon # Again, zombies fuck you.
@@ -127,6 +128,7 @@
     - Gorilla
     - Abductor
     - Pirate
+    - Ratvar # sunset
 
 - type: npcFaction
   id: Abductor

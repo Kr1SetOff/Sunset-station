@@ -49,6 +49,13 @@
       - !type:ModifyStatusEffect
         effectProto: StatusEffectPainNumbness
         time: 2
+      # Sunset: meth paranoia - something's always watching from the corner of your eye.
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectSeeingRainbow
+        type: Add
+        time: 6
+      - !type:AddHallucinationTheme
+        mob: HallucinationMobMeth
       # Interactions
       - !type:ModifyStatusEffect
         conditions:
@@ -103,6 +110,13 @@
         messages: ["ephedrine-effect-tight-pain", "ephedrine-effect-heart-pounds"]
         type: Local
         probability: 0.05
+      # Sunset: wired and crawling - a mild, jittery "something's under your skin" hallucination.
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectSeeingRainbow
+        type: Add
+        time: 4
+      - !type:AddHallucinationTheme
+        mob: HallucinationMobEphedrine
       # OD
       - !type:HealthChange
         conditions:
@@ -169,6 +183,13 @@
         time: 3
       # Side effects
       - !type:Jitter
+      # Sunset: adrenaline-fuelled tunnel vision - something's hunting you, chase or be chased.
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectSeeingRainbow
+        type: Add
+        time: 5
+      - !type:AddHallucinationTheme
+        mob: HallucinationMobStimulants
       # OD
       - !type:HealthChange
         conditions:
@@ -242,6 +263,8 @@
         effectProto: StatusEffectSeeingRainbow
         time: 16
         type: Add
+      - !type:AddHallucinationTheme
+        mob: HallucinationMobTHC
 
 - type: reagent
   id: Nicotine
@@ -279,6 +302,8 @@
         effectProto: StatusEffectSeeingRainbow
         time: 10
         type: Add
+      - !type:AddHallucinationTheme
+        mob: HallucinationMobImpedrezene
       - !type:Vomit # Vomiting is a symptom of brain damage
         probability: 0.05
       - !type:Drunk # Headaches and slurring are major symptoms of brain damage, this is close enough
@@ -300,6 +325,8 @@
         effectProto: StatusEffectSeeingRainbow
         type: Add
         time: 5
+      - !type:AddHallucinationTheme
+        mob: HallucinationMobSpaceDrugs
 
 - type: reagent
   id: Bananadine
@@ -316,6 +343,8 @@
         effectProto: StatusEffectSeeingRainbow
         type: Add
         time: 5
+      - !type:AddHallucinationTheme
+        mob: HallucinationMobBananadine
 
 # Probably replace this one with sleeping chem when putting someone in a comatose state is easier
 - type: reagent
@@ -529,3 +558,5 @@
         effectProto: StatusEffectSeeingRainbow
         type: Add
         time: 5
+      - !type:AddHallucinationTheme
+        mob: HallucinationMobHappiness

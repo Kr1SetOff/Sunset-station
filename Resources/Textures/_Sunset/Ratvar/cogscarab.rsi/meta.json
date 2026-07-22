@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from tgstation (smspider, mob/simple/smspider.dmi) at https://github.com/tgstation/tgstation. Recolored in-game via Sprite color tint for the Ratvar Cogscarab construct - no dedicated cogscarab sprite exists upstream.",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "icon"
+    },
+    {
+      "name": "dead"
+    }
+  ]
+}

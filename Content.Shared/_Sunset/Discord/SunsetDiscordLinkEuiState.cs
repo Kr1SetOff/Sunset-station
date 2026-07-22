@@ -22,10 +22,10 @@ public sealed class SunsetDiscordLinkEuiState : EuiStateBase
     public int Tier { get; set; }
 
     /// <summary>
-    /// True when the server requires a linked Discord account to play - the window cannot be
-    /// dismissed until <see cref="IsLinked"/> becomes true.
+    /// True when this window is a mandatory join-gate rather than a voluntary status check - the
+    /// client hides its close button while this is true and the account isn't linked yet.
     /// </summary>
-    public bool Mandatory { get; set; }
+    public bool Required { get; set; }
 }
 
 /// <summary>

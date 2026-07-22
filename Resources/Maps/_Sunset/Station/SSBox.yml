@@ -16054,19 +16054,21 @@ entities:
       parent: 2
 - proto: AirlockMaintCargoLocked
   entities:
-  - uid: 444
-    components:
-    - type: MetaData
-      name: Warehouse Maintenance
-    - type: Transform
-      pos: -29.5,-9.5
-      parent: 2
   - uid: 445
     components:
     - type: MetaData
       name: Cargo Bay Maintenance
     - type: Transform
       pos: -39.5,-19.5
+      parent: 2
+- proto: AirlockBitrunnerLocked
+  entities:
+  - uid: 444
+    components:
+    - type: MetaData
+      name: Bitrunner Access
+    - type: Transform
+      pos: -29.5,-9.5
       parent: 2
 - proto: AirlockMaintChapelLocked
   entities:

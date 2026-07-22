@@ -1,0 +1,148 @@
+# 🌇Sunset🌇 - Servants of Ratvar constructs (allies). Summoned via the ActionRatvarCraft* actions in
+# actions.yml (RatvarServantSystem.OnCraftConstruct/OnCraftConstructDoAfter), capped at
+# RatvarServantRuleComponent.MaxConstructs. Simple HTN-driven melee NPCs (not ghost roles/corpse
+# constructs like tg's Juggernaut/Wraith - those belong to the separate Nar'Sie construct system,
+# see task #11) hostile to crew via the Ratvar npcFaction (ai_factions.yml).
+
+- type: entity
+  abstract: true
+  id: BaseRatvarConstruct
+  parent: SimpleSpaceMobBase
+  components:
+  - type: InputMover
+  - type: MobMover
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+    blackboard:
+      NavSmash: !type:Bool
+        true
+  - type: NpcFactionMember
+    factions:
+    - Ratvar
+  - type: CombatMode
+  - type: Physics
+  - type: MobState
+  - type: Tag
+    tags:
+    - CannotSuicide
+
+- type: entity
+  name: clockwork cogscarab
+  id: MobRatvarCogscarab
+  parent: BaseRatvarConstruct
+  description: A brass, beetle-sized clockwork construct, skittering on tiny gilded legs.
+  components:
+  - type: Sprite
+    drawdepth: SmallMobs
+    sprite: _Sunset/Ratvar/cogscarab.rsi
+    scale: 0.65,0.65
+    color: "#c9a227"
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: icon
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.2
+        density: 40
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      20: Dead
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 4
+    baseSprintSpeed: 5
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: icon
+      Dead:
+        Base: dead
+  - type: MeleeWeapon
+    angle: 0
+    damage:
+      types:
+        Piercing: 4
+
+- type: entity
+  name: clockwork marauder
+  id: MobRatvarMarauder
+  parent: BaseRatvarConstruct
+  description: A brass-plated clockwork soldier, roughly man-shaped and built to fight.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _Sunset/Ratvar/marauder.rsi
+    color: "#b8860b"
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: icon
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 200
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      60: Dead
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2.75
+    baseSprintSpeed: 3.75
+  - type: MeleeWeapon
+    angle: 0
+    damage:
+      types:
+        Blunt: 8
+        Slash: 4
+
+- type: entity
+  name: brass golem
+  id: MobRatvarBrassGolem
+  parent: BaseRatvarConstruct
+  description: A lumbering statue of living brass, slow but nearly unstoppable once it gets moving.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _Sunset/Ratvar/brass_golem.rsi
+    scale: 1.3,1.3
+    color: "#8b5a2b"
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: icon
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 400
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      150: Dead
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 1.2
+    baseSprintSpeed: 1.5
+  - type: MeleeWeapon
+    angle: 0
+    damage:
+      types:
+        Blunt: 18

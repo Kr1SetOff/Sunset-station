@@ -1,0 +1,12 @@
+# 🌇Sunset🌇 - Servants of Ratvar mind role, mirroring _Sunset/Cult/mind_roles.yml's pattern.
+
+- type: entity
+  parent: BaseMindRoleAntag
+  id: MindRoleRatvarServant
+  name: Ratvar Servant Role
+  components:
+  - type: MindRole
+    antagPrototype: RatvarServant
+    subtype: role-subtype-cultist
+    exclusiveAntag: true
+    roleType: TeamAntagonist

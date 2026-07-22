@@ -1,0 +1,10 @@
+# 🌇Sunset🌇 - private telepathic-ish "Commune" channel for Ratvar cultists, granted intrinsically
+# (no headset/encryption key needed) - see Content.Server._Sunset.Cult.RatvarCultSystem.
+
+- type: radioChannel
+  id: RatvarCult
+  name: chat-radio-ratvar-cult
+  keycode: 'у'
+  frequency: 77785
+  color: "#a6132c"
+  longRange: true

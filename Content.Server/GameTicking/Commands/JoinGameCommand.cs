@@ -1,4 +1,7 @@
+using Content.Server._Sunset.Discord;
+using Content.Server._Sunset.SponsorTier;
 using Content.Server.Administration.Managers;
+using Content.Server.EUI;
 using Content.Server.Ghost.Roles;
 using Content.Server.Preferences.Managers;
 using Content.Server.Station.Systems;
@@ -22,6 +25,9 @@ namespace Content.Server.GameTicking.Commands
         [Dependency] private ILogManager _logManager = default!;
 
         [Dependency] private IServerPreferencesManager _preferencesManager = default!; // Starlight
+        [Dependency] private SunsetSponsorTierService _tierService = default!; // Sunset
+        [Dependency] private SunsetDiscordOAuth _discordOAuth = default!; // Sunset
+        [Dependency] private EuiManager _euiManager = default!; // Sunset
 
         private readonly ISawmill _sawmill;
 
@@ -48,6 +54,16 @@ namespace Content.Server.GameTicking.Commands
 
             if (player == null)
             {
+                return;
+            }
+
+            // Sunset: belt-and-suspenders check - SunsetDiscordGateSystem already forces a required
+            // link window open the moment an unlinked player connects, but re-check here too in case
+            // that window got bypassed/missed (e.g. a hot-reload after connect).
+            if (_discordOAuth.IsConfigured() && !_tierService.IsLinked(player))
+            {
+                shell.WriteError(Loc.GetString("sunset-discord-link-required-shell"));
+                SunsetDiscordLinkEui.EnsureRequiredOpenFor(_euiManager, player);
                 return;
             }
 

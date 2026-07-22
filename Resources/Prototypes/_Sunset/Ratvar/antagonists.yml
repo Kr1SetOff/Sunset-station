@@ -1,0 +1,15 @@
+# 🌇Sunset🌇 - the real Servants of Ratvar antag role (see Content.Shared._Sunset.Ratvar for why this is
+# a separate system from _Sunset/Cult, which is actually Nar'Sie's cult despite the "Ratvar"-prefixed
+# internal ids there). setPreference: true makes this show up as a checkbox in the antag-preferences
+# menu, mirroring Resources/Prototypes/Roles/Antags/traitor.yml.
+
+- type: antag
+  id: RatvarServant
+  name: ratvar-servant-role-name
+  antagonist: true
+  setPreference: true
+  objective: ratvar-servant-role-objective
+  playTimeTracker: AntagRatvarServant
+
+- type: playTimeTracker
+  id: AntagRatvarServant

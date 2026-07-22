@@ -9,12 +9,12 @@ namespace Content.Client._Sunset.Discord;
 public sealed class SunsetDiscordLinkWindow : DefaultWindow
 {
     private readonly IUriOpener _uriOpener;
+    private readonly RichTextLabel _text;
     private readonly Button _linkButton;
     private readonly Button _refreshButton;
     private readonly Label _statusLabel;
-    private readonly Label _mandatoryLabel;
     private string _url = "";
-    private bool _blockClose;
+    private bool? _lastRequired;
 
     public event Action? OnRefreshRequested;
 
@@ -31,9 +31,9 @@ public sealed class SunsetDiscordLinkWindow : DefaultWindow
             Margin = new Thickness(12),
         };
 
-        var text = new RichTextLabel { HorizontalExpand = true };
-        text.SetMessage(Loc.GetString("sunset-discord-link-text"));
-        box.AddChild(text);
+        _text = new RichTextLabel { HorizontalExpand = true };
+        _text.SetMessage(Loc.GetString("sunset-discord-link-text"));
+        box.AddChild(_text);
 
         _statusLabel = new Label
         {
@@ -41,15 +41,6 @@ public sealed class SunsetDiscordLinkWindow : DefaultWindow
             HorizontalAlignment = Control.HAlignment.Center,
         };
         box.AddChild(_statusLabel);
-
-        _mandatoryLabel = new Label
-        {
-            Text = Loc.GetString("sunset-discord-link-mandatory-note"),
-            Margin = new Thickness(0, 4, 0, 0),
-            HorizontalAlignment = Control.HAlignment.Center,
-            Visible = false,
-        };
-        box.AddChild(_mandatoryLabel);
 
         var buttons = new BoxContainer
         {
@@ -85,28 +76,19 @@ public sealed class SunsetDiscordLinkWindow : DefaultWindow
             ? Loc.GetString("sunset-discord-link-status-linked", ("tier", TierName(state.Tier)))
             : Loc.GetString("sunset-discord-link-status-unlinked");
 
-        _blockClose = state.Mandatory && !state.IsLinked;
-        _mandatoryLabel.Visible = _blockClose;
-    }
+        // Sunset: a required gate can't be dismissed away while still unlinked - the server closes
+        // it for us automatically the instant linking succeeds (see SunsetDiscordLinkEui.OnLinked).
+        var blocking = state.Required && !state.IsLinked;
+        CloseButton.Visible = !blocking;
+        _refreshButton.Visible = !state.Required;
 
-    /// <summary>
-    /// In mandatory mode the window refuses to close (X button, Escape) until the account is linked.
-    /// </summary>
-    public override void Close()
-    {
-        if (_blockClose)
-            return;
-
-        base.Close();
-    }
-
-    /// <summary>
-    /// Server-initiated close (EUI shut down) - bypasses the mandatory-mode block.
-    /// </summary>
-    public void ForceClose()
-    {
-        _blockClose = false;
-        base.Close();
+        if (_lastRequired != state.Required)
+        {
+            _lastRequired = state.Required;
+            _text.SetMessage(Loc.GetString(state.Required
+                ? "sunset-discord-link-required-text"
+                : "sunset-discord-link-text"));
+        }
     }
 
     private static string TierName(int tier) => tier switch

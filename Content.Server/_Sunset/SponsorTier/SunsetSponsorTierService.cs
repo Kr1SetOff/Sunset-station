@@ -35,11 +35,6 @@ public sealed partial class SunsetSponsorTierService : IPostInjectInit, ISunsetS
     private ISawmill _sawmill = default!;
 
     /// <summary>
-    /// Fired on the main thread when an online player completes a Discord link.
-    /// </summary>
-    public event Action<ICommonSession>? PlayerLinked;
-
-    /// <summary>
     /// Dev/testing override - this ckey always resolves to the max sponsor tier, regardless of any
     /// actual Discord link, so ghost themes and other sponsor-gated content can be tested without a
     /// live Boosty subscription.
@@ -114,7 +109,6 @@ public sealed partial class SunsetSponsorTierService : IPostInjectInit, ISunsetS
             // Push the new tier down immediately - without this, the client keeps seeing tier 0
             // (and anything gated on it stays locked) until their next reconnect.
             _jobWhitelistManager.SendJobWhitelist(session);
-            PlayerLinked?.Invoke(session);
         }
 
         _sawmill.Info($"Linked player {player} to Discord user {discordUserId}, resolved tier {tier}.");

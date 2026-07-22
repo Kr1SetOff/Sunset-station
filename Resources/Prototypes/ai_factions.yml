@@ -22,6 +22,7 @@
   - Vampire
   - Pirate # starlight
   #Starlight end
+  - Ratvar # sunset
 
 - type: npcFaction
   id: NanoTrasen
@@ -44,6 +45,7 @@
   - Gorilla
   - Abductor # starlight
   - Pirate # starlight
+  - Ratvar # sunset
 
 - type: npcFaction
   id: Mouse
@@ -72,6 +74,7 @@
   - HonkHostile
   - Gorilla
   - Abductor # starlight
+  - Ratvar # sunset
 
 - type: npcFaction
   id: SimpleHostile
@@ -97,6 +100,7 @@
   - Gorilla
   - Abductor # starlight
   - Pirate # starlight
+  - Ratvar # sunset
 
 - type: npcFaction
   id: SimpleNeutral
@@ -122,6 +126,7 @@
   - Gorilla
   - Abductor # starlight
   - Pirate # starlight
+  - Ratvar # sunset
 
 - type: npcFaction
   id: Xeno
@@ -167,6 +172,7 @@
   - Gorilla
   - Abductor # starlight
   - Pirate # starlight
+  - Ratvar # sunset
 
 - type: npcFaction
   id: Revolutionary
@@ -185,6 +191,7 @@
   - Gorilla
   - Abductor # starlight
   - Pirate # starlight
+  - Ratvar # sunset
 
 - type: npcFaction
   id: AllHostile
@@ -211,6 +218,7 @@
   - Gorilla
   - Abductor # starlight
   - Pirate # starlight
+  - Ratvar # sunset
 
 - type: npcFaction
   id: Wizard
@@ -233,6 +241,7 @@
   - Gorilla
   - Abductor # starlight
   - Pirate # starlight
+  - Ratvar # sunset
 
 - type: npcFaction
   id: Xenoborg
@@ -255,3 +264,4 @@
   - Abductor # starlight
   - Gorilla # starlight
   - Pirate # starlight
+  - Ratvar # sunset

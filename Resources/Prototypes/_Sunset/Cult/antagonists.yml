@@ -1,0 +1,24 @@
+# 🌇Sunset🌇 - Ratvar cult antag roles - these are what make the role show up as a checkbox in the
+# antag-preferences menu (setPreference: true), mirroring Roles/Antags/nukeops.yml's pattern.
+
+- type: antag
+  id: RatvarCultist
+  name: ratvar-cultist-role-name
+  antagonist: true
+  setPreference: true
+  objective: ratvar-cultist-role-objective
+  playTimeTracker: AntagRatvarCultist
+
+- type: antag
+  id: RatvarCultLeader
+  name: ratvar-cult-leader-role-name
+  antagonist: true
+  setPreference: true
+  objective: ratvar-cult-leader-role-objective
+  playTimeTracker: AntagRatvarCultLeader
+
+- type: playTimeTracker
+  id: AntagRatvarCultist
+
+- type: playTimeTracker
+  id: AntagRatvarCultLeader
