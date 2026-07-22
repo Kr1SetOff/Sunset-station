@@ -1,0 +1,31 @@
+# 🌇Sunset🌇 - gives Abductors their own PDA holding an Agent ID card (copies access from any scanned
+# ID, name/job/icon customizable via its own UI - see Content.Server/Access/Systems/AgentIDCardSystem.cs).
+# No dedicated abductor PDA art exists yet, so this reuses the neutral "pda-clear" state with a
+# purple border, same trick as VisitorPDA (Resources/Prototypes/Entities/Objects/Devices/pda.yml).
+
+- type: entity
+  parent: AgentIDCard
+  id: AbductorAgentIDCard
+  name: abductor ID card
+  description: A blank identification card that shimmers faintly. It can copy access from other cards.
+  components:
+  - type: Access
+    tags: [ Maintenance ]
+
+- type: entity
+  parent: BasePDA
+  id: PdaAbductor
+  name: abductor PDA
+  description: A featureless device humming with an unplaceable energy.
+  components:
+  - type: Pda
+    id: AbductorAgentIDCard
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-clear
+  - type: PdaBorderColor
+    borderColor: "#8e44ad"
+  - type: Icon
+    state: pda-clear

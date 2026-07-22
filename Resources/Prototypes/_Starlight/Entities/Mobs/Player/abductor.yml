@@ -70,6 +70,7 @@
     gloves: ClothingHandsGlovesCombat
     shoes: ClothingShoesBootsCombat
     pocket1: AbductorGizmo
+    id: PdaAbductor
 
 - type: startingGear
   id: AbductorAgentGear
@@ -83,6 +84,7 @@
     pocket2: WeaponAlien
     belt: ClothingAbductorBeltFilled
     outerClothing: ClothingOuterArmorAbductor
+    id: PdaAbductor
   inhand:
   - Wonderprod
 
