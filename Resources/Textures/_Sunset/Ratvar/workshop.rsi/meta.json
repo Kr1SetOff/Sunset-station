@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Reused from tgstation mining beacon device (obj/machines/beacon.dmi, yellowbeacon) at https://github.com/tgstation/tgstation - distinguished from Herald's Beacon by tint only, no dedicated Workshop sprite exists upstream",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "icon"
+    }
+  ]
+}

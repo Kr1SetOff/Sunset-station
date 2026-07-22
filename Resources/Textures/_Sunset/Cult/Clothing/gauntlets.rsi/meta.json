@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from tgstation (clockwork_gauntlets, Servants of Ratvar) at https://github.com/tgstation/tgstation, converted from DMI to RSI",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "icon"
+    },
+    {
+      "name": "equipped-HAND",
+      "directions": 4
+    }
+  ]
+}

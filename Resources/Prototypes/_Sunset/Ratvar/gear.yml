@@ -1,0 +1,253 @@
+# 🌇Sunset🌇 - Servants of Ratvar starting gear. Servants keep their normal crew job clothes (undercover
+# among the crew, like the Nar'Sie cult) - only pocket1 is touched.
+
+- type: startingGear
+  id: RatvarServantGear
+  equipment:
+    pocket1: RatvarClockworkSlab
+
+# The servant's ritual focus - activating it in-hand opens a radial "ritual wheel" listing the slab's
+# three built-in abilities (see actions.yml). World icon is derived from the inhand sprite since no
+# standalone icon exists upstream for this item (see the texture folder's meta.json).
+- type: entity
+  parent: BaseItem
+  id: RatvarClockworkSlab
+  name: clockwork slab
+  description: A brass tablet covered in shifting clockwork script. It hums faintly in your hand.
+  components:
+  - type: Sprite
+    sprite: _Sunset/Ratvar/clockwork_slab.rsi
+    state: icon
+  - type: Item
+    size: Small
+    sprite: _Sunset/Ratvar/clockwork_slab.rsi
+  - type: ActivatableUI
+    key: enum.RatvarSlabUiKey.Key
+    inHandsOnly: true
+    singleUser: true
+    verbText: ratvar-slab-open-verb
+  - type: UserInterface
+    interfaces:
+      enum.RatvarSlabUiKey.Key: { type: RatvarSlabBoundUserInterface }
+
+# The Altar of Ratvar - a single servant can convert an incapacitated non-servant placed on it, no
+# second-invoker requirement (unlike Nar'Sie's Rite of Offering). Reuses the vanilla "convert altar"
+# sprite/table-like AltarBase (Resources/Prototypes/Entities/Structures/Furniture/altar.yml), tinted
+# brass/gold to distinguish it from the generic altar and from Nar'Sie's blood-red runes.
+- type: entity
+  parent: AltarBase
+  id: RatvarAltar
+  name: altar of Ratvar
+  description: A brass altar, its surface etched with interlocking gears. It seems to be waiting.
+  components:
+  - type: Sprite
+    sprite: Structures/Furniture/Altars/Gods/convertaltar.rsi
+    state: convertaltar
+    color: "#be8700"
+  - type: Icon
+    sprite: Structures/Furniture/Altars/Gods/convertaltar.rsi
+    state: convertaltar
+  - type: RatvarAltar
+
+# Herald's Beacon - porting the ss220.space RU wiki's passive energy/healing structure. Placed by
+# ActionRatvarPlaceBeacon for 6 brass sheets; ticks energy into the cult's shared pool and heals nearby
+# servants (Content.Server._Sunset.Ratvar.RatvarServantSystem.UpdateBeacons).
+- type: entity
+  parent: BaseStructure
+  id: RatvarHeraldsBeacon
+  name: herald's beacon
+  description: A brass pillar, humming faintly with stored power.
+  components:
+  - type: Sprite
+    sprite: _Sunset/Ratvar/beacon.rsi
+    state: icon
+    color: "#be8700"
+  - type: Anchorable
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 60
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.4,-0.4,0.4,0.4"
+        density: 40
+        mask:
+        - TableMask
+        layer:
+        - TableLayer
+  - type: RatvarHeraldsBeacon
+
+# Ratvar's Workshop - porting the RU wiki's endgame chain: interact to craft a one-time Strange Shard
+# (1 brass, 500 energy, 15 sec). Reuses the beacon sprite with a different tint since no dedicated
+# Workshop sprite exists upstream.
+- type: entity
+  parent: BaseStructure
+  id: RatvarWorkshop
+  name: Ratvar's workshop
+  description: A brass workbench cluttered with half-finished clockwork components.
+  components:
+  - type: Sprite
+    sprite: _Sunset/Ratvar/workshop.rsi
+    state: icon
+    color: "#5c3d0d"
+  - type: Anchorable
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 80
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.4,-0.4,0.4,0.4"
+        density: 40
+        mask:
+        - TableMask
+        layer:
+        - TableLayer
+  - type: RatvarWorkshop
+
+# The Strange Shard - porting the RU wiki's one-time crystal used to begin the final rite. Reuses the
+# vanilla mining crystal shard sprite.
+- type: entity
+  parent: BaseItem
+  id: RatvarStrangeShard
+  name: strange shard
+  description: A crystalline shard humming with the promise of judgement. It feels warm to the touch.
+  components:
+  - type: Sprite
+    sprite: Objects/Materials/Shards/crystal.rsi
+    state: shard1
+    color: "#be8700"
+  - type: Item
+    size: Small
+    sprite: Objects/Materials/Shards/crystal.rsi
+  - type: RatvarStrangeShard
+
+# Enchanted gear - porting the ss220.space RU wiki's craftable armor/weapon set. Armor coefficients are
+# converted from the wiki's "resists X%" figures (e.g. "40% melee" -> 0.6 Blunt/Slash coefficient).
+# Sprites still live under _Sunset/Cult/Clothing (imported before the Nar'Sie/Ratvar split was sorted
+# out) - only the prototype definitions moved here.
+
+- type: entity
+  parent: [ClothingHandsBase, BaseRatvarCraftable]
+  id: ClothingHandsGauntletsClockwork
+  name: brass gauntlets
+  description: Interlocking brass plates that hum faintly with clockwork energy.
+  components:
+  - type: Sprite
+    sprite: _Sunset/Cult/Clothing/gauntlets.rsi
+  - type: Clothing
+    sprite: _Sunset/Cult/Clothing/gauntlets.rsi
+    slots: [gloves]
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.5
+        Heat: 0.7
+
+- type: entity
+  parent: [ClothingShoesBase, BaseRatvarCraftable]
+  id: ClothingShoesTreadsClockwork
+  name: brass treads
+  description: Heavy brass footwear that never quite seems to touch the ground.
+  components:
+  - type: Sprite
+    sprite: _Sunset/Cult/Clothing/treads.rsi
+  - type: Clothing
+    sprite: _Sunset/Cult/Clothing/treads.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Piercing: 0.85
+
+- type: entity
+  parent: [ClothingHeadBase, BaseRatvarCraftable]
+  id: ClothingHeadHelmetClockwork
+  name: brass helm
+  description: An ornate brass helm etched with gears and unreadable script.
+  components:
+  - type: Sprite
+    sprite: _Sunset/Cult/Clothing/helmet.rsi
+  - type: Clothing
+    sprite: _Sunset/Cult/Clothing/helmet.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.7
+        Slash: 0.7
+        Piercing: 0.75
+        Heat: 0.8
+
+- type: entity
+  parent: [ClothingOuterBase, BaseRatvarCraftable]
+  id: ClothingOuterCuirassClockwork
+  name: brass cuirass
+  description: A suit of interlocking brass plating worn by the faithful of Ratvar.
+  components:
+  - type: Sprite
+    sprite: _Sunset/Cult/Clothing/cuirass.rsi
+  - type: Clothing
+    sprite: _Sunset/Cult/Clothing/cuirass.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.5
+        Slash: 0.5
+        Piercing: 0.6
+        Heat: 0.5
+
+# The Ratvarian Spear - porting the ss220.space RU wiki's signature weapon (10/20/35 damage depending on
+# grip/throw in the original; simplified to a flat value here since this fork has no 1h/2h damage split
+# outside of Wieldable, which the spear doesn't need to feel worth crafting).
+- type: entity
+  parent: [BaseItem, BaseRatvarCraftable]
+  id: RatvarianSpear
+  name: Ratvarian spear
+  description: A brass spear, its haft etched with clockwork script.
+  components:
+  - type: Sharp
+  - type: Sprite
+    sprite: _Sunset/Ratvar/ratvarian_spear.rsi
+    state: icon
+  - type: Item
+    size: Normal
+    sprite: _Sunset/Ratvar/ratvarian_spear.rsi
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    attackRate: 1
+    damage:
+      types:
+        Piercing: 18
+    soundHit:
+      collection: MetalThud
+
+# Abstract base for every RatvarCraftGear result item - just documents intent, no components of its own
+# (the craft cost/time lives on the *action* prototype in actions.yml, not the item).
+- type: entity
+  abstract: true
+  id: BaseRatvarCraftable

@@ -240,6 +240,40 @@
   - SunSetBonusAntagsRule # 🌇Sunset🌇
 
 - type: gamePreset
+  id: RatvarCult
+  alias:
+    - cult
+    - ratvarcult
+    - narsiecult
+  name: ratvar-cult-title
+  description: ratvar-cult-description
+  minPlayers: 10 # 🌇Sunset🌇 - matches RatvarCult rule's GameRule.minPlayers
+  showInVote: true
+  rules:
+  - RatvarCult
+  - SunSetCalmStationEventScheduler # 🌇Sunset🌇
+  - SpaceTrafficControlEventScheduler
+  - BasicRoundstartVariation
+  - SunSetBonusAntagsRule # 🌇Sunset🌇
+
+- type: gamePreset
+  id: RatvarServants
+  alias:
+    - servants
+    - ratvarservants
+    - clockcult
+  name: ratvar-servants-title
+  description: ratvar-servants-description
+  minPlayers: 10 # 🌇Sunset🌇 - matches RatvarServantRule's GameRule.minPlayers
+  showInVote: true
+  rules:
+  - RatvarServantRule
+  - SunSetCalmStationEventScheduler # 🌇Sunset🌇
+  - SpaceTrafficControlEventScheduler
+  - BasicRoundstartVariation
+  - SunSetBonusAntagsRule # 🌇Sunset🌇
+
+- type: gamePreset
   id: Revolutionary
   alias:
     - rev

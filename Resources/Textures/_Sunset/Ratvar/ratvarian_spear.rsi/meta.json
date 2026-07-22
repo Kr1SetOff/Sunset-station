@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from tgstation (ratvarian_spear, Servants of Ratvar) at https://github.com/tgstation/tgstation, converted from DMI to RSI. World icon derived from the south-facing inhand frame (no standalone world-icon sprite exists upstream for this item).",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "icon"
+    },
+    {
+      "name": "inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "inhand-right",
+      "directions": 4
+    }
+  ]
+}

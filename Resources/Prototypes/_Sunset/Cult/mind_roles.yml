@@ -1,0 +1,25 @@
+# 🌇Sunset🌇 - Cult of Nar'Sie mind roles (internal ids still say "Ratvar" - see the TODO note in
+# Content.Server._Sunset.Cult.RatvarCultSystem), mirroring _Starlight/CosmicCult/mind_roles.yml's
+# pattern.
+
+- type: entity
+  parent: BaseMindRoleAntag
+  id: MindRoleRatvarCultist
+  name: Nar'Sie Cultist Role
+  components:
+  - type: MindRole
+    antagPrototype: RatvarCultist
+    subtype: role-subtype-cultist
+    exclusiveAntag: true
+    roleType: TeamAntagonist
+
+- type: entity
+  parent: BaseMindRoleAntag
+  id: MindRoleRatvarCultLeader
+  name: Nar'Sie Cult Leader Role
+  components:
+  - type: MindRole
+    antagPrototype: RatvarCultLeader
+    subtype: role-subtype-ratvar-cult-leader
+    exclusiveAntag: true
+    roleType: TeamAntagonist

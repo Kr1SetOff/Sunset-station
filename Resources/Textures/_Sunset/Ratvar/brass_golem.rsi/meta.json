@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from tgstation (golem_base, mob/human/species/golems.dmi) at https://github.com/tgstation/tgstation, converted from DMI to RSI. Recolored in-game via Sprite color tint for the Brass Golem construct - no dedicated clockwork construct body sprite exists upstream.",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "icon",
+      "directions": 4
+    }
+  ]
+}

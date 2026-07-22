@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from tgstation at commit https://github.com/tgstation/tgstation/blob/156beffc6222d20bc3449a051e0a6bb71e23ab12/icons/mob/actions/actions_cult.dmi",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "cult_mark"
+    },
+    {
+      "name": "cult_comms"
+    },
+    {
+      "name": "telerune"
+    },
+    {
+      "name": "draw"
+    },
+    {
+      "name": "cultforcewall"
+    },
+    {
+      "name": "tele"
+    },
+    {
+      "name": "cultfist"
+    },
+    {
+      "name": "revive"
+    },
+    {
+      "name": "horror"
+    },
+    {
+      "name": "carve"
+    },
+    {
+      "name": "hand"
+    },
+    {
+      "name": "emp"
+    },
+    {
+      "name": "dagger"
+    }
+  ]
+}

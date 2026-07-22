@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "stun/teleport/heal taken from tgstation actions_cult.dmi; midas from weapons/guns/magic.dmi (midas_hand); beacon from obj/machines/beacon.dmi (yellowbeacon) - all at https://github.com/tgstation/tgstation commit 156beffc6222d20bc3449a051e0a6bb71e23ab12",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "stun"
+    },
+    {
+      "name": "teleport"
+    },
+    {
+      "name": "heal"
+    },
+    {
+      "name": "midas"
+    },
+    {
+      "name": "beacon"
+    }
+  ]
+}

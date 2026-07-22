@@ -1,0 +1,65 @@
+# 🌇Sunset🌇 - Cult of Ratvar: standalone game mode, mirrors Nukeops' round-start
+# leader-plus-squad AntagSelection pattern (Resources/Prototypes/GameRules/roundstart.yml) rather than
+# Cosmic Cult's in-round steward vote, since the ask was specifically "pick a head cultist at round
+# start, like Nukeops' commander."
+
+- type: entity
+  parent: BaseGameRule
+  id: RatvarCult
+  components:
+  - type: GameRule
+    minPlayers: 10
+  - type: RatvarCultRule
+  - type: AntagObjectives
+    objectives:
+    - RatvarCultConvertObjective
+    - RatvarCultSurviveObjective
+  - type: AntagSelection
+    selectionTime: PrePlayerSpawn
+    definitions:
+    - prefRoles: [ RatvarCultLeader ]
+      fallbackRoles: [ RatvarCultist ]
+      startingGear: RatvarCultLeaderGear
+      mindRoles:
+      - MindRoleRatvarCultLeader
+      components:
+      - type: RatvarCultist
+      - type: RatvarCultLeader
+      - type: IntrinsicRadioReceiver
+      - type: ActiveRadio
+        channels: [ RatvarCult ]
+      - type: ActionGrant
+        actions:
+        - ActionRatvarCultConvert
+        - ActionRatvarCultCommune
+        - ActionRatvarCultScribeSummon
+        - ActionRatvarCultScribeWall
+        - ActionRatvarCultScribeBloodBoil
+        - ActionRatvarCultScribeTeleport
+        - ActionRatvarCultScribeRaiseDead
+        - ActionRatvarCultScribeApocalypse
+        - ActionRatvarCultPrepareBloodMagic
+    - prefRoles: [ RatvarCultist ]
+      fallbackRoles: [ RatvarCultLeader ]
+      max: 5
+      playerRatio: 10
+      startingGear: RatvarCultistGear
+      mindRoles:
+      - MindRoleRatvarCultist
+      components:
+      - type: RatvarCultist
+      - type: IntrinsicRadioReceiver
+      - type: ActiveRadio
+        channels: [ RatvarCult ]
+      - type: ActionGrant
+        actions:
+        - ActionRatvarCultConvert
+        - ActionRatvarCultCommune
+        - ActionRatvarCultScribeWall
+        - ActionRatvarCultScribeBloodBoil
+        - ActionRatvarCultScribeTeleport
+        - ActionRatvarCultScribeRaiseDead
+        - ActionRatvarCultScribeApocalypse
+        - ActionRatvarCultPrepareBloodMagic
+  - type: DynamicRuleCost
+    cost: 200
