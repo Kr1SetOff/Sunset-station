@@ -48,6 +48,7 @@
     radius: 1.2
     energy: 0.8
     color: "#aa1111"
+  - type: NightVision
 
 # tg: 80 HP, tiny, ventcrawler, bite 12-14, the fast sneaky stage.
 - type: entity

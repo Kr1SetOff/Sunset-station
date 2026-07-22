@@ -8,6 +8,7 @@ using Content.Shared._Sunset.Voidwalker;
 using Content.Shared.Body.Systems;
 using Content.Shared.CombatMode.Pacification;
 using Content.Shared.Damage;
+using Content.Shared.Damage.Components;
 using Content.Shared.Damage.Systems;
 using Content.Server.Electrocution;
 using Content.Shared.DoAfter;
@@ -184,7 +185,7 @@ public sealed class VoidwalkerSystem : SharedVoidwalkerSystem
         if (args.Handled || !TryComp<MobStateComponent>(args.Target, out _))
             return;
 
-        if (!_interaction.InRangeUnobstructed(ent.Owner, args.Target, range: 9f))
+        if (!_interaction.InRangeUnobstructed(ent.Owner, args.Target, range: 12f))
         {
             _popup.PopupClient(Loc.GetString("voidwalker-unsettle-no-los"), ent, ent);
             return;
@@ -209,7 +210,13 @@ public sealed class VoidwalkerSystem : SharedVoidwalkerSystem
             return;
 
         _stun.TryAddParalyzeDuration(target, TimeSpan.FromSeconds(2));
-        _stamina.TryTakeStamina(target, 80f);
+
+        // Sunset: TryTakeStamina deliberately stays under CritThreshold, so the old melee-range
+        // Unsettle never actually incapacitated anyone. Now that it's a ranged, long-cooldown
+        // hard-control, push it straight into a real stamina crit - ignoreResist so armor/traits
+        // can't shrug off the one hit that's supposed to guarantee it.
+        if (TryComp<StaminaComponent>(target, out var stamina))
+            _stamina.TakeStaminaDamage(target, stamina.CritThreshold, stamina, ignoreResist: true);
 
         _popup.PopupEntity(Loc.GetString("voidwalker-unsettle-success-self"), target, target, PopupType.LargeCaution);
         _popup.PopupEntity(Loc.GetString("voidwalker-unsettle-success-others", ("target", target)), target, Filter.PvsExcept(target), true, PopupType.MediumCaution);
