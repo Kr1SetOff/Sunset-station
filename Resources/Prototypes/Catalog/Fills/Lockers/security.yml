@@ -36,6 +36,7 @@
     - id: Flash
     - id: ClothingEyesGlassesSecurity
 #    - id: ClothingHandsGlovesCombat # Starlight, they spawn with these now.
+    - id: ClothingHandsGlovesKravMaga
     - id: ClothingShoesBootsJack
     - id: ClothingOuterCoatWarden
     - id: ClothingOuterWinterWarden

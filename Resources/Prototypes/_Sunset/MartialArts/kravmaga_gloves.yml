@@ -1,0 +1,18 @@
+# 🌇Sunset🌇 - Krav Maga gloves for the Warden's locker. Sprite ported from Goobstation
+# (mini-station-goob), see meta.json for the full attribution chain back to Paradise. Grants the same
+# CQC moveset as the Krav Maga implant (_Sunset/Implants/kravmaga_implant.yml) for as long as they're
+# worn, using the existing GrantMartialArtOnEquip framework (see judo_belt.yml for the equivalent
+# pattern with Corporate Judo).
+
+- type: entity
+  parent: [ ClothingHandsGlovesCombat, BaseSecurityContraband ]
+  id: ClothingHandsGlovesKravMaga
+  name: перчатки крав-мага
+  description: Тактические перчатки со встроенными нанотренажёрами, обучающими крав-мага, пока их носишь.
+  components:
+  - type: Sprite
+    sprite: _Sunset/Clothing/Hands/Gloves/kravmaga.rsi
+  - type: Clothing
+    sprite: _Sunset/Clothing/Hands/Gloves/kravmaga.rsi
+  - type: GrantMartialArtOnEquip
+    style: CQC
