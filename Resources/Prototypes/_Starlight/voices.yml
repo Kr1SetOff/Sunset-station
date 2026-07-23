@@ -26,30 +26,12 @@
   license: Fan-made RVC voice conversion, non-commercial use only
 
 - type: voice
-  id: meepo
-  voice: 3004
-  name: tts-voice-name-3004
-  sex: Male
-  silicon: false
-  copyright: Meepo (Dota 2) - RVC voice model
-  license: Fan-made RVC voice conversion, non-commercial use only
-
-- type: voice
   id: laraCroft
   voice: 3008
   name: tts-voice-name-3008
   sex: Female
   silicon: false
   copyright: Lara Croft (Tomb Raider) - RVC voice model
-  license: Fan-made RVC voice conversion, non-commercial use only
-
-- type: voice
-  id: nora
-  voice: 3009
-  name: tts-voice-name-3009
-  sex: Female
-  silicon: false
-  copyright: Nora - RVC voice model
   license: Fan-made RVC voice conversion, non-commercial use only
 
 - type: voice
@@ -77,15 +59,6 @@
   sex: Male
   silicon: false
   copyright: Sidorovich (S.T.A.L.K.E.R.) - RVC voice model
-  license: Fan-made RVC voice conversion, non-commercial use only
-
-- type: voice
-  id: claptrap
-  voice: 3017
-  name: tts-voice-name-3017
-  sex: Unsexed
-  silicon: true
-  copyright: Claptrap (Borderlands) - RVC voice model
   license: Fan-made RVC voice conversion, non-commercial use only
 
 - type: voice
@@ -143,42 +116,6 @@
   license: Fan-made RVC voice conversion, non-commercial use only
 
 - type: voice
-  id: peon
-  voice: 3024
-  name: tts-voice-name-3024
-  sex: Male
-  silicon: false
-  copyright: Peon (Warcraft) - RVC voice model
-  license: Fan-made RVC voice conversion, non-commercial use only
-
-- type: voice
-  id: mrKrabs
-  voice: 3025
-  name: tts-voice-name-3025
-  sex: Male
-  silicon: false
-  copyright: Mr. Krabs (SpongeBob SquarePants) - RVC voice model
-  license: Fan-made RVC voice conversion, non-commercial use only
-
-- type: voice
-  id: skipper
-  voice: 3026
-  name: tts-voice-name-3026
-  sex: Male
-  silicon: false
-  copyright: Skipper (Penguins of Madagascar) - RVC voice model
-  license: Fan-made RVC voice conversion, non-commercial use only
-
-- type: voice
-  id: sulley
-  voice: 3027
-  name: tts-voice-name-3027
-  sex: Male
-  silicon: false
-  copyright: Sulley (Monsters, Inc.) - RVC voice model
-  license: Fan-made RVC voice conversion, non-commercial use only
-
-- type: voice
   id: judyHopps
   voice: 3028
   name: tts-voice-name-3028
@@ -206,15 +143,6 @@
   license: Fan-made RVC voice conversion, non-commercial use only
 
 - type: voice
-  id: nancyDrew
-  voice: 3031
-  name: tts-voice-name-3031
-  sex: Female
-  silicon: false
-  copyright: Nancy Drew - RVC voice model
-  license: Fan-made RVC voice conversion, non-commercial use only
-
-- type: voice
   id: sakura
   voice: 3032
   name: tts-voice-name-3032
@@ -233,51 +161,6 @@
   license: Fan-made RVC voice conversion, non-commercial use only
 
 - type: voice
-  id: nagatoro
-  voice: 3034
-  name: tts-voice-name-3034
-  sex: Female
-  silicon: false
-  copyright: Nagatoro (Don't Toy with Me, Miss Nagatoro) - RVC voice model
-  license: Fan-made RVC voice conversion, non-commercial use only
-
-- type: voice
-  id: senko
-  voice: 3035
-  name: tts-voice-name-3035
-  sex: Female
-  silicon: false
-  copyright: Senko (The Helpful Fox Senko-san) - RVC voice model
-  license: Fan-made RVC voice conversion, non-commercial use only
-
-- type: voice
-  id: monica
-  voice: 3036
-  name: tts-voice-name-3036
-  sex: Female
-  silicon: false
-  copyright: Monika (Doki Doki Literature Club) - RVC voice model
-  license: Fan-made RVC voice conversion, non-commercial use only
-
-- type: voice
-  id: minami
-  voice: 3037
-  name: tts-voice-name-3037
-  sex: Female
-  silicon: false
-  copyright: Minami - RVC voice model
-  license: Fan-made RVC voice conversion, non-commercial use only
-
-- type: voice
-  id: turret
-  voice: 3038
-  name: tts-voice-name-3038
-  sex: Unsexed
-  silicon: true
-  copyright: Turret (Portal) - RVC voice model
-  license: Fan-made RVC voice conversion, non-commercial use only
-
-- type: voice
   id: luntik
   voice: 3039
   name: tts-voice-name-3039
@@ -287,57 +170,12 @@
   license: Fan-made RVC voice conversion, non-commercial use only
 
 - type: voice
-  id: nolik
-  voice: 3040
-  name: tts-voice-name-3040
-  sex: Male
-  silicon: false
-  copyright: Nolik (Fixiki) - RVC voice model
-  license: Fan-made RVC voice conversion, non-commercial use only
-
-- type: voice
-  id: billCipher
-  voice: 3041
-  name: tts-voice-name-3041
-  sex: Male
-  silicon: false
-  copyright: Bill Cipher (Gravity Falls) - RVC voice model
-  license: Fan-made RVC voice conversion, non-commercial use only
-
-- type: voice
-  id: mammothCalf
-  voice: 3042
-  name: tts-voice-name-3042
-  sex: Unsexed
-  silicon: false
-  copyright: Mammoth Calf (Mama for a Baby Mammoth) - RVC voice model
-  license: Fan-made RVC voice conversion, non-commercial use only
-
-- type: voice
-  id: astolfo
-  voice: 3043
-  name: tts-voice-name-3043
-  sex: Male
-  silicon: false
-  copyright: Astolfo (Fate series) - RVC voice model
-  license: Fan-made RVC voice conversion, non-commercial use only
-
-- type: voice
   id: ryuk
   voice: 3044
   name: tts-voice-name-3044
   sex: Male
   silicon: false
   copyright: Ryuk (Death Note) - RVC voice model
-  license: Fan-made RVC voice conversion, non-commercial use only
-
-- type: voice
-  id: lLawliet
-  voice: 3045
-  name: tts-voice-name-3045
-  sex: Male
-  silicon: false
-  copyright: L (Death Note) - RVC voice model
   license: Fan-made RVC voice conversion, non-commercial use only
 
 - type: voice
