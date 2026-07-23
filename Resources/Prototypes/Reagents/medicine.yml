@@ -1571,10 +1571,6 @@
               Heat: 5
         - !type:Emote
           emote: Scream
-        # 🌇Sunset🌇 - no-op on anything but Servants of Ratvar (RatvarServantComponent gate on
-        # RatvarDeconvertEntityEffectSystem); minScale is the "40+ units" splash threshold from the RU wiki.
-        - !type:RatvarDeconvert
-          minScale: 40
     Extinguish:
       methods: [ Touch ]
       effects:

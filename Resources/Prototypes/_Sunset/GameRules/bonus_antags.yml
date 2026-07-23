@@ -49,3 +49,15 @@
       prob: 0.5
     - id: Spy
       prob: 0.35
+
+# 🌇Sunset🌇 - Blood Cult не должен примешивать ванильных бонус-антагонистов (Дьявол/Ниндзя/
+# Светлоглазый/MalfAI) - в раунде культа должны быть только культисты и, опционально, воры,
+# как и просили.
+- type: entity
+  parent: BaseGameRule
+  id: SunSetCultBonusAntagsRule
+  components:
+  - type: SubGamemodes
+    rules:
+    - id: Thief
+      prob: 0.5
