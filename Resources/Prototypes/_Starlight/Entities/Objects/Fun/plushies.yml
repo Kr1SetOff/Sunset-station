@@ -73,7 +73,7 @@
       - type: DatasetVocalizer
         dataset: PlushiesMorgana
       - type: TextToSpeech
-        voice: nora
+        voice: defaultVoice
 
 - type: entity
   parent: BaseResomiPlushie
@@ -97,7 +97,7 @@
       - type: DatasetVocalizer
         dataset: PlushiesMorgana
       - type: TextToSpeech
-        voice: nora
+        voice: defaultVoice
 
 - type: entity
   parent: BaseResomiPlushie
@@ -173,7 +173,7 @@
       - type: DatasetVocalizer
         dataset: PlushiesKiller
       - type: TextToSpeech
-        voice: billCipher
+        voice: defaultVoice
 
 - type: entity
   parent: PlushieHuman
@@ -268,7 +268,7 @@
       - type: DatasetVocalizer
         dataset: PlushiesVanilla
       - type: TextToSpeech
-        voice: senko
+        voice: defaultVoice
 #end region
 
 - type: entity
@@ -1427,7 +1427,7 @@
         - type: DatasetVocalizer
           dataset: PlushiesRomero
         - type: TextToSpeech
-          voice: mrKrabs
+          voice: defaultVoice
 
 - type: entity
   parent: PlushieHuman
@@ -1451,7 +1451,7 @@
         - type: DatasetVocalizer
           dataset: PlushiesPoley
         - type: TextToSpeech
-          voice: skipper
+          voice: defaultVoice
 
 - type: entity
   parent: BasePlushie
@@ -1526,7 +1526,7 @@
       - type: DatasetVocalizer
         dataset: PlushiesGalio
       - type: TextToSpeech
-        voice: sulley
+        voice: defaultVoice
 
 - type: entity
   parent: BaseVulpkaninPlushie
@@ -1668,7 +1668,7 @@
       - type: DatasetVocalizer
         dataset: PlushiesRhea
       - type: TextToSpeech
-        voice: monica
+        voice: defaultVoice
 
 - type: entity
   parent: BaseResomiPlushie # Temporary until I make a Avali plushie base...... fml
@@ -1691,7 +1691,7 @@
       - type: DatasetVocalizer
         dataset: PlushiesMalachi
       - type: TextToSpeech
-        voice: lLawliet
+        voice: defaultVoice
 
 - type: entity
   parent: BaseResomiPlushie
@@ -1714,7 +1714,7 @@
       - type: DatasetVocalizer
         dataset: PlushiesRemiie
       - type: TextToSpeech
-        voice: minami
+        voice: defaultVoice
 
 - type: entity
   parent: BaseFelionoidPlushie
@@ -1737,7 +1737,7 @@
       - type: DatasetVocalizer
         dataset: PlushiesBrighteyes
       - type: TextToSpeech
-        voice: astolfo
+        voice: defaultVoice
   - type: EmitSoundOnUse
     sound:
       path: /Audio/Animals/cat_meow.ogg
@@ -1780,7 +1780,7 @@
       - type: DatasetVocalizer
         dataset: PlushiesNebula
       - type: TextToSpeech
-        voice: turret
+        voice: defaultVoice
 
 - type: entity
   parent: BaseVulpkaninPlushie
@@ -1804,7 +1804,7 @@
     - type: DatasetVocalizer
       dataset: PlushiesKilla
     - type: TextToSpeech
-      voice: nolik
+      voice: defaultVoice
 
 - type: entity
   parent: BasePlushie
@@ -1892,7 +1892,7 @@
         - type: DatasetVocalizer
           dataset: PlushiesEina
         - type: TextToSpeech
-          voice: nagatoro
+          voice: defaultVoice
 
 - type: entity
   parent: BaseResomiPlushie

@@ -296,7 +296,7 @@
     baseWalkSpeed: 0
     baseSprintSpeed: 0
   - type: TextToSpeech
-    voice: billCipher
+    voice: defaultVoice
   - type: Sprite
     sprite: _Starlight/Clothing/Neck/Ties/disco.rsi
   - type: Clothing
