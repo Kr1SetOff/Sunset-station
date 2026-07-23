@@ -1,5 +1,6 @@
 using System.Diagnostics.CodeAnalysis;
 using Content.Shared._Starlight.Eye.Blinding.Components;
+using Content.Shared._Starlight.Medical.Body.Part;
 using Content.Shared.Body.Components;
 using Content.Shared.Body.Organ;
 using Content.Shared.Body.Systems;
@@ -42,8 +43,15 @@ public sealed partial class ChildBlockVisionSystem : EntitySystem
             var totalOrgans = _bodySystem.GetBodyOrganEntityComps<OrganComponent>((ent.Owner, body));
             var eyes = _bodySystem.GetBodyOrganEntityComps<OrganEyesComponent>((ent.Owner, body));
 
-            // if we got organs but no eyes then cancel the event to blind
-            if (totalOrgans.Count > 0 && eyes.Count == 0)
+            // 🌇Sunset🌇 - only blind a body that anatomically has a head (and so a modeled eyes
+            // slot) but is missing working eyes right now - most simple critter/ghost-role bodies
+            // (rat, primate, mothroach, slime, bloodsucker, ruminant, nymph...) have no head part at
+            // all and never modeled eyes as an organ to begin with, so they shouldn't get blinded
+            // just because they happen to have some other organs (lungs/heart/etc). This was
+            // wrongly blinding every mind-transfer/ghost-role take-over into one of those bodies -
+            // full screen darkness except a small radius around the entity, exactly the classic
+            // "Blind" status visual.
+            if (totalOrgans.Count > 0 && eyes.Count == 0 && _bodySystem.BodyHasPartType(ent.Owner, BodyPartType.Head, body))
             {
                 args.Cancel();
                 return;

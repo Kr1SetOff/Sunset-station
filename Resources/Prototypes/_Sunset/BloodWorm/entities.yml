@@ -25,6 +25,8 @@
   - type: MobState
   - type: Deathgasp
   - type: CombatMode
+  - type: Body
+    prototype: BloodWorm
   - type: Damageable
     damageContainer: Biological
     damageModifierSet: SunsetBloodWorm
