@@ -131,7 +131,10 @@ public sealed partial class TTSSystem : EntitySystem
                 ? GetOrAssignVoice(GetEntity(args.SpeakerUid.Value), fallbackVoice: DefaultAnnounceVoice)
                 : DefaultAnnounceVoice;
 
-            await GenerateAndStream(TTSType.Announcement, voice, text, filter, TTSEffect.Megaphone, args.AnnouncementSound);
+            // Don't forward args.AnnouncementSound as a chime here: ChatSystem's Dispatch*Announcement
+            // methods already broadcast that exact sound once via _audio.PlayGlobal before raising this
+            // event. Passing it again made the client replay it a second time as a TTS pre-roll chime.
+            await GenerateAndStream(TTSType.Announcement, voice, text, filter, TTSEffect.Megaphone);
         }
         catch (TaskCanceledException ex)
         {
