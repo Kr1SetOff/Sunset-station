@@ -7,6 +7,7 @@ using Content.Shared.Singularity.Components;
 using Content.Shared.Singularity.EntitySystems;
 using Content.Shared.Station.Components;
 using Content.Shared.Tag;
+using Robust.Server.Physics;
 using Robust.Shared.Containers;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
@@ -34,9 +35,21 @@ public sealed partial class EventHorizonSystem : SharedEventHorizonSystem
     [Dependency] private SharedTransformSystem _xformSystem = default!;
     [Dependency] private SharedMapSystem _mapSystem = default!;
     [Dependency] private TagSystem _tagSystem = default!;
+    [Dependency] private GridFixtureSystem _gridFixtures = default!;
     #endregion Dependencies
 
     private static readonly ProtoId<TagPrototype> HighRiskItemTag = "HighRiskItem";
+
+    /// <summary>
+    /// Event horizons (singularities) can eat several tiles a second while roaming a station.
+    /// Letting every single tile removal trigger the engine's grid-split connectivity check
+    /// tanks server performance on large grids, so while an event horizon is actively eating tiles
+    /// out of a grid, split checks on that grid are deferred and only run at most this often instead.
+    /// Explosions, meteors, etc. are unaffected since they don't touch this cooldown.
+    /// </summary>
+    private static readonly TimeSpan GridSplitCheckCooldown = TimeSpan.FromSeconds(5);
+
+    private readonly Dictionary<EntityUid, TimeSpan> _nextGridSplitCheck = new();
 
     private EntityQuery<PhysicsComponent> _physicsQuery;
 
@@ -257,7 +270,28 @@ public sealed partial class EventHorizonSystem : SharedEventHorizonSystem
 
         var ev = new TilesConsumedByEventHorizonEvent(tiles, gridId, grid, hungry, eventHorizon);
         RaiseLocalEvent(hungry, ref ev);
+
+        // Eating a station one tile at a time would otherwise trigger the engine's grid-split
+        // connectivity check on every single tile removed, which is very expensive on large grids.
+        // Suppress that automatic per-tile check here and instead run one throttled, full check
+        // below so the grid still eventually splits apart if the event horizon disconnected part
+        // of it. Explosions, meteors, etc. are unaffected since they don't touch CanSplit here.
+        var wasSplittable = grid.CanSplit;
+        if (wasSplittable)
+            grid.CanSplit = false;
+
         _mapSystem.SetTiles(gridId, grid, tiles);
+
+        if (!wasSplittable)
+            return;
+
+        grid.CanSplit = true;
+        var curTime = _timing.CurTime;
+        if (!_nextGridSplitCheck.TryGetValue(gridId, out var nextCheck) || curTime >= nextCheck)
+        {
+            _gridFixtures.CheckSplits(gridId);
+            _nextGridSplitCheck[gridId] = curTime + GridSplitCheckCooldown;
+        }
     }
 
     /// <summary>
