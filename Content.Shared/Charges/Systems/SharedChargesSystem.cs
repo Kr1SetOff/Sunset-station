@@ -1,3 +1,4 @@
+using Content.Shared.Actions;
 using Content.Shared.Actions.Events;
 using Content.Shared.Charges.Components;
 using Content.Shared.Examine;
@@ -10,6 +11,7 @@ namespace Content.Shared.Charges.Systems;
 public abstract partial class SharedChargesSystem : EntitySystem
 {
     [Dependency] protected IGameTiming _timing = default!;
+    [Dependency] private readonly SharedActionsSystem _actionsSystem = default!;
 
     /*
      * Despite what a bunch of systems do you don't need to continuously tick linear number updates and can just derive it easily.
@@ -69,6 +71,14 @@ public abstract partial class SharedChargesSystem : EntitySystem
 
     private void OnChargesPerformed(Entity<LimitedChargesComponent> ent, ref ActionPerformedEvent args)
     {
+        // 🌇Sunset🌇 - ported from sunrise-station: actions marked DeleteWithoutCharges remove
+        // themselves from the action bar on their last use instead of sitting there greyed out.
+        if (HasComp<DeleteWithoutChargesComponent>(ent.Owner) && ent.Comp.LastCharges - 1 <= 0)
+        {
+            _actionsSystem.RemoveAction(args.Performer, ent.Owner);
+            return;
+        }
+
         AddCharges((ent.Owner, ent.Comp), -1);
     }
 

@@ -17,3 +17,20 @@
     radius: 5
     power: 2
     color: "#E97E0C"
+
+# 🌇Sunset🌇 - BloodCult port: blood-red variant for CultOuterArmor's EnergyDomeGenerator.
+- type: entity
+  parent: EnergyDomeBase
+  id: EnergyDomeCult
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Effects/EnergyDome/energydome_small.rsi
+    layers:
+    - state: small
+      color: "#8b0000"
+  - type: PointLight
+    enabled: true
+    radius: 5
+    power: 2
+    color: "#8b0000"

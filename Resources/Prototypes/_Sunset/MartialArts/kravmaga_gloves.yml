@@ -1,8 +1,10 @@
 # 🌇Sunset🌇 - Krav Maga gloves for the Warden's locker. Sprite ported from Goobstation
 # (mini-station-goob), see meta.json for the full attribution chain back to Paradise. Grants the same
-# CQC moveset as the Krav Maga implant (_Sunset/Implants/kravmaga_implant.yml) for as long as they're
-# worn, using the existing GrantMartialArtOnEquip framework (see judo_belt.yml for the equivalent
-# pattern with Corporate Judo).
+# real Krav Maga moveset as the Krav Maga implant (_Sunset/Implants/kravmaga_implant.yml, style:
+# KravMaga - action-primed Leg Sweep/Neck Chop/Lung Punch) for as long as they're worn, using the
+# existing GrantMartialArtOnEquip framework (see judo_belt.yml for the equivalent pattern with
+# Corporate Judo). Previously granted style: CQC by mistake - that's a completely different,
+# combo-detection-based moveset with no action icons at all, which is why the gloves looked broken.
 
 - type: entity
   parent: [ ClothingHandsGlovesCombat, BaseSecurityContraband ]
@@ -15,4 +17,4 @@
   - type: Clothing
     sprite: _Sunset/Clothing/Hands/Gloves/kravmaga.rsi
   - type: GrantMartialArtOnEquip
-    style: CQC
+    style: KravMaga

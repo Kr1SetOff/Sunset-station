@@ -10,3 +10,4 @@ collective-mind-nexus = Пользователь Nexus
 collective-mind-vampire-thrall = Раб
 collective-mind-empathy = Эмпатия
 collective-mind-xeno = Xeno
+collective-mind-blood-cult = Культ

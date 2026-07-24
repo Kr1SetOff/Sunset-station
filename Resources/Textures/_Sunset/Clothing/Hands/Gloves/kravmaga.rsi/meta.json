@@ -1,7 +1,7 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "Taken from Paradise at https://github.com/ParadiseSS13/Paradise/blob/bd91a1b962fe9bd38e346e9fafd4ebb10784fcb3/icons/mob/clothing/hands.dmi and https://github.com/ParadiseSS13/Paradise/blob/bd91a1b962fe9bd38e346e9fafd4ebb10784fcb3/icons/obj/clothing/gloves.dmi, via Goobstation at https://github.com/ministation/mini-station-goob/blob/28e2e58cb435de4b6e72689a278bfb9747848cf8/Resources/Textures/_Goobstation/Clothing/Hands/Gloves/kravgloves.rsi",
+  "copyright": "Taken from Paradise at https://github.com/ParadiseSS13/Paradise/blob/bd91a1b962fe9bd38e346e9fafd4ebb10784fcb3/icons/mob/clothing/hands.dmi and https://github.com/ParadiseSS13/Paradise/blob/bd91a1b962fe9bd38e346e9fafd4ebb10784fcb3/icons/obj/clothing/gloves.dmi, via Goobstation at https://github.com/ministation/mini-station-goob/blob/28e2e58cb435de4b6e72689a278bfb9747848cf8/Resources/Textures/_Goobstation/Clothing/Hands/Gloves/kravgloves.rsi. inhand-left/inhand-right added 🌇Sunset🌇 (reused from Clothing/Hands/Gloves/combat.rsi - upstream's own kravgloves.rsi never had them, unlike every other glove in this codebase, so the item rendered invisible while held in an active hand before being worn).",
   "size": {
     "x": 32,
     "y": 32
@@ -12,6 +12,14 @@
     },
     {
       "name": "equipped-HAND",
+      "directions": 4
+    },
+    {
+      "name": "inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "inhand-right",
       "directions": 4
     }
   ]

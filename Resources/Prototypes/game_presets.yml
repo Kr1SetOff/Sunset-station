@@ -239,39 +239,23 @@
   - BasicRoundstartVariation
   - SunSetBonusAntagsRule # 🌇Sunset🌇
 
+# 🌇Sunset🌇 - Blood Cult, ported from space-sunrise/sunrise-station (Content.Server/_Sunrise/BloodCult) -
+# replaces the old homegrown Ratvar/Nar'Sie cult systems entirely.
 - type: gamePreset
-  id: RatvarCult
+  id: BloodCultPreset
   alias:
     - cult
-    - ratvarcult
-    - narsiecult
-  name: ratvar-cult-title
-  description: ratvar-cult-description
-  minPlayers: 10 # 🌇Sunset🌇 - matches RatvarCult rule's GameRule.minPlayers
+    - bloodcult
+  name: cult-title
+  description: cult-description
+  minPlayers: 10 # matches the BloodCult game rule's GameRule.minPlayers
   showInVote: true
   rules:
-  - RatvarCult
+  - BloodCult
   - SunSetCalmStationEventScheduler # 🌇Sunset🌇
   - SpaceTrafficControlEventScheduler
   - BasicRoundstartVariation
-  - SunSetBonusAntagsRule # 🌇Sunset🌇
-
-- type: gamePreset
-  id: RatvarServants
-  alias:
-    - servants
-    - ratvarservants
-    - clockcult
-  name: ratvar-servants-title
-  description: ratvar-servants-description
-  minPlayers: 10 # 🌇Sunset🌇 - matches RatvarServantRule's GameRule.minPlayers
-  showInVote: true
-  rules:
-  - RatvarServantRule
-  - SunSetCalmStationEventScheduler # 🌇Sunset🌇
-  - SpaceTrafficControlEventScheduler
-  - BasicRoundstartVariation
-  - SunSetBonusAntagsRule # 🌇Sunset🌇
+  - SunSetCultBonusAntagsRule # 🌇Sunset🌇 - Thief only, see Resources/Prototypes/_Sunset/GameRules/bonus_antags.yml
 
 - type: gamePreset
   id: Revolutionary

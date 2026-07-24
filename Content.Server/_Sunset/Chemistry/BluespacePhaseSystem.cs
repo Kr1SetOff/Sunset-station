@@ -1,4 +1,5 @@
 using Content.Shared._Sunset.Chemistry.Components;
+using Content.Shared.Interaction.Events;
 using Content.Shared.Popups;
 using Robust.Shared.Physics;
 using Robust.Shared.Physics.Systems;
@@ -24,6 +25,14 @@ public sealed class BluespacePhaseSystem : EntitySystem
 
         SubscribeLocalEvent<BluespacePhaseComponent, ComponentStartup>(OnStartup);
         SubscribeLocalEvent<BluespacePhaseComponent, ComponentShutdown>(OnShutdown);
+        // 🌇Sunset🌇 - phasing is for slipping through walls, not for attacking from inside them: any
+        // attack attempt drops the phase immediately (also used by the Nar'Sie Wraith construct's ability).
+        SubscribeLocalEvent<BluespacePhaseComponent, AttackAttemptEvent>(OnAttackAttempt);
+    }
+
+    private void OnAttackAttempt(Entity<BluespacePhaseComponent> ent, ref AttackAttemptEvent args)
+    {
+        RemCompDeferred<BluespacePhaseComponent>(ent.Owner);
     }
 
     public override void Update(float frameTime)
