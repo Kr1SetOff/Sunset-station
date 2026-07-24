@@ -5,7 +5,6 @@
   setPreference: true
   objective: roles-antag-blood-cultist-objective
   playTimeTracker: AntagBloodCultist
-  storytellerStress: 1
 
 - type: playTimeTracker
   id: AntagBloodCultist
