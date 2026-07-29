@@ -22,7 +22,7 @@
     rules:
     - id: Thief
       prob: 0.4 #SL 0.5 -> 0.4 to account for more subgamemodes existing
-    - id: SLChangeling #Starlight lings
+    - id: Changeling #Starlight lings
       prob: 0.20 #0.4 -> 0.25 to account for more subgamemodes existing now
     - id: VampireLess # Starlight reworked
       prob: 0.20 # Starlight
@@ -43,7 +43,7 @@
     rules:
     - id: Thief
       prob: 0.42 # Starlight start, 0.5 -> 0.4 to account for more subgamemodes existing
-    - id: SLChangeling # StarlightLings
+    - id: Changeling # StarlightLings
       prob: 0.20 #0.4 -> 0.25 to account for more subgamemodes existing now
     - id: VampireLess # Reworked
       prob: 0.20
@@ -62,7 +62,7 @@
     rules:
     - id: Thief
       prob: 0.62 # Starlight. Its a tamer mode, high thief chance.
-    - id: SLChangeling # Starlight Lings
+    - id: Changeling # Starlight Lings
       prob: 0.20 # Starlight, Xenoborgs need a little bit of a distraction
     - id: VampireLess # Starlight reworked
       prob: 0.20 # Starlight, Xenoborgs need a little bit of a distraction
@@ -81,7 +81,7 @@
     rules:
     - id: Thief
       prob: 0.70 # Starlight start. Most likely
-    - id: SLChangeling # Lings
+    - id: Changeling # Lings
       prob: 0.15
     - id: VampireLess # Reworked
       prob: 0.15
@@ -312,55 +312,6 @@
       allowNonHumans: true # Starlight; we have playable non-humanoids
       mindRoles:
       - MindRoleTraitorReinforcement
-
-- type: entity
-  id: Changeling
-  parent: BaseGameRule
-  components:
-  - type: GameRule
-    minPlayers: 25
-  - type: AntagSelection
-    agentName: changeling-round-end-agent-name
-    selectionTime: IntraPlayerSpawn
-    definitions:
-    - prefRoles: [ Changeling ]
-      max: 6 # Starlight. Not a huge increase, but allows lings to actually become a force on alpha that doesn't get wiped out immediately.
-      playerRatio: 26 # Starlight. Beta now has 2 lings.
-      briefing:
-        text: changeling-role-greeting
-        color: Red
-        sound: /Audio/Ambience/Antag/changeling_start.ogg
-      components:
-      - type: ChangelingDevour
-      - type: ChangelingIdentity
-      - type: ChangelingTransform
-      - type: ActionGrant
-        actions:
-        - ActionChangelingStore
-      # TODO: Make it so the changeling gamerule changeling can inherit from the changeling store preset somehow
-      - type: Store
-        name: store-preset-name-changeling
-        categories:
-        - ChangelingAbilities
-        currencyWhitelist:
-        - ChangelingDNA
-        balance:
-          ChangelingDNA: 50
-      - type: UserInterface
-        interfaces:
-          enum.StoreUiKey.Key:
-            type: StoreBoundUserInterface
-            requireInputValidation: false
-      mindRoles:
-      - MindRoleChangeling
-      # Starlight-start
-      allowNonHumans: false # unanticipated behavior possible for non-humanoid -> humanoid lings
-      tags:
-        - CantBecomeRevolutionary
-      # Starlight-end
-  - type: AntagObjectives
-    objectives:
-    - ChangelingSurviveObjective
 
 - type: entity
   id: Revolutionary

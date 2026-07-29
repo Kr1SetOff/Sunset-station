@@ -21,8 +21,3 @@
   id: BloodEssence
   displayName: store-currency-display-blood-essence
   canWithdraw: false
-
-- type: currency
-  id: EvolutionPoint
-  displayName: store-currency-display-evolutionpoints
-  canWithdraw: false

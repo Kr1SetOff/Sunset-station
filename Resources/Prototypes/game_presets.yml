@@ -46,7 +46,7 @@
     - Xenoborgs
     - KesslerSyndromeScheduler
     - RampingStationEventScheduler
-    - SLChangeling #Starlight
+    - Changeling
     - SpaceTrafficControlEventScheduler
     - BasicRoundstartVariation
     - BasicRoundstartVariation # Starlight, ShitStation
@@ -91,7 +91,7 @@
     - BasicRoundstartVariation # Starlight, ShitStation
     - BasicRoundstartVariation # Starlight, ShitStation
     - BasicRoundstartVariation # Starlight, ShitStation
-    - SLChangeling # Starlight
+    - Changeling
     - Vampire #Starlight
     - SiliconLiberation #Starlight
     - Brighteye #Starlight

@@ -1,0 +1,57 @@
+# Ported from Goob-Station's Resources/Prototypes/_Goobstation/GameRules/roundstart.yml
+# (Changeling and CalmLing entities only - that file bundles many unrelated antags together).
+# Adapted to this fork's AntagSelectionDefinition schema, which has no chaosScore/jobBlacklist
+# fields and no ChangelingObjectiveGroups random-objective pool, and to its cost-based dynamic
+# rule weighting (DynamicRuleCost) instead of Goob-Station's own scaling.
+
+- type: entity
+  parent: BaseGameRule
+  id: Changeling
+  components:
+  - type: GameRule
+    minPlayers: 15
+  - type: ChangelingRule
+  - type: AntagObjectives
+    objectives:
+    - ChangelingSurviveObjective
+    - ChangelingStealDNAObjective
+    - ChangelingAbsorbObjective
+    - EscapeIdentityObjective
+  - type: AntagSelection
+    agentName: changeling-roundend-name
+    selectionTime: IntraPlayerSpawn
+    definitions:
+    - prefRoles: [ Changeling ]
+      max: 4
+      playerRatio: 26
+      lateJoinAdditional: true
+      allowNonHumans: false
+      multiAntagSetting: None
+      mindRoles:
+      - MindRoleChangeling
+      tags:
+        - CantBecomeRevolutionary
+  - type: DynamicRuleCost
+    cost: 75
+
+- type: entity
+  parent: Changeling
+  id: CalmLing
+  components:
+  - type: GameRule
+    minPlayers: 10
+  - type: AntagSelection
+    agentName: changeling-roundend-name
+    definitions:
+    - prefRoles: [ Changeling ]
+      max: 2
+      playerRatio: 32
+      lateJoinAdditional: true
+      allowNonHumans: false
+      multiAntagSetting: None
+      mindRoles:
+      - MindRoleChangeling
+      tags:
+        - CantBecomeRevolutionary
+  - type: DynamicRuleCost
+    cost: 60

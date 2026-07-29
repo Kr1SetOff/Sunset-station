@@ -81,8 +81,8 @@
   description: changeling-gamemode-description
   showInVote: false
   rules:
-    - SLChangeling
-    - SLChangelingLess
+    - Changeling
+    - CalmLing
     - SubGamemodesRuleNoChangelings
     - BasicStationEventScheduler
     - BasicRoundstartVariation
@@ -97,7 +97,7 @@
   showInVote: true
   minPlayers: 10 # 🌇Sunset🌇
   rules:
-    - SLChangeling
+    - Changeling
     - Traitor
     - SunSetTraitorExtrasRule # 🌇Sunset🌇
     - SunSetCalmStationEventScheduler # 🌇Sunset🌇
@@ -136,7 +136,7 @@
   showInVote: true
   minPlayers: 10 # 🌇Sunset🌇
   rules:
-    - SLChangelingLess
+    - CalmLing
     - TraitorLess
     - VampireLess
     - SunSetCalmStationEventScheduler # 🌇Sunset🌇
@@ -161,7 +161,7 @@
     - WizardDuel
     - Xenoborgs
     - RampingStationEventScheduler
-    - SLChangeling
+    - Changeling
     - SpaceTrafficControlEventScheduler
     - BasicRoundstartVariation
     - BasicRoundstartVariation
@@ -202,7 +202,7 @@
     - BasicRoundstartVariation
     - BasicRoundstartVariation
     - BasicRoundstartVariation
-    - SLChangeling
+    - Changeling
     - Vampire
     - SiliconLiberation
     - Brighteye
