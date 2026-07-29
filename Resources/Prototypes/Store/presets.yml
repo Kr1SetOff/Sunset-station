@@ -35,16 +35,9 @@
     - SpellbookUtility      #Body Swap, Lich, Teleport, Knock, Polymorph
     - SpellbookEquipment    #Battlemage Robes, Staff of Locker
     - SpellbookEvents       #Summon Weapons, Summon Ghosts
+    - SpellbookSummons      # Goobstation: Magical Lamp, Contract of Apprenticeship
+    - SpellbookSpecial      # Goobstation: Full/Semi Random spellbooks
+    - SpellbookBundles      # Goobstation: discounted spell+item bundles
     currencyWhitelist:
     - WizCoin
 
-- type: entity
-  id: StorePresetChangeling
-  abstract: true
-  components:
-  - type: Store
-    name: store-preset-name-changeling
-    categories:
-    - ChangelingAbilities
-    currencyWhitelist:
-    - ChangelingDNA

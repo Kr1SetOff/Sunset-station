@@ -1,0 +1,68 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Ported as a dependency of ClothingOuterWizardPaperReal (its parent), which is the entity
+# actually in scope. ClothingOuterWizardBase already exists in the target repo
+# (Resources/Prototypes/Entities/Clothing/OuterClothing/misc.yml).
+- type: entity
+  abstract: true
+  id: ClothingOuterWizardBaseArmor
+  suffix: Wizard Clothes
+  components:
+  - type: Armor
+    coverage: # full coverage, idk, magic
+    - Chest
+    - Groin
+    - Arm
+    - Hand
+    - Leg
+    - Foot
+    - Tail
+    - Other
+    traumaDeductions: # prevents traumas at all (kinda)
+      Dismemberment: 1
+      OrganDamage: 1
+      BoneDamage: 1
+      VeinsDamage: 1
+      NerveDamage: 1
+    modifiers:
+      coefficients:
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.6
+        Heat: 0.6
+        Radiation: 0.1
+        Caustic: 0.1
+  - type: ExplosionResistance
+    damageCoefficient: 0.25
+  - type: GroupExamine
+  - type: FireProtection
+    reduction: 1
+  - type: TemperatureProtection
+    heatingCoefficient: 0.1
+    coolingCoefficient: 0.1
+  - type: ModifyDelayedKnockdown
+    delayDelta: 3
+    knockdownTimeDelta: -3
+  - type: StaminaResistance
+    damageCoefficient: 0.5
+
+# Paper
+- type: entity
+  parent: [ClothingOuterWizardBaseArmor, ClothingOuterWizardBase]
+  id: ClothingOuterWizardPaperReal
+  name: papier-mâché robes
+  description: A robe held together by various bits of clear-tape and paste.
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Wizard/Clothing/OuterClothing/paperwizard.rsi
+  - type: Clothing
+    sprite: _Goobstation/Wizard/Clothing/OuterClothing/paperwizard.rsi
+  - type: ActionGrant
+    actions:
+    - ActionSummonStickmen
+  - type: ItemActionGrant
+    activeIfWorn: true
+    restrictedSlots:
+    - OUTERCLOTHING
+    actions:
+    - ActionSummonStickmen

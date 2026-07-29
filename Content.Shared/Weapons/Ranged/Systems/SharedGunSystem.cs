@@ -120,6 +120,7 @@ public abstract partial class SharedGunSystem : EntitySystem
         InitializeContainer();
         InitializeSolution();
         InitializeMech(); //Starlight
+        InitializeBasicHitScan(); // _Goobstation: Mutate (Hulk) laser-eyes ammo provider
 
         // Interactions
         SubscribeLocalEvent<GunComponent, GetVerbsEvent<AlternativeVerb>>(OnAltVerb);

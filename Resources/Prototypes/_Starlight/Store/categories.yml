@@ -188,19 +188,18 @@
   name: store-second-hand-items
   priority: 201
 
-# changeling
+# Wizard (Goobstation port)
+- type: storeCategory
+  id: SpellbookSummons
+  name: store-caregory-spellbook-summons
+  priority: 5
 
 - type: storeCategory
-  id: ChangelingAbilityCombat
-  name: store-ling-category-combat
-  priority: 0
+  id: SpellbookSpecial
+  name: store-caregory-spellbook-special
+  priority: 6
 
 - type: storeCategory
-  id: ChangelingAbilitySting
-  name: store-ling-category-sting
-  priority: 1
-
-- type: storeCategory
-  id: ChangelingAbilityUtility
-  name: store-ling-category-utility
-  priority: 2
+  id: SpellbookBundles
+  name: store-caregory-spellbook-bundles
+  priority: 7
