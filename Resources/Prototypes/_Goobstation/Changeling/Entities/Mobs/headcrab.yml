@@ -30,9 +30,6 @@
       50: Dead
   - type: Absorbable
   - type: NightVision # Goobstation - Nigthvision
-    color: "#808080"
-    activateSound: null
-    deactivateSound: null
   - type: MovementSpeedModifier
     baseWalkSpeed: 3
     baseSprintSpeed: 7

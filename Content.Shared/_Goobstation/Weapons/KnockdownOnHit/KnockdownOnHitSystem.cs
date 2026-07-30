@@ -27,7 +27,7 @@ public sealed class KnockdownOnHitSystem : EntitySystem
         var duration = TimeSpan.FromSeconds(ent.Comp.Duration);
         foreach (var target in args.HitEntities)
         {
-            _stun.TryKnockdown(target, duration, drop: ent.Comp.DropItems);
+            _stun.TryKnockdown(target, duration, autoStand: ent.Comp.Autostand, drop: ent.Comp.DropItems);
         }
     }
 }

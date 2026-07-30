@@ -17,3 +17,10 @@
   maxAmount: 60
   regenerationRate: -0.02 # 50 minutes until emptied by default
   startingAmount: 60
+
+- type: internalResourcesThresholds
+  id: ChangelingBiomass
+  thresholds:
+    First: [0.5, false]
+    Second: [0.25, false]
+    Third: [0.1, false]

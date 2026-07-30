@@ -13,18 +13,6 @@
     DevilsKiss: 3
 
 - type: reaction
-  id: BeastBloodLing
-  reactants:
-    Sake:
-      amount: 1
-    BloodChangeling:
-      amount: 1
-    Stimulants:
-      amount: 1
-  products:
-    BeastBlood: 2
-
-- type: reaction
   id: MeatificationLing
   impact: Low
   quantized: true
@@ -67,39 +55,6 @@
     RedMead: 2
 
 - type: reaction
-  id: MeatSynthLing
-  quantized: true
-  reactants:
-    SodiumPolyacrylate:
-      amount: 10
-    Phenol:
-      amount: 10
-    BloodChangeling:
-      amount: 10
-    Carbon:
-      amount: 10
-  products:
-    Hydroxide: 5 # frankly it's there so that this recipe appears in the guidebook at all
-  effects:
-    - !type:SpawnEntity
-      entity: FoodMeatSynth
-
-- type: reaction
-  id: StypticCrystalCreationLing
-  quantized: true
-  conserveEnergy: false
-  reactants:
-    StypticCrystalCatalyst:
-      amount: 5
-    BloodChangeling:
-      amount: 10
-    Sodium:
-      amount: 10
-  effects:
-    - !type:SpawnEntity
-      entity: ShardCrystalStyptic
-
-- type: reaction
   id: DemonsBloodLing
   requiredMixerCategories:
     - Stir
@@ -127,18 +82,6 @@
       amount: 2
   products:
     Oculine: 4
-
-- type: reaction
-  id: UnholyWaterLing
-  reactants:
-    BloodChangeling:
-      amount: 1
-    Sulfur:
-      amount: 1
-    Water:
-      amount: 1
-  products:
-    UnholyWater: 3
 
 - type: reaction
   id: NecrosolLing

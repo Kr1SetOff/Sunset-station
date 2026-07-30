@@ -16,6 +16,9 @@ public sealed partial class KnockdownOnHitComponent : Component
     [DataField, AutoNetworkedField]
     public bool DropItems = true;
 
+    [DataField, AutoNetworkedField]
+    public bool Autostand = true;
+
     /// <summary>
     /// If true, only wide (directional) attacks knock down - this fork has no heavy/windup attack
     /// concept, so wide attacks are the closest equivalent to Goob's "heavy attack".

@@ -37,10 +37,8 @@
       map: ["enum.SolutionContainerLayers.Fill"]
       visible: false
   - type: MeleeWeapon
-    canWideSwing: false
     range: 2.2
     attackRate: 0.8
-    animationRotation: -135
     wideAnimationRotation: -135
     damage:
       types:

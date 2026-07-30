@@ -94,7 +94,7 @@
       whitelist:
         components:
         - ChangelingIdentity # if they swap identities its a guarantee fail
-        - Silicon # Don't pick IPCs.
+        - BorgChassis # Don't pick IPCs.
     # Can't have multiple objectives to kill the same person.
     - !type:TargetObjectiveMindFilter
       blacklist:
@@ -154,13 +154,6 @@
   components:
   - type: StealCondition
     stealGroup: Hypospray
-
-- type: entity
-  parent: LingCMOStealObjective
-  id: LingCMORapidSyringeGunStealObjective
-  components:
-  - type: StealCondition
-    stealGroup: RapidSyringeGun
 
 ## rd
 
@@ -301,15 +294,3 @@
     stealGroup: NukeDisk
     owner: objective-condition-steal-station
 
-## misc
-
-- type: entity
-  categories: [ HideSpawnMenu ]
-  parent: ChangelingStealObjective
-  id: LingStealSupermatterSliverObjective
-  components:
-  - type: StealCondition
-    verifyMapExistence: true
-    stealGroup: SupermatterSliver
-    objectiveNoOwnerText: objective-condition-steal-smsliver-title
-    descriptionText: objective-condition-steal-smsliver-description

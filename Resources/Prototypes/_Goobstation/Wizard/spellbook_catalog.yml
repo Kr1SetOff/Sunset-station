@@ -726,8 +726,8 @@
   description: spellbook-apprentice-desc
   productEntity: ContractApprenticeship
   icon:
-    sprite: _Goobstation/Wizard/Objects/scroll.rsi
-    state: scroll2
+    sprite: Objects/Magic/magicactions.rsi
+    state: spell_default
   cost:
     WizCoin: 2
   categories:
@@ -745,8 +745,8 @@
   description: spellbook-event-dimension-shift-desc
   productEvent: !type:DimensionShiftEvent
   icon:
-    sprite: _Goobstation/Wizard/Icons/spellbook.rsi
-    state: icemoon
+    sprite: Objects/Magic/magicactions.rsi
+    state: spell_default
   cost:
     WizCoin: 0
   categories:
@@ -762,8 +762,8 @@
   description: spellbook-event-global-tile-toggle-description
   productEvent: !type:GlobalTileToggleEvent
   icon:
-    sprite: _Goobstation/Wizard/actions.rsi
-    state: tileglobal
+    sprite: Objects/Magic/magicactions.rsi
+    state: spell_default
   cost:
     WizCoin: 0
   categories:
@@ -844,8 +844,6 @@
     whitelist:
     - SpellbookMimeMalaise
   disableRefund: true
-  blockRefundListings:
-  - SpellbookMimeMalaise
 
 - type: listing
   id: SpellClownBundle
@@ -860,14 +858,10 @@
   - !type:ListingLimitedStockCondition
     stock: 1
   - !type:BuyBeforeCondition
-    whitelistRequireAll: false
     whitelist:
     - SpellbookBananaTouch
     - SpellbookCluwneCurse
   disableRefund: true
-  blockRefundListings:
-  - SpellbookBananaTouch
-  - SpellbookCluwneCurse
 
 - type: listing
   id: SpellOblivionEnforcerBundle
@@ -879,21 +873,15 @@
   categories:
   - SpellbookBundles
   conditions:
-  - !type:ListingRelativeLimitedStockCondition
-    relativeListing: SpellbookSmHalberd
+  - !type:ListingLimitedStockCondition
+    stock: 1
   disableRefund: true
-  blockRefundListings:
-  - SpellbookSmHalberd
 
 - type: listing
   id: SpellTiderBundle
   name: spellbook-tider-bundle-name
   description: spellbook-tider-bundle-desc
   productEntity: ToolboxTiderFilled
-  raiseProductEventOnUser: true
-  productEvent: !type:GrantFactionsEvent
-    factions:
-    - Assistant
   cost:
     WizCoin: 0
   categories:
@@ -905,5 +893,3 @@
     whitelist:
     - SpellbookHomingToolbox
   disableRefund: true
-  blockRefundListings:
-  - SpellbookHomingToolbox

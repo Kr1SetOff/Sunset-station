@@ -14,7 +14,7 @@
     heldPrefix: change
   - type: Gun
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_change.ogg
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_animation.ogg
   - type: BasicEntityAmmoProvider
     proto: ProjectileWabbajack
     capacity: 6
@@ -36,11 +36,11 @@
     heldPrefix: chaos
   - type: Gun
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_chaos.ogg
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_animation.ogg
       params:
         variation: 0.250
   - type: BasicEntityAmmoProvider
-    prototypes: ChaosProjectiles
+    proto: ProjectileWabbajack
     capacity: 10
     count: 10
   - type: RechargeBasicEntityAmmo

@@ -20,15 +20,6 @@
   - type: ExplosionResistance
     damageCoefficient: 0.2
   - type: Armor
-    coverage:
-    - Chest
-    - Groin
-    - Arm
-    - Hand
-    - Leg
-    - Foot
-    - Tail
-    - Other
     modifiers:
       coefficients:
         Blunt: 0.85

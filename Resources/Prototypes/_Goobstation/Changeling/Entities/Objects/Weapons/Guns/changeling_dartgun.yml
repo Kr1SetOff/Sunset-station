@@ -22,7 +22,7 @@
     resetOnHandSelected: false
     soundEmpty: null
     soundGunshot:
-      path: /Audio/_Goobstation/Weapons/Guns/Gunshots/heavy_shot_suppressed.ogg
+      path: /Audio/Weapons/Guns/Gunshots/silenced.ogg
       params:
         volume: -5
   - type: ChangelingChemicalsAmmoProvider

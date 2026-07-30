@@ -98,3 +98,13 @@ public enum ChangelingClonerState : byte
     /// </summary>
     Spent,
 }
+
+/// <summary>
+/// Appearance data key for the item's ChangelingClonerState, used by the vanilla DNA injector's
+/// GenericVisualizer entry.
+/// </summary>
+[Serializable, NetSerializable]
+public enum ChangelingClonerVisuals : byte
+{
+    State,
+}

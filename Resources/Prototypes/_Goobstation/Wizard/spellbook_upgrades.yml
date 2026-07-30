@@ -18,8 +18,8 @@
   name: spellbook-upgrade-mime-malaise-name
   description: spellbook-upgrade-mime-malaise-desc
   icon:
-    sprite: _Goobstation/Wizard/actions.rsi
-    state: mime
+    sprite: Objects/Magic/magicactions.rsi
+    state: spell_default
   cost:
     WizCoin: 1
   categories:
@@ -37,8 +37,8 @@
   name: spellbook-upgrade-cluwne-curse-name
   description: spellbook-upgrade-cluwne-curse-desc
   icon:
-    sprite: _Goobstation/Wizard/actions.rsi
-    state: cluwne
+    sprite: Objects/Magic/magicactions.rsi
+    state: spell_default
   cost:
     WizCoin: 2
   categories:
@@ -56,8 +56,8 @@
   name: spellbook-upgrade-banana-touch-name
   description: spellbook-upgrade-banana-touch-desc
   icon:
-    sprite: _Goobstation/Wizard/actions.rsi
-    state: clown
+    sprite: Objects/Magic/magicactions.rsi
+    state: spell_default
   cost:
     WizCoin: 1
   categories:
@@ -75,8 +75,8 @@
   name: spellbook-upgrade-blind-name
   description: spellbook-upgrade-blind-desc
   icon:
-    sprite: _Goobstation/Wizard/actions.rsi
-    state: blind
+    sprite: Objects/Magic/magicactions.rsi
+    state: spell_default
   cost:
     WizCoin: 1
   categories:
@@ -94,8 +94,8 @@
   name: spellbook-upgrade-mutate-name
   description: spellbook-upgrade-mutate-desc
   icon:
-    sprite: _Goobstation/Wizard/actions.rsi
-    state: mutate
+    sprite: Objects/Magic/magicactions.rsi
+    state: spell_default
   cost:
     WizCoin: 2
   categories:
@@ -113,8 +113,8 @@
   name: spellbook-upgrade-tesla-blast-name
   description: spellbook-upgrade-tesla-blast-desc
   icon:
-    sprite: _Goobstation/Wizard/actions.rsi
-    state: tesla
+    sprite: Objects/Magic/magicactions.rsi
+    state: spell_default
   cost:
     WizCoin: 1
   categories:
@@ -132,8 +132,8 @@
   name: spellbook-upgrade-lightning-bolt-name
   description: spellbook-upgrade-lightning-bolt-desc
   icon:
-    sprite: _Goobstation/Wizard/actions.rsi
-    state: lightning
+    sprite: Objects/Magic/magicactions.rsi
+    state: spell_default
   cost:
     WizCoin: 1
   categories:
@@ -151,8 +151,8 @@
   name: spellbook-upgrade-homing-toolbox-name
   description: spellbook-upgrade-homing-toolbox-desc
   icon:
-    sprite: _Goobstation/Wizard/actions.rsi
-    state: toolbox
+    sprite: Objects/Magic/magicactions.rsi
+    state: spell_default
   cost:
     WizCoin: 1
   categories:
@@ -170,8 +170,8 @@
   name: spellbook-upgrade-arcane-barrage-name
   description: spellbook-upgrade-arcane-barrage-desc
   icon:
-    sprite: _Goobstation/Wizard/actions.rsi
-    state: arcane_barrage
+    sprite: Objects/Magic/magicactions.rsi
+    state: spell_default
   cost:
     WizCoin: 2
   categories:
@@ -189,8 +189,8 @@
   name: spellbook-upgrade-lesser-summon-guns-name
   description: spellbook-upgrade-lesser-summon-guns-desc
   icon:
-    sprite: _Goobstation/Wizard/actions.rsi
-    state: bolt_action
+    sprite: Objects/Magic/magicactions.rsi
+    state: spell_default
   cost:
     WizCoin: 2
   categories:
@@ -208,8 +208,8 @@
   name: spellbook-upgrade-barnyard-name
   description: spellbook-upgrade-barnyard-desc
   icon:
-    sprite: _Goobstation/Wizard/actions.rsi
-    state: barn
+    sprite: Objects/Magic/magicactions.rsi
+    state: spell_default
   cost:
     WizCoin: 1
   categories:
@@ -227,8 +227,8 @@
   name: spellbook-upgrade-scream-for-me-name
   description: spellbook-upgrade-scream-for-me-desc
   icon:
-    sprite: _Goobstation/Wizard/actions.rsi
-    state: scream_for_me
+    sprite: Objects/Magic/magicactions.rsi
+    state: spell_default
   cost:
     WizCoin: 1
   categories:
@@ -246,8 +246,8 @@
   name: spellbook-upgrade-bees-name
   description: spellbook-upgrade-bees-desc
   icon:
-    sprite: _Goobstation/Wizard/actions.rsi
-    state: bee
+    sprite: Objects/Magic/magicactions.rsi
+    state: spell_default
   cost:
     WizCoin: 2
   categories:
@@ -265,8 +265,8 @@
   name: spellbook-upgrade-sanguine-strike-name
   description: spellbook-upgrade-sanguine-strike-desc
   icon:
-    sprite: _Goobstation/Wizard/actions.rsi
-    state: exsanguinating_strike
+    sprite: Objects/Magic/magicactions.rsi
+    state: spell_default
   cost:
     WizCoin: 2
   categories:
@@ -284,8 +284,8 @@
   name: spellbook-upgrade-rathen-name
   description: spellbook-upgrade-rathen-desc
   icon:
-    sprite: _Goobstation/Wizard/actions.rsi
-    state: rathen
+    sprite: Objects/Magic/magicactions.rsi
+    state: spell_default
   cost:
     WizCoin: 2
   categories:
@@ -303,8 +303,8 @@
   name: spellbook-upgrade-spell-cards-name
   description: spellbook-upgrade-spell-cards-desc
   icon:
-    sprite: _Goobstation/Wizard/actions.rsi
-    state: spellcard
+    sprite: Objects/Magic/magicactions.rsi
+    state: spell_default
   cost:
     WizCoin: 2
   categories:
@@ -327,8 +327,8 @@
   productEvent: !type:SummonSimiansMaxedOutEvent
   raiseProductEventOnUser: true
   icon:
-    sprite: _Goobstation/Wizard/actions.rsi
-    state: monkey
+    sprite: Objects/Magic/magicactions.rsi
+    state: spell_default
   cost:
     WizCoin: 2
   categories:
@@ -350,8 +350,8 @@
   name: spellbook-upgrade-magic-missile-name
   description: spellbook-upgrade-magic-missile-desc
   icon:
-    sprite: _Goobstation/Wizard/actions.rsi
-    state: missile
+    sprite: Objects/Magic/magicactions.rsi
+    state: spell_default
   cost:
     WizCoin: 2
   categories:
@@ -372,8 +372,8 @@
   name: spellbook-upgrade-disable-tech-name
   description: spellbook-upgrade-disable-tech-desc
   icon:
-    sprite: _Goobstation/Wizard/actions.rsi
-    state: emp
+    sprite: Objects/Magic/magicactions.rsi
+    state: spell_default
   cost:
     WizCoin: 1
   categories:
@@ -394,8 +394,8 @@
   name: spellbook-upgrade-stop-time-name
   description: spellbook-upgrade-stop-time-desc
   icon:
-    sprite: _Goobstation/Wizard/actions.rsi
-    state: time
+    sprite: Objects/Magic/magicactions.rsi
+    state: spell_default
   cost:
     WizCoin: 2
   categories:
@@ -416,8 +416,8 @@
   name: spellbook-upgrade-the-traps-name
   description: spellbook-upgrade-the-traps-desc
   icon:
-    sprite: _Goobstation/Wizard/actions.rsi
-    state: the_traps
+    sprite: Objects/Magic/magicactions.rsi
+    state: spell_default
   cost:
     WizCoin: 1
   categories:
@@ -439,8 +439,8 @@
   name: spellbook-upgrade-teleport-name
   description: spellbook-upgrade-teleport-desc
   icon:
-    sprite: _Goobstation/Wizard/actions.rsi
-    state: teleport
+    sprite: Objects/Magic/magicactions.rsi
+    state: spell_default
   cost:
     WizCoin: 2
   categories:
@@ -465,8 +465,8 @@
   name: spellbook-upgrade-swap-name
   description: spellbook-upgrade-swap-desc
   icon:
-    sprite: _Goobstation/Wizard/actions.rsi
-    state: swap
+    sprite: Objects/Magic/magicactions.rsi
+    state: spell_default
   cost:
     WizCoin: 1
   categories:

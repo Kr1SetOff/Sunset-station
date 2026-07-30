@@ -23,15 +23,15 @@ public sealed partial class ChangelingIdentityComponent : Component
     };
 
     [DataField("soundShriek")]
-    public SoundSpecifier ShriekSound = new SoundPathSpecifier("/Audio/_Goobstation/Changeling/Effects/changeling_shriek.ogg");
+    public SoundSpecifier ShriekSound = new SoundPathSpecifier("/Audio/Effects/changeling_shriek.ogg");
 
     [DataField("shriekPower")]
     public float ShriekPower = 2.5f;
 
     [DataField("armorTransform")]
-    public SoundSpecifier ArmourSound = new SoundPathSpecifier("/Audio/_Goobstation/Changeling/Effects/armour_transform.ogg");
+    public SoundSpecifier ArmourSound = new SoundPathSpecifier("/Audio/Effects/Changeling/changeling_transform.ogg");
     [DataField("armorStrip")]
-    public SoundSpecifier ArmourStripSound = new SoundPathSpecifier("/Audio/_Goobstation/Changeling/Effects/armour_strip.ogg");
+    public SoundSpecifier ArmourStripSound = new SoundPathSpecifier("/Audio/Effects/Changeling/changeling_transform.ogg");
 
     public readonly List<EntProtoId> BaseChangelingActions = new()
     {

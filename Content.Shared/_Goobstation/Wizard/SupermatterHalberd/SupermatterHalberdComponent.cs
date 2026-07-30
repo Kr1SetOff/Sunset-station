@@ -14,13 +14,13 @@ public sealed partial class SupermatterHalberdComponent : Component
     public TimeSpan ExecuteDelay = TimeSpan.FromSeconds(1);
 
     [DataField]
-    public SoundSpecifier ExecuteSound = new SoundPathSpecifier("/Audio/_Goobstation/Wizard/supermatter.ogg");
+    public SoundSpecifier ExecuteSound = new SoundPathSpecifier("/Audio/Effects/Grenades/Supermatter/supermatter_end.ogg");
 
     [DataField]
     public EntProtoId AshProto = "Ash";
 
     [DataField]
-    public EntProtoId ExecuteEffect = "SupermatterFlashEffect";
+    public EntProtoId ExecuteEffect = "GrenadeFlashEffect";
 
     [DataField]
     public EntityWhitelist ObliterateWhitelist;

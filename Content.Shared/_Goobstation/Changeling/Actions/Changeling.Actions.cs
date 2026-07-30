@@ -83,13 +83,13 @@ public sealed partial class ActionFleshmendEvent : InstantActionEvent
     public ProtoId<AlertPrototype> Alert = "Fleshmend";
 
     [DataField]
-    public SoundSpecifier PassiveSound = new SoundPathSpecifier("/Audio/_Goobstation/SpecialPassives/fleshmend_sfx.ogg");
+    public SoundSpecifier PassiveSound = new SoundPathSpecifier("/Audio/Effects/Arcade/player_heal.ogg");
 
     [DataField]
-    public ResPath ResPath = new("_Goobstation/SpecialPassives/fleshmend_visuals.rsi");
+    public ResPath ResPath = new("Effects/medi_holo.rsi");
 
     [DataField]
-    public string EffectState = "mend_active";
+    public string EffectState = "medi_holo";
 
     [DataField]
     public float Duration = 10f;

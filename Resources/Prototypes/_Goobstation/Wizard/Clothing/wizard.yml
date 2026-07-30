@@ -9,21 +9,6 @@
   suffix: Wizard Clothes
   components:
   - type: Armor
-    coverage: # full coverage, idk, magic
-    - Chest
-    - Groin
-    - Arm
-    - Hand
-    - Leg
-    - Foot
-    - Tail
-    - Other
-    traumaDeductions: # prevents traumas at all (kinda)
-      Dismemberment: 1
-      OrganDamage: 1
-      BoneDamage: 1
-      VeinsDamage: 1
-      NerveDamage: 1
     modifiers:
       coefficients:
         Blunt: 0.6
@@ -62,7 +47,5 @@
     - ActionSummonStickmen
   - type: ItemActionGrant
     activeIfWorn: true
-    restrictedSlots:
-    - OUTERCLOTHING
     actions:
     - ActionSummonStickmen

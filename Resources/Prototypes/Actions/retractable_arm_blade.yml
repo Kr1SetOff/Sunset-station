@@ -1,0 +1,29 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+#
+# Restored after being deleted alongside the old Changeling implementation (it lived in the old
+# Resources/Prototypes/Actions/changeling.yml purely by historical accident - RetractableItemAction
+# is a generic, antag-agnostic mechanic, and Content.IntegrationTests.Tests.Actions.
+# RetractableItemActionTest expects this exact id to exist). The old icon.rsi and the old
+# ChangelingAction chemical-cost component that came with the original were changeling-specific and
+# were not restored.
+- type: entity
+  parent: BaseAction
+  id: ActionRetractableItemArmBlade
+  name: Arm Blade
+  description: Shed your flesh and reform it into a fleshy blade.
+  components:
+  - type: Action
+    useDelay: 2
+    raiseOnAction: true
+    itemIconStyle: BigAction
+    icon:
+      sprite: Objects/Magic/magicactions.rsi
+      state: gib
+  - type: InstantAction
+    event: !type:OnRetractableItemActionEvent
+  - type: RetractableItemAction
+    spawnedPrototype: ArmBlade
+    summonSounds:
+      collection: gib
+    retractSounds:
+      collection: gib

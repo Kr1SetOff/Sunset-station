@@ -17,8 +17,6 @@
     lowPressureMultiplier: 1000
   - type: Unremoveable
   - type: Armor
-    coverage:
-    - Head
     modifiers:
       coefficients:
         Blunt: 0.85

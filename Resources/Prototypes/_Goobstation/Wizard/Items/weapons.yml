@@ -82,7 +82,7 @@
         Structural: 10
     soundHit:
       path: "/Audio/Weapons/bladeslice.ogg"
-    animation: WeaponArcHighFreq
+    animation: WeaponArcSlash
   - type: Clothing
     sprite: _Goobstation/Wizard/Objects/Weapons/hfrequency.rsi
     quickEquip: false
@@ -101,7 +101,7 @@
   - type: LightAttackDamageMultiplier
     multiplier: 3
     extraSound:
-      path: /Audio/_Goobstation/Wizard/zapbang.ogg
+      path: /Audio/Items/Defib/defib_zap.ogg
       params:
         variation: 0.250
         volume: -5

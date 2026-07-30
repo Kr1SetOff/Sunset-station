@@ -388,7 +388,7 @@ public sealed partial class ChuuniInvocationsEvent : InstantActionEvent
     [DataField]
     public Dictionary<string, EntProtoId> Gear = new()
     {
-        {"eyes", "ClothingEyesEyepatchMedical"},
+        {"eyes", "ClothingEyesEyepatch"},
     };
 
     [DataField]
@@ -469,7 +469,7 @@ public sealed partial class TileToggleSpellEvent : EntityTargetActionEvent
 public sealed partial class GlobalTileToggleEvent : EntityEventArgs
 {
     [DataField]
-    public SoundSpecifier? Sound = new SoundPathSpecifier("/Audio/_Goobstation/Wizard/ghost.ogg");
+    public SoundSpecifier? Sound = new SoundPathSpecifier("/Audio/_Starlight/Misc/ghost_ping.ogg");
 }
 
 public sealed partial class PredictionToggleSpellEvent : EntityTargetActionEvent
@@ -498,14 +498,14 @@ public sealed partial class SummonSimiansMaxedOutEvent : EntityEventArgs
 public sealed partial class SummonGhostsEvent : EntityEventArgs
 {
     [DataField]
-    public SoundSpecifier? Sound = new SoundPathSpecifier("/Audio/_Goobstation/Wizard/ghost2.ogg");
+    public SoundSpecifier? Sound = new SoundPathSpecifier("/Audio/_Starlight/Misc/ghost_ping.ogg");
 }
 
 [DataDefinition]
 public sealed partial class DimensionShiftEvent : EntityEventArgs
 {
     [DataField]
-    public SoundSpecifier? Sound = new SoundPathSpecifier("/Audio/_Goobstation/Wizard/ghost.ogg");
+    public SoundSpecifier? Sound = new SoundPathSpecifier("/Audio/_Starlight/Misc/ghost_ping.ogg");
 
     [DataField]
     public float OxygenMoles = 10f;

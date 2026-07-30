@@ -1,0 +1,565 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+#
+# Supporting entities/prototypes for the ported wizard spells that Goob-Station defines but were
+# never carried over during the port (no source assets for most of these - see actions.yml for the
+# same note on icons). Reuses existing vanilla assets/entities wherever a reasonable fit exists.
+
+# --- Effects ---
+
+- type: entity
+  parent: BaseMagicalContraband
+  id: Chronofield
+  name: chronofield
+  description: A field of frozen time.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Effects/chronofield.rsi
+    state: chronofield
+  - type: TimedDespawn
+    lifetime: 8
+  - type: PointLight
+    radius: 3
+    color: "#8888ff"
+    energy: 2
+
+- type: entity
+  parent: BaseMagicalContraband
+  id: EffectRepulse
+  name: repulsion wave
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Effects/explosion.rsi
+    state: explosion
+  - type: TimedDespawn
+    lifetime: 0.5
+
+- type: entity
+  id: EmpFlashEffect
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Effects/emp.rsi
+    state: emp_pulse
+  - type: TimedDespawn
+    lifetime: 0.7
+  - type: PointLight
+    radius: 3
+    color: "#88f2ff"
+    energy: 2
+
+- type: entity
+  id: EffectElectricity
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Effects/lightning.rsi
+    state: yellow_lightning
+  - type: TimedDespawn
+    lifetime: 0.7
+
+# --- Projectiles ---
+
+- type: entity
+  parent: BaseBullet
+  id: ProjectileToolboxHoming
+  name: homing toolbox
+  components:
+  - type: Sprite
+    sprite: Objects/Tools/Toolboxes/toolbox_red.rsi
+    layers:
+    - state: icon
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 15
+  - type: Physics
+    bodyType: Dynamic
+
+- type: entity
+  parent: BaseBullet
+  id: ProjectileWabbajack
+  name: wabbajack bolt
+  components:
+  - type: Sprite
+    sprite: Objects/Magic/magicactions.rsi
+    scale: 0.6, 0.6
+    layers:
+    - state: fireball
+  - type: Projectile
+    damage:
+      types:
+        Radiation: 1
+
+- type: entity
+  parent: BaseBullet
+  id: ProjectileBananaPeel
+  name: banana peel
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/banana.rsi
+    layers:
+    - state: peel
+  - type: Projectile
+    damage: {}
+
+- type: entity
+  parent: BaseBullet
+  id: ProjectileMagicMissile
+  name: magic missile
+  components:
+  - type: Sprite
+    sprite: Objects/Magic/magicactions.rsi
+    scale: 0.6, 0.6
+    layers:
+    - state: magicmissile
+  - type: Projectile
+    damage:
+      types:
+        Radiation: 15
+
+- type: entity
+  parent: BaseBullet
+  id: ProjectileSpellCardPurple
+  name: purple spell card
+  components:
+  - type: Sprite
+    sprite: Objects/Magic/magicactions.rsi
+    scale: 0.6, 0.6
+    layers:
+    - state: spell_default
+  - type: Projectile
+    damage:
+      types:
+        Slash: 8
+
+- type: entity
+  parent: BaseBullet
+  id: ProjectileSpellCardRed
+  name: red spell card
+  components:
+  - type: Sprite
+    sprite: Objects/Magic/magicactions.rsi
+    scale: 0.6, 0.6
+    layers:
+    - state: spell_default
+  - type: Projectile
+    damage:
+      types:
+        Slash: 8
+
+- type: entity
+  parent: BaseItem
+  id: ArcaneBarrage
+  name: arcane barrage
+  description: A conjured weapon that fires bolts of arcane energy.
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Battery/laser_gun.rsi
+    state: icon
+  - type: Item
+    size: Normal
+  - type: Gun
+    fireRate: 3
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+  - type: BasicEntityAmmoProvider
+    proto: ProjectileMagicMissile
+    capacity: 10
+    count: 10
+  - type: TimedDespawn
+    lifetime: 30
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: ThrowingKnife
+  id: ThrownLightning
+  name: bolt of lightning
+  description: A crackling bolt of pure lightning.
+  components:
+  - type: Sprite
+    sprite: Effects/lightning.rsi
+    state: yellow_lightning
+  - type: MeleeWeapon
+    damage:
+      types:
+        Shock: 20
+  - type: LandAtCursor
+  - type: TimedDespawn
+    lifetime: 10
+
+# --- Weapons/mob support ---
+
+- type: entity
+  parent: WeaponRifleAk
+  id: WeaponBoltActionEnchanted
+  suffix: Wizard, DO NOT MAP
+  categories: [ DoNotMap ]
+
+# --- Visual/misc support entities ---
+
+- type: entity
+  parent: BaseMagicalContraband
+  id: SwapSpellEffect
+  name: swap effect
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Starlight/Effects/teleportation.rsi
+    state: teleportation
+  - type: TimedDespawn
+    lifetime: 0.5
+
+- type: entity
+  parent: BaseMagicalContraband
+  id: SanguineFlashEffect
+  name: sanguine flash
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Starlight/Effects/blood.rsi
+    state: splatter4
+  - type: TimedDespawn
+    lifetime: 1
+
+- type: entity
+  parent: BaseItem
+  id: BindSoulParticle
+  name: soul particle
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Magic/magicactions.rsi
+    state: jaunt
+  - type: PointLight
+    radius: 1.5
+    color: "#a080ff"
+    energy: 1.5
+
+- type: entity
+  parent: MobObserver
+  id: MobObserverWizard
+  categories: [ HideSpawnMenu ]
+
+- type: startingGear
+  id: LichGear
+
+# --- Traps ---
+
+- type: entity
+  abstract: true
+  id: BaseWizardTrap
+  parent: BaseItem
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: WizardTrap
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.3
+        hard: false
+        layer:
+        - MobLayer
+        mask:
+        - MobMask
+  - type: Sprite
+    sprite: Objects/Magic/magicactions.rsi
+    state: spell_default
+
+- type: entity
+  parent: BaseWizardTrap
+  id: TrapShock
+  name: shock trap
+  description: A magical trap that shocks whoever steps on it.
+  components:
+  - type: StunTrap
+
+- type: entity
+  parent: BaseWizardTrap
+  id: TrapFlame
+  name: flame trap
+  description: A magical trap that sets whoever steps on it ablaze.
+  components:
+  - type: FlameTrap
+
+- type: entity
+  parent: BaseWizardTrap
+  id: TrapDamage
+  name: damage trap
+  description: A magical trap that lashes out at whoever steps on it.
+  components:
+  - type: DamageTrap
+    damage:
+      types:
+        Piercing: 15
+
+- type: entity
+  parent: BaseWizardTrap
+  id: TrapChill
+  name: chill trap
+  description: A magical trap that freezes whoever steps on it.
+  components:
+  - type: ChillTrap
+
+- type: entity
+  parent: BaseWizardTrap
+  id: TrapBlind
+  name: blinding trap
+  description: A magical trap that blinds whoever steps on it.
+  components:
+  - type: BlindingTrap
+
+# --- Spellblade enchantments ---
+
+- type: spellbladeEnchantment
+  id: EnchantmentLightning
+  icon:
+    sprite: Objects/Magic/magicactions.rsi
+    state: spell_default
+  name: spellblade-enchantment-lightning-name
+  desc: spellblade-enchantment-lightning-desc
+  event: !type:LightningSpellbladeEnchantmentEvent
+
+- type: spellbladeEnchantment
+  id: EnchantmentFire
+  icon:
+    sprite: Objects/Magic/magicactions.rsi
+    state: spell_default
+  name: spellblade-enchantment-fire-name
+  desc: spellblade-enchantment-fire-desc
+  event: !type:FireSpellbladeEnchantmentEvent
+
+- type: spellbladeEnchantment
+  id: EnchantmentBluespace
+  icon:
+    sprite: Objects/Magic/magicactions.rsi
+    state: spell_default
+  name: spellblade-enchantment-bluespace-name
+  desc: spellblade-enchantment-bluespace-desc
+  event: !type:BluespaceSpellbladeEnchantmentEvent
+
+- type: spellbladeEnchantment
+  id: EnchantmentSpacetime
+  icon:
+    sprite: Objects/Magic/magicactions.rsi
+    state: spell_default
+  name: spellblade-enchantment-spacetime-name
+  desc: spellblade-enchantment-spacetime-desc
+  event: !type:SpacetimeSpellbladeEnchantmentEvent
+
+- type: spellbladeEnchantment
+  id: EnchantmentForceshield
+  icon:
+    sprite: Objects/Magic/magicactions.rsi
+    state: spell_default
+  name: spellblade-enchantment-forceshield-name
+  desc: spellblade-enchantment-forceshield-desc
+  event: !type:ForceshieldSpellbladeEnchantmentEvent
+
+# --- Selectable wand ammo modes ---
+
+- type: selectableAmmo
+  id: ProjectileFireball
+  icon: { sprite: Objects/Magic/magicactions.rsi, state: fireball }
+  desc: selectable-ammo-fireball-desc
+  protoId: ProjectileMagicMissile
+
+- type: selectableAmmo
+  id: ProjectileHealingBolt
+  icon: { sprite: Objects/Magic/magicactions.rsi, state: spell_default }
+  desc: selectable-ammo-healing-desc
+  protoId: ProjectileMagicMissile
+
+- type: selectableAmmo
+  id: ProjectileSpellCardPurpleSpread
+  icon: { sprite: Objects/Magic/magicactions.rsi, state: spell_default }
+  desc: selectable-ammo-spellcard-desc
+  protoId: ProjectileSpellCardPurple
+
+- type: selectableAmmo
+  id: ProjectileTeleBolt
+  icon: { sprite: Objects/Magic/magicactions.rsi, state: jaunt }
+  desc: selectable-ammo-tele-desc
+  protoId: ProjectileMagicMissile
+
+- type: selectableAmmo
+  id: ProjectileFieryBolt
+  icon: { sprite: Objects/Magic/magicactions.rsi, state: fireball }
+  desc: selectable-ammo-fiery-desc
+  protoId: ProjectileMagicMissile
+
+- type: selectableAmmo
+  id: ProjectileDeathBolt
+  icon: { sprite: Objects/Magic/magicactions.rsi, state: gib }
+  desc: selectable-ammo-death-desc
+  protoId: ProjectileMagicMissile
+
+- type: selectableAmmo
+  id: ProjectileIceCubeBolt
+  icon: { sprite: Objects/Magic/magicactions.rsi, state: spell_default }
+  desc: selectable-ammo-icecube-desc
+  protoId: ProjectileMagicMissile
+
+- type: selectableAmmo
+  id: ProjectileSwapBolt
+  icon: { sprite: Objects/Magic/magicactions.rsi, state: spell_default }
+  desc: selectable-ammo-swap-desc
+  protoId: ProjectileMagicMissile
+
+- type: selectableAmmo
+  id: ProjectileBeeBolt
+  icon: { sprite: Objects/Magic/magicactions.rsi, state: spell_default }
+  desc: selectable-ammo-bee-desc
+  protoId: ProjectileMagicMissile
+
+- type: selectableAmmo
+  id: ProjectileEmpBolt
+  icon: { sprite: Objects/Magic/magicactions.rsi, state: spell_default }
+  desc: selectable-ammo-emp-desc
+  protoId: ProjectileMagicMissile
+
+- type: selectableAmmo
+  id: ProjectileSmokeBolt
+  icon: { sprite: Objects/Magic/magicactions.rsi, state: spell_default }
+  desc: selectable-ammo-smoke-desc
+  protoId: ProjectileMagicMissile
+
+- type: selectableAmmo
+  id: ProjectileBlindingBolt
+  icon: { sprite: Objects/Magic/magicactions.rsi, state: spell_default }
+  desc: selectable-ammo-blinding-desc
+  protoId: ProjectileMagicMissile
+
+- type: selectableAmmo
+  id: ProjectileVampiricBolt
+  icon: { sprite: Objects/Magic/magicactions.rsi, state: spell_default }
+  desc: selectable-ammo-vampiric-desc
+  protoId: ProjectileMagicMissile
+
+- type: selectableAmmo
+  id: ProjectileMagicMissileLesser
+  icon: { sprite: Objects/Magic/magicactions.rsi, state: magicmissile }
+  desc: selectable-ammo-missile-lesser-desc
+  protoId: ProjectileMagicMissile
+
+# --- Weighted random spell/mob tables ---
+# Note: weightedRandomEntity requires real EntityPrototype ids, so these reference the action
+# entities directly (not the SpellbookXxx store listing ids the store UI uses).
+
+- type: weightedRandomEntity
+  id: FullRandomSpellTable
+  weights:
+    ActionMimeMalaise: 1
+    ActionBananaTouch: 1
+    ActionCluwneCurse: 1
+    ActionCorpseExplosion: 1
+    ActionBlindSpell: 1
+    ActionMutateSpell: 1
+    ActionTeslaBlast: 1
+    ActionLightningBolt: 1
+    ActionHomingToolbox: 1
+    ActionMagicMissile: 1
+    ActionDisableTech: 1
+    ActionInstantSummons: 1
+    ActionSwapSpell: 1
+    ActionSoulTap: 1
+    ActionTileToggle: 1
+
+- type: weightedRandomEntity
+  id: LethalSpellTable
+  weights:
+    ActionCorpseExplosion: 1
+    ActionTeslaBlast: 1
+    ActionLightningBolt: 1
+    ActionMagicMissile: 1
+    ActionSanguineStrike: 1
+
+- type: weightedRandomEntity
+  id: MobilitySpellTable
+  weights:
+    ActionTeleportWizard: 1
+    ActionSwapSpell: 1
+    ActionInstantSummons: 1
+
+- type: weightedRandomEntity
+  id: SimianMobTable
+  weights:
+    MobMonkey: 1
+
+- type: weightedRandomEntity
+  id: SimianWeaponTable
+  weights:
+    ToolboxMechanical: 1
+
+# --- Bundles ---
+
+- type: entity
+  parent: ClothingBackpackDuffelSyndicate
+  id: ClothingBackpackWizardMimeBundle
+  suffix: Wizard, DO NOT MAP
+  categories: [ DoNotMap ]
+  components:
+  - type: StorageFill
+    contents:
+    - id: ClothingMaskMime
+    - id: ClothingUniformJumpsuitMime
+    - id: ClothingBeltSuspendersRed
+
+- type: entity
+  parent: ClothingBackpackDuffelSyndicate
+  id: ClothingBackpackWizardClownBundle
+  suffix: Wizard, DO NOT MAP
+  categories: [ DoNotMap ]
+  components:
+  - type: StorageFill
+    contents:
+    - id: ClothingMaskClown
+    - id: ClothingUniformJumpsuitClown
+    - id: ClothingShoesClown
+
+- type: entity
+  parent: ClothingBackpackDuffelSyndicate
+  id: ClothingBackpackOblivionEnforcerBundle
+  suffix: Wizard, DO NOT MAP
+  categories: [ DoNotMap ]
+  components:
+  - type: StorageFill
+    contents:
+    - id: SupermatterHalberd
+
+- type: entity
+  parent: ToolboxSyndicateFilled
+  id: ToolboxTiderFilled
+  suffix: Wizard, DO NOT MAP
+  categories: [ DoNotMap ]
+
+- type: explosion
+  id: Corpse
+  damagePerIntensity:
+    types:
+      Piercing: 3
+      Blunt: 3
+  tileBreakChance: [0, 0.5, 1]
+  tileBreakIntensity: [0, 10, 30]
+  tileBreakRerollReduction: 20
+  lightColor: Red
+  texturePath: /Textures/Effects/fire.rsi
+  fireStates: 3
+
+- type: entity
+  parent: BaseItem
+  id: ContractApprenticeship
+  name: contract of apprenticeship
+  description: Signing this contract binds an apprentice to your service.
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/bureaucracy.rsi
+    state: paper
+  - type: StaticPrice
+    price: 0
