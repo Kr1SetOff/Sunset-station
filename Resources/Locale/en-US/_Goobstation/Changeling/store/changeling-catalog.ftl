@@ -147,7 +147,7 @@ evolutionmenu-utility-chameleon-desc =
     Costs 20 chemicals.
 
 evolutionmenu-utility-darkadapt-name = Darkness Adaption
-evolutionmenu-utility-darkadapt-desc = 
+evolutionmenu-utility-darkadapt-desc =
     Allows you to adapt and adjust your body to the shroud of darkness.
     While shrouded in the dark, become translucent and gain night vision.
     Passive adaption can be toggled.
