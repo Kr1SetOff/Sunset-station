@@ -14,7 +14,7 @@ public sealed class EntityTrailSystem : EntitySystem
     private void OnInit(Entity<EntityTrailComponent> ent, ref ComponentInit args)
     {
         var (uid, comp) = ent;
-        if (!TryComp(uid, out TrailComponent? trail))
+        if (!TryComp(uid, out WizardTrailComponent? trail))
             return;
 
         trail.RenderedEntity = uid;

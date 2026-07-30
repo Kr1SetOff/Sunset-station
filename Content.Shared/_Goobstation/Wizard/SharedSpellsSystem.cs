@@ -1278,7 +1278,7 @@ public abstract class SharedSpellsSystem : EntitySystem
 
             Audio.PlayPvs(swapSound, transform.Coordinates);
             var effect = Spawn(swapEffect, transform.Coordinates);
-            if (TryComp(effect, out TrailComponent? trail))
+            if (TryComp(effect, out WizardTrailComponent? trail))
             {
                 trail.SpawnPosition = TransformSystem.GetWorldPosition(transform);
                 trail.RenderedEntity = ent;

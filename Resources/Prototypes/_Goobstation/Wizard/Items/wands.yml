@@ -82,7 +82,6 @@
     onActivate: false
     onUse: false
     wieldToggle: false
-  - type: ItemToggleColor
   - type: PointLight
     enabled: true
     radius: 1.5

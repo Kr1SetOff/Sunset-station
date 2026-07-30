@@ -21,7 +21,7 @@ public abstract class SharedDarknessAdaptionSystem : EntitySystem
     [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly SharedStealthSystem _stealth = default!;
 
-    private EntityQuery<NightVisionComponent> _nvgQuery;
+    private EntityQuery<GoobNightVisionComponent> _nvgQuery;
     private EntityQuery<StealthOnMoveComponent> _stealthOnMoveQuery;
 
     public override void Initialize()
@@ -34,7 +34,7 @@ public abstract class SharedDarknessAdaptionSystem : EntitySystem
         SubscribeLocalEvent<DarknessAdaptionComponent, ActionDarknessAdaptionEvent>(OnToggleAbility);
         SubscribeLocalEvent<DarknessAdaptionComponent, InternalResourcesRegenModifierEvent>(OnChangelingChemicalRegenEvent);
 
-        _nvgQuery = GetEntityQuery<NightVisionComponent>();
+        _nvgQuery = GetEntityQuery<GoobNightVisionComponent>();
         _stealthOnMoveQuery = GetEntityQuery<StealthOnMoveComponent>();
     }
 
@@ -58,7 +58,7 @@ public abstract class SharedDarknessAdaptionSystem : EntitySystem
         HandleAlerts(ent, false);
         SetAdaptingBool(ent, false);
 
-        RemCompDeferred<NightVisionComponent>(ent);
+        RemCompDeferred<GoobNightVisionComponent>(ent);
 
         _actions.RemoveAction(ent.Owner, ent.Comp.ActionEnt);
     }
@@ -120,7 +120,7 @@ public abstract class SharedDarknessAdaptionSystem : EntitySystem
         if (!_nvgQuery.HasComp(ent))
             EnsureNightVision(ent);
 
-        var nvg = Comp<NightVisionComponent>(ent);
+        var nvg = Comp<GoobNightVisionComponent>(ent);
         nvg.IsActive = adapting;
         Dirty(ent, nvg);
 
@@ -185,7 +185,7 @@ public abstract class SharedDarknessAdaptionSystem : EntitySystem
 
     private void EnsureNightVision(Entity<DarknessAdaptionComponent> ent)
     {
-        var nightVision = EnsureComp<NightVisionComponent>(ent);
+        var nightVision = EnsureComp<GoobNightVisionComponent>(ent);
 
         nightVision.IsActive = false;
         nightVision.Color = Color.FromHex("#606cb3");

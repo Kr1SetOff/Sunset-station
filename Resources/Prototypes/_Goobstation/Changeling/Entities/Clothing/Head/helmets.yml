@@ -11,9 +11,6 @@
     sprite: _Goobstation/Changeling/ling_armor_helmet.rsi
   - type: Clothing
     sprite: _Goobstation/Changeling/ling_armor_helmet.rsi
-    equippedPrefix: transform
-  - type: ChangePrefixAfterDelay
-    delay: 1
   - type: ChangelingEquipment
     requiredSlot: OUTERCLOTHING
     ## no modifier as the armor/torso is the actual "main" part
@@ -37,11 +34,6 @@
         Caustic: 0.55
   - type: IdentityBlocker
   - type: IngestionBlocker
-  - type: HideClothingLayerClothing
-    hiddenSlots:
-    - mask
-    - ears
-    - eyes
   - type: HideLayerClothing
     slots:
     - Hair

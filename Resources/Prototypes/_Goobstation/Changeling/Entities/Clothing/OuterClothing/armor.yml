@@ -11,9 +11,6 @@
     sprite: _Goobstation/Changeling/ling_armor.rsi
   - type: Clothing
     sprite: _Goobstation/Changeling/ling_armor.rsi
-    equippedPrefix: transform
-  - type: ChangePrefixAfterDelay
-    delay: 1
   - type: ChangelingEquipment
     chemModifier: 0.25
     requiredSlot: OUTERCLOTHING
@@ -55,11 +52,3 @@
     cancel: true
   - type: StaminaResistance
     damageCoefficient: 0.4
-  - type: HideClothingLayerClothing
-    hiddenSlots:
-    - jumpsuit
-    - neck
-    - gloves
-    - shoes
-    - back
-    - belt

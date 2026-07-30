@@ -7,7 +7,7 @@ using Robust.Shared.Prototypes;
 namespace Content.Shared._Goobstation.Overlays;
 
 [RegisterComponent, NetworkedComponent]
-public sealed partial class ThermalVisionComponent : SwitchableVisionOverlayComponent
+public sealed partial class GoobThermalVisionComponent : SwitchableVisionOverlayComponent
 {
     public override EntProtoId? ToggleAction { get; set; } = "ToggleThermalVision";
 

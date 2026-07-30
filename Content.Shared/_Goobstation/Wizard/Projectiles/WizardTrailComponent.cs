@@ -11,7 +11,7 @@ namespace Content.Shared._Goobstation.Wizard.Projectiles;
 // Make more fields auto networked if you need to.
 // Changing Lifetime and Frequency may lead to unexpected results, especially if frequency is greater than lifetime
 [RegisterComponent,NetworkedComponent, AutoGenerateComponentState]
-public sealed partial class TrailComponent : Component
+public sealed partial class WizardTrailComponent : Component
 {
     /// <summary>
     /// How many particles to spawn each cycle. If it is less than one, no particles will spawn.

@@ -19,10 +19,6 @@
         Piercing: 2
         Radiation: 5
         Structural: 5
-      armorPenetration: 0.8
-      woundSeverityMultipliers:
-        Slash: 2.5
-        Piercing: 2.5
     soundHit:
       path: "/Audio/Weapons/bladeslice.ogg"
   - type: Wieldable
@@ -33,7 +29,6 @@
         Piercing: 8
         Radiation: 15
         Structural: 10
-      armorPenetration: 0.8
   - type: Item
     size: Huge
   - type: Clothing
@@ -49,15 +44,10 @@
       - state: equipped-BACKPACK
   - type: UseDelay
     delay: 1
-    delays:
-      knockdown:
-        length: 4
   - type: KnockdownOnHit
     duration: 4
     dropItems: true
     knockdownOnHeavyAttack: false
-  - type: UseDelayBlockKnockdown
-    delay: knockdown
   - type: SupermatterHalberd
     obliterateWhitelist:
       components:
@@ -86,13 +76,10 @@
     wideAnimationRotation: -135
     attackRate: 8
     autoAttack: true
-    heavyStaminaCost: 0
     damage:
       types:
         Slash: 5
         Structural: 10
-      woundSeverityMultipliers:
-        Slash: 2
     soundHit:
       path: "/Audio/Weapons/bladeslice.ogg"
     animation: WeaponArcHighFreq
@@ -118,11 +105,6 @@
       params:
         variation: 0.250
         volume: -5
-  - type: ThrowableBlocker
-    blockSound:
-      path: /Audio/_Goobstation/Wizard/zapbang.ogg
-      params:
-        variation: 0.250
   - type: StaticPrice
     price: 50000
 
@@ -140,8 +122,6 @@
     damage:
       types:
         Slash: 30
-      woundSeverityMultipliers:
-        Slash: 2
     soundHit:
       path: "/Audio/Weapons/bladeslice.ogg"
   - type: Clothing
@@ -172,51 +152,33 @@
   - type: StaticPrice
     price: 50000
 
-# NOTE: parent LavalandBaseKatana does not exist in this codebase (no _Lavaland content has been
-# ported). This entity is ported as-instructed but will fail to resolve until LavalandBaseKatana
-# (source: Resources/Prototypes/_Lavaland/Entities/Objects/Weapons/Melee/katanas.yml) is ported,
-# which is out of scope for this task. See final report for details.
+# Adapted for this fork: Goob's parent (LavalandBaseKatana) and its dedicated blade/handle-layered
+# sprite don't exist here (no _Lavaland content has been ported), so this reuses this fork's vanilla
+# katana sprite with a color tint instead of the original two-tone blade/handle art. Also drops
+# MeleeDash - that component was never ported (Goob-specific dash-on-swing, used by no other item).
 - type: entity
   name: echo katana
   description: Vibrations are constantly flowing through this sword, like they desperately try to find a way out.
-  parent: [ LavalandBaseKatana, BaseMagicalContraband ]
+  parent: [ BaseSword, BaseMagicalContraband ]
   id: EchoKatana
   components:
   - type: Sprite
-    layers:
-    - state: blade
-      color: "#be69ff"
-    - state: handle
+    sprite: Objects/Weapons/Melee/katana.rsi
+    color: "#be69ff"
   - type: Item
-    #storedSprite:
-    #  state: storage
-    #  sprite: Objects/Weapons/Melee/katana_storage_64x.rsi #Done in 64x64 because it looks way too puny in 32x32
-    inhandVisuals:
-      left:
-      - state: handle-inhand-left
-      - state: blade-inhand-left
-        color: "#be69ff"
-      right:
-      - state: handle-inhand-right
-      - state: blade-inhand-right
-        color: "#be69ff"
+    storedSprite:
+      state: storage
+      sprite: Objects/Weapons/Melee/katana_storage_64x.rsi
+    shape:
+    - 0,0,0,3
   - type: Clothing
-    clothingVisuals:
-      back:
-      - state: handle-equipped-BACKPACK
-      - state: blade-equipped-BACKPACK
-        color: "#be69ff"
-      belt:
-      - state: handle-equipped-BELT
-      - state: blade-equipped-BELT
-        color: "#be69ff"
+    sprite: Objects/Weapons/Melee/katana.rsi
+    slots:
+    - Back
+    - Belt
   - type: MeleeWeapon
     damage:
       types:
         Slash: 25
-      woundSeverityMultipliers:
-        Slash: 3 # Epic delimbing
-  - type: MeleeDash
-    length: 5.5
   - type: UseDelay
     delay: 1.5

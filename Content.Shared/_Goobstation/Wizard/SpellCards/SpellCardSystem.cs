@@ -22,7 +22,7 @@ public sealed class SpellCardSystem : EntitySystem
 
     private EntityQuery<TransformComponent> _xformQuery;
     private EntityQuery<HomingProjectileComponent> _homingQuery;
-    private EntityQuery<TrailComponent> _trailQuery;
+    private EntityQuery<WizardTrailComponent> _trailQuery;
     private EntityQuery<AppearanceComponent> _appearanceQuery;
     private EntityQuery<FrozenComponent> _frozenQuery;
 
@@ -34,7 +34,7 @@ public sealed class SpellCardSystem : EntitySystem
 
         _xformQuery = GetEntityQuery<TransformComponent>();
         _homingQuery = GetEntityQuery<HomingProjectileComponent>();
-        _trailQuery = GetEntityQuery<TrailComponent>();
+        _trailQuery = GetEntityQuery<WizardTrailComponent>();
         _appearanceQuery = GetEntityQuery<AppearanceComponent>();
         _frozenQuery = GetEntityQuery<FrozenComponent>();
     }

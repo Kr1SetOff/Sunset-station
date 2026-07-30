@@ -641,8 +641,8 @@ public sealed partial class ChangelingSystem : SharedChangelingSystem
         // actual component name - a no-op bug there. Copying each type explicitly instead.
         _polymorph.CopyPolymorphComponent<FlashImmunityComponent>(uid, newEnt);
         _polymorph.CopyPolymorphComponent<EyeProtectionComponent>(uid, newEnt);
-        _polymorph.CopyPolymorphComponent<Content.Shared._Goobstation.Overlays.NightVisionComponent>(uid, newEnt);
-        _polymorph.CopyPolymorphComponent<Content.Shared._Goobstation.Overlays.ThermalVisionComponent>(uid, newEnt);
+        _polymorph.CopyPolymorphComponent<Content.Shared._Goobstation.Overlays.GoobNightVisionComponent>(uid, newEnt);
+        _polymorph.CopyPolymorphComponent<Content.Shared._Goobstation.Overlays.GoobThermalVisionComponent>(uid, newEnt);
 
         // CopyPolymorphComponent fails to copy the HumanoidAppearanceComponent in TransformData
         // outside of the first list item so this has to be done manually unfortunately

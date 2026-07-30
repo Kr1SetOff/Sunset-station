@@ -96,19 +96,5 @@
     inHandsMaxFillLevels: 1
     equippedFillBaseName: -fill-
     equippedMaxFillLevels: 1
-  - type: ThrowableBlocked
-  - type: UndetectableContraband
   - type: StaticPrice
     price: 5000
-  - type: IllusionOnMeleeHit
-    factionWhitelist:
-    - Assistant
-    components:
-    - type: NPCRetaliation
-      attackMemoryLength: 10
-    - type: GroupRetaliation
-      range: 8
-    - type: NpcFactionMember
-      factions:
-      - Assistant
-      - Syndicate

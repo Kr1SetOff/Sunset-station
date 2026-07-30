@@ -96,7 +96,7 @@ public abstract class SwitchableOverlaySystem<TComp, TEvent> : EntitySystem // t
         var lightRadius = 0f;
         string? thermalShader = null;
 
-        if (component is ThermalVisionComponent thermal)
+        if (component is GoobThermalVisionComponent thermal)
         {
             lightRadius = thermal.LightRadius;
             thermalShader = thermal.ThermalShader;
@@ -139,7 +139,7 @@ public abstract class SwitchableOverlaySystem<TComp, TEvent> : EntitySystem // t
                 _actions.AddAction(uid, ref component.ToggleActionEntity, component.ToggleAction);
         }
 
-        if (component is ThermalVisionComponent thermal)
+        if (component is GoobThermalVisionComponent thermal)
         {
             thermal.LightRadius = state.LightRadius;
             thermal.ThermalShader = state.ThermalShader;
