@@ -19,6 +19,7 @@
   # 🌇Sunset🌇 - was DiscordRolesRequirement:PatronReq (NullLink); now gated by our own sponsor tier (3+)
   - !type:SponsorTierRequirement
     minTier: 3
+  category: Patron
 
 - type: ghostTheme
   id: ClownTheme
@@ -33,6 +34,7 @@
   # 🌇Sunset🌇 - was DiscordRolesRequirement:PatronReq (NullLink); now gated by our own sponsor tier (1+)
   - !type:SponsorTierRequirement
     minTier: 1
+  category: Patron
 
 - type: ghostTheme
   id: FaithlessTheme
@@ -47,6 +49,7 @@
   # 🌇Sunset🌇 - was DiscordRolesRequirement:PatronReq (NullLink); now gated by our own sponsor tier (2+)
   - !type:SponsorTierRequirement
     minTier: 2
+  category: Patron
 
 - type: ghostTheme
   id: MushroomTheme
@@ -61,6 +64,7 @@
   # 🌇Sunset🌇 - was DiscordRolesRequirement:PatronReq (NullLink); now gated by our own sponsor tier (3+)
   - !type:SponsorTierRequirement
     minTier: 3
+  category: Patron
 
 - type: ghostTheme
   id: WalkerTheme
@@ -75,6 +79,7 @@
   # 🌇Sunset🌇 - was DiscordRolesRequirement:PatronReq (NullLink); now gated by our own sponsor tier (1+)
   - !type:SponsorTierRequirement
     minTier: 1
+  category: Patron
 
 - type: ghostTheme
   id: ShadowDemon
@@ -95,6 +100,7 @@
   # 🌇Sunset🌇 - was DiscordRolesRequirement:PatronReq (NullLink); now gated by our own sponsor tier (2+)
   - !type:SponsorTierRequirement
     minTier: 2
+  category: Patron
 
 - type: ghostTheme
   id: WizdenCarp
@@ -109,3 +115,4 @@
   requirements:
   - !type:DiscordRolesRequirement
     requirement: WizdenPatronReq
+  category: Patron

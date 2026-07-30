@@ -4,7 +4,7 @@
     - cosmic
   name: cosmiccult-title
   description: cosmiccult-description
-  minPlayers: 15 # 🌇Sunset🌇
+  minPlayers: 20
   showInVote: true
   rules:
     - CosmicCult
@@ -20,7 +20,7 @@
     - secretcosmic
   name: secret-title
   description: secret-description
-  minPlayers: 30
+  minPlayers: 20
   showInVote: false
   rules:
     - CosmicCult

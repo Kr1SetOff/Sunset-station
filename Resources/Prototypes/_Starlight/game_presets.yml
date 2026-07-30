@@ -159,7 +159,7 @@
     - Traitor
     - Revolutionary
     - WizardDuel
-    - Xenoborgs
+    #- Xenoborgs
     - RampingStationEventScheduler
     - Changeling
     - SpaceTrafficControlEventScheduler
@@ -170,6 +170,7 @@
     - SiliconLiberation
     - Brighteye
     - ThiefGamerule
+    - Devil
     - CosmicCult
 
 - type: gamePreset
@@ -189,7 +190,7 @@
     - Revolutionary
     - SubWizard # Well, you did say *Aller* at once.
     - WizardDuel # Well, you did say *Aller* at once.
-    - Xenoborgs
+    #- Xenoborgs
     - BasicStationEventScheduler
     - BasicStationEventScheduler
     - ShitStationEventScheduler
@@ -210,6 +211,7 @@
     - LoneOpsSpawn
     - RailroadingTerminator
     - RailroadingMinor
+    - Devil
     - CosmicCult
 
 - type: gamePreset
@@ -231,3 +233,20 @@
   - SpaceTrafficControlEventScheduler
   - BasicRoundstartVariation
   - RailroadingMinor # 🌟Starlight🌟
+
+- type: gamePreset
+  id: DynamicLP
+  alias:
+  - dynamiclp
+  - multiantaglp
+  - directorlp
+  name: dynamic-title
+  showInVote: false # admin-only for now until we fix some bugs
+  description: dynamic-description
+  minPlayers: 15
+  voteCooldown: 0 # This one actually can roll back to back.
+  rules:
+  - SLDynamicRuleLP
+  - SpaceTrafficControlEventScheduler # No event/meteor schedulers, since we handle that in dynamic too.
+  - BasicRoundstartVariation
+  - RailroadingMinor

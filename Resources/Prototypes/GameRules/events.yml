@@ -34,6 +34,11 @@
     - id: CommunicationBlackout
     - id: NightShift
     - id: SyndicateDeadDrop
+    - id: NanoChatSpamTiny
+    - id: NanoChatSpamLowPop
+    - id: NanoChatSpamMidPop
+    - id: NanoChatSpamHighPop
+    - id: NanoChatSpamUltraPop
     # Starlight End
     - id: MalignRiftSpawn # Funky
 
@@ -57,12 +62,17 @@
     - id: VoidwalkerSpawn # 🌇Sunset🌇
     - id: BloodWormSpawn # 🌇Sunset🌇
     - id: ParadoxCloneSpawn
+    - id: ParadoxCrisisSpawn # Starlight
     - id: SleeperAgents
  #   - id: ZombieOutbreak starlight - no more midround zeds
     - id: LoneOpsSpawn
     - id: WizardSpawn
-    - id: AbductorsSpawn # Starlight
-    - id: TerrorSpidersSpawn # Starlight
+    - id: AbductorsSpawn # Starlight start
+    #- id: SubXenoborgs
+    #- id: TerrorSpidersSpawn
+    - id: RailroadingTerminator
+    #- id: Brighteye # Brighteye is disabled until more work is put in.
+    - id: ColossusSpawn # Starlight end
     - id: EeepEvent # imp
     - !type:NestedSelector
       tableId: DerelictBorgEventTable
@@ -404,6 +414,8 @@
         - CantBecomeRevolutionary
         - Wizard
       # Starlight-end
+  - type: DynamicRuleCost
+    cost: 75
 
 # disabled until event is rewritten to be more interesting
 #- type: entity
@@ -657,7 +669,7 @@
         - CantBecomeRevolutionary
       # Starlight-end
   - type: DynamicRuleCost
-    cost: 75
+    cost: 100 # Starlight
 
 - type: entity
   parent: BaseTraitorRule

@@ -427,6 +427,7 @@
   loadouts:
   - SecurityTaser
   - SecurityDominator
+  - SecurityPeacekeeper
 
 - type: loadoutGroup
   id: SecuritySidearm
@@ -972,6 +973,10 @@
   - DutyOfficerJumpskirt
   - DutyOfficerJumpsuitBlue
   - DutyOfficerJumpskirtBlue
+  - DutyOfficerJumpsuitFormal
+  - DutyOfficerJumpskirtFormal
+  - DutyOfficerSeniorJumpsuitFormal
+  - DutyOfficerSeniorJumpskirtFormal
   - DutyOfficerJumpsuitOrange # DeltaV
   - DutyOfficerJumpskirtOrange # DeltaV
 
@@ -1181,6 +1186,10 @@
   - JumpskirtBrigmedic
   - JumpsuitCorpsman
   - JumpskirtCorpsman
+  - FormalBrigmedicJumpsuit
+  - FormalBrigmedicJumpskirt
+  - SeniorBrigmedicJumpsuit
+  - SeniorBrigmedicJumpskirt
   - CorpsmanResponse
   - CorpsmanTrauma
   - BrigmedicJumpsuitOfLife

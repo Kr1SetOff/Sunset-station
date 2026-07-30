@@ -43,6 +43,9 @@
 ## Во фритюре
 <GuideDeepFryerGroupEmbed Group="TP14-Deep-Fry"/>
 
+## Мороженое
+<GuideMicrowaveGroupEmbed Group="IceCream"/>
+
 ## Лечебное (Медицинское)
 <GuideMicrowaveGroupEmbed Group="Medicinal"/>
 

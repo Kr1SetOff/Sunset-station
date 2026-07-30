@@ -6,11 +6,11 @@ using Content.Shared.Mindshield.Components;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Stunnable;
 using Content.Shared.Damage.Systems;
-using Content.Shared._Starlight.Shadekin;
 using Content.Shared.Roles;
 using Content.Shared.Roles.Components;
 using Content.Shared.Mind;
-using Content.Shared._Starlight.NullSpace;
+using Content.Shared._Starlight.NullSpace.Components;
+using Content.Shared._Starlight.Devil;
 
 namespace Content.Server._Starlight.CosmicCult.Abilities;
 
@@ -83,6 +83,11 @@ public sealed partial class CosmicConversionSystem : EntitySystem
             else if (uid.Comp.NegateProtection == false && HasComp<BrighteyeComponent>(target))
             {
                 _popup.PopupEntity(Loc.GetString("cult-glyph-target-brighteye"), uid, args.User);
+                args.Cancel();
+            }
+            else if (uid.Comp.NegateProtection == false && HasComp<DevilComponent>(target))
+            {
+                _popup.PopupEntity(Loc.GetString("cult-glyph-target-devil"), uid, args.User);
                 args.Cancel();
             }
             else if (uid.Comp.NegateProtection == false && _mind.TryGetMind(args.User, out var mind, out _) && _role.MindHasRole<WizardRoleComponent>(mind))

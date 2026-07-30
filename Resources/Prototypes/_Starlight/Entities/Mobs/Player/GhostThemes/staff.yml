@@ -24,6 +24,7 @@
       - Ментор
       - Мл.Ивент-мастер
       - Ст.Ивент-Мастер
+  category: Staff
 
 - type: ghostTheme
   id: SpaceDragonStaffTheme
@@ -42,6 +43,7 @@
       requirement: StaffRolesReq
     - !type:AdminTitleRequirement
       titles: *sunsetManualAdminRanks
+  category: Staff
 
 - type: ghostTheme
   id: BuffRatKingTheme
@@ -60,6 +62,7 @@
       requirement: TicketsAdministratorReq
     - !type:AdminTitleRequirement
       titles: *sunsetManualAdminRanks
+  category: Staff
 
 - type: ghostTheme
   id: FoxTheme
@@ -74,6 +77,7 @@
   requirements:
   - !type:DiscordRolesRequirement
     requirement: TicketsAdministratorReq
+  category: Staff
 
 - type: ghostTheme
   id: LizardPlushie
@@ -92,6 +96,7 @@
       requirement: TicketsAdministratorReq
     - !type:AdminTitleRequirement
       titles: *sunsetManualAdminRanks
+  category: Staff
 
 - type: ghostTheme
   id: MothroachTheme
@@ -110,6 +115,7 @@
       requirement: TicketsAdministratorReq
     - !type:AdminTitleRequirement
       titles: *sunsetManualAdminRanks
+  category: Staff
 
 - type: ghostTheme
   id: ScurretTheme
@@ -128,6 +134,7 @@
       requirement: TicketsAdministratorReq
     - !type:AdminTitleRequirement
       titles: *sunsetManualAdminRanks
+  category: Staff
 
 - type: ghostTheme
   id: WispTheme
@@ -142,6 +149,7 @@
   requirements:
   - !type:DiscordRolesRequirement
     requirement: SeniorDeveloperReq
+  category: Staff
 
 - type: ghostTheme
   id: CustodianTheme
@@ -155,3 +163,4 @@
   requirements:
   - !type:DiscordRolesRequirement
     requirement: DeveloperReq
+  category: Staff
