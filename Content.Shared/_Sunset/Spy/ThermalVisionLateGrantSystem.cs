@@ -1,3 +1,4 @@
+using Content.Shared._Starlight.Overlay.Components;
 using Content.Shared.Actions;
 using Content.Shared.Eye.Blinding.Components;
 

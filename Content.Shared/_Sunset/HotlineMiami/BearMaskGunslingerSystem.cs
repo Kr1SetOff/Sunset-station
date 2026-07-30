@@ -27,7 +27,7 @@ public sealed class BearMaskGunslingerSystem : EntitySystem
         if (args.Slot != MaskSlot)
             return;
 
-        EnsureComp<HoloCigarWearerComponent>(args.Equipee);
+        EnsureComp<HoloCigarWearerComponent>(args.EquipTarget);
     }
 
     private void OnUnequipped(Entity<BearMaskGunslingerComponent> ent, ref GotUnequippedEvent args)
@@ -35,6 +35,6 @@ public sealed class BearMaskGunslingerSystem : EntitySystem
         if (args.Slot != MaskSlot)
             return;
 
-        RemComp<HoloCigarWearerComponent>(args.Equipee);
+        RemComp<HoloCigarWearerComponent>(args.EquipTarget);
     }
 }

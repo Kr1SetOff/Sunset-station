@@ -4,7 +4,7 @@ using Content.Server.GameTicking.Rules;
 using Content.Server.Roles;
 using Content.Shared._Starlight.Devil;
 using Content.Shared._Starlight.Roles.Components;
-using Content.Shared.Vampire.Components;
+using Content.Shared._Starlight.Vampire.Components;
 using Content.Shared.Clumsy;
 using Content.Shared.Roles;
 using Content.Shared.Speech.Components;

@@ -1,5 +1,6 @@
 using System.Diagnostics.CodeAnalysis;
 using Content.Shared._Starlight.Eye.Blinding.Components;
+using Content.Shared._Starlight.Medical.Surgery.Components;
 using Content.Shared.Body.Components;
 using Content.Shared.Body.Organ;
 using Content.Shared.Body.Systems;

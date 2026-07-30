@@ -40,7 +40,7 @@ public abstract class CultBiocodeDeactivationSystem : EntitySystem
         if (!TryComp<CultBiocodeComponent>(uid, out var biocodeComponent))
             return;
 
-        if (_biocodeSystem.CanUse(args.Equipee, biocodeComponent.Factions))
+        if (_biocodeSystem.CanUse(args.EquipTarget, biocodeComponent.Factions))
             return;
 
         DeactivateItem(uid);

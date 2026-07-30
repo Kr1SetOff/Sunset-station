@@ -2,6 +2,8 @@ using System.Linq;
 using System.Numerics;
 using Content.Server.Antag;
 using Content.Shared._Starlight.Medical.Body.Systems;
+using Content.Shared._Starlight.Overlay.Components;
+using Content.Shared._Starlight.Weapons.Hitscan.Events;
 using Content.Shared._Sunset.Homelander;
 using Content.Shared.Actions;
 using Content.Shared.Chemistry.Components;

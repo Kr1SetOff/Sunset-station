@@ -11,6 +11,7 @@ using Content.Shared.Roles.Components;
 using Content.Shared.Mind;
 using Content.Shared._Starlight.NullSpace.Components;
 using Content.Shared._Starlight.Devil;
+using Content.Shared._Starlight.Shadekin.Components;
 
 namespace Content.Server._Starlight.CosmicCult.Abilities;
 

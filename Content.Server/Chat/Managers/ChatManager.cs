@@ -27,6 +27,17 @@ namespace Content.Server.Chat.Managers;
 /// </summary>
 internal sealed partial class ChatManager : IChatManager
 {
+    // 🌇Sunset🌇 - still consumed by NullLinkPlayerManager.Title.cs for patron title coloring,
+    // even though ChatManager's own OOC-wrap logic below now uses our Sunset admin/sponsor wrap
+    // instead - do not delete, this isn't actually vestigial.
+    public static readonly Dictionary<string, string> PatronOocColors = new() // Starlight-edit: now public
+    {
+        // I had plans for multiple colors and those went nowhere so...
+        { "nuclear_operative", "#aa00ff" },
+        { "syndicate_agent", "#aa00ff" },
+        { "revolutionary", "#aa00ff" }
+    };
+
     [Dependency] private IReplayRecordingManager _replay = default!;
     [Dependency] private IServerNetManager _netManager = default!;
     [Dependency] private IAdminManager _adminManager = default!;

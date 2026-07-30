@@ -94,7 +94,7 @@ public sealed class HoloCigarSystem : EntitySystem
             return;
 
         ent.Comp.Lit = false;
-        RemComp<HoloCigarWearerComponent>(args.Equipee);
+        RemComp<HoloCigarWearerComponent>(args.EquipTarget);
         _audio.Stop(ent.Comp.MusicEntity);
         ent.Comp.MusicEntity = null;
     }

@@ -31,7 +31,7 @@ public sealed class ChangelingEquipmentSystem : EntitySystem
             && !args.SlotFlags.HasFlag(ent.Comp.RequiredSlot))
             return;
 
-        ent.Comp.User = args.Equipee;
+        ent.Comp.User = args.EquipTarget;
 
         Dirty(ent);
     }

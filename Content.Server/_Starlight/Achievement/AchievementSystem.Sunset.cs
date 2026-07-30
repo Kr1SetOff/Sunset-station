@@ -193,8 +193,8 @@ public sealed partial class AchievementSystem
         if (!protoId.Contains("Captain") || !protoId.Contains("Hat"))
             return;
 
-        if (TryGetJobId(args.Equipee, out var jobId) && jobId == CircusCaptainJobId)
-            QueueUnlockAchievement(args.Equipee, "sunset_circus_captain");
+        if (TryGetJobId(args.EquipTarget, out var jobId) && jobId == CircusCaptainJobId)
+            QueueUnlockAchievement(args.EquipTarget, "sunset_circus_captain");
     }
 
     // Miscalculated: a Scientist activates an artifact node that collapses into a singularity.
