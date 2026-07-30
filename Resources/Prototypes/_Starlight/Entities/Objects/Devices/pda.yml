@@ -935,7 +935,7 @@
        !type:String
        pda-medtak
   - type: Pda
-    id: MedTakMedicIDCard
+    id: MedTakIDCardMedic
   - type: PdaBorderColor
     accentVColor: "#d7d7d0"
     borderColor: "#600000"
@@ -950,7 +950,7 @@
   description: It's red paint.
   components:
   - type: Pda
-    id: MedTakPilotIDCard
+    id: MedTakIDCardPilot
   - type: Appearance # Sunset: dedicated resprite
     appearanceDataInit:
      enum.PdaVisuals.PdaType:
@@ -967,7 +967,7 @@
   description: It's blood.
   components:
   - type: Pda
-    id: MedTakSecurityIDCard
+    id: MedTakIDCardSecurity
   - type: Appearance # Sunset: dedicated resprite
     appearanceDataInit:
      enum.PdaVisuals.PdaType:
@@ -984,7 +984,7 @@
   description: It's blood.
   components:
   - type: Pda
-    id: MedTakTeamLeadIDCard
+    id: MedTakIDCardTeamLead
   - type: Appearance # Sunset: dedicated resprite
     appearanceDataInit:
      enum.PdaVisuals.PdaType:
@@ -1001,7 +1001,7 @@
   description: It's red paint.
   components:
   - type: Pda
-    id: MedTakDispatcherIDCard
+    id: MedTakIDCardDispatcher
   - type: Appearance # Sunset: dedicated resprite
     appearanceDataInit:
      enum.PdaVisuals.PdaType:

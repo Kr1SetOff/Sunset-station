@@ -110,7 +110,7 @@
           conditions:
           - !type:HasBudgetCondition
           - !type:MaxRuleOccurenceCondition
-        - id: SLChangeling
+        - id: Changeling
           prob: 0.15
           conditions:
           - !type:HasBudgetCondition
@@ -197,7 +197,7 @@
           conditions:
           - !type:HasBudgetCondition
           - !type:MaxRuleOccurenceCondition
-        - id: SLChangelingLess
+        - id: CalmLing
           weight: 6
           prob: 0.50
           conditions:
@@ -205,7 +205,7 @@
           - !type:MaxRuleOccurenceCondition
           - !type:MutuallyExclusiveRuleCondition
             rules:
-            - SLChangeling # Don't double changelings
+            - Changeling # Don't double changelings
         - id: SiliconLiberation
           weight: 8
           prob: 0.50
@@ -436,7 +436,7 @@
           conditions:
           - !type:HasBudgetCondition
           - !type:MaxRuleOccurenceCondition
-        - id: SLChangeling
+        - id: Changeling
           prob: 0.15
           conditions:
           - !type:HasBudgetCondition
@@ -529,7 +529,7 @@
           - !type:MutuallyExclusiveRuleCondition
             rules:
             - Vampire # Beta exclusive
-        - id: SLChangelingLess
+        - id: CalmLing
           weight: 6
           prob: 0.50
           conditions:
@@ -537,7 +537,7 @@
           - !type:MaxRuleOccurenceCondition
           - !type:MutuallyExclusiveRuleCondition
             rules:
-            - SLChangeling # Don't double changelings
+            - Changeling # Don't double changelings
         - id: SiliconLiberation
           weight: 8
           prob: 0.50
