@@ -1,0 +1,25 @@
+spellblade-enchantment-lightning-name = Lightning
+spellblade-enchantment-lightning-desc = Your blade crackles with lightning on hit.
+spellblade-enchantment-fire-name = Fire
+spellblade-enchantment-fire-desc = Your blade sets targets ablaze.
+spellblade-enchantment-bluespace-name = Bluespace
+spellblade-enchantment-bluespace-desc = Your blade phases through bluespace.
+spellblade-enchantment-spacetime-name = Spacetime
+spellblade-enchantment-spacetime-desc = Your blade tears at the fabric of space and time.
+spellblade-enchantment-forceshield-name = Forceshield
+spellblade-enchantment-forceshield-desc = Your blade grants a temporary shield on hit.
+
+selectable-ammo-fireball-desc = Fires a bolt of searing flame.
+selectable-ammo-healing-desc = Fires a bolt of restorative energy.
+selectable-ammo-spellcard-desc = Fires a spread of spell cards.
+selectable-ammo-tele-desc = Fires a bolt that teleports its target.
+selectable-ammo-fiery-desc = Fires a bolt of fire.
+selectable-ammo-death-desc = Fires a bolt of lethal energy.
+selectable-ammo-icecube-desc = Fires a bolt that freezes its target solid.
+selectable-ammo-swap-desc = Fires a bolt that swaps places with its target.
+selectable-ammo-bee-desc = Fires a bolt that summons bees.
+selectable-ammo-emp-desc = Fires a bolt that disables electronics.
+selectable-ammo-smoke-desc = Fires a bolt that creates a cloud of smoke.
+selectable-ammo-blinding-desc = Fires a bolt that blinds its target.
+selectable-ammo-vampiric-desc = Fires a bolt that drains its target's blood.
+selectable-ammo-missile-lesser-desc = Fires a weak bolt of arcane energy.

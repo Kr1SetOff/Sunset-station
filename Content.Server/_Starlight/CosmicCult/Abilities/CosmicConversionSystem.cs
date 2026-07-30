@@ -11,7 +11,6 @@ using Content.Shared.Roles;
 using Content.Shared.Roles.Components;
 using Content.Shared.Mind;
 using Content.Shared._Starlight.NullSpace;
-using Content.Shared.Changeling;
 
 namespace Content.Server._Starlight.CosmicCult.Abilities;
 
@@ -71,7 +70,7 @@ public sealed partial class CosmicConversionSystem : EntitySystem
                 _popup.PopupEntity(Loc.GetString("cult-glyph-target-chaplain"), uid, args.User);
                 args.Cancel();
             }
-            else if (uid.Comp.NegateProtection == false && HasComp<ChangelingComponent>(target))
+            else if (uid.Comp.NegateProtection == false && HasComp<Content.Shared._Goobstation.Changeling.Components.ChangelingComponent>(target))
             {
                 _popup.PopupEntity(Loc.GetString("cult-glyph-target-otherantag"), uid, args.User);
                 args.Cancel();

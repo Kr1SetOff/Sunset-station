@@ -444,6 +444,9 @@
   id: CubanCarp # CargoBounty: BountyCubanCarp
 
 - type: Tag
+  id: CursedAnimalMask # _Goobstation - Used by ActionBarnyardCurse masks (pig/frog/cow/horse) to identify cursed barnyard animal masks
+
+- type: Tag
   id: Cutlet # MetamorphRecipe: FoodBurgerCheese, FoodBurgerChicken, FoodBurgerDuck
 
 ## D ##
@@ -665,6 +668,9 @@
 
 - type: Tag
   id: GuideEmbeded # Applied by GuideEntityEmbed and used by GuidebookSystem. This tag hides the guidebook link when examining an entity inside a guide book.
+
+- type: Tag # Goobstation
+  id: GrimoireGhost
 
 - type: Tag
   id: GunUpgradeDamage # Used by PKAUpgradeDamage:GunUpgrade to ensure mutually exclusive upgrades.
@@ -1547,6 +1553,30 @@
 - type: Tag
   id: WizardWand # that evil vvizard vvand
                  # .cs: ChargeSpellEvent. Storage whitelist: ClothingBeltWand
+
+- type: Tag
+  id: WizardHat # _Goobstation - marks wizard hat clothing for Chuuni Invocations' hat check
+
+- type: Tag
+  id: GunCanAimShooter # _Goobstation - marks a gun as usable by AmmoSelector-driven wands
+
+- type: Tag
+  id: IgnoreBindSoul # _Goobstation - exempts an entity from the BindSoul (lich) spell
+
+- type: Tag
+  id: BindSoulAction # _Goobstation - marks the BindSoul action for its resurrection use-delay logic
+
+- type: Tag
+  id: FrozenIgnoreMindAction # _Goobstation - actions that stay usable while the mind is FreezeContacts-frozen
+
+- type: Tag
+  id: GorillaFormAction # _Goobstation - marks the Summon Simians gorilla-form action
+
+- type: Tag
+  id: SoulTapped # _Goobstation - marks an entity that has been drained by the Soul Tap spell
+
+- type: Tag
+  id: SummonSimiansMaxLevelAction # _Goobstation - marks Summon Simians upgrade actions at max level
 
 - type: Tag
   id: Wooden # just like our atmos

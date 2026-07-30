@@ -1,0 +1,25 @@
+spellblade-enchantment-lightning-name = Молния
+spellblade-enchantment-lightning-desc = Ваш клинок при попадании выпускает разряд молнии.
+spellblade-enchantment-fire-name = Огонь
+spellblade-enchantment-fire-desc = Ваш клинок поджигает цели.
+spellblade-enchantment-bluespace-name = Синее пространство
+spellblade-enchantment-bluespace-desc = Ваш клинок фазируется через синее пространство.
+spellblade-enchantment-spacetime-name = Пространство-время
+spellblade-enchantment-spacetime-desc = Ваш клинок разрывает ткань пространства и времени.
+spellblade-enchantment-forceshield-name = Силовой щит
+spellblade-enchantment-forceshield-desc = Ваш клинок при попадании даёт временный щит.
+
+selectable-ammo-fireball-desc = Стреляет зарядом обжигающего пламени.
+selectable-ammo-healing-desc = Стреляет зарядом восстанавливающей энергии.
+selectable-ammo-spellcard-desc = Стреляет веером карт заклинаний.
+selectable-ammo-tele-desc = Стреляет зарядом, телепортирующим цель.
+selectable-ammo-fiery-desc = Стреляет огненным зарядом.
+selectable-ammo-death-desc = Стреляет зарядом смертельной энергии.
+selectable-ammo-icecube-desc = Стреляет зарядом, замораживающим цель.
+selectable-ammo-swap-desc = Стреляет зарядом, меняющим вас местами с целью.
+selectable-ammo-bee-desc = Стреляет зарядом, призывающим пчёл.
+selectable-ammo-emp-desc = Стреляет зарядом, отключающим электронику.
+selectable-ammo-smoke-desc = Стреляет зарядом, создающим облако дыма.
+selectable-ammo-blinding-desc = Стреляет зарядом, ослепляющим цель.
+selectable-ammo-vampiric-desc = Стреляет зарядом, высасывающим кровь цели.
+selectable-ammo-missile-lesser-desc = Стреляет слабым зарядом магической энергии.

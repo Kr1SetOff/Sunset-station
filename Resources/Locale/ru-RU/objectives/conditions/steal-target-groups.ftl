@@ -13,6 +13,7 @@ steal-target-groups-jetpack-captain-filled = джетпак капитана
 steal-target-groups-weapon-antique-laser = антикварный лазерный пистолет
 steal-target-groups-nuke-disk = диск ядерной авторизации
 steal-target-groups-weapon-energy-magnum = энергетический магнум
+steal-target-groups-weapon-energy-shotgun = энергетический дробовик
 
 # Thief Collection
 steal-target-groups-figurines = фигурки (любые)

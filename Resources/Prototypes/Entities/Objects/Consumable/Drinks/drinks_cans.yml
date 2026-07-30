@@ -362,9 +362,9 @@
           Quantity: 30
       grindable: *grindable
   - type: Sprite
-    sprite: Objects/Consumable/Drinks/changelingsting.rsi
+    sprite: Objects/Consumable/Drinks/purple_can.rsi
   - type: Item
-    sprite: Objects/Consumable/Drinks/changelingsting.rsi
+    sprite: Objects/Consumable/Drinks/purple_can.rsi
 
 - type: entity
   parent: DrinkCanBaseFull

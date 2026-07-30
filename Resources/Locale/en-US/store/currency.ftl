@@ -11,5 +11,3 @@ store-currency-display-telecrystal = TC
 store-currency-display-stolen-essence = Stolen Essence
 store-currency-display-silicon-memory = Memory
 store-currency-display-wizcoin = Wiz€oin™
-store-currency-display-evolutionpoints = Evolution Points
-store-currency-display-dna = DNA

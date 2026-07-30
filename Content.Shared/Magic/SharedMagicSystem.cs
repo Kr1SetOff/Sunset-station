@@ -144,7 +144,8 @@ public abstract partial class SharedMagicSystem : EntitySystem
         // TODO: Pre-cast do after, either here or in SharedActionsSystem
     }
 
-    private bool PassesSpellPrerequisites(EntityUid spell, EntityUid performer)
+    // _Goobstation: made public so SharedSpellsSystem (ported Wizard spells) can reuse the same prerequisite check.
+    public bool PassesSpellPrerequisites(EntityUid spell, EntityUid performer)
     {
         var ev = new BeforeCastSpellEvent(performer);
         RaiseLocalEvent(spell, ref ev);

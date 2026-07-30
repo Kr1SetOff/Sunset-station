@@ -1,0 +1,184 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  name: supermatter halberd
+  parent: [BaseItem, BaseMagicalContraband]
+  id: SupermatterHalberd
+  description: The revered weapon of Oblivion Enforcers, used to enforce the Order's will.
+  components:
+  - type: Sharp
+  - type: Sprite
+    sprite: _Goobstation/Wizard/Objects/Weapons/smhalberd.rsi
+    state: icon
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    attackRate: 0.75
+    damage:
+      types:
+        Slash: 2
+        Piercing: 2
+        Radiation: 5
+        Structural: 5
+    soundHit:
+      path: "/Audio/Weapons/bladeslice.ogg"
+  - type: Wieldable
+  - type: IncreaseDamageOnWield
+    damage:
+      types:
+        Slash: 8
+        Piercing: 8
+        Radiation: 15
+        Structural: 10
+  - type: Item
+    size: Huge
+  - type: Clothing
+    sprite: _Goobstation/Wizard/Objects/Weapons/smhalberd.rsi
+    quickEquip: false
+    slots:
+    - back
+    - suitStorage
+    clothingVisuals:
+      back:
+      - state: equipped-BACKPACK
+      suitstorage:
+      - state: equipped-BACKPACK
+  - type: UseDelay
+    delay: 1
+  - type: KnockdownOnHit
+    duration: 4
+    dropItems: true
+    knockdownOnHeavyAttack: false
+  - type: SupermatterHalberd
+    obliterateWhitelist:
+      components:
+      - Airlock
+      - Firelock
+      - Door
+      tags:
+      - Wall
+      - Window
+      - Airlock
+      - GlassAirlock
+  - type: SupermatterImmune
+  - type: StaticPrice
+    price: 50000
+
+- type: entity
+  name: high frequency blade
+  parent: [BaseSword, BaseMagicalContraband]
+  id: HighFrequencyBlade
+  description: A sword reinforced by a powerful alternating current and resonating at extremely high vibration frequencies. This oscillation weakens the molecular bonds of anything it cuts, thereby increasing its cutting ability.
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Wizard/Objects/Weapons/hfrequency.rsi
+    state: icon
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    attackRate: 8
+    autoAttack: true
+    damage:
+      types:
+        Slash: 5
+        Structural: 10
+    soundHit:
+      path: "/Audio/Weapons/bladeslice.ogg"
+    animation: WeaponArcSlash
+  - type: Clothing
+    sprite: _Goobstation/Wizard/Objects/Weapons/hfrequency.rsi
+    quickEquip: false
+    slots:
+    - back
+    - suitStorage
+    clothingVisuals:
+      back:
+      - state: equipped-BACKPACK
+      suitstorage:
+      - state: equipped-BACKPACK
+  - type: Reflect
+    reflectProb: .3
+    slotFlags:
+      - NONE
+  - type: LightAttackDamageMultiplier
+    multiplier: 3
+    extraSound:
+      path: /Audio/Items/Defib/defib_zap.ogg
+      params:
+        variation: 0.250
+        volume: -5
+  - type: StaticPrice
+    price: 50000
+
+- type: entity
+  name: spellblade
+  parent: [BaseSword, BaseMagicalContraband]
+  id: Spellblade
+  description: An enchanted blade with a series of runes along the side.
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Wizard/Objects/Weapons/spellblade.rsi
+    state: icon
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    damage:
+      types:
+        Slash: 30
+    soundHit:
+      path: "/Audio/Weapons/bladeslice.ogg"
+  - type: Clothing
+    sprite: _Goobstation/Wizard/Objects/Weapons/spellblade.rsi
+    quickEquip: false
+    slots:
+    - back
+    - suitStorage
+    clothingVisuals:
+      back:
+      - state: equipped-BACKPACK
+      suitstorage:
+      - state: equipped-BACKPACK
+  - type: Spellblade
+    prototypes:
+    - EnchantmentLightning
+    - EnchantmentFire
+    - EnchantmentBluespace
+    - EnchantmentSpacetime
+    - EnchantmentForceshield
+  - type: UserInterface
+    interfaces:
+      enum.SpellbladeUiKey.Key:
+        type: SpellbladeBoundUserInterface
+  - type: ActivatableUI
+    inHandsOnly: true
+    key: enum.SpellbladeUiKey.Key
+  - type: StaticPrice
+    price: 50000
+
+# Adapted for this fork: Goob's parent (LavalandBaseKatana) and its dedicated blade/handle-layered
+# sprite don't exist here (no _Lavaland content has been ported), so this reuses this fork's vanilla
+# katana sprite with a color tint instead of the original two-tone blade/handle art. Also drops
+# MeleeDash - that component was never ported (Goob-specific dash-on-swing, used by no other item).
+- type: entity
+  name: echo katana
+  description: Vibrations are constantly flowing through this sword, like they desperately try to find a way out.
+  parent: [ BaseSword, BaseMagicalContraband ]
+  id: EchoKatana
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Melee/katana.rsi
+    color: "#be69ff"
+  - type: Item
+    storedSprite:
+      state: storage
+      sprite: Objects/Weapons/Melee/katana_storage_64x.rsi
+    shape:
+    - 0,0,0,3
+  - type: Clothing
+    sprite: Objects/Weapons/Melee/katana.rsi
+    slots:
+    - Back
+    - Belt
+  - type: MeleeWeapon
+    damage:
+      types:
+        Slash: 25
+  - type: UseDelay
+    delay: 1.5

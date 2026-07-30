@@ -23,6 +23,9 @@ store-caregory-spellbook-defensive = Защитные заклинания
 store-caregory-spellbook-utility = Полезные заклинания
 store-caregory-spellbook-equipment = Снаряжение мага
 store-caregory-spellbook-events = Заклинания событий
+store-caregory-spellbook-summons = Призыв
+store-caregory-spellbook-special = Особое
+store-caregory-spellbook-bundles = Наборы
 
 # Nukie Delivery
 store-category-nukie-delivery = Предложения

@@ -49,10 +49,10 @@ public sealed partial class AdminVerbSystem
     private static readonly EntProtoId DefaultNukeOpRule = "LoneOpsSpawn";
     private static readonly EntProtoId DefaultRevsRule = "Revolutionary";
     private static readonly EntProtoId DefaultThiefRule = "Thief";
+    private static readonly EntProtoId DefaultChangelingRule = "Changeling";
     private static readonly EntProtoId DefaultSpyRule = "Spy"; // Sunset
     private static readonly EntProtoId DefaultHomelanderRule = "Homelander"; // Sunset
     private static readonly EntProtoId DefaultTheBoysTeamRule = "TheBoysTeam"; // Sunset
-    private static readonly EntProtoId DefaultChangelingRule = "Changeling";
     private static readonly EntProtoId ParadoxCloneRuleId = "ParadoxCloneSpawn";
     private static readonly EntProtoId DefaultWizardRule = "Wizard";
     private static readonly EntProtoId DefaultNinjaRule = "NinjaSpawn";
@@ -306,22 +306,6 @@ public sealed partial class AdminVerbSystem
             args.Verbs.Add(malfAi);
         }
 
-        var changelingName = Loc.GetString("admin-verb-text-make-changeling-wip"); //SL edit, -wip as we allready have lings
-        Verb changeling = new()
-        {
-            Text = changelingName,
-            Category = VerbCategory.Antag,
-            Icon = new SpriteSpecifier.Rsi(new ResPath("/Textures/Objects/Weapons/Melee/armblade.rsi"), "icon"),
-            Act = () =>
-            {
-                _antag.ForceMakeAntag<ChangelingRuleComponent>(targetPlayer, DefaultChangelingRule);
-                _autolog.LogToDiscord(string.Join(": ", changelingName, Loc.GetString("admin-verb-make-changeling-wip")), player.Name); //Starlight
-            },
-            Impact = LogImpact.High,
-            Message = string.Join(": ", changelingName, Loc.GetString("admin-verb-make-changeling-wip")), //SL edit: -wip as we have lings allready
-        };
-        args.Verbs.Add(changeling);
-
         var paradoxCloneName = Loc.GetString("admin-verb-text-make-paradox-clone");
         Verb paradox = new()
         {
@@ -379,21 +363,22 @@ public sealed partial class AdminVerbSystem
 
         if (HasComp<HumanoidAppearanceComponent>(args.Target)) // only humanoids can be cloned
             args.Verbs.Add(paradox);
-        /// Starlight START
-        Verb ling = new()
+
+        var changelingName = Loc.GetString("admin-verb-text-make-changeling");
+        Verb changeling = new()
         {
-            Text = Loc.GetString("admin-verb-text-make-changeling"),
+            Text = changelingName,
             Category = VerbCategory.Antag,
-            Icon = new SpriteSpecifier.Rsi(new ResPath("/Textures/Changeling/changeling_abilities.rsi"), "transform"),
+            Icon = new SpriteSpecifier.Rsi(new ResPath("/Textures/_Goobstation/Changeling/changeling_abilities.rsi"), "armblade"),
             Act = () =>
             {
-                _antag.ForceMakeAntag<SLChangelingRuleComponent>(targetPlayer, "SLChangeling");
+                _antag.ForceMakeAntag<Content.Server._Goobstation.Changeling.GameTicking.Rules.ChangelingRuleComponent>(targetPlayer, DefaultChangelingRule);
                 _autolog.LogToDiscord(Loc.GetString("admin-verb-make-changeling"), player.Name);
             },
             Impact = LogImpact.High,
             Message = Loc.GetString("admin-verb-make-changeling"),
         };
-        args.Verbs.Add(ling);
+        args.Verbs.Add(changeling);
 
         Verb vampire = new()
         {

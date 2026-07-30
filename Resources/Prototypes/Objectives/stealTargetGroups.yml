@@ -17,6 +17,13 @@
 # Starlight end
 
 - type: stealTargetGroup
+  id: WeaponEnergyShotgun
+  name: steal-target-groups-weapon-energy-shotgun
+  sprite:
+    sprite: _Starlight/Objects/Weapons/Guns/Battery/Energy_Shotgun.rsi
+    state: icon
+
+- type: stealTargetGroup
   id: ClothingOuterHardsuitRd
   name: steal-target-groups-clothing-outer-hardsuit-rd
   sprite:
