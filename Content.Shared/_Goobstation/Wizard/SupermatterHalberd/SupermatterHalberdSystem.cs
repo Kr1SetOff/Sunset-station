@@ -88,7 +88,6 @@ public sealed class SupermatterHalberdSystem : EntitySystem
             BreakOnMove = true,
             BreakOnDamage = true,
             BreakOnWeightlessMove = false,
-            MultiplyDelay = false,
         };
 
         if (_doAfter.TryStartDoAfter(doArgs))

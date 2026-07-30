@@ -24,6 +24,7 @@ using Content.Server.Store.Systems;
 using Content.Server.Weapons.Ranged.Systems;
 using Content.Shared._Goobstation.Wizard;
 using Content.Shared._Goobstation.Wizard.BindSoul;
+using Content.Shared._Goobstation.Wizard.Components;
 using Content.Shared._Goobstation.Wizard.Chuuni;
 using Content.Shared._Goobstation.Wizard.FadingTimedDespawn;
 using Content.Shared._Goobstation.Wizard.SpellCards;
@@ -36,8 +37,8 @@ using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Construction.Components;
 using Content.Shared.Coordinates.Helpers;
 using Content.Shared.Friction;
+using Content.Server._Starlight.Medical.Body.Systems;
 using Content.Shared.Gibbing;
-using Content.Shared.Gibbing.Events;
 using Content.Shared.Hands.Components;
 using Content.Shared.Humanoid;
 using Content.Shared.Item;
@@ -48,6 +49,9 @@ using Content.Shared.Mind.Components;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.NPC.Systems;
+using Content.Shared.Power.Components;
+using Content.Shared.Random.Helpers;
+using Robust.Shared.GameObjects.Components.Localization;
 using Content.Shared.Physics;
 using Content.Shared.Popups;
 using Content.Shared.Speech.Components;
@@ -94,6 +98,7 @@ public sealed class SpellsSystem : SharedSpellsSystem
     [Dependency] private readonly PuddleSystem _puddle = default!;
     [Dependency] private readonly SharedSolutionContainerSystem _solutionContainer = default!;
     [Dependency] private readonly GibbingSystem _gibbing = default!;
+    [Dependency] private readonly StoreSystem _store = default!;
 
     public override void Initialize()
     {
@@ -138,8 +143,10 @@ public sealed class SpellsSystem : SharedSpellsSystem
             if (!Tag.HasTag(action, args.MaxLevelTag))
                 continue;
 
-            if (TryComp(action, out StoreRefundComponent? refund))
-                StoreSystem.DisableListingRefund(refund.Data);
+            // Adapted for this fork: StoreRefundComponent has no per-listing tracking here (see its own
+            // TODO comment), so the closest available equivalent is disabling refunds for the whole store.
+            if (TryComp(action, out StoreRefundComponent? refund) && refund.StoreEntity is { } storeEnt)
+                _store.DisableRefund(storeEnt);
 
             hasMaxLevelSimians = true;
         }
@@ -394,7 +401,7 @@ public sealed class SpellsSystem : SharedSpellsSystem
             school = magic.School;
 
         if (ev.LoadActions)
-            RaiseNetworkEvent(new LoadActionsEvent(GetNetEntity(ev.Performer)), newEnt.Value);
+            RaiseNetworkEvent(new Content.Shared._Goobstation.Wizard.LoadActionsEvent(GetNetEntity(ev.Performer)), newEnt.Value);
 
         if (TryComp(ev.Action.Owner, out SpeakOnActionComponent? speak))
         {
@@ -458,7 +465,8 @@ public sealed class SpellsSystem : SharedSpellsSystem
             }
 
             spellCard.Target = ev.Entity;
-            _gun.SetTarget(newUid, ev.Entity, out var targeted, false);
+            var targeted = EnsureComp<TargetedProjectileComponent>(newUid);
+            targeted.Target = ev.Entity!.Value;
             Entity<SpellCardComponent, PhysicsComponent, TargetedProjectileComponent> ent = (newUid, spellCard, physics,
                 targeted);
             Dirty(ent);
@@ -596,8 +604,6 @@ public sealed class SpellsSystem : SharedSpellsSystem
         if (!Exists(speakerUid))
             return;
 
-        Color? color = null;
-
         if (Exists(casterUid))
         {
             var invocationEv = new GetSpellInvocationEvent(school, casterUid);
@@ -612,19 +618,14 @@ public sealed class SpellsSystem : SharedSpellsSystem
                     Damageable.TryChangeDamage(speakerUid, -invocationEv.ToHeal, true, false);
             }
 
-            if (speakerUid != casterUid)
-            {
-                var colorEv = new GetMessageColorOverrideEvent();
-                RaiseLocalEvent(casterUid, colorEv);
-                color = colorEv.Color;
-            }
+            // Adapted for this fork: TrySendInGameICMessage has no per-message color override hook here,
+            // so Chuuni Eyepatch's cosmetic message-tint effect (GetMessageColorOverrideEvent) doesn't apply.
         }
 
         _chat.TrySendInGameICMessage(speakerUid,
             speech,
             InGameICChatType.Speak,
-            false,
-            colorOverride: color);
+            false);
     }
 
     protected override bool ChargeItem(EntityUid uid, ChargeMagicEvent ev)

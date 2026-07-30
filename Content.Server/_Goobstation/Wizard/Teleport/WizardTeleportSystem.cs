@@ -15,9 +15,11 @@ using Content.Shared._Sunset.Teleporter;
 using Content.Shared.Actions;
 using Content.Shared.Actions.Components;
 using Content.Shared.Magic.Components;
+using Content.Shared.Movement.Pulling.Components;
 using Content.Shared.Movement.Pulling.Systems;
 using Content.Shared.Physics;
 using Content.Shared.Popups;
+using Content.Shared.Station;
 using Content.Shared.UserInterface;
 using Robust.Server.Audio;
 using Robust.Server.GameObjects;
@@ -35,7 +37,7 @@ public sealed class WizardTeleportSystem : SharedWizardTeleportSystem
     [Dependency] private readonly PullingSystem _pullingSystem = default!;
     [Dependency] private readonly ActionsSystem _actions = default!;
     [Dependency] private readonly ChatSystem _chat = default!;
-    [Dependency] private readonly WizardRuleSystem _wizard = default!;
+    [Dependency] private readonly SharedStationSystem _station = default!;
     [Dependency] private readonly TransformSystem _transform = default!;
     [Dependency] private readonly PopupSystem _popup = default!;
     [Dependency] private readonly SpellsSystem _spells = default!;
@@ -129,7 +131,7 @@ public sealed class WizardTeleportSystem : SharedWizardTeleportSystem
         if (ev.Cancelled)
             return false;
 
-        _pullingSystem.StopAllPulls(user);
+        StopPullingHelper(user);
 
         var userXform = Transform(user);
 
@@ -181,7 +183,7 @@ public sealed class WizardTeleportSystem : SharedWizardTeleportSystem
         if (!TryComp(uid, out TransformComponent? xform))
             return;
 
-        if (_wizard.GetWizardTargetStationGrids().Where(x => x != null).All(x => xform.ParentUid != x))
+        if (_station.GetOwningStation(uid, xform) == null)
             return;
 
         if (!CanTeleportTo(xform))
@@ -201,6 +203,19 @@ public sealed class WizardTeleportSystem : SharedWizardTeleportSystem
             if (CanTeleportTo(xform))
                 yield return new WizardWarp(GetNetEntity(uid), location.Location ?? Name(uid));
         }
+    }
+
+    // Adapted for this fork: no StopAllPulls convenience method here, so this stops pulling in
+    // both directions manually (entity releases whatever it's pulling, and is released if
+    // something else is pulling it).
+    private void StopPullingHelper(EntityUid uid)
+    {
+        if (TryComp<PullerComponent>(uid, out var puller) && puller.Pulling is { } pulling
+            && TryComp<PullableComponent>(pulling, out var pullable))
+            _pullingSystem.TryStopPull(pulling, pullable);
+
+        if (TryComp<PullableComponent>(uid, out var selfPullable))
+            _pullingSystem.TryStopPull(uid, selfPullable);
     }
 
     private bool CanTeleportTo(TransformComponent xform)

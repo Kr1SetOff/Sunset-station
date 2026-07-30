@@ -7,6 +7,8 @@ using Content.Server.Lightning;
 using Content.Shared._Goobstation.Wizard.Spellblade;
 using Content.Shared.Atmos.Components;
 using Content.Shared.Damage;
+using Content.Shared.Damage.Components;
+using Content.Shared.Damage.Systems;
 using Content.Shared.Electrocution;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Physics;

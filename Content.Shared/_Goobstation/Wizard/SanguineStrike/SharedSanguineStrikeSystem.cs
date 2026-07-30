@@ -106,6 +106,6 @@ public abstract class SharedSanguineStrikeSystem : EntitySystem
         else
             toHeal = damageable.Damage;
 
-        _damageable.TryChangeDamage(uid, -toHeal, true, false, damageable);
+        _damageable.TryChangeDamage((uid, damageable), -toHeal, true, false);
     }
 }

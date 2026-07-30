@@ -604,7 +604,7 @@ public sealed partial class WizardMirrorWindow : DefaultWindow
         var hairMarking = Profile.Appearance.HairStyleId switch
         {
             "HairBald" => new List<Marking>(),
-            _ => new() { new(Profile.Appearance.HairStyleId, new List<Color>() { Profile.Appearance.HairColor }) },
+            _ => new() { new(Profile.Appearance.HairStyleId, new List<Color>() { Profile.Appearance.HairColor }, false) },
         };
 
         var facialHairMarking = Profile.Appearance.FacialHairStyleId switch
@@ -612,7 +612,7 @@ public sealed partial class WizardMirrorWindow : DefaultWindow
             "FacialHairShaved" => new List<Marking>(),
             _ => new()
             {
-                new(Profile.Appearance.FacialHairStyleId, new List<Color>() { Profile.Appearance.FacialHairColor })
+                new(Profile.Appearance.FacialHairStyleId, new List<Color>() { Profile.Appearance.FacialHairColor }, false)
             },
         };
 
@@ -652,7 +652,7 @@ public sealed partial class WizardMirrorWindow : DefaultWindow
 
         if (hairColor != null)
         {
-            Markings.HairMarking = new(Profile.Appearance.HairStyleId, new List<Color>() { hairColor.Value });
+            Markings.HairMarking = new(Profile.Appearance.HairStyleId, new List<Color>() { hairColor.Value }, false);
         }
         else
         {
@@ -686,7 +686,7 @@ public sealed partial class WizardMirrorWindow : DefaultWindow
         if (facialHairColor != null)
         {
             Markings.FacialHairMarking = new(Profile.Appearance.FacialHairStyleId,
-                new List<Color>() { facialHairColor.Value });
+                new List<Color>() { facialHairColor.Value }, false);
         }
         else
         {
@@ -702,7 +702,7 @@ public sealed partial class WizardMirrorWindow : DefaultWindow
         }
 
         Markings.CurrentEyeColor = Profile.Appearance.EyeColor;
-        EyeColorPicker.SetData(Profile.Appearance.EyeColor);
+        EyeColorPicker.SetData(Profile.Appearance.EyeColor, false);
     }
 
     private void UpdateSaveButton()

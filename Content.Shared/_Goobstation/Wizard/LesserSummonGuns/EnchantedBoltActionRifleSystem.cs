@@ -123,7 +123,7 @@ public sealed class EnchantedBoltActionRifleSystem : EntitySystem
         Dirty(gun, newComp);
 
         if (TryComp(gun, out WieldableComponent? newWieldable))
-            _wieldable.TryWield(gun, newWieldable, user, false);
+            _wieldable.TryWield(gun, newWieldable, user);
     }
 
     private bool IsHandValid(Entity<HandsComponent> ent, string hand)

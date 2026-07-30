@@ -89,11 +89,16 @@ public abstract class SharedWizardMirrorSystem : EntitySystem
 
         var appearance = new HumanoidCharacterAppearance(hair.Item1,
             hair.Item2,
+            false,
             facialHair.Item1,
             facialHair.Item2,
+            false,
             humanoid.EyeColor,
+            humanoid.EyeGlowing,
             humanoid.SkinColor,
-            humanoid.MarkingSet.GetForwardEnumerator().ToList());
+            humanoid.MarkingSet.GetForwardEnumerator().ToList(),
+            humanoid.Width,
+            humanoid.Height);
 
         var profile = new HumanoidCharacterProfile().WithGender(humanoid.Gender)
             .WithSex(humanoid.Sex)

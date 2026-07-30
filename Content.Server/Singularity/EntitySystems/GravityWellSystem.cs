@@ -123,7 +123,7 @@ public sealed partial class GravityWellSystem : SharedGravityWellSystem
     /// TODO: Make this an event or such.
     /// </summary>
     /// <param name="entity">The entity to check.</param>
-    private bool CanGravPulseAffect(EntityUid entity)
+    public bool CanGravPulseAffect(EntityUid entity)
     {
         if (_physicsQuery.TryComp(entity, out var physics))
         {

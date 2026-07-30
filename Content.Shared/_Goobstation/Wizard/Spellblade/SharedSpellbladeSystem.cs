@@ -48,8 +48,7 @@ public abstract class SharedSpellbladeSystem : EntitySystem
 
     private void OnDamageModify(Entity<ShieldedComponent> ent, ref DamageModifyEvent args)
     {
-        args.Damage = DamageSpecifier.ApplyModifierSet(args.Damage,
-            DamageSpecifier.PenetrateArmor(ent.Comp.Resistances, args.Damage.ArmorPenetration));
+        args.Damage = DamageSpecifier.ApplyModifierSet(args.Damage, ent.Comp.Resistances);
     }
 
     private void OnBeforeStatusEffect(Entity<ShieldedComponent> ent, ref BeforeOldStatusEffectAddedEvent args)
@@ -80,7 +79,6 @@ public abstract class SharedSpellbladeSystem : EntitySystem
             return;
 
         weapon.AttackRate *= args.MeleeMultiplier;
-        weapon.HeavyStaminaCost /= args.MeleeMultiplier;
         weapon.Damage /= args.MeleeMultiplier;
         Dirty(ent.Owner, weapon);
     }

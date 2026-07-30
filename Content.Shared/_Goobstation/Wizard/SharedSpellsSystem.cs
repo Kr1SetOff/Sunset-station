@@ -24,6 +24,7 @@ using Content.Shared.Clothing.Components;
 using Content.Shared.Clumsy;
 using Content.Shared.Cluwne;
 using Content.Shared.Damage;
+using Content.Shared.Damage.Components;
 using Content.Shared.Damage.Systems;
 using Content.Shared.Examine;
 using Content.Shared.Eye.Blinding.Components;
@@ -1431,7 +1432,8 @@ public abstract class SharedSpellsSystem : EntitySystem
         if (target == null || target == user || checkMobState && !HasComp<MobStateComponent>(target))
             return;
 
-        _gunSystem.SetTarget(projectile, target, out var targeted, false);
+        var targeted = EnsureComp<TargetedProjectileComponent>(projectile);
+        targeted.Target = target.Value;
 
         var homing = EnsureComp<HomingProjectileComponent>(projectile);
         homing.Target = target;
@@ -1493,7 +1495,7 @@ public abstract class SharedSpellsSystem : EntitySystem
     private void MakeMime(EntityUid uid)
     {
         var powers = EnsureComp<MimePowersComponent>(uid);
-        powers.CanBreakVow = false;
+        powers.VowBroken = false;
         Dirty(uid, powers);
     }
 
