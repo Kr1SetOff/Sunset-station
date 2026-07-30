@@ -1,4 +1,4 @@
-using Content.Shared.Starlight.TextToSpeech;
+using Content.Shared._Starlight.TextToSpeech;
 using Robust.Shared.Prototypes;
 
 namespace Content.Shared._Sunrise.CollectiveMind;

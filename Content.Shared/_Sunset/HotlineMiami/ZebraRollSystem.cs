@@ -49,12 +49,12 @@ public sealed class ZebraRollSystem : EntitySystem
 
     private void OnPieceEquipped(Entity<ZebraCostumePieceComponent> ent, ref GotEquippedEvent args)
     {
-        RefreshZebraSet(args.Equipee);
+        RefreshZebraSet(args.EquipTarget);
     }
 
     private void OnPieceUnequipped(Entity<ZebraCostumePieceComponent> ent, ref GotUnequippedEvent args)
     {
-        RefreshZebraSet(args.Equipee);
+        RefreshZebraSet(args.EquipTarget);
     }
 
     private void RefreshZebraSet(EntityUid wearer)

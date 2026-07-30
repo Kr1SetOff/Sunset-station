@@ -8,14 +8,12 @@ using Content.Server.Administration.Systems;
 using Content.Server.Discord.DiscordLink;
 using Content.Server.Players.RateLimiting;
 using Content.Server.Preferences.Managers;
-using Content.Server.Starlight;
 using Content.Shared.Administration;
 using Content.Shared.CCVar;
 using Content.Shared.Chat;
 using Content.Shared.Database;
 using Content.Shared.Mind;
 using Content.Shared.Players.RateLimiting;
-using Content.Shared.Starlight;
 using Robust.Shared.Configuration;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
@@ -29,6 +27,17 @@ namespace Content.Server.Chat.Managers;
 /// </summary>
 internal sealed partial class ChatManager : IChatManager
 {
+    // 🌇Sunset🌇 - still consumed by NullLinkPlayerManager.Title.cs for patron title coloring,
+    // even though ChatManager's own OOC-wrap logic below now uses our Sunset admin/sponsor wrap
+    // instead - do not delete, this isn't actually vestigial.
+    public static readonly Dictionary<string, string> PatronOocColors = new() // Starlight-edit: now public
+    {
+        // I had plans for multiple colors and those went nowhere so...
+        { "nuclear_operative", "#aa00ff" },
+        { "syndicate_agent", "#aa00ff" },
+        { "revolutionary", "#aa00ff" }
+    };
+
     [Dependency] private IReplayRecordingManager _replay = default!;
     [Dependency] private IServerNetManager _netManager = default!;
     [Dependency] private IAdminManager _adminManager = default!;
@@ -293,7 +302,7 @@ internal sealed partial class ChatManager : IChatManager
         var messageColor = Color.LightSkyBlue;
         var titleColor = Color.LightSkyBlue;
 
-        var playerName = player.Name;
+        var playerName = FormattedMessage.EscapeText(player.Name); // Starlight
         var playerTitle = "";
 
         if(_playerRoles.TryGetPlayerData(player.UserId, out var playerData))
@@ -333,7 +342,7 @@ internal sealed partial class ChatManager : IChatManager
         var clients = _adminManager.ActiveAdmins.Select(p => p.Channel);
         var wrappedMessage = Loc.GetString("chat-manager-send-admin-chat-wrap-message",
                                         ("adminChannelName", Loc.GetString("chat-manager-admin-channel-name")),
-                                        ("playerName", player.Name), ("message", FormattedMessage.EscapeText(message)));
+                                        ("playerName", FormattedMessage.EscapeText(player.Name)), ("message", FormattedMessage.EscapeText(message))); // Starlight
 
         foreach (var client in clients)
         {

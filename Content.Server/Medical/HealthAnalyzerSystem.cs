@@ -20,7 +20,7 @@ using Content.Shared.MedicalScanner;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Paper; // Starlight-edit
 using Content.Shared.Popups;
-using Content.Shared.Starlight.Medical.Surgery.Effects.Step; // 🌇Sunset🌇 - BodyScannerComponent
+using Content.Shared._Starlight.Medical.Surgery.Components; // 🌇Sunset🌇 - BodyScannerComponent
 using Content.Shared.PowerCell;
 using Content.Shared.Temperature.Components;
 using Content.Shared.Traits.Assorted;
@@ -32,6 +32,7 @@ using Robust.Shared.Prototypes; // Starlight-edit
 using Robust.Shared.Timing;
 using Robust.Shared.Utility; // Starlight-edit
 using Content.Server._Starlight.Medical.Body.Systems;
+using Content.Shared._Starlight.Medical;
 
 namespace Content.Server.Medical;
 

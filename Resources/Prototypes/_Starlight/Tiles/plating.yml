@@ -1,0 +1,23 @@
+- type: tile
+  id: PlatingDiagonalNE
+  parent: Plating
+  sprite: /Textures/_Starlight/Tiles/Plating_NE.png
+  vertices: ["1, 0", "1, 1", "0, 1"]
+
+- type: tile
+  id: PlatingDiagonalSE
+  parent: Plating
+  sprite: /Textures/_Starlight/Tiles/Plating_SE.png
+  vertices: ["0, 0", "1, 0", "1, 1"]
+
+- type: tile
+  id: PlatingDiagonalSW
+  parent: Plating
+  sprite: /Textures/_Starlight/Tiles/Plating_SW.png
+  vertices: ["0, 0", "1, 0", "0, 1"]
+
+- type: tile
+  id: PlatingDiagonalNW
+  parent: Plating
+  sprite: /Textures/_Starlight/Tiles/Plating_NW.png
+  vertices: ["0, 0", "1, 1", "0, 1"]

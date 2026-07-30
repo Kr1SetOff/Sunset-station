@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using System.Linq;
-using Content.Client.Humanoid;
+using Content.Client._Starlight.Humanoid;
 using Content.Client.Lobby;
 using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Markings;

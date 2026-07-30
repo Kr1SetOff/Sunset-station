@@ -2,19 +2,18 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Content.Server._Starlight.Language;
 using Content.Server._Starlight.Radio.Systems;
-using Content.Server._Starlight.TextToSpeech;
 using Content.Shared._Starlight.Speech;
 using Content.Shared.Chat;
 using Content.Shared.Radio;
-using Content.Shared.Starlight.CCVar;
-using Content.Shared.Starlight.TextToSpeech;
+using Content.Shared._Starlight.CCVar;
+using Content.Shared._Starlight.TextToSpeech;
 using Robust.Shared.Audio;
 using Robust.Shared.Configuration;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 
-namespace Content.Server.Starlight.TTS;
+namespace Content.Server._Starlight.TextToSpeech;
 
 public sealed partial class TTSSystem : EntitySystem
 {
@@ -236,9 +235,16 @@ public sealed partial class TTSSystem : EntitySystem
             _ignoredRecipients.Add(args.SenderSession);
     }
 
-    private static string CleanText(string text)
+    /// <summary>
+    /// Cleans and normalizes text for TTS output, preserving apostrophes, normalizing smart quotes,
+    /// stripping formatting tags, and converting numbers to word representations.
+    /// </summary>
+    /// <param name="text">The raw text to be cleaned.</param>
+    /// <returns>The cleaned and normalized text.</returns>
+    internal static string CleanText(string text)
     {
         text = TagStripperRegex().Replace(text, "");
+        text = SmartQuotes().Replace(text, "'");
         text = CharFilter().Replace(text, "");
         // Sunset: numbers are passed through as digits - the RU TTS worker expands them into
         // Russian words (num2words); the built-in NumberConverter only knows English.
@@ -247,8 +253,11 @@ public sealed partial class TTSSystem : EntitySystem
 
     // Sunset: allow Cyrillic - the upstream filter stripped it, turning every Russian phrase
     // into an empty TTS request.
-    [GeneratedRegex(@"[^a-zA-Zа-яА-ЯёЁ0-9,.\-?! ]")]
+    [GeneratedRegex(@"[^a-zA-Zа-яА-ЯёЁ0-9,.\-?!' ]")]
     private static partial Regex CharFilter();
+
+    [GeneratedRegex(@"[\u2018\u2019]")]
+    private static partial Regex SmartQuotes();
 
     [GeneratedRegex(@"\[[^\]]*\]")]
     private static partial Regex TagStripperRegex();

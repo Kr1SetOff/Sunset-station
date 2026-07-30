@@ -52,6 +52,8 @@ using Robust.Shared.Localization;
 using Robust.Shared.Log;
 using Robust.Shared.Map;
 using System.Collections.Generic;
+using Content.Shared._Starlight.StationAi;
+using Content.Shared.Tag;
 #endregion Starlight
 
 namespace Content.Server.Silicons.StationAi;
@@ -78,6 +80,7 @@ public sealed partial class StationAiSystem : SharedStationAiSystem
     [Dependency] private SharedAppearanceSystem _appearance = default!;
     // Starlight Start
     [Dependency] private IMapManager _map = default!;
+    [Dependency] private TagSystem _tags = default!;
     [Dependency] private SuitSensorSystem _suitSensors = default!;
     [Dependency] private FollowerSystem _followerSystem = default!;
     [Dependency] private StationAiVisionSystem _aiVision = default!;
@@ -86,6 +89,7 @@ public sealed partial class StationAiSystem : SharedStationAiSystem
     private readonly HashSet<Entity<StationAiCoreComponent>> _stationAiCores = new();
 
     // Starlight-start
+    private readonly ProtoId<TagPrototype> _ignoreWarpTag = new("GhostOnlyWarp");
     private readonly Dictionary<EntityUid, EntityUid> _activeFollowTargets = new();
     private readonly List<EntityUid> _followTargetsToRemove = new();
     private readonly ISawmill _warpSawmill = Logger.GetSawmill("stationai.warp");
@@ -155,7 +159,7 @@ public sealed partial class StationAiSystem : SharedStationAiSystem
             }
 
             // Check if target is outside AI camera view
-            if (_aiVision.IsOutsideCameraView(target))
+            if (_aiVision.IsOutsideCameraViewCached(target))
             {
                 _followerSystem.StopFollowingEntity(follower, target);
                 _followTargetsToRemove.Add(target);
@@ -248,7 +252,7 @@ public sealed partial class StationAiSystem : SharedStationAiSystem
             }
 
             // Don't show crew members outside of camera view
-            if (_aiVision.IsOutsideCameraView(ownerUid))
+            if (_aiVision.IsOutsideCameraViewCached(ownerUid)) // starlight
                 continue;
 
             var display = string.IsNullOrWhiteSpace(status.Job)
@@ -273,6 +277,11 @@ public sealed partial class StationAiSystem : SharedStationAiSystem
 
             if (string.IsNullOrWhiteSpace(warp.Location))
                 continue;
+
+            // Starlight Start
+            if (_tags.HasTag(uid, _ignoreWarpTag))
+                continue;
+            // Starlight End
 
             if (aiStation is { } station)
             {

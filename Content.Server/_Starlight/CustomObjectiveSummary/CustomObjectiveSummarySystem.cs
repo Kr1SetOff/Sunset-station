@@ -1,6 +1,7 @@
 using Content.Server.Administration.Logs;
 using Content.Shared._Starlight.CustomObjectiveSummary;
 using Content.Shared._Starlight.Railroading;
+using Content.Shared._Starlight.Railroading.Components;
 using Content.Shared.Database;
 using Content.Shared.Mind;
 using Robust.Server.Player;

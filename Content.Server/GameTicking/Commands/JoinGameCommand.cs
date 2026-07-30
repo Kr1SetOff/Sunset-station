@@ -1,5 +1,6 @@
 using Content.Server._Sunset.Discord;
 using Content.Server._Sunset.SponsorTier;
+using Content.Server._Starlight.NewLife;
 using Content.Server.Administration.Managers;
 using Content.Server.EUI;
 using Content.Server.Ghost.Roles;

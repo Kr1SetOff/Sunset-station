@@ -9,7 +9,6 @@ using Content.Server.Chat.Managers;
 using Content.Server.GameTicking;
 using Content.Server.Speech.EntitySystems;
 using Content.Server.Speech.Prototypes;
-using Content.Server.Starlight.TTS;
 using Content.Server.Station.Systems;
 using Content.Shared._Starlight.Language;
 using Content.Shared._Starlight.Speech;
@@ -51,6 +50,7 @@ using Content.Shared._Starlight.Language.Systems;
 using Content.Shared.Popups;
 using Content.Shared._Starlight.Radio;
 using Content.Server.Radio.EntitySystems;
+using Content.Server._Starlight.TextToSpeech;
 // Starlight End
 
 namespace Content.Server.Chat.Systems;
@@ -219,7 +219,11 @@ public sealed partial class ChatSystem : SharedChatSystem
         LanguagePrototype language;
 
         if (message.Text.StartsWith(SharedLanguageSystem.ChatPrefixChar))
+        {
             language = _language.GetLanguageFromPrefix(source, ref message.Text, out _, true);
+            // remove prefix from tts property. luckily this is being done before anything else so i get to just set it directly, yay me!
+            message.Tts = message.Text;
+        }
         else language = languageOverride ?? _language.GetLanguage(source);
         // Starlight end
 

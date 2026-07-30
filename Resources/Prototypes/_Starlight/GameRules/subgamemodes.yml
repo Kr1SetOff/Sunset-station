@@ -21,7 +21,7 @@
         sound: "/Audio/_Starlight/Ambience/Antag/self_greeting.ogg"
       allowNonHumans: true
   - type: DynamicRuleCost
-    cost: 70
+    cost: 75
 
 # Variant of thieves that only spawn up to 3. Used in revs to prevent emags from being too easily obtained.
 - type: entity
@@ -56,8 +56,6 @@
       - MindRoleThief
       briefing:
         sound: "/Audio/Misc/thief_greeting.ogg"
-  - type: DynamicRuleCost
-    cost: 75
 
 #Subgamemode variant of vamps. There's less of them.
 - type: entity
@@ -81,7 +79,7 @@
       tags:
         - CantBecomeRevolutionary
   - type: DynamicRuleCost
-    cost: 60
+    cost: 75
     # Starlight-end
 
 
@@ -112,6 +110,8 @@
       allowNonHumans: true
       mindRoles:
       - MindRoleTraitor
+  - type: DynamicRuleCost
+    cost: 75
 
 - type: entity
   parent: BaseGameRule
@@ -127,8 +127,8 @@
     selectionTime: IntraPlayerSpawn
     definitions:
     - prefRoles: [ Devil ]
-      max: 1
-      playerRatio: 20
+      max: 2
+      playerRatio: 50 # not meant to be a ton of them
       lateJoinAdditional: false
       allowNonHumans: true
       multiAntagSetting: NotExclusive

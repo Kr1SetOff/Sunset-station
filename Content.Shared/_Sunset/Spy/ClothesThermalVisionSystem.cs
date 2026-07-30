@@ -1,3 +1,4 @@
+using Content.Shared._Starlight.Overlay.Components;
 using Content.Shared.Clothing.Components;
 using Content.Shared.Eye.Blinding.Components;
 using Content.Shared.Inventory.Events;
@@ -26,13 +27,13 @@ public sealed class ClothesThermalVisionSystem : EntitySystem
             || !clothing.Slots.HasFlag(args.SlotFlags))
             return;
 
-        if (HasComp<ThermalVisionComponent>(args.Equipee))
+        if (HasComp<ThermalVisionComponent>(args.EquipTarget))
         {
             ent.Comp.Granted = false;
             return;
         }
 
-        EnsureComp<ThermalVisionComponent>(args.Equipee);
+        EnsureComp<ThermalVisionComponent>(args.EquipTarget);
         ent.Comp.Granted = true;
     }
 
@@ -42,6 +43,6 @@ public sealed class ClothesThermalVisionSystem : EntitySystem
             return;
 
         ent.Comp.Granted = false;
-        RemComp<ThermalVisionComponent>(args.Equipee);
+        RemComp<ThermalVisionComponent>(args.EquipTarget);
     }
 }

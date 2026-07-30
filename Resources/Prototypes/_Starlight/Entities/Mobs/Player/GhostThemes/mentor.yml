@@ -10,6 +10,7 @@
   requirements:
   - !type:DiscordRolesRequirement
     requirement: MentorRolesReq
+  category: Mentor
 
 - type: ghostTheme
   id: Daemon
@@ -37,3 +38,4 @@
       - Ментор
       - Мл.Ивент-мастер
       - Ст.Ивент-Мастер
+  category: Mentor
