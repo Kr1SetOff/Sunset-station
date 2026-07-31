@@ -28,6 +28,8 @@ using Content.Shared._Goobstation.Wizard.Components;
 using Content.Shared._Goobstation.Wizard.Chuuni;
 using Content.Shared._Goobstation.Wizard.FadingTimedDespawn;
 using Content.Shared._Goobstation.Wizard.SpellCards;
+using Content.Shared._Starlight.Medical.Surgery.Components;
+using Content.Shared._Starlight.Medical.Surgery.Events;
 using Content.Shared.Actions.Components;
 using Content.Shared.Body.Components;
 using Content.Shared.Body.Part;
@@ -660,6 +662,12 @@ public sealed class SpellsSystem : SharedSpellsSystem
     // Adapted for this fork: dropped the Shitmed-only limb-tear sub-effect (WoundSystem.AmputateWoundable
     // has no equivalent here) - Rathen's shockwave still stuns, farts, and deals the super-fart damage,
     // it just doesn't tear limbs off on the escalated hit.
+    //
+    // Fixed: this looked up targets by FartComponent, which is the very component the spell is supposed
+    // to grant on first hit - nobody has it beforehand, so the shockwave could never find a single
+    // target and did nothing at all. It now looks up nearby mobs directly and grants the component
+    // itself. The "defecate your appendix" half of the spell (removing the appendix organ from this
+    // fork's surgery system) was also never implemented - only the escalated second-hit branch existed.
     protected override void Rathen(RathenEvent ev)
     {
         base.Rathen(ev);
@@ -667,22 +675,40 @@ public sealed class SpellsSystem : SharedSpellsSystem
         var mapPos = TransformSystem.GetMapCoordinates(ev.Performer);
         var stunTime = ev.StunTime;
 
-        foreach (var (target, _) in Lookup.GetEntitiesInRange<FartComponent>(mapPos, ev.MaxRange))
+        foreach (var (target, _) in Lookup.GetEntitiesInRange<MobStateComponent>(mapPos, ev.MaxRange))
         {
             if (target == ev.Performer)
                 continue;
 
-            if (!TryComp<FartComponent>(target, out var fart)
-                || !TryComp<BodyComponent>(target, out var body)
-                || _mobState.IsDead(target))
+            if (!TryComp<BodyComponent>(target, out _) || _mobState.IsDead(target))
                 continue;
 
             Stun.TryKnockdown(target, stunTime, refresh: true);
 
+            var fart = EnsureComp<FartComponent>(target);
+
             if (!fart.SuperFarted)
             {
+                fart.SuperFarted = true;
                 fart.FartInhale = true;
+                Dirty(target, fart);
+
                 _chat.TryEmoteWithChat(target, "FartSuper", ignoreActionBlocker: true, forceEmote: true);
+
+                if (Body.GetBodyOrgans(target).FirstOrNull(o => HasComp<OrganAppendixComponent>(o.Id)) is { } appendix
+                    && Body.RemoveOrgan(appendix.Id))
+                {
+                    TransformSystem.SetCoordinates(appendix.Id, Transform(target).Coordinates);
+
+                    var extractedEv = new SurgeryOrganExtracted(target, target, appendix.Id);
+                    RaiseLocalEvent(appendix.Id, ref extractedEv);
+
+                    _popup.PopupEntity(
+                        Loc.GetString("spell-rathen-fart-popup", ("target", target)),
+                        target,
+                        target,
+                        PopupType.LargeCaution);
+                }
             }
             else
             {

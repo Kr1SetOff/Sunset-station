@@ -563,3 +563,23 @@
     state: paper
   - type: StaticPrice
     price: 0
+
+# Rathen's Curse (SpellsSystem.Rathen) forces this emote on first hit - never existed anywhere in
+# this repo, so casting the spell just spammed a "resolve invalid ProtoId<EmotePrototype>" error.
+- type: emote
+  id: FartSuper
+  name: chat-emote-name-fart-super
+  category: Vocal
+  icon: /Textures/Interface/Emotes/scream.png
+  chatMessages: ["chat-emote-msg-fart-super"]
+
+# Tile Toggle spell (HierophantBeatComponent) shows this alert while its movement speed buff is
+# active - never existed anywhere in this repo, so the buff worked but logged an error every time
+# instead of showing an icon.
+- type: alert
+  id: HierophantBeat
+  icons:
+  - sprite: Objects/Magic/magicactions.rsi
+    state: spell_default
+  name: alerts-hierophant-beat-name
+  description: alerts-hierophant-beat-desc
