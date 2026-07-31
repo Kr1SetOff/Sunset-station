@@ -181,11 +181,15 @@ public sealed partial class BindSoulEvent : InstantActionEvent
     [DataField]
     public SoundSpecifier? Sound;
 
+    // Adapted for this fork: Goob-Station's black lich robe/hat recolor (and its art) was never
+    // ported - referencing the missing IDs made every YAMLLinter run fail, and would have crashed
+    // BindSoul's SetGear call the moment a player actually finished the ritual. Falls back to the
+    // same robes every other wizard wears until that recolor gets ported.
     [DataField]
     public Dictionary<string, EntProtoId> Gear = new()
     {
-        {"head", "ClothingHeadHatBlackwizardReal"},
-        {"outerClothing", "ClothingOuterWizardBlackReal"},
+        {"head", "ClothingHeadHatWizard"},
+        {"outerClothing", "ClothingOuterWizard"},
     };
 
     [DataField]

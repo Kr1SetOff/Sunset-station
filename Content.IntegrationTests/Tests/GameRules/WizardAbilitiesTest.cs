@@ -6,6 +6,7 @@ using Content.Server.Preferences.Managers;
 using Content.Shared._Goobstation.Wizard;
 using Content.Shared.Actions;
 using Content.Shared.Actions.Components;
+using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Inventory;
 using Content.Shared.Magic.Components;
 using Content.Shared.Preferences;
@@ -183,6 +184,38 @@ public sealed class WizardAbilitiesTest : GameTest
             Perform(entMan, wizard, "ActionHomingToolbox", new HomingToolboxEvent { Target = coords });
             Perform(entMan, wizard, "ActionSpellCards", new SpellCardsEvent { Target = coords });
         });
+        await pair.RunTicksSync(10);
+    }
+
+    /// <summary>
+    /// Regression test: BindSoulEvent.Gear defaulted to "ClothingHeadHatBlackwizardReal" and
+    /// "ClothingOuterWizardBlackReal" - a black robe recolor whose art was never ported, so those
+    /// prototypes don't exist. TestSpells never caught this because it never gives the wizard
+    /// anything to hold, so BindSoul always bails out early on "no held item" before reaching the
+    /// SetGear call that would have thrown trying to spawn them. This actually completes the ritual.
+    /// </summary>
+    [Test]
+    public async Task TestBindSoul()
+    {
+        var pair = Pair;
+        var server = pair.Server;
+        var entMan = server.EntMan;
+
+        var wizard = await SpawnRoundStartedWizard(pair);
+        var coords = entMan.GetComponent<TransformComponent>(wizard).Coordinates;
+
+        await server.WaitAssertion(() =>
+        {
+            var hands = entMan.System<SharedHandsSystem>();
+            var item = entMan.SpawnEntity("ClothingHeadHatWizard", coords);
+            Assert.That(hands.TryPickupAnyHand(wizard, item), Is.True,
+                "Could not give the wizard an item to bind their soul to!");
+
+            entMan.System<SharedActionsSystem>().AddAction(wizard, "ActionBindSoul");
+        });
+        await pair.RunTicksSync(5);
+
+        await server.WaitPost(() => Perform(entMan, wizard, "ActionBindSoul"));
         await pair.RunTicksSync(10);
     }
 
