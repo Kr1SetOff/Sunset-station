@@ -10,6 +10,20 @@
 # Wiring these upgrade listings onto the pre-existing base spells was judged out of scope/risky for
 # a YAML-only port (would require touching/verifying the base game's independent spell system).
 # See final report for details.
+#
+# The 23 upgrades below were previously non-functional: their base actions
+# (Resources/Prototypes/_Goobstation/Wizard/actions.yml) had no ActionUpgrade component at all, so
+# TryUpgradeAction always failed and every purchase silently refunded. Each base action now has a
+# single Level 2 variant (<ActionName>2) whose only change is requiresClothes: false on the Magic
+# component - lets the spell be cast without full wizard robes equipped. This was chosen as a safe,
+# universal upgrade effect since most of these spells don't expose a scalable "power" DataField to
+# buff instead (no per-spell balance data survived the port). stock is capped at 1 to match - buying
+# past level 2 would otherwise silently fail/refund since no level 3+ variant exists.
+#
+# Also removed: the generic `icon: {sprite: Objects/Magic/magicactions.rsi, state: spell_default}`
+# override on every listing below. Content.Client/Store/Ui/StoreMenu.xaml.cs falls back to the
+# granted action's own icon only when Icon is null - with it explicitly set, every upgrade showed
+# the same placeholder icon instead of its actual spell's icon.
 
 # Offensive
 - type: listing
@@ -17,9 +31,6 @@
   productUpgradeId: SpellbookMimeMalaiseUpgrade
   name: spellbook-upgrade-mime-malaise-name
   description: spellbook-upgrade-mime-malaise-desc
-  icon:
-    sprite: Objects/Magic/magicactions.rsi
-    state: spell_default
   cost:
     WizCoin: 1
   categories:
@@ -29,16 +40,13 @@
     whitelist:
     - SpellbookMimeMalaise
   - !type:ListingLimitedStockCondition
-    stock: 4
+    stock: 1
 
 - type: listing
   id: SpellbookCluwneCurseUpgrade
   productUpgradeId: SpellbookCluwneCurseUpgrade
   name: spellbook-upgrade-cluwne-curse-name
   description: spellbook-upgrade-cluwne-curse-desc
-  icon:
-    sprite: Objects/Magic/magicactions.rsi
-    state: spell_default
   cost:
     WizCoin: 2
   categories:
@@ -48,16 +56,13 @@
     whitelist:
     - SpellbookCluwneCurse
   - !type:ListingLimitedStockCondition
-    stock: 2
+    stock: 1
 
 - type: listing
   id: SpellbookBananaTouchUpgrade
   productUpgradeId: SpellbookBananaTouchUpgrade
   name: spellbook-upgrade-banana-touch-name
   description: spellbook-upgrade-banana-touch-desc
-  icon:
-    sprite: Objects/Magic/magicactions.rsi
-    state: spell_default
   cost:
     WizCoin: 1
   categories:
@@ -67,16 +72,13 @@
     whitelist:
     - SpellbookBananaTouch
   - !type:ListingLimitedStockCondition
-    stock: 4
+    stock: 1
 
 - type: listing
   id: SpellbookBlindUpgrade
   productUpgradeId: SpellbookBlindUpgrade
   name: spellbook-upgrade-blind-name
   description: spellbook-upgrade-blind-desc
-  icon:
-    sprite: Objects/Magic/magicactions.rsi
-    state: spell_default
   cost:
     WizCoin: 1
   categories:
@@ -86,16 +88,13 @@
     whitelist:
     - SpellbookBlind
   - !type:ListingLimitedStockCondition
-    stock: 4
+    stock: 1
 
 - type: listing
   id: SpellbookMutateUpgrade
   productUpgradeId: SpellbookMutateUpgrade
   name: spellbook-upgrade-mutate-name
   description: spellbook-upgrade-mutate-desc
-  icon:
-    sprite: Objects/Magic/magicactions.rsi
-    state: spell_default
   cost:
     WizCoin: 2
   categories:
@@ -112,9 +111,6 @@
   productUpgradeId: SpellbookTeslaBlastUpgrade
   name: spellbook-upgrade-tesla-blast-name
   description: spellbook-upgrade-tesla-blast-desc
-  icon:
-    sprite: Objects/Magic/magicactions.rsi
-    state: spell_default
   cost:
     WizCoin: 1
   categories:
@@ -124,16 +120,13 @@
     whitelist:
     - SpellbookTeslaBlast
   - !type:ListingLimitedStockCondition
-    stock: 4
+    stock: 1
 
 - type: listing
   id: SpellbookLightningBoltUpgrade
   productUpgradeId: SpellbookLightningBoltUpgrade
   name: spellbook-upgrade-lightning-bolt-name
   description: spellbook-upgrade-lightning-bolt-desc
-  icon:
-    sprite: Objects/Magic/magicactions.rsi
-    state: spell_default
   cost:
     WizCoin: 1
   categories:
@@ -143,16 +136,13 @@
     whitelist:
     - SpellbookLightningBolt
   - !type:ListingLimitedStockCondition
-    stock: 4
+    stock: 1
 
 - type: listing
   id: SpellbookHomingToolboxUpgrade
   productUpgradeId: SpellbookHomingToolboxUpgrade
   name: spellbook-upgrade-homing-toolbox-name
   description: spellbook-upgrade-homing-toolbox-desc
-  icon:
-    sprite: Objects/Magic/magicactions.rsi
-    state: spell_default
   cost:
     WizCoin: 1
   categories:
@@ -162,16 +152,13 @@
     whitelist:
     - SpellbookHomingToolbox
   - !type:ListingLimitedStockCondition
-    stock: 4
+    stock: 1
 
 - type: listing
   id: SpellbookArcaneBarrageUpgrade
   productUpgradeId: SpellbookArcaneBarrageUpgrade
   name: spellbook-upgrade-arcane-barrage-name
   description: spellbook-upgrade-arcane-barrage-desc
-  icon:
-    sprite: Objects/Magic/magicactions.rsi
-    state: spell_default
   cost:
     WizCoin: 2
   categories:
@@ -181,16 +168,13 @@
     whitelist:
     - SpellbookArcaneBarrage
   - !type:ListingLimitedStockCondition
-    stock: 2
+    stock: 1
 
 - type: listing
   id: SpellbookLesserSummonGunsUpgrade
   productUpgradeId: SpellbookLesserSummonGunsUpgrade
   name: spellbook-upgrade-lesser-summon-guns-name
   description: spellbook-upgrade-lesser-summon-guns-desc
-  icon:
-    sprite: Objects/Magic/magicactions.rsi
-    state: spell_default
   cost:
     WizCoin: 2
   categories:
@@ -200,16 +184,13 @@
     whitelist:
     - SpellbookLesserSummonGuns
   - !type:ListingLimitedStockCondition
-    stock: 2
+    stock: 1
 
 - type: listing
   id: SpellbookBarnyardCurseUpgrade
   productUpgradeId: SpellbookBarnyardCurseUpgrade
   name: spellbook-upgrade-barnyard-name
   description: spellbook-upgrade-barnyard-desc
-  icon:
-    sprite: Objects/Magic/magicactions.rsi
-    state: spell_default
   cost:
     WizCoin: 1
   categories:
@@ -219,16 +200,13 @@
     whitelist:
     - SpellbookBarnyardCurse
   - !type:ListingLimitedStockCondition
-    stock: 2
+    stock: 1
 
 - type: listing
   id: SpellbookScreamForMeUpgrade
   productUpgradeId: SpellbookScreamForMeUpgrade
   name: spellbook-upgrade-scream-for-me-name
   description: spellbook-upgrade-scream-for-me-desc
-  icon:
-    sprite: Objects/Magic/magicactions.rsi
-    state: spell_default
   cost:
     WizCoin: 1
   categories:
@@ -238,16 +216,13 @@
     whitelist:
     - SpellbookScreamForMe
   - !type:ListingLimitedStockCondition
-    stock: 4
+    stock: 1
 
 - type: listing
   id: SpellbookLesserSummonBeesUpgrade
   productUpgradeId: SpellbookLesserSummonBeesUpgrade
   name: spellbook-upgrade-bees-name
   description: spellbook-upgrade-bees-desc
-  icon:
-    sprite: Objects/Magic/magicactions.rsi
-    state: spell_default
   cost:
     WizCoin: 2
   categories:
@@ -257,16 +232,13 @@
     whitelist:
     - SpellbookLesserSummonBees
   - !type:ListingLimitedStockCondition
-    stock: 2
+    stock: 1
 
 - type: listing
   id: SpellbookSanguineStrikeUpgrade
   productUpgradeId: SpellbookSanguineStrikeUpgrade
   name: spellbook-upgrade-sanguine-strike-name
   description: spellbook-upgrade-sanguine-strike-desc
-  icon:
-    sprite: Objects/Magic/magicactions.rsi
-    state: spell_default
   cost:
     WizCoin: 2
   categories:
@@ -276,16 +248,13 @@
     whitelist:
     - SpellbookSanguineStrike
   - !type:ListingLimitedStockCondition
-    stock: 2
+    stock: 1
 
 - type: listing
   id: SpellbookRathenUpgrade
   productUpgradeId: SpellbookRathenUpgrade
   name: spellbook-upgrade-rathen-name
   description: spellbook-upgrade-rathen-desc
-  icon:
-    sprite: Objects/Magic/magicactions.rsi
-    state: spell_default
   cost:
     WizCoin: 2
   categories:
@@ -295,16 +264,13 @@
     whitelist:
     - SpellbookRathen
   - !type:ListingLimitedStockCondition
-    stock: 2
+    stock: 1
 
 - type: listing
   id: SpellbookSpellCardsUpgrade
   productUpgradeId: SpellbookSpellCardsUpgrade
   name: spellbook-upgrade-spell-cards-name
   description: spellbook-upgrade-spell-cards-desc
-  icon:
-    sprite: Objects/Magic/magicactions.rsi
-    state: spell_default
   cost:
     WizCoin: 2
   categories:
@@ -317,7 +283,7 @@
     - SpellbookFullRandom
     - SpellbookSemiRandom
   - !type:ListingLimitedStockCondition
-    stock: 2
+    stock: 1
 
 - type: listing
   id: SpellbookSummonSimiansUpgrade
@@ -326,9 +292,6 @@
   description: spellbook-upgrade-simians-desc
   productEvent: !type:SummonSimiansMaxedOutEvent
   raiseProductEventOnUser: true
-  icon:
-    sprite: Objects/Magic/magicactions.rsi
-    state: spell_default
   cost:
     WizCoin: 2
   categories:
@@ -341,7 +304,7 @@
     - SpellbookFullRandom
     - SpellbookSemiRandom
   - !type:ListingLimitedStockCondition
-    stock: 4
+    stock: 1
 
 # Defensive
 - type: listing
@@ -349,9 +312,6 @@
   productUpgradeId: SpellbookMagicMissileUpgrade
   name: spellbook-upgrade-magic-missile-name
   description: spellbook-upgrade-magic-missile-desc
-  icon:
-    sprite: Objects/Magic/magicactions.rsi
-    state: spell_default
   cost:
     WizCoin: 2
   categories:
@@ -364,16 +324,13 @@
     - SpellbookFullRandom
     - SpellbookSemiRandom
   - !type:ListingLimitedStockCondition
-    stock: 2
+    stock: 1
 
 - type: listing
   id: SpellbookDisableTechUpgrade
   productUpgradeId: SpellbookDisableTechUpgrade
   name: spellbook-upgrade-disable-tech-name
   description: spellbook-upgrade-disable-tech-desc
-  icon:
-    sprite: Objects/Magic/magicactions.rsi
-    state: spell_default
   cost:
     WizCoin: 1
   categories:
@@ -386,16 +343,13 @@
     - SpellbookFullRandom
     - SpellbookSemiRandom
   - !type:ListingLimitedStockCondition
-    stock: 4
+    stock: 1
 
 - type: listing
   id: SpellbookStopTimeUpgrade
   productUpgradeId: SpellbookStopTimeUpgrade
   name: spellbook-upgrade-stop-time-name
   description: spellbook-upgrade-stop-time-desc
-  icon:
-    sprite: Objects/Magic/magicactions.rsi
-    state: spell_default
   cost:
     WizCoin: 2
   categories:
@@ -408,16 +362,13 @@
     - SpellbookFullRandom
     - SpellbookSemiRandom
   - !type:ListingLimitedStockCondition
-    stock: 2
+    stock: 1
 
 - type: listing
   id: SpellbookTrapsUpgrade
   productUpgradeId: SpellbookTrapsUpgrade
   name: spellbook-upgrade-the-traps-name
   description: spellbook-upgrade-the-traps-desc
-  icon:
-    sprite: Objects/Magic/magicactions.rsi
-    state: spell_default
   cost:
     WizCoin: 1
   categories:
@@ -430,7 +381,7 @@
     - SpellbookFullRandom
     - SpellbookSemiRandom
   - !type:ListingLimitedStockCondition
-    stock: 4
+    stock: 1
 
 # Utility
 - type: listing
@@ -438,9 +389,6 @@
   productUpgradeId: SpellbookTeleportUpgrade
   name: spellbook-upgrade-teleport-name
   description: spellbook-upgrade-teleport-desc
-  icon:
-    sprite: Objects/Magic/magicactions.rsi
-    state: spell_default
   cost:
     WizCoin: 2
   categories:
@@ -453,7 +401,7 @@
     - SpellbookFullRandom
     - SpellbookSemiRandom
   - !type:ListingLimitedStockCondition
-    stock: 2
+    stock: 1
   - !type:StoreWhitelistCondition
     blacklist:
       tags:
@@ -464,9 +412,6 @@
   productUpgradeId: SpellbookSwapUpgrade
   name: spellbook-upgrade-swap-name
   description: spellbook-upgrade-swap-desc
-  icon:
-    sprite: Objects/Magic/magicactions.rsi
-    state: spell_default
   cost:
     WizCoin: 1
   categories:
@@ -479,4 +424,4 @@
     - SpellbookFullRandom
     - SpellbookSemiRandom
   - !type:ListingLimitedStockCondition
-    stock: 2
+    stock: 1

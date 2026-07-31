@@ -6,6 +6,7 @@ using Content.Server.Preferences.Managers;
 using Content.Shared._Goobstation.Wizard;
 using Content.Shared.Actions;
 using Content.Shared.Actions.Components;
+using Content.Shared.Magic.Components;
 using Content.Shared.Preferences;
 using Robust.Shared.GameObjects;
 using Robust.Shared.Map;
@@ -186,6 +187,61 @@ public sealed class WizardAbilitiesTest : GameTest
 
         await server.WaitPost(() => Perform(entMan, wizard, "ActionMutateSpell"));
         await pair.RunTicksSync(10);
+    }
+
+    // Every base action wired to a Level 2 upgrade in spellbook_upgrades.yml.
+    private static readonly string[] UpgradableSpells =
+    {
+        "ActionMimeMalaise", "ActionCluwneCurse", "ActionBananaTouch", "ActionBlindSpell",
+        "ActionMutateSpell", "ActionTeslaBlast", "ActionLightningBolt", "ActionHomingToolbox",
+        "ActionArcaneBarrage", "ActionLesserSummonGuns", "ActionBarnyardCurse", "ActionScreamForMe",
+        "ActionLesserSummonBees", "ActionSanguineStrike", "ActionRathenSpell", "ActionSpellCards",
+        "ActionSummonSimians", "ActionMagicMissile", "ActionDisableTech", "ActionStopTime",
+        "ActionSwapSpell", "ActionTeleportWizard", "ActionTrapsSpell",
+    };
+
+    /// <summary>
+    /// Regression test: every one of these 23 upgrades was non-functional (base actions had no
+    /// ActionUpgradeComponent at all, so TryUpgradeAction always failed and purchases silently
+    /// refunded). Grants each base spell, then calls the same ActionUpgradeSystem.TryUpgradeAction
+    /// the store purchase flow calls, and checks the action actually became its Level 2 variant with
+    /// requiresClothes turned off.
+    /// </summary>
+    [Test]
+    public async Task TestSpellUpgrades()
+    {
+        var pair = Pair;
+        var server = pair.Server;
+        var entMan = server.EntMan;
+
+        var wizard = await SpawnRoundStartedWizard(pair);
+
+        await server.WaitAssertion(() =>
+        {
+            var actions = entMan.System<SharedActionsSystem>();
+            var actionUpgrade = entMan.System<ActionUpgradeSystem>();
+
+            using (Assert.EnterMultipleScope())
+            {
+                foreach (var baseProto in UpgradableSpells)
+                {
+                    var actionId = actions.AddAction(wizard, baseProto);
+                    Assert.That(actionId, Is.Not.Null, $"Could not grant base action '{baseProto}'!");
+
+                    Assert.That(actionUpgrade.TryUpgradeAction(actionId, out var upgradedId), Is.True,
+                        $"TryUpgradeAction failed for '{baseProto}' - ActionUpgradeComponent/EffectedLevels missing or broken!");
+                    Assert.That(upgradedId, Is.Not.Null);
+
+                    var meta = entMan.GetComponent<MetaDataComponent>(upgradedId!.Value);
+                    Assert.That(meta.EntityPrototype?.ID, Is.EqualTo(baseProto + "2"),
+                        $"'{baseProto}' upgraded to the wrong prototype (expected {baseProto}2, got {meta.EntityPrototype?.ID})!");
+
+                    Assert.That(entMan.TryGetComponent<MagicComponent>(upgradedId.Value, out var magic), Is.True);
+                    Assert.That(magic!.RequiresClothes, Is.False,
+                        $"'{baseProto}2' should no longer require wizard robes!");
+                }
+            }
+        });
     }
 
     [Test]

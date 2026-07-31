@@ -1,4 +1,4 @@
-wizard-item-restricted-1 = "Wizards only, fools."
-wizard-item-restricted-2 = Waves it around, expecting something to happen.
-wizard-item-restricted-3 = Sees a spark of magic... wait, no, just a reflection.
-wizard-item-restricted-4 = Isn't worthy of using this.
+wizard-item-restricted-1 = «Только для магов, глупец.»
+wizard-item-restricted-2 = Машет им туда-сюда, ожидая, что что-то произойдёт.
+wizard-item-restricted-3 = Видит искру магии... хотя нет, просто отражение.
+wizard-item-restricted-4 = Недостоин пользоваться этим.

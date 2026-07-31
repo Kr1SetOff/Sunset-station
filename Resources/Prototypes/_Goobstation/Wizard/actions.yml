@@ -48,6 +48,9 @@
   components:
   - type: Magic
     school: Mime
+  - type: ActionUpgrade
+    effectedLevels:
+      2: ActionMimeMalaise2
   - type: EntityTargetAction
     event: !type:MimeMalaiseEvent
 
@@ -59,6 +62,9 @@
   components:
   - type: Magic
     school: Transmutation
+  - type: ActionUpgrade
+    effectedLevels:
+      2: ActionBananaTouch2
   - type: EntityTargetAction
     event: !type:BananaTouchEvent
 
@@ -70,6 +76,9 @@
   components:
   - type: Magic
     school: Transmutation
+  - type: ActionUpgrade
+    effectedLevels:
+      2: ActionCluwneCurse2
   - type: EntityTargetAction
     event: !type:CluwneCurseEvent
 
@@ -95,6 +104,9 @@
   components:
   - type: Magic
     school: Evocation
+  - type: ActionUpgrade
+    effectedLevels:
+      2: ActionBlindSpell2
   - type: EntityTargetAction
     event: !type:BlindSpellEvent
 
@@ -106,6 +118,9 @@
   components:
   - type: Magic
     school: Transmutation
+  - type: ActionUpgrade
+    effectedLevels:
+      2: ActionMutateSpell2
   - type: InstantAction
     event: !type:MutateSpellEvent
 
@@ -117,6 +132,9 @@
   components:
   - type: Magic
     school: Evocation
+  - type: ActionUpgrade
+    effectedLevels:
+      2: ActionTeslaBlast2
   - type: InstantAction
     event: !type:TeslaBlastEvent
 
@@ -128,6 +146,9 @@
   components:
   - type: Magic
     school: Evocation
+  - type: ActionUpgrade
+    effectedLevels:
+      2: ActionLightningBolt2
   - type: EntityTargetAction
     event: !type:LightningBoltEvent
 
@@ -139,6 +160,9 @@
   components:
   - type: Magic
     school: Conjuration
+  - type: ActionUpgrade
+    effectedLevels:
+      2: ActionHomingToolbox2
   - type: WorldTargetAction
     event: !type:HomingToolboxEvent
 
@@ -150,6 +174,9 @@
   components:
   - type: Magic
     school: Evocation
+  - type: ActionUpgrade
+    effectedLevels:
+      2: ActionSpellCards2
   - type: WorldTargetAction
     event: !type:SpellCardsEvent
 
@@ -161,6 +188,9 @@
   components:
   - type: Magic
     school: Evocation
+  - type: ActionUpgrade
+    effectedLevels:
+      2: ActionArcaneBarrage2
   - type: InstantAction
     event: !type:ArcaneBarrageEvent
 
@@ -172,6 +202,9 @@
   components:
   - type: Magic
     school: Conjuration
+  - type: ActionUpgrade
+    effectedLevels:
+      2: ActionLesserSummonGuns2
   - type: InstantAction
     event: !type:LesserSummonGunsEvent
 
@@ -183,6 +216,9 @@
   components:
   - type: Magic
     school: Transmutation
+  - type: ActionUpgrade
+    effectedLevels:
+      2: ActionBarnyardCurse2
   - type: EntityTargetAction
     event: !type:BarnyardCurseEvent
       masks:
@@ -202,6 +238,9 @@
   components:
   - type: Magic
     school: Sanguine
+  - type: ActionUpgrade
+    effectedLevels:
+      2: ActionScreamForMe2
   - type: EntityTargetAction
     event: !type:ScreamForMeEvent
 
@@ -213,6 +252,9 @@
   components:
   - type: Magic
     school: Conjuration
+  - type: ActionUpgrade
+    effectedLevels:
+      2: ActionLesserSummonBees2
   - type: InstantAction
     event: !type:SummonMobsEvent
       mobs:
@@ -226,6 +268,9 @@
   components:
   - type: Magic
     school: Conjuration
+  - type: ActionUpgrade
+    effectedLevels:
+      2: ActionSummonSimians2
   - type: InstantAction
     event: !type:SummonSimiansEvent
       mobs: SimianMobTable
@@ -242,6 +287,9 @@
   components:
   - type: Magic
     school: Sanguine
+  - type: ActionUpgrade
+    effectedLevels:
+      2: ActionSanguineStrike2
   - type: InstantAction
     event: !type:ExsanguinatingStrikeEvent
 
@@ -253,6 +301,9 @@
   components:
   - type: Magic
     school: Chuuni
+  - type: ActionUpgrade
+    effectedLevels:
+      2: ActionRathenSpell2
   - type: InstantAction
     event: !type:RathenEvent
 
@@ -264,6 +315,9 @@
   components:
   - type: Magic
     school: Evocation
+  - type: ActionUpgrade
+    effectedLevels:
+      2: ActionMagicMissile2
   - type: InstantAction
     event: !type:MagicMissileEvent
 
@@ -275,6 +329,9 @@
   components:
   - type: Magic
     school: Explosion
+  - type: ActionUpgrade
+    effectedLevels:
+      2: ActionDisableTech2
   - type: InstantAction
     event: !type:DisableTechEvent
 
@@ -286,6 +343,9 @@
   components:
   - type: Magic
     school: Translocation
+  - type: ActionUpgrade
+    effectedLevels:
+      2: ActionStopTime2
   - type: InstantAction
     event: !type:StopTimeEvent
 
@@ -308,6 +368,9 @@
   components:
   - type: Magic
     school: Conjuration
+  - type: ActionUpgrade
+    effectedLevels:
+      2: ActionTrapsSpell2
   - type: InstantAction
     event: !type:TrapsSpellEvent
 
@@ -352,6 +415,9 @@
   components:
   - type: Magic
     school: Translocation
+  - type: ActionUpgrade
+    effectedLevels:
+      2: ActionTeleportWizard2
   - type: InstantAction
     event: !type:WizardTeleportEvent
 
@@ -363,6 +429,9 @@
   components:
   - type: Magic
     school: Translocation
+  - type: ActionUpgrade
+    effectedLevels:
+      2: ActionSwapSpell2
   - type: EntityTargetAction
     event: !type:SwapSpellEvent
 
@@ -423,3 +492,189 @@
   - type: Tag
     tags:
     - GorillaFormAction
+
+# Level-2 variants: same spell, castable without full wizard robes (requiresClothes: false).
+- type: entity
+  parent: ActionMimeMalaise
+  id: ActionMimeMalaise2
+  suffix: Level 2
+  components:
+  - type: Magic
+    requiresClothes: false
+
+- type: entity
+  parent: ActionBananaTouch
+  id: ActionBananaTouch2
+  suffix: Level 2
+  components:
+  - type: Magic
+    requiresClothes: false
+
+- type: entity
+  parent: ActionCluwneCurse
+  id: ActionCluwneCurse2
+  suffix: Level 2
+  components:
+  - type: Magic
+    requiresClothes: false
+
+- type: entity
+  parent: ActionBlindSpell
+  id: ActionBlindSpell2
+  suffix: Level 2
+  components:
+  - type: Magic
+    requiresClothes: false
+
+- type: entity
+  parent: ActionMutateSpell
+  id: ActionMutateSpell2
+  suffix: Level 2
+  components:
+  - type: Magic
+    requiresClothes: false
+
+- type: entity
+  parent: ActionTeslaBlast
+  id: ActionTeslaBlast2
+  suffix: Level 2
+  components:
+  - type: Magic
+    requiresClothes: false
+
+- type: entity
+  parent: ActionLightningBolt
+  id: ActionLightningBolt2
+  suffix: Level 2
+  components:
+  - type: Magic
+    requiresClothes: false
+
+- type: entity
+  parent: ActionHomingToolbox
+  id: ActionHomingToolbox2
+  suffix: Level 2
+  components:
+  - type: Magic
+    requiresClothes: false
+
+- type: entity
+  parent: ActionSpellCards
+  id: ActionSpellCards2
+  suffix: Level 2
+  components:
+  - type: Magic
+    requiresClothes: false
+
+- type: entity
+  parent: ActionArcaneBarrage
+  id: ActionArcaneBarrage2
+  suffix: Level 2
+  components:
+  - type: Magic
+    requiresClothes: false
+
+- type: entity
+  parent: ActionLesserSummonGuns
+  id: ActionLesserSummonGuns2
+  suffix: Level 2
+  components:
+  - type: Magic
+    requiresClothes: false
+
+- type: entity
+  parent: ActionBarnyardCurse
+  id: ActionBarnyardCurse2
+  suffix: Level 2
+  components:
+  - type: Magic
+    requiresClothes: false
+
+- type: entity
+  parent: ActionScreamForMe
+  id: ActionScreamForMe2
+  suffix: Level 2
+  components:
+  - type: Magic
+    requiresClothes: false
+
+- type: entity
+  parent: ActionLesserSummonBees
+  id: ActionLesserSummonBees2
+  suffix: Level 2
+  components:
+  - type: Magic
+    requiresClothes: false
+
+- type: entity
+  parent: ActionSummonSimians
+  id: ActionSummonSimians2
+  suffix: Level 2
+  components:
+  - type: Magic
+    requiresClothes: false
+
+- type: entity
+  parent: ActionSanguineStrike
+  id: ActionSanguineStrike2
+  suffix: Level 2
+  components:
+  - type: Magic
+    requiresClothes: false
+
+- type: entity
+  parent: ActionRathenSpell
+  id: ActionRathenSpell2
+  suffix: Level 2
+  components:
+  - type: Magic
+    requiresClothes: false
+
+- type: entity
+  parent: ActionMagicMissile
+  id: ActionMagicMissile2
+  suffix: Level 2
+  components:
+  - type: Magic
+    requiresClothes: false
+
+- type: entity
+  parent: ActionDisableTech
+  id: ActionDisableTech2
+  suffix: Level 2
+  components:
+  - type: Magic
+    requiresClothes: false
+
+- type: entity
+  parent: ActionStopTime
+  id: ActionStopTime2
+  suffix: Level 2
+  components:
+  - type: Magic
+    requiresClothes: false
+
+- type: entity
+  parent: ActionTrapsSpell
+  id: ActionTrapsSpell2
+  suffix: Level 2
+  components:
+  - type: Magic
+    requiresClothes: false
+
+- type: entity
+  parent: ActionTeleportWizard
+  id: ActionTeleportWizard2
+  suffix: Level 2
+  components:
+  - type: Magic
+    requiresClothes: false
+
+- type: entity
+  parent: ActionSwapSpell
+  id: ActionSwapSpell2
+  suffix: Level 2
+  components:
+  - type: Magic
+    requiresClothes: false
+
