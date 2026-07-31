@@ -47,7 +47,7 @@ public abstract partial class SharedChangelingStasisSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<ChangelingStasisComponent, MapInitEvent>(OnMapInit);
+        SubscribeLocalEvent<ChangelingStasisComponent, ComponentStartup>(OnMapInit);
         SubscribeLocalEvent<ChangelingStasisComponent, ComponentShutdown>(OnShutdown);
 
         SubscribeLocalEvent<ChangelingStasisComponent, ChangelingStasisEvent>(OnStasisAction);
@@ -66,7 +66,7 @@ public abstract partial class SharedChangelingStasisSystem : EntitySystem
     }
 
 
-    private void OnMapInit(Entity<ChangelingStasisComponent> ent, ref MapInitEvent args)
+    private void OnMapInit(Entity<ChangelingStasisComponent> ent, ref ComponentStartup args)
     {
         SetStasisTime(ent);
 

@@ -19,7 +19,7 @@ public abstract partial class SharedChangelingChemicalSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<ChangelingChemicalComponent, MapInitEvent>(OnMapInit);
+        SubscribeLocalEvent<ChangelingChemicalComponent, ComponentStartup>(OnMapInit);
         SubscribeLocalEvent<ChangelingChemicalComponent, ComponentShutdown>(OnShutdown);
 
         SubscribeLocalEvent<ChangelingChemicalComponent, InternalResourcesRegenModifierEvent>(BeforeResourceRegenEvent);
@@ -28,7 +28,7 @@ public abstract partial class SharedChangelingChemicalSystem : EntitySystem
         _resourceQuery = GetEntityQuery<InternalResourcesComponent>();
     }
 
-    private void OnMapInit(Entity<ChangelingChemicalComponent> ent, ref MapInitEvent args)
+    private void OnMapInit(Entity<ChangelingChemicalComponent> ent, ref ComponentStartup args)
     {
         _resource.TryAddInternalResources(ent, ent.Comp.ResourceProto, out var data);
 

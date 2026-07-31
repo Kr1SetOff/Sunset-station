@@ -41,7 +41,7 @@ public abstract class SharedChangelingBiomassSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<ChangelingBiomassComponent, MapInitEvent>(OnMapInit);
+        SubscribeLocalEvent<ChangelingBiomassComponent, ComponentStartup>(OnMapInit);
         SubscribeLocalEvent<ChangelingBiomassComponent, ComponentShutdown>(OnShutdown);
 
         SubscribeLocalEvent<ChangelingBiomassComponent, InternalResourcesThresholdMetEvent>(OnThresholdMetEvent);
@@ -53,7 +53,7 @@ public abstract class SharedChangelingBiomassSystem : EntitySystem
         _resourceQuery = GetEntityQuery<InternalResourcesComponent>();
     }
 
-    private void OnMapInit(Entity<ChangelingBiomassComponent> ent, ref MapInitEvent args)
+    private void OnMapInit(Entity<ChangelingBiomassComponent> ent, ref ComponentStartup args)
     {
         _resource.TryAddInternalResources(ent, ent.Comp.ResourceProto, out var data);
 

@@ -143,8 +143,12 @@ public sealed partial class ChangelingSystem : SharedChangelingSystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<ChangelingIdentityComponent, MapInitEvent>(OnIdentityMapInit);
-        SubscribeLocalEvent<ChangelingComponent, MapInitEvent>(OnChangelingMapInit);
+        // ComponentStartup, not MapInitEvent: both ChangelingComponent and ChangelingIdentityComponent
+        // are EnsureComp'd onto an already-mapinit'd player body when the antag role is assigned
+        // (ChangelingRuleSystem.MakeChangeling), not onto a freshly spawned entity, so MapInitEvent
+        // never fires there and the changeling was silently granted none of its starting evolutions.
+        SubscribeLocalEvent<ChangelingIdentityComponent, ComponentStartup>(OnIdentityMapInit);
+        SubscribeLocalEvent<ChangelingComponent, ComponentStartup>(OnChangelingMapInit);
 
         SubscribeLocalEvent<ChangelingIdentityComponent, MobStateChangedEvent>(OnMobStateChange);
         SubscribeLocalEvent<ChangelingIdentityComponent, ComponentRemove>(OnComponentRemove);
@@ -711,7 +715,7 @@ public sealed partial class ChangelingSystem : SharedChangelingSystem
 
     #region Event Handlers
 
-    private void OnIdentityMapInit(Entity<ChangelingIdentityComponent> ent, ref MapInitEvent args)
+    private void OnIdentityMapInit(Entity<ChangelingIdentityComponent> ent, ref ComponentStartup args)
     {
         RemComp<HungerComponent>(ent);
         RemComp<ThirstComponent>(ent);
@@ -732,7 +736,7 @@ public sealed partial class ChangelingSystem : SharedChangelingSystem
     }
 
     // in the future ChangelingIdentity should have its own system and be ONLY used for holding stored DNA and handling transformations.
-    private void OnChangelingMapInit(Entity<ChangelingComponent> ent, ref MapInitEvent args)
+    private void OnChangelingMapInit(Entity<ChangelingComponent> ent, ref ComponentStartup args)
     {
         if (ent.Comp.EvolutionsAssigned // this is solely because polymorph will cause mega errors otherwise
             || !_proto.TryIndex(ent.Comp.EvolutionsProto, out var evoProto))

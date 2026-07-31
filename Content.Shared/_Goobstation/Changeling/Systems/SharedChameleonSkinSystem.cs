@@ -23,14 +23,14 @@ public abstract partial class SharedChameleonSkinSystem : EntitySystem
 
         _stealthQuery = GetEntityQuery<StealthComponent>();
 
-        SubscribeLocalEvent<ChameleonSkinComponent, MapInitEvent>(OnMapInit);
+        SubscribeLocalEvent<ChameleonSkinComponent, ComponentStartup>(OnMapInit);
         SubscribeLocalEvent<ChameleonSkinComponent, ComponentShutdown>(OnShutdown);
 
         SubscribeLocalEvent<ChameleonSkinComponent, ActionChameleonSkinEvent>(OnToggleAbility);
         SubscribeLocalEvent<ChameleonSkinComponent, IgnitedEvent>(OnIgnite);
     }
 
-    private void OnMapInit(Entity<ChameleonSkinComponent> ent, ref MapInitEvent args)
+    private void OnMapInit(Entity<ChameleonSkinComponent> ent, ref ComponentStartup args)
     {
         ent.Comp.ActionEnt = _actions.AddAction(ent, ent.Comp.ActionId);
 

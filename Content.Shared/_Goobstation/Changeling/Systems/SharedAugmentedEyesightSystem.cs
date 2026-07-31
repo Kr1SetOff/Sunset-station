@@ -18,7 +18,7 @@ public abstract partial class SharedAugmentedEyesightSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<AugmentedEyesightComponent, MapInitEvent>(OnMapInit);
+        SubscribeLocalEvent<AugmentedEyesightComponent, ComponentStartup>(OnMapInit);
         SubscribeLocalEvent<AugmentedEyesightComponent, ComponentShutdown>(OnShutdown);
 
         SubscribeLocalEvent<AugmentedEyesightComponent, ActionAugmentedEyesightEvent>(OnToggleVision);
@@ -29,7 +29,7 @@ public abstract partial class SharedAugmentedEyesightSystem : EntitySystem
         SubscribeLocalEvent<AugmentedEyesightComponent, GetEyeProtectionEvent>(OnGetEyeProtection);
     }
 
-    private void OnMapInit(Entity<AugmentedEyesightComponent> ent, ref MapInitEvent args)
+    private void OnMapInit(Entity<AugmentedEyesightComponent> ent, ref ComponentStartup args)
     {
         ent.Comp.ActionEnt = _actions.AddAction(ent, ent.Comp.ActionId);
 

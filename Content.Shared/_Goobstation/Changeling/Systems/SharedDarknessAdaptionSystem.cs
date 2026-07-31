@@ -28,7 +28,7 @@ public abstract class SharedDarknessAdaptionSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<DarknessAdaptionComponent, MapInitEvent>(OnMapInit);
+        SubscribeLocalEvent<DarknessAdaptionComponent, ComponentStartup>(OnMapInit);
         SubscribeLocalEvent<DarknessAdaptionComponent, ComponentShutdown>(OnShutdown);
 
         SubscribeLocalEvent<DarknessAdaptionComponent, ActionDarknessAdaptionEvent>(OnToggleAbility);
@@ -38,7 +38,7 @@ public abstract class SharedDarknessAdaptionSystem : EntitySystem
         _stealthOnMoveQuery = GetEntityQuery<StealthOnMoveComponent>();
     }
 
-    private void OnMapInit(Entity<DarknessAdaptionComponent> ent, ref MapInitEvent args)
+    private void OnMapInit(Entity<DarknessAdaptionComponent> ent, ref ComponentStartup args)
     {
         ent.Comp.UpdateTimer = _timing.CurTime + ent.Comp.UpdateDelay;
 

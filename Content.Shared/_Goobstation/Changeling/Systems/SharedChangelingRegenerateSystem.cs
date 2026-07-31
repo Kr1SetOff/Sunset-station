@@ -27,7 +27,7 @@ public abstract partial class SharedChangelingRegenerateSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<ChangelingRegenerateComponent, MapInitEvent>(OnMapInit);
+        SubscribeLocalEvent<ChangelingRegenerateComponent, ComponentStartup>(OnMapInit);
         SubscribeLocalEvent<ChangelingRegenerateComponent, ComponentShutdown>(OnShutdown);
 
         SubscribeLocalEvent<ChangelingRegenerateComponent, ChangelingRegenerateEvent>(OnRegenerateAction);
@@ -36,7 +36,7 @@ public abstract partial class SharedChangelingRegenerateSystem : EntitySystem
         _bodyQuery = GetEntityQuery<BodyComponent>();
     }
 
-    private void OnMapInit(Entity<ChangelingRegenerateComponent> ent, ref MapInitEvent args)
+    private void OnMapInit(Entity<ChangelingRegenerateComponent> ent, ref ComponentStartup args)
     {
         ent.Comp.ActionEnt = _actions.AddAction(ent, ent.Comp.ActionId);
     }

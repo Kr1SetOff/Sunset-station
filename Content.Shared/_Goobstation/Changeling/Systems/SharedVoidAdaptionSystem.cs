@@ -21,7 +21,7 @@ public abstract class SharedVoidAdaptionSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<VoidAdaptionComponent, MapInitEvent>(OnMapInit);
+        SubscribeLocalEvent<VoidAdaptionComponent, ComponentStartup>(OnMapInit);
         SubscribeLocalEvent<VoidAdaptionComponent, ComponentShutdown>(OnShutdown);
 
         SubscribeLocalEvent<VoidAdaptionComponent, ResistPressureEvent>(OnGetDangerousPressure);
@@ -33,7 +33,7 @@ public abstract class SharedVoidAdaptionSystem : EntitySystem
         SubscribeLocalEvent<VoidAdaptionComponent, InternalResourcesRegenModifierEvent>(OnChangelingChemicalRegenEvent);
     }
 
-    private void OnMapInit(Entity<VoidAdaptionComponent> ent, ref MapInitEvent args)
+    private void OnMapInit(Entity<VoidAdaptionComponent> ent, ref ComponentStartup args)
     {
         // refresh adaptions to prevent issues from polymorphs
         ent.Comp.AdaptingLowPressure = false;
