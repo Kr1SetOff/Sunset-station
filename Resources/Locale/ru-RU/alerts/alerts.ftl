@@ -117,13 +117,6 @@ alerts-revenant-essence-desc = Сила душ. Поддерживает вас 
 alerts-revenant-corporeal-name = Материальность
 alerts-revenant-corporeal-desc = Вы физически воплотились. Окружающие могут видеть и наносить вам вред.
 
-alerts-changeling-chemicals-name = Химикаты
-alerts-changeling-chemicals-desc = Расходуются при использовании способностей. Медленно восстанавливаются.
-
-alerts-changeling-biomass-name = Биомасса
-alerts-changeling-biomass-desc =
-    Это ваше здоровье. Если оно достигнет 0 — [color=red]конец игры[/color]. Поглощайте гуманоидов, чтобы восстановить его.
-
 alerts-rooted-name = Укоренены
 alerts-rooted-desc = Вы прикреплены к земле. Вы не можете подскользнуться, но вы будете впитывать все жидкости под вами.
 

@@ -8,10 +8,10 @@ namespace Content.Server.Store.Conditions;
 public sealed partial class BuyBeforeCondition : ListingCondition
 {
     /// <summary>
-    ///     Required listing(s) needed to purchase before this listing is available
+    ///     Required listing(s) needed to purchase before this listing is available, if any.
     /// </summary>
-    [DataField(required: true)]
-    public HashSet<ProtoId<ListingPrototype>> Whitelist;
+    [DataField]
+    public HashSet<ProtoId<ListingPrototype>>? Whitelist;
 
     /// <summary>
     ///     Listing(s) that if bought, block this purchase, if any.
@@ -26,7 +26,8 @@ public sealed partial class BuyBeforeCondition : ListingCondition
 
         var allListings = storeComp.FullListingsCatalog;
 
-        var purchasesFound = false;
+        // No whitelist means no prerequisite purchase is required.
+        var purchasesFound = Whitelist == null || Whitelist.Count == 0;
 
         if (Blacklist != null)
         {
@@ -40,14 +41,17 @@ public sealed partial class BuyBeforeCondition : ListingCondition
             }
         }
 
-        foreach (var requiredListing in Whitelist)
+        if (Whitelist != null)
         {
-            foreach (var listing in allListings)
+            foreach (var requiredListing in Whitelist)
             {
-                if (listing.ID == requiredListing.Id)
+                foreach (var listing in allListings)
                 {
-                    purchasesFound = listing.PurchaseAmount > 0;
-                    break;
+                    if (listing.ID == requiredListing.Id)
+                    {
+                        purchasesFound = listing.PurchaseAmount > 0;
+                        break;
+                    }
                 }
             }
         }

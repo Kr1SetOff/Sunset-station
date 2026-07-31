@@ -44,10 +44,6 @@ roles-antag-thief-objective = Add some NT property to your personal collection w
 roles-antag-dragon-name = Space Dragon
 roles-antag-dragon-objective = Create a carp army to take over this quadrant.
 
-# Starlight start
-roles-antag-changeling-description = Use your shapeshifting abilities to complete your objectives.
-# Starlight end
-
 roles-antag-mothership-core-name = Xenoborg Core
 roles-antag-mothership-core-objective = Use your xenoborgs to create even more xenoborgs.
 

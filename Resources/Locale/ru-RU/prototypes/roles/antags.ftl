@@ -44,10 +44,6 @@ roles-antag-thief-objective = Пополните личную коллекцию
 roles-antag-dragon-name = Космический дракон
 roles-antag-dragon-objective = Призовите армию карпов, чтобы захватить этот сектор.
 
-# Starlight start
-roles-antag-changeling-description = Используйте свои способности к изменению формы, чтобы выполнить поставленные цели.
-# Starlight end
-
 roles-antag-mothership-core-name = Ядро ксеноборгов
 roles-antag-mothership-core-objective = Используйте своих ксеноборгов, чтобы создать ещё больше ксеноборгов.
 
