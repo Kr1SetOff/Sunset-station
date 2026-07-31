@@ -173,7 +173,7 @@ public sealed partial class BlindSpellEvent : EntityTargetActionEvent
 public sealed partial class BindSoulEvent : InstantActionEvent
 {
     [DataField]
-    public EntityWhitelist Blacklist;
+    public EntityWhitelist Blacklist = new();
 
     [DataField]
     public EntProtoId Entity = "MobSkeletonPerson";
