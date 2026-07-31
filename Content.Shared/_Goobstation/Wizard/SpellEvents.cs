@@ -18,6 +18,7 @@ using Content.Shared.Whitelist;
 using Robust.Shared.Audio;
 using Robust.Shared.Physics.Dynamics;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Serialization;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 
 namespace Content.Shared._Goobstation.Wizard;
@@ -465,7 +466,7 @@ public sealed partial class TileToggleSpellEvent : EntityTargetActionEvent
     public SoundSpecifier? Sound;
 }
 
-[DataDefinition]
+[DataDefinition, Serializable, NetSerializable]
 public sealed partial class GlobalTileToggleEvent : EntityEventArgs
 {
     [DataField]
@@ -478,7 +479,7 @@ public sealed partial class PredictionToggleSpellEvent : EntityTargetActionEvent
     public SoundSpecifier? Sound;
 }
 
-[DataDefinition]
+[DataDefinition, Serializable, NetSerializable]
 public sealed partial class SummonSimiansMaxedOutEvent : EntityEventArgs
 {
     [DataField]
@@ -501,7 +502,7 @@ public sealed partial class SummonGhostsEvent : EntityEventArgs
     public SoundSpecifier? Sound = new SoundPathSpecifier("/Audio/_Starlight/Misc/ghost_ping.ogg");
 }
 
-[DataDefinition]
+[DataDefinition, Serializable, NetSerializable]
 public sealed partial class DimensionShiftEvent : EntityEventArgs
 {
     [DataField]

@@ -1,20 +1,22 @@
+using Robust.Shared.Serialization;
+
 namespace Content.Shared._Goobstation.Changeling;
 
 #region Evolution events
 
-[DataDefinition]
+[DataDefinition, Serializable, NetSerializable]
 public sealed partial class AugmentedEyesightPurchasedEvent : EntityEventArgs;
 
-[DataDefinition]
+[DataDefinition, Serializable, NetSerializable]
 public sealed partial class AwakenedInstinctPurchasedEvent : EntityEventArgs;
 
-[DataDefinition]
+[DataDefinition, Serializable, NetSerializable]
 public sealed partial class ChameleonSkinPurchasedEvent : EntityEventArgs;
 
-[DataDefinition]
+[DataDefinition, Serializable, NetSerializable]
 public sealed partial class DarknessAdaptionPurchasedEvent : EntityEventArgs;
 
-[DataDefinition]
+[DataDefinition, Serializable, NetSerializable]
 public sealed partial class VoidAdaptionPurchasedEvent : EntityEventArgs;
 
 #endregion

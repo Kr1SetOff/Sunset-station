@@ -4,12 +4,14 @@ using Content.Server._Goobstation.Changeling.GameTicking.Rules;
 using Content.Server.GameTicking;
 using Content.Server.Mind;
 using Content.Server.Roles;
+using Content.Server.Store.Systems;
 using Content.Shared._Goobstation.Changeling.Components;
 using Content.Shared.Actions.Components;
 using Content.Shared.GameTicking;
 using Content.Shared.GameTicking.Components;
 using Content.Shared.NPC.Prototypes;
 using Content.Shared.NPC.Systems;
+using Content.Shared.Store.Components;
 using Robust.Shared.GameObjects;
 using Robust.Shared.Prototypes;
 
@@ -100,5 +102,22 @@ public sealed class ChangelingRuleTest : GameTest
         Assert.That(entMan.TryGetComponent<ActionsComponent>(player, out var actionsComp));
         Assert.That(actionsComp!.Actions, Is.Not.Empty,
             "Changeling has zero granted actions - abilities were not wired up!");
+
+        // Regression check for the PVS crash reported after this fix landed: every changeling
+        // evolution's *PurchasedEvent (Content.Shared._Goobstation.Changeling.ChangelingEvents.cs) and
+        // every wizard spellbook productEvent (Content.Shared._Goobstation.Wizard.SpellEvents.cs) was
+        // missing [Serializable, NetSerializable], so as soon as a store listing carrying one of those
+        // as its ProductEvent needed to be sent to a client, PvsSystem.SerializeState threw
+        // KeyNotFoundException deep in NetSerializer and the affected player couldn't stay connected.
+        // Add the AugmentedEyesight evolution (the one from the bug report) to the live store and run
+        // several more ticks so the game state actually gets serialized with it present.
+        var storeSys = server.System<StoreSystem>();
+        await server.WaitAssertion(() =>
+        {
+            Assert.That(entMan.TryGetComponent<StoreComponent>(player, out var storeComp));
+            Assert.That(storeSys.TryAddListing(storeComp!, "EvolutionMenuUtilityEyesight"), Is.True,
+                "Could not add the EvolutionMenuUtilityEyesight listing to the changeling's store!");
+        });
+        await pair.RunTicksSync(10);
     }
 }
