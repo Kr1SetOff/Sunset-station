@@ -1,0 +1,34 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# NOTE: the locale/action description promises a grab-and-immobilize-on-hit mechanic ("able to grab
+# your opponents on hit ... hitting anything with it again releases the target"), matching
+# Goob-Station's upstream design. That's a distinct gameplay system (no such component exists
+# anywhere in this codebase) and wasn't implemented here - this is a baseline melee weapon only, added
+# to fix ActionToggleClaw crashing with EntityCreationException (the prototype didn't exist at all).
+- type: entity
+  parent: BaseItem
+  id: ArmClawChangeling
+  name: arm claw
+  description: A claw made out of flesh and bone, fast enough to strike before your opponent can react.
+  suffix: Unremoveable
+  components:
+  - type: Sharp
+  - type: Sprite
+    sprite: _Goobstation/Changeling/claw.rsi
+    state: icon
+  - type: MeleeWeapon
+    angle: 0
+    wideAnimationRotation: 75
+    attackRate: 2
+    damage:
+      types:
+        Slash: 12
+        Structural: 10
+    soundHit:
+      path: /Audio/Weapons/bladeslice.ogg
+  - type: Item
+    size: Ginormous
+    sprite: _Goobstation/Changeling/claw.rsi
+  - type: Unremoveable
+  - type: DisarmMalus
+    malus: 0

@@ -29,12 +29,12 @@ public sealed class SharedSuperAdrenalineSystem : EntitySystem
         _staminaQuery = GetEntityQuery<StaminaComponent>();
         _sleepingQuery = GetEntityQuery<SleepingComponent>();
 
-        SubscribeLocalEvent<SuperAdrenalineComponent, MapInitEvent>(OnMapInit);
+        SubscribeLocalEvent<SuperAdrenalineComponent, ComponentStartup>(OnMapInit);
         SubscribeLocalEvent<SuperAdrenalineComponent, ComponentRemove>(OnRemoved);
         SubscribeLocalEvent<SuperAdrenalineComponent, MobStateChangedEvent>(OnMobStateChange);
     }
 
-    private void OnMapInit(Entity<SuperAdrenalineComponent> ent, ref MapInitEvent args)
+    private void OnMapInit(Entity<SuperAdrenalineComponent> ent, ref ComponentStartup args)
     {
         ent.Comp.UpdateTimer = _timing.CurTime + ent.Comp.UpdateDelay;
 

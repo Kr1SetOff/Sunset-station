@@ -531,7 +531,7 @@ public sealed partial class GrantFactionsEvent : EntityEventArgs
     public HashSet<ProtoId<NpcFactionPrototype>> Factions = new();
 }
 
-[DataDefinition]
+[DataDefinition, Serializable, NetSerializable]
 public sealed partial class RandomizeSpellsEvent : EntityEventArgs
 {
     [DataField]

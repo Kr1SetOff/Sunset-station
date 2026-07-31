@@ -17,6 +17,7 @@
 
 - type: reagentStingConfiguration
   id: StingLethargic
+  # Tirizene doesn't exist anywhere in this codebase (never ported) - ChloralHydrate alone already
+  # provides the slowdown/lethargy effect this sting is going for.
   reagents:
-    ChloralHydrate: 5
-    Tirizene: 5
+    ChloralHydrate: 10

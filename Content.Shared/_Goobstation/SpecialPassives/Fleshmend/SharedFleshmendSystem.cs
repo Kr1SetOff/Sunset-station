@@ -46,7 +46,7 @@ public sealed class SharedFleshmendSystem : EntitySystem
         _mobstateQuery = GetEntityQuery<MobStateComponent>();
         _flammableQuery = GetEntityQuery<FlammableComponent>();
 
-        SubscribeLocalEvent<FleshmendComponent, MapInitEvent>(OnMapInit);
+        SubscribeLocalEvent<FleshmendComponent, ComponentStartup>(OnMapInit);
         SubscribeLocalEvent<FleshmendComponent, ComponentRemove>(OnRemoved);
         SubscribeLocalEvent<FleshmendComponent, MobStateChangedEvent>(OnMobStateChange);
         SubscribeLocalEvent<FleshmendComponent, RefreshMovementSpeedModifiersEvent>(OnRefresh);
@@ -57,7 +57,7 @@ public sealed class SharedFleshmendSystem : EntitySystem
         args.ModifySpeed(component.MovementSpeedDebuff, component.MovementSpeedDebuff);
     }
 
-    private void OnMapInit(Entity<FleshmendComponent> ent, ref MapInitEvent args)
+    private void OnMapInit(Entity<FleshmendComponent> ent, ref ComponentStartup args)
     {
         ent.Comp.UpdateTimer = _timing.CurTime + ent.Comp.UpdateDelay;
 

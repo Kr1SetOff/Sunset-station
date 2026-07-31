@@ -43,12 +43,12 @@ public sealed class SharedBoostedImmunitySystem : EntitySystem
         _mobStateQuery = GetEntityQuery<MobStateComponent>();
         _statusQuery = GetEntityQuery<StatusEffectsComponent>();
 
-        SubscribeLocalEvent<BoostedImmunityComponent, MapInitEvent>(OnMapInit);
+        SubscribeLocalEvent<BoostedImmunityComponent, ComponentStartup>(OnMapInit);
         SubscribeLocalEvent<BoostedImmunityComponent, ComponentRemove>(OnRemoved);
         SubscribeLocalEvent<BoostedImmunityComponent, MobStateChangedEvent>(OnMobStateChange);
     }
 
-    private void OnMapInit(Entity<BoostedImmunityComponent> ent, ref MapInitEvent args)
+    private void OnMapInit(Entity<BoostedImmunityComponent> ent, ref ComponentStartup args)
     {
         ent.Comp.UpdateTimer = _timing.CurTime + ent.Comp.UpdateDelay;
 
