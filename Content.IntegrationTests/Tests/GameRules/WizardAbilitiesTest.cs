@@ -1,15 +1,20 @@
+using System.Collections.Generic;
 using System.Linq;
 using Content.IntegrationTests.Fixtures;
 using Content.IntegrationTests.Pair;
 using Content.Server.GameTicking;
 using Content.Server.Preferences.Managers;
 using Content.Shared._Goobstation.Wizard;
+using Content.Shared._Goobstation.Wizard.SanguineStrike;
+using Content.Shared._Goobstation.Wizard.TimeStop;
 using Content.Shared.Actions;
 using Content.Shared.Actions.Components;
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Inventory;
 using Content.Shared.Magic.Components;
 using Content.Shared.Preferences;
+using Content.Shared.Weapons.Melee;
+using Content.Shared.Weapons.Melee.Events;
 using Robust.Shared.GameObjects;
 using Robust.Shared.Localization;
 using Robust.Shared.Map;
@@ -217,6 +222,89 @@ public sealed class WizardAbilitiesTest : GameTest
 
         await server.WaitPost(() => Perform(entMan, wizard, "ActionBindSoul"));
         await pair.RunTicksSync(10);
+    }
+
+    /// <summary>
+    /// Regression test: the Chronofield entity Stop Time spawns was just a sprite/light with no
+    /// physics or freeze logic attached at all, so the spell did nothing but look pretty. Now grants
+    /// FrozenComponent directly to everyone in range at cast time.
+    /// </summary>
+    [Test]
+    public async Task TestStopTime()
+    {
+        var pair = Pair;
+        var server = pair.Server;
+        var entMan = server.EntMan;
+
+        var wizard = await SpawnRoundStartedWizard(pair);
+        var coords = entMan.GetComponent<TransformComponent>(wizard).Coordinates;
+
+        EntityUid target = default;
+        await server.WaitPost(() => target = entMan.SpawnEntity("MobHuman", coords));
+        await pair.RunTicksSync(5);
+
+        await server.WaitAssertion(() => entMan.System<SharedActionsSystem>().AddAction(wizard, "ActionStopTime"));
+        await pair.RunTicksSync(5);
+
+        await server.WaitPost(() => Perform(entMan, wizard, "ActionStopTime"));
+        await pair.RunTicksSync(30);
+
+        await server.WaitAssertion(() =>
+        {
+            Assert.That(entMan.HasComponent<FrozenComponent>(target), Is.True,
+                "Stop Time didn't freeze the nearby target - the Chronofield effect can't detect anyone near it!");
+        });
+    }
+
+    /// <summary>
+    /// Regression test: SanguineStrikeSystem's server subclass never overrode Hit(), so the
+    /// SanguineStrikeComponent granted by casting Exsanguinating Strike was never removed after
+    /// landing a blow - "your NEXT melee attack" was actually a permanent weapon enchantment.
+    /// </summary>
+    [Test]
+    public async Task TestSanguineStrike()
+    {
+        var pair = Pair;
+        var server = pair.Server;
+        var entMan = server.EntMan;
+
+        var wizard = await SpawnRoundStartedWizard(pair);
+        var coords = entMan.GetComponent<TransformComponent>(wizard).Coordinates;
+
+        EntityUid weapon = default, target = default;
+        await server.WaitPost(() =>
+        {
+            weapon = entMan.SpawnEntity("CombatKnife", coords);
+            target = entMan.SpawnEntity("MobHuman", coords);
+            entMan.System<SharedHandsSystem>().TryPickupAnyHand(wizard, weapon);
+        });
+        await pair.RunTicksSync(5);
+
+        await server.WaitAssertion(() => entMan.System<SharedActionsSystem>().AddAction(wizard, "ActionSanguineStrike"));
+        await pair.RunTicksSync(5);
+
+        await server.WaitPost(() => Perform(entMan, wizard, "ActionSanguineStrike"));
+        await pair.RunTicksSync(5);
+
+        await server.WaitAssertion(() =>
+        {
+            Assert.That(entMan.HasComponent<SanguineStrikeComponent>(weapon), Is.True,
+                "Exsanguinating Strike didn't empower the held weapon!");
+        });
+
+        await server.WaitAssertion(() =>
+        {
+            var weaponComp = entMan.GetComponent<MeleeWeaponComponent>(weapon);
+            var hitEvent = new MeleeHitEvent(new List<EntityUid> { target }, wizard, weapon, weaponComp.Damage, null);
+            entMan.EventBus.RaiseLocalEvent(weapon, hitEvent);
+        });
+        await pair.RunTicksSync(5);
+
+        await server.WaitAssertion(() =>
+        {
+            Assert.That(entMan.HasComponent<SanguineStrikeComponent>(weapon), Is.False,
+                "Exsanguinating Strike should be consumed after one hit ('your NEXT attack'), not permanent!");
+        });
     }
 
     [Test]

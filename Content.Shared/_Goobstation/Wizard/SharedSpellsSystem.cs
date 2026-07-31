@@ -13,6 +13,7 @@ using Content.Shared._Goobstation.Wizard.SanguineStrike;
 using Content.Shared._Goobstation.Wizard.SpellCards;
 using Content.Shared._Goobstation.Wizard.Teleport;
 using Content.Shared._Goobstation.Wizard.TeslaBlast;
+using Content.Shared._Goobstation.Wizard.TimeStop;
 using Content.Shared._Goobstation.Wizard.Traps;
 using Content.Shared.Abilities.Mime;
 using Content.Shared.Access.Components;
@@ -175,6 +176,7 @@ public abstract class SharedSpellsSystem : EntitySystem
         SubscribeLocalEvent<ChargeMagicEvent>(OnCharge);
         SubscribeLocalEvent<BlinkSpellEvent>(OnBlink);
         SubscribeLocalEvent<TileToggleSpellEvent>(OnTileToggle);
+        SubscribeLocalEvent<GlobalTileToggleEvent>(OnGlobalTileToggle);
         SubscribeLocalEvent<PredictionToggleSpellEvent>(OnPredictionToggle);
         SubscribeLocalEvent<RathenEvent>(OnRathen);
         SubscribeAllEvent<SetSwapSecondaryTarget>(OnSwapSecondaryTarget);
@@ -354,8 +356,20 @@ public abstract class SharedSpellsSystem : EntitySystem
 
         if (_net.IsServer)
         {
-            var effect = Spawn(ev.Proto, TransformSystem.GetMapCoordinates(ev.Performer));
+            var mapCoords = TransformSystem.GetMapCoordinates(ev.Performer);
+            var effect = Spawn(ev.Proto, mapCoords);
             EnsureComp<PreventCollideComponent>(effect).Uid = ev.Performer; // Just in case
+
+            // Fixed: this only ever spawned the Chronofield's visual - nothing ever actually froze
+            // anyone. Grants FrozenComponent directly to everyone in range, same as every other
+            // radius spell in this file (Magic Missile, Disable Tech, Rathen's Curse).
+            foreach (var (target, _) in Lookup.GetEntitiesInRange<MobStateComponent>(mapCoords, ev.Range))
+            {
+                if (target == ev.Performer)
+                    continue;
+
+                EnsureComp<FrozenComponent>(target).FreezeTime = (float) ev.FreezeDuration.TotalSeconds;
+            }
         }
 
         ev.Handled = true;
@@ -1207,6 +1221,29 @@ public abstract class SharedSpellsSystem : EntitySystem
             EnsureComp<HierophantBeatComponent>(ev.Target);
 
         ev.Handled = true;
+    }
+
+    // Fixed: this store event (SpellbookEventGlobalTileToggle) had no handler anywhere - buying it
+    // consumed the purchase and did nothing. Mirrors OnTileToggle's per-target effect (see the fix
+    // note there) applied to every living human, same broadcast pattern as OnRandomGlobalSpawnSpell.
+    private void OnGlobalTileToggle(GlobalTileToggleEvent ev)
+    {
+        if (!_net.IsServer)
+            return;
+
+        foreach (var human in Mind.GetAliveHumans())
+        {
+            if (!human.Comp.OwnedEntity.HasValue)
+                continue;
+
+            var uid = human.Comp.OwnedEntity.Value;
+            if (HasComp<HierophantBeatComponent>(uid))
+                RemComp<HierophantBeatComponent>(uid);
+            else
+                EnsureComp<HierophantBeatComponent>(uid);
+        }
+
+        Audio.PlayGlobal(ev.Sound, Filter.Broadcast(), true);
     }
 
     private void OnPredictionToggle(PredictionToggleSpellEvent ev)

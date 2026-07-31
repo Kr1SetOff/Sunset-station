@@ -129,6 +129,12 @@ public sealed partial class StopTimeEvent : InstantActionEvent
 {
     [DataField]
     public EntProtoId Proto = "Chronofield";
+
+    [DataField]
+    public float Range = 3f;
+
+    [DataField]
+    public TimeSpan FreezeDuration = TimeSpan.FromSeconds(8);
 }
 
 public sealed partial class CorpseExplosionEvent : EntityTargetActionEvent

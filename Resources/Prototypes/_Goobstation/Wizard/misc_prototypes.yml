@@ -6,6 +6,13 @@
 
 # --- Effects ---
 
+# Fixed: this had no physics/fixtures/FreezeContactsComponent, so it was a light with zero
+# mechanical effect - Stop Time froze nobody. FreezeContactsSystem exists for exactly this (contact-
+# based freezing, reading its duration from an entity's own TimedDespawn.lifetime) but a contact
+# sensor here couldn't be made to reliably detect mobs already standing in the same spot the field
+# spawns on (the common case - the caster centers this on themselves). SharedSpellsSystem.OnStopTime
+# instead grants FrozenComponent directly to everyone in range at cast time, same pattern as every
+# other radius spell in that file (Magic Missile, Disable Tech, Rathen's Curse).
 - type: entity
   parent: BaseMagicalContraband
   id: Chronofield

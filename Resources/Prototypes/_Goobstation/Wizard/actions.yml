@@ -2,8 +2,12 @@
 #
 # Action entities for the ported Goob-Station wizard spells. None of Goob-Station's original
 # actions.rsi icon sheet or per-spell sound effects were ported (the whole asset folder never
-# existed in this repo), so every action here reuses the vanilla Objects/Magic/magicactions.rsi
+# existed in this repo), so every action used the vanilla Objects/Magic/magicactions.rsi
 # "spell_default" icon as a functional placeholder rather than going without an icon entirely.
+# Each spell below now overrides that with an existing in-repo icon matching what it actually
+# does under the hood (the mask/mob/effect/item its own event spawns or equips) - see the git
+# history for this file for the audit that picked them. ActionMutateSpell is the one exception
+# still on the placeholder: no Hulk/monster-themed icon asset exists anywhere in this repo.
 
 - type: entity
   abstract: true
@@ -46,6 +50,10 @@
   name: Mime's Malaise
   description: Turns your target into a mime, silencing them.
   components:
+  - type: Action
+    icon:
+      sprite: Clothing/Mask/mime.rsi
+      state: icon
   - type: Magic
     school: Mime
   - type: ActionUpgrade
@@ -60,6 +68,10 @@
   name: Banana Touch
   description: Turns your target into a clown.
   components:
+  - type: Action
+    icon:
+      sprite: Clothing/Mask/clown.rsi
+      state: icon
   - type: Magic
     school: Transmutation
   - type: ActionUpgrade
@@ -74,6 +86,10 @@
   name: Cluwne Curse
   description: Curses your target with the visage of the Cluwne.
   components:
+  - type: Action
+    icon:
+      sprite: Clothing/Mask/cluwne.rsi
+      state: icon
   - type: Magic
     school: Transmutation
   - type: ActionUpgrade
@@ -88,6 +104,10 @@
   name: Corpse Explosion
   description: Detonates a corpse in a burst of gore.
   components:
+  - type: Action
+    icon:
+      sprite: Objects/Magic/magicactions.rsi
+      state: gib
   - type: Magic
     school: Necromancy
   - type: EntityTargetAction
@@ -102,6 +122,10 @@
   name: Blind
   description: Blinds your target.
   components:
+  - type: Action
+    icon:
+      sprite: Objects/Weapons/Grenades/flashbang.rsi
+      state: icon
   - type: Magic
     school: Evocation
   - type: ActionUpgrade
@@ -130,6 +154,10 @@
   name: Tesla Blast
   description: Summons an arc of supercharged lightning after a short delay.
   components:
+  - type: Action
+    icon:
+      sprite: Effects/lightning.rsi
+      state: yellow_lightning
   - type: Magic
     school: Evocation
   - type: ActionUpgrade
@@ -144,6 +172,10 @@
   name: Lightning Bolt
   description: Strikes your target with a bolt of lightning.
   components:
+  - type: Action
+    icon:
+      sprite: Effects/lightning.rsi
+      state: blue_lightning
   - type: Magic
     school: Evocation
   - type: ActionUpgrade
@@ -158,6 +190,10 @@
   name: Homing Toolbox
   description: Summons a toolbox that relentlessly homes in on your target.
   components:
+  - type: Action
+    icon:
+      sprite: Objects/Tools/Toolboxes/toolbox_red.rsi
+      state: icon
   - type: Magic
     school: Conjuration
   - type: ActionUpgrade
@@ -172,6 +208,10 @@
   name: Spell Cards
   description: Fires a spray of razor-sharp spell cards.
   components:
+  - type: Action
+    icon:
+      sprite: Objects/Fun/card_sword.rsi
+      state: icon
   - type: Magic
     school: Evocation
   - type: ActionUpgrade
@@ -186,6 +226,10 @@
   name: Arcane Barrage
   description: Summons a barrage of arcane projectiles around you.
   components:
+  - type: Action
+    icon:
+      sprite: Objects/Weapons/Guns/Battery/laser_gun.rsi
+      state: icon
   - type: Magic
     school: Evocation
   - type: ActionUpgrade
@@ -200,6 +244,10 @@
   name: Lesser Summon Guns
   description: Conjures an enchanted bolt-action rifle.
   components:
+  - type: Action
+    icon:
+      sprite: Objects/Weapons/Guns/Rifles/ak.rsi
+      state: base
   - type: Magic
     school: Conjuration
   - type: ActionUpgrade
@@ -214,6 +262,10 @@
   name: Barnyard Curse
   description: Curses your target with the form of a random animal.
   components:
+  - type: Action
+    icon:
+      sprite: Clothing/Mask/fox.rsi
+      state: icon
   - type: Magic
     school: Transmutation
   - type: ActionUpgrade
@@ -236,6 +288,10 @@
   name: Scream For Me
   description: Makes your target scream in agony and bleed profusely.
   components:
+  - type: Action
+    icon:
+      sprite: _Starlight/Effects/blood.rsi
+      state: splatter4
   - type: Magic
     school: Sanguine
   - type: ActionUpgrade
@@ -250,6 +306,10 @@
   name: Lesser Summon Bees
   description: Summons a swarm of bees to fight for you.
   components:
+  - type: Action
+    icon:
+      sprite: Objects/Fun/Plushies/bee.rsi
+      state: icon
   - type: Magic
     school: Conjuration
   - type: ActionUpgrade
@@ -266,6 +326,10 @@
   name: Summon Simians
   description: Summons armed monkeys to fight for you.
   components:
+  - type: Action
+    icon:
+      sprite: Mobs/Animals/monkey.rsi
+      state: monkey
   - type: Magic
     school: Conjuration
   - type: ActionUpgrade
@@ -285,6 +349,10 @@
   name: Exsanguinating Strike
   description: Your next melee attack drains blood and heals you.
   components:
+  - type: Action
+    icon:
+      sprite: _Starlight/Vampire/actions_vampire.rsi
+      state: fangs_extended
   - type: Magic
     school: Sanguine
   - type: ActionUpgrade
@@ -299,6 +367,10 @@
   name: Rathen's Curse
   description: Something is very wrong with your digestive system.
   components:
+  - type: Action
+    icon:
+      sprite: Objects/Fun/whoopie.rsi
+      state: icon
   - type: Magic
     school: Chuuni
   - type: ActionUpgrade
@@ -313,6 +385,10 @@
   name: Magic Missile
   description: Fires a homing bolt of arcane energy.
   components:
+  - type: Action
+    icon:
+      sprite: Objects/Magic/magicactions.rsi
+      state: magicmissile
   - type: Magic
     school: Evocation
   - type: ActionUpgrade
@@ -327,6 +403,10 @@
   name: Disable Tech
   description: Disables electronics in a wide radius.
   components:
+  - type: Action
+    icon:
+      sprite: Objects/Weapons/Grenades/empgrenade.rsi
+      state: icon
   - type: Magic
     school: Explosion
   - type: ActionUpgrade
@@ -341,6 +421,10 @@
   name: Stop Time
   description: Freezes everyone around you in place for a short time.
   components:
+  - type: Action
+    icon:
+      sprite: Effects/chronofield.rsi
+      state: chronofield
   - type: Magic
     school: Translocation
   - type: ActionUpgrade
@@ -355,6 +439,10 @@
   name: Bind Soul
   description: Binds your soul to an item, granting you the power of lichdom.
   components:
+  - type: Action
+    icon:
+      sprite: Mobs/Species/Skeleton/parts.rsi
+      state: skull_icon
   - type: Magic
     school: Forbidden
   - type: InstantAction
@@ -366,6 +454,10 @@
   name: The Traps
   description: Conjures a scattering of magical traps around you.
   components:
+  - type: Action
+    icon:
+      sprite: Structures/Magic/Cult/trap.rsi
+      state: trap
   - type: Magic
     school: Conjuration
   - type: ActionUpgrade
@@ -380,6 +472,10 @@
   name: Chuuni Invocations
   description: Grants you a chuunibyou eyepatch and its dark powers.
   components:
+  - type: Action
+    icon:
+      sprite: Clothing/Eyes/Misc/eyepatch.rsi
+      state: icon
   - type: Magic
     school: Chuuni
   - type: InstantAction
@@ -391,6 +487,10 @@
   name: Thrown Lightning
   description: Hurls a bolt of lightning at your target.
   components:
+  - type: Action
+    icon:
+      sprite: Effects/lightning.rsi
+      state: red_lightning
   - type: Magic
     school: Evocation
   - type: InstantAction
@@ -402,6 +502,10 @@
   name: Instant Summons
   description: Summons a marked item directly into your hand.
   components:
+  - type: Action
+    icon:
+      sprite: Objects/Magic/magicactions.rsi
+      state: item_recall
   - type: Magic
     school: Translocation
   - type: InstantAction
@@ -413,6 +517,10 @@
   name: Teleport
   description: Teleports you to a known location.
   components:
+  - type: Action
+    icon:
+      sprite: Objects/Magic/magicactions.rsi
+      state: blink
   - type: Magic
     school: Translocation
   - type: ActionUpgrade
@@ -427,6 +535,10 @@
   name: Swap
   description: Swaps places with your target.
   components:
+  - type: Action
+    icon:
+      sprite: Objects/Devices/swapper.rsi
+      state: icon
   - type: Magic
     school: Translocation
   - type: ActionUpgrade
@@ -441,16 +553,25 @@
   name: Soul Tap
   description: Sacrifices some of your maximum health for power.
   components:
+  - type: Action
+    icon:
+      sprite: _Starlight/Interface/Alerts/skull.rsi
+      state: skull
   - type: Magic
     school: Forbidden
   - type: InstantAction
     event: !type:SoulTapEvent
 
+# Fixed: this was misnamed/misdescribed as a floor<->space converter, copy-pasted from a
+# different vanilla spell. What it actually does (see HierophantBeatComponent/System) is toggle a
+# movement-speed buff on the target - matching Goob-Station's actual "Tile Movement" spell, which
+# is exactly what the spellbook_catalog.yml store listing for this same productAction already
+# correctly calls it (spellbook-tile-toggle-name = "Tile Movement").
 - type: entity
   parent: BaseGoobWizardEntityTargetAction
   id: ActionTileToggle
-  name: Tile Toggle
-  description: Toggles the targeted tile between floor and open space.
+  name: Tile Movement
+  description: Toggles your target's movement rhythm, granting or removing a burst of speed.
   components:
   - type: Magic
     school: Transmutation
@@ -464,6 +585,10 @@
   name: Summon Stickmen
   description: Summons a horde of paper stickmen to fight for you.
   components:
+  - type: Action
+    icon:
+      sprite: Effects/crayondecals.rsi
+      state: stickman
   - type: Magic
     school: Conjuration
   - type: InstantAction
@@ -480,8 +605,8 @@
   - type: Action
     itemIconStyle: BigAction
     icon:
-      sprite: Objects/Magic/magicactions.rsi
-      state: spell_default
+      sprite: Mobs/Animals/gorilla.rsi
+      state: icon
   - type: Magic
     school: Transmutation
     requiresClothes: false
