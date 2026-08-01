@@ -77,6 +77,7 @@ changeling-passive-activate = Activated ability
 changeling-passive-activate-fail = Failed to activate the ability
 changeling-passive-active = Already active!
 
+changeling-onfire = Our camouflage burns away in the flames!
 changeling-action-fail-onfire = Our cells writhe with agony, failing to perform the action!
 changeling-action-fail-lesserform = Can't perform this action while in a lesser form!
 changeling-action-fail-absorbed = Need to absorb {$number} more organisms to use it!

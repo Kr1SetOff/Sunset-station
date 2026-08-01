@@ -67,6 +67,7 @@ changeling-passive-activate = Способность активирована
 changeling-passive-activate-fail = Не удалось активировать способность
 changeling-passive-active = Уже активно!
 
+changeling-onfire = Наша маскировка сгорает в пламени!
 changeling-action-fail-onfire = Наши клетки корчатся от боли, не позволяя выполнить действие!
 changeling-action-fail-lesserform = Невозможно выполнить это действие в низшей форме!
 changeling-action-fail-absorbed = Нужно поглотить ещё { $number } организмов, чтобы использовать это!
