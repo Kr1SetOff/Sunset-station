@@ -6,6 +6,7 @@ sunset-discord-link-refresh-button = Обновить статус
 sunset-discord-link-status-linked = Discord привязан. Уровень спонсорства: { $tier }
 sunset-discord-link-status-unlinked = Discord ещё не привязан.
 sunset-discord-link-required-shell = Сначала привяжите аккаунт Discord. Проверьте открывшееся окно привязки.
+joingame-load-not-complete = Ваши данные аккаунта ещё загружаются, попробуйте снова через секунду.
 
 sunset-sponsor-tier-name-0 = Нет
 sunset-sponsor-tier-name-1 = Зомби

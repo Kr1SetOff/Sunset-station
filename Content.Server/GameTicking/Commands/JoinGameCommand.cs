@@ -2,6 +2,7 @@ using Content.Server._Sunset.Discord;
 using Content.Server._Sunset.SponsorTier;
 using Content.Server._Starlight.NewLife;
 using Content.Server.Administration.Managers;
+using Content.Server.Database;
 using Content.Server.EUI;
 using Content.Server.Ghost.Roles;
 using Content.Server.Preferences.Managers;
@@ -29,6 +30,7 @@ namespace Content.Server.GameTicking.Commands
         [Dependency] private SunsetSponsorTierService _tierService = default!; // Sunset
         [Dependency] private SunsetDiscordOAuth _discordOAuth = default!; // Sunset
         [Dependency] private EuiManager _euiManager = default!; // Sunset
+        [Dependency] private UserDbDataManager _userDb = default!; // Sunset
 
         private readonly ISawmill _sawmill;
 
@@ -55,6 +57,18 @@ namespace Content.Server.GameTicking.Commands
 
             if (player == null)
             {
+                return;
+            }
+
+            // Sunset: the player's DB-backed data (including their Sunset Discord link cache) loads
+            // asynchronously and isn't guaranteed to be ready yet at this point - GameTicker.MakeJoinGame
+            // already silently no-ops on this same guard, but we need to check it *before* the Discord
+            // link check below, otherwise a genuinely-linked player whose cache hasn't loaded yet reads
+            // as unlinked and gets wrongly told to link again (fixed by this bailout - retrying once
+            // load finishes just works, no relink needed).
+            if (!_userDb.IsLoadComplete(player))
+            {
+                shell.WriteError(Loc.GetString("joingame-load-not-complete"));
                 return;
             }
 
