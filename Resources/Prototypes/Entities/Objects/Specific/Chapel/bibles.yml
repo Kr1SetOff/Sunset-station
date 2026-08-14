@@ -34,6 +34,7 @@
         Blunt: 1
   - type: Prayable
     bibleUserOnly: true
+  - type: DivineIntervention
   - type: Summonable
     specialItem: SpawnPointGhostRemilia
   - type: ReactionMixer

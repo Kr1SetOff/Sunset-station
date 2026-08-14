@@ -25,6 +25,7 @@
     back:
     - RubberStampChaplain
     - CosmicCenser # Starlight: Cosmic Cult
+    - Nullrod
 
 - type: chameleonOutfit
   id: ChaplainChameleonOutfit

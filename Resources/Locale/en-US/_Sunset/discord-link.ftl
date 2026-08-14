@@ -6,6 +6,7 @@ sunset-discord-link-refresh-button = Refresh status
 sunset-discord-link-status-linked = Discord linked. Sponsor tier: { $tier }
 sunset-discord-link-status-unlinked = Discord not linked yet.
 sunset-discord-link-required-shell = You must link your Discord account before joining. Check the Discord link window.
+joingame-load-not-complete = Your account data is still loading, please try again in a moment.
 
 sunset-sponsor-tier-name-0 = None
 sunset-sponsor-tier-name-1 = Zombie

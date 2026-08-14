@@ -1,4 +1,5 @@
 using Content.Shared._Starlight.Devil;
+using Content.Shared._Starlight.Vampire.Components;
 using Content.Server.Actions;
 using Content.Shared.Hands.EntitySystems;
 using Content.Server.RandomMetadata;
@@ -47,6 +48,11 @@ public sealed partial class DevilSystem : SharedDevilSystem
 
     private void OnStartup(EntityUid uid, DevilComponent devilComp, ref ComponentStartup args)
     {
+        // Goob-Station port: holy weapons (Bible, Nullrod) treat the Devil as unholy. This was
+        // dead code before - DevilRuleSystem already cleaned this component up on rule removal,
+        // but nothing ever added it.
+        EnsureComp<UnholyComponent>(uid);
+
         foreach (var actionId in devilComp.BaseActions)
         {
             EntityUid? action = null;
@@ -65,6 +71,8 @@ public sealed partial class DevilSystem : SharedDevilSystem
     /// </summary>
     private void OnShutdown(EntityUid uid, DevilComponent devilComp, ref ComponentShutdown args)
     {
+        RemComp<UnholyComponent>(uid);
+
         foreach (var (_, action) in devilComp.ActionEntities)
             _actions.RemoveAction(uid, action);
         devilComp.ActionEntities.Clear();
