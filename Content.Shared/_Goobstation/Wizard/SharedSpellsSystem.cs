@@ -3,6 +3,7 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Numerics;
+using Content.Shared._Goobstation.Religion;
 using Content.Shared._Goobstation.Wizard.BindSoul;
 using Content.Shared._Goobstation.Wizard.Chuuni;
 using Content.Shared._Goobstation.Wizard.Components;
@@ -114,6 +115,7 @@ public abstract class SharedSpellsSystem : EntitySystem
     [Dependency] protected readonly ActionContainerSystem ActionContainer = default!;
     [Dependency] protected readonly TagSystem Tag = default!;
     [Dependency] protected readonly SharedActionsSystem Actions = default!;
+    [Dependency] protected readonly DivineInterventionSystem DivineIntervention = default!;
     [Dependency] private   readonly INetManager _net = default!;
     [Dependency] private   readonly StatusEffectsSystem _statusEffects = default!;
     [Dependency] private   readonly InventorySystem _inventory = default!;
@@ -1436,11 +1438,11 @@ public abstract class SharedSpellsSystem : EntitySystem
         _popup.PopupClient(locMessage, uid, uid, type);
     }
 
-    // Adapted for this fork: always allowed - Goob-Station's Religion system (which lets a
-    // Nullrod deny touch-based spells) wasn't ported, so there's nothing to check here.
+    // Ported from Goob-Station's Religion system: a target holding (or wearing, for items that
+    // opt in) a holy item such as a Nullrod or Bible is shielded from touch-based spells.
     private bool IsTouchSpellDenied(EntityUid target)
     {
-        return false;
+        return DivineIntervention.ShouldDeny(target);
     }
 
     private void SpawnHomingProjectile(EntProtoId proto,

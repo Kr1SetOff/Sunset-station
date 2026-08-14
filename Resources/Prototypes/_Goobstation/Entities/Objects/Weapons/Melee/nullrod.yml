@@ -1,0 +1,89 @@
+# Ported from Goob-Station's Religion system (trimmed down to the two nullrods that don't depend
+# on Shitmed/Heretic/other content this fork doesn't have - the rest of Goob's ~15 nullrod variants
+# were left out).
+
+- type: Tag
+  id: Nullrod
+
+- type: entity
+  parent: BaseItem
+  id: BaseNullrod
+  abstract: true
+  components:
+  - type: DivineIntervention
+  - type: AlternatePrayable
+  - type: Sprite
+    sprite: _Goobstation/Objects/Weapons/Nullrod/nullrod.rsi
+    state: icon
+  - type: Item
+    size: Small
+  - type: DisarmMalus
+    malus: 0
+  - type: Tag
+    tags:
+    - Nullrod
+
+- type: entity
+  name: null rod
+  parent: BaseNullrod
+  id: Nullrod
+  description: The old classic. Does nothing special, really.
+  components:
+  - type: MeleeWeapon
+    heavyStaminaCost: 2.5
+    attackRate: 1
+    damage:
+      types:
+        Blunt: 10
+        Holy: 10
+    soundHit:
+      collection: MetalThud
+  - type: Nullrod
+    damageOnUntrainedUse:
+      types:
+        Heat: 20
+    untrainedUseString: nullrod-untrained-usage-popup
+
+- type: entity
+  name: rosary
+  description: Praying with this in hand heals those nearby. It hums with a faint holy aura.
+  parent: BaseNullrod
+  id: Rosary
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Objects/Weapons/Nullrod/rosary.rsi
+    state: icon
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Effects/weak_hit1.ogg
+    damage:
+      types:
+        Blunt: 3
+        Holy: 10
+  - type: HeldSpeedModifier
+    walkModifier: 1.15
+    sprintModifier: 1.15
+  - type: Item
+    size: Small
+    sprite: _Goobstation/Objects/Weapons/Nullrod/rosary.rsi
+  - type: Clothing
+    slots:
+    - Belt
+  - type: Nullrod
+    damageOnUntrainedUse:
+      types:
+        Blunt: 20
+    untrainedUseString: nullrod-rosary-untrained-usage-popup
+  - type: AlternatePrayable
+    repeatPrayer: true
+  - type: HealNearOnPray
+    healing:
+      groups:
+        Brute: -8
+      types:
+        Heat: -3
+        Cold: -3
+        Shock: -3
+    damage:
+      types:
+        Holy: 15
