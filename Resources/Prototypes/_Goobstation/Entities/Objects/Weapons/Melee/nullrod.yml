@@ -30,7 +30,6 @@
   description: The old classic. Does nothing special, really.
   components:
   - type: MeleeWeapon
-    heavyStaminaCost: 2.5
     attackRate: 1
     damage:
       types:
