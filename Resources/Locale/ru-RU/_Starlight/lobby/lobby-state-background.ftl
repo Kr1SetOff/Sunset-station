@@ -1,7 +1,7 @@
 lobby-state-background-positivity-title = Позитивность
 lobby-state-background-positivity-artist = Doner
 
-lobby-state-background-ipcsaster-title = IPC-saster
+lobby-state-background-ipcsaster-title = IPC-катастрофа
 lobby-state-background-ipcsaster-artist = TheAnaRina
 
 lobby-state-background-reflection-title = Отражение
@@ -58,22 +58,22 @@ lobby-state-background-mime-artist = Darkrell
 lobby-state-background-Dispace-title = Dispace
 lobby-state-background-IQlvlZero-artist = IQlvlZero
 
-lobby-state-background-clown-title = Clown Choices
+lobby-state-background-clown-title = Выбор клоуна
 lobby-state-background-clown-artist = m0lem4n
 
-lobby-state-background-fatefulshift-title = Fateful Shift
+lobby-state-background-fatefulshift-title = Судьбоносная смена
 lobby-state-background-fatefulshift-artist = rickery
 
-lobby-state-background-hopdesksimulator-title = HoP Desk Simulator
+lobby-state-background-hopdesksimulator-title = Симулятор стойки главы персонала
 lobby-state-background-hopdesksimulator-artist = swonki
 
-lobby-state-background-janitorialhell-title = Janitorial Hell
+lobby-state-background-janitorialhell-title = Ад уборщика
 lobby-state-background-janitorialhell-artist = wintergem18
 
-lobby-state-background-katievssyndie-title = Katie vs Syndie
+lobby-state-background-katievssyndie-title = Кэти против Синдиката
 lobby-state-background-katievssyndie-artist = ramblinger
 
-lobby-state-background-nogalcom-title = When the brigmedic's starting chems run out
+lobby-state-background-nogalcom-title = Когда у бригмедика заканчиваются стартовые химикаты
 lobby-state-background-nogalcom-artist = deltaVelocity
 
 # Sunset - nedostayushchie perevody

@@ -1,4 +1,4 @@
-thankyou-icecream-1 = Brrrrr!
+thankyou-icecream-1 = Бррррр!
 thankyou-icecream-2 = Остынь.
 thankyou-icecream-3 = Наслаждайтесь своим ледяным лакомством!
 thankyou-icecream-4 = Лёд — это класс!

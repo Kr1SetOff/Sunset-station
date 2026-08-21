@@ -158,7 +158,7 @@ chatsan-word-57 = wtaf
 chatsan-replacement-57 = что за ерунда вообще
 
 chatsan-word-58 = wsg
-chatsan-replacement-58 = what's good
+chatsan-replacement-58 = как оно
 
 chatsan-word-59 = mb
 chatsan-replacement-59 = моя вина

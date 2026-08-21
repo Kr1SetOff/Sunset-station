@@ -123,10 +123,10 @@ crafting-menu-text-ISW = Бюджетный вариант для начинаю
 crafting-menu-name-FSW = кованый меч
 crafting-menu-text-FSW = Вот ЭТО оружие! Лучше всего в паре с одинаково блестящей бронёй, требует сварки.
 
-crafting-menu-name-DSW = dawnbreaker
+crafting-menu-name-DSW = рассветолом
 crafting-menu-text-DSW = Сожгите нечестивых еретиков этим оружием правосудия!
 
-crafting-menu-name-TSW = tidebreaker
+crafting-menu-name-TSW = волнолом
 crafting-menu-text-TSW = Сокрушите тех, кто противостоит вам!
 
 crafting-menu-name-ISH = импровизированный щит

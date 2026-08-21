@@ -41,6 +41,7 @@ steal-target-groups-mining-shuttle-console-circuitboard = плата консо�
 steal-target-groups-salvage-shuttle-console-circuitboard = плата консоли шаттла утилизации
 steal-target-groups-communications-computer-circuitboard = плата компьютера связи
 steal-target-groups-id-card-computer-circuitboard = плата компьютера ID карт
+steal-target-groups-shipyard-computer-circuitboard = плата компьютера верфи
 
 steal-target-groups-clothing-headset-alt-command = накладная гарнитура командования
 steal-target-groups-ptech-circuitboard = плата ПТеха

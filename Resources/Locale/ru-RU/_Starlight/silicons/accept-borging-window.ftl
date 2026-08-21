@@ -1,7 +1,7 @@
 accept-borging-window-title = Шасси борга
-accept-borging-window-prompt-text-part = You are being borged!
-                                         Would you like to continue the round as a cyborg or observe instead?
-                                         Your brain will become a ghost role, if choose to you observe.
+accept-borging-window-prompt-text-part = Вас превращают в борга!
+                                         Хотите продолжить раунд в роли киборга или предпочтёте наблюдать?
+                                         Если вы выберете наблюдение, ваш мозг станет ролью призрака.
 accept-borging-window-accept-button = Играть как киборг
 accept-borging-window-deny-button = Наблюдать
 

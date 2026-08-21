@@ -30,3 +30,12 @@ signal-port-description-gun-5 = Слот вооружения шаттла 5.
 
 signal-port-name-gun-6 = Слот орудия 6
 signal-port-description-gun-6 = Слот вооружения шаттла 6.
+
+signal-port-name-spawn-triggered = Спавн вызван
+signal-port-description-spawn-triggered = Излучается, когда спавнер что-то создаёт.
+
+signal-port-name-enabled = Включено
+signal-port-description-enabled = Излучается, когда устройство включено и активировано.
+
+signal-port-name-disabled = Выключено
+signal-port-description-disabled = Излучается, когда устройство выключено и деактивировано.

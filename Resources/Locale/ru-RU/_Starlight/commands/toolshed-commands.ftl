@@ -261,3 +261,13 @@ command-description-markup-cleardesc =
     Очищает все дополнительные строки размеченного текста из описания переданной сущности.
 command-description-markup-listdesc =
     Выводит список всех размеченных текстов описания на переданной сущности и их ID.
+command-description-atmos-add =
+    Добавляет атмосферу на переданный грид.
+command-description-atmos-fix =
+    Исправляет атмосферу переданного грида.
+command-description-atmos-rejoin =
+    Пытается заставить переданное атмосферное устройство повторно присоединиться к атмосфере.
+command-description-jobs-makeunlimited =
+    Делает слот профессии неограниченным.
+command-description-jobs-makelimited =
+    Делает слот профессии ограниченным. Позволяет сбросить в 0 или в значение, которое было бы в середине раунда.

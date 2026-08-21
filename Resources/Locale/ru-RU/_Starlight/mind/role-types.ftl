@@ -4,7 +4,7 @@ role-type-harmless-antagonist-color = #ff8800
 role-subtype-abductor = Похититель
 role-subtype-pirate = Пират
 
-role-subtype-devil = Devil
+role-subtype-devil = Дьявол
 
 role-subtype-terminator = Экстерминатор
 

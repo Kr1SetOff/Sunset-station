@@ -1,4 +1,4 @@
-advertisement-discount-1 = Discount Dan, he's the man!
+advertisement-discount-1 = Дискаунтер Дэн — то, что надо!
 advertisement-discount-2 = Нет ничего лучше в этом мире, чем кусочек тайны.
 advertisement-discount-3 = Не слушайте другие автоматы, покупайте мои товары!
 advertisement-discount-4 = Количество превыше Качества!

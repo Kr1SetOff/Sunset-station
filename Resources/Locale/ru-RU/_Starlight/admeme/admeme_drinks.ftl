@@ -1,2 +1,2 @@
-reagent-name-rumizine = rumizine
-reagent-desc-rumizine = A medicinal concoction brewed from the finest Caribbean rum, with the recipe known only to the legendary pirate Uncle Git himself. Tastes like medicine. Mostly.
+reagent-name-rumizine = ромицин
+reagent-desc-rumizine = Лечебное зелье, сваренное из лучшего карибского рома по рецепту, известному лишь легендарному пирату Дядюшке Гиту. На вкус — почти как лекарство.

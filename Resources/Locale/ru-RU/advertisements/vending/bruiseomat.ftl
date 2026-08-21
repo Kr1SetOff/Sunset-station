@@ -1,4 +1,4 @@
-advertisement-bruiseomat-1 = I VOTE WAROPS!!!
+advertisement-bruiseomat-1 = Я ГОЛОСУЮ ЗА ВАРОПС!!!
 advertisement-bruiseomat-2 = У кого телекристаллы?
 advertisement-bruiseomat-3 = Кто-нибудь купил ЕМАГ?
 advertisement-bruiseomat-4 = Хочу обратно на родную станцию...

@@ -1,4 +1,4 @@
-advertisement-coffee-1 = Have a drink!
+advertisement-coffee-1 = Отведайте напиток!
 advertisement-coffee-2 = Выпьем!
 advertisement-coffee-3 = На здоровье!
 advertisement-coffee-4 = Не хотите чего-то горячего?

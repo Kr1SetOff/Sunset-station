@@ -1,4 +1,5 @@
 borg-slot-papers-empty = Документы и печати
+borg-slot-idstamps-empty = КПК, ID-карты и печати
 borg-slot-ore-empty = Руда
 borg-slot-fuel-empty = Топливные баки
 borg-slot-seeds-empty = Семена

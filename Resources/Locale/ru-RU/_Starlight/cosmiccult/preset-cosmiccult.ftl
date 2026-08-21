@@ -175,6 +175,8 @@ objective-condition-entropy-title = ПОГЛОЩЕНИЕ ЭНТРОПИИ
 objective-condition-entropy-desc = Совместными усилиями поглотите по крайней мере { $count } ед. энтропии у экипажа.
 objective-condition-culttier-title = НАДЕЛЕНИЕ МОНУМЕНТА СИЛОЙ
 objective-condition-culttier-desc = Убедитесь, что Монумент доведён до максимальной мощности.
+objective-condition-chaplain-title = СОВРАЩЕНИЕ ПАСТЫРЕЙ
+objective-condition-chaplain-desc = Обратите как можно больше священников.
 objective-condition-victory-title = ПРИБЛИЖЕНИЕ КОНЦА СВЕТА
 objective-condition-victory-desc = Призовите Неизвестное и возвестите об опускании финального занавеса.
 

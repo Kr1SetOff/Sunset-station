@@ -6,11 +6,11 @@ alerts-souldebt-name = [color=purple]Долг души[/color]
 alerts-souldebt-desc = После вашей смерти ваша душа будет истребована, что помешает вашему воскрешению.
 alerts-cybernetic-disruption-name = [color=red]Кибернетика нарушена[/color]
 alerts-cybernetic-disruption-desc = Ваша работа [color=red]нарушена[/color]! Что-то мешает функционированию ваших кибернетических имплантов.
-alerts-dwarf-courage-name = Khazukan Kazakit-ha! Khazuk! Khazuk! Khazuk!
+alerts-dwarf-courage-name = Казукан Казакит-ха! Казук! Казук! Казук!
 alerts-dwarf-courage-desc = [color=yellow]Отвага ваших предков[/color] наполняет ваши вены! Отомстите за них своим врагам!
-alerts-dwarf-fortitude-name = A Kladak Guzed-or!
+alerts-dwarf-fortitude-name = А Кладак Гузед-ор!
 alerts-dwarf-fortitude-desc = [color=lightblue]Стойкость Бога-Кузнеца[/color] закаляет вашу шкуру! Им вас не одолеть!
-alerts-dwarf-fury-name = Grimnir's Beard!
+alerts-dwarf-fury-name = Борода Гримнира!
 alerts-dwarf-fury-desc = [color=orange]Ярость Бога-Истребителя[/color] зовёт вас в бой! Покажите этим олухам, каково это — стоять лицом к лицу с настоящим дави!
 alerts-held-breath-name = [color=lightblue]Задержка дыхания[/color]
 alerts-held-breath-desc = Вы [color=lightblue]задерживаете дыхание[/color]! Нажмите на уведомление, чтобы прекратить задерживать дыхание — желательно до того, как вы задохнётесь.

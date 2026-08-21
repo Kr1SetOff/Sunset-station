@@ -1,1 +1,1 @@
-stack-entropy = mote of entropy
+stack-entropy = крупица энтропии

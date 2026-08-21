@@ -10,7 +10,7 @@ mentor-system-typing-indicator = { $players } { $count ->
 mentor-play-sound = звук?
 mentor-send-ping = получить пинг для mhelps?
 mentor-close-ticket = закрыть тикет
-mentor-tpto = "Tpto"
+mentor-tpto = «ТПшнуть»
 
 mentor-title-none-selected = Ничего не выбрано
 

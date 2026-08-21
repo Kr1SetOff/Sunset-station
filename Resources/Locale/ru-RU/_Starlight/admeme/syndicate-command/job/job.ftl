@@ -1,0 +1,10 @@
+job-name-syndicate-captain = Капитан Синдиката
+job-name-syndicate-chief-engineer = Старший Инженер Синдиката
+job-name-syndicate-chief-medical-officer = Главный Врач Синдиката
+job-name-syndicate-head-of-personnel = Глава Персонала Синдиката
+job-name-syndicate-head-of-security = Глава Службы Безопасности Синдиката
+job-name-syndicate-iaa = Агент Внутренних Дел Синдиката
+job-name-syndicate-magistrate = Магистрат Синдиката
+job-name-syndicate-quartermaster = Квартирмейстер Синдиката
+job-name-syndicate-research-director = Научный Руководитель Синдиката
+job-name-syndicate-redshield = Офицер «Красного Щита»

@@ -1,4 +1,4 @@
-plushie-ash-1 = Wanna talk about mental health?
+plushie-ash-1 = Хочешь поговорить о психическом здоровье?
 plushie-ash-2 = Я не большой, просто пушистый!
 plushie-ash-3 = 500 мороженых.
 plushie-ash-4 = Карго, мне нужно 6 доставок мороженого.

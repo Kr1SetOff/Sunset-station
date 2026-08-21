@@ -1,6 +1,6 @@
-washing-verb-text = Wash
-washing-verb-message = Wash away lube or glue from your hands, and pie from your face.
-washing-verb-message-disabled = There is nothing to wash off.
+washing-verb-text = Помыться
+washing-verb-message = Смыть смазку или клей с рук, а также торт с лица.
+washing-verb-message-disabled = Смывать нечего.
 washing-cleaning = You begin washing in the { THE($target) }.
-washing-cleaning-success = You feel much cleaner!
-washing-cleaning-cannot-clean = You already feel clean.
+washing-cleaning-success = Вы чувствуете себя намного чище!
+washing-cleaning-cannot-clean = Вы и так уже чисты.

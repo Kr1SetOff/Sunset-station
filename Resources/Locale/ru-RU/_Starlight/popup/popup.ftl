@@ -1,1 +1,1 @@
-lawboard-emag-popup = The board buzzes as its laws are wiped
+lawboard-emag-popup = Плата гудит — её законы стираются

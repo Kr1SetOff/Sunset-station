@@ -1,4 +1,4 @@
-plushie-glados-1 = There is only 1 law standing between my tools and your face.
+plushie-glados-1 = Между моими инструментами и твоим лицом стоит только один закон.
 plushie-glados-2 = Crewsimov — плохой набор законов.
 plushie-glados-3 = Пошёл ты. Я не на crewsimov.
 plushie-glados-4 = Можешь дать мне пистолет? Пожалуйста?

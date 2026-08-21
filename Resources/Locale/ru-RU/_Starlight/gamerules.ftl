@@ -16,8 +16,8 @@ vampire-gamemode-description = Кровопийцы в космосе! Не да
 vamptraitorling-title = Комбо
 vamptraitorling-description = Среди экипажа скрываются предатели, вампиры и генокрады разом
 
-all-at-once-except-zombieteors-title = Almost All at Once
-all-at-once-except-zombieteors-description = It's almost just not your day...
+all-at-once-except-zombieteors-title = Почти всё и сразу
+all-at-once-except-zombieteors-description = Похоже, сегодня не совсем ваш день...
 
-aller-at-once-except-zombieteors-title = Almost Aller at Once
-aller-at-once-except-zombieteors-description = You have fucked up now.
+aller-at-once-except-zombieteors-title = Почти совсем всё и сразу
+aller-at-once-except-zombieteors-description = Вот теперь вы точно облажались.

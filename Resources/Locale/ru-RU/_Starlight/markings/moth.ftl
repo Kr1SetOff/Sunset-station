@@ -1,2 +1,2 @@
-marking-MothDSwirlWings = Double swirl
-marking-MothAntennaeEnlarged = Big antennae
+marking-MothDSwirlWings = Крылья (Двойной завиток)
+marking-MothAntennaeEnlarged = Усики (Увеличенные)

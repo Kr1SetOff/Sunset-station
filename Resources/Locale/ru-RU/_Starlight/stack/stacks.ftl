@@ -133,6 +133,11 @@ stack-wizcoin = { $amount ->
     *[other] магкоины
 }
 
+stack-casino-chip = { $amount ->
+    [1] фишка казино
+    *[other] фишки казино
+}
+
 stack-abyssium-ore = { $amount ->
     [1] руда абиссиума
     *[other] руды абиссиума

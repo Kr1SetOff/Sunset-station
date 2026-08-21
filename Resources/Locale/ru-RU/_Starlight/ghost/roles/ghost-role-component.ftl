@@ -50,6 +50,28 @@ ghost-role-information-tsf-aligned-rules = Вы — [color={ role-type-tsf-align
 
 ghost-role-information-nanotrasen-special-forces-name = Оперативник NTSF
 ghost-role-information-nanotrasen-special-forces-description = Вы — оперативник Специальных Сил NanoTrasen. Выполните назначенную задачу.
+
+ghost-role-information-ntsf-name = Оперативник NTSF
+ghost-role-information-ntsf-description = Вы — оперативник Специальных Сил NanoTrasen. Выполните назначенную задачу.
+ghost-role-information-ntsf-primus = Оперативник NTSF Primus
+ghost-role-information-ntsf-primus-description = Вы являетесь частью подразделения Primus Специальных Сил NanoTrasen. Выполните назначенную задачу.
+ghost-role-information-ntsf-secundus = Оперативник NTSF Secundus
+ghost-role-information-ntsf-secundus-description = Вы являетесь частью подразделения Secundus Специальных Сил NanoTrasen. Выполните назначенную задачу.
+ghost-role-information-ntsf-tertius = Оперативник NTSF Tertius
+ghost-role-information-ntsf-tertius-description = Вы являетесь частью подразделения Tertius Специальных Сил NanoTrasen. Выполните назначенную задачу.
+ghost-role-information-ntsf-quartus = Оперативник NTSF Quartus
+ghost-role-information-ntsf-quartus-description = Вы являетесь частью подразделения Quartus Специальных Сил NanoTrasen. Выполните назначенную задачу.
+ghost-role-information-ntsf-quintus = Оперативник NTSF Quintus
+ghost-role-information-ntsf-quintus-description = Вы являетесь частью подразделения Quintus Специальных Сил NanoTrasen. Выполните назначенную задачу.
+ghost-role-information-ntsf-sextus = Оперативник NTSF Sextus
+ghost-role-information-ntsf-sextus-description = Вы являетесь частью подразделения Sextus Специальных Сил NanoTrasen. Выполните назначенную задачу.
+ghost-role-information-ntsf-septimus = Оперативник NTSF Septimus
+ghost-role-information-ntsf-septimus-description = Вы являетесь частью подразделения Septimus Специальных Сил NanoTrasen. Выполните назначенную задачу.
+ghost-role-information-ntsf-octavius = Оперативник NTSF Octavius
+ghost-role-information-ntsf-octavius-description = Вы являетесь частью подразделения Octavius Специальных Сил NanoTrasen. Выполните назначенную задачу.
+ghost-role-information-ntsf-nonus = Оперативник NTSF Nonus
+ghost-role-information-ntsf-nonus-description = Вы являетесь частью подразделения Nonus Специальных Сил NanoTrasen. Выполните назначенную задачу.
+
 ghost-role-information-decimus-name = Оперативник Decimus
 ghost-role-information-decimus-description = Вы — оперативник Decimus. Приведите в действие Код Эпсилон. Восстановление персонала NanoTrasen может быть или не быть целью, получите директивы от ваших начальников.
 
@@ -110,3 +132,6 @@ ghost-role-information-kobold-advanced-description = Вас тянет на фи
 
 ghost-role-information-kiki-name = Кики
 ghost-role-information-kiki-description = Уважаемый член кобольдского общества, отвечающая за ботанику и во всём помогающая ботаникам станции.
+
+ghost-role-information-stirstir-name = Стир Стир
+ghost-role-information-stirstir-description = Обезьяна с сомнительной репутацией, которой не стоит доверять. Настоящий завсегдатай камер.

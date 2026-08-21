@@ -18,3 +18,6 @@ reagent-desc-briomadine = Продвинутое полунатуральное 
 
 reagent-name-acrileni = акрилени
 reagent-desc-acrileni = Слабое натуральное лекарство, способное лечить лёгкий колющий урон.
+
+reagent-name-iceialin = айсиалин
+reagent-desc-iceialin = Холодный на ощупь химикат, способный вернуть температуру трупа к норме.

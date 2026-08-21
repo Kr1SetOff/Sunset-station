@@ -1,8 +1,8 @@
-objective-spiderwebsspawned-condition-title = Spider Webs
-objective-spiderwebsspawned-condition-description = You need to spin { $count } spider webs to evolve.
+objective-spiderwebsspawned-condition-title = Паутина
+objective-spiderwebsspawned-condition-description = Вам нужно сплести { $count } паутин, чтобы эволюционировать.
 
-objective-eggsinjected-condition-title = Inject Eggs
-objective-eggsinjected-condition-description = You need to inject { $count } eggs into humanoids to evolve.
+objective-eggsinjected-condition-title = Впрыснуть яйца
+objective-eggsinjected-condition-description = Вам нужно впрыснуть { $count } яиц в гуманоидов, чтобы эволюционировать.
 
-objective-damagedeal-condition-title = Deal Damage
-objective-damagedeal-condition-description = You need to deal { $count } damage to evolve.
+objective-damagedeal-condition-title = Нанести урон
+objective-damagedeal-condition-description = Вам нужно нанести { $count } урона, чтобы эволюционировать.

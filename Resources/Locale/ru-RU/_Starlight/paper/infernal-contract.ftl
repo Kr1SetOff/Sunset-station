@@ -20,10 +20,16 @@ infernal-contract-base =
 infernal-contract-examined-Valid = Контракт готов к подписанию.
 infernal-contract-examined-InvalidFormat = Контракт недействителен — в нём не хватает важного мелкого шрифта.
 infernal-contract-examined-TooCostly = Эта сделка невыгодна аду и не будет исполнена.
+infernal-contract-examined-OverusedDamnation = Контракт содержит проклятие, использованное слишком много раз, и больше не выгодное с финансовой точки зрения.
 infernal-contract-examined-UnknownClauses = Контракт содержит пункты, недоступные смертным.
 infernal-contract-examined-Signed = Контракт подписан!
 
 infernal-contract-examine-cost = Стоимость этого контракта: { $value }
+infernal-contract-examined-cost = Стоимость этого контракта: { $value }
+infernal-contract-examined-misspelling = В контракте есть недопустимые пункты: { $items }
+
+infernal-contract-misspelled-name = контракт с опечаткой
+infernal-contract-valid-name = адский контракт
 
 infernal-contract-popup-fail = Контракт обжигает вам руку! Что-то здесь не так!
 infernal-contract-popup-fail-self = Ваша рука проходит сквозь контракт! Эта сделка не для вас!

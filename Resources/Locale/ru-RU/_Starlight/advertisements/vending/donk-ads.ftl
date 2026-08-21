@@ -1,4 +1,4 @@
-advertisement-donkpocket-1 = With great flavor comes great responsibility!
+advertisement-donkpocket-1 = С великим вкусом приходит великая ответственность!
 advertisement-donkpocket-2 = «Братья ДОНК» — новые серии каждый четверг на Donk Plus!
 advertisement-donkpocket-3 = Качественная еда по низким ценам!
 advertisement-donkpocket-4 = Лучше быть сытым, чем мёртвым!

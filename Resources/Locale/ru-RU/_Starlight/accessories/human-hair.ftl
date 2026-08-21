@@ -74,4 +74,4 @@ marking-HumanHairVictory = Победа
 marking-HumanHairViper = Гадюка
 marking-HumanHairWife = Жена
 marking-HumanHairZiegler = Циглер
-marking-HumanHairCoolSpikes = Cool Spikes
+marking-HumanHairCoolSpikes = Крутые шипы

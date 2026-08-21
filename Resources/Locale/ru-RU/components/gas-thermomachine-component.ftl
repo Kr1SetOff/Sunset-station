@@ -1,4 +1,4 @@
-comp-gas-thermomachine-ui-title-freezer = Freezer
+comp-gas-thermomachine-ui-title-freezer = Морозильник
 comp-gas-thermomachine-ui-title-heater = Нагреватель
 
 comp-gas-thermomachine-ui-temperature = Температура (К):

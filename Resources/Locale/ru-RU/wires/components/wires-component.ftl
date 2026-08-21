@@ -11,8 +11,8 @@ wires-component-ui-on-receive-message-cannot-mend-uncut-wire = Вы не мож�
 wires-menu-name-label = Провода
 wires-menu-dead-beef-text = DEAD-BEEF
 wires-menu-help-popup =
-    Click on the gold contacts with a multitool in hand to pulse their wire.
-    Click on the wires with a pair of wirecutters in hand to cut/mend them.
+    Нажмите на золотые контакты с мультитулом в руке, чтобы прозвонить провод.
+    Нажмите на провода с кусачками в руке, чтобы перерезать/соединить их.
 
-    The lights at the top show the state of the machine, messing with wires will probably do stuff to them.
-    Wire layouts are different each round, but consistent between machines of the same type.
+    Индикаторы наверху показывают состояние устройства — манипуляции с проводами, скорее всего, как-то на него повлияют.
+    Раскладка проводов каждый раунд разная, но одинакова для всех устройств одного типа.

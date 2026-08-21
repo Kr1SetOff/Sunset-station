@@ -1,4 +1,4 @@
-plushie-nebula-1 = CDD Liaison Officer Nebula, reporting for duty!
+plushie-nebula-1 = Офицер по связям ЦДД Небула, прибыла для несения службы!
 plushie-nebula-2 = Привет, Нали!
 plushie-nebula-3 = Да, сэр.
 plushie-nebula-4 = Вы все были такой фантастической аудиторией!

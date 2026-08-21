@@ -1,1 +1,1 @@
-eorg-action = That would be end-of-round griefing!
+eorg-action = Это будет гриферством в конце раунда!

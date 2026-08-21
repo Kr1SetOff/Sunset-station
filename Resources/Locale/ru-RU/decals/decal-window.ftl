@@ -1,4 +1,4 @@
-decal-placer-window-title = Decal Placer
+decal-placer-window-title = Размещение декалей
 decal-placer-window-use-color = Свой цвет
 decal-placer-window-rotation = Ротация
 decal-placer-window-zindex = Глубина прорисовки

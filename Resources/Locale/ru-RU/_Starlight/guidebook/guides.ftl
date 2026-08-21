@@ -150,12 +150,14 @@ guide-entry-sl-service-sop-genproc-intro = Общие процедуры
 guide-entry-sl-service-sop-staff-intro = Процедуры для персонала
 guide-entry-sl-service-sop-headofpersonnel = Глава персонала
 guide-entry-sl-service-sop-lawyer = Юрист
+guide-entry-sl-service-sop-reporter = Репортёр
 
 guide-entry-abductors = Абдукторы
 guide-entry-terror-spiders = Пауки-террористы
 guide-entry-devil = Дьявол
 
 guide-entry-sl-deepfried-recipes = Фритюр
+guide-entry-sl-ice-cream-recipes = Мороженица
 
 # Plumbing guides
 guide-entry-plumbing = Трубопроводы

@@ -1,1 +1,1 @@
-defibrillator-damned = Resuscitation failed: patient's soul is on another plane of existence.
+defibrillator-damned = Реанимация не удалась: душа пациента находится в ином плане бытия.

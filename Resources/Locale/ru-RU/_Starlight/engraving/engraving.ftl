@@ -1,7 +1,7 @@
-engraving-verb-engrave = Engrave
+engraving-verb-engrave = Гравировать
 
-engraving-picture-verb = Change Photo
-engraving-picture-Ui-Popup = Describe the photo's appearance:
-engraving-picture-no-message = The Picture is insignificant.
-engraving-picture-has-message = The Picture depicts { "" }
-engraving-picture-succeed = You slot a new picture into the frame.
+engraving-picture-verb = Сменить фото
+engraving-picture-Ui-Popup = Опишите внешний вид фотографии:
+engraving-picture-no-message = Фотография ничем не примечательна.
+engraving-picture-has-message = На фотографии изображено { "" }
+engraving-picture-succeed = Вы вставляете новую фотографию в рамку.

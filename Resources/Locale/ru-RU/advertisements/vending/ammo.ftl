@@ -1,4 +1,4 @@
-advertisement-ammo-1 = Liberation Station: Your one-stop shop for all things second amendment!
+advertisement-ammo-1 = «Станция Освобождения»: всё для второй поправки в одном месте!
 advertisement-ammo-2 = Будь патриотом сегодня, возьми в руки пушку!
 advertisement-ammo-3 = Качественное оружие по низким ценам!
 advertisement-ammo-4 = Лучше мёртвый, чем красный!
