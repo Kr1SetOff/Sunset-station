@@ -44,10 +44,10 @@ entity-condition-guidebook-reagent-threshold =
     }
 
 entity-condition-guidebook-mob-state-condition =
-    the mob is { $state }
+    цель находится в состоянии { $state }
 
 entity-condition-guidebook-job-condition =
-    the target's job is { $job }
+    у цели профессия { $job }
 
 entity-condition-guidebook-solution-temperature =
     the solution's temperature is { $max ->

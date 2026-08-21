@@ -1,4 +1,4 @@
-advertisement-icecream-1 = It's cooler than smoking!
+advertisement-icecream-1 = Это круче, чем курить!
 advertisement-icecream-2 = Не желаете ли спастись от жары?
 advertisement-icecream-3 = От этих промышленных станков тут стало жарковато, верно?
 advertisement-icecream-4 = Это только мне кажется, или здесь становится всё жарче?

@@ -3,10 +3,10 @@ economy-atm-ui-transfer = Перевести
 
 economy-atm-ui-balance = Баланс: { $balance } кр.
 
-economy-atm-ui-deposit = To make a deposit, insert money into the ATM,
-                        but remember that cash withdrawal has a 0% fee,
-                        while cash deposit incurs a 10% fee. Credits
-                        can be used as a 1:1 replacement for Spesos.
+economy-atm-ui-deposit = Чтобы внести депозит, вставьте деньги в банкомат,
+                        но помните, что снятие наличных не облагается комиссией,
+                        а внесение наличных облагается комиссией 10%. Кредиты
+                        можно использовать как замену спесо в соотношении 1:1.
 
 # ATM transfer UX
 economy-atm-ui-transfer-help = Введите имя персонажа-получателя и сумму для перевода

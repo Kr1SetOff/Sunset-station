@@ -3,11 +3,11 @@ trait-category-background = Прошлое
 trait-background-civilian-name = Гражданский
 trait-background-civilian-description = Вы не получаете дополнительной информации.
 
-trait-background-fringe-name = Outer Fringes
+trait-background-fringe-name = Дальние рубежи
 trait-background-fringe-description = The far side of nowhere. The very limits of known space, out where the great expanse leads to the rest of the unclaimed galaxy. Where countless unknown splendors and horrors await. Strange cultures are said to form here, from hiding criminals or religious expeditions, with no hope of support from the frontier or core worlds. What was it like to grow up here? Who were the people who raised you — and why were they all the way out here? What were they trying to find — or trying to escape?
 
-trait-background-frontier-name = Corporate Frontier
-trait-background-frontier-description = Beyond the Core Worlds lies the Corporate Frontier, a place where countless organizations ever so slowly expand out into the greater galaxy. This is where our own NanoTrasen made its fame, as well as hundreds of others. The Cybersun corporation, Interdyne Pharmaceuticals, Vulcan Industries, Terraquad Logistics, these groups form their own secular societies with corporate laws and governance. Growing up here isn't easy, most view life as a commodity to be sold and purchased. Did you buy your way out? Or have you never managed to leave?
+trait-background-frontier-name = Корпоративный фронтир
+trait-background-frontier-description = За Коренными Мирами лежит Корпоративный фронтир — место, где бесчисленные организации медленно, но верно расширяются вглубь галактики. Именно здесь снискала свою известность наша NanoTrasen, как и сотни других компаний. Cybersun, Interdyne Pharmaceuticals, Vulcan Industries, Terraquad Logistics — эти группы формируют собственные светские общества со своими корпоративными законами и управлением. Расти здесь непросто: большинство воспринимает жизнь как товар, который можно купить и продать. Смогли ли вы выкупить свою свободу? Или вам так и не удалось отсюда вырваться?
 
 trait-background-former-soldier-name = Бывший солдат
 trait-background-former-soldier-description = Как бывший сотрудник Частной Военной Компании, Оборонительного Флота NanoTrasen или Секторной Милиции, вы поверхностно знакомы со всем огнестрельным оружием. Хотя вы можете не знать, кто их использует или что их типичные пользователи вообще реальны, например, Ядерные Оперативники с China Lake, вы знаете, что само оружие существует. Вы можете выбирать, насколько далеко идут эти знания, и решить просто ничего не знать об определённых видах оружия.
@@ -39,9 +39,9 @@ trait-background-iterator-description = Вы были из колонии, ко�
 trait-background-exterminator-name = Преследуемый
 trait-background-exterminator-description = Вы видели что-то ужасное. Сначала оно выглядело человеческим, затем сгорело до металлического скелета. Ничто не могло замедлить его, и оно действовало с единственной целью — уничтожить их, и оно это сделало. Раздавило их, как ничто, затем растаяло в brilliant огне. Вы наблюдали, как оно горит, и увидели, что вы наблюдаете. Вы видели слишком много, оно придёт за вами следующим. В этом вы уверены...
 
-trait-background-paradox-name = Paradox Clone
+trait-background-paradox-name = Парадоксальный клон
 trait-background-paradox-description = You did what you had to do make the timeline right. After being warped into this time stream, you murdered your counterpart, and took their place. Everything's just the slightest bit different here — and there's a gnawing feeling that you don't belong.
 
-trait-background-ussp-name = Ex USSP
+trait-background-ussp-name = Бывший USSP
 trait-background-ussp-description = The Union of Soviet Socialists Planets is a colossal governing body, taking up almost one fourth of all inhabited space. You were born amongst those red stars. Indoctrinated from childhood, you still remember the chants, the glorious history, and the sound of jackboots kicking down doors at night. You could have been a soldier, fighting for the great cause. You might have been a worker, indentured amongst mind-numbing grey corridors and dim lights. A scientist for the Soviet war effort — an engineer for the ancient power plants that fuel their socialist state. But now you're here, far from the Red Star. How did you get here? What allegiances do you still hold to that distant power, that rules so much of the night sky?
 

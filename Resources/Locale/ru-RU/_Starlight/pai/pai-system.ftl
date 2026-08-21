@@ -1,4 +1,4 @@
-pai-system-role-name-wizard = Wizard Personal AI
-pai-system-role-description-wizard = Be someone's Wizard pal!
-                                        (Memories *not* included.)
+pai-system-role-name-wizard = пИИ Волшебника
+pai-system-role-description-wizard = Стань чьим-нибудь Волшебным другом!
+                                        (Воспоминания *не* включены.)
 

@@ -1,4 +1,4 @@
-advertisement-smite-1 = SMITE! Ban your thirst!
+advertisement-smite-1 = СМАЙТ! Забанит вашу жажду!
 advertisement-smite-2 = Мистический заряд лимона и лайма!
 advertisement-smite-3 = Продано более одного миллиона напитков!
 advertisement-smite-4 = СМАЙТ! Бросьте 2к8 для определения вкуса.

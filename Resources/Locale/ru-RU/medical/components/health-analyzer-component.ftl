@@ -23,21 +23,3 @@ health-analyzer-window-scan-mode-active = ВКЛЮЧЕН
 health-analyzer-window-scan-mode-inactive = ВЫКЛЮЧЕН
 
 health-analyzer-popup-scan-target = { CAPITALIZE($user) } пытается просканировать вас!
-
-# 🌇Sunset🌇 - подробная схема частей тела
-health-analyzer-window-body-diagram-header = Диагностика тела
-health-analyzer-window-body-part-head = Голова
-health-analyzer-window-body-part-torso = Грудь
-health-analyzer-window-body-part-arm = Рука
-health-analyzer-window-body-part-hand = Кисть
-health-analyzer-window-body-part-leg = Нога
-health-analyzer-window-body-part-foot = Стопа
-health-analyzer-window-body-part-tail = Хвост
-health-analyzer-window-body-part-other = Часть тела
-health-analyzer-window-body-part-organ = Орган
-health-analyzer-window-body-part-healthy = Здорова
-health-analyzer-window-body-part-damaged = { $damage } урона
-health-analyzer-window-body-part-bleeding = КРОВОТЕЧЕНИЕ
-health-analyzer-window-body-part-tooltip-damage = Урон: { $damage } / { $max }
-health-analyzer-window-body-part-tooltip-bleeding = Эта часть тела кровоточит!
-health-analyzer-window-body-part-tooltip-organs = Органы:

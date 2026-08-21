@@ -18,3 +18,6 @@ signal-port-description-ticket-machine-burntickets = При срабатыван
 
 signal-port-name-set-particle-lambda = Задать тип частиц: лямбда
 signal-port-description-set-particle-lambda = Устанавливает тип частиц, испускаемых устройством, на лямбда.
+
+signal-port-name-trigger-spawn = Запуск спавнера
+signal-port-description-trigger-spawn = Активирует спавнер, заставляя его что-то создать.

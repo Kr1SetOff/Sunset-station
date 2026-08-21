@@ -14,3 +14,10 @@ blindingstew-effect-eye-burn = Глаза жжёт!
 blindingstew-effect-hair = Не стоило есть все эти волосы.
 blindingstew-effect-darkness = Кругом кромешная тьма!
 blindingstew-effect-punished = Вас определённо наказывают.
+
+reagent-name-juice-mint-extract = мятный экстракт
+reagent-desc-juice-mint-extract = Отлично подходит для чая и приготовления супер-воды.
+reagent-physical-desc-mint-extract = мятный
+reagent-name-cinnamon = Корица
+reagent-desc-cinnamon = Одна из специй жизни. Не пробуйте есть её ложкой в сыром виде.
+reagent-physical-desc-cinnamon = коричный

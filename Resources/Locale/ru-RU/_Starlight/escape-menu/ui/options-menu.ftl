@@ -36,6 +36,11 @@ ui-options-ranged-sight-offset = Базовое смещение прицела
 ui-options-sight-main-color = Основной цвет прицела
 ui-options-sight-second-color = Второй цвет прицела
 
+## General
+
+ui-options-general-ghost-themes = Темы призрака
+ui-options-general-ghost-themes-force-tester = Принудительно показывать вкладку тестировщика в меню тем призрака
+
 ## Admin
 
 ui-options-admin-ghost-hud = HUD админ-призрака
@@ -55,3 +60,13 @@ ui-options-admin-ghost-hud-setting-health-iconsandbars = Иконки и пол�
 
 ui-options-admin-ghost-hud-show-faction-icons = Показывать иконки фракций
 ui-options-admin-ghost-hud-show-satiation-icons = Показывать иконки сытости
+
+ui-options-admin-ghost = Настройки админ-призрака
+ui-options-admin-ghost-script-label = Скрипт aghost
+ui-options-admin-ghost-script-tooltip =
+    Название скрипта, который будет автоматически запускаться при переходе в режим админ-призрака — как по команде, так и при наблюдении из лобби.
+    Путь указывается относительно каталога данных вашего лаунчера, обычно внутри AppData на Windows или .local/share на Linux.
+
+# Graphics
+ui-options-interaction-particles = Показывать частицы взаимодействия
+ui-options-interaction-particles-tooltip = Показывает эффекты руки, предмета и притягивания при взаимодействии персонажей.

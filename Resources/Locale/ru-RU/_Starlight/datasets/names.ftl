@@ -1,4 +1,4 @@
-names-thaven-1 = Adaptability
+names-thaven-1 = Приспособляемость
 names-thaven-2 = Помощь Праведным
 names-thaven-3 = Внимательность
 names-thaven-4 = Будь Учтив

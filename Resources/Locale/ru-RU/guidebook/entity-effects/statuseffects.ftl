@@ -1,4 +1,4 @@
-entity-effect-status-effect-Stun = stunning
+entity-effect-status-effect-Stun = оглушение
 entity-effect-status-effect-KnockedDown = нокдаун
 entity-effect-status-effect-Jitter = дрожь
 entity-effect-status-effect-TemporaryBlindness = слепота
@@ -14,7 +14,7 @@ entity-effect-status-effect-StaminaModifier = модифицированная �
 entity-effect-status-effect-RadiationProtection = защита от радиации
 entity-effect-status-effect-Drowsiness = сонливость
 entity-effect-status-effect-Adrenaline = адреналин
-entity-effect-status-effect-PoliteLanguage = polite language
+entity-effect-status-effect-PoliteLanguage = вежливая речь
 
 entity-effect-status-effect-TheBoysButcherV = временные лазерные глаза от препарата V (Бутчер)
 entity-effect-status-effect-TheBoysHughieV = временная телепортация от препарата V (Хьюи)

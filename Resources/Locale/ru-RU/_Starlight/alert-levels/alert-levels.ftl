@@ -5,7 +5,7 @@ alert-level-omega-announcement = Колебания Нулевого Шрама 
 alert-level-omega-instructions = Переосмыслите свои решения.
 
 alert-level-theta = Тета
-alert-level-theta-announcement = Heri vixisti, hodi mori meministi.
+alert-level-theta-announcement = Heri vixisti, hodi mori meministi. (Вчера ты жил, сегодня помни о смерти.)
 alert-level-theta-instructions = Помни о смерти.
 
 alert-level-psi = Пси

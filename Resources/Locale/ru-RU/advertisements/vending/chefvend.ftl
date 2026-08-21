@@ -1,4 +1,4 @@
-advertisement-chefvend-1 = At least sixty percent of our eggs un-broken, guranteed!
+advertisement-chefvend-1 = Гарантируем: как минимум шестьдесят процентов наших яиц не разбиты!
 advertisement-chefvend-2 = Рис, детка, рис.
 advertisement-chefvend-3 = Добавьте немного масла!
 advertisement-chefvend-4 = Стоите ли вы своей соли? Мы да.

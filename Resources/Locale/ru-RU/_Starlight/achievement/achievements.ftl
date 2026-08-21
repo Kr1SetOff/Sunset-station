@@ -13,7 +13,7 @@ achievement-getnuked-description = Стать свидетелем ядерно�
 achievement-dragon-slayer-name = Убийца дракона
 achievement-dragon-slayer-description = Нанести дракону последний, смертельный удар.
 
-achievement-whiskey-echo-whiskey-name = Whiskey Echo Whiskey
+achievement-whiskey-echo-whiskey-name = Виски Эхо Виски
 achievement-whiskey-echo-whiskey-description = Впервые выпасть в роли предателя.
 
 achievement-assuming-direct-control-name = Прямое управление

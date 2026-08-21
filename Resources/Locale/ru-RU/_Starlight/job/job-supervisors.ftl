@@ -6,3 +6,4 @@ job-supervisors-station-ai = ИИ станции
 job-supervisors-warden = надзирателю
 job-supervisors-none = никому
 job-supervisors-solgov = Транс-Солнечной Федерации
+job-supervisors-prisoner = тюремным офицерам, заместителю губернатора и губернатору

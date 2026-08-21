@@ -1,4 +1,4 @@
-advertisement-cigs-1 = Space cigs taste good like a cigarette should.
+advertisement-cigs-1 = Космические сигареты на вкус такие, какими и должны быть настоящие сигареты.
 advertisement-cigs-2 = Я лучше умру, чем брошу.
 advertisement-cigs-3 = Затянись!
 advertisement-cigs-4 = Не верьте исследованиям — курите!

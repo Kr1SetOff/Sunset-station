@@ -1,4 +1,4 @@
-advertisement-dinnerware-1 = Mm, food stuffs!
+advertisement-dinnerware-1 = Ммм, снедь!
 advertisement-dinnerware-2 = Продукты питания и пищевые аксессуары.
 advertisement-dinnerware-3 = Берите тарелки!
 advertisement-dinnerware-4 = Вам нравятся вилки?

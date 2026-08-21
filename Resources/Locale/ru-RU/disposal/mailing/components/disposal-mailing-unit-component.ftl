@@ -1,5 +1,6 @@
 ## UI
 
+ui-mailing-unit-window-title-tagged = Почтовый блок { $tag }
 ui-mailing-unit-window-title = Почтовый блок { $tag }
 
 ui-mailing-unit-button-flush = Отправить

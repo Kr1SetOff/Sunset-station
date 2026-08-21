@@ -1,4 +1,4 @@
-plushie-eina-1 = Mail!
+plushie-eina-1 = Почта!
 plushie-eina-2 = Срочная почта!!
 plushie-eina-3 = Срочный мусор!!
 plushie-eina-4 = Трубные бомбы не контра!

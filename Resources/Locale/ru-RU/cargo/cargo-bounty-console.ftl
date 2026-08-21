@@ -1,4 +1,4 @@
-bounty-console-menu-title = Cargo bounty console
+bounty-console-menu-title = Консоль заявок карго
 bounty-console-label-button-text = Печать этикетки
 bounty-console-skip-button-text = Пропустить
 bounty-console-time-label = Время: [color=orange]{ $time }[/color]

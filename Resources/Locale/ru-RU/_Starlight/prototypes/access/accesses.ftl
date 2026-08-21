@@ -32,3 +32,11 @@ id-card-access-level-solgov = Солгов
 id-card-access-level-pirate = Пират
 id-card-access-level-blackstar = Блэкстар
 id-card-access-level-medtak = МедТак
+id-card-access-level-visitor = Посетитель
+
+id-card-access-level-cargo-cyborg = Киборг снабжения
+id-card-access-level-engineering-cyborg = Киборг инженерного отдела
+id-card-access-level-research-cyborg = Киборг научного отдела
+id-card-access-level-security-cyborg = Киборг службы безопасности
+id-card-access-level-service-cyborg = Киборг отдела обслуживания
+id-card-access-level-medical-cyborg = Киборг медицинского отдела

@@ -1,1 +1,1 @@
-inflatable-safe-disassembly = You expertly use { THE($item) } to open the valve on { THE($target) }, and start deflating { OBJECT($target) } without causing damage.
+inflatable-safe-disassembly = Вы умело используете { THE($item) }, чтобы открыть клапан на { THE($target) }, и начинаете сдувать { OBJECT($target) } без повреждений.

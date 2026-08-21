@@ -97,4 +97,4 @@ anomaly-behavior-inconstancy = [color=crimson]Обнаружено непост�
 anomaly-behavior-fast = [color=crimson]Частота пульсаций сильно увеличивается.[/color]
 anomaly-behavior-strenght = [color=crimson]Мощность пульсации значительно увеличивается.[/color]
 anomaly-behavior-moving = [color=crimson]Была обнаружена нестабильность координат.[/color]
-anomaly-secret-admin = [color=red](ERROR)[/color]
+anomaly-secret-admin = [color=red](ОШИБКА)[/color]

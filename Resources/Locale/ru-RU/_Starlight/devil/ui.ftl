@@ -4,3 +4,10 @@ devil-damnations-ui-damnation-name = { CAPITALIZE($name) }
 devil-damnations-ui-cost = Цена: { $cost }
 devil-damnations-ui-benefits = Преимущества
 devil-damnations-ui-disadvantages = Проклятия
+devil-damnations-ui-damned-crew = Проклятый экипаж
+
+devil-damnations-info-title = Информация
+devil-damnations-category-curses-title = Проклятия
+devil-damnations-category-constitution-title = Телосложение
+devil-damnations-category-psyche-title = Психика
+devil-damnations-category-materiel-title = Снаряжение

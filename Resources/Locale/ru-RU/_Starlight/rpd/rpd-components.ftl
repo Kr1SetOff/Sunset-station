@@ -3,6 +3,7 @@ rpd-component-atmospheric-utility = Атмосферное оборудован�
 rpd-component-pumps = Насосы и клапаны
 rpd-component-vents = Вентиляционные отверстия
 rpd-component-sensors-monitors = Датчики и мониторы
+rpd-component-interfaces-storage = Интерфейсы и хранилища
 rcd-rpd-mode-primary = Основной
 rcd-rpd-mode-secondary = Вторичный
 rcd-rpd-mode-tertiary = Третичный

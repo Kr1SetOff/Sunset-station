@@ -1,4 +1,4 @@
-gas-pipe-sensor-teg-fuel-loop = TEG fuel
-gas-pipe-sensor-vox-air-loop = Vox air
-gas-pipe-sensor-nuclear-hot-loop = Nuclear hot loop
-gas-pipe-sensor-nuclear-cold-loop = Nuclear cold loop
+gas-pipe-sensor-teg-fuel-loop = Топливо ТЭГ
+gas-pipe-sensor-vox-air-loop = Воздух вокса
+gas-pipe-sensor-nuclear-hot-loop = Ядерный горячий контур
+gas-pipe-sensor-nuclear-cold-loop = Ядерный холодный контур

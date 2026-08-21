@@ -18,10 +18,10 @@ accent-german-words-6 = мясо
 accent-german-words-replace-6 = фляйш
 
 accent-german-words-7 = мужчина
-accent-german-words-replace-7 = mann
+accent-german-words-replace-7 = манн
 
 accent-german-words-8 = мужчины
-accent-german-words-replace-8 = männer
+accent-german-words-replace-8 = меннер
 
 accent-german-words-9 = девушка
 accent-german-words-9-2 = женщина
@@ -158,7 +158,7 @@ accent-german-words-51 = до свидания
 accent-german-words-replace-51 = ауфидерзейн
 
 accent-german-words-52 = пока
-accent-german-words-replace-52 = tschüss
+accent-german-words-replace-52 = чюсс
 
 accent-german-words-53 = пока пока
 accent-german-words-53-2 = пока-пока
@@ -168,7 +168,7 @@ accent-german-words-54 = фантастика
 accent-german-words-replace-54 = фантастиш
 
 accent-german-words-55 = генокрад
-accent-german-words-replace-55 = doppelgänger
+accent-german-words-replace-55 = доппельгангер
 
 accent-german-words-56 = запрещено
 accent-german-words-56-2 = нельзя

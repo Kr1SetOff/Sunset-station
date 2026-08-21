@@ -1,3 +1,3 @@
 department-Law = Юридический отдел
-department-NT = NanoTrasen Personnel
+department-NT = Персонал NanoTrasen
 department-TSF = Транс-Солнечная Федерация

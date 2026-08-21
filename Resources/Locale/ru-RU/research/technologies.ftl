@@ -64,7 +64,7 @@ research-technology-advanced-anomaly-research = Продвинутое иссл�
 research-technology-rped = Быстрая Замена Деталей
 research-technology-super-parts = Суперкомпоненты
 research-technology-deterrence = Технология сдерживания
-research-technology-mech-borg-uplink= Advanced Positronic Relays
+research-technology-mech-borg-uplink= Продвинутые позитронные ретрансляторы
 
 research-technology-janitorial-equipment = Уборочное оборудование
 research-technology-laundry-tech = Прачечная технология

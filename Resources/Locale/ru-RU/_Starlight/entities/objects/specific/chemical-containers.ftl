@@ -14,66 +14,66 @@ ent-JugDexalinPlus = { ent-Jug }
     .suffix = dexalin plus
     .desc = Used to contain a very large amount of chemicals or solutions. Chugging is extremely ill-advised.
 
-ent-JugArithrazine = jug
+ent-JugArithrazine = { ent-Jug }
     .suffix = arithrazine
-    .desc = Used to contain a very large amount of chemicals or solutions. Chugging is extremely ill-advised.
+    .desc = { ent-Jug.desc }
 
 ent-JugSaline = { ent-Jug }
     .suffix = saline
     .desc = Used to contain a very large amount of chemicals or solutions. Chugging is extremely ill-advised.
 
-ent-JugDiphenhydramine = jug
+ent-JugDiphenhydramine = { ent-Jug }
     .suffix = diphenhydramine
-    .desc = Used to contain a very large amount of chemicals or solutions. Chugging is extremely ill-advised.
+    .desc = { ent-Jug.desc }
 
-ent-JugCryoxadone = jug
+ent-JugCryoxadone = { ent-Jug }
     .suffix = cryoxadone
-    .desc = Used to contain a very large amount of chemicals or solutions. Chugging is extremely ill-advised.
+    .desc = { ent-Jug.desc }
 
-ent-JugDoxarubixadone = jug
+ent-JugDoxarubixadone = { ent-Jug }
     .suffix = doxarubixadone
-    .desc = Used to contain a very large amount of chemicals or solutions. Chugging is extremely ill-advised.
+    .desc = { ent-Jug.desc }
 
-ent-JugAloxadone = jug
+ent-JugAloxadone = { ent-Jug }
     .suffix = aloxadone
-    .desc = Used to contain a very large amount of chemicals or solutions. Chugging is extremely ill-advised.
+    .desc = { ent-Jug.desc }
 
-ent-JugSigynate = jug
+ent-JugSigynate = { ent-Jug }
     .suffix = sigynate
-    .desc = Used to contain a very large amount of chemicals or solutions. Chugging is extremely ill-advised.
+    .desc = { ent-Jug.desc }
 
-ent-JugLeporazine = jug
+ent-JugLeporazine = { ent-Jug }
     .suffix = leporazine
-    .desc = Used to contain a very large amount of chemicals or solutions. Chugging is extremely ill-advised.
+    .desc = { ent-Jug.desc }
 
-ent-JugBruizine = jug
+ent-JugBruizine = { ent-Jug }
     .suffix = bruizine
-    .desc = Used to contain a very large amount of chemicals or solutions. Chugging is extremely ill-advised.
+    .desc = { ent-Jug.desc }
 
-ent-JugLacerinol = jug
+ent-JugLacerinol = { ent-Jug }
     .suffix = lacerinol
-    .desc = Used to contain a very large amount of chemicals or solutions. Chugging is extremely ill-advised.
+    .desc = { ent-Jug.desc }
 
 ent-JugPuncturase = { ent-Jug }
     .suffix = puncturase
     .desc = Used to contain a very large amount of chemicals or solutions. Chugging is extremely ill-advised.
 
-ent-JugPyrazine = jug
+ent-JugPyrazine = { ent-Jug }
     .suffix = pyrazine
-    .desc = Used to contain a very large amount of chemicals or solutions. Chugging is extremely ill-advised.
+    .desc = { ent-Jug.desc }
 
-ent-JugInsuzine = jug
+ent-JugInsuzine = { ent-Jug }
     .suffix = insuzine
-    .desc = Used to contain a very large amount of chemicals or solutions. Chugging is extremely ill-advised.
+    .desc = { ent-Jug.desc }
 
-ent-JugAmbuzol = jug
+ent-JugAmbuzol = { ent-Jug }
     .suffix = ambuzol
-    .desc = Used to contain a very large amount of chemicals or solutions. Chugging is extremely ill-advised.
+    .desc = { ent-Jug.desc }
 
-ent-JugAmbuzolPlus = jug
+ent-JugAmbuzolPlus = { ent-Jug }
     .suffix = ambuzol plus
-    .desc = Used to contain a very large amount of chemicals or solutions. Chugging is extremely ill-advised.
+    .desc = { ent-Jug.desc }
 
-ent-JugAmoxla = jug
+ent-JugAmoxla = { ent-Jug }
     .suffix = amoxla
-    .desc = Used to contain a very large amount of chemicals or solutions. Chugging is extremely ill-advised.
+    .desc = { ent-Jug.desc }

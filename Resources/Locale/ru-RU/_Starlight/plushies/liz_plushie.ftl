@@ -1,4 +1,4 @@
-plushie-liz-1 = Hey stinki!
+plushie-liz-1 = Эй, вонючка!
 plushie-liz-2 = ВИИИСК!!
 plushie-liz-3 = Я называю своих друзей вонючками, нет, это не странно
 plushie-liz-4 = Достань их!

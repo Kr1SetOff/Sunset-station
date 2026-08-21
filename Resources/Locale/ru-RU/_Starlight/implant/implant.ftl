@@ -8,8 +8,8 @@ mind-control-user-briefing =
     Вам вживили имплант контроля над разумом от [color = darkred]{ $master-name }[/color].
     Слушайте указания, которые вам дают. Старайтесь не погибнуть, не получить травму и не скомпрометировать имплант...
     Если только [color = darkred]{ $master-name }[/color] сам не прикажет иначе.
-mind-control-prevented = A MindShield prevented the Implant!
-mind-control-prevents-mindshield = Another Implant was in the way.
+mind-control-prevented = Имплант защиты разума заблокировал контроль над разумом!
+mind-control-prevents-mindshield = На пути оказался другой имплант.
 mind-control-invalid = The subject must be alive.
 
 # Sunset - nedostayushchie perevody

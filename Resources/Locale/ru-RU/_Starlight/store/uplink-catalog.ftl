@@ -104,6 +104,9 @@ uplink-shuttle-board-desc = Компьютерная печатная плата
 uplink-shuttle-bundle-name = Ящик шаттла Синдиката
 uplink-shuttle-bundle-desc = Всё, кроме платы шаттла. Это шаттл в ящике* (Требуется некоторая сборка)
 
+uplink-chameleon-bundle-name = Ящик набора хамелеона
+uplink-chameleon-bundle-desc = Ящик с рюкзаком, полным предметов с технологией хамелеона, позволяющей замаскироваться почти под что угодно на станции, и не только!
+
 uplink-friendship-bundle-name = Набор дружбы
 uplink-friendship-bundle-desc = Дружба упакована в удобный ящик*. (Требуется некоторая сборка)
 

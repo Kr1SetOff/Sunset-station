@@ -22,8 +22,8 @@ fax-group-itg = Межзвездная Торговая Гильдия
 fax-group-blackstar = «Черная звезда»
 fax-group-medtak = MedTak
 fax-group-ntsf = NTSF
-fax-group-tsf = TSF
-fax-group-ussp = USSP
+fax-group-tsf = Транс-Солнечная Федерация
+fax-group-ussp = Союз Советских Социалистических Планет
 fax-group-wizard = Федерация Волшебников
 
 # Departmental fax groups

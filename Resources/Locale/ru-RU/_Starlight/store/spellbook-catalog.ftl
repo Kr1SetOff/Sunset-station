@@ -6,8 +6,8 @@ spellbook-event-summon-cheese-description = Протянитесь в пусто
 
 spellbook-event-tower-babel-name = Смена языка
 spellbook-event-tower-babel-description = Можете повторить? Рандомизирует все языки! Должно быть применено на станции. Отключает возврат средств.
-action-speech-spell-babel = Ya' Ni Lau' Re el
-action-speech-spell-babel-tts = Yare Ni, Laure Real
+action-speech-spell-babel = Я' Ни Лау' Ре эль
+action-speech-spell-babel-tts = Яре Ни, Лауре Реал
 
 tower-of-babel-shifted = Ваш язык становится искривлённым
 tower-of-babel-returned = Ваш язык возвращается на место

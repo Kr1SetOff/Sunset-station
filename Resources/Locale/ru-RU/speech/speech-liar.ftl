@@ -11,7 +11,7 @@ liar-word-4 = нету
 liar-word-replacement-4 = есть
 
 liar-word-5 = конечно
-liar-word-5-2 = yeap
+liar-word-5-2 = конешно
 liar-word-replacement-5 = нет уж
 
 liar-word-6 = отрицательно мотает головой
@@ -41,7 +41,7 @@ liar-word-13 = полн~
 liar-word-replacement-13 = пуст~
 
 liar-word-14 = хороший
-liar-word-14-2 = wasn't
+liar-word-14-2 = хорош
 liar-word-replacement-14 = плохой
 
 liar-word-15 = могу
@@ -62,14 +62,14 @@ liar-word-19 = красив~
 liar-word-replacement-19 = уродлив~
 
 liar-word-20 = добр~
-liar-word-20-2 = can't
+liar-word-20-2 = добрый
 liar-word-replacement-20 = зл~
 
 liar-word-21 = страшн~
 liar-word-replacement-21 = смешн~
 
 liar-word-22 = упал~
-liar-word-22-2 = shouldn't
+liar-word-22-2 = рухнул~
 liar-word-replacement-22 = встал~
 
 liar-word-23 = вспомнил~
@@ -115,7 +115,7 @@ liar-word-36 = одушевлённ~
 liar-word-replacement-36 = neoдушевлённ~
 
 liar-word-37 = ненавид~
-liar-word-37-2 = aren't
+liar-word-37-2 = презира~
 liar-word-replacement-37 = люб~
 
 liar-word-38 = нравиться

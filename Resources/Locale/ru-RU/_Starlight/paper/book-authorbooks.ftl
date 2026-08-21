@@ -1,20 +1,20 @@
-book-text-conspiracies = [bold] Forward from the author:[/bold] Congratulations on the best decision of your life, reading this book! While the others remain content being silently controlled and manipulated you seek the truth. And within these pages I fully intend to give it to you.
-        I am well aware that my reputation proceeds me and thus will skip introductions to get straight to the point. We don't have much time. Neo-conspiracies abound and continue to influence the mass general sheep populace. Our overlords believe that those of us that strike out from the herd are to be sheared and culled. Do not be surprised if you begin losing your hair. Our baldness distinguishes us and will allow us to recognize eachother.
+book-text-conspiracies = [bold] Обращение автора:[/bold] Поздравляю с лучшим решением в вашей жизни — чтением этой книги! Пока другие продолжают молча мириться с тем, что ими управляют и манипулируют, вы ищете правду. И на этих страницах я намерен предоставить её вам в полном объёме.
+        Мне хорошо известно, что моя репутация опережает меня, поэтому я пропущу вступление и перейду сразу к делу. У нас не так много времени. Нео-заговоры множатся и продолжают влиять на общую овечью массу населения. Наши повелители считают, что тех из нас, кто отбивается от стада, нужно остричь и выбраковать. Не удивляйтесь, если начнёте терять волосы. Наша лысина отличает нас и позволяет узнавать друг друга.
 
-        CyberSun invented bureaucracy to sell more pens!
+        CyberSun изобрели бюрократию, чтобы продавать больше ручек!
 
-        Central Command has brainwashed monkey's working as the AI core!
+        Центральное Командование промыло мозги обезьянам, которые работают ядром ИИ!
 
-        Giggles-at-Crime is a lich puppet of the Honkmother, which is capable of genetics/bioengineering. The Honkmother is not actually a god, as she is capable of influencing things outside of of here own sphere.
-        She is an advanced biological entity who has reached genetic ascension!
+        Хихикающий-над-Преступлением — кукла-лич Хонк-матери, способная на генетику и биоинженерию. Хонк-мать на самом деле не богиня, поскольку способна влиять на вещи за пределами собственной сферы.
+        Она — продвинутая биологическая сущность, достигшая генетического вознесения!
 
-        Quantum communication networks are being intercepted by beings from parallel dimensions!
+        Сети квантовой связи перехватываются существами из параллельных измерений!
 
-        All Gorlex operatives are vegan!
+        Все оперативники Горлекса — веганы!
 
-        Virtual reality vacation packages occasionally "lose" users, transferring their consciousness to serve as processing nodes!
+        Туристические путёвки в виртуальную реальность иногда «теряют» пользователей, перенаправляя их сознание на службу в качестве обрабатывающих узлов!
 
-        Central Special Operations Division has a backup strategy in case NanoTrasen tells the Death Squad to kill them!
+        У Центрального Отдела Специальных Операций есть запасной план на случай, если NanoTrasen прикажет Отряду Смерти их убить!
 
 
 book-text-more-conspiracies = [bold] Обращение автора:[/bold] Поздравляю с лучшим решением в вашей жизни — чтением этой книги! Пока другие довольствуются тем, что ими молча управляют и манипулируют, вы ищете правду. И на этих страницах я намерен полностью вам её предоставить.

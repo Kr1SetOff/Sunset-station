@@ -1,4 +1,5 @@
 job-name-assistant = Ассистент
+job-name-stirstir = Стир Стир
 
 # Role timers - Apparently someone from upstream will cut us if these aren't alphabetical?
 JobBlueShield = Офицер БлюШилда
@@ -15,3 +16,7 @@ JobRoboticist = Роботехник
 JobSalvageLead = Ведущий утилизатор
 JobSurgeon = Хирург
 JobZookeeper = Зоотехник
+JobCentCommServiceWorker = Разнорабочий Центкома
+JobCentCommChef = Повар Центкома
+JobCentCommBartender = Бармен Центкома
+JobCentCommJanitor = Уборщик Центкома

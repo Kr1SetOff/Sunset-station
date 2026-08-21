@@ -12,6 +12,10 @@ job-name-nanotrasen-special-forces = оперативник ОБР НТ
 job-name-decimus = оперативник Decimus
 job-name-nct = карьерный наставник NanoTrasen
 job-name-ert = боец ОБР
+job-name-cc-serviceworker = разнорабочий Центкома
+job-name-cc-chef = повар Центкома
+job-name-cc-bartender = бармен Центкома
+job-name-cc-janitor = уборщик Центкома
 
 job-name-performer = артист
 job-name-salvagelead = ведущий утилизатор

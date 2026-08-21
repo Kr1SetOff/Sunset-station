@@ -15,8 +15,9 @@ disposal-flush-verb-get-data-text = Смыть
 disposal-self-insert-verb-get-data-text = Залезть внутрь
 disposal-eject-verb-get-data-text = Извлечь всё
 
-## No hands
+## Errors
 disposal-unit-no-hands = У вас нет рук!
+disposal-unit-is-full = Внутри больше нет места.
 
 # state
 disposal-unit-state-Ready = Готов
