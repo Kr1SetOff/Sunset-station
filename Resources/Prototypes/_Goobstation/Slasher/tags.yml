@@ -1,0 +1,8 @@
+# Goob-Station tags the slasher's weapons need. Sunset has no "Machete" tag of its own
+# (the vanilla Machete is an entity id, not a tag), and no MaintenanceCloset locker tag,
+# so both are declared here for AntagLockerSpawn and the machete variants.
+- type: Tag
+  id: Machete
+
+- type: Tag
+  id: MaintenanceCloset

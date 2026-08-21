@@ -1,0 +1,9 @@
+- type: entity
+  parent: StatusEffectSlowdown
+  id: SlasherSlowdownStatusEffect
+  name: slasher slowdown
+
+- type: entity
+  parent: StatusEffectSpeed
+  id: SlasherStatusEffectKillSpeed
+  name: slasher kill speedup

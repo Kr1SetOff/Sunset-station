@@ -30,6 +30,15 @@ public sealed partial class ReactiveSystem : EntitySystem
 
         var ev = new ReactionEntityEvent(method, reagentQuantity, proto);
         RaiseLocalEvent(uid, ref ev);
+
+        // Goobstation - relay for systems that need touch reactions but cannot subscribe to
+        // ReactionEntityEvent on ReactiveComponent, since SharedEntityEffectsSystem already owns
+        // that (comp, event) pair and duplicate directed subscriptions throw.
+        if (method == ReactionMethod.Touch)
+        {
+            var relayEv = new TouchReactionRelayEvent();
+            RaiseLocalEvent(uid, ref relayEv);
+        }
     }
 }
 public enum ReactionMethod
@@ -41,3 +50,10 @@ Ingestion,
 
 [ByRefEvent]
 public readonly record struct ReactionEntityEvent(ReactionMethod Method, ReagentQuantity ReagentQuantity, ReagentPrototype Reagent);
+
+/// <summary>
+/// Goobstation - relay of <see cref="ReactionEntityEvent"/> for touch reactions.
+/// Exists purely so more than one system can react to being splashed.
+/// </summary>
+[ByRefEvent]
+public readonly record struct TouchReactionRelayEvent();

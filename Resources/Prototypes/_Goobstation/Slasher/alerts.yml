@@ -1,0 +1,11 @@
+- type: alert
+  id: SlasherSeen
+  icons:
+  - sprite: /Textures/_Goobstation/Interface/Alerts/seen.rsi
+    state: unseen
+  - sprite: /Textures/_Goobstation/Interface/Alerts/seen.rsi
+    state: seen
+  name: alerts-slasher-seen-name
+  description: alerts-slasher-seen-desc
+  minSeverity: 0
+  maxSeverity: 1
