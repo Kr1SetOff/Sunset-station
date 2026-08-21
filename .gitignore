@@ -22,6 +22,8 @@ x64/
 x86/
 bld/
 [Bb]in/
+# "bin" here is a trash/recycling bin content folder, not a build output dir
+!Resources/Locale/*/entity-systems/bin/
 [Oo]bj/
 [Ll]og/
 
