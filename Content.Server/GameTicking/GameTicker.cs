@@ -18,6 +18,7 @@ using Content.Shared.CCVar;
 using Content.Shared.Chat;
 using Content.Shared.GameTicking;
 using Content.Shared.Mind;
+using Robust.Shared.Exceptions;
 using Content.Shared.Roles;
 using Robust.Server;
 using Robust.Server.GameObjects;
@@ -49,9 +50,7 @@ namespace Content.Server.GameTicking
         [Dependency] private IMapManager _mapManager = default!;
         [Dependency] private IPrototypeManager _prototypeManager = default!;
         [Dependency] private IRobustRandom _robustRandom = default!;
-#if EXCEPTION_TOLERANCE
         [Dependency] private IRuntimeLog _runtimeLog = default!;
-#endif
         [Dependency] private IServerPreferencesManager _prefsManager = default!;
         [Dependency] private IServerDbManager _db = default!;
         [Dependency] private ChatSystem _chatSystem = default!;

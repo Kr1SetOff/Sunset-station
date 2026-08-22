@@ -31,10 +31,8 @@ namespace Content.Server.GameTicking
         [ViewVariables]
         private string? RoundEndSoundCollection { get; set; }
 
-#if EXCEPTION_TOLERANCE
         [ViewVariables]
         public int RoundStartFailShutdownCount { get; private set; } = 0;
-#endif
 
         private void InitializeCVars()
         {
@@ -76,9 +74,7 @@ namespace Content.Server.GameTicking
             }, true);
             StarlightSubs(); //🌟Starlight🌟
             Subs.CVar(_cfg, CCVars.RoundEndSoundCollection, value => RoundEndSoundCollection = value, true);
-#if EXCEPTION_TOLERANCE
             Subs.CVar(_cfg, CCVars.RoundStartFailShutdownCount, value => RoundStartFailShutdownCount = value, true);
-#endif
         }
     }
 }

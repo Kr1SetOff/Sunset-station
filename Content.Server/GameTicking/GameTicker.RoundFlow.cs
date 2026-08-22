@@ -47,10 +47,8 @@ namespace Content.Server.GameTicking
         private static readonly Gauge RoundLengthMetric = Metrics.CreateGauge(
             "ss14_round_length",
             "Round length in seconds.");
-#if EXCEPTION_TOLERANCE
         [ViewVariables]
         private int _roundStartFailCount = 0;
-#endif
 
         [ViewVariables]
         private bool _startingRound;
@@ -358,93 +356,89 @@ namespace Content.Server.GameTicking
 
         public void StartRound(bool force = false)
         {
-#if EXCEPTION_TOLERANCE
             try
             {
-#endif
-            // If this game ticker is a dummy or the round is already being started, do nothing!
-            if (DummyTicker || _startingRound)
-                return;
+                // If this game ticker is a dummy or the round is already being started, do nothing!
+                if (DummyTicker || _startingRound)
+                    return;
 
-            _startingRound = true;
-            RoundStartTimeSpan = _gameTiming.CurTime;
+                _startingRound = true;
+                RoundStartTimeSpan = _gameTiming.CurTime;
 
-            if (RoundId == 0)
-                IncrementRoundNumber();
+                if (RoundId == 0)
+                    IncrementRoundNumber();
 
-            ReplayStartRound();
+                ReplayStartRound();
 
-            DebugTools.Assert(RunLevel == GameRunLevel.PreRoundLobby);
-            _sawmill.Info("Starting round!");
+                DebugTools.Assert(RunLevel == GameRunLevel.PreRoundLobby);
+                _sawmill.Info("Starting round!");
 
-            SendServerMessage(Loc.GetString("game-ticker-start-round"));
+                SendServerMessage(Loc.GetString("game-ticker-start-round"));
 
-            var readyPlayers = new List<ICommonSession>();
-            var readyPlayerIds = new HashSet<NetUserId>();
-            var autoDeAdmin = _cfg.GetCVar(CCVars.AdminDeadminOnJoin);
-            foreach (var (userId, status) in _playerGameStatuses)
-            {
-                if (LobbyEnabled && status != PlayerGameStatus.ReadyToPlay) continue;
-                if (!_playerManager.TryGetSessionById(userId, out var session)) continue;
-
-                if (autoDeAdmin && _adminManager.IsAdmin(session))
+                var readyPlayers = new List<ICommonSession>();
+                var readyPlayerIds = new HashSet<NetUserId>();
+                var autoDeAdmin = _cfg.GetCVar(CCVars.AdminDeadminOnJoin);
+                foreach (var (userId, status) in _playerGameStatuses)
                 {
-                    _adminManager.DeAdmin(session);
-                }
+                    if (LobbyEnabled && status != PlayerGameStatus.ReadyToPlay) continue;
+                    if (!_playerManager.TryGetSessionById(userId, out var session)) continue;
+
+                    if (autoDeAdmin && _adminManager.IsAdmin(session))
+                    {
+                        _adminManager.DeAdmin(session);
+                    }
 #if DEBUG
-                DebugTools.Assert(_userDb.IsLoadComplete(session), $"Player was readied up but didn't have user DB data loaded yet??");
+                    DebugTools.Assert(_userDb.IsLoadComplete(session), $"Player was readied up but didn't have user DB data loaded yet??");
 #endif
 
-                readyPlayers.Add(session);
+                    readyPlayers.Add(session);
 
-                // Starlight - we've removed some code here for generating a random humanoid profile for players without any profiles on roundstart.
-                readyPlayerIds.Add(userId);
-            }
+                    // Starlight - we've removed some code here for generating a random humanoid profile for players without any profiles on roundstart.
+                    readyPlayerIds.Add(userId);
+                }
 
-            DebugTools.AssertEqual(readyPlayers.Count, ReadyPlayerCount());
+                DebugTools.AssertEqual(readyPlayers.Count, ReadyPlayerCount());
 
-            // Just in case it hasn't been loaded previously we'll try loading it.
-            LoadMaps();
+                // Just in case it hasn't been loaded previously we'll try loading it.
+                LoadMaps();
 
-            // map has been selected so update the lobby info text
-            // applies to players who didn't ready up
-            UpdateInfoText();
+                // map has been selected so update the lobby info text
+                // applies to players who didn't ready up
+                UpdateInfoText();
 
-            StartGamePresetRules();
+                StartGamePresetRules();
 
-            RoundLengthMetric.Set(0);
+                RoundLengthMetric.Set(0);
 
-            var startingEvent = new RoundStartingEvent(RoundId);
-            RaiseLocalEvent(startingEvent);
+                var startingEvent = new RoundStartingEvent(RoundId);
+                RaiseLocalEvent(startingEvent);
 
-            var origReadyPlayers = readyPlayers.ToArray();
+                var origReadyPlayers = readyPlayers.ToArray();
 
-            if (!StartPreset(origReadyPlayers, force))
-            {
-                _startingRound = false;
-                return;
-            }
+                if (!StartPreset(origReadyPlayers, force))
+                {
+                    _startingRound = false;
+                    return;
+                }
 
-            // MapInitialize *before* spawning players, our codebase is too shit to do it afterwards...
-            _map.InitializeMap(DefaultMap);
+                // MapInitialize *before* spawning players, our codebase is too shit to do it afterwards...
+                _map.InitializeMap(DefaultMap);
 
-            StartGamePresetRules(); // Starlight - Start any map-attached game rules
+                StartGamePresetRules(); // Starlight - Start any map-attached game rules
 
-            SpawnPlayers(readyPlayers, readyPlayerIds, force);
+                SpawnPlayers(readyPlayers, readyPlayerIds, force);
 
-            StartGamePresetRules(); // Starlight - Start any player-attached game rules
+                StartGamePresetRules(); // Starlight - Start any player-attached game rules
 
-            _roundStartDateTime = DateTime.UtcNow;
-            RunLevel = GameRunLevel.InRound;
+                _roundStartDateTime = DateTime.UtcNow;
+                RunLevel = GameRunLevel.InRound;
 
-            SendStatusToAll();
-            ReqWindowAttentionAll();
-            UpdateLateJoinStatus();
-            AnnounceRound();
-            UpdateInfoText();
-            SendRoundStartedDiscordMessage();
-
-#if EXCEPTION_TOLERANCE
+                SendStatusToAll();
+                ReqWindowAttentionAll();
+                UpdateLateJoinStatus();
+                AnnounceRound();
+                UpdateInfoText();
+                SendRoundStartedDiscordMessage();
             }
             catch (Exception e)
             {
@@ -461,13 +455,16 @@ namespace Content.Server.GameTicking
                 _sawmill.Error($"Exception caught while trying to start the round! Restarting round...");
                 _runtimeLog.LogException(e, nameof(GameTicker));
                 _startingRound = false;
+                // Always restart (rather than leaving RunLevel stuck at PreRoundLobby) regardless of
+                // EXCEPTION_TOLERANCE: UpdateRoundFlow() calls StartRound() again every tick once the
+                // countdown elapses, so failing to reset the round-start timer here would turn a single
+                // failure into a tight per-tick retry loop instead of a clean, backed-off retry.
                 RestartRound();
                 return;
             }
 
             // Round started successfully! Reset counter...
             _roundStartFailCount = 0;
-#endif
             _startingRound = false;
         }
 
